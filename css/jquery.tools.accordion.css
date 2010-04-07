@@ -1,0 +1,25 @@
+#accordion, .accordion {
+}
+
+/* accordion header */
+#accordion h3, .accordion h3 {
+	cursor: pointer;		
+	padding: .5em;
+	border-bottom: solid 1px #CAC1B2;
+}
+
+/* currently active header */
+#accordion h3.current, .accordion h3.current  {
+	cursor: default;
+	background-color: #CAC1B2;
+	margin-bottom: 0;
+}
+
+/* accordion pane */
+#accordion div.pane, .accordion div.pane {
+	display: none;
+	padding: 1em;
+	border: 1px solid #CAC1B2;
+	margin-bottom: 1em;
+}
+

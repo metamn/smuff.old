@@ -1,0 +1,45 @@
+/* tables */
+table.tablesorter {	
+  width: 98.6%;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	border-right: 1px dotted #cac1b2;
+	padding: 2em;	
+	background: #DFDBD0;
+}
+table.tablesorter thead tr .header {
+	background-image: url(/wp-content/themes/smuff/img/updown.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter thead tr .no-sort {
+  background-image: none;
+}
+
+table.tablesorter img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  padding: .2em;
+}
+
+table.tablesorter tbody td {
+	padding: 1.2em;
+	vertical-align: middle;
+  border-bottom: 1px solid #cac1b2;
+}
+table.tablesorter tbody tr.odd td {
+	background-color: #F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(/wp-content/themes/smuff/img/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(/wp-content/themes/smuff/img/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: #cac1b2;
+}
+
+
