@@ -52,7 +52,7 @@
 	    
 	    <div class="block">	      
 	      <div id="header" class="column span-18">                 
-          <div class="block">
+          <div id="headlines" class="block">
 	          <div id="logo" class="column span-8 last">
 	            <h1>
 	              <a href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>

@@ -27,9 +27,8 @@
 
 
 <div id="home" class="block">
-  <div id="content" class="column span-18">    	  
-    <?php include "home-all-products-link.php"; ?>            
-    <?php include "home-promo.php"; ?> 
+  <div id="content" class="column span-18">    	                
+    <?php include "home-top-sold.php"; ?> 
     <?php include "home-news.php"; ?>    
   </div>
   

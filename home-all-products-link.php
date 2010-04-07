@@ -9,6 +9,5 @@
   }
   $link = $link . '?view=2';
 ?>
-<div id="all-products-link">
-  <a href="<?php echo $link ?>" alt="<?php echo $title?>"><?php echo $title?></a>            
-</div>
+<a href="<?php echo $link ?>" alt="<?php echo $title?>"><?php echo $title?></a>            
+

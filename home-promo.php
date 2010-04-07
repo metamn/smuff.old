@@ -1,5 +1,6 @@
 <?php ?>
 <div id="promo-block" class="block">
+    
   <div id="promo" class="column span-15"> 
     <div class="scrollable" id="promo-scroll">			        
       <div class="items">	
@@ -20,11 +21,9 @@
 	  </div> <!-- scrollable -->
     <div class="navi"></div>
         
-    <div class="spacer">&nbsp;</div>
+    
         
-    <div id="top-sales" class="block">      
-      <?php include "home-top-sold.php"; ?>
-    </div>        
+           
   </div>     
 
   <div class="column span-1 last arrow-vertical">
