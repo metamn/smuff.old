@@ -53,11 +53,11 @@
 	    <div class="block">	      
 	      <div id="header" class="column span-18">                 
           <div class="block">
-	          <div id="logo" class="column span-4">
-	            <h1><a href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h1>
-			      </div>
-			      <div id="strapline" class="column span-4 last">
-			        <?php bloginfo('description');?>
+	          <div id="logo" class="column span-8 last">
+	            <h1>
+	              <a href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
+	              <span class="strapline"><?php bloginfo('description');?></span>			      
+	           </h1>			      
 			      </div>
 			      <div id="main-name" class="column span-10 last">
 			        <?php 

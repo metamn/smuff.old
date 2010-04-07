@@ -5,7 +5,7 @@
 . szurke/background: e6e2d9
 . szurke/highlight: cac1b2
   . sarga/highlight: FDF3C6
-. szurke/feketen: #555;
+. szurke/feketen: #666;
 . szurke/hatteren: #bbb8b1
 . fekete/font: #111
 . narancs/kiemeles: #f25e18
@@ -39,16 +39,19 @@ body {
 
 #header #logo h1 {
   font-weight: bold;
-  font-size: 4em;
-  margin: 1em 0 .5em 0;
+  font-size: 4.5em;
+  letter-spacing: -2px;
+  margin: 1em 0 .2em 0;
 }
-#strapline {  
+.strapline {  
   color: #f25e18;
-  margin-top: 3em;
+  font-size: .4em;
   font-weight: bold;
+  letter-spacing: -2px;
+  vertical-align: super;
 }
 #main-name {
-  margin-top: 5em;
+  margin-top: 5.5em;
 }
 #main-name h1{  
   text-align: right;
@@ -94,7 +97,7 @@ div#widgetshoppingcart {
   margin-bottom: 0em;
 }
 #cart, #cart h3, #cart h4, #cart h4 a, #cart h4 a:visited {
-  color: #555;
+  color: #666;
 }
 #cart ul {
   padding: 0;
@@ -102,6 +105,10 @@ div#widgetshoppingcart {
 #cart li {
   font-size: larger;
 }
+#cart p {
+  margin: 0 0 1em;
+}
+
 
 
 #page .post, #archives #content, #blog #content {
@@ -312,7 +319,7 @@ input.button-to-link {
 }
 #home-ecosystem h2.title {
   text-transform: uppercase;
-  background: #555;
+  background: #666;
   color: #ddd;
   padding: .5em .1em 0;
 }
@@ -340,7 +347,7 @@ input.button-to-link {
 #home-ecosystem .comments #comment-body, #post-body p.comment-content {
   font-size: larger;
   margin-bottom: 2em;
-  color: #555;
+  color: #666;
   font-style: italic;
   font-family: "Lucida Grande";
   background: #E6E2D9;
@@ -396,7 +403,7 @@ input.button-to-link {
   padding: 1em 0;
 }
 #home-ecosystem .tumblr_title {
-  color: #555;
+  color: #666;
 }
 #home-ecosystem .tumblr_caption {
   margin-left: 400px;
@@ -634,7 +641,7 @@ input.search {
 }
 .post-price {
   font-size: large;
-  background: #555;
+  background: #666;
   color: #ddd;
 }
 .post-price p {
@@ -713,7 +720,7 @@ ul.taxonomy li a.main {
   background: #18F2E0;
 }
 .robot {
-  background: #555;
+  background: #666;
   color: #ddd !important;
 }
 .spionaj {
@@ -881,7 +888,7 @@ ul.taxonomy li a.main {
 #footer-subscribe input.button {
   background: #cac1b2;
   padding: 5px;
-  color: #555;
+  color: #666;
 }
 #footer-subscribe img {
   width: 72px;
@@ -903,7 +910,7 @@ ul.taxonomy li a.main {
 .wp-paginate a {
   background: none !important;
   border: none !important;
-  color: #555 !important;
+  color: #666 !important;
 }
 .wp-paginate .current {
   background: #cac1b2 !important;
@@ -911,7 +918,7 @@ ul.taxonomy li a.main {
   line-height: 3  !important;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  color: #555 !important;
+  color: #666 !important;
 }
 .wp-paginate a:hover, .wp-paginate a:focus {
   background: #DFDBD0 !important;
