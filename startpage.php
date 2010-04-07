@@ -14,7 +14,7 @@
   // - sidebar posts are queryied in sidebar
   $promo_posts = query_posts2('posts_per_page=6&cat=49');
   $top_sales = query_posts2('posts_per_page=5&cat=50');
-  
+  $new_products = query_posts2('posts_per_page=5&cat=47');
 ?>
 
 

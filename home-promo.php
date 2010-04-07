@@ -1,37 +1,35 @@
 <?php ?>
 <div id="promo-block" class="block">
-    
-  <div id="promo" class="column span-15"> 
-    <div class="scrollable" id="promo-scroll">			        
-      <div class="items">	
+
+  <div id="top-sold" class="column span-7 prepend-2 last">
+    <h3>
+      Bestsellers      
+    </h3>
+    <div class="items">	
         <?php
-          if ($promo_posts->have_posts()) {
-            $counter = 0;
-            while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
-              if ($counter == 3) {
-                include "home-sticky.php";
-              } else {
-                include "home-sales-thumb.php";
-              }
-              $counter = $counter + 1;
+          if ($new_products->have_posts()) {
+            while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
+              include "home-sales-thumb.php";              
             endwhile; 
           }
         ?>       		        
-	    </div>        
-	  </div> <!-- scrollable -->
-    <div class="navi"></div>
-        
+	  </div>
+  </div>
+  
+  <div id="sales" class="column span-7 prepend-2  last">
+    <h3>Promotii</h3>
+    <div class="items">	
+        <?php
+          if ($promo_posts->have_posts()) {
+            while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+              include "home-sales-thumb.php";              
+            endwhile; 
+          }
+        ?>       		        
+	  </div>
+  </div>
     
-        
-           
-  </div>     
-
-  <div class="column span-1 last arrow-vertical">
-    <div class="arrow-left"></div>
-  </div>
-  <div id="percent" class="column span-2 last">
-    %
-  </div>
+  
 </div>
 
 
