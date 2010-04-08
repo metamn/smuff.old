@@ -13,14 +13,10 @@ $(document).ready(function() {
     var productID = "#" + $(this).attr('rev');
   
     $("#top-sales img.large-image").attr('src', newImage);
-    $('#top-sales #info').html($(productID).html());
-    $('#top-sales #info').hide();
+    $('#top-sales #info').html($(productID).html());    
   });
   
-  // Promo large click
-  $('#top-sales img.large-image').click(function(event) {
-    $('#top-sales #info').toggle('slow');
-  });  
+  
   
   // Single post thumb click 
   $("#single-scroll img.small-image").click(function(){

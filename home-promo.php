@@ -1,7 +1,7 @@
 <?php ?>
 <div id="promo-block" class="block">
 
-  <div id="top-sold" class="column span-7 prepend-2 last">
+  <div id="top-sold" class="column span-9 last">
     <h3>
       Bestsellers      
     </h3>
@@ -16,7 +16,7 @@
 	  </div>
   </div>
   
-  <div id="sales" class="column span-7 prepend-2  last">
+  <div id="sales" class="column span-9  last">
     <h3>Promotii</h3>
     <div class="items">	
         <?php
