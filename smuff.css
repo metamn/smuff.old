@@ -121,14 +121,14 @@ div#widgetshoppingcart {
 
 
 #s3slider {
-   width: 560px; /* important to be same as image width */
-   height: 400px; /* important to be same as image height */
+   width: 710px; /* important to be same as image width */
+   height: 500px; /* important to be same as image height */
    position: relative; /* important */
    overflow: hidden; /* important */
 }
 
 #s3sliderContent {
-   width: 560px; /* important to be same as image width or wider */
+   width: 710px; /* important to be same as image width or wider */
    position: absolute; /* important */
    top: 0; /* important */
    margin-left: 0; /* important */
@@ -145,24 +145,16 @@ div#widgetshoppingcart {
    left: 0;
    font: 10px/15px Arial, Helvetica, sans-serif;
    padding: 10px 13px;
-   width: 554px;
-   background-color: #000;
+   width: 694px;
+   background-color: #111;
    filter: alpha(opacity=70); /* here you can set the opacity of box with text */
    -moz-opacity: 0.7; /* here you can set the opacity of box with text */
    -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
    opacity: 0.7; /* here you can set the opacity of box with text */
-   color: #fff;
+   color: #e6e2d9;
    display: none; /* important */
-   top: 0;
-
-   /*
-       if you put
-       top: 0; -> the box with text will be shown at the top of the image
-       if you put
-       bottom: 0; -> the box with text will be shown at the bottom of the image
-   */
+   bottom: 0;
 }
-
 .clear {
    clear: both;
 } 
@@ -176,7 +168,8 @@ div#widgetshoppingcart {
   padding: 0;
 }
 #top-sales-title {
-  margin-top: 1px;
+  top: -500px;
+  position: relative;
 }
 #top-sales-title #text {
   background: #f25e18;
@@ -187,56 +180,21 @@ div#widgetshoppingcart {
 #top-sales .arrow-right {
   width:0; height:0;
   line-height:0;
-  border-top:30px solid #e6e2d9;
-  border-right:30px solid #e6e2d9;
-  border-bottom:30px solid #e6e2d9;
+  border-top:30px solid transparent;
+  border-right:30px solid transparent;
+  border-bottom:30px solid transparent;
   border-left:30px solid #f25e18;
-}
-
-#top-sales #thumbs {
-  margin: 0;
-  padding: 0;
-}
-#top-sales ul.items {
-  list-style-type: none;
-  margin: .5em 0 0 2em;
-}
-#top-sales ul.items li {
-  margin: 0;
-}
-#top-sales img.small-image {
-  width: 110px;
-  height: 103px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-#top-sales .info {
-  display: none;
 }
 
 #top-sales-content {
   margin: 0;
-  padding: 2.5em 0 1.5em;
-  width: 560px;
-}
-#top-sales #large-image {
-	width: 100%;
-	height: auto;
-}
-#top-sales #large-image img {
+  padding: 0;
   width: 100%;
-  height: auto;
-  cursor: pointer;
 }
-#top-sales #large-image #info {  
-  background: #444;
-  opacity: .8;
-  padding: 1em;
-  display: block;
+#top-sales-content img {
+  width: 710px;
+  height: 500px;
 }
-#top-sales #large-image #info a, #top-sales #large-image #info a:visited, #top-sales #large-image #info h3 {
-  color: #E6E2D9;
-}  
 
 
 /* Promo 
