@@ -1,11 +1,11 @@
-<div id="top-sales" class="block"> 
+<div id="home-hot" class="block"> 
 
-  <div id="top-sales-content" class="block">    
+  <div id="home-hot-content" class="block">    
     <div id="s3slider">
-      <?php if ($top_sales) { ?>
+      <?php if ($new_products) { ?>
         <ul id="s3sliderContent">
         <?php 
-          while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
+          while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
             $imgs = post_attachements($post->ID);
             $img = $imgs[0];
             $large = wp_get_attachment_image_src($img->ID, 'large');
@@ -25,7 +25,7 @@
     </div>   
   </div>
   
-  <div id="top-sales-title" class="block"> 
+  <div id="home-hot-title" class="block"> 
     <div class="block"> 
       <div id="text" class="column span-3 last">
         Hot!
@@ -37,4 +37,3 @@
   </div>
 
 </div>
-

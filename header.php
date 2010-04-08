@@ -16,10 +16,12 @@
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css" type="text/css" media="screen" />
+		<!-- S3 slider -->
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.s3slider.css" type="text/css" media="screen" />
 		
 		<!-- jQuery Tools -->
 		<script type="text/javascript" src="http://cdn.jquerytools.org/1.1.2/full/jquery.tools.min.js"></script>
-		<!-- nivo slider -->
+		<!-- S3 slider -->
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/s3Slider.js" ></script>
     <!-- scrollable -->
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tools.scrollable.js"></script>

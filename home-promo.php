@@ -1,35 +1,28 @@
-<?php ?>
-<div id="promo-block" class="block">
+<div class="spacer">&nbsp;</div>
 
-  <div id="top-sold" class="column span-9 last">
-    <h3>
-      Bestsellers      
-    </h3>
-    <div class="items">	
-        <?php
-          if ($new_products->have_posts()) {
-            while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
-              include "home-sales-thumb.php";              
-            endwhile; 
-          }
-        ?>       		        
-	  </div>
+
+<div id="promo" class="block">  
+  <div id="percent" class="column span-2 last">
+    <span class="value">%</span>
+  </div>
+  <div class="column span-1 last arrow-vertical">
+    <div class="arrow-right"></div>
   </div>
   
-  <div id="sales" class="column span-9  last">
-    <h3>Promotii</h3>
-    <div class="items">	
-        <?php
-          if ($promo_posts->have_posts()) {
-            while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
-              include "home-sales-thumb.php";              
-            endwhile; 
-          }
-        ?>       		        
-	  </div>
-  </div>
-    
-  
+  <div id="items" class="column span-15">
+    <div class="scrollable" id="promo-scroll">			        
+        <div class="items">	
+          <?php
+            if ($promo_posts->have_posts()) {
+              while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+                include "product-thumb.php";
+              endwhile; 
+            }
+          ?>       		        
+	      </div>        
+	    </div> <!-- scrollable -->
+      <div class="navi"></div>
+  </div>   
 </div>
 
 
