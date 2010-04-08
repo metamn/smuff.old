@@ -2,14 +2,14 @@
 
 
 <div id="promo" class="block">  
-  <div id="percent" class="column span-2 last">
+  <div id="percent" class="column span-3 last">
     <span class="value">%</span>
   </div>
   <div class="column span-1 last arrow-vertical">
     <div class="arrow-right"></div>
   </div>
   
-  <div id="items" class="column span-15">
+  <div id="items" class="column span-14 last">
     <div class="scrollable" id="promo-scroll">			        
         <div class="items">	
           <?php

@@ -197,7 +197,7 @@ div#widgetshoppingcart {
 }
 #promo .scrollable div {
   height: 240px;
-  margin-right: 2em;
+  margin-right: 1.2em;
 }
 #promo .scrollable img {
   width: 120px;
@@ -233,6 +233,17 @@ div#widgetshoppingcart {
   text-align: center;
   font-size: 7em;
 }
+
+
+/* Ecosystem
+*/
+
+#home-ecosystem {
+  background: #dfdbd0;
+  margin: 3em 0;
+  padding: 2em 0;
+}
+
 
 
 /* Product Thumb 

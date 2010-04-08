@@ -23,11 +23,11 @@
     <div id="content" class="column span-18">    	                
       <?php include "home-hot.php"; ?> 
       <?php include "home-bestsellers.php"; ?> 
-      <?php include "home-promo.php"; ?>    
+      <?php include "home-promo.php"; ?>
+      <?php include "home-ecosystem.php" ?>    
     </div>  
     <?php get_sidebar(); ?>
-  </div>
-  <?php include "home-ecosystem.php" ?>
+  </div>  
 </div>
 
 <?php get_footer(); ?>
