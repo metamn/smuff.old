@@ -1,9 +1,14 @@
 $(document).ready(function() { 
+  //S3 slider
+  $('#s3slider').s3Slider({
+      timeOut: 4000
+   });
+  
+  // Sortable table
   $("#archive-all-table").tablesorter({
     sortList: [[0,1]]    
   }); 
-  
-  
+    
 	$("#slider").easySlider({
 		auto: true,
 		continuous: true,
