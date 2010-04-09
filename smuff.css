@@ -262,19 +262,15 @@ div#widgetshoppingcart {
 #home-ecosystem {
   background: #dfdbd0;
   margin: 3em 0;
-  padding-top: 5em;
-}
-#home-ecosystem #title {
-  top: -370px;
-  position: relative;
+  padding: 3em 0 0;
 }
 #home-ecosystem h1 {
   font-size: 6.8em;
   text-transform: uppercase;
   color: #E6E2D9;
 }
-#home-ecosystem #col-1 h4, #home-ecosystem #col-2 .fb {
-  margin-top: 2em;
+#home-ecosystem #col-1, #home-ecosystem #col-2 {
+  margin: 2em 0 3em;
 }
 #home-ecosystem h4 a, #home-ecosystem h4 a:visited {
   text-decoration: underline;
