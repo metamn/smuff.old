@@ -9,10 +9,12 @@
 . szurke/hatteren: #bbb8b1
 . fekete/font: #111
 . narancs/kiemeles: #f25e18
-  . zold/ok: 26BF5A
-  . piros/error: A53B08
+  . zold/ok: #26BF5A
+  . piros/error: #A53B08
+. kek/price: #84C4D1
+  . melyebb/hot: #48C0D9
 . blog
-  . barnas/hatter: DFDBD0
+  . barnas/hatter: #DFDBD0
   
 
 */
@@ -154,6 +156,23 @@ div#widgetshoppingcart {
   width: 710px;
   height: 500px;
 }
+#home-hot-content .s3sliderImage span {
+  color: #e6e2d9;
+  font-family: inherit;
+  font-size: inherit;
+}
+#home-hot-content .s3sliderImage span h3 {
+  color: #f25e18;
+  font-size: large;
+} 
+#home-hot-content .s3sliderImage span .price, #home-hot-content .s3sliderImage span .normal-price, #home-hot-content .s3sliderImage span .old-price   {
+  display: inline;
+  padding: .2em;
+}
+#home-hot-content .s3sliderImage span .normal-price {
+  color: #111;
+  background: #48C0D9;
+}
 
 
 /* Bestsellers
@@ -168,22 +187,23 @@ div#widgetshoppingcart {
   padding: 1.5em 0;
   text-transform: uppercase;
 }
-#bestsellers .items {
-  margin-left: 2em;
-}
 #bestsellers .item {
   margin-bottom: 2em;
+  height: 22em;
 }
 #bestsellers .item img {
   border: 1px solid #ccc;
 }
-#bestsellers #col-2 .item, #bestsellers #col-2 .item img {
-  width: 100% !important;
-  height: auto !important;
+#bestsellers #col-1 .items {
+  margin-left: 12em;
 }
-#bestsellers #col-2 .item p {
-  width: 100% !important;
-} 
+#bestsellers #col-2 .items {
+  margin-left: 5em;
+}
+#bestsellers #col-2 {
+  margin-top: 7.5em;
+}
+
 
 /* Promo 
 */
@@ -193,10 +213,10 @@ div#widgetshoppingcart {
 }
 #promo .scrollable {
   width: 100%;
-  height: 250px;
+  height: 290px;
 }
 #promo .scrollable div {
-  height: 240px;
+  height: 280px;
   margin-right: 1.2em;
 }
 #promo .scrollable img {
@@ -212,6 +232,7 @@ div#widgetshoppingcart {
 }
 #promo .promo-item-hover {
   border-bottom: 3px solid #F25D18;
+  background: #DFDBD0;
 }
 #promo .navi {
   padding-left: 45%;
@@ -241,7 +262,22 @@ div#widgetshoppingcart {
 #home-ecosystem {
   background: #dfdbd0;
   margin: 3em 0;
-  padding: 2em 0;
+  padding-top: 5em;
+}
+#home-ecosystem #title {
+  top: -370px;
+  position: relative;
+}
+#home-ecosystem h1 {
+  font-size: 6.8em;
+  text-transform: uppercase;
+  color: #E6E2D9;
+}
+#home-ecosystem #col-1 h4, #home-ecosystem #col-2 .fb {
+  margin-top: 2em;
+}
+#home-ecosystem h4 a, #home-ecosystem h4 a:visited {
+  text-decoration: underline;
 }
 
 

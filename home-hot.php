@@ -11,11 +11,24 @@
             $large = wp_get_attachment_image_src($img->ID, 'large');
             $product_id = product_id($post->ID);
             $product_price = product_price($post->ID);
+            $product_discount = product_discount($product_id);
+            $product_sale_price = $product_price - $product_discount;
             $product_name = product_name($product_id);            
           ?>
           <li class="s3sliderImage">
-            <img src="<?php echo $large[0] ?>" />            
-            <span><?php echo $product_name ?></span>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+              <img src="<?php echo $large[0] ?>" />            
+              <span>
+                <h3><?php echo $product_name ?></h3>
+                <?php the_excerpt(); ?>
+                <?php if ($product_discount > 0) { ?>
+                  <p class="price"><?php echo $product_sale_price; ?></p> RON
+                  <p class="old-price"><?php echo $product_price; ?></p>    
+                <?php } else { ?>
+                  <p class="normal-price"><?php echo $product_price; ?></p> RON
+                <?php } ?>  
+              </span>
+            </a>
           </li>
         <?php 
           endwhile; ?>
