@@ -1,6 +1,12 @@
 <div id="home-menu" class="box last">
   <ul> 
-    <li><span class="ui-icon ui-icon-script"/></span><?php include "home-all-products-link.php"; ?></li>    
+    <li><span class="ui-icon ui-icon-script"/></span>
+      <?php
+        $title = 'Vezi toate produsele'; 
+        $link_type = '2'; // 2=table view, 3=grid view
+        include "home-all-products-link.php"; 
+      ?>
+    </li>    
     <li><span class="ui-icon ui-icon-search"/></span><a href="<?php bloginfo('home'); ?>/cautare-avansata">Cautare</a></li>
     <li><span class="ui-icon ui-icon-info"/></span><a href="<?php bloginfo('home'); ?>/#footer-info">Informatii</a></li>
     <li><span class="ui-icon ui-icon-person"/></span>0745-456127</li>

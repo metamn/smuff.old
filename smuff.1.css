@@ -132,7 +132,6 @@ div#widgetshoppingcart {
   margin: 0;
 }
 
-
 /* New products 
 */
 
@@ -268,7 +267,6 @@ div#widgetshoppingcart {
 }
 
 
-
 /* Ecosystem
 */
 
@@ -323,6 +321,191 @@ div#widgetshoppingcart {
   width: 150px;
   height: 150px;
 }
+
+
+
+
+
+
+/* Home News / Sticky
+*/
+
+#home-news {
+  padding: 0; 
+  margin: 0; 
+}
+#home-news #item {
+  margin: 1em 0 1em 3em;
+} 
+#home-news h3 {
+  text-transform: uppercase;
+  background: #DFDBD0;
+  padding: 1.5em 2em;
+  margin: 0;
+}
+#home-news hr {
+  margin: .5em 0;
+  width: 90%;
+}
+#home-news .date {
+  color: #777;
+  font-style: italic;
+}
+#home-news a, #home-news a:active, #home-news a:visited {
+  color: #F25E18;
+}
+
+#sticky {
+  background: #FDF3C6;
+  padding: .5em; 
+  margin: 0; 
+}
+.sticky-close {
+  font-size: small;
+  float: right;
+  cursor: pointer;
+}
+#sticky h3 {
+  margin-bottom: .5em;
+  background: none;
+  text-transform: none;
+  padding: .5em 0 0 1.5em;
+}
+#sticky a {
+  margin-left: 2em;
+}
+
+
+
+
+/* Ecosystem
+*/
+
+#home-ecosystem {
+  background: #dfdbd0;
+}
+#home-ecosystem .arrow-right {
+  border-color: #DFDBD0 #DFDBD0 #DFDBD0 #E6E2D9;  
+  border-style:solid;
+  border-width:15px;
+  height:0;
+  line-height:0;
+  width:0;
+}
+#home-ecosystem h2.title {
+  text-transform: uppercase;
+  background: #666;
+  color: #ddd;
+  padding: .5em .1em 0;
+}
+#home-ecosystem .item {
+  margin-bottom: 3em;
+}
+#home-ecosystem .item  h2{
+  text-transform: uppercase;
+}
+#home-ecosystem .item .url {
+  font-size: smaller;
+}
+#home-ecosystem .item .url a, #home-ecosystem .item .url a:visited, #home-ecosystem .item .url a:active {
+  color: #f25e18;
+}
+#home-ecosystem .content {
+  margin: 1.5em 0 2em;
+}
+#home-ecosystem .ecosystem-blog .arrow-left {
+  border-color: #DFDBD0 #E6E2D9 #DFDBD0 #DFDBD0;
+}
+#home-ecosystem .ecosystem-blog .arrow-vertical {
+  margin: 0;
+}
+#home-ecosystem .comments #comment-body, #post-body p.comment-content {
+  font-size: larger;
+  margin-bottom: 2em;
+  color: #666;
+  font-style: italic;
+  font-family: "Lucida Grande";
+  background: #E6E2D9;
+  padding: 1em;
+}
+#home-ecosystem .comments hr {
+  margin: .5em 0 1em 0;
+}
+#home-ecosystem .comments a, #home-ecosystem .comments a:visited, #home-ecosystem .comments a:active {
+  color: #111;
+  font-size: small;
+  font-style: normal;
+}
+#home-ecosystem .comments .date {
+  color: #ccc;
+  margin-left: 1em;
+}
+
+#home-ecosystem .facebook .box {
+  font-size: larger;
+  font-style: italic;
+  background: #F25E18;
+  color: #DFDBD0;
+  height: 230px;
+}
+#home-ecosystem .ecosystem-facebook .arrow-left {
+  border-color: #DFDBD0 #F25E18 #DFDBD0 #DFDBD0;
+}
+
+#home-ecosystem .tumblr {
+  margin-left: 4em;
+}
+#home-ecosystem #prevBtn {
+  position: relative !important;
+  top: -19em !important;
+}
+#home-ecosystem #nextBtn {
+  position: relative !important;
+  top: -25.5em !important;
+  margin-left: -7em !important;
+}
+#home-ecosystem #slider {
+  border: 10px solid #cac1b2;
+}
+#home-ecosystem a.tumblr_link, #home-ecosystem .tumblr_title {
+  font-size: 7em;
+  color: #f25e18;
+  font-weight: bold;
+  line-height: .65em;
+  padding: .1em 1em .2em .5em;
+}
+#home-ecosystem .tumblr_link_post {
+  padding: 1em 0;
+}
+#home-ecosystem .tumblr_title {
+  color: #666;
+}
+#home-ecosystem .tumblr_caption {
+  margin-left: 400px;
+  top: -293px;
+  position: relative;
+  padding: .5em;
+  opacity: .8;
+  background: yellow;
+}
+#home-ecosystem .tumblr_video {
+  width: 400px;
+  height: 336px;
+}
+#home-ecosystem .tumblr_photo {
+  width: 400px;
+  height: 336px;
+}
+#home-ecosystem .tumblr_quote {
+  height: 280px;
+  padding: 1em;
+  background: #B24812;
+  color: #ddd;
+  font-size: large;
+} 
+#home-ecosystem .tumblr_source {
+  background: yellow;   
+}  
 
 
 
@@ -447,30 +630,12 @@ input.add-button{
 #search-results-header {
   margin-top: 3em;
 }
-#search-results-header table {
-  margin-bottom: 3em;
-}
 #search-results-header table tr {
   margin-bottom: 1em;
 }
 #search-results-header table td {
   border-bottom: 1px solid #ddd;  
 }
-
-
-/* All products
-*/
-
-#archive-all {
-  
-}
-#archive-all #content {
-
-}
-#archive-all #content #right {
-  text-align: right;
-}
-
 
 /* Sidebar 
 */
@@ -515,59 +680,48 @@ input.search {
 }
 
 
-/* Home News + Sticky
+
+/* New items 
 */
 
-#home-news {
-  padding: 0; 
-  margin: 0; 
+#new-items {
+  margin-top: .5em;
 }
-#home-news #item {
-  margin: 1em 0 1em 3em;
-} 
-#home-news h3 {
+#new-items h2 {
+  background: #cac1b2;
   text-transform: uppercase;
-  background: #DFDBD0;
-  padding: 1.5em 2em;
   margin: 0;
+  text-align: center;
 }
-#home-news hr {
-  margin: .5em 0;
-  width: 90%;
+#new-items .box {
+  background: #cac1b2;
 }
-#home-news .date {
-  color: #777;
-  font-style: italic;
-}
-#home-news a, #home-news a:active, #home-news a:visited {
-  color: #F25E18;
+#new-items-list .item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2em;
 }
 
-#sticky {
-  background: #FDF3C6;
-  padding: .5em; 
-  margin: 0; 
+.highlight-title {
+  color: #f25e18;
 }
-.sticky-close {
-  font-size: small;
-  float: right;
-  cursor: pointer;
+.arrow {
+  padding-left: 41%;
 }
-#sticky h3 {
-  margin-bottom: .5em;
-  background: none;
-  text-transform: none;
-  padding: .5em 0 0 1.5em;
+.arrow-bottom {
+  width:0; height:0;
+  line-height:0;
+  border-top:15px solid #CAC1B2;
+  border-right:15px solid #e6e2d9;
+  border-bottom:15px solid #e6e2d9;
+  border-left:15px solid #e6e2d9;
 }
-#sticky a {
-  margin-left: 2em;
-}
+
+
 
 
 
 /* Blog index
 */
-
 #blog #home-menu {
   margin: 0;
   padding:0

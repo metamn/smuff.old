@@ -13,8 +13,11 @@
       include "archive-shop.php";
       break;
     case '2':
-      include "archive-all.php";
+      include "archive-all-table.php";
       break;    
+    case '3':
+      include "archive-all-grid.php";
+      break;
     default:
       include "archive-blog.php";  
   }

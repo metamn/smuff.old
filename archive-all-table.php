@@ -2,10 +2,25 @@
 // get all posts, not just 10/page
   $cat = category_id(true, false);    
   $all_posts = query_posts2('posts_per_page=-1&cat='.$cat);  
+  
 ?>
 
 <div id="archive-all" class="block">  
   <div id="content" class="column span-18 content">
+    <div id='title' class='block'>
+      <div id="left" class="column span-14 last">
+        <h2>Toate produsele</h2>
+      </div>
+      <div id="right" class="column span-4 last">
+        <?php 
+          $title = 'Lista';
+          $link_type = '3'; // 2=table view, 3=grid view
+          include "home-all-products-link.php";
+        ?>
+        | Tabela
+      </div>
+    </div>
+    
     <?php if ($all_posts->have_posts()) : ?>
       <table id="archive-all-table" class="tablesorter">
       <thead><tr>
