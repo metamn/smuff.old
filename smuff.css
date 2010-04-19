@@ -121,6 +121,17 @@ div#widgetshoppingcart {
 /* Startpage / Home
 */
 
+/* Description 
+*/
+
+#home-description {
+  margin: 0;
+  padding: 0;
+}
+#home-description .box {
+  margin: 0;
+}
+
 /* New products 
 */
 
@@ -184,7 +195,7 @@ div#widgetshoppingcart {
 #bestsellers h3 {
   background: #111;
   color: #f25e18;
-  padding: 1.5em 0;
+  padding: 1.5em .7em;
   text-transform: uppercase;
 }
 #bestsellers .item {
@@ -264,7 +275,10 @@ div#widgetshoppingcart {
   margin: 3em 0;
   padding: 3em 0 0;
 }
-#home-ecosystem h1 {
+#home-ecosystem #title {
+
+}
+#home-ecosystem #title h1 {
   font-size: 6.8em;
   text-transform: uppercase;
   color: #E6E2D9;
@@ -585,13 +599,46 @@ input.add-button{
 }
 
 
-/* Search results
+/* Search
 */
+
+#advanced-search {
+
+}
+#advanced-search #content {
+  margin-top: 2em;
+}
+#advanced-search #content dl {
+  padding: 0 1.5em;
+}
+#advanced-search #content dl dd {
+  margin-bottom: 1.5em;
+}
+#advanced-search #content dl dd select {
+  margin: 0;
+}
+#advanced-search #left {
+  background: #DFDBD0;
+}
+#advanced-search #right {
+
+}
+#advanced-search #searchsubmit {
+  padding: 1.5em;
+}
 
 #search-results-header {
   margin-top: 3em;
 }
-
+#search-results-header table {
+  margin-bottom: 3em;
+}
+#search-results-header table tr {
+  margin-bottom: 1em;
+}
+#search-results-header table td {
+  border-bottom: 1px solid #ddd;  
+}
 
 /* Sidebar 
 */

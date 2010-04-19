@@ -55,6 +55,7 @@ get_header(); ?>
               } 
             ?>
           </td></tr>
+          <tr><td>Rezultate gasite:</td><td> <?php echo $wp_query->post_count;; ?></td></tr>
         </table>
       </div>
       <?php } ?>
@@ -65,7 +66,7 @@ get_header(); ?>
           while (have_posts()) {
             the_post();            
             if (advanced_search($post, $price, $categories)) {
-              include "single-thumb.php";
+              include "product-thumb.php";
               $result_counter = $result_counter + 1;              
             }
           }
