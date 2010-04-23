@@ -1,4 +1,14 @@
 $(document).ready(function() { 
+  
+  // Checkout page checkboxes
+  $("input[name='shipping_method']").change(function(){
+   original = parseInt($("input[name='checkout_original_price']").val());
+   current = parseInt($(this).val());
+   n = current + original;
+   $(".checkout_total_price").html( n + ".00 RON");
+   $("#checkout_shipping_price").val(current);
+  });
+   
   //S3 slider
   $('#s3slider').s3Slider({
       timeOut: 4000

@@ -29,6 +29,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 		}
 		$order_url = $siteurl."/wp-admin/admin.php?page=".WPSC_DIR_NAME."/display-log.php&amp;purchcaseid=".$purchase_log['id'];
 
+        
 		if(($_GET['ipn_request'] != 'true') and (get_option('paypal_ipn') == 1)) {
 			if($purchase_log == null) {
 				echo TXT_WPSC_ORDER_FAILED;
@@ -63,7 +64,23 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 		$stock_adjusted = false;
 		$previous_download_ids = array(0); 
 		$product_list='';
-	
+		
+		$product_list .= "------------------------------------------------------\n\r";
+		$product_list_html .= "------------------------------------------------------\n\r";
+		$product_list.= "Numar comanda: ".$purchase_log['id']."\n\r";		
+		$product_list_html.= "Numar comanda: ".$purchase_log['id']."\n\r";
+		
+		$product_list .= "Factura detaliata: " . $order_url . "\n\r";
+    $product_list_html .= "Factura detaliata: " . $order_url . "\n\r";
+        
+    $product_list .= "Data facturii: " . date("d F, Y H:i:s") . "\n\r";
+    $product_list_html .= "Data facturii: " . date("d F, Y H:i:s") . "\n\r";        
+    $product_list .= "------------------------------------------------------\n\r\n\r" . "Produse:" ."\n\r";
+    $product_list_html .= "------------------------------------------------------\n\r\n\r" . "Produse:" ."\n\r";
+
+		
+		
+			
 		if(($cart != null) && ($errorcode == 0)) {
 			foreach($cart as $row) {
 				$link = "";
@@ -105,7 +122,26 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				$total+=($row['price']*$row['quantity']);
 				$message_price = nzshpcrt_currency_display(($row['price']*$row['quantity']), $product_data['notax'], true);
 
-				$shipping_price = nzshpcrt_currency_display($shipping, 1, true);
+				//by cs
+				//$shipping_price = nzshpcrt_currency_display($shipping, 1, true);
+				$shipping_price = $purchase_log['find_us'];
+				switch ($shipping_price) {
+				  case '8':
+				    $shipping_text = " (Prin Posta Romana, cu plata la livrare)";
+				    break;
+				  case '23':
+				    $shipping_text = " (Prin Fan Curier, cu plata la livrare)";
+				    break;
+				  case '18':
+				    $shipping_text = " (Prin Fan Curier, cu plata prin transfer bancar)";
+				    break;
+				  case '0':
+				    $shipping_text = " (Ridicare din sediu Tg. Mures)";
+				    break;  
+				  default:
+				    $shipping_text = "xxx";
+				}
+				
 				
 				$variation_values = $wpdb->get_col("SELECT `value_id`  FROM `".WPSC_TABLE_CART_ITEM_VARIATIONS."` WHERE `cart_id`='{$row['id']}'"); 
 
@@ -143,9 +179,9 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 						$plural = "s";
 						}
 					$product_list.= " - ".$row['quantity']." ". $product_data['name'].stripslashes($variation_list )."  ". $message_price ."\n\r";
-					if ($shipping > 0) $product_list .= " - ". TXT_WPSC_SHIPPING.":".$shipping_price ."\n\r";
+					if ($shipping > 0) $product_list .= " - ". TXT_WPSC_SHIPPING.":".$shipping_price . "\n\r";
 					$product_list_html.= " - ".$row['quantity']." ". $product_data['name'].stripslashes($variation_list )."  ". $message_price ."\n\r";
-					if ($shipping > 0) $product_list_html .= " &nbsp; ". TXT_WPSC_SHIPPING.":".$shipping_price ."\n\r";
+					if ($shipping > 0) $product_list_html .= " &nbsp; ". TXT_WPSC_SHIPPING.":".$shipping_price. "\n\r";
 
 				}
 				$report = get_option('wpsc_email_admin');
@@ -166,24 +202,31 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				//$wpdb->query("UPDATE `".WPSC_TABLE_DOWNLOAD_STATUS."` SET `active`='1' WHERE `fileid`='".$product_data['file']."' AND `purchid` = '".$purchase_log['id']."' LIMIT 1");
 				//if (!isset($_SESSION['quote_shipping']))
 					//$total_shipping = nzshpcrt_determine_base_shipping($total_shipping, $shipping_country);
-			  $total_shipping += $purchase_log['base_shipping'];
+			  
+			  
+			  //by cs
+			  //$total_shipping += $purchase_log['base_shipping'];			  
+			  $total_shipping = $purchase_log['find_us'];
 					
-				$total = $purchase_log['totalprice'];
+				//$total = $purchase_log['totalprice'];
+				$total = $purchase_log['totalprice'] + $purchase_log['find_us'];
+				
+				
 				// echo $total;
 				// $message.= "\n\r";
-				$product_list.= "Numar comanda: ".$purchase_log['id']."\n\r";
+				// $product_list.= "Numar comanda: ".$purchase_log['id']."\n\r";
 				if($purchase_log['discount_value'] > 0) {
 					$discount_email.= TXT_WPSC_DISCOUNT."\n\r: ";
 					$discount_email .=$purchase_log['discount_data'].' : '.nzshpcrt_currency_display($purchase_log['discount_value'], 1, true)."\n\r";
 				}
-				$total_shipping_email.= TXT_WPSC_TOTALSHIPPING.": ".nzshpcrt_currency_display($total_shipping,1,true)."\n\r";
+				$total_shipping_email.= TXT_WPSC_TOTALSHIPPING.": ".nzshpcrt_currency_display($total_shipping,1,true). $shipping_text ."\n\r";
 				$total_price_email.= TXT_WPSC_TOTAL.": ".nzshpcrt_currency_display($total,1,true)."\n\r";
-				$product_list_html.= "Numar comanda: ".$purchase_log['id']."\n\n\r";
+				// $product_list_html.= "Numar comanda: ".$purchase_log['id']."\n\n\r";
 				if($purchase_log['discount_value'] > 0) {
 					$report.= $discount_email."\n\r";
-					$total_shipping_html.= TXT_WPSC_DISCOUNT.": ".nzshpcrt_currency_display($purchase_log['discount_value'], 1, true)."\n\r";
+					$total_shipping_html.= TXT_WPSC_DISCOUNT.": ".nzshpcrt_currency_display($purchase_log['discount_value'], 1, true).$shipping_text."\n\r";
 				}
-				$total_shipping_html.= TXT_WPSC_TOTALSHIPPING.": ".nzshpcrt_currency_display($total_shipping,1,true)."\n\r";
+				$total_shipping_html.= TXT_WPSC_TOTALSHIPPING.": ".nzshpcrt_currency_display($total_shipping,1,true).$shipping_text ."\n\r";
 				$total_price_html.= TXT_WPSC_TOTAL.": ".nzshpcrt_currency_display($total, 1,true)."\n\r";
 				if(isset($_GET['ti'])) {
 					$message.= "\n\r".TXT_WPSC_YOURTRANSACTIONID.": " . $_GET['ti'];
@@ -268,7 +311,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				}
 
 				if($purchase_log['processed'] < 2) {
-					echo "<br />" . nl2br(str_replace("$",'\$',$message_html));
+					echo nl2br(str_replace("$",'\$',$message_html));					
 					return;
 				}
 
@@ -280,7 +323,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 					echo '<div class="wrap">';
 					if($sessionid != null) {
 						echo TXT_WPSC_THETRANSACTIONWASSUCCESSFUL."<br />";
-						echo "<br />" . nl2br(str_replace("$",'\$',$message_html));
+						echo nl2br(str_replace("$",'\$',$message_html));
 					}
 					echo '</div>';
 				}

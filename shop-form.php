@@ -70,7 +70,11 @@ global $wpsc_query, $wpdb;
 					<label class="shop_form stoc">Stoc:</label>
 					<?php
             $stoc = product_stock($product_id); 
-            echo $stoc; 
+            if ($stoc > 0) {
+              echo "Avem";
+            } else {
+              echo "Nu avem";
+            } 
           ?>
           <br/>
           <label class="shop_form livrare">Livrare:</label>

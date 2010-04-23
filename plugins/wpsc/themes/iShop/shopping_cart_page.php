@@ -7,6 +7,16 @@ $wpsc_coupons = new wpsc_coupons($_SESSION['coupon_numbers']);
 if(wpsc_cart_item_count() > 0) :
 ?>
 <p><?php echo TXT_WPSC_REVIEW_YOUR_ORDER; ?></p>
+
+<p>
+  Campurile marcate cu * sunt obligatorii.
+</p>
+
+<p>
+  Daca doriti factura pe firma va rugam completati campurile Cod Unic de Inregistrare, Nr. Registru, Banca si IBAN.
+</p>
+
+
 <table class="productcart">
 	<tr class="firstrow">
 		<td class='firstcol'></td>
@@ -32,9 +42,9 @@ if(wpsc_cart_item_count() > 0) :
 			</td>
 			<td>
 				<form action="<?php echo get_option('shopping_cart_url'); ?>" method="post" class="adjustform">
-					<input type="text" name="quantity" size="2" value="<?php echo wpsc_cart_item_quantity(); ?>"/>
+					<input type="text" id="update_quantity" name="quantity" size="2" value="<?php echo wpsc_cart_item_quantity(); ?>"/>
 					<input type="hidden" name="key" value="<?php echo wpsc_the_cart_item_key(); ?>"/>
-					<input type="hidden" name="wpsc_update_quantity" value="true"/>
+					<input type="hidden" id="update_quantity_button" name="wpsc_update_quantity" value="true"/>
 					<input type="submit" value="<?php echo TXT_WPSC_APPLY; ?>" name="submit"/>
 				</form>
 			</td>
@@ -57,11 +67,13 @@ if(wpsc_cart_item_count() > 0) :
 		<?php if(wpsc_coupons_error()): ?>
 			<tr><td><?php echo TXT_WPSC_COUPONSINVALID; ?></td></tr>
 		<?php endif; ?>
-		<tr>
+		<tr class="coupon">
 			<td colspan="2">Cod promotie :</td>
-			<td  colspan="3" align='left'>
+			<td  colspan="2" align='left'>
 			<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">
-				<input type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
+				<input type='text' id="coupon_code" name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
+			</td>
+			<td>
 				<input type='submit' value='Trimitere cod' />
 			</form>
 			</td>
@@ -83,39 +95,22 @@ if(wpsc_cart_item_count() > 0) :
 	endif;
 	?>
 	
-	<tr>
-	  <td>&nbsp;</td>
-	  <td>&nbsp;</td>
-	  <td>
-	  <?php do_action('wpsc_before_shipping_of_shopping_cart'); ?>
-	  <?php if(wpsc_uses_shipping()) : ?>
-		        <?php while (wpsc_have_shipping_methods()) : wpsc_the_shipping_method(); ?>
-					        <?php 
-					        // Don't display shipping method if it doesn't have at least one quote
-					        if (!wpsc_have_shipping_quotes()) continue; 
-					        ?>
-					        <?php while (wpsc_have_shipping_quotes()) : wpsc_the_shipping_quote();				
-					         ?>
-						      <?php if(wpsc_have_morethanone_shipping_methods_and_quotes()): ?>
-								        <input type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>' <?php echo wpsc_shipping_quote_selected_state(); ?>  onclick='switchmethod("<?php echo wpsc_shipping_quote_name(); ?>", "<?php echo wpsc_shipping_method_internal_name(); ?>")' value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
-							       <?php else: ?>
-								        <input <?php echo wpsc_shipping_quote_selected_state(); ?> disabled='disabled' type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>'  value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
-									        <?php wpsc_update_shipping_single_method(); ?>
-							        <?php endif; ?>
-							        
-					        <?php endwhile; ?>
-			        <?php endwhile;  ?>
-			        <?php wpsc_update_shipping_multiple_methods(); ?>
-			        <?php if (!wpsc_have_shipping_quote()) : // No valid shipping quotes ?>
-				        <?php echo TXT_WPSC_NO_SHIPPING_QUOTES; ?><
-				        		
-			       
-			        <?php 
-			        return;
-			        endif;  
-			        ?>
-	            <?php endif;  ?>	  
-	   Livrare prin curierat rapid: 18.00 RON (TVA inclus)	  
+	<tr class="shipping">
+	  <td colspan=2>Livrare :</td>
+	  <td>	    
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="8">
+	      Posta Romana, cu plata la livrare: 8.00 RON
+	    <br/>
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="23">
+	      Fan Curier, cu plata la livrare: 23.00 RON
+	    <br/>
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="18" checked="checked">
+	      Fan Curier, cu plata prin transfer bancar: 18.00 RON
+	    <br/>
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="0">
+	      Ridicare din sediu Tg. Mures: 0.00 RON  	  
+	   <br/><br/>
+	   * Toate preturile au TVA inclus	   
 	  </td>
 	  <td>&nbsp;</td>
 	  <td>&nbsp;</td>
@@ -130,7 +125,12 @@ if(wpsc_cart_item_count() > 0) :
 	  <?php endif ?>	
     <tr class="total_price">	  
     <td colspan=3><?php echo TXT_WPSC_TOTALPRICE; ?></td>
-    <td><?php echo wpsc_cart_total(); ?></td>
+    <?php 
+      $total = 18.00 + wpsc_cart_total();      
+    ?>
+    <td><span class="checkout_total_price"><?php echo $total . ".00 RON" ?></span>
+      <input type="hidden" name="checkout_original_price" value="<?php echo wpsc_cart_total(); ?>" />
+    </td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     </tr>
@@ -172,8 +172,7 @@ if(wpsc_cart_item_count() > 0) :
 
   <div class="spacer2">&nbsp;</div>
 	<h3><?php echo TXT_WPSC_CONTACTDETAILS; ?></h3>
-	<?php/* echo TXT_WPSC_CREDITCARDHANDY; <br /> */?>
-	<?php echo TXT_WPSC_ASTERISK; ?>
+	<?php/* echo TXT_WPSC_CREDITCARDHANDY; <br /> */?>	
 	<?php
 	  if(count($_SESSION['wpsc_checkout_misc_error_messages']) > 0) {
 			echo "<div class='login_error'>\n\r";
@@ -192,8 +191,13 @@ if(wpsc_cart_item_count() > 0) :
 							<br />
 							<input type='checkbox' value='true' name='shippingSameBilling' id='shippingSameBilling' />
 							<label for='shippingSameBilling'>Adresa de livrare este acelasi ca adresa de facturare?</label>						
+							<br/>
+							<input type='checkbox' value='true' name='contactBefore' id='contactBefore' />
+							<label for='contactBefore'>Doriti sa fiti contactat telefonic de catre curierat inainte de livrare?</label>
+							<br/><br/>
 						</td>
 					</tr>
+					<br/>
 			<?php endif; ?>
 
 		  <?php if(wpsc_checkout_form_is_header() == true) : ?>
@@ -228,19 +232,8 @@ if(wpsc_cart_item_count() > 0) :
 		
 		<?php endwhile; ?>
 		
-		<?php if (get_option('display_find_us') == '1') : ?>
-		<tr>
-			<td>How did you find us:</td>
-			<td>
-				<select name='how_find_us'>
-					<option value='Word of Mouth'>Word of mouth</option>
-					<option value='Advertisement'>Advertising</option>
-					<option value='Internet'>Internet</option>
-					<option value='Customer'>Existing Customer</option>
-				</select>
-			</td>
-		</tr>
-		<?php endif; ?>		
+		
+		
 		<tr>
 			<td colspan='2'>
 			
@@ -278,6 +271,9 @@ if(wpsc_cart_item_count() > 0) :
 				
 			</td>
 		</tr>
+		
+		<input type="hidden" id="checkout_shipping_price" name="how_find_us" value='filled_by_ajax' />
+		
 		<?php if(get_option('terms_and_conditions') != '') : ?>
 		<tr>
 			<td colspan='2'>

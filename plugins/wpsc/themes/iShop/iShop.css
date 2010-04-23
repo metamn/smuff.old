@@ -153,7 +153,7 @@ strong.prodtitles{
  margin-top: 0px;
 }
 
-pan.items{
+span.items{
  display:block;
  margin:0 0 15px 0;
 }
@@ -194,7 +194,21 @@ p.empty,p.visitshop{
 
 
 
+/*
+ * shopping / checkout page styling
+ */
 
+table.productcart #update_quantity {
+  width: 5em;
+  margin-right: 3em;
+}
+table.productcart #coupon_code {
+  width: 15em;
+}
+table.productcart tr.coupon td, table.productcart tr.shipping td {
+  margin-top: .5em;
+  border-top: 1px solid #cac1b2;
+}
 
 
 
