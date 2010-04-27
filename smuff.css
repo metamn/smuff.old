@@ -124,7 +124,11 @@ div#widgetshoppingcart {
 /* Description 
 */
 
-#home-description {
+#home #content {
+  margin-top: 0;
+}
+
+#home-description{
   margin: 0;
   padding: 0;
 }
@@ -340,7 +344,7 @@ div#widgetshoppingcart {
 /* Single 
 */
 
-#post {
+#content {
   margin-top: 3em;
   padding: 0;
 }
@@ -430,12 +434,7 @@ input.add-button{
 /* Search
 */
 
-#advanced-search {
 
-}
-#advanced-search #content {
-  margin-top: 2em;
-}
 #advanced-search #content dl {
   padding: 0 1.5em;
 }
@@ -472,12 +471,7 @@ input.add-button{
 /* All products
 */
 
-#archive-all {
-  
-}
-#archive-all #content {
 
-}
 #archive-all #content #right {
   text-align: right;
 }
@@ -579,32 +573,8 @@ input.search {
 /* Blog index
 */
 
-#blog #home-menu {
-  margin: 0;
-  padding:0
-}
-#blog #home-menu ul {
-  display: block;
-  margin-left: 1em;
-  padding: 0;
-} 
-#blog #home-menu ul li {
-  display: inline;
-  float: left;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowarp;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-#blog #home-menu ul li.search-link {
-  margin-right: 2.5em;
-} 
 
 
-#blog #content {
-  margin-top: 1em;
-}
 .post {
   margin-bottom: 5em !important;
 }
@@ -899,9 +869,7 @@ ul.taxonomy li a.main {
 
 
 
-#page .post, #archives #content, #blog #content {
-  margin-top: 3em;
-}
+
 .content {
   margin-top: 5.5em;
 }

@@ -8,7 +8,9 @@ get_header();
 ?>
 	<div id="blog" class="block">	  
     <div class="block">
-      <div class="column span-18">&nbsp;</div>
+      <div class="column span-18">&nbsp;
+        something here is a must !!!!
+      </div>
       <div class="column span-6 last">
         <?php include "home-menu.php" ?>
       </div>
