@@ -15,7 +15,7 @@
     </div>    
   </div>
   
-  <div id="title">
+  <div id="title" class="block span-18">
     <h1>Prietenii Smuff</h1>
   </div>
 

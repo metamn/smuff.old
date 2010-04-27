@@ -9,7 +9,8 @@
           if ($top_sales->have_posts()) {
             $counter = 0;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if ($counter > 1) {                
+              if ($counter > 1) {   
+                $medium = true;             
                 include "product-thumb.php";              
               }
               $counter += 1;
@@ -25,7 +26,8 @@
           if ($top_sales->have_posts()) {
             $counter = 0;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if ($counter <= 1) {                
+              if ($counter <= 1) {    
+                $medium = true;            
                 include "product-thumb.php";              
               }
               $counter += 1;

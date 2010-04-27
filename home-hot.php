@@ -17,7 +17,7 @@
           ?>
           <li class="s3sliderImage">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-              <img src="<?php echo $large[0] ?>" />            
+              <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>            
               <span>
                 <h3><?php echo $product_name ?></h3>
                 <?php the_excerpt(); ?>

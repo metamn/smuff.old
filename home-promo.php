@@ -15,6 +15,7 @@
           <?php
             if ($promo_posts->have_posts()) {
               while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+                $medium = false;
                 include "product-thumb.php";
               endwhile; 
             }
