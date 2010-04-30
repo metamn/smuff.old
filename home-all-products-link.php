@@ -3,7 +3,7 @@
   if ($cat_id) {
     $link = get_category_link($cat_id);    
   } else {
-    $link = get_category_link(47);    
+    $link = get_category_link(10);    
   }
   $link = $link . '?view=' . $link_type;
 ?>

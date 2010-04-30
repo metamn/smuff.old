@@ -2,19 +2,19 @@
   $cat = category_id(true, false);
   $args = array (
     'posts_per_page' => 8,
-    'category__and' => array(49, $cat)
+    'category__and' => array(15, $cat)
   );
   $promo_posts = query_posts2($args);
   
   $args = array (
     'posts_per_page' => 6,
-    'category__and' => array(50, $cat)
+    'category__and' => array(14, $cat)
   );
   $top_sales = query_posts2($args);  
   
   $args = array (
     'posts_per_page' => 6,
-    'category__and' => array(47, $cat)
+    'category__and' => array(10, $cat)
   );
   $new_products = query_posts2($args);
 ?>

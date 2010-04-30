@@ -29,10 +29,11 @@ function get_user_posts($user) {
 
 
 // Getting the categories where a post belongs in a new fashion
-// - some parent categories (Produse, Produse pentru ...) are removed
+// - some parent categories are removed:
+//   :: alte-categorii-de-produse, distribuim-online, meta, post, produse, produse-folosite-in, produse-pentru, ocazii
 // - used in blog index
 function get_post_categories_array($post) {
-  $parent_categories = array(5, 2, 48, 78, 47, 14, 15, 16);
+  $parent_categories = array(3, 4, 8, 9, 10, 11, 12, 13);
   $ret = array();
   $cats = get_the_category($post->ID);
   foreach ($cats as $cat) {
@@ -94,7 +95,7 @@ function category_id($is_cat, $is_single) {
   if ($is_cat) {
     return get_query_var('cat');
   } else if ($is_single) {
-      $collection_categories = get_categories('child_of=47');
+      $collection_categories = get_categories('child_of=10');
       $cats = array();
       foreach ($collection_categories as $cc) {
         $cats[] = $cc->cat_ID; 
@@ -129,7 +130,7 @@ function product_discount($product_id) {
 
 // Get the post ID from the product ID
 function post_id($product_id) {
-  $posts = get_posts("cat=47&posts_per_page=1&meta_key=product_id&meta_value=" . $product_id);
+  $posts = get_posts("cat=10&posts_per_page=1&meta_key=product_id&meta_value=" . $product_id);
   if ($posts) {
     foreach ($posts as $post) {
       $id = $post->ID;

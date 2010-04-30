@@ -808,7 +808,8 @@ ul.taxonomy li a.main {
 #company .date-firma-info {
   display: none;
   background: #DFDBD0;
-  padding: .4em;
+  padding: 1em;
+  line-height: 1.8;
   border: 1px solid #ddd; 
 }
 #company h3 {

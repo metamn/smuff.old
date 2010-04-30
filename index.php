@@ -20,20 +20,20 @@ get_header();
 	    <?php if (have_posts()) : ?>
 		    <?php while (have_posts()) : the_post(); ?>
 		      <?php 
-		        if (in_category(47)) {
-		          $main_category = 47;
+		        if (in_category(10)) { //produse
+		          $main_category = 10;
 		          include "post-product.php";		          
-		        } elseif (in_category(75)) {
-		          $main_category = 75;
+		        } elseif (in_category(39)) { //comment
+		          $main_category = 39;
 		          include "post-comment.php";
-		        } elseif (in_category(76)) {
-		          $main_category = 78;
+		        } elseif (in_category(76)) { //tumblr
+		          $main_category = 9; //post
 		          include "post-tumblr.php";
-		        } elseif (in_category(77)) {
-		          $main_category = 78;
+		        } elseif (in_category(18)) { //social
+		          $main_category = 9;
 		          include "post-social.php";
 		        } else {
-		          $main_category = 47;
+		          $main_category = 10;
 		          include "post-default.php";		          
 		        }
 		      ?>		  		       

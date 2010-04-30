@@ -15,7 +15,7 @@ get_header();
 	      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 	      
 	        <?php 
-	          if (in_category(47)) {
+	          if (in_category(10)) {
 	            include "single-product.php";
 	          } else {
 	            include "single-post.php";

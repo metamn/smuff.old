@@ -79,7 +79,7 @@
 			    <div id="menu" class="last">
 			      <ul class="inline-list">
 		          <?php 
-		            $cats = get_categories('child_of=47');
+		            $cats = get_categories('child_of=10');
 		            foreach ($cats as $c) { ?>
 		              <li>
 		                <a href="<?php echo get_category_link($c->term_id)?>?view=1" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>

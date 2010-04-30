@@ -12,9 +12,9 @@
   // Multiple loops 
   // - only for content
   // - sidebar posts are queryied in sidebar
-  $promo_posts = query_posts2('posts_per_page=8&cat=49');
-  $top_sales = query_posts2('posts_per_page=6&cat=50');  
-  $new_products = query_posts2('posts_per_page=6&cat=47');
+  $promo_posts = query_posts2('posts_per_page=8&cat=15');
+  $top_sales = query_posts2('posts_per_page=6&cat=14');  
+  $new_products = query_posts2('posts_per_page=6&cat=10');
 ?>
 
 
