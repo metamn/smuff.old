@@ -6,9 +6,7 @@
 		<title>
 		  <?php bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>		  
 		</title>
-
-		<?php do_action( 'bp_head' ) ?>
-
+		
 		<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 
     <!-- Blueprint -->
