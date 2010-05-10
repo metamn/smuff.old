@@ -64,6 +64,7 @@
   </div>
   
   <div class="recommended">
+    <h2>Produse similare</h2>
      <?php
         $related_posts = MRP_get_related_posts($post->ID, true);
         if ($related_posts) {

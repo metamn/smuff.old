@@ -1,6 +1,10 @@
 <?php
 
-
+// Checking if the request is for the shop or the blog
+// - used to display different layouts for the shop and the blog
+function is_blog() {
+  return is_home();
+}
 
 // Query for multiple posts
 // - the query string has the syntax of the query_posts WP function

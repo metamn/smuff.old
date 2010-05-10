@@ -57,7 +57,18 @@
 	          <div id="logo" class="column span-8 last">
 	            <h1>
 	              <a href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
-	              <span class="strapline"><?php bloginfo('description');?></span>			      
+	              <span class="strapline">
+	                <?php if (is_blog()) {
+	                  $shop = '';
+	                  $blog = 'active';
+	                } else {
+	                  $shop = 'active';
+	                  $blog = '';
+	                }?>
+	                <a class="<?php echo $shop?>" href="<?php bloginfo('home'); ?>" title="Magazinul Smuff" alt="Magazinul Smuff">shop</a>
+	                &
+	                <a class="<?php echo $blog ?>" href="<?php bloginfo('home'); ?>/blog" title="Blogul Smuff" alt="Blogul smuff">blog</a>
+	              </span>			      
 	           </h1>			      
 			      </div>
 			      <div id="main-name" class="column span-10 last">
@@ -71,11 +82,12 @@
                       $page_name = get_cat_name($cat_id); 
                     } 
                 } elseif (is_home()) { 
-                  $page_name = "Blog";
+                  $page_name = "";
                 }?>
 			        <h1><?php echo $page_name ?></h1>
 			      </div>
 			    </div>
+			    <?php if (!(is_blog())) { ?>
 			    <div id="menu" class="last">
 			      <ul class="inline-list">
 		          <?php 
@@ -87,6 +99,7 @@
 		            <?php } ?>
 		        </ul>
 			    </div>			    
+			    <?php } ?>
 		    </div>		    
 		    
 	      <div id="cart" class="column span-6 last">

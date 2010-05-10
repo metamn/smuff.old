@@ -19,14 +19,18 @@
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
               <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>            
               <span>
-                <h3><?php echo $product_name ?></h3>
-                <?php the_excerpt(); ?>
-                <?php if ($product_discount > 0) { ?>
-                  <p class="price"><?php echo $product_sale_price; ?></p> RON
-                  <p class="old-price"><?php echo $product_price; ?></p>    
-                <?php } else { ?>
-                  <p class="normal-price"><?php echo $product_price; ?></p> RON
-                <?php } ?>  
+                <ul class="inline-list">
+                <li><h3><?php echo $product_name ?></h3></li>
+                <li>
+                  <?php if ($product_discount > 0) { ?>
+                    <p class="price"><?php echo $product_sale_price; ?></p> RON
+                    <p class="old-price"><?php echo $product_price; ?></p>    
+                  <?php } else { ?>
+                    <p class="normal-price"><?php echo $product_price; ?></p> RON
+                  <?php } ?>
+                </li>
+                </ul>
+                <?php the_excerpt(); ?>   
               </span>
             </a>
           </li>
