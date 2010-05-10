@@ -20,9 +20,9 @@
 
 <div id="home" class="block">
   <div class="block">
-    <div id="content" class="column span-18">    	                
-      <?php include "home-description.php"; ?> 
-      <?php include "home-hot.php"; ?> 
+    <div id="content" class="column span-18">
+      <?php include "home-description.php"; ?>    	                      
+      <?php include "home-hot.php"; ?>        
       <?php include "home-bestsellers.php"; ?> 
       <?php include "home-promo.php"; ?>
       <?php include "home-ecosystem.php" ?>    

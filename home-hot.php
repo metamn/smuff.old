@@ -20,17 +20,16 @@
               <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>            
               <span>
                 <ul class="inline-list">
-                <li><h3><?php echo $product_name ?></h3></li>
-                <li>
+                  <li><h3><?php echo $product_name ?></h3></li>
                   <?php if ($product_discount > 0) { ?>
-                    <p class="price"><?php echo $product_sale_price; ?></p> RON
-                    <p class="old-price"><?php echo $product_price; ?></p>    
+                    <li class="price"><?php echo $product_sale_price; ?></li> 
+                    <li>RON</li>
+                    <li class="old-price"><?php echo $product_price; ?></li>    
                   <?php } else { ?>
-                    <p class="normal-price"><?php echo $product_price; ?></p> RON
+                    <li class="normal-price"><?php echo $product_price; ?></li> 
+                    <li>RON</li>
                   <?php } ?>
-                </li>
-                </ul>
-                <?php the_excerpt(); ?>   
+                  </ul>                  
               </span>
             </a>
           </li>
