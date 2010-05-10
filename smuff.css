@@ -245,6 +245,7 @@ div#widgetshoppingcart {
   border: 1px solid #ccc;
   width: 230px;
   height: 200px;
+  cursor: pointer;
 }
 #bestsellers .item h4 {
   margin: 0 0 .5em;
@@ -470,7 +471,9 @@ input.add-button{
 /* Search
 */
 
-
+#advanced-search #content dt {
+  padding: 0.5em;
+}
 #advanced-search #content dl {
   padding: 0 1.5em;
 }
@@ -488,6 +491,7 @@ input.add-button{
 }
 #advanced-search #searchsubmit {
   padding: 1.5em;
+  margin: 1em;
 }
 
 #search-results-header {
@@ -511,6 +515,9 @@ input.add-button{
 #archive-all #content #right {
   text-align: right;
 }
+#archive-all-grid #item {
+  height: 28em;
+} 
 
 
 /* Sidebar 

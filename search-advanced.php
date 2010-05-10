@@ -51,20 +51,11 @@ get_header();
             <dt><label for="term">Produse promotionale si poplurae</label></dt>
             <dd><?php echo create_check_box_for_category(8, "category-promo[]")?></dd>
           </dl>
+          <input type="submit" id="searchsubmit" value="Cautare" />
         </div>
         
         <div id="right" class="column span-8 prepend-1 last">                       
-          <input type="submit" id="searchsubmit" value="Cautare" />  
-          
-          <h2>Arhiva</h2>          
-          <h3>Arhiva etichete</h3>
-	        <ul>
-		         <?php wp_tag_cloud(); ?>
-	        </ul>
-	        <h3>Arhiva cronologica</h3>
-	        <ul>
-		         <?php wp_get_archives('type=monthly'); ?>
-	        </ul>
+          <input type="submit" id="searchsubmit" value="Cautare" />            
         </div>
       </form>      
     </div>                

@@ -22,7 +22,7 @@
     </div>
     
     <?php if ($all_posts->have_posts()) : ?>
-      <div id="archive-all-grid" class="block">
+    <div id="archive-all-grid" class="block">
       <?php while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
 		    $product_id = product_id($post->ID);
         $product_price = product_price($post->ID);
@@ -36,10 +36,11 @@
 		      <?php include "product-thumb.php"?>
 		    </div>
 		  <?php endwhile; ?>
-		  <p class="alignright">
-		    <?php echo $all_posts->post_count . ' produse. ' ?>
-		    <a href="#archive-all">[ &uarr; Top ]</a>
-		  </p>		  	  
+		</div>
+	  <p class="alignright">
+	    <?php echo $all_posts->post_count . ' produse. ' ?>
+	    <a href="#archive-all">[ &uarr; Top ]</a>
+	  </p>		  	  
 		<?php else : 
       include "not-found.php";  
 	  endif; ?>
