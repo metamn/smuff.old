@@ -24,5 +24,5 @@
 	<div style="clear: both"></div>
 	
 <?php else : ?>
-  <p><?php _e ('There are no questions!', 'faqtastic'); ?></p>
+  <p>Inca nu sunt intrebari.</p>
 <?php endif; ?>

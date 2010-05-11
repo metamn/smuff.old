@@ -34,6 +34,7 @@
         </div>
       </div>
       <?php if ($img_count > 4) { ?>
+        <div class="clearfix"></div>
         <div class="navi"></div>			          
       <?php } ?>
     </div>
@@ -42,10 +43,9 @@
       <div id="post-shopping" class="box">
         <?php include "shop-form.php" ?>
       </div>
-      <div id="post-operations" class="box">
-         <?php if(function_exists('add_facebook_button')) { add_facebook_button(); }?> 
-         <hr/>          
-         <?php edit_post_link('Modificare articol', '', ''); ?>
+      <div id="post-operations" class="box">         
+         <?php edit_post_link('Modificare articol', '<span class="ui-icon ui-icon-document"/></span>', '<hr/>'); ?>
+         <?php if(function_exists('add_facebook_button')) { add_facebook_button(); }?>                   
       </div>
     </div>
   </div>
@@ -61,8 +61,9 @@
     </div>
   </div>
   
-  <div class="recommended">
-    <h2>Produse similare</h2>
+    
+  <div id="recommended">
+    <h3>Produse similare</h3>
      <?php
         $related_posts = MRP_get_related_posts($post->ID, true);
         if ($related_posts) {

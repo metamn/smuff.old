@@ -23,6 +23,7 @@
           <div class="item">&nbsp;</div>      		        
 	      </div>        
 	    </div> <!-- scrollable -->
+	    <div class="clearfix"></div>
       <div class="navi"></div>
   </div>   
 </div>
