@@ -19,17 +19,24 @@
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
               <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>            
               <span>
-                <ul class="inline-list">
-                  <li><h3><?php echo $product_name ?></h3></li>
-                  <?php if ($product_discount > 0) { ?>
-                    <li class="price"><?php echo $product_sale_price; ?></li> 
-                    <li>RON</li>
-                    <li class="old-price"><?php echo $product_price; ?></li>    
-                  <?php } else { ?>
-                    <li class="normal-price"><?php echo $product_price; ?></li> 
-                    <li>RON</li>
-                  <?php } ?>
-                  </ul>                  
+                <table>
+                  <tr>
+                    <td><h3><?php echo $product_name ?></h3></td>
+                    <?php if ($product_discount > 0) { ?>
+                      <td class="small"><p class="price"><?php echo $product_sale_price; ?></p> RON</td>
+                    <?php } else { ?>
+                      <td class="small"><p class="normal-price"><?php echo $product_price; ?></p> RON</td>                     
+                    <?php } ?>
+                  </tr>
+                  <tr>
+                    <td class="excerpt"><?php the_excerpt(); ?></td>
+                    <?php if ($product_discount > 0) { ?>
+                      <td class="old-price small"><?php echo $product_price; ?> RON</td>
+                    <?php } else { ?>
+                      <td></td>
+                    <?php } ?>
+                  </tr>    
+                </table>                                                              
               </span>
             </a>
           </li>

@@ -155,7 +155,7 @@ div#widgetshoppingcart {
   padding: 0;
 }
 #home-hot-title {
-  top: -500px;
+  top: -60px;
   position: relative;
 }
 #home-hot-title #text {
@@ -186,9 +186,10 @@ div#widgetshoppingcart {
   color: #e6e2d9;
   font-family: inherit;
   font-size: inherit;
-  padding: 1em;
+  padding: .4em 1em;
+  height: 4.6em;
   background: #4A4742;
-  top: 0; /* positioning top or bottom */
+  bottom: 0; /* positioning top or bottom */
 }
 #home-hot-content .s3sliderImage span h3 {
   color: #f25e18;
@@ -196,9 +197,28 @@ div#widgetshoppingcart {
   font-weight: bold;
   text-align: right;
   margin-right: 1em;  
+  margin-bottom: .5em;
 } 
-#home-hot-content .s3sliderImage span ul {
-  float:right; 
+#home-hot-content .s3sliderImage span p {
+  display: inline-block;
+  margin: 0;
+} 
+#home-hot-content .s3sliderImage span table {
+  float:right;
+  margin: 0; 
+}
+#home-hot-content .s3sliderImage span table td.small {
+  width: 8em;
+}
+#home-hot-content .s3sliderImage span table td.excerpt p {
+  text-align: right;
+  margin-right: 1.6em;  
+  display: block;
+}
+#home-hot-content .s3sliderImage span table td {
+  padding: 0;
+  margin: .5em;
+  vertical-align: top;
 }
 #home-hot-content .s3sliderImage span .normal-price {
   color: #111;
