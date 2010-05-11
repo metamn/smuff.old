@@ -43,11 +43,9 @@
         <?php include "shop-form.php" ?>
       </div>
       <div id="post-operations" class="box">
-         <?php if (function_exists('wpfp_link')) { wpfp_link(); } ?>
-         <br/>
-         <?php if (function_exists('sharethis_button')) { sharethis_button(); } ?>
-         </br> 
-         <?php edit_post_link('Modificare', '', ''); ?>
+         <?php if(function_exists('add_facebook_button')) { add_facebook_button(); }?> 
+         <hr/>          
+         <?php edit_post_link('Modificare articol', '', ''); ?>
       </div>
     </div>
   </div>

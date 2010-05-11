@@ -38,6 +38,15 @@ body {
 /* Header
 */
 
+#tooltips {
+  margin: 0;  
+  padding: .5em;
+  position: absolute;
+  width: 700px;
+}
+.tooltips-highlighted {
+  background: #FDF3C6;  
+}
 
 #headlines {
   margin: 0;
@@ -405,12 +414,12 @@ div#widgetshoppingcart {
   margin-top: 3em;
   padding: 0;
 }
-
+#post {
+  margin: 0;
+}
 #single .post h2 {
-  margin-right: .7em;
   border-bottom: 1px solid #cac1b2;
 }
-
 #top-section {
   
 }
@@ -485,6 +494,10 @@ input.add-button{
   background: transparent;
   color: #f25e18;
   border: 1px solid;
+}
+
+#post-operations img {
+  border: none;
 }
 
 

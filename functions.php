@@ -1,5 +1,13 @@
 <?php
 
+
+// Returns the excerpt of a page
+// - $page is the page slug
+function page_excerpt($page) {
+    $p = get_page_by_path($page);   
+    return $p->post_excerpt;
+}
+
 // Checking if the request is for the shop or the blog
 // - used to display different layouts for the shop and the blog
 function is_blog() {
