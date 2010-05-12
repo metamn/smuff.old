@@ -58,16 +58,26 @@
       <div class="pane">
         <?php comments_template(); ?>
       </div>
+      
+      <h3>Informatii technice despre acest articol</h3>
+      <div class="pane">
+        <ul>
+          <li>Adresa trackback: <a href="<?php trackback_url(); ?>"><?php trackback_url(); ?></a></li>
+          <li><?php post_comments_feed_link('Urmarire articol prin RSS'); ?></li>
+          <li>Numar vizualizari articol: <?php if(function_exists('the_views')) { the_views(); } ?>  </li>
+          <li>Creat <?php the_time('l, j F Y') ?> ora <?php the_time('G:i') ?> de <?php the_author() ?></li>
+        </ul>
+      </div>
     </div>
   </div>
   
     
-  <div id="recommended">
-    <h3>Produse similare</h3>
+  <div id="recommended">    
      <?php
         $related_posts = MRP_get_related_posts($post->ID, true);
-        if ($related_posts) {
-          foreach ($related_posts as $post) {
+        if ($related_posts) { ?>        
+          <h3>Produse similare</h3>
+          <?php foreach ($related_posts as $post) {
             setup_postdata($post);
             $product_id = product_id($post->ID);
             $product_price = product_price($post->ID);
@@ -81,5 +91,6 @@
         } 
       ?>
   </div>
+  
 </div>
 

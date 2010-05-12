@@ -522,9 +522,12 @@ input.add-button{
 }
 
 
+
 /* Comments
 */
-
+h4.comments {
+  margin-bottom: 3em;
+}
 li.comment {
   margin-bottom: 2em;
 }
@@ -545,6 +548,8 @@ li.comment ul.children {
   list-style-type: none;
   margin-top: 1em;  
 }
+
+
 
 
 /* Search
