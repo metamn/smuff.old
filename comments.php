@@ -69,22 +69,23 @@
 
 <?php else : ?>
 
-<p><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<p><input class="required" type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="author"><small>Nume <?php if ($req) echo "(obligatoriu)"; ?></small></label></p>
 
-<p><input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<p><input class="required email" type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 <label for="email"><small>E-mail (va ramane confidential) <?php if ($req) echo "(obligatoriu)"; ?></small></label></p>
 
-<p><input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+<p><input class="url" type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
 <label for="url"><small>Adresa web</small></label></p>
 
 <?php endif; ?>
 
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
-<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+<p><textarea class="required" name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
 
 <p><input name="submit" type="submit" id="submit" tabindex="5" value="Trimitere" />
+
 <?php comment_id_fields(); ?>
 </p>
 <?php do_action('comment_form', $post->ID); ?>
@@ -93,5 +94,7 @@
 
 <?php endif; // If registration required and not logged in ?>
 </div>
+
+
 
 <?php endif; // if you delete this the sky will fall on your head ?>
