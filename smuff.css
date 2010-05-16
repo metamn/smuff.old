@@ -520,7 +520,13 @@ input.add-button{
   background: #cac1b2;
   padding: .5em;
 }
-
+#recommended .item {
+  width: 25%;
+  height: 280px;
+  padding: 0 2em;
+  margin-bottom: 2em;
+  float: left;
+}
 
 
 /* Comments
@@ -598,6 +604,9 @@ li.comment ul.children {
 
 #archive-all #content #right {
   text-align: right;
+}
+#archive-all #content #right a, #archive-all #content #right a:visited {
+  text-decoration: underline;
 }
 #archive-all-grid #item {
   height: 28em;

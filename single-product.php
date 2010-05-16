@@ -45,7 +45,7 @@
       </div>
       <div id="post-operations" class="box">         
          <?php edit_post_link('Modificare articol', '<span class="ui-icon ui-icon-document"/></span>', '<hr/>'); ?>
-         <?php if(function_exists('add_facebook_button')) { add_facebook_button(); }?>                   
+         <?php include "share-twitter.php" ?>
       </div>
     </div>
   </div>
@@ -91,6 +91,7 @@
         } 
       ?>
   </div>
+  <div class='clearfix'></div>
   
 </div>
 

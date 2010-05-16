@@ -1,6 +1,11 @@
 <?php
 
 
+// Adding sidebars to hold various widgets
+if ( function_exists('register_sidebars') )
+  register_sidebars(2);
+
+
 // Styling comments
 // - documentation @ http://codex.wordpress.org/Template_Tags/wp_list_comments
 function styled_comments($comment, $args, $depth){
