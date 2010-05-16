@@ -33,7 +33,7 @@ get_header();
 		          $main_category = 9;
 		          include "post-social.php";
 		        } else {
-		          $main_category = 10;
+		          $main_category = 22; // Stiri
 		          include "post-default.php";		          
 		        }
 		      ?>		  		       

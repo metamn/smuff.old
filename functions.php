@@ -93,6 +93,58 @@ function get_post_categories_array($post) {
   return $ret;
 }
 
+
+// Getting the sponsored category the product belongs
+// - used in blog sidebar/taxonomy
+// - input params: see display_post_categories 
+// steps: 
+// 1. get the main category slug, ie 'gadget'
+// 2. get that children category from 'Parteneri' whose slug has 'gadget'
+function get_sponsor_category($post_categories, $parent_id) {
+  $ret = 0;
+  $cats = get_categories('child_of='.$parent_id);
+  $first_cat_ID = 0;
+  
+  // Getting the first, main category slug the post belongs
+  if ($cats) {
+    $ids1 = array();
+    foreach ($cats as $c1) {
+      $ids1[] = $c1->cat_ID;
+    }
+    $ids2 = array();
+    foreach ($post_categories as $c2) {
+      $ids2[] = $c2->cat_ID;
+    }
+    $main = array_intersect($ids1, $ids2);
+    foreach ($main as $m) {
+      $cat = get_category($m);
+      $slug = $cat->slug;
+      break;
+    }   
+  }
+  
+  //echo "slug is: " . $slug . '<br/>';  
+  $c = get_category(96);
+  $suffix = $slug . "-" . $c->slug;
+  
+  //echo "suffix is: " . $suffix . '<br/>'; 
+  
+  return get_category_by_slug($suffix);
+}
+
+// Getting the sponsored category the post belongs
+// - used in blog sidebar/taxonomy
+// - get that children category from 'Parteneri' whose slug has 'stiri'
+function get_sponsor_category2($main_category) {
+  $c = get_category($main_category);
+  $slug = $c->slug;
+  
+  $c = get_category(96);
+  $suffix = $slug . "-" . $c->slug;
+  
+  return get_category_by_slug($suffix);
+}
+
 // Displaying post categories highlighting major categories
 // - the parent is given for the most important category
 // - major categories will go first 

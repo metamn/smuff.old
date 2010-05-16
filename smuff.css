@@ -710,19 +710,52 @@ input.search {
 */
 
 
-
 .post {
   margin-bottom: 5em !important;
 }
-.post-price {
-  font-size: large;
+#post-body #post-title h1 {
+  padding: .5em;
+}
+#post-body #post-price {
   background: #666;
   color: #ddd;
+  height: 5em;
+  position: absolute;
+  margin-top: -1.5em;
+  margin-left: 45em;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px; 
 }
-.post-price p {
-  margin: 0 !important;
-  padding: 0 0 .7em 0;
+#post-body #post-price p {
+  margin: .5em !important;
   text-align: center;
+}
+#post-body #post-price .price, #post-body #post-price .old-price, #post-body #post-price .normal-price {
+  font-size: medium;
+}
+#post-body #post-price .price {
+  background: none;
+  color: #F25E18;
+}
+#post-body #post-price .normal-price {
+  background: none;
+}
+#post-body #post-price .price-spacer {
+  margin-top: 1.5em;
+  text-align: center;
+}
+#post-data #post-image {
+  padding: 0 1em 1em;  
+  width: 310px;
+  display: inline;
+  float: left;
+}
+#post-data #post-excerpt {  
+  line-height: 2;
+  margin-left: 1em;  
+}
+#post-data #post-excerpt p {
+  margin: 1em 0;
 }
 .post .meta a, .post .meta a:visited {
   color: #777;
@@ -734,7 +767,7 @@ input.search {
   border-top: 1px solid #cac1b2;  
 }
 .post .meta ul.inline-list {
-  margin: 0;
+  margin: 0 0 0 1em;
 }
 .post .ui-icon {
   display: inline-block;
@@ -757,7 +790,7 @@ ul.taxonomy {
    list-style-type: none;
 }
 ul.taxonomy li {
-  margin-bottom: .5em;
+  margin-bottom: .6em;
 }
 ul.taxonomy li a {
   padding: .5em 1em;
@@ -770,6 +803,19 @@ ul.taxonomy li a.main {
 .taxonomy-post-title {
   margin-left: 2em;
 }
+#post-sidebar #author {
+  margin-left: 1.5em;
+}
+#post-sidebar #author p {
+  margin: 0;
+}
+#post-sidebar #author a {
+  margin-left: .5em;
+}
+#post-sidebar #sponsor {
+  margin: 1em 0 0 1.5em;
+}
+
 
 .stiri {
   background: #FDF3C6;

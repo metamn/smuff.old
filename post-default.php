@@ -14,7 +14,10 @@
     <?php include "post-meta-and-share.php" ?>
   </div>
   
-  <?php include "post-taxonomy.php" ?>
+  <div id="post-sidebar" class="column span-6 last">       
+    <?php include "post-taxonomy.php" ?>
+    <?php include "post-sponsor.php" ?>			           
+  </div>
   
 			          
 </div>				     
