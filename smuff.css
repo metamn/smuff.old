@@ -709,12 +709,47 @@ input.search {
 /* Blog index
 */
 
-
+/* General */
 .post {
   margin-bottom: 5em !important;
 }
+#post-body {
+  background: #DFDBD0;
+}
+#post-body p {
+  padding: 1em;
+}
+#post-body ul {
+  margin-left: 3em;
+}
+#post-body img {
+  max-width: 700px;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: .2em;
+}
+#post-body img.post-logo {
+  border: none;
+  margin: 0 1em 1em 0;
+}
+#post-body .wp-caption {
+  width: 710px !important;
+}
+#post-body .wp-caption-text {
+  background: #cac1b2;
+  text-align: center;
+  font-style: italic;
+}
+#post-body .entry a, #post-body .entry a:visited {
+  text-decoration: underline;
+}
+
+/* blog index entry */
 #post-body #post-title h1 {
   padding: .5em;
+}
+#post-body h2 {
+  background: #FDF3C6;
 }
 #post-body #post-price {
   background: #666;
@@ -744,6 +779,7 @@ input.search {
   margin-top: 1.5em;
   text-align: center;
 }
+
 #post-data #post-image {
   padding: 0 1em 1em;  
   width: 310px;
@@ -757,6 +793,48 @@ input.search {
 #post-data #post-excerpt p {
   margin: 1em 0;
 }
+
+
+
+.post-oneliner-header {
+  background: #111;
+}
+.post-oneliner-header a {
+  color: #E6E2D9;
+  padding-left: .5em;
+}
+.post-oneliner-body ul.inline-list {
+  margin: 0;
+}
+.post-oneliner-header .tumblr-media {
+  background: #E6E2D9;
+  width: 100%;
+  height: auto;
+}
+.post-oneliner-header .tumblr-media object, .post-oneliner-header .tumblr-media   embed {
+  width: 230px;
+  height: 191px;
+}
+
+
+.post .excerpt {
+  margin: 1em;  
+}
+
+
+#post-body p.comment-content {
+  background: #DFDBD0;
+  padding-top: .2em;
+}
+#post-body .tumblr a p {
+  font-size: large;
+  padding-bottom: 1em;
+}
+
+
+
+
+
 .post .meta a, .post .meta a:visited {
   color: #777;
 }
@@ -783,24 +861,24 @@ input.search {
   margin: 0 !important;
 }
 
-.post .tags {
+#post-sidebar .post .tags {
   margin-left: 2em;
 }
-ul.taxonomy {
+#post-sidebar ul.taxonomy {
    list-style-type: none;
 }
-ul.taxonomy li {
+#post-sidebar ul.taxonomy li {
   margin-bottom: .6em;
 }
-ul.taxonomy li a {
+#post-sidebar ul.taxonomy li a {
   padding: .5em 1em;
 }
-ul.taxonomy li a.main {
+#post-sidebar ul.taxonomy li a.main {
   font-size: larger;
   text-transform: uppercase;
   padding: .3em;
 }
-.taxonomy-post-title {
+#post-sidebar .taxonomy-post-title {
   margin-left: 2em;
 }
 #post-sidebar #author {
@@ -815,8 +893,11 @@ ul.taxonomy li a.main {
 #post-sidebar #sponsor {
   margin: 1em 0 0 1.5em;
 }
-
-
+#post-sidebar #sponsor img {
+  border: none;
+  max-width: 229px;
+  height: auto;
+}
 .stiri {
   background: #FDF3C6;
 }
@@ -864,53 +945,6 @@ ul.taxonomy li a.main {
   color: #ddd !important;
 }
 
-
-.post-oneliner-header {
-  background: #111;
-}
-.post-oneliner-header a {
-  color: #E6E2D9;
-  padding-left: .5em;
-}
-.post-oneliner-body ul.inline-list {
-  margin: 0;
-}
-.post-oneliner-header .tumblr-media {
-  background: #E6E2D9;
-  width: 100%;
-  height: auto;
-}
-.post-oneliner-header .tumblr-media object, .post-oneliner-header .tumblr-media   embed {
-  width: 230px;
-  height: 191px;
-}
-
-.post img {
-  max-width: 98%;
-  border: 1px solid #ccc;
-  padding: .2em;
-}
-.post .excerpt {
-  margin: 1em;  
-}
-
-#post-body {
-  background: #DFDBD0;
-}
-#post-body .entry {
-
-}
-#post-body h2 {
-  background: #FDF3C6;
-}
-#post-body p.comment-content {
-  background: #DFDBD0;
-  padding-top: .2em;
-}
-#post-body .tumblr a p {
-  font-size: large;
-  padding-bottom: 1em;
-}
 
 
 

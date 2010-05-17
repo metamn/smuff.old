@@ -9,8 +9,6 @@ get_header();
 
 	<div id="single" class="block">
 	  <div id="content" class="column span-18">
-      <?php include "home-all-products-link.php"; ?>    
-    
       <div id="post" class="block">
 	      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 	      
