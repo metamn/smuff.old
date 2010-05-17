@@ -716,9 +716,7 @@ input.search {
 #post-body {
   background: #DFDBD0;
 }
-#post-body p {
-  padding: 1em;
-}
+
 #post-body ul {
   margin-left: 3em;
 }
@@ -817,6 +815,7 @@ input.search {
 }
 
 
+
 .post .excerpt {
   margin: 1em;  
 }
@@ -845,7 +844,7 @@ input.search {
   border-top: 1px solid #cac1b2;  
 }
 .post .meta ul.inline-list {
-  margin: 0 0 0 1em;
+  margin: 0 0 0 1em !important;
 }
 .post .ui-icon {
   display: inline-block;
