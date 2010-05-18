@@ -4,7 +4,7 @@
       $content = explode('<br/>', $post->post_content);
     ?>
     <div class="post-oneliner-header span-6">
-      <a href="<?php echo get_category_link($main_category) ?>">#tumblr</a>
+      <a href="<?php echo get_category_link($main_category) ?>">#international</a>
       <br/>
       <div class="tumblr-media">
         <?php echo $content[0]; ?>
@@ -14,12 +14,12 @@
       <a href="<?php the_permalink() ?>" title="Link direct la sursa articol"><?php echo $content[2]; ?></a>
       <!-- not dry, post-meta-share cannot be used here -->
       <div class="meta-and-share">
-        <div class="meta span-4">
+        <div class="meta span-6">
           <?php include "post-meta.php" ?>	
         </div>
-        <div class="modify-post span-4 last">
+        <div class="modify-post span-2 last">
           &nbsp;
-          <?php edit_post_link('Modificare &rarr;', '', ''); 	?>
+          <?php edit_post_link('Modificare', '', ''); 	?>
         </div>
         <div class="share span-4 last">
           <div class="facebook opacity-3 span-2 last">

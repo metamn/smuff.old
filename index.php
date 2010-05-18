@@ -26,11 +26,11 @@ get_header();
 		        } elseif (in_category(39)) { //comment
 		          $main_category = 39;
 		          include "post-comment.php";
-		        } elseif (in_category(76)) { //tumblr
-		          $main_category = 9; //post
+		        } elseif (in_category(26)) { //tumblr
+		          $main_category = 26; //post
 		          include "post-tumblr.php";
 		        } elseif (in_category(18)) { //social
-		          $main_category = 9;
+		          $main_category = 18;
 		          include "post-social.php";
 		        } else {
 		          $main_category = 22; // Stiri
