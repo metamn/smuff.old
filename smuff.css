@@ -731,12 +731,14 @@ input.search {
   margin: 0 1em 1em 0;
 }
 #post-body .wp-caption {
-  width: 710px !important;
+  max-width: 710px !important;
+  margin-right: 1em;
 }
 #post-body .wp-caption-text {
   background: #cac1b2;
   text-align: center;
   font-style: italic;
+  width: 99%;
 }
 #post-body .entry a, #post-body .entry a:visited {
   text-decoration: underline;
@@ -784,11 +786,11 @@ input.search {
   display: inline;
   float: left;
 }
-#post-data #post-excerpt {  
+#post-body #post-excerpt {  
   line-height: 2;
   margin-left: 1em;  
 }
-#post-data #post-excerpt p {
+#post-body #post-excerpt p {
   margin: 1em 0;
 }
 

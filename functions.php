@@ -215,17 +215,21 @@ function category_id($is_cat, $is_single) {
 // Get the product price directly from the post
 function product_price($post_id) {  
   $product_id = product_id($post_id); 
-  global $wpdb;
-  $price = $wpdb->get_var("SELECT `price` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
-  return $price;
+  if ($product_id) {
+    global $wpdb;
+    $price = $wpdb->get_var("SELECT `price` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
+    return $price;
+  }  
 }
 
 
 // Get the discount price from product
 function product_discount($product_id) {  
-  global $wpdb;
-  $old_price = $wpdb->get_var("SELECT `special_price` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
-  return $old_price;
+  if ($product_id) {
+    global $wpdb;
+    $old_price = $wpdb->get_var("SELECT `special_price` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
+    return $old_price;
+  }  
 }
 
 
@@ -252,16 +256,20 @@ function product_id($post_id) {
 
 // Get the product short name from wpsc
 function product_name($product_id) {
-  global $wpdb;
-  $name = $wpdb->get_var("SELECT `name` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
-  return $name;
+  if ($product_id) {
+    global $wpdb;
+    $name = $wpdb->get_var("SELECT `name` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
+    return $name;
+  }  
 }
 
 // Get the product stoc from wpsc
 function product_stock($product_id) {
-  global $wpdb;
-  $quantity = $wpdb->get_var("SELECT `quantity` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
-  return $quantity;
+  if ($product_id) {
+    global $wpdb;
+    $quantity = $wpdb->get_var("SELECT `quantity` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
+    return $quantity;
+  }  
 }
 
 // Calculate Delivery time based on stock

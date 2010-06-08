@@ -15,7 +15,7 @@
 	
 <?php else: ?>
 	<ul>
-	  <li><a href="">0 produse</a></li>
+	  <li><a href="<?php echo get_option('shopping_cart_url'); ?>">0 produse</a></li>
 	  <li>0.00 RON</li>
 	</ul>	
 <?php endif; ?>

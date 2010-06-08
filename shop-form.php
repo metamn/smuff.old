@@ -3,9 +3,13 @@ global $wpsc_query, $wpdb;
 ?>
 
 <!-- Adapted from shop theme single_product.php -->	
+<!-- Do not use pagination in Admin/Settings !!!! -->
+
+
 
 <?php while (wpsc_have_products()) :  wpsc_the_product(); ?>
-  <?php if(wpsc_the_product_id() == $product_id) {?>
+  
+  <?php if(wpsc_the_product_id() == $product_id) { ?>
 	  <div class="single_product_display product_view_<?php echo wpsc_the_product_id(); ?>">
 		  <div>
 			  <div>						
@@ -124,9 +128,9 @@ global $wpsc_query, $wpdb;
 	  
   <?php } endwhile; ?>
   
-		<?php
-		if(function_exists('fancy_notifications')) {
-			echo fancy_notifications();
-		}
-		?>
+	<?php
+	if(function_exists('fancy_notifications')) {
+		echo fancy_notifications();
+	}
+	?>
 </div>		
