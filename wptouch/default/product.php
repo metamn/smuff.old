@@ -28,13 +28,10 @@
           <span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span> 
         </div>
         <div class='meta'>
-          <?php if ($wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>
-			    <?php if (bnc_show_author()) { ?><span class="lead"><?php _e("De", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
-			    <?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'In', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
-			    <?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Etichete', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
+          <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?>			    
         </div>
-      </div>
-      <div class="clearer"></div>
+        <div class="clearer"></div>
+      </div>      
       <?php endwhile; ?>
   <?php } ?>
 </div>

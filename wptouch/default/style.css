@@ -99,18 +99,18 @@ body {
   border-right: 1px dotted #999;  
 }
 
-.startpage #products {
-
+.startpage h2 {
+  margin-top: 30px;
 }
 .startpage #products #product {
   margin-bottom: 15px;
 }
 .startpage #products #product .image{
-  width: 45%;
+  margin-right: 15px;
   float: left;
 }
 .startpage #products #product .text{
-  width: 45%;
+  width: 45%
   float: left;
 }
 .startpage #products #product .meta{
