@@ -3,16 +3,17 @@
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
-
 <!-- Web-app mode is not fully supported, yet : )
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 -->	
-
 	<title><?php wp_title('&mdash;', true, 'right'); ?> <?php $str = bnc_get_header_title(); echo stripslashes($str); ?></title>
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
-	
+		<?php if (bnc_is_gigpress_enabled() && function_exists( 'gigpress_shows' )) { ?>
+	<link rel="stylesheet" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-css/gigpress.css" type="text/css" media="screen" />
+		<?php } ?>
+	<?php wptouch_core_header_enqueue(); ?>
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
 		if (window.navigator.standalone) { //don't do anything! 
@@ -21,5 +22,5 @@
 			addEventListener("load", function() { 
 				setTimeout(hideURLbar, 0); }, false);}
 		</script>
-  <?php } ?>
+<?php } ?>
 </head>

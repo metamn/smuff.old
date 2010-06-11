@@ -44,26 +44,18 @@
 				<?php } ?>					
 			<?php } ?>
  
-	    <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	    <?php if (in_category(10)) { ?>
-	      <div class="post-shopping">
-	        <div class="price-spacer">
-	        <?php if ($product_discount > 0) { ?>
-            <span class="price"><?php echo $product_sale_price; ?></span>  RON
-            &nbsp;
-            <span class="old-price"><?php echo $product_price; ?></span>    
-          <?php } else { ?>
-            <span class="normal-price"><?php echo $product_price; ?></span> RON            
-          <?php } ?>
-          </div>
+	    <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	    
+	    <?php if (in_category(10)) { ?>	             
+	      <br/>
+        <?php if ($product_discount > 0) { ?>
+          <span class="price"><?php echo $product_sale_price; ?></span>  RON
           <br/>
-          <span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span> 
-          &nbsp;
-          <a href="">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-cart.png">
-            Adauga la cos
-          </a>
-	      </div>
+          <span class="old-price"><?php echo $product_price; ?></span>    
+        <?php } else { ?>
+          <span class="normal-price"><?php echo $product_price; ?></span> RON            
+        <?php } ?>
+             
+        <span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span>           	      
 	    <?php } ?>
 		  <div class="post-author">
 			  <?php if ($wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>

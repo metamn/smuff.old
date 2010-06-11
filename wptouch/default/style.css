@@ -48,6 +48,13 @@ body {
   padding-left: 5px;
   color: #f25e18;
 }
+.strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {
+  color: #f25e18;
+  padding: .1em .3em;
+}
+.strapline a:hover, .strapline a.active {
+  background: #DFDBD0;  
+}
 
 #headerbar-menu {
 	position: absolute;
@@ -63,9 +70,71 @@ body {
 }
 
 
+/* Startpage
+*/
+
+.startpage {
+  margin: 15px 10px;
+}
+#menu {
+  background: #cac1b2;  
+}
+#menu ul, #navigation ul {
+  margin: 0;
+  padding: 0;
+}
+#menu li, #navigation li {
+  padding: 5px;
+  margin: 0; 
+}
+#menu li {
+  background: #cac1b2;
+  border-right: 1px dotted #999;  
+}
+#navigation {
+  background: #DFDBD0; 
+}
+#navigation li {
+  background: #DFDBD0;
+  border-right: 1px dotted #999;  
+}
+
+.startpage #products {
+
+}
+.startpage #products #product {
+  margin-bottom: 15px;
+}
+.startpage #products #product .image{
+  width: 45%;
+  float: left;
+}
+.startpage #products #product .text{
+  width: 45%;
+  float: left;
+}
+.startpage #products #product .meta{
+  width: 99%;
+  float: left;
+}
+
+
 
 /* Common
 */
+
+ul.inline-list {
+  display: block;
+}
+ul.inline-list li {
+  display: inline;
+  float: left;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowarp;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 
 a img {
   border: none;
@@ -216,12 +285,12 @@ blockquote {
 /* @group Index Page */
 
 .post {
-	background-color: #fff;
+	background-color: #DFDBD0;
 	padding: 10px;
 	margin-bottom: 12px;
 	margin-right: 10px;
 	margin-left: 10px;
-	border: 1px solid #b1b1b1;
+	border: 1px solid #cac1b2;
 	-webkit-border-radius: 8px;
 	position: relative;
 }
@@ -491,18 +560,11 @@ a.h2 {
 
 /* @end */
 
-.post-shopping {
-  float: left;
-  position: relative;;
-  width: 72%;  
-  margin-bottom: 10px;
-}
 .price, .normal-price {
-  border: #ccc;
-  padding: .3em .5em;
+  border: #ccc;  
   font-size: larger;
-  -moz-border-radius: 10%;
-  -webkit-border-radius: 10%;    
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;    
 }
 .price {
   background: #f25e18;
@@ -515,10 +577,13 @@ a.h2 {
 }
 .delivery {
   font-size: 12px;
-  text-decoration: underline;
 }
-.price-spacer {
-
+.price, .normal-price, .old-price, .delivery {
+  padding: .3em .5em;
+}
+.old-price, .delivery {
+  display: block;
+  margin: 5px 0 0 5px;
 }
 
 
