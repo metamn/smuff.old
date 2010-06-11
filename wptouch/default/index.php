@@ -1,139 +1,79 @@
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
 <?php $wptouch_settings = bnc_wptouch_get_settings(); ?>
 
-<div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-		
-	<div class="result-text"><?php wptouch_core_body_result_text(); ?></div>
-
+<div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">		
+  <div class="result-text"><?php wptouch_core_body_result_text(); ?></div>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
- <div class="post" id="post-<?php the_ID(); ?>">
- 
- 		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
-				<?php if (wptouch_get_comment_count() && !is_archive() && !is_search()) { ?>
-					<div <?php if ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { echo 'id="nothing-shown" ';} ?>class="comment-bubble<?php if ( wptouch_get_comment_count() > 99 ) echo '-big'; ?>">
-						<?php comments_number('0','1','%'); ?>
-					</div>
-				<?php } ?>
-		<?php } ?>
+    <div class="post" id="post-<?php the_ID(); ?>"> 
+   		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
+				  <?php if (wptouch_get_comment_count() && !is_archive() && !is_search()) { ?>
+					  <div <?php if ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { echo 'id="nothing-shown" ';} ?>class="comment-bubble<?php if ( wptouch_get_comment_count() > 99 ) echo '-big'; ?>">
+						  <?php comments_number('0','1','%'); ?>
+					  </div>
+				  <?php } ?>
+		  <?php } ?>
  	
- 	<?php if (is_archive() || is_search()) { ?>
-		<div class="archive-top">
-			<div class="archive-top-right">
-				<?php if (bnc_excerpt_enabled()) { ?>
-				<script type="text/javascript">
-					$wptouch(document).ready(function(){
-						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
-							$wptouch(this).toggleClass("post-arrow-down");
-							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
-						});	
-					 });					
-				</script>
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>
-				<?php } ?>
-			</div> 
-		 <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
-			<?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?>
-		 </div>
-		</div>
- 	<?php } else { ?>	
-				<?php if (bnc_excerpt_enabled()) { ?>
-				<script type="text/javascript">
-					$wptouch(document).ready(function(){
-						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
-							$wptouch(this).toggleClass("post-arrow-down");
-							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
-						});	
-					 });					
-				</script>
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>
-				<?php } ?>
-				
-				
-				<?php 
-					$version = bnc_get_wp_version();
-					if ($version >= 2.9 && $wptouch_settings['post-cal-thumb'] != 'calendar-icons' && $wptouch_settings['post-cal-thumb'] != 'nothing-shown') { ?>
-					<div class="wptouch-post-thumb-wrap">
-						<div class="thumb-top-left"></div><div class="thumb-top-right"></div>
-					<div class="wptouch-post-thumb">
-						<?php 
-						if (function_exists('p75GetThumbnail')) { 
-						if ( p75HasThumbnail($post->ID) ) { ?>
-						
-						<img src="<?php echo p75GetThumbnail($post->ID); ?>" alt="post thumbnail" />
-						
-						<?php } else { ?>
-						<?php
-								$total = '24'; $file_type = '.jpg'; 
-							
-								// Change to the location of the folder containing the images 
-								$image_folder = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/thumbs/'; 
-								$start = '1'; $random = mt_rand($start, $total); $image_name = $random . $file_type; 
-							
-							if ($wptouch_settings['post-cal-thumb'] == 'post-thumbnails-random') {
-									echo "<img src=\"$image_folder/$image_name\" alt=\"$image_name\" />";
-									} else {
-									echo '<img src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/thumbs/thumb-empty.jpg" alt="thumbnail" />';
-								}
-							?>						
-						<?php } ?>
-						
-						<?php } elseif (get_post_custom_values('Thumbnail') == true || get_post_custom_values('thumbnail') == true) { ?>
-						
-						<img src="<?php $custom_fields = get_post_custom($post_ID); $my_custom_field = $custom_fields['Thumbnail']; foreach ( $my_custom_field as $key => $value ) echo "$value"; ?>" alt="custom-thumbnail" />
-						 
-						<?php } elseif (function_exists('the_post_thumbnail') && !function_exists('p75GetThumbnail')) { ?>
-							
-							<?php if (has_post_thumbnail()) { ?>
-								<?php the_post_thumbnail(); ?>
-							
-							<?php } else { ?>				
-							
-								<?php
-								$total = '24'; $file_type = '.jpg'; 
-							
-								// Change to the location of the folder containing the images 
-								$image_folder = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/thumbs/'; 
-								$start = '1'; $random = mt_rand($start, $total); $image_name = $random . $file_type; 
-							
-							if ($wptouch_settings['post-cal-thumb'] == 'post-thumbnails-random') {
-									echo "<img src=\"$image_folder/$image_name\" alt=\"$image_name\" />";
-									} else {
-									echo '<img src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/thumbs/thumb-empty.jpg" alt="thumbnail" />';
-								}
-							?>
-						<?php } } ?>
-					</div>
-						<div class="thumb-bottom-left"></div><div class="thumb-bottom-right"></div>
-					</div>
-				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'calendar-icons') { ?>
-					<div class="calendar">
-						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
-						<div class="cal-date"><?php echo get_the_time('j') ?></div>
-					</div>				
-				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { }  else { ?>
-					<div class="calendar">
-						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
-						<div class="cal-date"><?php echo get_the_time('j') ?></div>
-					</div>	
-				<?php } ?>
-
-	<?php } ?>
+ 	    <?php if (is_archive() || is_search()) { ?>
+		    <div class="archive-top">
+			    <div class="archive-top-right">				  
+			    </div> 
+          <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
+            <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?>
+          </div>
+		    </div>
+ 	    <?php } else { ?>		
+ 	      <?php if (in_category(10)) { ?>
+ 	        <div class="calendar">
+ 	          <?php  	          
+ 	          $product_id = product_id($post->ID);
+            $product_price = product_price($post->ID);
+            $product_discount = product_discount($product_id);
+            $product_sale_price = $product_price - $product_discount;
+            $product_stock = product_stock($product_id);
+            $imgs = post_attachements($post->ID);
+            $img = $imgs[0];  
+            $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');  	          
+ 	          ?>
+ 	          <img src="<?php echo $thumb[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
+				  </div>  
+ 	      <?php } else { ?>	  
+				  <div class="calendar">
+					  <div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
+					  <div class="cal-date"><?php echo get_the_time('j') ?></div>
+				  </div>
+				<?php } ?>					
+			<?php } ?>
  
-	<a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		<div class="post-author">
-			<?php if ($wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>
-			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("By", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
-			<?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'Categories', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
-			<?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Tags', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
-		</div>	
-			<div class="clearer"></div>	
-            <div id="entry-<?php the_ID(); ?>" <?php  if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
- 				<?php the_excerpt(); ?>
- 		    <a class="read-more" href="<?php the_permalink() ?>"><?php _e( "Read This Post", "wptouch" ); ?></a>
-	        </div>  
-      </div>
-
-    <?php endwhile; ?>	
+	    <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	    <?php if (in_category(10)) { ?>
+	      <div class="post-shopping">
+	        <div class="price-spacer">
+	        <?php if ($product_discount > 0) { ?>
+            <span class="price"><?php echo $product_sale_price; ?></span>  RON
+            &nbsp;
+            <span class="old-price"><?php echo $product_price; ?></span>    
+          <?php } else { ?>
+            <span class="normal-price"><?php echo $product_price; ?></span> RON            
+          <?php } ?>
+          </div>
+          <br/>
+          <span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span> 
+          &nbsp;
+          <a href="">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-cart.png">
+            Adauga la cos
+          </a>
+	      </div>
+	    <?php } ?>
+		  <div class="post-author">
+			  <?php if ($wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>
+			  <?php if (bnc_show_author()) { ?><span class="lead"><?php _e("De", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
+			  <?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'In', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
+			  <?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Etichete', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
+		  </div>	
+			<div class="clearer"></div>	        
+    </div>
+  <?php endwhile; ?>	
 
 <?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
 

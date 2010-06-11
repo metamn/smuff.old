@@ -1,24 +1,4 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
 
-/*  
-Theme Name: WPtouch Mobile Plugin & Theme For WordPress
-Theme URI: http://www.bravenewcode.com/wptouch/
-Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone, iPod touch, or Android Mobile Device
-Author: Dale Mugford and Duane Storey
-Author URI: http://www.bravenewcode.com/
-	
-	The CSS, XHTML and design is released under GPL:
-	http://www.opensource.org/licenses/gpl-license.php
-
-*/
-
-/* @group Body and Theme-Wide Elements */
-
-.flash {
-	background: url(../core/core-images/flash.jpg) no-repeat center top;
-	width: 100%;
-	height: 175px;
-}
 
 body {
 	margin: 0;
@@ -26,8 +6,69 @@ body {
 	font: 12px Helvetica;
 	-webkit-text-size-adjust: none;
 	min-height: 460px;
-	background-repeat: repeat;
+	background: #e6e2d9;
+}
+
+.content {
+	margin-top: 15px;
+	position: relative;
+}
+
+
+#headerbar {
+	width: 100%;
 	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: 45px;
+	font-size: 19px;
+}
+
+#headerbar-title {
+	padding-top: 10px;
+	padding-left: 10px;
+	display: block;
+	margin: 0;
+	border-style: none;
+	padding-bottom: 4px;
+	overflow: hidden;
+	width: 85%;
+	font-weight: bold;
+	height: 29px;
+}
+
+#headerbar-title a {
+	text-decoration: none;
+	letter-spacing: -1px;
+	position: relative;
+}
+
+#headerbar-title .strapline {
+  font-size: 12px;
+  position: absolute;
+  padding-left: 5px;
+  color: #f25e18;
+}
+
+#headerbar-menu {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+#headerbar-menu a {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* Common
+*/
+
+a img {
+  border: none;
 }
 
 ul {
@@ -55,8 +96,9 @@ li {
 	padding-top: 0;
 }
 
-a {
+a, a:visited {
 	text-decoration: none;
+	color: #111;
 }
 
 input {
@@ -170,572 +212,6 @@ blockquote {
 	margin-right: auto;
 }
 
-/* @end */
-
-/* @group Header */
-
-#headerbar {
-	width: 100%;
-	background-position: 0 0;
-	background-repeat: repeat-x;
-	height: 45px;
-	border-bottom: 1px solid #1e1e1e;
-	font-size: 19px;
-}
-
-#headerbar-title {
-	text-shadow: #242424 -1px -1px 1px;
-	padding-top: 10px;
-	padding-left: 10px;
-	display: block;
-	margin: 0;
-	border-style: none;
-	padding-bottom: 4px;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	width: 85%;
-	font-weight: bold;
-	height: 29px;
-}
-
-#headerbar-title a {
-	text-decoration: none;
-	letter-spacing: -1px;
-	position: relative;
-	font-family: HelveticaNeue-Bold, sans-serif;
-}
-
-#headerbar-title img#logo-icon {
-	position: relative;
-	margin-right: 7px;
-	max-width: 30px;
-	float: left;
-	width: 28px;
-	height: 28px;
-	padding: 0;
-	bottom: 1px;
-}
-
-#headerbar-menu {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-}
-
-#headerbar-menu a {
-	height: 45px;
-	display: block;
-	background: url(../core/core-images/wptouch-menu-dropper.png) 0 0;
-	width: 30px;
-	margin: 0;
-	padding: 0;
-}
-
-#headerbar-menu .open {
-	background-position: 0 -45px;
-}
-
-/* @group Sub-Menu */
-
-#drop-fade {
-	width: 100%;
-	display: block;
-	position: relative;
-	-webkit-box-shadow: #000 -3px 2px 3px;
-	text-align: right;
-	border-top: 1px solid #3e3e3e;
-	height: auto;
-	overflow: hidden;
-}
-
-#drop-fade a.top {
-	margin-right: 8px;
-	position: relative;
-	bottom: 3px;
-	color: #eee;
-	text-shadow: #000000 0px -1px 1px;
-	display: block;
-	float: right;
-	padding: 6px 2px 2px 0;
-	font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#drop-fade #loginopen {
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -31px;
-	padding-left: 16px;
-}
-
-#drop-fade #accountopen {
-	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -14px;
-}
-
-#drop-fade #prowlopen {
-	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -57px;
-}
-
-#drop-fade #wordtwitopen {
-	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -74px;
-}
-
-#drop-fade #searchopen {
-	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -91px;
-}
-
-#drop-fade #gigpressopen {
-	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -106px;
-}
-
-/* @end */
-
-/* @group DropDown Menu */
-
-.dropper {
-	width: 100%;
-	position: relative;
-	z-index: 1;
-	margin: 0;
-	padding: 0;
-	border-top: 1px solid #1b1b1b;
-	font-size: 13px;
-	background-color: #2c2c2c;
-}
-
-.dropper ul {
-	position: relative;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.dropper ul#head-tags li, .dropper ul#head-cats li {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.dropper ul#head-pages li, .dropper ul#head-cats li, .dropper ul#head-tags li li, .dropper ul#head-account li, ul#tweets li {
-	border-bottom: 1px solid #1d1d1d;
-	background: url(../core/core-images/arrow.png) no-repeat right center;
-	text-transform: capitalize;
-	border-top: 1px solid #363636;
-	padding: 0;
-	text-align: left;
-	margin: 0;
-}
-
-.dropper ul#head-account li.text {
-	color: #eee;
-	text-shadow: #111 0 -1px 1px;
-	text-align: center;
-	background-image: none;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	text-transform: none;
-}
-
-.dropper ul#head-account li.text a {
-	display: inline;
-	margin: 0;
-	padding: 0;
-	text-decoration: underline;
-}
-
-.dropper ul#head-cats li:hover, .dropper ul#head-tags li li:hover, .dropper ul#head-pages li:hover {
-	background-color: #222;
-	border-top: 1px solid #222;
-	position: relative;
-	z-index: 2;
-}
-
-.dropper a {
-	font-weight: bold;
-	display: block;
-	text-shadow: #000 -1px -1px 1px;
-	color: #d2d2d2;
-	margin: 0;
-	width: auto;
-	padding: 13px 35px 13px 15px;
-	text-align: left;
-}
-
-.dropper ul#head-tags a {
-	padding-top: 12px;
-	padding-bottom: 13px;
-}
-
-.dropper ul#head-cats a {
-	padding-top: 13px;
-	padding-bottom: 13px;
-}
-
-/* @group Tab Menus */
-
-#wptouch-menu {
-	position: absolute;
-	z-index: 2;
-	top: 45px;
-	-webkit-box-shadow: #333 -6px 6px 6px;
-	display: none;
-}
-
-#wptouch-menu-inner {
-	position: relative;
-}
-
-#wptouch-menu-inner img {
-	float: left;
-	position: relative;
-	bottom: 7px;
-	width: 28px;
-	padding-right: 10px;
-	right: 0;
-}
-
-#tabnav {
-	background-color: #444;
-	padding-top: 3px;
-	border-bottom: 1px solid #1b1b1b;
-	border-top: 1px solid #575757;
-	padding-left: 10px;
-	height: 24px;
-	margin-bottom: -1px;
-}
-
-#tabnav a {
-	display: inline-block;
-	margin: 0;
-	padding: 2px 8px 7px;
-	color: #999;
-	text-shadow: #111 0 -1px 1px;
-}
-
-#tabnav a.selected {
-	background-color: #2c2c2c;
-	position: relative;
-	z-index: 1;
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	border: 1px solid #1b1b1b;
-	margin-left: -1px;
-	margin-right: -1px;
-	color: #fff !important;
-	-webkit-box-shadow: #222 0px -2px 3px;
-	border-bottom: 1px solid #2c2c2c;
-	text-shadow: #000000 0 -1px 1px;
-}
-
-#tabnav a:hover, #tabnav a:active {
-	color: #fff !important;
-}
-
-/* @end */
-
-/* @end */
-
-/* @group WordTwit Menu */
-
-#wptouch-wordtwit {
-	position: relative;
-	border-top: 1px solid #3e3e3e;
-	background-color: #222;
-	top: 20px;
-	text-align: left;
-}
-
-#wptouch-wordtwit #twitter-style-bar {
-	display: block;
-	border-top: 1px solid #1e1e1e;
-}
-
-#wordtwit-avatar {
-	text-align: left;
-	padding-bottom: 10px;
-	-webkit-border-radius: 8px;
-	padding-left: 5px;
-	padding-top: 5px;
-	border: 1px solid #555;
-	background-image: none;
-	background-color: #444;
-	margin: 10px;
-}
-
-#wordtwit-avatar img {
-	-webkit-box-reflect: below -1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(white));
-	border: 1px solid #222;
-	float: left;
-	margin-right: 15px;
-	-webkit-border-radius: 2px;
-	width: 32px;
-	height: 32px;
-}
-
-#wptouch-wordtwit a#follow-arrow {
-	border-style: none;
-	width: 18px;
-	height: 18px;
-	position: absolute;
-	top: 22px;
-	right: 15px;
-	padding: 5px;
-	margin: 0;
-}
-
-#wordtwit-avatar p {
-	padding: 0;
-	margin: 0;
-	color: #777;
-}
-
-#wordtwit-avatar p.twitter_username {
-	color: #eee;
-	text-shadow: #222 0 -1px 1px;
-	font-size: 15px;
-	font-weight: bold;
-}
-
-#wordtwit-avatar a {
-	display: inline-block;
-	font-size: 11px;
-	color: #999;
-	text-shadow: #222 0 -1px 0;
-	padding: 3px 0 0;
-}
-
-#wptouch-wordtwit ul#tweets li {
-	color: #ccc;
-	font-size: 12px;
-	text-shadow: #000000 0 -1px 0;
-	background-image: none;
-	background-color: #2c2c2c;
-	padding: 10px 50px 10px 10px;
-}
-
-#wptouch-wordtwit ul#tweets li:last-child {
-	padding-bottom: 30px;
-}
-
-#wptouch-wordtwit li p.time {
-	color: #777;
-	font-size: 11px;
-	padding: 0;
-	margin: 0;
-}
-
-/* @end */
-
-/* @group Push Message Area */
-
-#prowl-message {
-	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
-	clear: both;
-	padding: 10px;
-	text-align: left;
-	font-size: 11px;
-	border-top: 1px solid #3e3e3e;
-}
-
-#prowl-message #push-style-bar {
-	display: block;
-	border-top: 1px solid #1e1e1e;
-	margin-left: -10px;
-	margin-right: -10px;
-	margin-top: -10px;
-	padding-top: 10px;
-}
-
-#prowl-message form p {
-	font-weight: bold;
-	font-size: 12px;
-	position: relative;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	clear: both;
-}
-
-#prowl-message label {
-	margin-left: 5px;
-}
-
-#prowl-message input {
-	width: 60%;
-	-webkit-border-radius: 10px;
-	padding: 3px;
-	color: #222;
-	border: 1px solid #1b1b1b;
-	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-}
-
-#prowl-message input#prowl-submit {
-	width: 100px;
-	text-align: center;
-	color: #fff;
-	text-shadow: #333 0 -1px 1px;
-	font-weight: bold;
-	border: 1px solid #333;
-	margin-top: 10px;
-	float: right;
-}
-
-#prowl-message textarea {
-	width: 98%;
-	-webkit-border-radius: 10px;
-	padding: 3px;
-	color: #222;
-	border: 1px solid #1b1b1b;
-	height: 70px;
-	overflow: auto;
-	margin-top: 2px;
-	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-}
-
-#prowl-message h4 {
-	font-size: 14px;
-	margin: 10px 0 15px;
-	padding: 0;
-}
-
-#prowl-message img {
-	float: left;
-	margin-right: 10px;
-}
-
-/* @group Success */
-
-#prowl-success {
-	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
-	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-	text-align: center;
-	background: #000 url(../core/core-images/push-success.png) no-repeat center 50px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0.9;
-	width: 90%;
-	margin-left: 5%;
-	margin-top: 25px;
-	-webkit-border-radius: 15px;
-	-webkit-box-shadow: #444 0px 0px 15px;
-}
-
-#prowl-success p, #prowl-fail p {
-	margin-top: 125px;
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-#prowl-fail {
-	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
-	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-	text-align: center;
-	background: #000 url(../core/core-images/push-fail.png) no-repeat center 50px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0.9;
-	width: 90%;
-	margin-left: 5%;
-	margin-top: 25px;
-	-webkit-border-radius: 15px;
-	-webkit-box-shadow: #444 0px 0px 15px;
-}
-
-/* @end */
-
-/* @end */
-
-/* @group Login & Search */
-
-#wptouch-login {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
-	display: none;
-}
-
-#wptouch-login-inner {
-	padding-top: 8px;
-	width: 100%;
-	height: 35px;
-	background-repeat: repeat-x;
-	text-align: center;
-	padding-bottom: 2px;
-}
-
-#wptouch-login input#log {
-	width: 120px;
-	-webkit-border-radius: 10px;
-	padding: 3px;
-	font-size: 13px;
-	color: #222;
-	font-weight: bold;
-	border: 1px solid #1b1b1b;
-}
-
-#wptouch-login input#pwd {
-	width: 120px;
-	-webkit-border-radius: 10px;
-	padding: 3px;
-	font-size: 13px;
-	color: #222;
-	font-weight: bold;
-	border: 1px solid #1b1b1b;
-	margin-left: 5px;
-}
-
-#wptouch-search {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
-	display: none;
-}
-
-#wptouch-search-inner {
-	width: 100%;
-	height: 40px;
-	background-repeat: repeat-x;
-	text-align: center;
-	padding-top: 5px;
-}
-
-input#s {
-	-webkit-border-radius: 10px;
-	padding: 4px;
-	width: 80%;
-	font-size: 13px;
-	color: #222;
-	text-align: left;
-	margin-top: 6px;
-	border: 1px solid #1b1b1b;
-	font-weight: bold;
-}
-
-img.head-close {
-	display: inline;
-	position: relative;
-	top: 6px;
-	left: 5px;
-}
-
-/* @end */
-
-/* @end */
 
 /* @group Index Page */
 
@@ -1014,6 +490,37 @@ a.h2 {
 /* @end */
 
 /* @end */
+
+.post-shopping {
+  float: left;
+  position: relative;;
+  width: 72%;  
+  margin-bottom: 10px;
+}
+.price, .normal-price {
+  border: #ccc;
+  padding: .3em .5em;
+  font-size: larger;
+  -moz-border-radius: 10%;
+  -webkit-border-radius: 10%;    
+}
+.price {
+  background: #f25e18;
+}
+.old-price {
+  text-decoration: line-through;
+}
+.normal-price {
+  background: #cac1b2;    
+}
+.delivery {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.price-spacer {
+
+}
+
 
 .post-author {
 	color: #555;
