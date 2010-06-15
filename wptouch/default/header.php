@@ -19,9 +19,9 @@
       </span>		  
 	  </div>
 	  <div id="headerbar-menu">
-		  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-info.png"></a> 
-		  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-cart.png"></a>
-		  <a href=""><img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-search.png"></a>
+		  <a href="<?php bloginfo('home'); ?>/#info"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-info.png"></a> 
+		  <a href="<?php bloginfo('home'); ?>/cos-cumparaturi"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-cart.png"></a>
+		  <a href="<?php bloginfo('home'); ?>/#wptouch-search"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/jquery-icons-search.png"></a>
 	  </div>
   </div>
 <?php wptouch_core_header_check_use(); ?>

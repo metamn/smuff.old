@@ -11,24 +11,26 @@
         $img = $imgs[0];  
         $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');         
       ?>
-      <div id="product">
-        <div class='image'>
+      <div id="product" class="post">
+        <div class='image calendar'>
           <img src="<?php echo $thumb[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
         </div>
         <div class='text'>
           <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          <br/>          
-          <?php if ($product_discount > 0) { ?>
-            <span class="price"><?php echo $product_sale_price; ?></span>  RON
-            <br/>
-            <span class="old-price"><?php echo $product_price; ?></span>    
-          <?php } else { ?>
-            <span class="normal-price"><?php echo $product_price; ?></span> RON            
-          <?php } ?>             
-          <span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span> 
-        </div>
+        </div>         
         <div class='meta'>
-          <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?>			    
+          <table>
+              <tr>
+                <?php if ($product_discount > 0) { ?>                  
+                  <td><span class="price"><?php echo $product_sale_price; ?></span>  RON</td>
+                  <td><span class="old-price"><?php echo $product_price; ?></span></td>                          			    
+                <?php } else { ?>
+                  <td><span class="normal-price"><?php echo $product_price; ?></span> RON</td>                              
+                  <td>&nbsp;</td>
+                <?php } ?>
+                <td><span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span></td>
+              </tr>              
+            </table>
         </div>
         <div class="clearer"></div>
       </div>      

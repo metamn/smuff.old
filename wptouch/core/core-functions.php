@@ -82,11 +82,11 @@ if (wptouch_agent("iphone")  != FALSE || wptouch_agent("ipod")  != FALSE) {
 }
 
 function wptouch_tags_link() {
-		echo '<a href="#head-tags">' . __( "Tags", "wptouch" ) . '</a>';
+		echo '<a href="#head-tags">' . __( "Etichete", "wptouch" ) . '</a>';
 	}
 
 function wptouch_cats_link() {
-		echo '<a href="#head-cats">' . __( "Categories", "wptouch" ) . '</a>';
+		echo '<a href="#head-cats">' . __( "Categorii", "wptouch" ) . '</a>';
 }
 
 function bnc_get_ordered_cat_list() {
@@ -121,17 +121,17 @@ function wptouch_core_body_sitetitle() {
 function wptouch_core_body_result_text() {  
 	global $is_ajax; if (!$is_ajax) {
 			if (is_search()) {
-				echo sprintf( __("Search results &rsaquo; %s", "wptouch"), get_search_query() );
+				echo sprintf( __("Rezultatele cautarii &rsaquo; %s", "wptouch"), get_search_query() );
 			} if (is_category()) {
-				echo sprintf( __("Categories &rsaquo; %s", "wptouch"), single_cat_title("", false));
+				echo sprintf( __("Categorii &rsaquo; %s", "wptouch"), single_cat_title("", false));
 			} elseif (is_tag()) {
-				echo sprintf( __("Tags &rsaquo; %s", "wptouch"), single_tag_title("", false));
+				echo sprintf( __("Etichete &rsaquo; %s", "wptouch"), single_tag_title("", false));
 			} elseif (is_day()) {
-				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('F jS, Y'));
+				echo sprintf( __("Arhive &rsaquo; %s", "wptouch"),  get_the_time('F jS, Y'));
 			} elseif (is_month()) {
-				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('F, Y'));
+				echo sprintf( __("Arhive &rsaquo; %s", "wptouch"),  get_the_time('F, Y'));
 			} elseif (is_year()) {
-				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('Y'));
+				echo sprintf( __("Arhive &rsaquo; %s", "wptouch"),  get_the_time('Y'));
 		}
 	}
 }
@@ -143,15 +143,15 @@ function wptouch_core_body_result_text() {
 
 function wptouch_core_else_text() {	
 	 global $is_ajax; if (($is_ajax) && !is_search()) {
-		echo '' . __( "No more entries to display.", "wptouch" ) . '';
+		echo '' . __( "Ati ajuns la ultima pagina.", "wptouch" ) . '';
 	 } elseif (is_search() && ($is_ajax)) {
-		echo '' . __( "No more search results to display.", "wptouch" ) . '';
+		echo '' . __( "Ati ajuns la ultimele rezultate.", "wptouch" ) . '';
 	 } elseif (is_search() && (!$is_ajax)) {
-	 	echo '<div style="padding-bottom:127px">' . __( "No search results results found.", "wptouch" ) . '<br />' . __( "Try another query.", "wptouch" ) . '</div>';
+	 	echo '<div style="padding-bottom:127px">' . __( "Termenul cautat nu a fost gasit.", "wptouch" ) . '<br />' . __( "Incercati alt termen.", "wptouch" ) . '</div>';
 	 } else {
 	  echo '<div class="post">
-	  	<h2>' . __( "404 Not Found", "wptouch" ) . '</h2>
-	  	<p>' . __( "The page or post you were looking for is missing or has been removed.", "wptouch" ) . '</p>
+	  	<h2>' . __( "Aceasta pagina nu exista", "wptouch" ) . '</h2>
+	  	<p>' . __( "Va cerem scuze pentru acest mic defect.", "wptouch" ) . '</p>
 	  </div>';
 	}
 }
@@ -160,7 +160,7 @@ function wptouch_core_footer_switch_link() {
 	$switch_url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
 echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo('siteurl') . '/?theme_view=normal&wptouch_redirect=' . $switch_url . '"}</script>';
-echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptouch_switch_confirmation();" href="javascript:return false;"></a>';
+echo '' . __( "Versiune mobila", "wptouch" ) . ' <a id="switch-link" onclick="wptouch_switch_confirmation();" href="javascript:return false;"></a>';
 }
 
 

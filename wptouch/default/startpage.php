@@ -8,6 +8,7 @@
   $promo_posts = query_posts2('posts_per_page=8&cat=15');
   $top_sales = query_posts2('posts_per_page=6&cat=14');  
   $new_products = query_posts2('posts_per_page=6&cat=10');
+  $news = query_posts2('posts_per_page=3&cat=22');
 ?>
 
 
@@ -23,9 +24,9 @@
   </div>	
   <div id="navigation">
     <ul class="inline-list">
-      <li><a href="">Noutati</a></li>
-      <li><a href="">Bestsellers</a></li>
-      <li><a href="">Promotii</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/#noutati">Noutati</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/#bestsellers">Bestsellers</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/#promo">Promotii</a></li>
     </ul>
   </div>
   
@@ -37,6 +38,9 @@
       $products = $new_products;
       include "product.php";
     ?>
+    <p>
+      <a class='ajax' href="<?php bloginfo('home'); ?>/category/produse/?view=2">Vezi toate produsele Smuff &rarr;</a>
+    </p>    
   </div>
   <div id="bestsellers">
     <h2>Bestsellers</h2>
@@ -44,6 +48,9 @@
       $products = $top_sales;
       include "product.php";
     ?>
+    <p>
+      <a class='ajax' href="<?php bloginfo('home'); ?>/category/meta/produse-populare">Vezi toate produsele populare &rarr;</a>
+    </p>
   </div>
   <div id="promo">
     <h2>Promotii</h2>
@@ -51,6 +58,28 @@
       $products = $promo_posts;
       include "product.php";
     ?>
+    <p>
+      <a class='ajax' href="<?php bloginfo('home'); ?>/category/meta/promotii">Vezi toate promotiile &rarr;</a>
+    </p>
+  </div>
+  <div id="stiri">
+    <?php if ($news) { ?>
+      <h2>Stiri</h2>
+      <ul>
+        <?php 
+          while ($news->have_posts()) : $news->the_post(); update_post_caches($posts); ?>
+            <li>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"><?php the_title(); ?></a>
+             (
+             <small><?php the_time('j M Y') ?> ora <?php the_time('G:i') ?></small>
+             )
+            </li>
+          <?php endwhile; ?>
+      </ul>
+      <p>
+        <a class='ajax' href="<?php bloginfo('home'); ?>/category/stiri">Vezi toate stirile Smuff &rarr;</a>
+      </p>
+    <?php } ?>    
   </div>
 </div>
 
