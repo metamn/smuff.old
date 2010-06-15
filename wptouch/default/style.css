@@ -110,28 +110,29 @@ body {
 .startpage #noutati p, .startpage #bestsellers p, .startpage #promo p, .startpage #stiri p {
   text-align: center;
 }
-.startpage #products #product {
+
+
+
+/* Product
+*/
+
+
+#product {
   margin-bottom: 15px;
 }
-.startpage #products #product .image{
+#product .image{
   margin-right: 15px;
   float: left;
 }
-.startpage #products #product .text{
+#product .text{
   width: 45%
   float: left;
 }
-.startpage #products #product .meta{
+#product .meta{
   width: 99%;
   float: left;
   margin-top: 10px;
 }
-
-
-
-/* Blog index 
-*/
-
 .price, .normal-price {
   border: #ccc;  
   font-size: larger;
@@ -151,6 +152,11 @@ body {
   padding: .3em .5em;
 }
 
+
+/* Blog index 
+*/
+
+
 .post-author {
 	color: #555;
 	font-size: 9px;
@@ -167,7 +173,6 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
-
 
 .post {
 	background-color: #DFDBD0;

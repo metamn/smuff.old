@@ -9,6 +9,7 @@
   $top_sales = query_posts2('posts_per_page=6&cat=14');  
   $new_products = query_posts2('posts_per_page=6&cat=10');
   $news = query_posts2('posts_per_page=3&cat=22');
+  $klass = "post";
 ?>
 
 
@@ -34,30 +35,30 @@
   
   <div id="noutati">
     <h2>Noutati</h2>
-    <?php 
-      $products = $new_products;
-      include "product.php";
-    ?>
+    <?php if ($new_products) { 
+      while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
+        include "product.php";
+      endwhile; } ?>
     <p>
       <a class='ajax' href="<?php bloginfo('home'); ?>/category/produse/?view=2">Vezi toate produsele Smuff &rarr;</a>
     </p>    
   </div>
   <div id="bestsellers">
     <h2>Bestsellers</h2>
-    <?php 
-      $products = $top_sales;
-      include "product.php";
-    ?>
+    <?php if ($top_sales) { 
+      while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
+        include "product.php";
+      endwhile; } ?>
     <p>
       <a class='ajax' href="<?php bloginfo('home'); ?>/category/meta/produse-populare">Vezi toate produsele populare &rarr;</a>
     </p>
   </div>
   <div id="promo">
     <h2>Promotii</h2>
-    <?php 
-      $products = $promo_posts;
-      include "product.php";
-    ?>
+    <?php if ($promo_posts) { 
+      while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+        include "product.php";
+      endwhile; } ?>
     <p>
       <a class='ajax' href="<?php bloginfo('home'); ?>/category/meta/promotii">Vezi toate promotiile &rarr;</a>
     </p>

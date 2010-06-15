@@ -22,48 +22,23 @@
           </div>
 		    </div>
  	    <?php } else { ?>		
- 	      <?php if (in_category(10)) { ?>
- 	        <div class="calendar">
- 	          <?php  	          
- 	          $product_id = product_id($post->ID);
-            $product_price = product_price($post->ID);
-            $product_discount = product_discount($product_id);
-            $product_sale_price = $product_price - $product_discount;
-            $product_stock = product_stock($product_id);
-            $imgs = post_attachements($post->ID);
-            $img = $imgs[0];  
-            $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');  	          
- 	          ?>
- 	          <img src="<?php echo $thumb[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
-				  </div>  
- 	      <?php } else { ?>	  
+ 	      <?php if (in_category(10)) { 
+ 	        include "product.php";
+ 	      } else { ?>	  
 				  <div class="calendar">
 					  <div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
 					  <div class="cal-date"><?php echo get_the_time('j') ?></div>
 				  </div>
+				  <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	    
+				  <div class="post-author">
+			      <?php if ($wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>
+			      <?php if (bnc_show_author()) { ?><span class="lead"><?php _e("De", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
+			      <?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'In', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
+			      <?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Etichete', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
+		      </div>	
+			    <div class="clearer"></div>
 				<?php } ?>					
-			<?php } ?>
- 
-	    <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>	    
-	    <?php if (in_category(10)) { ?>	             
-	      <br/>
-        <?php if ($product_discount > 0) { ?>
-          <span class="price"><?php echo $product_sale_price; ?></span>  RON
-          <br/>
-          <span class="old-price"><?php echo $product_price; ?></span>    
-        <?php } else { ?>
-          <span class="normal-price"><?php echo $product_price; ?></span> RON            
-        <?php } ?>
-             
-        <span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span>           	      
-	    <?php } ?>
-		  <div class="post-author">
-			  <?php if ($wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>
-			  <?php if (bnc_show_author()) { ?><span class="lead"><?php _e("De", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
-			  <?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'In', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
-			  <?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Etichete', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
-		  </div>	
-			<div class="clearer"></div>	        
+			<?php } ?> 
     </div>
   <?php endwhile; ?>	
 

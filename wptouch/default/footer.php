@@ -10,13 +10,19 @@
 	</div>
 	
 	<div id="info" class="post">
-	  <p><?php echo page_excerpt('despre-noi'); ?></p>
+	  <p><?php echo page_excerpt('despre-noi'); ?></p>	  
 	  <p>
 	    <?php 
         $p = get_page_by_path('contact');
         if ($p) { ?>
           <h3><?php echo $p->post_title; ?></h3>
-          <p><?php echo $p->post_content; ?></p>
+          <p>
+            <?php echo $p->post_content; ?>
+            <br/>
+            <a href="http://twitter.com/smuff_ro">Twitter</a> &bull; 
+            <a href="http://www.facebook.com/pages/smuffro-magazin-gadget-gizmo/213629083432">Facebook</a> &bull; 
+            <a href="http://smuff.tumblr.com/">Tumblr</a>
+          </p>
       <?php } ?>
     </p>
     <p>
