@@ -94,10 +94,7 @@ global $wpsc_query, $wpdb;
 									<input type='submit' class='add-button' id='product_<?php echo wpsc_the_product_id(); ?>_submit_button' class='add-button' name='Buy'  value="Adauga la cos" />
 
 										<?php endif; ?>
-														<div class='wpsc_loading_animation'>
-								<img title="Loading" alt="Loading" src="<?php echo WPSC_URL; ?>/images/indicator.gif" class="loadingimage"/>
-								Actualizare cos
-							</div>
+														
 							
 						<?php else : ?>
 							<p class='soldout'><?php echo TXT_WPSC_PRODUCTSOLDOUT; ?></p>

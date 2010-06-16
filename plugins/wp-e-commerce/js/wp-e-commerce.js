@@ -101,9 +101,9 @@ jQuery(document).ready(function () {
 		}
 	});
 	
-	jQuery("form.product_form").ajaxError(function(e, xhr, settings, exception) {
-    alert('error in: ' + settings.url + ' :: error message: ' + exception);
-  }); 
+	//jQuery("form.product_form").ajaxError(function(e, xhr, settings, exception) {
+  //  alert('error in: ' + settings.url + ' :: error message: ' + exception);
+  //}); 
 
 
 	jQuery('a.wpsc_category_link, a.wpsc_category_image_link').click(function(){
