@@ -1,6 +1,12 @@
 <?php
 
 
+// making the shopping cart dynamic when using the WP SuperCache plugin
+function dynamic_shopping_cart() {
+  echo nzshpcrt_shopping_basket();
+}
+
+
 // Getting current URL
 function curPageURL() {
   $pageURL = bloginfo('home') . $_SERVER["REQUEST_URI"];

@@ -99,7 +99,10 @@
 		    </div>		    
 		    
 	      <div id="cart" class="column span-6 last">
-	        <?php echo nzshpcrt_shopping_basket(); ?>	          	        
+	        <!-- for WP-Supercache // see functions.php for the implementation --> 
+	        <!--mfunc dynamic_shopping_cart() -->
+	        <?php dynamic_shopping_cart(); ?>
+	        <!--/mfunc-->	        
 	      </div>
 	    </div>  	
 	    
