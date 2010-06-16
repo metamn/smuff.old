@@ -14,6 +14,10 @@
 	<link rel="stylesheet" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-css/gigpress.css" type="text/css" media="screen" />
 		<?php } ?>
 	<?php wptouch_core_header_enqueue(); ?>
+	
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.1.2/full/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/../../../../themes/smuff/js/jquery.init.js"></script>
+	
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
 		if (window.navigator.standalone) { //don't do anything! 

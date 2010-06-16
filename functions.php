@@ -1,6 +1,12 @@
 <?php
 
 
+// Getting current URL
+function curPageURL() {
+  $pageURL = bloginfo('home') . $_SERVER["REQUEST_URI"];
+  return $pageURL;
+}
+
 // Adding sidebars to hold various widgets
 if ( function_exists('register_sidebars') )
   register_sidebars(2);

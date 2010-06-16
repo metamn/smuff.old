@@ -13,7 +13,7 @@
 <!-- You can start editing below here... but make a backup first!  -->
 
 <div id="comment_wrapper">
-<?php comments_number( __('', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 Comment</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% Comments</h3>', 'wptouch') ); ?>
+<?php comments_number( __('', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 comentariu</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% comentarii</h3>', 'wptouch') ); ?>
 
 	<ol class="commentlist" id="commentlist">
 		<?php if ($comments) : ?>
@@ -25,9 +25,7 @@
 									<?php if (bnc_is_gravatars_enabled()) { echo get_avatar( $comment, $size = '32', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.jpg' ); } ?>
 									<div class="com-author"><?php comment_author_link(); ?></div> 	<?php if ($comment->comment_approved == '0') : echo '<span>(moderation preview)</span>'; endif; ?>
 										<div class="comdater"><span><?php wptouch_moderate_comment_link(get_comment_ID()); ?></span>
-											<?php if (function_exists('time_since')) { 
-												echo time_since(abs(strtotime($comment->comment_date_gmt . " GMT")), time()) . " ago"; } else { the_time('F jS, Y'); 
-											} ?>	
+											<?php the_time('j M Y'); ?>											
 										</div>									
 
 								</div><!--end comtop-->
@@ -67,7 +65,7 @@
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 			<center>
 			<h1>
-				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . get_option('wpurl') . '/wp-login.php">', '<a href="' . get_option('wpurl') . '"/wp-register.php">') ; ?>
+				<?php sprintf( __( 'Trebuie sa va %sinregistrati</a> sau sa %sintrati in cont</a> pentru a lasa comentarii', 'wptouch' ), '<a href="' . get_option('wpurl') . '/wp-login.php">', '<a href="' . get_option('wpurl') . '"/wp-register.php">') ; ?>
 			</h1>
 			</center>
 
@@ -75,46 +73,46 @@
 
 		<div id="refresher" style="display:none;">
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" alt="checkmark" />
-			<h3><?php _e( "Success! Comment added.", "wptouch" ); ?></h3>
-			&rsaquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page to see your comment.", "wptouch" ); ?></a><br />
-				<?php _e( "(If your comment requires moderation it will be added soon.)", "wptouch" ); ?>
+			<h3><?php _e( "Comentariul Dvs. a fost inregistrat cu succes.", "wptouch" ); ?></h3>
+			&rsaquo; <a href="javascript:this.location.reload();"><?php _e( "Va rugam reincarcati pagina pentru a vedea comentariul Dvs.", "wptouch" ); ?></a><br />
+				<?php _e( "(Comentariul Dvs. este in curs de aprobare.)", "wptouch" ); ?>
 		</div>
 
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
 	<?php if ($user_ID) : ?>
 
-		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
+		<p class="logged"  id="respond"><?php _e( "Inregistrat ca", "wptouch" ); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	
-		<h3 id="respond"><?php _e( "Leave A Comment", "wptouch" ); ?></h3>
+		<h3 id="respond"><?php _e( "Parerea Dvs.", "wptouch" ); ?></h3>
 		<p>
 			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-			<label for="author"><?php _e( 'Name', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></label>
+			<label for="author"><?php _e( 'Nume', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></label>
 		</p>
 
 		<p>
 			<input name="email" id="email" type="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-			<label for="email"><?php _e( 'Mail (unpublished)', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></label>
+			<label for="email"><?php _e( 'E-mail (nu va fi publicat)', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></label>
 		</p>
 	
 		<p>
 			<input name="url" id="url" type="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-			<label for="url"><?php _e( 'Website', 'wptouch' ); ?></label>
+			<label for="url"><?php _e( 'Adresa web', 'wptouch' ); ?></label>
 		</p>
 
 	<?php endif; ?>
-			<div id="errors" style="display:none"><?php _e( "There was an error posting your comment. Maybe it was too short?", "wptouch" ); ?></div>
+			<div id="errors" style="display:none"><?php _e( "Eroare trimitere comentariu. Poate ca este prea scurt?", "wptouch" ); ?></div>
 
 		<?php do_action('comment_form', $post->ID); ?>
 		<p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
 		
 		<p>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="Trimitere" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
 			<div id="loading" style="display:none">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Publishing...', 'wptouch' ); ?></p>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Trimitere ...', 'wptouch' ); ?></p>
 			</div>
 		</p>
 		</form>

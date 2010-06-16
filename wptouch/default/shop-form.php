@@ -13,7 +13,7 @@ global $wpsc_query, $wpdb;
 	  <div class="single_product_display product_view_<?php echo wpsc_the_product_id(); ?>">
 		  <div>
 			  <div>						
-				  <form class='product_form' enctype="multipart/form-data" action="<?php echo curPageURL(); ?>" method="post" name="1" id="product_<?php echo wpsc_the_product_id(); ?>">
+				  <form class='product_form' enctype="multipart/form-data" action="<?php bloginfo('home'); ?>/cos-cumparaturi" method="post" name="1" id="product_<?php echo wpsc_the_product_id(); ?>">
 					
 					<?php /** the variation group HTML and loop */?>
 					<div class="wpsc_variation_forms">
@@ -63,11 +63,9 @@ global $wpsc_query, $wpdb;
 						  <?php endif; ?>						
 					  <?php endif; ?>
 					</div>
-					
 						
 					<input type="hidden" value="add_to_cart" name="wpsc_ajax_action"/>
 					<input type="hidden" value="<?php echo wpsc_the_product_id(); ?>" name="product_id"/>
-					
 							
 					<?php if(wpsc_product_is_customisable()) : ?>				
 						<input type="hidden" value="true" name="is_customisable"/>
@@ -122,7 +120,7 @@ global $wpsc_query, $wpdb;
 					?>
 				</div>
 		
-				<form onsubmit="submitform(this);return true;" action="<?php echo wpsc_this_page_url(); ?>" method="post" name="product_<?php echo wpsc_the_product_id(); ?>" id="product_extra_<?php echo wpsc_the_product_id(); ?>">
+				<form onsubmit="submitform(this);return false;" action="<?php echo wpsc_this_page_url(); ?>" method="post" name="product_<?php echo wpsc_the_product_id(); ?>" id="product_extra_<?php echo wpsc_the_product_id(); ?>">
 					<input type="hidden" value="<?php echo wpsc_the_product_id(); ?>" name="prodid"/>
 					<input type="hidden" value="<?php echo wpsc_the_product_id(); ?>" name="item"/>
 				</form>
