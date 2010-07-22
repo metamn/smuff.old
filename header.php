@@ -101,7 +101,7 @@
 	      <div id="cart" class="column span-6 last">
 	        <!-- for WP-Supercache // see functions.php for the implementation --> 
 	        <!--mfunc dynamic_shopping_cart() -->
-	        <?php dynamic_shopping_cart(); ?>
+	        <?php //dynamic_shopping_cart(); ?>
 	        <!--/mfunc-->	        
 	      </div>
 	    </div>  	
