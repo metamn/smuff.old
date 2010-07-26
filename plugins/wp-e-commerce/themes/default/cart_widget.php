@@ -1,4 +1,3 @@
-
 <?php if(wpsc_cart_item_count() > 0): ?>  
   <ul>
     <li><a href="<?php echo get_option('shopping_cart_url'); ?>"><?php echo wpsc_cart_item_count(); ?> produs(e)</a><li>
@@ -19,5 +18,8 @@
 	  <li>0.00 RON</li>
 	</ul>	
 <?php endif; ?>
+
+
+
 
 

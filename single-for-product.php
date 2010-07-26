@@ -41,7 +41,13 @@
     
     <div class="column span-6 last">
       <div id="post-shopping" class="box">
-        <?php include "shop-form.php" ?>
+        <?php //include "shop-form.php" ?>
+        <?php 
+          $product_id = get_post_meta($post->ID, 'product_id', single);
+          if ($product_id) {        
+            echo wpsc_display_products_page('product_id='.$product_id);         
+          }      
+        ?>
       </div>
       <div id="post-operations" class="box">         
          <?php edit_post_link('Modificare articol', '<span class="ui-icon ui-icon-document"/></span>', '<hr/>'); ?>

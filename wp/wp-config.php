@@ -3,9 +3,10 @@
 /** http://wordpress.org/   **/
 
 // ** MySQL settings ** //
-define('DB_NAME', 'v1');     // The name of the database
-define('DB_USER', 'smuff');     // Your MySQL username
-define('DB_PASSWORD', 'smuffdotro'); // ...and password
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define('DB_NAME', 'ujsmuff');     // The name of the database
+define('DB_USER', 'cs');     // Your MySQL username
+define('DB_PASSWORD', ''); // ...and password
 define('DB_HOST', 'localhost');     // ...and the server MySQL is running on
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');

@@ -14,9 +14,9 @@ get_header();
 	      
 	        <?php 
 	          if (in_category(10)) {
-	            include "single-product.php";
+	            include "single-for-product.php";
 	          } else {
-	            include "single-post.php";
+	            include "single-for-post.php";
 	          }
 	        ?>      
 	        <?php include "navigation.php"; ?>	

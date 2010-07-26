@@ -33,9 +33,19 @@ $date_list[0]['end'] = $end_timestamp;
 ?>
 <div class="wrap" style=''>
 <?php
-  if(is_numeric($user_ID) && ($user_ID > 0)) {
-    echo " <div class='user-profile-links'><a href='".get_option('user_account_url')."'>Istoric shopping</a> | <a href='".get_option('user_account_url').$seperator."edit_profile=true'>Profil utilizator</a> | <a href='http://mushkat.ro/comenzi/checkout/'>Cos cumparaturi</a></div><br />";
-    if(($purchase_log == null) && !is_numeric($_GET['purchaseid'])) {
+  if(is_numeric($user_ID) && ($user_ID > 0)) { ?>
+    <div class='user-profile-links'>
+      <a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a>
+       | 
+      <a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a>
+       | 
+      <a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a>
+       |    
+      <a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a> 
+    </div>
+    <br/>
+    
+    <?php if(($purchase_log == null) && !is_numeric($_GET['purchaseid'])) {
       if($earliest_record[0]['date'] != null) {
         $form_sql = "SELECT * FROM `".WPSC_TABLE_CHECKOUT_FORMS."` WHERE `active` = '1' AND `display_log` = '1';";
         $col_count = 4 + count($form_data);
@@ -49,20 +59,20 @@ $date_list[0]['end'] = $end_timestamp;
           echo "<tr class='toprow'>";
           
           echo " <td>";
-          echo TXT_WPSC_STATUS;
+          echo __('Comanda', 'wpsc');
           echo " </td>";
             
           echo " <td>";
-          echo TXT_WPSC_DATE;
+          echo __('Data', 'wpsc');
           echo " </td>";
             
           echo " <td>";
-          echo TXT_WPSC_PRICE;
+          echo __('Total', 'wpsc');
           echo " </td>";  
           
           if(get_option('payment_method') == 2) {
             echo " <td>";
-            echo TXT_WPSC_PAYMENT_METHOD;
+            echo __('Metoda de plata', 'wpsc');
             echo " </td>";  
           }
         
@@ -91,7 +101,7 @@ $date_list[0]['end'] = $end_timestamp;
             if($stage_data['colour'] != '') {
               $colour = "style='color: #".$stage_data['colour'].";'";
             }
-            echo "<span id='form_group_".$purchase['id']."_text'>".TXT_WPSC_VIEWDETAILS."</span>";
+            echo "<span id='form_group_".$purchase['id']."_text'>"."Detalii"."</span>";
             echo "</a>";
             echo " </td>\n\r";
       
@@ -144,7 +154,7 @@ $date_list[0]['end'] = $end_timestamp;
             //order status code lies heret
             $stage_sql = "SELECT * FROM `".WPSC_TABLE_PURCHASE_STATUSES."` WHERE `id`='".$purchase['processed']."' AND `active`='1' LIMIT 1";
             $stage_data = $wpdb->get_row($stage_sql,ARRAY_A);
-            echo "  <strong class='form_group'>".TXT_WPSC_ORDER_STATUS.":</strong>\n\r";
+            echo "  <strong class='form_group'>"."Statut comanda".":</strong>\n\r";
             echo $stage_data['name']."<br /><br />";
 
            //written by allen
@@ -166,7 +176,7 @@ $date_list[0]['end'] = $end_timestamp;
 						$parsed = $parsed[0]['children'][0]['children'];
 						if($purchase['track_id'] != null){
 							echo "<br /><br />";
-							echo " <strong class='form_group'>".TXT_WPSC_SHIPPING_DETAILS."</strong>\n\r";
+							echo " <strong class='form_group'>".__('Shipping Details', 'wpsc')."</strong>\n\r";
 							echo "<table>";
 							foreach((array)$parsed as $parse){
 								if ($parse['name'] == "TRACKSUMMARY")
@@ -185,7 +195,7 @@ $date_list[0]['end'] = $end_timestamp;
 
 
 	     //cart contents display starts here;
-            echo "  <strong class='form_group'>".TXT_WPSC_ORDER_DETAILS.":</strong>\n\r";
+            echo "  <strong class='form_group'>"."Detalii comanda".":</strong>\n\r";
             $cartsql = "SELECT * FROM `".WPSC_TABLE_CART_CONTENTS."` WHERE `purchaseid`=".$purchase['id']."";
             $cart_log = $wpdb->get_results($cartsql,ARRAY_A) ; 
             $j = 0;
@@ -197,27 +207,27 @@ $date_list[0]['end'] = $end_timestamp;
               echo "<tr class='toprow2'>";
 
               echo " <td>";
-              echo TXT_WPSC_NAME;
+              echo __('Produs', 'wpsc');
               echo " </td>";
       
               echo " <td>";
-              echo TXT_WPSC_QUANTITY;
+              echo __('Cantitate', 'wpsc');
               echo " </td>";
               
               echo " <td>";
-              echo TXT_WPSC_PRICE;
+              echo __('Pret', 'wpsc');
               echo " </td>";
       
               echo " <td>";
-              echo TXT_WPSC_GST;
+              echo __('GST', 'wpsc');
               echo " </td>";
       
               echo " <td>";
-              echo TXT_WPSC_PP;
+              echo __('Transport', 'wpsc');
               echo " </td>";
       
               echo " <td>";
-              echo TXT_WPSC_TOTAL;
+              echo __('Total', 'wpsc');
               echo " </td>";
       
               echo "</tr>";
@@ -304,11 +314,19 @@ $date_list[0]['end'] = $end_timestamp;
 							}
               echo "<tr >";
             
-              echo " <td colspan=5>";
-              echo "<strong>".TXT_WPSC_TOTALSHIPPING.":</strong><br />";    
-              echo "<strong>".TXT_WPSC_FINALTOTAL.":</strong>";
+              echo " <td>";
               echo " </td>";
           
+              echo " <td>";
+              echo " </td>";
+          
+              echo " <td>";
+              echo " </td>";
+          
+              echo " <td>";
+              echo "<strong>"."Total transport".":</strong><br />";    
+              echo "<strong>"."Total comanda".":</strong>";
+              echo " </td>";
           
               echo " <td>";
               $total_shipping += $purchase['base_shipping'];
@@ -325,7 +343,7 @@ $date_list[0]['end'] = $end_timestamp;
               
       
               
-              echo "<strong>".TXT_WPSC_CUSTOMERDETAILS.":</strong>";
+              echo "<strong>"."Detalii facturare/livrare".":</strong>";
               echo "<table class='customer_details'>";
               $form_sql = "SELECT * FROM `".WPSC_TABLE_SUBMITED_FORM_DATA."` WHERE  `log_id` = '".$purchase['id']."'";
               $input_data = $wpdb->get_results($form_sql,ARRAY_A);
@@ -348,10 +366,10 @@ $date_list[0]['end'] = $end_timestamp;
 									}
 								}
 							} else {
-								echo "  <tr><td>".TXT_WPSC_NAME.":</td><td>".$purchase['firstname']." ".$purchase['lastname']."</td></tr>";
-								echo "  <tr><td>".TXT_WPSC_ADDRESS.":</td><td>".$purchase['address']."</td></tr>";
-								echo "  <tr><td>".TXT_WPSC_PHONE.":</td><td>".$purchase['phone']."</td></tr>";
-								echo "  <tr><td>".TXT_WPSC_EMAIL.":</td><td>".$purchase['email']."</td></tr>";
+								echo "  <tr><td>".__('Name', 'wpsc').":</td><td>".$purchase['firstname']." ".$purchase['lastname']."</td></tr>";
+								echo "  <tr><td>".__('Address', 'wpsc').":</td><td>".$purchase['address']."</td></tr>";
+								echo "  <tr><td>".__('Phone', 'wpsc').":</td><td>".$purchase['phone']."</td></tr>";
+								echo "  <tr><td>".__('Email', 'wpsc').":</td><td>".$purchase['email']."</td></tr>";
 							}
               
               //if(get_option('payment_method') == 2)
@@ -372,11 +390,11 @@ $date_list[0]['end'] = $end_timestamp;
                       }
                   }
                 //}
-              echo "  <tr><td>".TXT_WPSC_PAYMENT_METHOD.":</td><td>".$gateway_name."</td></tr>";
-              echo "  <tr><td>".TXT_WPSC_PURCHASE_NUMBER.":</td><td>".$purchase['id']."</td></tr>";
+              echo "  <tr><td>"."Metoda de plata".":</td><td>".$gateway_name."</td></tr>";
+              echo "  <tr><td>"."Numar comanda".":</td><td>".$purchase['id']."</td></tr>";
               if($purchase['transactid'] != '')
                 {
-                echo "  <tr><td>".TXT_WPSC_TXN_ID.":</td><td>".$purchase['transactid']."</td></tr>";
+                echo "  <tr><td>".__('Transaction Id', 'wpsc').":</td><td>".$purchase['transactid']."</td></tr>";
                 }
               echo "</table>";
               } // */           
@@ -385,13 +403,12 @@ $date_list[0]['end'] = $end_timestamp;
             echo " </td>\n\r";
             echo "</tr>\n\r";
             }
-          echo "</tr>";
           }
           else
             {
             echo "<tr>";
             echo " <td colspan='$col_count'>";
-            echo TXT_WPSC_AT_THIS_MOMENT_NO_TRANSACTION;
+            echo "Nu aveti tranzactii pentru luna curenta";
             echo " </td>";      
             echo "</tr>";
             }
@@ -402,20 +419,22 @@ $date_list[0]['end'] = $end_timestamp;
           echo " <table>"; 
           echo "<tr>";
           echo " <td>";     
-          echo TXT_WPSC_NO_PURCHASES;
+          echo "Inca nu ati efectuat nici-o tranzactie";
           echo " </td>";      
           echo "</tr>";
           echo " </table>";
           }
       }
-      
-          
-    $sql = "SELECT * FROM `".WPSC_TABLE_PURCHASE_LOGS."` WHERE `date`!=''";
-    $purchase_log = $wpdb->get_results($sql,ARRAY_A) ;
+			
+			// Commented out as this seemed to be breaking the Your Account layout.
+			// Doesn't seem to do anything, does it?
+			//$sql = "SELECT * FROM `" . WPSC_TABLE_PURCHASE_LOGS . "` WHERE `date` != ''";
+			//$purchase_log = $wpdb->get_results( $sql, ARRAY_A );
+			
     }
    else
      {
-     echo TXT_WPSC_MUST_BE_LOGGED_IN;
+     echo __('You must be logged in to use this page. Please use the form below to login to your account.', 'wpsc');
      ?>
      <form name="loginform" id="loginform" action="<?php echo $siteurl; ?>/wp-login.php" method="post"><br />
 <label>Username:<br /><input type="text" name="log" id="log" value="" size="20" tabindex="1" /></label><br />
@@ -429,9 +448,8 @@ $date_list[0]['end'] = $end_timestamp;
   <input type="hidden" name="redirect_to" value="<?php echo get_option('user_account_url'); ?>" />
 </p>
 </form>
-     <?php
-     }
-  }
-?>
-
-</div>
+			<?php
+		}
+		?>
+	</div>
+<?php } ?>

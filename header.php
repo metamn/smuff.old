@@ -17,7 +17,8 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.s3slider.css" type="text/css" media="screen" />
 		
 		<!-- jQuery Tools -->
-		<script type="text/javascript" src="http://cdn.jquerytools.org/1.1.2/full/jquery.tools.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/all/jquery.tools.min.js"></script>
 		<!-- S3 slider -->
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/s3Slider.js" ></script>
     <!-- jquery table sorter -->
@@ -101,7 +102,7 @@
 	      <div id="cart" class="column span-6 last">
 	        <!-- for WP-Supercache // see functions.php for the implementation --> 
 	        <!--mfunc dynamic_shopping_cart() -->
-	        <?php //dynamic_shopping_cart(); ?>
+	        <?php dynamic_shopping_cart(); ?>
 	        <!--/mfunc-->	        
 	      </div>
 	    </div>  	
