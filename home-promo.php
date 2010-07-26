@@ -19,8 +19,7 @@
                 include "product-thumb.php";
               endwhile; 
             }
-          ?> 
-          <div class="item">&nbsp;</div>      		        
+          ?>               		        
 	      </div>        
 	    </div> <!-- scrollable -->
 	    <div class="clearfix"></div>
