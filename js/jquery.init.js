@@ -23,12 +23,22 @@ $(document).ready(function() {
 
   // Accordions
   // For post body
-  $("#accordion").tabs(
-    "#accordion div.pane", {
-      tabs: 'h3', 
-      effect: 'slide', 
-      initialIndex: null
-  });  
+  //$("#accordion").tabs(
+  //  "#accordion div.pane", {
+    //  tabs: 'h3', 
+    //  effect: 'slide', 
+    //  initialIndex: null
+  //});  
+  $("#accordion h3").toggle(
+    function () {
+      $(this).addClass("current");
+      $(this).next(".pane").show();
+    },
+    function () {
+      $(this).removeClass("current");
+      $(this).next(".pane").hide();
+    }
+  );
   // Info pages above footer    
   $("#accordion-footer-info").tabs(
     "#accordion-footer-info div.pane", {

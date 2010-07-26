@@ -27,10 +27,7 @@
           </div>
         <?php 
           $img_count = $img_count + 1;
-        } ?>
-          <div class="item">
-            &nbsp;
-          </div>
+        } ?>          
         </div>
       </div>
       <?php if ($img_count > 4) { ?>
