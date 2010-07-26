@@ -51,7 +51,7 @@
 	      <div id="header" class="column span-18"> 
 	        <div id="tooltips" class="block"></div>                
           <div id="headlines" class="block">
-	          <div id="logo" class="column span-8 last">
+	          <div id="logo" class="column span-10 last">
 	            <h1>
 	              <a class="tooltip" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
 	              <span class="strapline">
@@ -63,12 +63,12 @@
 	                  $blog = '';
 	                }?>
 	                <a class="tooltip <?php echo $shop?>" alt="<?php echo page_excerpt('magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Magazinul Smuff">shop</a>
-	                &
+	                 & 
 	                <a class="tooltip <?php echo $blog ?>" alt="<?php echo page_excerpt('blogul-smuff'); ?>" href="<?php bloginfo('home'); ?>/blog" title="Blogul Smuff">blog</a>
 	              </span>			      
 	           </h1>			      
 			      </div>
-			      <div id="main-name" class="column span-10 last">
+			      <div id="main-name" class="column span-8 last">
 			        <?php 
 			          $page_name = "&nbsp;"; 
 			          if (is_category()) {

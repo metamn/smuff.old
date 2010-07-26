@@ -54,29 +54,32 @@ body {
 }
 #header #logo h1 {
   font-weight: bold;
-  font-size: 4.5em;
-  letter-spacing: -2px;
+  font-size: 5.5em;
+  letter-spacing: -4px;
   margin: 1em 0 .2em 0;
 }
 .strapline{  
   color: #f25e18;
   font-size: .4em;
   font-weight: bold;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   vertical-align: super;
 }
 .strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {
   color: #f25e18;
-  padding: .1em .3em;
+  padding: .1em;
 }
 .strapline a:hover, .strapline a.active {
-  background: #DFDBD0;  
+  color: #DFDBD0;
+  background: #f25e18;
+  -moz-border-radius: 10%;  
+  -webkit-border-radius: 10%;
 }
 
 
 #main-name {
-  margin-top: 5.5em;
-  width: 400px;
+  margin-top: 7.5em;
+  width: 320px;
 }
 #main-name h1{  
   text-align: right;
@@ -105,7 +108,7 @@ body {
 #cart {
   background: #111;
   margin: 0;
-  height: 14.5em;
+  height: 16.6em;
 }
 div#widgetshoppingcart {
   padding: 1.5em;
@@ -246,13 +249,17 @@ div#widgetshoppingcart {
 #bestsellers {
   margin: 0 0 3em 0;
 }
+#bestsellers #col-2 .items {
+  float: right;
+  margin-right: 0;
+}
 #bestsellers h3 {
   background: #4A4742;
   color: #f25e18;
   padding: 0.1em 1em;
   margin:0; 
   text-transform: uppercase;  
-  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 #bestsellers h3.first {
   padding-top: 1em;
@@ -265,18 +272,18 @@ div#widgetshoppingcart {
 }
 #bestsellers .item {
   margin-bottom: 2em;
-  height: 28em;
+  height: 33em;
 }
 #bestsellers .item .text {
   margin: 0;
   padding: 1em 1.5em;
-  background: #DFDBD0;
-  width: 195px;
+  background: #DFDBD0; 
+  height: 15em; 
 }
 #bestsellers .item img {
   border: 1px solid #ccc;
-  width: 230px;
-  height: 200px;
+  width: 270px;
+  height: auto;
   cursor: pointer;
 }
 #bestsellers .item h4 {
