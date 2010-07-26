@@ -103,7 +103,31 @@ body {
 #menu li.last {
   width: 25%;
 }
+#searchform {
+ margin-bottom: 1.5em; 
+}
+#searchform input, #searchform select  { 
+  background: #DFDBD0;
+  font-size: small;
+}
+#searchform input {
+  width: 99%;
+}
+#searchform select {
+  width: 12.5em;
+}
+#searchform input.submit {
+  width: 12.5em;
+}
+#searchform label {
+  font-weight: normal;
+}
 
+input.search {
+  background: #111;
+  color: #999;
+  width: 100%;  
+}
 
 #cart {
   background: #111;
@@ -653,14 +677,6 @@ li.comment ul.children {
 #home-menu .ui-icon {
   display: inline-block;
   margin-right: .5em;
-}
-#searchform {
-  
-}
-input.search {
-  background: #111;
-  color: #999;
-  width: 100%;  
 }
 #contact {
   font-size: larger;
