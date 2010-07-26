@@ -206,7 +206,7 @@ div#widgetshoppingcart {
   font-weight: bold;
   text-align: right;
   margin-right: 1em;  
-  margin-bottom: .5em;
+  margin-bottom: 0;
 } 
 #home-hot-content .s3sliderImage span p {
   display: inline-block;
@@ -215,14 +215,17 @@ div#widgetshoppingcart {
 #home-hot-content .s3sliderImage span table {
   float:right;
   margin: 0; 
+  width: 90%;
 }
 #home-hot-content .s3sliderImage span table td.small {
   width: 8em;
 }
 #home-hot-content .s3sliderImage span table td.excerpt p {
   text-align: right;
-  margin-right: 1.6em;  
+  margin: 0 1.6em 0 8em;  
   display: block;
+  top: -.5em;
+  position: relative;
 }
 #home-hot-content .s3sliderImage span table td {
   padding: 0;
