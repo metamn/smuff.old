@@ -1,7 +1,18 @@
 $(document).ready(function() { 
 
 
-  // Scrollables
+  // Slider
+  // Home page Hot
+  $("#hot-slider").sudoSlider({ 
+    prevNext: false,
+    fade: true,
+    customLink: 'a.hot-slider-link',
+    updateBefore: true
+  });
+  
+  
+  // jQueryTools Scrollables
+  // --
   // Home page Promotions 
   $("#promo-scroll").scrollable().navigator();	
   
@@ -23,12 +34,6 @@ $(document).ready(function() {
 
   // Accordions
   // For post body
-  //$("#accordion").tabs(
-  //  "#accordion div.pane", {
-    //  tabs: 'h3', 
-    //  effect: 'slide', 
-    //  initialIndex: null
-  //});  
   $("#accordion h3").toggle(
     function () {
       $(this).addClass("current");
@@ -78,11 +83,6 @@ $(document).ready(function() {
    $("#checkout_shipping_price").val(current);
   });
    
-  // S3 slider
-  // - on startpage / hot items
-  $('#s3slider').s3Slider({
-      timeOut: 4000
-   });
   
   // Sortable table
   // - on View all products
@@ -102,3 +102,5 @@ $(document).ready(function() {
   
   
 }); 
+
+

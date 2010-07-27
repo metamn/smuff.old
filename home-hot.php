@@ -1,62 +1,73 @@
 <div id="home-hot" class="block"> 
 
   <div id="home-hot-content" class="block">    
-    <div id="s3slider">
+    <div id="hot-slider" class="slider column span-15 last">
       <?php if ($new_products) { ?>
-        <ul id="s3sliderContent">
+        <ul>
         <?php 
+          $thumbs = array();
+          $i = 1;
           while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
             $imgs = post_attachements($post->ID);
             $img = $imgs[0];
             $large = wp_get_attachment_image_src($img->ID, 'large');
+            $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
             $product_id = product_id($post->ID);
             $product_price = product_price($post->ID);
             $product_discount = product_discount($product_id);
             $product_sale_price = $product_price - $product_discount;
-            $product_name = product_name($product_id);            
+            $product_name = product_name($product_id);
+            
+            $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.$product_name.'"><img src="'.$thumb[0].'" alt="'.$product_name.'" /></a>';            
+            $i += 1;
           ?>
-          <li class="s3sliderImage">
+          <li>
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-              <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>            
-              <span>
-                <table>
-                  <tr>
+              <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>
+              <div id="home-hot-title" class="block"> 
+                <div id="text" class="column span-3 last">
+                  Nou!
+                </div>
+                <div id="info" class="column span-13 last">
+                  <div class="arrow-right"></div>
+                  <table>
+                    <tr>
                     <td><h3><?php echo $product_name ?></h3></td>
                     <?php if ($product_discount > 0) { ?>
-                      <td class="small"><p class="price"><?php echo $product_sale_price; ?></p> RON</td>
+                    <td class="small"><p class="price"><?php echo $product_sale_price; ?></p> RON</td>
                     <?php } else { ?>
-                      <td class="small"><p class="normal-price"><?php echo $product_price; ?></p> RON</td>                     
+                    <td class="small"><p class="normal-price"><?php echo $product_price; ?></p> RON</td>
                     <?php } ?>
-                  </tr>
-                  <tr>
+                    </tr>
+                    <tr>
                     <td class="excerpt"><?php the_excerpt(); ?></td>
                     <?php if ($product_discount > 0) { ?>
-                      <td class="old-price small"><?php echo $product_price; ?> RON</td>
+                    <td class="old-price small"><?php echo $product_price; ?> RON</td>
                     <?php } else { ?>
-                      <td></td>
+                    <td></td>
                     <?php } ?>
-                  </tr>    
-                </table>                                                              
-              </span>
+                    </tr>
+                  </table>
+                </div>  
+              </div>               
             </a>
           </li>
         <?php 
-          endwhile; ?>
-          <div class="clear s3sliderImage"></div>
+          endwhile; ?>          
         </ul>
+      <?php } ?>
+    </div>
+    <div id="hot-slider-thumbs" class="column span-3 last">
+      <?php if ($thumbs) { ?>
+        <div class="hot-slider-thumb-menu-wrapper">
+        <div class="hot-slider-thumb-menu">
+        <?php foreach ($thumbs as $thumb) {
+          echo $thumb;
+        } ?>
+        </div></div>  
       <?php } ?>
     </div>   
   </div>
+    
   
-  <div id="home-hot-title" class="block"> 
-    <div class="block"> 
-      <div id="text" class="column span-3 last">
-        Hot!
-      </div>
-      <div class="column span-1 last arrow-vertical">
-        <div class="arrow-right"></div>
-      </div>  
-    </div>    
-  </div>
-
 </div>

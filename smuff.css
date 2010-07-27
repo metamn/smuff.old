@@ -190,8 +190,14 @@ div#widgetshoppingcart {
   margin: 0;
   padding: 0;
 }
+#home-hot #info {
+  background: #4A4742;
+  opacity: .8;
+  width: 480px;
+  height: 5em;
+}
 #home-hot-title {
-  top: -60px;
+  top: -35px;
   position: relative;
 }
 #home-hot-title #text {
@@ -214,20 +220,22 @@ div#widgetshoppingcart {
   padding: 0;
   width: 100%;
 }
-#home-hot-content img {
-  width: 710px;
-  height: 500px;
+#home-hot-content #hot-slider img {
+  width: 590px;
+  height: 415px;
 }
-#home-hot-content .s3sliderImage span {
+#home-hot-content #hot-slider-thumbs img {
+  width: 100px;
+  height: 100px;
+}
+#home-hot-content table {
   color: #e6e2d9;
-  font-family: inherit;
-  font-size: inherit;
-  padding: .4em 1em;
-  height: 4.6em;
-  background: #4A4742;
-  bottom: 0; /* positioning top or bottom */
+  margin: 0;
+  padding: .5em 0;  
+  position: relative;
+  top: -65px; 
 }
-#home-hot-content .s3sliderImage span h3 {
+#home-hot-content table h3 {
   color: #f25e18;
   font-size: large;
   font-weight: bold;
@@ -235,36 +243,37 @@ div#widgetshoppingcart {
   margin-right: 1em;  
   margin-bottom: 0;
 } 
-#home-hot-content .s3sliderImage span p {
+#home-hot-content table p {
   display: inline-block;
   margin: 0;
 } 
-#home-hot-content .s3sliderImage span table {
-  float:right;
-  margin: 0; 
-  width: 90%;
-}
-#home-hot-content .s3sliderImage span table td.small {
+#home-hot-content table td.small {
   width: 8em;
 }
-#home-hot-content .s3sliderImage span table td.excerpt p {
+#home-hot-content table td.excerpt p {
   text-align: right;
   margin: 0 1.6em 0 8em;  
   display: block;
   top: -.5em;
   position: relative;
 }
-#home-hot-content .s3sliderImage span table td {
+#home-hot-content table td {
   padding: 0;
   margin: .5em;
   vertical-align: top;
 }
-#home-hot-content .s3sliderImage span .normal-price {
+#home-hot-content .normal-price {
   color: #111;
   background: #48C0D9;
 }
 
-
+div.hot-slider-thumb-menu-wrapper {
+  background: #DFDBD0 !important;
+  height: 445px !important;  
+}
+.hot-slider-thumb-menu a:hover {
+  border: 2px solid #4A4742 !important;
+}
 
 
 /* Bestsellers
