@@ -6,7 +6,7 @@ function makeScrollable(wrapper, scrollable){
 	
 	// Hide images until they are not loaded
 	scrollable.hide();
-	var loading = $('<div class="loading">Loading...</div>').appendTo(wrapper);
+	var loading = $('<div class="loading"><img class="ajax-loader" src="/wp-content/themes/smuff/img/ajax-loader.gif" /></div>').appendTo(wrapper);
 	
 	// Set function that will check if all images are loaded
 	var interval = setInterval(function(){
