@@ -513,7 +513,27 @@ img.small-image {
   background: #444;
   color: #F25E18;  
 }
-
+#post-shopping .wpsc_container .imagecol {
+  display: none;
+}
+#post-shopping .wpsc_container div.single_product_display div.textcol  {
+  margin-left: 0 !important;
+}
+#post-shopping .wpsc_container table {
+  width: 200px !important;
+}
+#post-shopping .wpsc_container tr.price {
+  background: none !important;
+  font-size: small;
+}
+#post-shopping .wpsc_container span.pricedisplay {
+  float: none !important;
+  width: 99%;
+}
+input.wpsc_buy_button, input.checkout-button {  
+  width: 100%;
+  font-size: small;
+}
 div.thanks-ok {
   background: #26BF5A;
   padding: 1em;
@@ -526,39 +546,7 @@ div.thanks-error {
   margin: 2em 0;
 }
 
-label.shop_form {
-  line-height: 2em;
-}
-label.variation {
-  margin-right: 4em;
-}
-input.variation {
 
-}
-label.quantity {
-
-}
-input.quantity {
-  margin-left: 2.66em;
-}
-label.stoc {
-  margin-right: 5.8em;
-}
-label.livrare {
-  margin-right: 4.5em;
-}
-input.shop_form {
-  
-}
-select.shop_form {
-  margin-left: 1em;
-}
-input.add-button{
-  margin: .5em 0;
-  background: transparent;
-  color: #f25e18;
-  border: 1px solid;
-}
 
 #post-operations img {
   border: none;

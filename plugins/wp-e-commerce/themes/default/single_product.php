@@ -102,7 +102,33 @@
 					      <?php if(wpsc_product_is_customisable()) : ?>				
 						      <input type="hidden" value="true" name="is_customisable"/>
 					      <?php endif; ?>
-										
+					      
+					      <!--
+					      <tr class='stock'><td>
+					        <label>Stoc:</label>
+					      </td><td class='right'>
+					        <?php                    
+                    if ($stoc > 0) {
+                      echo "Avem";
+                    } else {
+                      echo "Nu avem";
+                    } 
+                  ?>  
+					      </td></tr>
+					      -->
+					      
+					      <?php 
+					        $stock = product_stock(wpsc_the_product_id());
+					        $delivery = product_delivery_time($stock);
+					      ?>
+					      
+					      <tr class='delivery'><td>
+					        <label>Livrare:</label>
+					      </td><td class='right'>
+					        <?php  echo $delivery ?>  
+					      </td></tr>
+					      
+					      										
 					      <!-- END OF QUANTITY OPTION -->
 					      
 					      <?php if((get_option('hide_addtocart_button') == 0) && (get_option('addtocart_or_buynow') !='1')) : ?>
