@@ -88,8 +88,10 @@
 			    <div id="menu" class="last">
 			      <ul class="inline-list">
 		          <?php 
-		            $cats = get_categories('child_of=10');
-		            foreach ($cats as $c) { ?>
+		            $cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
+		            foreach ($cats as $cat) { 
+		              $c = get_category_by_slug($cat);
+		            ?>
 		              <li>
 		                <a class="tooltip" alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>?view=1" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 		              </li>

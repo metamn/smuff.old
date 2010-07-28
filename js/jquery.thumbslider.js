@@ -78,6 +78,9 @@ function makeScrollable(wrapper, scrollable){
 			// Move tooltip under the mouse when we are in the higher part of the menu
 			if (e.pageY - wrapperOffset.top < wrapperHeight/2){
 				tooltipTop += 80;
+			} else {
+			// Move tooltip under the mouse when on the lower part of the menu, but not too lower
+			  tooltipTop += 60;
 			}				
 			tooltip.css({top: tooltipTop, left: tooltipLeft});				
 			
