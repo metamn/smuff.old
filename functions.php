@@ -313,7 +313,7 @@ function post_attachements($post_id) {
 	  'numberposts' => null,
 	  'post_status' => null,
 	  'post_parent' => $post_id,
-	  'orderby' => 'date',
+	  'orderby' => 'menu_order',
 	  'order' => 'ASC'
   ); 
   $attachments = get_posts($args);
