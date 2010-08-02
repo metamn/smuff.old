@@ -26,7 +26,7 @@ a, a:visited {
 
 
 body {
-  background: #e6e2d9;
+  background: #e6e2d9 url(img/v1.png) no-repeat top center;
 }
 .container {
   margin: 0 auto;
