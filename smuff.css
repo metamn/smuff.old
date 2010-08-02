@@ -530,7 +530,7 @@ img.small-image {
   float: none !important;
   width: 99%;
 }
-input.wpsc_buy_button, input.checkout-button {  
+input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {  
   width: 100%;
   font-size: small;
 }

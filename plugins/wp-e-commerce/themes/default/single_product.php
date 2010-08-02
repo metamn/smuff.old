@@ -35,10 +35,12 @@
 					      <div class="wpsc_variation_forms">
 						      <?php while (wpsc_have_variation_groups()) : wpsc_the_variation_group(); ?>
 							      <tr class='variation'>
-							        <td>
+							        <td colspan=2>
 								        <label for="<?php echo wpsc_vargrp_form_id(); ?>"><?php echo wpsc_the_vargrp_name(); ?>:</label>
 								      </td>
-								      <td class='right'>
+								    </tr>
+								    <tr class='variation'>  
+								      <td colspan=2>
 								        <?php /** the variation HTML and loop */?>
 								        <select class='wpsc_select_variation' name="variation[<?php echo wpsc_vargrp_id(); ?>]" id="<?php echo wpsc_vargrp_form_id(); ?>">
 								        <?php while (wpsc_have_variations()) : wpsc_the_variation(); ?>
@@ -46,7 +48,7 @@
 								        <?php endwhile; ?>
 								        </select> 
 							        </td>
-							        </tr>
+							       </tr>
 						      <?php endwhile; ?>
 					      </div>
 					      <?php /** the variation group HTML and loop ends here */?>

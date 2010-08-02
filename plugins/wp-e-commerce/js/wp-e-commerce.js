@@ -160,10 +160,15 @@ jQuery(document).ready(function () {
 	
 	
   // update the price when the variations are altered.
-  jQuery("div.wpsc_variation_forms .wpsc_select_variation").change(function() {
+  // cs
+  // ORIGINAL: jQuery("div.wpsc_variation_forms .wpsc_select_variation").change(function() {  
+  
+  jQuery("select.wpsc_select_variation").change(function() {
     parent_form = jQuery(this).parents("form.product_form");
-    form_values =jQuery("input[name=product_id],div.wpsc_variation_forms .wpsc_select_variation",parent_form).serialize( );
-		jQuery.post( 'index.php?update_product_price=true', form_values, function(returned_data) {
+    form_values =jQuery("input[name=product_id],select.wpsc_select_variation",parent_form).serialize( );
+		//cs
+		// for APACHE: jQuery.post( 'index.php?update_product_price=true', form_values, function(returned_data) {
+		jQuery.post( '?update_product_price=true', form_values, function(returned_data) {
 			eval(returned_data);
       if(product_id != null) {
         target_id = "product_price_"+product_id;
@@ -192,7 +197,9 @@ jQuery(document).ready(function () {
 	// Ajax cart loading code.
 	jQuery("div.wpsc_cart_loading").livequery(function(){
 		form_values = "ajax=true"
-		jQuery.post( 'index.php?wpsc_ajax_action=get_cart', form_values, function(returned_data) {
+		//cs
+		// for APACHE jQuery.post( 'index.php?wpsc_ajax_action=get_cart', form_values, function(returned_data) {
+		jQuery.post( '?wpsc_ajax_action=get_cart', form_values, function(returned_data) {
 			eval(returned_data);
 		});
 	});
