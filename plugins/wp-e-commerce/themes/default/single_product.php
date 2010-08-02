@@ -9,7 +9,9 @@
 	
 	<div class="productdisplay">
 	  <?php /** start the product loop here, this is single products view, so there should be only one */?>
-		  <?php while (wpsc_have_products()) :  wpsc_the_product(); ?>
+		  <?php while (wpsc_have_products()) :  wpsc_the_product(); 
+		    $product_id = wpsc_the_product_id();		   
+		  ?>
 			  <div class="single_product_display product_view_<?php echo wpsc_the_product_id(); ?>">
 				  <div class="textcol">
 					<?php if(get_option('show_thumbnails')) :?>
@@ -119,9 +121,9 @@
 					      </td></tr>
 					      -->
 					      
-					      <?php 
-					        $stock = product_stock(wpsc_the_product_id());
-					        $delivery = product_delivery_time($stock);
+					      <?php 					        
+					        $product_data['sku'] = get_product_meta($product_id, 'sku', true);
+					        $delivery = product_delivery_time($product_data['sku']);
 					      ?>
 					      
 					      <tr class='delivery'><td>

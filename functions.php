@@ -276,13 +276,16 @@ function product_name($product_id) {
 }
 
 // Get the product stoc from wpsc
-function product_stock($product_id) {
+// DEPRECATED: stock is getting directly from wpsc:$product_data['sku'] = get_product_meta($product_id, 'sku', true); 
+function product_stock_old($product_id) {
   if ($product_id) {
     global $wpdb;
     $quantity = $wpdb->get_var("SELECT `quantity` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
     return $quantity;
   }  
 }
+
+
 
 // Calculate Delivery time based on stock
 function product_delivery_time($stock) {
