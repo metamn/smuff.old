@@ -77,27 +77,7 @@
 	<?php endif; ?>	
 	
 	
-	<tr class="shipping">
-	  <td colspan=2>Livrare :</td>
-	  <td>	    
-	    <input type="radio" name="shipping_method" id="checkout_shipping" value="8">
-	      Posta Romana, cu plata la livrare: 8.00 RON
-	    <br/>
-	    <input type="radio" name="shipping_method" id="checkout_shipping" value="23">
-	      Fan Curier, cu plata la livrare: 23.00 RON
-	    <br/>
-	    <input type="radio" name="shipping_method" id="checkout_shipping" value="18" checked="checked">
-	      Fan Curier, cu plata prin transfer bancar: 18.00 RON
-	    <br/>
-	    <input type="radio" name="shipping_method" id="checkout_shipping" value="0">
-	      Ridicare din sediu Tg. Mures: 0.00 RON  	  
-	   <br/><br/>
-	   * Toate preturile au TVA inclus	   
-	  </td>
-	  <td>&nbsp;</td>
-	  <td>&nbsp;</td>
-	</tr>
-	
+		
 	
 	</table>
 	<?php  //this HTML dispalys the calculate your order HTML	?>

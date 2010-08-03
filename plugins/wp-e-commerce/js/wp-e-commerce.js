@@ -256,7 +256,7 @@ function switchmethod(key,key1){
 	form_values += "wpsc_ajax_action=update_shipping_price&";
 	form_values += "key1="+key1+"&";
 	form_values += "key="+key;
-	jQuery.post( 'index.php', form_values, function(returned_data) {
+	jQuery.post( '', form_values, function(returned_data) {
 		eval(returned_data);
 	});
 }

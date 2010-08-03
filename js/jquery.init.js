@@ -73,17 +73,6 @@ $(document).ready(function() {
   });
 
   
-  // Checkout page checkboxes
-  // - simulating shipping selection
-  $("input[name='shipping_method']").change(function(){
-   orig = $("span#checkout_total").html().split(" ");
-   original = parseInt(orig[0]);
-   alert(original);
-   current = parseInt($(this).val());
-   n = current + original;
-   $("span#checkout_total").html( n + ".00 RON");   
-  });
-   
   
   // Sortable table
   // - on View all products
