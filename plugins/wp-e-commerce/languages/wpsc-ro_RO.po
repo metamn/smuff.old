@@ -511,7 +511,7 @@ msgstr "Please select your country from the list."
 
 #: wp-e-commerce/edit-profile.php:61
 msgid "Please enter a valid"
-msgstr "Please enter a valid"
+msgstr "Va rugam completati corect"
 
 #: wp-e-commerce/edit-profile.php:84
 #, fuzzy
@@ -3254,7 +3254,7 @@ msgstr ""
 
 #: wp-e-commerce/wpsc-includes/ajax.functions.php:88
 msgid "You just added \"[product_name]\" to your cart."
-msgstr ""
+msgstr " \"[product_name]\" adaugat cu succes."
 
 #: wp-e-commerce/wpsc-includes/ajax.functions.php:91
 msgid "Sorry, but you cannot add zero items to your cart"

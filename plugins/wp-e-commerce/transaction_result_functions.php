@@ -307,6 +307,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 						$report_user .= "".$userinfo['name'].": ".$userinfo['value']."\n";
 					}elseif(is_numeric($userinfo['value'])){
 							$report_user .= "State: ".wpsc_get_state_by_id($userinfo['value'],'name')."\n";
+
 					}
 				}
 			}

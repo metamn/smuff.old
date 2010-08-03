@@ -334,7 +334,9 @@ function wpsc_cart_item_image($width = null, $height = null) {
 	global $wpsc_cart;
 	
 	if(($width > 0) && ($height > 0)) {
-		$image_path = "index.php?image_id=".$wpsc_cart->cart_item->image_id."&amp;thumbnail=true&amp;width=".$width."&amp;height=".$height."";
+	  //cs 
+	  // APACHE: $image_path = "index.php?image_id=".$wpsc_cart->cart_item->image_id."&amp;thumbnail=true&amp;width=".$width."&amp;height=".$height."";
+		$image_path = "?image_id=".$wpsc_cart->cart_item->image_id."&amp;thumbnail=true&amp;width=".$width."&amp;height=".$height."";
 	} else {
 		$image_path = WPSC_THUMBNAIL_URL.$wpsc_cart->cart_item->thumbnail_image;	
 		if(is_ssl()) {

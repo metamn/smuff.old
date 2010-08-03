@@ -76,11 +76,12 @@ $(document).ready(function() {
   // Checkout page checkboxes
   // - simulating shipping selection
   $("input[name='shipping_method']").change(function(){
-   original = parseInt($("input[name='checkout_original_price']").val());
+   orig = $("span#checkout_total").html().split(" ");
+   original = parseInt(orig[0]);
+   alert(original);
    current = parseInt($(this).val());
    n = current + original;
-   $(".checkout_total_price").html( n + ".00 RON");
-   $("#checkout_shipping_price").val(current);
+   $("span#checkout_total").html( n + ".00 RON");   
   });
    
   

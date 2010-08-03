@@ -15,7 +15,7 @@
 		<?php if(wpsc_uses_shipping()): ?>
 			<td><?php echo __('Livrare'); ?></td>
 		<?php endif; ?>
-		<td><?php echo __('Price'); ?></td>
+		<td>Pret</td>
 		<td></td>
 	</tr>
 	<?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>
@@ -29,7 +29,9 @@
 		
 		<tr class="product_row">
 			<td class="firstcol">
-			  <img src='<?php echo wpsc_cart_item_image(48,48); ?>' alt='<?php echo wpsc_cart_item_name(); ?>' title='<?php echo wpsc_cart_item_name(); ?>' />
+			  <a href="<?php echo $link ?>">
+			    <img src='<?php echo wpsc_cart_item_image(48,48); ?>' alt='<?php echo wpsc_cart_item_name(); ?>' title='<?php echo wpsc_cart_item_name(); ?>' />
+        </a>			   
 			</td>
 			<td class="firstcol">
 			  <a href="<?php echo $link ?>"><?php echo wpsc_cart_item_name(); ?></a>
@@ -73,6 +75,30 @@
 			</td>
 		</tr>
 	<?php endif; ?>	
+	
+	
+	<tr class="shipping">
+	  <td colspan=2>Livrare :</td>
+	  <td>	    
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="8">
+	      Posta Romana, cu plata la livrare: 8.00 RON
+	    <br/>
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="23">
+	      Fan Curier, cu plata la livrare: 23.00 RON
+	    <br/>
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="18" checked="checked">
+	      Fan Curier, cu plata prin transfer bancar: 18.00 RON
+	    <br/>
+	    <input type="radio" name="shipping_method" id="checkout_shipping" value="0">
+	      Ridicare din sediu Tg. Mures: 0.00 RON  	  
+	   <br/><br/>
+	   * Toate preturile au TVA inclus	   
+	  </td>
+	  <td>&nbsp;</td>
+	  <td>&nbsp;</td>
+	</tr>
+	
+	
 	</table>
 	<?php  //this HTML dispalys the calculate your order HTML	?>
 
@@ -91,6 +117,8 @@
 	<?php
 	endif;
 	?>
+	
+		
 	<?php do_action('wpsc_before_shipping_of_shopping_cart'); ?>
 	<div id='wpsc_shopping_cart_container'>
 	<?php if(wpsc_uses_shipping()) : ?>
@@ -229,24 +257,29 @@
 	   
 	   
 	   
-
-	 <?php if(!is_user_logged_in() && get_option('users_can_register') && get_option('require_register')) {
+  <div class="shop-user-info block">
+	 <?php if(!is_user_logged_in()) {
 			 global $current_user;
 			 get_currentuserinfo();	  ?>
 		
-		  <h2>Inca nu aveti cont?</h2>
+		  <h2>Inca nu aveti cont Smuff?</h2>
 		  <p>
-		    Trebuie sa va inregistrati mai intai pentru a cumpara de la noi.
+		    A creea cont Smuff nu este obligatorie, se poate cumpara si fara cont.
+		    <br/>
+		    Contul Smuff este recomandat pentru:
+		    <ul>
+		      <li>Cei care cumpara de mai multe ori de la noi</li>
+		      <li>Cei care doresc sa devina colaboratori Smuff</li>
+		    </ul>
 		    <br/>
 		    Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail.
 		  </p>		
 		  
 		  <a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">
-		    Intrare in cont / inregistrare cont
-		  </a>
-
-	    
-	<?php } else { ?>
+		    Intrare in cont / Inregistrare cont
+		  </a>	    
+	  
+	  <?php } else { ?>
 	
 	    <?php 
 	      if (is_user_logged_in()) {
@@ -270,12 +303,18 @@
           </div>  
           <br/><br/>   
       <?php } ?>
+      
+    <?php } ?>
+    </div>
 	    
-	    <h3>Va rugam verificati daca datele sunt corecte in formularul de mai jos</h3>	
-	    <p>Campurile marcate cu * sunt obligatorii.</p>
+	    <div class="block shop-user-info">
+	      <h3>Va rugam verificati daca datele sunt corecte in formularul de mai jos</h3>	
+	      <p>Campurile marcate cu * sunt obligatorii.</p>
+	      <p>Daca doriti factura pe firma va rugam completati campurile Cod Unic de Inregistrare, Nr. Registru, Banca si IBAN.</p> 	    
+	    </div>
 	    
 	    <p>
-	      <input type='submit' value="Datele sunt corecte, trimit imediat comanda" name='submit' class='make_purchase' />
+	      <input type='submit' value="Datele de mai jos sunt corecte, trimit imediat comanda" name='submit' class='make_purchase' />
 	    </p>
 	    
 	    <?php
@@ -296,6 +335,9 @@
 							    <br/><br/>
 							    <input type='checkbox' value='true' name='shippingSameBilling' id='shippingSameBilling' />
 							    <label for='shippingSameBilling'>Adresa de livrare este acelasi ca adresa de facturare?</label>						
+							    <br/>
+							    <input type='checkbox' value='true' name='contactBefore' id='contactBefore' />
+							    <label for='shippingSameBilling'>Doriti sa fiti contactat telefonic de catre curierat inainte de livrare?</label>													      
 							    <br/><br/>
 						    </td>
 					    </tr>
@@ -406,14 +448,11 @@
 			    </td>
 		    </tr>
 	    </table>
-	
-	<?php } ?> ,<!-- end for logged in or not-->    
 	    
 </form>
 </div>
-<?php
-else:
-  echo '<h4>Cosul Dvs. este gol. Va rugam vizitati sectiunea <a href="' . bloginfo('home') .'/category/produse">Produse</a></h4>';	
-endif;
+<?php else: ?>  
+  <h4>Cosul Dvs. este gol</h4>	
+<?php endif;
 do_action('wpsc_bottom_of_shopping_cart');
 ?>
