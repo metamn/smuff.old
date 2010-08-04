@@ -23,16 +23,20 @@
     
     <?php if ($all_posts->have_posts()) : ?>
     <div id="archive-all-grid" class="block">
-      <?php while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
+      <?php 
+      $counter = 1;
+      while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
 		    $product_id = product_id($post->ID);
         $product_price = product_price($post->ID);
         $product_name = product_name($product_id); 
         $product_stoc = product_stock($product_id);
         $imgs = post_attachements($post->ID);
         $img = $imgs[0];  
-        $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+        $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');         
+        $klass = 'col-' .($counter % 3);
+        $counter += 1;
 		  ?>
-		    <div id="item" class="column span-6 last">
+		    <div id="item" class="<?php echo $klass?> column span-6 last">
 		      <?php include "product-thumb.php"?>
 		    </div>
 		  <?php endwhile; ?>

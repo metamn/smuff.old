@@ -57,6 +57,15 @@ $(document).ready(function() {
   });
 
 
+  // Hover on Product thumbs
+  // - on Home Promo, Recommended items, All products, Search results ....
+  $("#recommended .item, #promo-scroll .item, #archive-all-grid #item").hover(
+    function () {
+      $(this).addClass('product-thumb-highlighted');
+    }, 
+    function () {
+      $(this).removeClass('product-thumb-highlighted');
+  });
 
 
   // Tooltips on startpage

@@ -2,8 +2,7 @@
   $product_id = product_id($post->ID);
   $product_price = product_price($post->ID);
   $product_discount = product_discount($product_id);
-  $product_sale_price = $product_price - $product_discount;
-  $product_stock = product_stock($product_id);
+  $product_sale_price = $product_price - $product_discount;  
   $imgs = post_attachements($post->ID);
   $img = $imgs[0];  
   $medium = wp_get_attachment_image_src($img->ID, 'medium'); 

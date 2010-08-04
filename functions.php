@@ -285,6 +285,12 @@ function product_stock_old($product_id) {
   }  
 }
 
+function product_stock($product_id) {
+  if ($product_id) {
+    return get_product_meta($product_id, 'sku', true);
+  }  
+}
+
 
 
 // Calculate Delivery time based on stock

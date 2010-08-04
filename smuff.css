@@ -490,6 +490,12 @@ div.hot-slider-thumb-menu-wrapper {
   width: 150px;
   height: 150px;
 }
+.product-thumb-highlighted {
+  background: #dfdbd0;
+  box-shadow: 0 .5em #cac1b2;
+  -moz-box-shadow: 0 .5em #cac1b2;
+  -webkit-box-shadow: 0 .5em #cac1b2;
+}
 
 
 
@@ -603,6 +609,7 @@ div.thanks-error {
 }
 
 
+
 /* Comments
 */
 h4.comments {
@@ -683,9 +690,15 @@ li.comment ul.children {
   text-decoration: underline;
 }
 #archive-all-grid #item {
-  height: 28em;
+  height: 30em;
+  margin-bottom: 3em;
 } 
-
+#archive-all-grid #item.col-2 .item {
+  margin-left: 1.5em;
+}
+#archive-all-grid #item.col-0 .item {
+  margin-left: 3em;
+}
 
 /* Sidebar 
 */

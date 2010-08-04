@@ -84,8 +84,7 @@
             setup_postdata($post);
             $product_id = product_id($post->ID);
             $product_price = product_price($post->ID);
-            $product_name = product_name($product_id); 
-            $product_stoc = product_stock($product_id);
+            $product_name = product_name($product_id);             
             $imgs = post_attachements($post->ID);
             $img = $imgs[0];  
             $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
