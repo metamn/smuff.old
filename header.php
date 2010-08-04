@@ -3,8 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<title>
-		  <?php bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>		  
+		<title>		  		  
+		  <?php wp_title(' pe ', true, 'right'); bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>
+		</title> 
 		</title>
 		
 		

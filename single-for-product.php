@@ -48,6 +48,7 @@
       </div>
       <div id="post-operations" class="box">         
          <?php edit_post_link('Modificare articol', '<span class="ui-icon ui-icon-document"/></span>', '<hr/>'); ?>
+         <?php include "share-facebook.php" ?>
          <?php include "share-twitter.php" ?>
       </div>
     </div>
