@@ -30,24 +30,18 @@ get_header();
             
             <input type="hidden" name="is-search" value="1" />
             
-            <dt><label for="price">Cu ce ocazie?</label></dt>
-            <dd><?php echo create_radio_button_for_category(13, "ocasion")?></dd>
-            
-            <dt><label for="price">Pentru cine?</label></dt>
-            <dd><?php echo create_radio_button_for_category(12, "person")?></dd>
-            
-            <dt><label for="price">Unde il folositi?</label></dt>
-            <dd><?php echo create_radio_button_for_category(11, "environment")?></dd>
+            <?php 
+              $cats = array(670, 686, 704, 726);
+              foreach ($cats as $cat) { 
+                $c = get_category($cat);
+                ?>
+                <dt><label for="price"><?php echo $c->name ?></label></dt>
+                <dd><?php echo create_radio_button_for_category($c->cat_ID, $cat->slug) ?></dd>   
+            <?php } ?>
           
             <dt><label for="term">Categorii generale:</label></dt>
             <dd><?php echo create_check_box_for_category(10, "category[]")?></dd>
-            
-            <dt><label for="term">Categorii speciale:</label></dt>
-            <dd><?php echo create_check_box_for_category(3, "category-specials[]")?></dd>
-            
-            <dt><label for="term">Cautare dupa branduri:</label></dt>
-            <dd><?php echo create_check_box_for_category(4, "category-brand[]")?></dd>
-            
+                        
             <dt><label for="term">Produse promotionale si poplurae</label></dt>
             <dd><?php echo create_check_box_for_category(8, "category-promo[]")?></dd>
           </dl>

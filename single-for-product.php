@@ -36,7 +36,7 @@
       <?php } ?>
     </div>
     
-    <div class="column span-6 last">
+    <div id="post-meta" class="column span-6 last">
       <div id="post-shopping" class="box">
         <?php //include "shop-form.php" ?>
         <?php 

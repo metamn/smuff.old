@@ -2,7 +2,7 @@
 
   
   <div id="col-1" class="column span-9 last">
-    <h4>Prietenii nostrii de pe <a href="http://twitter.com/smuff_ro" title="Smuff pe Twitter">Twitter</a></h4>
+    <h4>Prietenii nostrii pe <a href="http://www.twitter.com/smuff_ro"><img src="http://twitter-badges.s3.amazonaws.com/twitter-b.png" alt="Smuff pe Twitter"/></a></h4>
     <?php
       $args = array(); 
       echo pmcWidgetDisplay($args); 
