@@ -97,6 +97,15 @@ function get_user_posts($user) {
   return bloginfo('home') . '/author/' . $user_name;
 }
 
+// Returns the name of the author identified by the $id
+// - used in blog intro
+function get_author_login_name($id) {
+  if ($id) {
+    global $wpdb;
+    $user_login = $wpdb->get_var("SELECT `user_login` FROM `".$wpdb->prefix."users` WHERE `id`=".$id." LIMIT 1");
+    return $user_login;
+  } 
+}
 
 // Getting the categories where a post belongs in a new fashion
 // - some parent categories are removed:

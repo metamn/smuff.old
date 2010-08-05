@@ -8,8 +8,8 @@ get_header();
 ?>
 	<div id="blog" class="block">	  
     <div class="block">
-      <div class="column span-18">&nbsp;
-        something here is a must !!!!
+      <div id="blog-intro" class="column span-18">&nbsp;
+        <?php include "blog-intro.php" ?>
       </div>
       <div class="column span-6 last">
         <?php include "home-menu.php" ?>

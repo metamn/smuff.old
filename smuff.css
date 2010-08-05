@@ -25,8 +25,11 @@ a, a:visited {
 }
 
 
-body {
+body.blog, body.tag, body.author {
   background: #e6e2d9 url(img/v1.png) no-repeat top center;
+}
+body {
+  background: #e6e2d9;
 }
 .container {
   margin: 0 auto;
@@ -493,6 +496,8 @@ div.hot-slider-thumb-menu-wrapper {
 .product-thumb img {
   width: 150px;
   height: 150px;
+  border: 1px solid #ccc;
+  padding: .2em;
 }
 .product-thumb-highlighted {
   background: #dfdbd0;
@@ -807,6 +812,32 @@ li.comment ul.children {
 
 
 
+
+/* Blog intro
+*/
+#blog-intro .entry_author_image img {
+  width: 129px;
+  height: 132px;
+}
+#blog-intro .avatar {
+  position: relative;
+  width: 130px;
+}
+#blog-intro #image-1 {
+  top: -1px;
+  left: 3em;
+}
+#blog-intro #image-2 {
+  top: -1em;
+  left: 13.3em;
+}
+#blog-intro #image-3 {
+  top: -6em;
+  left: 1em;
+}
+
+
+
 /* Blog index
 */
 
@@ -993,6 +1024,10 @@ li.comment ul.children {
 #post-sidebar #author {
   margin-left: 1.5em;
 }
+#post-sidebar #author .entry_author_image img {
+  width: 96px;
+  height: 96px;
+}
 #post-sidebar #author p {
   margin: 0;
 }
@@ -1077,6 +1112,7 @@ li.comment ul.children {
   margin: 0;
   border-top: 1px solid #ccc;
 }
+
 
 
 

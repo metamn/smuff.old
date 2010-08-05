@@ -9,10 +9,13 @@
 <div id="author">
   <?php 
     $author = get_the_author(); 
-    $gravatar = get_avatar(get_the_author_meta('user_email'), '64','');
+    //$gravatar = get_avatar(get_the_author_meta('user_email'), '64','');
   ?>
-  <p>Articol creat de <?php echo $author ?></p>
+  <p>
+    <a href="<?php echo get_user_posts($author) ?>" title="Articol creat de <?php echo $author ?>">Articol creat de <?php echo $author ?></a>
+  </p>
   <a href="<?php echo get_user_posts($author) ?>" title="Articol creat de <?php echo $author ?>">
-    <?php echo $gravatar ?></a>
+    <?php the_author_image(); ?>  
+  </a>
 </div>
   
