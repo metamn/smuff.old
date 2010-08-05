@@ -76,12 +76,12 @@ div.hot-slider-thumb-menu {
 }	
 		
 /* numeric controls */	
-ol {
+.slider ol {
 	margin:1em 0;
 	padding:0;
 	height:28px;	
 }
-ol li{
+.slider ol li{
 	margin:0 10px 0 0; 
 	padding:0;
 	float:left;
@@ -89,7 +89,7 @@ ol li{
 	height:28px;
 	line-height:28px;
 }
-ol li a{
+.slider ol li a{
 	float:left;
 	height:28px;
 	line-height:28px;
@@ -99,10 +99,10 @@ ol li a{
 	padding:0 10px;
 	text-decoration:none;
 }
-ol li.current a{
+.slider ol li.current a{
 	background:#5DC9E1;
 	color:#fff;
 }
-ol li a:focus, .prevBtn a:focus, .nextBtn a:focus{outline:none;}
+.slider ol li a:focus, .prevBtn a:focus, .nextBtn a:focus{outline:none;}
 
 

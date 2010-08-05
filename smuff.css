@@ -574,11 +574,18 @@ div.thanks-error {
   margin: 2em 0;
 }
 
+#single #post-operations {
+  padding: .5em !important;
+  padding-bottom: 2.5em !important;
+}
 #single ul.inline-list {
   margin: 0;
 }
 #single .facebook-like {
   position: absolute;
+}
+#single #fb_share_1 {
+  margin-left: 4px !important;
 }
 
 #post-operations img {
@@ -623,7 +630,7 @@ h4.comments {
 li.comment {
   margin-bottom: 2em;
 }
-li.comment br {
+li.comment br, li.pingback br {
   margin: 0 !important;
 }
 .comment-body {

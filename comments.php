@@ -26,7 +26,13 @@
 	</div>
 
 	<ol class="commentlist">
-	<?php wp_list_comments('callback=styled_comments'); ?>
+	<?php wp_list_comments('type=comment&callback=styled_comments'); ?>
+	<!-- styled in functions.php -->
+	</ol>
+	
+	<h4 class="comments">Alte reactii la acest articol</h4>
+	<ol class="pinglist">
+	<?php wp_list_comments('type=pings'); ?>
 	<!-- styled in functions.php -->
 	</ol>
 

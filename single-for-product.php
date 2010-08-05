@@ -63,7 +63,7 @@
         
       <h3>Comentarii</h3>
       <div class="pane">
-        <?php comments_template(); ?>
+        <?php comments_template('', true); ?>
       </div>
       
       <h3>Informatii technice despre acest articol</h3>
