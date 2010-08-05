@@ -574,7 +574,12 @@ div.thanks-error {
   margin: 2em 0;
 }
 
-
+#single ul.inline-list {
+  margin: 0;
+}
+#single .facebook-like {
+  position: absolute;
+}
 
 #post-operations img {
   border: none;
@@ -924,6 +929,7 @@ li.comment ul.children {
 }
 .post .meta-and-share {
   border-top: 1px solid #cac1b2;  
+  height: 7em;
 }
 .post .meta ul.inline-list {
   margin: 0 0 0 1em !important;
@@ -931,11 +937,17 @@ li.comment ul.children {
 .post .ui-icon {
   display: inline-block;
 }
-.post .meta-and-share .facebook {
-  margin-top: 1.2em;  
+.post .meta-and-share .facebook-like {  
+  position: absolute;  
 }
-.post .meta-and-share .twitter {
+.post .meta-and-share .facebook-like .connect_widget_comment_box input .connect_widget_comment_area input.inputtext {
+  width: 200px !important;  
+}
+.post .meta-and-share .twitter, .post .meta-and-share .facebook {
   margin-top: .2em;  
+}
+.post .meta-and-share .twitter {  
+  margin-left: 20em;
 }
 .tweetmeme_button {
   float: right;
