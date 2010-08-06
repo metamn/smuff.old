@@ -1052,7 +1052,7 @@ body.blog {
 #post-sidebar ul.taxonomy li {
   margin-bottom: .6em;
 }
-#post-sidebar ul.taxonomy li a {
+#post-sidebar ul.taxonomy li a, #post-sidebar ul.taxonomy li p {
   padding: .5em 1em;
 }
 #post-sidebar ul.taxonomy li a.main {
@@ -1064,11 +1064,13 @@ body.blog {
   margin-left: 2em;
 }
 #post-sidebar #author {
-  margin-left: 1.5em;
+  margin-left: 1em;
+  margin-top: 1em;
 }
 #post-sidebar #author .entry_author_image img {
   width: 96px;
   height: 96px;
+  margin-left: 1em;
 }
 #post-sidebar #author p {
   margin: 0;

@@ -146,7 +146,7 @@ function get_author_login_name($id) {
 //   :: alte-categorii-de-produse, distribuim-online, meta, post, produse, produse-folosite-in, produse-pentru, ocazii
 // - used in blog index
 function get_post_categories_array($post) {
-  $parent_categories = array(3, 4, 8, 9, 10, 11, 12, 13);
+  $parent_categories = array(704, 8, 670, 686, 9, 726, 10);  
   $ret = array();
   $cats = get_the_category($post->ID);
   foreach ($cats as $cat) {
@@ -154,6 +154,56 @@ function get_post_categories_array($post) {
       $ret[] = $cat;
     }
   }
+  return $ret;
+}
+
+
+// Displaying post categories highlighting major categories
+// - the parent is given for the most important category
+// - major categories will go first 
+// - used in blog index
+// - returns list items
+function display_post_categories($post_categories, $parent_id) {
+  $ret = "";
+  $cats = get_categories('child_of='.$parent_id);
+  $first_cat_ID = 0;
+  
+  // Getting the first category
+  if ($cats) {
+    $ids1 = array();
+    foreach ($cats as $c1) {
+      $ids1[] = $c1->cat_ID;
+    }
+    $ids2 = array();
+    foreach ($post_categories as $c2) {
+      $ids2[] = $c2->cat_ID;
+    }
+    $main = array_intersect($ids1, $ids2);
+    foreach ($main as $m) {
+      $cat = get_category($m);
+      $first_cat_ID = $cat->cat_ID;
+      $name = $cat->cat_name;
+      $ret = '<li><a href="' . get_category_link($cat);
+      $ret .='" title="Toate articolele din ' . $name . '" class="category main ' . $cat->category_nicename . '">' . $name . '</a></li>';
+      break;
+    }     
+  }
+  
+  // Getting the other categories
+  $i = 0;
+  foreach ($post_categories as $c) {
+    if (!($c->cat_ID == $first_cat_ID)) {
+      $name = $c->cat_name;
+      $ret .= '<li><a href="' . get_category_link($c);
+      $ret .='" title="Toate articolele din ' . $name . '" class="category ' . $c->category_nicename . '">' . $name . '</a></li>';
+    }
+    $i += 1;
+    if ($i == 5) {
+      $ret .= '<li><p> ... </p></li>';
+      break;
+    }
+  }
+  
   return $ret;
 }
 
@@ -209,48 +259,6 @@ function get_sponsor_category2($main_category) {
   return get_category_by_slug($suffix);
 }
 
-// Displaying post categories highlighting major categories
-// - the parent is given for the most important category
-// - major categories will go first 
-// - used in blog index
-// - returns list items
-function display_post_categories($post_categories, $parent_id) {
-  $ret = "";
-  $cats = get_categories('child_of='.$parent_id);
-  $first_cat_ID = 0;
-  
-  // Getting the first category
-  if ($cats) {
-    $ids1 = array();
-    foreach ($cats as $c1) {
-      $ids1[] = $c1->cat_ID;
-    }
-    $ids2 = array();
-    foreach ($post_categories as $c2) {
-      $ids2[] = $c2->cat_ID;
-    }
-    $main = array_intersect($ids1, $ids2);
-    foreach ($main as $m) {
-      $cat = get_category($m);
-      $first_cat_ID = $cat->cat_ID;
-      $name = $cat->cat_name;
-      $ret = '<li><a href="' . get_category_link($cat);
-      $ret .='" title="Toate articolele din ' . $name . '" class="category main ' . $cat->category_nicename . '">' . $name . '</a></li>';
-      break;
-    }     
-  }
-  
-  // Getting the other categories
-  foreach ($post_categories as $c) {
-    if (!($c->cat_ID == $first_cat_ID)) {
-      $name = $c->cat_name;
-      $ret .= '<li><a href="' . get_category_link($c);
-      $ret .='" title="Toate articolele din ' . $name . '" class="category ' . $c->category_nicename . '">' . $name . '</a></li>';
-    }
-  }
-  
-  return $ret;
-}
 
 
 // Getting the category id if there is any

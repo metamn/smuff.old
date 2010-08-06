@@ -14,8 +14,10 @@
   <p>
     <a href="<?php echo get_user_posts($author) ?>" title="Articol creat de <?php echo $author ?>">Articol creat de <?php echo $author ?></a>
   </p>
+  
   <a href="<?php echo get_user_posts($author) ?>" title="Articol creat de <?php echo $author ?>">
     <?php the_author_image(); ?>  
   </a>
+  
 </div>
   
