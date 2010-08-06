@@ -1,5 +1,10 @@
 <div id="archive-blog" class="block">  
   <div id="content" class="column span-18 content">
+    
+    <div id="blog-intro" class="block">
+      <?php include "blog-intro.php" ?>
+    </div>
+  
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post();  ?>
         <div <?php post_class() ?> id="post-<?php the_ID(); ?>">

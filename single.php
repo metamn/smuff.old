@@ -9,6 +9,11 @@ get_header();
 
 	<div id="single" class="block">
 	  <div id="content" class="column span-18">
+	    <?php if (is_blog()) { ?>
+	      <div id="blog-intro" class="block">
+          <?php include "blog-intro.php" ?>
+        </div>
+	    <?php } ?>
       <div id="post" class="block">
 	      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 	      
@@ -28,7 +33,13 @@ get_header();
       </div>
 	  </div>
 	
-	  <?php get_sidebar(); ?>
+	  <?php 
+	    if (in_category(10)) {
+	      get_sidebar(); 
+	    } else {
+	      include "sidebar-blog.php";
+	    }
+	  ?>
 	    
   </div>	
   
