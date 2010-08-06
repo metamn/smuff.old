@@ -813,17 +813,11 @@ li.comment ul.children {
 
 /* Blog intro
 */
+
 body.blog {
   background: #e6e2d9 url(img/v2.jpg) no-repeat top center;
 }
-
-body.archive #author #content {
-  margin-top: 35em;
-  background: #DFDBD0;
-}
-
-
-#blog-intro .entry_author_image img {
+#blog-intro .entry_author_image img, #author #gravatar .entry_author_image img {
   width: 129px;
   height: 132px;
 }
@@ -837,13 +831,42 @@ body.archive #author #content {
 }
 #blog-intro #image-2 {
   top: 1em;
-  left: 13.6em;
-  z-index: -1;
+  left: 13.6em;  
 }
 #blog-intro #image-3 {
   top: -6em;
   left: .5em;
 }
+
+/* Authors
+*/
+
+#author #content {
+  margin-top: 1.5em;
+}
+#author #info, #author .item {
+  background: #DFDBD0;
+  padding: 2em 0;
+}
+#author .user-info {
+  border-top: 1px solid #ccc;
+  padding: 1em 0;
+}
+#author h2 {
+  margin-top: 2em;
+}
+#author .item {
+  margin-bottom: 5em;
+}
+#author #image img {
+  width: 130px;
+  height: auto;  
+}
+#author ul {
+  margin: 0;
+  border-top: 1px solid #ccc;
+}
+
 
 
 
@@ -1099,28 +1122,6 @@ body.archive #author #content {
 }
 
 
-/* Authors
-*/
-
-#author .user-info {
-  border-top: 1px solid #ccc;
-  padding: 1em 0;
-}
-#author h2 {
-  margin-top: 2em;
-}
-#author .item {
-  margin-bottom: 2em;
-}
-#author #image img {
-  width: 130px;
-  height: auto;
-  border: 1px solid #cac1b2;
-}
-#author ul {
-  margin: 0;
-  border-top: 1px solid #ccc;
-}
 
 
 

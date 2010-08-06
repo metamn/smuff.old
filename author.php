@@ -5,13 +5,16 @@
 	get_header();
 ?>
 
-<div id="author" class="block">  
+<div id="author" class="block">   
   
-  <div id="content" class="column span-18 content">
+  <div id="content" class="column span-18 content">    
+    <div id="blog-intro" class="block">
+      <?php include "blog-intro.php" ?>
+    </div>
     
     <div id="info" class="block">
       <div id="gravatar" class="column span-4 last">      
-        <?php echo get_avatar( $curauth->user_email, '80' ); ?>
+         <?php the_author_image(); ?>
       </div>
       <div id="bio" class="column span-14 last">
         <?php echo $curauth->user_description; ?>        
