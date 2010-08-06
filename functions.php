@@ -1,6 +1,8 @@
 <?php
 
 
+
+
 // making the shopping cart dynamic when using the WP SuperCache plugin
 function dynamic_shopping_cart() {
   echo nzshpcrt_shopping_basket();
@@ -66,10 +68,37 @@ function page_excerpt($page) {
     return $p->post_excerpt;
 }
 
+
+function is_blog() {
+  $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
+  return (is_home() || is_author() || in_category($non_shop_categories) || is_category($non_shop_categories));
+}
+
 // Checking if the request is for the shop or the blog
 // - used to display different layouts for the shop and the blog
-function is_blog() {
-  return is_home();
+function is_blog2() {
+  $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
+  
+  $ret = false;
+  if (is_category()) {
+    $category_id =  get_query_var('cat');
+    if (in_array($category_id, $non_shop_categories)) {
+      $ret = true;
+    } 
+  } else if (is_single()) {
+      $post_categories = get_the_category();
+      foreach ($post_categories as $pc) {
+        if (in_array($pc->cat_ID, $non_shop_categories)) {
+          $ret = true;
+        }	        
+        
+      }	     
+  } else if (is_home() || is_author()) {
+    $ret = true;  
+  } else {
+    $ret = false;
+  }
+  return $ret;
 }
 
 // Query for multiple posts

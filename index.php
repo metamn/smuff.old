@@ -11,7 +11,7 @@ get_header();
       <div id="blog-intro" class="column span-18">&nbsp;
         <?php include "blog-intro.php" ?>
       </div>
-      <div class="column span-6 last">
+      <div class="column span-6 last opacity">
         <?php include "home-menu.php" ?>
       </div>
     </div>	

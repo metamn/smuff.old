@@ -20,7 +20,11 @@
       include "archive-all-grid.php";
       break;
     default:
-      include "archive-blog.php";  
+      if (is_blog()) {
+        include "archive-blog.php";
+      } else {
+        include "archive-shop.php";  
+      }      
   }
 ?>
 

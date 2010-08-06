@@ -45,7 +45,23 @@
 		<?php wp_head(); ?>
 
 	</head>
-	<body <?php body_class(); ?>>			  	
+	
+	<?php
+      $is_blog = is_blog(); 
+      if ($is_blog) {
+        $shop = '';
+        $blog = 'active';
+        $opacity = 'opacity';
+        $klass = 'blog';
+      } else {
+        $shop = 'active';
+        $blog = '';
+        $opacity = '';
+        $klass = '';
+	 } ?>
+	
+	<body class="<?php echo $klass ?>">			  	
+	  
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <div class="block">	      
@@ -55,14 +71,7 @@
 	          <div id="logo" class="column span-10 last">
 	            <h1>
 	              <a class="tooltip" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
-	              <span class="strapline">
-	                <?php if (is_blog()) {
-	                  $shop = '';
-	                  $blog = 'active';
-	                } else {
-	                  $shop = 'active';
-	                  $blog = '';
-	                }?>
+	              <span class="strapline">	                
 	                <a class="tooltip <?php echo $shop?>" alt="<?php echo page_excerpt('magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Magazinul Smuff">shop</a>
 	                 & 
 	                <a class="tooltip <?php echo $blog ?>" alt="<?php echo page_excerpt('blogul-smuff'); ?>" href="<?php bloginfo('home'); ?>/blog" title="Blogul Smuff">blog</a>
@@ -85,7 +94,7 @@
 			        <h1><?php echo $page_name ?></h1>
 			      </div>
 			    </div>
-			    <?php if (!(is_blog())) { ?>
+			    <?php if (!($is_blog)) { ?>
 			    <div id="menu" class="last">
 			      <ul class="inline-list">
 		          <?php 
@@ -102,7 +111,7 @@
 			    <?php } ?>
 		    </div>		    
 		    
-	      <div id="cart" class="column span-6 last">
+	      <div id="cart" class="column span-6 last <?php echo $opacity ?>">
 	        <!-- for WP-Supercache // see functions.php for the implementation --> 
 	        <!--mfunc dynamic_shopping_cart() -->
 	        <?php dynamic_shopping_cart(); ?>

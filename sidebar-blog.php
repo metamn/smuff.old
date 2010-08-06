@@ -1,4 +1,4 @@
-<div id="sidebar-blog" class="column span-6 last">
+<div id="sidebar-blog" class="column span-6 last opacity">
   <?php include "home-menu.php" ?>
   <div id="sidebar-navigation" class="box last">
     <div class="entry">

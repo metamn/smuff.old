@@ -25,9 +25,7 @@ a, a:visited {
 }
 
 
-body.blog, body.tag, body.author {
-  background: #e6e2d9 url(img/v1.png) no-repeat top center;
-}
+
 body {
   background: #e6e2d9;
 }
@@ -815,6 +813,16 @@ li.comment ul.children {
 
 /* Blog intro
 */
+body.blog {
+  background: #e6e2d9 url(img/v2.jpg) no-repeat top center;
+}
+
+body.archive #author #content {
+  margin-top: 35em;
+  background: #DFDBD0;
+}
+
+
 #blog-intro .entry_author_image img {
   width: 129px;
   height: 132px;
@@ -825,15 +833,16 @@ li.comment ul.children {
 }
 #blog-intro #image-1 {
   top: -1px;
-  left: 3em;
+  left: 2.5em;
 }
 #blog-intro #image-2 {
-  top: -1em;
-  left: 13.3em;
+  top: 1em;
+  left: 13.6em;
+  z-index: -1;
 }
 #blog-intro #image-3 {
   top: -6em;
-  left: 1em;
+  left: .5em;
 }
 
 
@@ -1316,5 +1325,8 @@ ul.inline-list li {
 
 .opacity-3 {
   opacity: .3;
+}
+.opacity {
+  opacity: .8;
 }
 

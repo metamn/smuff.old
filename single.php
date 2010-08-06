@@ -13,6 +13,7 @@ get_header();
 	      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 	      
 	        <?php 
+	          echo "product > " . in_category(10);
 	          if (in_category(10)) {
 	            include "single-for-product.php";
 	          } else {
