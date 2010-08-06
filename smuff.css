@@ -1144,6 +1144,9 @@ body.blog {
   padding: 1em;
 }
 
+#archives #accordion .pane {
+  display: none;
+}
 
 .postmetadata {
   border-top: 1px solid #DFDBD0;
