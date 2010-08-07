@@ -12,9 +12,11 @@
 		<td class='firstcol'></td>
 		<td><?php echo __('Produs'); ?></td>
 		<td><?php echo __('Cantitate'); ?></td>
+		<!--
 		<?php if(wpsc_uses_shipping()): ?>
 			<td><?php echo __('Livrare'); ?></td>
 		<?php endif; ?>
+		-->
 		<td>Pret</td>
 		<td></td>
 	</tr>
@@ -44,9 +46,11 @@
 					<input type="submit" value="<?php echo __('Actualizare', 'wpsc'); ?>" name="submit" />
 				</form>
 			</td>
+			<!-->
 			<?php if(wpsc_uses_shipping()): ?>
 			<td><span class="pricedisplay" id='shipping_<?php echo wpsc_the_cart_item_key(); ?>'><?php echo wpsc_cart_item_shipping(); ?></span></td>
 			<?php endif; ?>
+			-->
 			<td><span class="pricedisplay"><?php echo wpsc_cart_item_price(); ?></span></td>
 			
 			<td>
@@ -102,45 +106,13 @@
 	<?php do_action('wpsc_before_shipping_of_shopping_cart'); ?>
 	<div id='wpsc_shopping_cart_container'>
 	<?php if(wpsc_uses_shipping()) : ?>
-		<h2><?php echo __('Calculate Shipping Price', 'wpsc'); ?></h2>
+		
 		<table class="productcart">
-			<tr>
-				<td colspan='5'>
-					<?php echo __('Please choose a country below to calculate your shipping costs', 'wpsc'); ?>
-				</td>
-			</tr>
-
-			<?php if (!wpsc_have_shipping_quote()) : // No valid shipping quotes ?>
-				<?php if (($_SESSION['wpsc_zipcode'] == '') || ($_SESSION['wpsc_zipcode'] == 'Your Zipcode')) : // No valid shipping quotes ?>
-					<?php if ($_SESSION['wpsc_update_location'] == true) :?>
-						<tr>
-							<td colspan='5' class='shipping_error' >
-								<?php echo __('Please provide a Zipcode and click Calculate in order to continue.', 'wpsc'); ?>
-							</td>
-						</tr>
-					<?php endif; ?>
-				<?php else: ?>
-					<tr>
-						<td colspan='5' class='shipping_error' >
-							<?php echo __('Sorry, online ordering is unavailable to this destination and/or weight. Please double check your destination details.', 'wpsc'); ?>
-						</td>
-					</tr>
-				<?php endif; ?>
-			<?php endif; ?>
-			<tr>
-				<td colspan='5'>
-					<form name='change_country' id='change_country' action='' method='post'>
-						<?php echo wpsc_shipping_country_list();?>
-						<input type='hidden' name='wpsc_update_location' value='true' />
-						<input type='submit' name='wpsc_submit_zipcode' value='Calculate' />
-					</form>
-				</td>
-			</tr>
-			
+						
 			<?php if (wpsc_have_morethanone_shipping_quote()) :?>
 				<?php while (wpsc_have_shipping_methods()) : wpsc_the_shipping_method(); ?>
 						<?php 	if (!wpsc_have_shipping_quotes()) { continue; } // Don't display shipping method if it doesn't have at least one quote ?>
-						<tr><td class='shipping_header' colspan='5'><?php echo wpsc_shipping_method_name().__('- Choose a Shipping Rate', 'wpsc'); ?> </td></tr>
+						<tr><td class='shipping_header' colspan='5'><h3>Metoda de livrare</h3></td></tr>
 						<?php while (wpsc_have_shipping_quotes()) : wpsc_the_shipping_quote();	?>
 							<tr>
 								<td colspan='3'>
@@ -186,6 +158,7 @@
 		</tr>
 	<?php endif; ?>
 	
+	<!--
 	<?php if(wpsc_uses_shipping()) : ?>
 		<tr class="total_price total_shipping">
 			<td colspan="3">
@@ -196,7 +169,8 @@
 				</td>
 		</tr>
 	<?php endif; ?>
-
+  -->
+  
 	  <?php if(wpsc_uses_coupons() && (wpsc_coupon_amount(false) > 0)): ?>
 	<tr class="total_price">
 		<td colspan="3">
@@ -210,12 +184,12 @@
 
 		
 	
-	<tr class='total_price'>
-		<td colspan='3'>
-		Total
+	<tr class='total_price full_total'>
+		<td colspan='4'>
+		<h4>Total</h4>
 		</td>
-		<td colspan='2'>
-			<span id='checkout_total' class="pricedisplay checkout-total"><?php echo wpsc_cart_total(); ?></span>
+		<td colspan='1'>
+			<h4><span id='checkout_total' class="pricedisplay checkout-total"><?php echo wpsc_cart_total(); ?></span></h4>
 		</td>
 	</tr>
 	

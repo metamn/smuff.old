@@ -182,7 +182,15 @@ table.productcart tr.firstrow td {
   border-left: 1px dotted #111111 !important;
   font-weight: bold;
 }
-
+tr.full_total span.checkout-total {
+  margin-left: 31em;
+}
+.user-profile-links, .shop-user-info a, .shop-user-info a:visited {
+  font-size: larger;
+}
+.user-profile-links a, .shop-user-info a {
+  text-decoration: underline;
+}
 
 
 
