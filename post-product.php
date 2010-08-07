@@ -11,7 +11,7 @@
 
 <div id="post-<?php the_ID(); ?>" class="post block default">
   <div id="post-body" class="column span-18">
-    <div class="column span-18">
+    <div class="block">
       <div id="post-title" class="column span-14 last">
         <h1>
           <a href="<?php the_permalink() ?>" rel="bookmark" title="Link pentru <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>      
@@ -47,8 +47,10 @@
     
     <?php include "post-meta-and-share.php" ?>					      
   </div>  
+  
   <div id="post-sidebar" class="column span-6 last">       
     <?php include "post-taxonomy.php" ?>
     <?php include "post-sponsor.php" ?>			          
   </div>
+
 </div>				     

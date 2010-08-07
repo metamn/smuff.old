@@ -41,9 +41,10 @@ body {
 
 #tooltips {
   margin: 0;  
-  padding: .5em;
+  padding: .2em;
   position: absolute;
   width: 700px;
+  font-size: 90%;
 }
 .tooltips-highlighted {
   background: #DFDBD0;  
@@ -57,7 +58,7 @@ body {
   font-weight: bold;
   font-size: 5.5em;
   letter-spacing: -4px;
-  margin: 1em 0 .2em 0;
+  margin: .7em 0 .2em 0;
 }
 .strapline{  
   color: #f25e18;
@@ -79,7 +80,7 @@ body {
 
 
 #main-name {
-  margin-top: 7.5em;
+  margin-top: 6em;
   width: 320px;
 }
 #main-name h1{  
@@ -133,7 +134,7 @@ input.search {
 #cart {
   background: #111;
   margin: 0;
-  height: 16.6em;
+  height: 15em;
 }
 div#widgetshoppingcart {
   padding: 1.5em;
@@ -1230,6 +1231,9 @@ body.blog {
 }
 #company h3 {
   cursor: pointer;
+}
+#footer-info #contact ul, #footer-info #company ul {
+  list-style-type: none;
 }
 
 

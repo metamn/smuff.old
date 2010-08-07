@@ -3,7 +3,7 @@
   <div class="column span-10">
     <div id="contact">
       <?php 
-        $p = get_page_by_path('contact');
+        $p = get_page_by_path('despre-noi/contact');
         if ($p) { ?>
           <h3><?php echo $p->post_title; ?></h3>
           <p><?php echo $p->post_content; ?></p>
@@ -12,7 +12,7 @@
     
     <div id="company">
       <?php 
-        $p = get_page_by_path('date-firma');
+        $p = get_page_by_path('despre-noi/date-firma');
         if ($p) { ?>
           <?php echo $p->post_content; ?>
         <?php } ?>
@@ -22,7 +22,7 @@
   <div class="column span-12 prepend-2 last">
     <div id="accordion-footer-info" class="accordion">
       <?php 
-        $pages = array('cum-cumpar', 'business-2-business', 'afiliere', 'ajutor', 'protectia-consumatorilor', 'despre-noi');
+        $pages = array('despre-noi/cum-cumpar', 'despre-noi/business-2-business', 'despre-noi/afiliere', 'despre-noi/ajutor', 'despre-noi/protectia-consumatorilor', 'despre-noi');
         foreach ($pages as $page) {
           $p = get_page_by_path($page);
           if ($p) { ?>
