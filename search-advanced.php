@@ -22,7 +22,7 @@ get_header();
       <form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">         
         <div id="left" class="column span-8 append-1 last">
           <dl>
-            <dt><label for="term">Expresia cautata:</label></dt>
+            <dt><label for="term">Expresia cautata: (optional)</label></dt>
             <dd><input type="text" value=" " name="s" id="s" /></dd>
             
             <dt><label for="price">Cautare dupa pret:</label></dt>
@@ -36,13 +36,10 @@ get_header();
                 $c = get_category($cat);
                 ?>
                 <dt><label for="price"><?php echo $c->name ?></label></dt>
-                <dd><?php echo create_radio_button_for_category($c->cat_ID, $cat->slug) ?></dd>   
+                <dd><?php echo create_check_box_for_category($c->cat_ID, $cat->slug) ?></dd>   
             <?php } ?>
-          
-            <dt><label for="term">Categorii generale:</label></dt>
-            <dd><?php echo create_check_box_for_category(10, "category[]")?></dd>
-                        
-            <dt><label for="term">Produse promotionale si poplurae</label></dt>
+                                  
+            <dt><label for="term">Produse promotionale si populare</label></dt>
             <dd><?php echo create_check_box_for_category(8, "category-promo[]")?></dd>
           </dl>
           <input type="submit" id="searchsubmit" value="Cautare" />

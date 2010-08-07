@@ -636,8 +636,8 @@ div.thanks-error {
 }
 #recommended .item {
   width: 25%;
-  height: 280px;
-  padding: 0 2em;
+  height: 28em;
+  padding: 0 2.4em;
   margin-bottom: 2em;
   float: left;
 }
@@ -694,9 +694,12 @@ li.comment ul.children {
 #advanced-search #right {
 
 }
-#advanced-search #searchsubmit {
+#advanced-search #content #searchsubmit {
   padding: 1.5em;
   margin: 1em;
+}
+#advanced-search #content #searchform input {
+width:96%;
 }
 
 #search-results-header {

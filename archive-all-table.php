@@ -2,14 +2,17 @@
 // get all posts, not just 10/page
   $cat = category_id(true, false);    
   $all_posts = query_posts2('posts_per_page=-1&cat='.$cat);  
-  
+  $cat_name = '';
+  if (!($cat == 10)) {
+    $cat_name = ' din '. get_cat_name($cat);
+  } 
 ?>
 
 <div id="archive-all" class="block">  
   <div id="content" class="column span-18 content">
     <div id='title' class='block'>
       <div id="left" class="column span-14 last">
-        <h2>Toate produsele</h2>
+        <h2>Toate produsele<?php echo $cat_name; ?></h2>
       </div>
       <div id="right" class="column span-4 last">
         <?php 
