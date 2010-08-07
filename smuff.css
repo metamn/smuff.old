@@ -70,12 +70,12 @@ body {
 .strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {
   color: #f25e18;
   padding: .1em;
+  -moz-border-radius: 10%;  
+  -webkit-border-radius: 10%;
 }
 .strapline a:hover, .strapline a.active {
   color: #DFDBD0;
-  background: #f25e18;
-  -moz-border-radius: 10%;  
-  -webkit-border-radius: 10%;
+  background: #f25e18;  
 }
 
 
@@ -158,7 +158,7 @@ div#widgetshoppingcart {
   margin: 0 .5em 0 1.5em !important;
 }
 #cart li {
-  font-size: 90%;
+  font-size: 100%;
 }
 #cart p {
   margin: 0 0 1em;
@@ -376,10 +376,10 @@ div.hot-slider-thumb-menu-wrapper {
 }
 #promo .scrollable {
   width: 550px;
-  height: 35em;
+  height: 30em;
 }
 #promo .scrollable .item {
-  height: 280px;
+  height: 28em;
   padding: 0 2em;
   width: 150px;
 }

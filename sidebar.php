@@ -1,5 +1,5 @@
 <?php 
-  $news_posts = query_posts2('posts_per_page=3&cat=22');        
+  $news_posts = query_posts2('posts_per_page=5&cat=22');        
 ?>
 
 <div id="sidebar" class="column span-6 last">
