@@ -9,9 +9,11 @@
       <?php 
         the_content('Detalii &rarr;');        
       ?>
-    </div> 					      
-    
-    <?php include "post-meta-and-share.php" ?>
+    </div> 					         
+  </div>
+  
+  <div class="column span-18">      
+    <?php include "post-meta-and-share.php" ?>					      
   </div>
   
   <div id="post-sidebar" class="column span-6 last">       

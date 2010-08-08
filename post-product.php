@@ -28,29 +28,31 @@
           </div>
         <?php } ?>
         </p>
-      </div>
+    </div>
+  </div>
+    
+  <div id="post-data" class="column span-18">      
+    <div id="post-image">				            
+      <a href="<?php the_permalink() ?>" rel="bookmark" title="Link pentru <?php the_title_attribute(); ?>">
+      <img src="<?php echo $medium[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" /></a>
     </div>
     
-    <div id="post-data" class="entry block">      
-      <div id="post-image">				            
-        <a href="<?php the_permalink() ?>" rel="bookmark" title="Link pentru <?php the_title_attribute(); ?>">
-        <img src="<?php echo $medium[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" /></a>
-      </div>
-      
-      <div id="post-excerpt">
-        <?php echo product_excerpt($post->post_content); ?>
-        <p>
-          <a href="<?php the_permalink() ?>#more-<?php echo $post->ID ?>">Detalii &rarr;</a>
-        </p>
-      </div>                                    
-    </div> 
-    
-    <?php include "post-meta-and-share.php" ?>					      
-  </div>  
+    <div id="post-excerpt">
+      <?php echo product_excerpt($post->post_content); ?>
+      <p>
+        <a href="<?php the_permalink() ?>#more-<?php echo $post->ID ?>">Detalii &rarr;</a>
+      </p>
+    </div>                                    
+  </div> 
   
-  <div id="post-sidebar" class="column span-6 last">       
-    <?php include "post-taxonomy.php" ?>
-    <?php include "post-sponsor.php" ?>			          
+  <div class="column span-18">      
+    <?php include "post-meta-and-share.php" ?>					      
   </div>
+</div>  
+  
+<div id="post-sidebar" class="column span-6 last">       
+  <?php include "post-taxonomy.php" ?>
+  <?php include "post-sponsor.php" ?>			          
+</div>
 
 </div>				     

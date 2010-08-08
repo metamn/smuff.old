@@ -4,10 +4,8 @@
     <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
     <?php comments_template(); ?>              
   </div>
-  <div class="share span-2 last">
-    <?php include "share-twitter.php" ?>
-    <br/>
-    <?php if (function_exists('fbshare_manual')) echo fbshare_manual(); ?>
+  <div class="column span-16 last">      
+    <?php include "post-meta-and-share.php" ?>					      
   </div>
 </div>		    
 		  

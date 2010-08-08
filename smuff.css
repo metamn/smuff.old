@@ -523,6 +523,13 @@ div.hot-slider-thumb-menu-wrapper {
 */
 
 body.blog #single #content #post {
+  margin-top: 19em;
+}
+body.blog #archive-blog #blog-intro {
+  margin-bottom: 19em;
+}
+
+body.blog #single #content #post {
   background: #DFDBD0;
   padding: 1em;
 }
