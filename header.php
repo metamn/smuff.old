@@ -12,6 +12,7 @@
     <!-- Blueprint -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/blueprint/print.css" type="text/css" media="print">	
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css" type="text/css" media="screen" />
 		
@@ -66,7 +67,9 @@
 	    
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 
-	        <div id="tooltips" class="block"></div>                
+	        <div id="tooltips" class="block">
+	          Bine ati ajuns la noul Smuff! Lansare oficiala luni, site in constructie.
+	        </div>                
           <div id="headlines" class="block">
 	          <div id="logo" class="column span-10 last">
 	            <h1>

@@ -254,10 +254,11 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
  					
 					if($purchase_log['processed'] < 2) {
 						$payment_instructions = strip_tags(get_option('payment_instructions'));
-						$message = __('Thank you, your purchase is pending, you will be sent an email once the order clears.', 'wpsc') . "\n\r" . $payment_instructions ."\n\r". $message;
-						wp_mail($email, __('Order Pending: Payment Required', 'wpsc'), $message);
+						//$message = $payment_instructions ."\n\r". $message;
+						wp_mail($email, 'Procesul de cumparare', $message);
 					} else {
-						wp_mail($email, __('Purchase Receipt', 'wpsc'), $message);
+					  $message = 'Comanda Dvs. a fost confirmata cu succes. In curand va trimitem produsele comandate impreuna cu un e-mail cu detaliile de livrare' . "\n\r" . "Va reamintim comanda Dvs. initiala a fost:" . "\n\r" . '----' . "\n\r". $message;
+						wp_mail($email, 'Confirmare comanda', $message);
 					}
 				}
 				remove_filter('wp_mail_from_name', 'wpsc_replace_reply_name');
@@ -307,6 +308,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 						$report_user .= "".$userinfo['name'].": ".$userinfo['value']."\n";
 					}elseif(is_numeric($userinfo['value'])){
 							$report_user .= "State: ".wpsc_get_state_by_id($userinfo['value'],'name')."\n";
+
 
 					}
 				}

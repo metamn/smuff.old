@@ -13,7 +13,7 @@
     <li><span class="ui-icon ui-icon-person"/></span>0745-456127</li>
     <li><span class="ui-icon ui-icon-comment"/></span><a href="<?php bloginfo('home'); ?>/blog">Blog</a></li>
     <li><span class="ui-icon ui-icon-heart"/></span><a href="<?php bloginfo('home'); ?>/#home-ecosystem">Prietenii Smuff</a></li>
-    <li class="old-site"><span class="ui-icon ui-icon-play"/></span><a href="<?php bloginfo('home'); ?>/#footer-info">Site-ul vechi</a></li>
+    <li class="old-site"><span class="ui-icon ui-icon-play"/></span><a href="http://v1.smuff.ro">Site-ul vechi</a></li>
     <li class="menu-spacer">&nbsp;</li>
   </ul>  
 </div>
