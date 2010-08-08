@@ -514,6 +514,19 @@ div.hot-slider-thumb-menu-wrapper {
 }
 
 
+/* Page
+*/
+
+#page ul.inline-list {
+  margin: 1em 0;
+}
+#page a {
+  text-decoration: underline;
+}
+#page .entry {
+  margin: 1em 0;
+}
+
 
 /* Single 
 */
