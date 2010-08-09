@@ -59,7 +59,7 @@ $(document).ready(function() {
 
   // Hover on Product thumbs
   // - on Home Promo, Recommended items, All products, Search results ....
-  $("#recommended .item, #promo-scroll .item, #archive-all-grid #item").hover(
+  $("#recommended .item, #promo-scroll .item, #archive-all-grid #item, #search-results #item").hover(
     function () {
       $(this).addClass('product-thumb-highlighted');
     }, 

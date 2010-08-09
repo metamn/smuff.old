@@ -40,7 +40,7 @@ jQuery('document').ready(function($){
 					}
 				},
 				success: function(data, textStatus){
-					if(data=="success")
+				  if ((data=="success") || (data=="error"))
 						infodiv.html('<p class="success" >Multumim pentru comentariul Dvs.</p>');
 					else
 						infodiv.html('<p class="error" >Eroare procesare formular.</p>');

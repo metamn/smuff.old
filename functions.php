@@ -429,6 +429,9 @@ function advanced_search($post, $price, $categories) {
     $ret = true;
   }
   
+  global $wplogger;
+  $wplogger->log( 'Post / cat: '.$post->ID.' / '.$ret );
+  
   // Price checking
   if ($ret) {
     if ($price) {
@@ -440,8 +443,7 @@ function advanced_search($post, $price, $categories) {
         if (!$tmp[1]) {
           $tmp[1] = 10000;
         }
-        $higher = (int)$tmp[1];
-         
+        $higher = (int)$tmp[1];        
         if ($product_price >= $lower && $product_price <= $higher) {
           $ret = true;
         } else {

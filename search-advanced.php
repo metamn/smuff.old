@@ -38,6 +38,9 @@ get_header();
                 <dt><label for="price"><?php echo $c->name ?></label></dt>
                 <dd><?php echo create_check_box_for_category($c->cat_ID, $cat->slug) ?></dd>   
             <?php } ?>
+            
+            <dt><label for="term">Categorii principale</label></dt>
+            <dd><?php echo create_check_box_for_category(10, "category[]")?></dd>
                                   
             <dt><label for="term">Produse promotionale si populare</label></dt>
             <dd><?php echo create_check_box_for_category(8, "category-promo[]")?></dd>

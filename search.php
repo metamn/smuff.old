@@ -36,7 +36,7 @@ get_header(); ?>
   <div id="content" class="column span-18">
     
     <div class="block">    
-      <?php if ($is_search) { ?>
+      
       <div id="search-results-header">
         <h1>Rezultate cautare</h1>
         <table>
@@ -54,28 +54,28 @@ get_header(); ?>
                 }
               } 
             ?>
-          </td></tr>
-          <tr><td>Rezultate gasite:</td><td> <?php echo $wp_query->post_count;; ?></td></tr>
+          </td></tr>          
         </table>
       </div>
-      <?php } ?>
+      
       
       <div id="search-results-items">
-        <?php if (have_posts()) { 
-          $result_counter = 0;
-          while (have_posts()) {
-            the_post();            
-            if (advanced_search($post, $price, $categories)) {
-              include "product-thumb.php";
-              $result_counter = $result_counter + 1;              
-            }
-          }
-          if ($result_counter > 9) {
-            wp_paginate();
-          }
-        } else {
-          echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";
-        } ?>	
+        <?php 
+          $allsearch = &new WP_Query("s=$s&showposts=-1"); 
+          if ($allsearch->have_posts()) { 
+            $counter = 1;
+            while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
+              if (advanced_search($post, $price, $categories)) { 
+                $klass = 'col-' .($counter % 3);
+                $counter += 1; ?>
+                <div id="item" class="column span-6 last <?php echo $klass ?>">
+                  <?php include "product-thumb.php"; ?>                        
+                </div>
+              <?php }
+            endwhile;                     
+          } else {
+            echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";
+          } ?>	
       </div>      
    </div>
   </div>  

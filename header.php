@@ -68,7 +68,9 @@
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 
 	        <div id="tooltips" class="block">
-	          Bine ati ajuns la noul Smuff! Lansare oficiala luni, site in constructie.
+	          <a href="http://smuff.ro/2010/08/05/test-2/">
+	          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
+	          </a>
 	        </div>                
           <div id="headlines" class="block">
 	          <div id="logo" class="column span-10 last">

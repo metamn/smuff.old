@@ -49,6 +49,9 @@ body {
 .tooltips-highlighted {
   background: #DFDBD0;  
 }
+#tooltips a, #tooltips a:visited {
+  background: #FDF3C6;
+}
 
 #headlines {
   margin: 0;
@@ -742,6 +745,17 @@ width:96%;
 #search-results-header table td {
   border-bottom: 1px solid #ddd;  
 }
+#search-results #item {
+  height:30em;
+  margin-bottom:3em;
+}
+#search-results #item.col-2 .item {
+  margin-left: 1.5em;
+}
+#search-results #item.col-0 .item {
+  margin-left: 3em;
+}
+
 
 
 /* All products
