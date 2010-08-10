@@ -31,8 +31,12 @@
 			  $product_price = product_price($post->ID);
 			  ?>
 			  <div class="post shopping">
-			    <?php //include(dirname(__FILE__) . "/../../../../themes/smuff/shop-form.php"); ?>
-			    <?php include "shop-form.php"; ?>
+			    <?php 
+            $product_id = get_post_meta($post->ID, 'product_id', single);
+            if ($product_id) {        
+              echo wpsc_display_products_page('product_id='.$product_id); 
+            }      
+          ?>
 			  </div>
 			<?php } ?>
 

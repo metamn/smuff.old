@@ -177,12 +177,12 @@ div#widgetshoppingcart {
   padding: 1em;
   margin: 2em 0;
 }
-table.productcart {
+.productcart {
   margin-bottom: 3em;
 }
 table.productcart tr.firstrow td {
   background-color: #CAC1B2 !important;
-  border-left: 1px dotted #111111 !important;
+  bortableder-left: 1px dotted #111111 !important;
   font-weight: bold;
 }
 tr.full_total span.checkout-total {

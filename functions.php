@@ -10,8 +10,15 @@ function dynamic_shopping_cart() {
 
 
 // Getting current URL
-function curPageURL() {
+// - used by shopping cart 
+// - replaced by a simple call to the checkout page
+function curPageURL2() {
   $pageURL = bloginfo('home') . $_SERVER["REQUEST_URI"];
+  return $pageURL;
+}
+
+function curPageURL() {
+  $pageURL = bloginfo('home') . '/comenzi/cos-cumparaturi';
   return $pageURL;
 }
 

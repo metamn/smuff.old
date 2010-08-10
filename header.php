@@ -16,7 +16,13 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css" type="text/css" media="screen" />
 		
-		<!-- jQuery Tools -->
+		<!-- jQuery Tools 
+		
+		<script type="text/javascript" src="<?php bloginfo('home')?>/wp-includes/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tools.min.js"></script>
+		
+		
+		-->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/all/jquery.tools.min.js"></script>
 		<!-- S3 slider -->

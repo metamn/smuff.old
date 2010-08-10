@@ -10,7 +10,9 @@
 ?>
 <div id="product" class="<?php echo $klass?>">
   <div class='image calendar'>
-    <img src="<?php echo $thumb[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
+    <a href="<?php the_permalink(); ?>">
+      <img src="<?php echo $thumb[0]?>" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
+    </a>
   </div>
   <div class='text'>
     <a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -25,7 +27,7 @@
             <td><span class="normal-price"><?php echo $product_price; ?></span> RON</td>                              
             <td>&nbsp;</td>
           <?php } ?>
-          <td><span class="delivery">Livrare: <?php echo product_delivery_time($product_stoc) ?></span></td>
+          <td><span class="delivery">Livrare: <?php echo product_delivery_time($product_stock) ?></span></td>
         </tr>              
       </table>
   </div>

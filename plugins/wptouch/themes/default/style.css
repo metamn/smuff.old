@@ -6,6 +6,7 @@ body {
 	font: 12px Helvetica;
 	-webkit-text-size-adjust: none;
 	min-height: 460px;
+	max-width: 950px;
 	background: #e6e2d9;
 }
 
@@ -48,12 +49,16 @@ body {
   padding-left: 5px;
   color: #f25e18;
 }
+
 .strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {
   color: #f25e18;
-  padding: .1em .3em;
+  padding: .1em;
+  -moz-border-radius: 10%;  
+  -webkit-border-radius: 10%;
 }
 .strapline a:hover, .strapline a.active {
-  background: #DFDBD0;  
+  color: #DFDBD0;
+  background: #f25e18;  
 }
 
 #headerbar-menu {
@@ -139,9 +144,6 @@ body {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;    
 }
-.price {
-  background: #f25e18;
-}
 .old-price {
   text-decoration: line-through;
 }
@@ -151,6 +153,25 @@ body {
 .price, .normal-price, .old-price {
   padding: .3em .5em;
 }
+
+.productcart {
+  margin-bottom: 3em;
+}
+table.productcart tr.firstrow td {
+  background-color: #CAC1B2 !important;
+  bortableder-left: 1px dotted #111111 !important;
+  font-weight: bold;
+}
+tr.full_total span.checkout-total {
+  margin-left: 31em;
+}
+.wpsc_loading_animation {
+  display: none;
+}
+tr.checkout {
+  display: none;
+}
+
 
 
 /* Blog index 

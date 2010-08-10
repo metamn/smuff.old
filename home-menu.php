@@ -9,7 +9,7 @@
         include "home-all-products-link.php"; 
       ?>
     </li> 
-    <li><span class="ui-icon ui-icon-info"/></span><a href="<?php bloginfo('home'); ?>/#footer-info">Informatii</a></li>
+    <li><span class="ui-icon ui-icon-info"/></span><a href="#footer-info">Informatii</a></li>
     <li><span class="ui-icon ui-icon-person"/></span>0745-456127</li>
     <li><span class="ui-icon ui-icon-comment"/></span><a href="<?php bloginfo('home'); ?>/blog">Blog</a></li>
     <li><span class="ui-icon ui-icon-heart"/></span><a href="<?php bloginfo('home'); ?>/#home-ecosystem">Prietenii Smuff</a></li>

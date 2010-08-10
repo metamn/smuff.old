@@ -27,7 +27,7 @@
     </p>
     <p>
       <?php 
-        $pages = array('cum-cumpar', 'business-2-business', 'afiliere', 'ajutor', 'protectia-consumatorilor', 'despre-noi');
+        $pages = array('despre-noi/cum-cumpar', 'despre-noi/business-2-business', 'despre-noi/afiliere', 'despre-noi/ajutor', 'despre-noi/protectia-consumatorilor', 'despre-noi');
         foreach ($pages as $page) {
           $p = get_page_by_path($page);
           if ($p) { ?>

@@ -10,7 +10,7 @@
 	<div class="productdisplay">
 	  <?php /** start the product loop here, this is single products view, so there should be only one */?>
 		  <?php while (wpsc_have_products()) :  wpsc_the_product(); 
-		    $product_id = wpsc_the_product_id();		   
+		    $product_id = wpsc_the_product_id();   
 		  ?>
 			  <div class="single_product_display product_view_<?php echo wpsc_the_product_id(); ?>">
 				  <div class="textcol">
@@ -31,7 +31,7 @@
 					<?php endif; ?> 
 		
 					<div class="producttext">						  
-					    <form class='product_form' enctype="multipart/form-data" action="<?php echo wpsc_this_page_url(); ?>" method="post" name="1" id="product_<?php echo wpsc_the_product_id(); ?>">
+					    <form class='product_form' enctype="multipart/form-data" action="<?php echo curPageURL(); ?>" method="post" name="1" id="product_<?php echo wpsc_the_product_id(); ?>">
 					     <table> 
 					      <?php /** the variation group HTML and loop */?>
 					      <div class="wpsc_variation_forms">
@@ -181,7 +181,7 @@
 					?>					
 					</div>
 		
-					<form onsubmit="submitform(this);return false;" action="<?php echo wpsc_this_page_url(); ?>" method="post" name="product_<?php echo wpsc_the_product_id(); ?>" id="product_extra_<?php echo wpsc_the_product_id(); ?>">
+					<form onsubmit="submitform(this);return false;" action="<?php echo curPageURL(); ?>" method="post" name="product_<?php echo wpsc_the_product_id(); ?>" id="product_extra_<?php echo wpsc_the_product_id(); ?>">
 						<input type="hidden" value="<?php echo wpsc_the_product_id(); ?>" name="prodid"/>
 						<input type="hidden" value="<?php echo wpsc_the_product_id(); ?>" name="item"/>
 					</form>

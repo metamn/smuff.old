@@ -8,7 +8,7 @@
   $promo_posts = query_posts2('posts_per_page=8&cat=15');
   $top_sales = query_posts2('posts_per_page=6&cat=14');  
   $new_products = query_posts2('posts_per_page=6&cat=10');
-  $news = query_posts2('posts_per_page=3&cat=22');
+  $news = query_posts2('posts_per_page=5&cat=22');
   $klass = "post";
 ?>
 
@@ -17,10 +17,12 @@
   <div id="menu">
     <ul class="inline-list">
       <?php 
-        $cats = get_categories('child_of=10');
-        foreach ($cats as $c) { ?>
+        $cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
+        foreach ($cats as $cat) { 
+          $c = get_category_by_slug($cat);
+        ?>
           <li><a href="<?php echo get_category_link($c->term_id)?>?view=1" ><?php echo $c->name ?></a></li>
-        <?php } ?>
+      <?php } ?>
     </ul>
   </div>	
   <div id="navigation">
@@ -29,10 +31,9 @@
       <li><a href="<?php bloginfo('home'); ?>/#bestsellers">Bestsellers</a></li>
       <li><a href="<?php bloginfo('home'); ?>/#promo">Promotii</a></li>
     </ul>
-  </div>
-  
+  </div>  
   <div class="clearer"></div>
-  
+   
   <div id="noutati">
     <h2>Noutati</h2>
     <?php if ($new_products) { 

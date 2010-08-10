@@ -3,6 +3,11 @@
 // WPtouch Core Header Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+// localized only by cs
+
+
+
 function wptouch_core_header_enqueue() {
 	$version = get_bloginfo('version'); 
 		if (!bnc_wptouch_is_exclusive()) { 
