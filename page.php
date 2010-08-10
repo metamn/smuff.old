@@ -26,7 +26,7 @@ get_header(); ?>
 		
 		<?php if (comments_open()) {comments_template();}  ?>
 		
-	  <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
 	</div>    
 	
 	<?php get_sidebar(); ?>	    

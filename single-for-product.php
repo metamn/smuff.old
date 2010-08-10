@@ -72,7 +72,10 @@
           <li>Adresa trackback: <a href="<?php trackback_url(); ?>"><?php trackback_url(); ?></a></li>
           <li><?php post_comments_feed_link('Urmarire articol prin RSS'); ?></li>
           <li>Numar vizualizari articol: <?php if(function_exists('the_views')) { the_views(); } ?>  </li>
-          <li>Creat <?php the_time('l, j F Y') ?> ora <?php the_time('G:i') ?> de <?php the_author() ?></li>
+          <li>
+            Creat <?php the_time('l, j F Y') ?> ora <?php the_time('G:i') ?> de <?php the_author() ?>
+            | <?php edit_post_link('Modificare articol.', '<p>', '</p>'); ?>
+          </li>
         </ul>
       </div>
     </div>
