@@ -7,7 +7,6 @@
 		<title>		  		  
 		  <?php wp_title(' pe ', true, 'right'); bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>
 		</title> 
-		</title>
 		
 		
     <!-- Blueprint -->
