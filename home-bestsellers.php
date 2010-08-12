@@ -1,5 +1,22 @@
-<div id="bestsellers" class="block"> 
+<?php 
+    $cat = category_id(is_category(), is_single());    
+    $cat_name = '';
+    if (!($cat == 0)) {
+      $cat_name = ' din '. get_cat_name($cat);
+    } else {
+      $cat_name = ' Smuff';
+    } 
+    //$wplogger->log( 'catname '.$cat_name );
+    $title = 'Vezi toate produsele' . $cat_name . ' &rarr;'; 
+    $link_type = '3'; // 2=table view, 3=grid view
+    echo '<h4 class="all-products-link">';
+    include "home-all-products-link.php"; 
+    echo '</h4>';
+  ?>
+  
 
+<div id="bestsellers" class="block"> 
+    
   <div id="col-0" class="column span-2 last">    
     <h3 class='first'>B</h3>
     <h3>e</h3>

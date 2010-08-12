@@ -436,8 +436,7 @@ function advanced_search($post, $price, $categories) {
     $ret = true;
   }
   
-  global $wplogger;
-  $wplogger->log( 'Post / cat: '.$post->ID.' / '.$ret );
+  
   
   // Price checking
   if ($ret) {
