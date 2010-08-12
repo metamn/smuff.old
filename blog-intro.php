@@ -2,11 +2,11 @@
   $authors = array(1,3,4,5);  
   shuffle($authors);
   $i = 1;
-  foreach ($authors as $author) {
-    $a = get_author_login_name($author); ?>
+  foreach ($authors as $auth) {
+    $a = get_author_login_name($auth); ?>
     <div id="image-<?php echo $i ?>" class="avatar">
       <a href="<?php echo get_user_posts($a) ?>" title="<?php echo $a ?>">
-      <?php the_author_image($author); ?>
+      <?php userphoto($auth); ?>      
       </a>
     </div>
   <?php 

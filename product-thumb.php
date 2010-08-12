@@ -14,6 +14,7 @@
 ?>
 
 <div class="item product-thumb">    
+  <?php if ($product_id) { ?>
   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"> 
     <img src="<?php echo $thumb[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>  
   </a>
@@ -28,5 +29,13 @@
         <span class="normal-price"><?php echo $product_price; ?></span> RON
       <?php } ?>
     </a>
-  </div>  
+  </div>
+  <?php } else { ?>
+    <div class="text">
+    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+      <h4><?php the_title(); ?></h4>
+      <?php the_excerpt(); ?>            
+    </a>
+    </div>
+  <?php } ?>  
 </div>	

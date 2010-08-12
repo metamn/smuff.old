@@ -14,7 +14,10 @@
     
     <div id="info" class="block">
       <div id="gravatar" class="column span-4 last">      
-         <?php the_author_image(); ?>
+         <?php 
+          //the_author_image($author); 
+          userphoto($curauth);
+          ?>         
       </div>
       <div id="bio" class="column span-14 last">
         <?php echo $curauth->user_description; ?>        

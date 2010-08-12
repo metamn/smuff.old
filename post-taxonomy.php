@@ -16,7 +16,7 @@
   </p>
   
   <a href="<?php echo get_user_posts($author) ?>" title="Articol creat de <?php echo $author ?>">
-    <?php the_author_image(); ?>  
+    <?php userphoto($post->post_author); ?>  
   </a>
   
 </div>
