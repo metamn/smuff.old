@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+		<?php include "facebook-meta.php" ?>
 		<title>		  		  
 		  <?php wp_title(' pe ', true, 'right'); bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>
 		</title> 
@@ -48,7 +49,7 @@
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
+		
 		<?php wp_head(); ?>
 
 	</head>

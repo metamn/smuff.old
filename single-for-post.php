@@ -6,7 +6,7 @@
     <?php edit_post_link('Modificare articol.', '<p>', '</p>'); ?>             
   </div>
   <div class="column span-16 last">      
-    <?php include "post-meta-and-share.php" ?>					      
+    <?php include "post-meta-and-share.php" ?>	    				      
   </div>
 </div>		    
 		  

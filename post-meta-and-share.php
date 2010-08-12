@@ -10,8 +10,7 @@
       <li><?php comments_popup_link('0', '1', '%'); ?> comentarii, </li>
       <li><?php if(function_exists('the_views')) { the_views(); } ?> vizite </li>
       <li class="twitter opacity-3"><?php include "share-twitter.php" ?></li>
-      <li class="facebook facebook-share opacity-3"><?php include "share-facebook.php" ?></li>
-      <li class="facebook facebook-like opacity-3"><?php include "share-facebook-like.php" ?></li>
+      <li class="facebook facebook-share opacity-3"><?php include "share-facebook.php" ?></li>      
     </ul>
   </div>       
 </div>
