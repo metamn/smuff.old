@@ -1,6 +1,21 @@
 <?php
 
 
+// Logging
+// --
+// global $wplogger;
+// $wplogger->log('message'.$value);
+
+
+
+// Email obfuscator 
+function obfuscate($email, $display_text) { 
+  $length = strlen($email);
+  $ret = '';
+  for ($i = 0; $i < $length; $i++)
+    $ret .= "&#" . ord($email[$i]);  // creates ASCII HTML entity
+  echo '<a href="mailto:' . $ret . '">'.$display_text.'</a>';
+}
 
 
 // making the shopping cart dynamic when using the WP SuperCache plugin

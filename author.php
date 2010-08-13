@@ -22,7 +22,7 @@
       <div id="bio" class="column span-14 last">
         <?php echo $curauth->user_description; ?>        
         <div class="user-info">
-	        Contact: <strong><a href="mailto:<?php echo antispambot($curauth->user_email); ?>">e-mail</a></strong>
+	        <strong><a href="<?php bloginfo('home')?>/despre-noi/#commentform">Contact</a></strong>
 	        &nbsp;
 	        Website: <strong><a href="<?php echo $curauth->user_url?>"><?php echo $curauth->user_url?></a></strong>
         </div>
@@ -58,7 +58,7 @@
             <ul class="inline-list">
               <li><?php the_time('j-M-y') ?>,</li>                        
               <li><?php comments_popup_link('0', '1', '%'); ?> comentarii, </li>
-              <li><?php if(function_exists('the_views')) { the_views(); } ?> vizualizari</li>
+              <li><?php if(function_exists('the_views')) { the_views(); } ?> vizite</li>
             </ul>
           </div>
         </div>       
