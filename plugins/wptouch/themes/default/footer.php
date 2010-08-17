@@ -3,7 +3,7 @@
   <div id="wptouch-search" class="post"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				<input type="text" value="Cautare..." onfocus="if (this.value == 'cautare...') {this.value = ''}" name="s" id="s" /> 
+				<input type="text" value="Cautare..." onfocus="if (this.value == 'Cautare...') {this.value = ''}" name="s" id="s" /> 
 				<input name="submit" type="hidden" tabindex="1" value="Search"  />
 			</form>
 		</div>
@@ -37,11 +37,13 @@
     </p>
 	</div>
 
+  <!--
 	<center>
 		<div id="wptouch-switch-link">
 			<?php wptouch_core_footer_switch_link(); ?>
 		</div>
 	</center>
+	-->
 	
 	<?php if ( !bnc_wptouch_is_exclusive() ) { wp_footer(); } ?>
 </div>

@@ -41,6 +41,20 @@
 			<?php } ?>
 
       <div class="post" id="post-<?php the_ID(); ?>">
+        <div id="images">
+          <?php 
+            $imgs = post_attachements($post->ID);
+            if ($imgs) {
+              echo '<ul>';
+              foreach ($imgs as $img) {
+                $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+                echo '<li><img class="small-image" src="'.$thumb[0].'" /></li>';
+              }
+              echo '</ul>';
+            }
+          ?>
+        </div>
+        
         <div id="singlentry" class="<?php echo $wptouch_settings['style-text-justify']; ?>">
           <?php the_content(); ?>				
 			  </div>  

@@ -139,10 +139,15 @@ body {
   margin-top: 10px;
 }
 .price, .normal-price {
-  border: #ccc;  
-  font-size: larger;
+  border: #ccc;    
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;    
+}
+.price {
+  background: #f25e18;
+}
+tr.price {
+  background: none !important;
 }
 .old-price {
   text-decoration: line-through;
@@ -171,6 +176,18 @@ tr.full_total span.checkout-total {
 tr.checkout {
   display: none;
 }
+tr.full_total span.checkout-total {
+  margin-left:3em;
+}
+.post #images ul {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.post #images ul li {
+  list-style-type: none !important;
+}
+
 
 
 
