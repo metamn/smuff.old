@@ -93,7 +93,7 @@ function page_excerpt($page) {
 
 function is_blog() {
   $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
-  $ret = (is_home() || is_author() || in_category($non_shop_categories) || is_category($non_shop_categories));
+  $ret = (is_home() || is_author() || is_tag() || in_category($non_shop_categories) || is_category($non_shop_categories));
   if (is_page() || is_search()) { 
     return false;
   } else {
