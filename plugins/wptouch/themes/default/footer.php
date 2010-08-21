@@ -37,13 +37,13 @@
     </p>
 	</div>
 
-  <!--
+  
 	<center>
 		<div id="wptouch-switch-link">
 			<?php wptouch_core_footer_switch_link(); ?>
 		</div>
 	</center>
-	-->
+	
 	
 	<?php if ( !bnc_wptouch_is_exclusive() ) { wp_footer(); } ?>
 </div>

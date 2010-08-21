@@ -1,7 +1,7 @@
 <?php 
 include( dirname(__FILE__) . '/../core/core-functions.php' ); 
 
-include(dirname(__FILE__) . "/../../../../themes/smuff/functions.php");
+include_once(dirname(__FILE__) . "/../../../../themes/smuff/functions.php");
 
 //---------------- Custom Drop-Down Tags Function ----------------// 
 //  function dropdown_tag_cloud( $args = '' ) {

@@ -808,7 +808,7 @@ width:96%;
   cursor: pointer;
 }
 #home-menu li.old-site {
-  background: #DFDBD0;
+  /*background: #DFDBD0;*/
 }
 #home-menu li.old-site a {
   padding: .5em 0;
