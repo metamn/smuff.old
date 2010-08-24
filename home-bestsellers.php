@@ -36,8 +36,9 @@
         <?php
           if ($top_sales->have_posts()) {
             $counter = 0;
+            $count = $top_sales->post_count / 2;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if ($counter < 3) {   
+              if ($counter < $count) {   
                 $medium = true;             
                 include "product-thumb.php";              
               }
@@ -54,7 +55,7 @@
           if ($top_sales->have_posts()) {
             $counter = 0;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if ($counter >= 3) {    
+              if ($counter >= $count) {    
                 $medium = true;            
                 include "product-thumb.php";              
               }
