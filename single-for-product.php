@@ -54,6 +54,24 @@
           <li class="facebook-like"><?php include "share-facebook-like.php" ?></li>
         </ul>        
       </div>
+      
+      <div id="post-sponsor">
+        <?php 
+          $main_cat = page_name(is_category(), is_single());
+          $wplogger->log('main_cat = '. $main_cat);
+          $sponsor = sponsor_post($main_cat);
+          if ($sponsor) {
+            $imgs = post_attachements($sponsor->ID);
+            $img = $imgs[0];
+            $medium = wp_get_attachment_image_src($img->ID, 'medium'); ?>
+        
+            In parteneriat cu
+            <br/>  
+            <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
+              <img src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
+            </a>
+          <?php } ?>
+      </div>
     </div>
   </div>
 

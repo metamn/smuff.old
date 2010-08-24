@@ -89,20 +89,8 @@
 	              </span>			      
 	           </h1>			      
 			      </div>
-			      <div id="main-name" class="column span-8 last">
-			        <?php 
-			          $page_name = "&nbsp;"; 
-			          if (is_category()) {
-                  $page_name = single_cat_title('', false);
-                } elseif (is_single()) {
-                    $cat_id = category_id(is_category(), is_single());
-                    if (!($cat_id == 0)) {
-                      $page_name = get_cat_name($cat_id); 
-                    } 
-                } elseif (is_home()) { 
-                  $page_name = "";
-                }?>
-			        <h1><?php echo $page_name ?></h1>
+			      <div id="main-name" class="column span-8 last">			        
+			        <h1><?php echo page_name(is_category(), is_single()) ?></h1>
 			      </div>
 			    </div>
 			    <?php if (!($is_blog)) { ?>

@@ -1,5 +1,6 @@
 <div id="sponsor">
   <?php 
+        
     if (in_category(10)) {
       $sponsor =  get_sponsor_category(get_post_categories_array($post), $main_category);
     } else {
@@ -26,6 +27,7 @@
     <?php 
       endwhile;
     }
+    
   ?>
 </div>  
 

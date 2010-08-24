@@ -8,6 +8,103 @@
 
 
 
+
+
+// Sponsorship
+//
+
+
+// Getting the sponsor of a post
+function sponsor_post($main_category){
+  $ret = '';
+  
+  $slug = $main_category.'-parteneri';
+  
+  $posts = get_posts('numberposts=1&category_name='.$slug);
+  if $posts {
+    foreach ($posts as $p) {
+      $ret = $p;
+      break; 
+    }
+  }
+    
+  return $ret;
+}
+
+
+
+// Getting the sponsored category the product belongs
+// - used in blog sidebar/taxonomy
+// - input params: see display_post_categories 
+// steps: 
+// 1. get the main category slug, ie 'gadget'
+// 2. get that children category from 'Parteneri' whose slug has 'gadget'
+function get_sponsor_category($post_categories, $parent_id) {
+  $ret = 0;
+  $cats = get_categories('child_of='.$parent_id);
+  $first_cat_ID = 0;
+  
+  // Getting the first, main category slug the post belongs
+  if ($cats) {
+    $ids1 = array();
+    foreach ($cats as $c1) {
+      $ids1[] = $c1->cat_ID;
+    }
+    $ids2 = array();
+    foreach ($post_categories as $c2) {
+      $ids2[] = $c2->cat_ID;
+    }
+    $main = array_intersect($ids1, $ids2);
+    foreach ($main as $m) {
+      $cat = get_category($m);
+      $slug = $cat->slug;
+      break;
+    }   
+  }
+  
+  //echo "slug is: " . $slug . '<br/>';  
+  $c = get_category(96);
+  $suffix = $slug . "-" . $c->slug;
+  
+  //echo "suffix is: " . $suffix . '<br/>'; 
+  
+  return get_category_by_slug($suffix);
+}
+
+// Getting the sponsored category the post belongs
+// - used in blog sidebar/taxonomy
+// - get that children category from 'Parteneri' whose slug has 'stiri'
+function get_sponsor_category2($main_category) {
+  $c = get_category($main_category);
+  $slug = $c->slug;
+  
+  $c = get_category(96);
+  $suffix = $slug . "-" . $c->slug;
+  
+  return get_category_by_slug($suffix);
+}
+
+
+
+
+
+// Cache
+//
+
+// making the shopping cart dynamic when using the WP SuperCache plugin
+function dynamic_shopping_cart() {
+  echo nzshpcrt_shopping_basket();
+}
+
+
+
+
+
+
+// System
+//
+
+
 // Email obfuscator 
 function obfuscate($email, $display_text) { 
   $length = strlen($email);
@@ -16,13 +113,6 @@ function obfuscate($email, $display_text) {
     $ret .= "&#" . ord($email[$i]);  // creates ASCII HTML entity
   echo '<a href="mailto:' . $ret . '">'.$display_text.'</a>';
 }
-
-
-// making the shopping cart dynamic when using the WP SuperCache plugin
-function dynamic_shopping_cart() {
-  echo nzshpcrt_shopping_basket();
-}
-
 
 // Getting current URL
 // - used by shopping cart 
@@ -82,6 +172,33 @@ function styled_comments($comment, $args, $depth){
     </div>
 <?php  
 }
+
+
+
+
+// WP Extensions
+//
+
+
+
+// Get the main category of a page
+// - used in header
+function page_name($is_category, $is_single) {
+  $page_name = '&nbsp;';
+  
+  if ($is_category) {
+    $page_name = single_cat_title('', false);
+  } elseif ($is_single) {
+      $cat_id = category_id(is_category(), is_single());
+      if (!($cat_id == 0)) {
+        $page_name = get_cat_name($cat_id); 
+      } 
+  } elseif (is_home()) { 
+    $page_name = "";
+  }
+  return $page_name;
+}
+
 
 // Returns the excerpt of a page
 // - $page is the page slug
@@ -180,13 +297,9 @@ function get_post_categories_array($post) {
 }
 
 
-// Displaying post categories highlighting major categories
-// - the parent is given for the most important category
-// - major categories will go first 
-// - used in blog index
-// - returns list items
-function display_post_categories($post_categories, $parent_id) {
-  $ret = "";
+
+// Getting the main category a post belongs
+function post_main_category($post_categories, $parent_id) {
   $cats = get_categories('child_of='.$parent_id);
   $first_cat_ID = 0;
   
@@ -203,14 +316,28 @@ function display_post_categories($post_categories, $parent_id) {
     $main = array_intersect($ids1, $ids2);
     foreach ($main as $m) {
       $cat = get_category($m);
-      $first_cat_ID = $cat->cat_ID;
-      $name = $cat->cat_name;
-      $ret = '<li><a href="' . get_category_link($cat);
-      $ret .='" title="Toate articolele din ' . $name . '" class="category main ' . $cat->category_nicename . '">' . $name . '</a></li>';
       break;
     }     
   }
   
+  return $cat;
+}
+
+// Displaying post categories highlighting major categories
+// - the parent is given for the most important category
+// - major categories will go first 
+// - used in blog index
+// - returns list items
+function display_post_categories($post_categories, $parent_id) {
+  $ret = "";
+  
+  // First category
+  $cat = post_main_category($post_categories, $parent_id);
+  $first_cat_ID = $cat->cat_ID;
+  $name = $cat->cat_name;
+  $ret = '<li><a href="' . get_category_link($cat);
+  $ret .='" title="Toate articolele din ' . $name . '" class="category main ' . $cat->category_nicename . '">' . $name . '</a></li>';
+    
   // Getting the other categories
   $i = 0;
   foreach ($post_categories as $c) {
@@ -230,56 +357,12 @@ function display_post_categories($post_categories, $parent_id) {
 }
 
 
-// Getting the sponsored category the product belongs
-// - used in blog sidebar/taxonomy
-// - input params: see display_post_categories 
-// steps: 
-// 1. get the main category slug, ie 'gadget'
-// 2. get that children category from 'Parteneri' whose slug has 'gadget'
-function get_sponsor_category($post_categories, $parent_id) {
-  $ret = 0;
-  $cats = get_categories('child_of='.$parent_id);
-  $first_cat_ID = 0;
-  
-  // Getting the first, main category slug the post belongs
-  if ($cats) {
-    $ids1 = array();
-    foreach ($cats as $c1) {
-      $ids1[] = $c1->cat_ID;
-    }
-    $ids2 = array();
-    foreach ($post_categories as $c2) {
-      $ids2[] = $c2->cat_ID;
-    }
-    $main = array_intersect($ids1, $ids2);
-    foreach ($main as $m) {
-      $cat = get_category($m);
-      $slug = $cat->slug;
-      break;
-    }   
-  }
-  
-  //echo "slug is: " . $slug . '<br/>';  
-  $c = get_category(96);
-  $suffix = $slug . "-" . $c->slug;
-  
-  //echo "suffix is: " . $suffix . '<br/>'; 
-  
-  return get_category_by_slug($suffix);
-}
 
-// Getting the sponsored category the post belongs
-// - used in blog sidebar/taxonomy
-// - get that children category from 'Parteneri' whose slug has 'stiri'
-function get_sponsor_category2($main_category) {
-  $c = get_category($main_category);
-  $slug = $c->slug;
-  
-  $c = get_category(96);
-  $suffix = $slug . "-" . $c->slug;
-  
-  return get_category_by_slug($suffix);
-}
+
+
+// Product 
+//
+
 
 
 
@@ -374,7 +457,6 @@ function product_stock($product_id) {
 }
 
 
-
 // Calculate Delivery time based on stock
 function product_delivery_time($stock) {
   $ret = "";
@@ -407,6 +489,15 @@ function post_attachements($post_id) {
   $attachments = get_posts($args);
   return $attachments;
 }
+
+
+
+
+
+// Advanced Search
+//
+
+
 
 
 // Displaing all category items is done with Advanced Search

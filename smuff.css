@@ -645,10 +645,14 @@ div.thanks-error {
 #single #fb_share_1 {
   margin-left: 4px !important;
 }
-
 #post-operations img {
   border: none;
 }
+
+#single #post-sponsor {
+  margin-top: .5em;
+}
+
 
 #accordion .pane {
   line-height: 2;  
