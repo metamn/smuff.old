@@ -17,7 +17,10 @@ get_header();
     </div>	
 	
 	  <div id="content" class="block">
-	    <?php if (have_posts()) : ?>
+	    <?php if (have_posts()) : 
+	      $counter = 1;
+	      $random = rand(3, 10);
+	      ?>
 		    <?php while (have_posts()) : the_post(); ?>
 		      <?php 
 		        if (in_category(10)) { //produse
@@ -36,6 +39,10 @@ get_header();
 		          $main_category = 22; // Stiri
 		          include "post-default.php";		          
 		        }
+		        if ($counter == $random) {
+		          include "post-banner.php";
+		        }
+		        $counter += 1;
 		      ?>		  		       
 		    <?php endwhile; ?>		    
         <?php wp_paginate(); ?>		    
