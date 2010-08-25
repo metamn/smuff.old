@@ -21,7 +21,7 @@ function sponsor_post($main_category){
   $slug = $main_category.'-parteneri';
   
   $posts = get_posts('numberposts=1&category_name='.$slug);
-  if $posts {
+  if ($posts) {
     foreach ($posts as $p) {
       $ret = $p;
       break; 

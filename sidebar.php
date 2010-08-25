@@ -5,4 +5,5 @@
 <div id="sidebar" class="column span-6 last">
     <?php include "home-menu.php" ?>    
     <?php include "home-news.php" ?>
+    <?php include "home-banners.php" ?>
 </div>

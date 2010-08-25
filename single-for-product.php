@@ -58,7 +58,7 @@
       <div id="post-sponsor">
         <?php 
           $main_cat = page_name(is_category(), is_single());
-          $wplogger->log('main_cat = '. $main_cat);
+          
           $sponsor = sponsor_post($main_cat);
           if ($sponsor) {
             $imgs = post_attachements($sponsor->ID);
@@ -68,7 +68,7 @@
             In parteneriat cu
             <br/>  
             <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
-              <img src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
+              <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
             </a>
           <?php } ?>
       </div>

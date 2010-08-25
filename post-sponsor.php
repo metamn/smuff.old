@@ -22,7 +22,7 @@
       
       <p>In parteneriat cu</p>  
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-        <img src="<?php echo $medium[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
+        <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
       </a>
     <?php 
       endwhile;
