@@ -84,8 +84,10 @@ function goshopping_options() {
 
 // Precessing input
 function goshopping_process_form($data) {
-  echo 'processing ... ';
-  echo $data['goshopping'];
+  echo 'processing ... ' . '<br/>';
+  echo 'hidden = ' . $data['hide'];
+  $posts = $data['posts'];
+  print_r($posts);
 }
 
 // Displaying a form
@@ -93,13 +95,24 @@ function goshopping_display_form() {
 ?>
 <form method="post" action="">
     <?php settings_fields( 'datafeed' ); ?>
-    <input type="hidden" name="goshopping-processing" value="1">
-    <table class="form-table">
-        <tr valign="top">
-        <th scope="row">Articole</th>
-        <td><input type="text" name="goshopping" value="<?php echo get_option('goshopping'); ?>" /></td>
-        </tr>
-    </table>
+    <input type="hidden" name="hide" value="1">
+    <ul>
+      <?php 
+        $posts = get_posts('numberposts=-1&category=10');
+        if ($posts) {
+          foreach ($posts as $p) {
+            $meta = get_post_meta($p->ID, 'goshopping', true);
+            if (!($meta == '')) {
+              $checked = 'checked';
+            } else {
+              $checked = '';
+            }
+            echo '<li><input type="checkbox" name="posts[]" value="' . $p->ID . '" '. $checked .' /> '. $p->post_title .'</li>';
+            echo '<br/>';
+          }
+        }
+      ?>
+    </ul>
     
     <p class="submit">
       <input type="submit" class="button-primary" value="Run" />
