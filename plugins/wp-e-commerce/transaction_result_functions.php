@@ -38,7 +38,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				}
 				return false;
 			} else if ($purchase_log['processed'] < 2) {  //added by Thomas on 20/6/2007
-        echo '<p>Comanda Dvs. a fost trimis cu succes. In curand veti primi un e-mail de confirmare. </p>';
+        // echo '<p>Comanda Dvs. a fost trimis cu succes. In curand veti primi un e-mail de confirmare. </p>';
 				/*if($purchase_log['gateway'] != 'testmode') {
 					if((get_option('purch_log_email') != null) && ($purchase_log['email_sent'] != 1)) {
 						mail(get_option('purch_log_email'), __('New pending order', 'wpsc'), __('There is a new order awaiting processing:', 'wpsc').$order_url, "From: ".get_option('return_email')."");
@@ -257,7 +257,11 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 						//$message = $payment_instructions ."\n\r". $message;
 						wp_mail($email, 'Procesul de cumparare', $message);
 					} else {
-					  $message = 'Comanda Dvs. a fost confirmata cu succes. In curand va trimitem produsele comandate impreuna cu un e-mail cu detaliile de livrare' . "\n\r" . "Va reamintim comanda Dvs. initiala a fost:" . "\n\r" . '----' . "\n\r". $message;
+					  /*
+					  $msg = 'Comanda Dvs. a fost trimisa cu succes! Va multumim ca ati ales magazinul Smuff, va multumim pentru comanda si speram sa va bucurati mult de achizitia facuta!' . "\n\r";
+					  $msg = 'In continuare veti primi un email de confirmare si cineva din echipa Smuff va va contacta si telefonic pentru confirmare, detalii si alte informatii. Daca doriti sa schimbati orice, sa adaugati ceva sau ati dori livrare speciala, este posibil, va stam la dispozitie oricand cu placere! (0740-456.127) ' . "\n\r"; 
+					  $message = $msg . $message;
+						*/
 						wp_mail($email, 'Confirmare comanda', $message);
 					}
 				}

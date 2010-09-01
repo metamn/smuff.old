@@ -3276,7 +3276,7 @@ msgstr "Please select the terms and conditions option.  Unfortunately we cannot 
 
 #: wp-e-commerce/wpsc-includes/ajax.functions.php:480
 msgid "Please agree to the terms and conditions, otherwise we cannot process your order."
-msgstr "Please select the terms and conditions option.  Unfortunately we cannot process your order otherwise."
+msgstr "Pentru a continua trebuie sa fiti de acord cu Termenii si Conditiile magazinului Smuff."
 
 #: wp-e-commerce/wpsc-includes/ajax.functions.php:503
 #, php-format

@@ -78,7 +78,7 @@ class my_shipping {
 		
 		$output .= '<tr>';
 		$output .= '	<td>';
-		$output .= '		Ridicare din sediu Tg. Mures:<br/>';
+		$output .= '		Ridicare din sediul Tg. Mures:<br/>';
 		$output .= '		<input type="text" name="shipping[ridicare]" value="'.htmlentities($shipping['ridicare']).'"><br/>';
 		$output .= '	</td>';
 		$output .= '</tr>';
@@ -198,7 +198,7 @@ class my_shipping {
 		return array ("Posta Romana, cu plata la livrare" => (float) $my_shipping_rates['posta'],
 		              "Fan Curier, cu plata la livrare" => (float) $my_shipping_rates['ramburs'],
 		              "Fan Curier, cu plata prin transfer bancar" => (float) $my_shipping_rates['transfer'],
-		              "Ridicare din sediu Tg. Mures" => (float) $my_shipping_rates['ridicare']);
+		              "Ridicare din sediul Tg. Mures" => (float) $my_shipping_rates['ridicare']);
 
 	}
 	

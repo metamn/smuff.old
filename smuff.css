@@ -195,7 +195,12 @@ tr.full_total span.checkout-total {
   text-decoration: underline;
 }
 
-
+.login_error {
+  padding: 1em;
+  margin: 1em 0 !important;
+  background: #A53B08;
+  color: #DFDBD0;
+}
 
 
 /* Startpage / Home

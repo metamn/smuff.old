@@ -7,6 +7,18 @@
 ?>
 
 
+<?php
+    if(count($_SESSION['wpsc_checkout_misc_error_messages']) > 0) {
+	    echo "<div class='login_error'>\n\r";
+	    foreach((array)$_SESSION['wpsc_checkout_misc_error_messages'] as $user_error ) {
+		    echo $user_error."<br />\n";
+	    }
+	    echo "</div>\n\r";
+    }
+    $_SESSION['wpsc_checkout_misc_error_messages'] =array();
+?>
+
+
 <table class="productcart">
 	<tr class="firstrow">
 		<td class='firstcol'></td>
@@ -193,10 +205,12 @@
 		</td>
 	</tr>
 	
-	
 	</table>
+	
+	
 
-		<?php do_action('wpsc_before_form_of_shopping_cart'); ?>
+
+  <?php do_action('wpsc_before_form_of_shopping_cart'); ?>
 	
 	<form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">
 	
@@ -241,7 +255,7 @@
 	        if ( !($current_user instanceof WP_User) )
             return; ?>
           
-          <h2>Cont cumparaturi</h2>
+          <h2>Contul Dumneavoastra</h2>
           <ul>
             <li>Nume utilizator: <?php echo $current_user->display_name ?></li>
             <li>Adresa email: <?php echo $current_user->user_email ?></li>
@@ -262,25 +276,24 @@
     </div>
 	    
 	    <div class="block shop-user-info">
-	      <h3>Va rugam verificati daca datele sunt corecte in formularul de mai jos</h3>	
-	      <p>Campurile marcate cu * sunt obligatorii.</p>
-	      <p>Daca doriti factura pe firma va rugam completati campurile Cod Unic de Inregistrare, Nr. Registru, Banca si IBAN.</p> 	    
+	      <h3>Va rugam verificati daca aceste date sunt corecte</h3>	
+	      <p>Doriti factura fiscala pe societate comerciala? Va rugam sa completati si datele firmei.</p>
+	      <p>Campurile marcate cu * sunt obligatorii.</p> 	    
 	    </div>
 	    
+	    <?php if(get_option('terms_and_conditions') != '') : ?>
 	    <p>
-	      <input type='submit' value="Datele de mai jos sunt corecte, trimit imediat comanda" name='submit' class='make_purchase' />
+     		<input type='checkbox' value='yes' name='agree' /> 
+     		Prin confirmarea comenzii va exprimati acordul cu 
+        <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+     	</p>
+	    <?php endif; ?>	
+	    <p>
+	      <input type='submit' value="Datele de mai jos sunt corecte, confirm comanda" name='submit' class='make_purchase' />
 	    </p>
+      
+	   	    
 	    
-	    <?php
-	      if(count($_SESSION['wpsc_checkout_misc_error_messages']) > 0) {
-			    echo "<div class='login_error'>\n\r";
-			    foreach((array)$_SESSION['wpsc_checkout_misc_error_messages'] as $user_error ) {
-				    echo $user_error."<br />\n";
-			    }
-			    echo "</div>\n\r";
-		    }
-		    $_SESSION['wpsc_checkout_misc_error_messages'] =array();
-	    ?>
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
 			    <?php if(wpsc_is_shipping_details()) : ?>
@@ -379,9 +392,10 @@
 		    <?php if(get_option('terms_and_conditions') != '') : ?>
 		    <tr>
 			    <td colspan='2'>
-         			 <input type='checkbox' value='yes' name='agree' /> <?php echo __('I agree to The ', 'wpsc');?><a class='thickbox' target='_blank' href='<?php
-          echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'><?php echo __('Terms and Conditions', 'wpsc');?></a>
-       		   </td>
+         		<input type='checkbox' value='yes' name='agree' /> 
+         		Prin confirmarea comenzii va exprimati acordul cu 
+            <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+       		</td>
      	   </tr>
 		    <?php endif; ?>	
 		    <tr>
@@ -392,7 +406,7 @@
 				    <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 				     if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 					    <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					    <input type='submit' value='Trimitere comanda' name='submit' class='make_purchase' />
+					    <input type='submit' value='Confirm comanda' name='submit' class='make_purchase' />
 				    <?php }/* else: ?>
 				
 				    <br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />
