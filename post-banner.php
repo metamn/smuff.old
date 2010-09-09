@@ -10,9 +10,12 @@
           $img = $imgs[1];        
           $large = wp_get_attachment_image_src($img->ID, 'large');  ?>
           
+          <center>
+          <p><?php echo $post->post_title ?></p>
           <a href="<?php echo get_permalink($post) ?>" title="<?php echo $post->post_title ?>" alt="<?php $post->post_title ?>">
             <img class="pop-under" src="<?php echo $large[0] ?>" title="<?php $post->post_title ?>" alt="<?php $post->post_title ?>"/>
           </a>
+          </center>
             
         <?php }
         $counter += 1;

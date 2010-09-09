@@ -1,11 +1,11 @@
-<div id="home-sponsor" class="block">
+<div id="home-sponsor" class="block last">
   <?php
     if (is_front_page()) {
             
       $partners = query_posts2('posts_per_page=5&cat=96');  
       if ($partners->have_posts()) {
         echo '<h3>Parteneri</h3>';
-        echo '<ul>';
+        echo '<center><ul>';
         while ($partners->have_posts()) : $partners->the_post(); update_post_caches($posts);
           $imgs = post_attachements($post->ID);
           $img = $imgs[0];        
@@ -17,7 +17,7 @@
           </li>  
         <?php endwhile; ?>
           <li><a href="<?php bloginfo('home'); ?>/despre-noi/parteneri">Cum devin partener Smuff?</a></li>
-        </ul>
+        </ul></center>
       <?php }
     } else {
       $main_cat = page_name(is_category(), is_single());
@@ -34,9 +34,12 @@
         $medium = wp_get_attachment_image_src($img->ID, 'medium');
         if ($medium) { ?>      
           <h3>Partener</h3>
+          <br/>
+          <center>
           <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
             <img class="<?php echo $klass ?>" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
           </a>
+          </center>
         <?php }
       } 
     } ?>
