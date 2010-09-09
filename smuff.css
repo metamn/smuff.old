@@ -1,3 +1,5 @@
+
+
 /* Colors 
 */
 
@@ -166,6 +168,8 @@ div#widgetshoppingcart {
 #cart p {
   margin: 0 0 1em;
 }
+
+
 
 
 /* Shopping cart / wp-e-commerce pages
@@ -834,6 +838,7 @@ width:96%;
 
 
 
+
 /* Home News + Sticky
 */
 
@@ -913,15 +918,15 @@ body.blog {
   width: 130px;
 }
 #blog-intro #image-1 {
-  top: .7em;
+  top: 1.7em;
   left: 3.1em;
 }
 #blog-intro #image-2 {
-  top: 3em;
+  top: 4em;
   left: 2em;  
 }
 #blog-intro #image-3 {
-  top: -9.7em;
+  top: -8.7em;
   left: 12.5em;
 }
 
@@ -951,6 +956,9 @@ body.blog #content {
 body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog #author #info {
   margin-top: -2.2em;
 }
+
+
+
 
 
 

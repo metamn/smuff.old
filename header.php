@@ -75,11 +75,16 @@
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 
 	        <div id="tooltips" class="block">
+	          <!--
 	          <a href="http://smuff.ro/2010/08/05/test-2/">
 	          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
 	          </a>
+	          -->
+	          <a href="http://www.letsdoitromania.ro/" target="_blank">
+	            Sustinem proiectul Let's Do It Romania! Curatenie in toata tara. Intr-o singura zi!
+	          </a>
 	        </div>                
-          <div id="headlines" class="block">
+          <div id="headlines" class="block">	          
 	          <div id="logo" class="column span-10 last">
 	            <h1>
 	              <a class="tooltip" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
@@ -90,6 +95,8 @@
 	              </span>			      
 	           </h1>			      
 			      </div>
+			      
+			      
 			      <div id="main-name" class="column span-8 last">			        
 			        <h1><?php echo page_name(is_category(), is_single()) ?></h1>
 			      </div>

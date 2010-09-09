@@ -300,6 +300,7 @@ function get_post_categories_array($post) {
 
 // Getting the main category a post belongs
 function post_main_category($post_categories, $parent_id) {
+  $cats = '';
   $cats = get_categories('child_of='.$parent_id);
   $first_cat_ID = 0;
   
@@ -331,8 +332,13 @@ function post_main_category($post_categories, $parent_id) {
 function display_post_categories($post_categories, $parent_id) {
   $ret = "";
   
-  // First category
-  $cat = post_main_category($post_categories, $parent_id);
+  // Patching ....
+  if ($parent_id == 22) {
+    $cat = $parent_id;
+  } else {
+    // First category
+    $cat = post_main_category($post_categories, $parent_id);  
+  }
   $first_cat_ID = $cat->cat_ID;
   $name = $cat->cat_name;
   $ret = '<li><a href="' . get_category_link($cat);

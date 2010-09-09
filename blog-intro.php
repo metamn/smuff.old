@@ -1,3 +1,4 @@
+<div class="column span-9 last">
 <?php 
   $authors = array(1,3,4,5);  
   shuffle($authors);
@@ -16,5 +17,9 @@
     }
   }    
 ?>
+</div>
 
+<div id="lets" class="column span-9 last">
+  <a href="http://www.letsdoitromania.ro" target="_blank"><img title="Curatenie in toata tara. Intr-o singura zi!" src="http://www.letsdoitromania.ro/wp-content/uploads/2010/06/bannerBlog-albastru.png" border="0" alt="" /></a>
+</div>
 
