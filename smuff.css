@@ -1453,6 +1453,32 @@ input.button-to-link {
 
 
 
+
+/* Calendar
+*/
+
+.calendar-date-switcher, .calendar-heading, .normal-day-heading, .weekend-heading {
+  background-color: #cac1b2 !important;
+  border: 1px solid #DFDBD0 !important;
+}
+.day-without-date {
+  border: 1px solid #DFDBD0 !important;
+}
+.event .calnk a, .event .calnk a:visited {
+  color: #fff;
+  padding: .5em;
+  font-size: larger;
+  text-decoration: none !important;
+}
+.event ul {
+  list-style-type: none;
+  margin: 0;
+}
+.event ul li {
+  margin: 1em;
+}
+
+
 /* Common
 */
 
