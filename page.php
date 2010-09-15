@@ -12,15 +12,30 @@ get_header(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 		  <h2><?php the_title(); ?></h2>
 		  
-		  <?php if ( is_page('despre-noi') || $post->post_parent == 331 || in_array( 331, $post->ancestors) ) { ?>
-		    <ul class="inline-list">
-		      <?php wp_list_pages('child_of=331&title_li='); ?>
-		    </ul>
-			<?php } ?>
-			
+		  
 			<div class="entry column span-18">
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>				
 			</div>
+			
+			<?php 
+			  $subs = get_pages('child_of='.$post->ID);
+			  if ($subs) { ?>
+			    <div class="subpages">
+		        Informatii aditionale: 
+		        <ul class="inline-list">
+		          <?php wp_list_pages('child_of='.$post->ID.'&title_li='); ?>
+		        </ul>
+		      </div>
+			<?php } ?>
+			
+			<?php if ( is_page('despre-noi') || $post->post_parent == 331 || in_array( 331, $post->ancestors) ) { ?>
+		    <div class="subpages">
+		      Alte informatii: 
+		      <ul class="inline-list">
+		        <?php wp_list_pages('child_of=331&depth=1&title_li='); ?>
+		      </ul>
+		    </div>		    
+			<?php } ?>
 		</div>
 		<?php endwhile; endif; ?>
 		

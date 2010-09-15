@@ -551,7 +551,16 @@ h4.all-products-link a{
 }
 #page .entry {
   margin: 1em 0;
+  padding: 1em;
+  background: #dfdbd0;
 }
+.subpages {
+  padding: 1em;
+  margin-bottom: 1em;  
+}
+
+
+
 
 
 /* Single 
@@ -867,7 +876,7 @@ width:96%;
   list-style-type: none;
 }
 #home-sponsor ul li {
-  margin: 1em 0;
+  margin: 2em 0;
 }
 #home-sponsor ul li.text {
   margin-left: 1em;
@@ -1436,7 +1445,7 @@ input.button-to-link {
 
 .half-banner {
   max-width: 230px;
-  max-height: 59px;
+  /*max-height: 59px;*/
 }
 .vertical-rectangle {
   max-width: 230px;
