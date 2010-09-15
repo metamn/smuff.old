@@ -19,9 +19,9 @@
           <li><a href="<?php bloginfo('home'); ?>/despre-noi/parteneri">Cum devin partener Smuff?</a></li>
         </ul></center>
       <?php }
-    } else {
+    } elseif (!(is_single())) {      
       $main_cat = page_name(is_category(), is_single());
-    
+      
       $sponsor = sponsor_post($main_cat);
       if ($sponsor) {
         $imgs = post_attachements($sponsor->ID);

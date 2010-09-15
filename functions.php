@@ -71,6 +71,7 @@ function get_sponsor_category($post_categories, $parent_id) {
   return get_category_by_slug($suffix);
 }
 
+
 // Getting the sponsored category the post belongs
 // - used in blog sidebar/taxonomy
 // - get that children category from 'Parteneri' whose slug has 'stiri'
@@ -86,8 +87,6 @@ function get_sponsor_category2($main_category) {
 
 
 
-
-
 // Cache
 //
 
@@ -95,9 +94,6 @@ function get_sponsor_category2($main_category) {
 function dynamic_shopping_cart() {
   echo nzshpcrt_shopping_basket();
 }
-
-
-
 
 
 
@@ -189,9 +185,9 @@ function page_name($is_category, $is_single) {
   if ($is_category) {
     $page_name = single_cat_title('', false);
   } elseif ($is_single) {
-      $cat_id = category_id(is_category(), is_single());
+      $cat_id = category_id($is_category, $is_single);      
       if (!($cat_id == 0)) {
-        $page_name = get_cat_name($cat_id); 
+        $page_name = get_cat_name($cat_id);         
       } 
   } elseif (is_home()) { 
     $page_name = "";
