@@ -39,8 +39,15 @@
 		</div>
 		<?php endwhile; endif; ?>
 		
+		<?php if (comments_open()) {comments_template();}  ?>
+		
+	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
+		
+		
 		<!-- display sponsor list -->
 		<?php if ($partners->have_posts()) : ?>
+		  <br/>
+		  <br/>
       <h3>Lista partenerilor Smuff</h3>
       <table id="partners-table" class="tablesorter">
       <thead><tr>
@@ -84,10 +91,7 @@
 		  </table>
 		  <p class="alignright"><a href="#partners-table">[ &uarr; Top ]</a></p>
 		<?php endif; ?>	
-		
-		<?php if (comments_open()) {comments_template();}  ?>
-		
-	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
+				
 	</div>    
 	
 	<?php get_sidebar(); ?>	    
