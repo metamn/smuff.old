@@ -19,7 +19,7 @@
           <li><a href="<?php bloginfo('home'); ?>/despre-noi/parteneri">Cum devin partener Smuff?</a></li>
         </ul></center>
       <?php }
-    } elseif (!(is_single())) {      
+    } elseif (is_category()) {      
       $main_cat = page_name(is_category(), is_single());
       
       $sponsor = sponsor_post($main_cat);
@@ -33,7 +33,7 @@
         }
         $medium = wp_get_attachment_image_src($img->ID, 'medium');
         if ($medium) { ?>      
-          <h3>Partener</h3>
+          <h3>Partener categorie</h3>
           <br/>
           <center>
           <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">

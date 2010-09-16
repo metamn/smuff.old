@@ -88,7 +88,10 @@ $(document).ready(function() {
   $("#archive-all-table").tablesorter({
     sortList: [[0,1]]    
   }); 
-    
+  // - on Partner list 
+  $("#partners-table").tablesorter({
+    sortList: [[1,1]]    
+  });   
     
   // add opacity on twitter fb buttons on mouse hover, blog index
   $(".post .facebook, .post .twitter").hover(
