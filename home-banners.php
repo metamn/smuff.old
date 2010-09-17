@@ -11,10 +11,12 @@
           $img = $imgs[0];        
           $medium = wp_get_attachment_image_src($img->ID, 'medium');  
           $enddate = get_post_meta($post->ID, 'parteneriat-sfarsit', true);
+          //global $wplogger;
+          //$wplogger->log('enddate='.$enddate);
           $expired = false;
           if ($enddate) {
-            $split = explode("-", $enddate);
-            $expired = (mkdate(0, 0, 0, int($split[1]), int($split[2]), int($split[0])) < time());
+            $split = explode("-", $enddate);            
+            //$expired = (mkdate(0, 0, 0, int($split[1]), int($split[2]), int($split[0])) < time());
           }
           if (!($expired)) { ?>
             <li>

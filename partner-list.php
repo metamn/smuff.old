@@ -21,7 +21,7 @@
 		  <h2><?php the_title(); ?></h2>
 		  
 		  
-			<div class="entry column span-18">
+			<div class="entry block">
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>				
 			</div>
 			
@@ -39,16 +39,12 @@
 		</div>
 		<?php endwhile; endif; ?>
 		
-		<?php if (comments_open()) {comments_template();}  ?>
-		
-	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
-		
 		
 		<!-- display sponsor list -->
 		<?php if ($partners->have_posts()) : ?>
 		  <br/>
 		  <br/>
-      <h3>Lista partenerilor Smuff</h3>
+      <h3 id="4">Lista partenerilor Smuff</h3>
       <table id="partners-table" class="tablesorter">
       <thead><tr>
         <th class="no-sort">Partener</th>

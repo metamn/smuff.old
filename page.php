@@ -13,7 +13,7 @@ get_header(); ?>
 		  <h2><?php the_title(); ?></h2>
 		  
 		  
-			<div class="entry column span-18">
+			<div class="entry block">
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>				
 			</div>
 			
