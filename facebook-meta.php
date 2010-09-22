@@ -1,10 +1,12 @@
+<meta property="fb:admins" content="csbartus"/>
+
 <?php if (is_single()) { 
   $imgs = post_attachements($post->ID);
   if ($imgs) {
     $img = $imgs[0];  
     $medium = wp_get_attachment_image_src($img->ID, 'medium');  
   }  
-?>
+?>  
   <meta property="og:title" content="<?php the_title(); ?>" />
   <meta property="og:type" content="product" />
   <?php if ($medium) { ?>

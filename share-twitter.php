@@ -1,6 +1,11 @@
-<div class="tweetmeme_button">
-  <script type="text/javascript">
-    tweetmeme_url = '<?php the_permalink(); ?>';
-  </script>
-  <script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+<div class="twitter-button">
+  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  <div>
+     <a href="http://twitter.com/share" class="twitter-share-button"
+        data-url="<?php the_permalink(); ?>"
+        data-via="smuff_ro"
+        data-text="<?php the_title() ?> de pe <?php bloginfo('name')?>"
+        data-related="anywhere:The Javascript API"
+        data-count="vertical">Tweet</a>
+  </div>
 </div>

@@ -619,6 +619,7 @@ img.small-image {
 #post-shopping {
   background: #444;
   color: #F25E18;  
+  height: 295px;
 }
 #post-shopping .wpsc_container .imagecol {
   display: none;
@@ -655,23 +656,35 @@ div.thanks-error {
 
 #single #post-operations {
   padding: .5em !important;
-  padding-bottom: 2.5em !important;
+  padding-bottom: 1em !important;
+  margin-top: 1.2em;
 }
-#single ul.inline-list {
-  margin: 0;
+#single #post-operations hr {
+  margin-bottom: .5em !important
 }
-#single .facebook-like {
-  position: absolute;
+#single #post-operations table {
+  margin-bottom: 0;
+}
+#single #post-operations table, #single #post-operations th, #single #post-operations td {
+  vertical-align: top;
+}
+#single td.fblike {
+  padding-top: 1.5em;
 }
 #single #fb_share_1 {
-  margin-left: 4px !important;
+  margin-left: 0px !important;
+  float: left !important;
 }
 #post-operations img {
   border: none;
 }
 
 #single #post-sponsor {
-  margin-top: 1em;
+  margin: 1em 0 0;
+  height: 170px;
+}
+#single #sidebar #home-news {
+  margin: 0;
 }
 
 
@@ -869,7 +882,7 @@ width:96%;
 }
 #home-sponsor h3 {
   /*margin-top: 15.7em;*/
-  margin-top: 8.5em;
+  margin-top: 6.5em;
 }
 #home-sponsor ul {
   margin: 1em 0 0;
@@ -1467,6 +1480,105 @@ input.button-to-link {
 }
 
 
+/* Twitter friends
+*/
+
+/*---- Users ----*/
+div.tf-users{
+	/* fixed height so container will not flicker within transitions */
+	height:192px;	
+	overflow:hidden;	
+}
+/* user img link*/
+div.tf-users a{ 
+	display:block;
+	float:left;
+	margin-right: .5em;
+}
+/* user img */
+div.tf-users img{ }
+
+/*---- Tweets ----*/
+div.tf-tweet{
+	/* fixed height so container will not flicker with different length tweets  */
+	height:100px;
+	overflow:hidden;
+}
+/* tweet li */
+div.tf-tweet li{
+	border:silver 1px solid;
+	position:relative;
+	padding:2px;
+	list-style-type:none;
+	margin:1px 0;
+	overflow:hidden;
+}
+
+/* tweet author avatar */
+div.tf-tweet span.tf-avatar{
+	display:block;
+	width:48px;
+	height:48px;
+	margin:0 2px 0 2px;
+	left:0;
+	position:absolute;
+	overflow:hidden;
+}
+/* author name */
+div.tf-tweet strong a{
+	margin-right:5px;
+}
+/* tweet body */
+div.tf-tweet span.tf-body {
+	display:block;
+	margin-left:55px;
+}
+/* tweet content */
+div.tf-tweet span.tf-content{
+}
+/* tweet date and source */
+div.tf-tweet span.tf-meta {
+	color:#999999;
+	display:block;
+	font-size:0.764em;
+	margin:3px 0 0;
+}
+div.tf-tweet span.tf-meta a{
+	color:#999999;
+	text-decoration:none;
+}
+div.tf-tweet span.tf-meta a:hover{
+	text-decoration:underline;
+}
+/* customize date link */
+div.tf-tweet a.tf-date { }
+/* customize source link */
+div.tf-tweet a.tf-source { }
+/* customize links */
+div.tf-tweet a.tf-link { }
+/* customize @user links */
+div.tf-tweet a.tf-at { }
+/* customize #hashtags links */
+div.tf-tweet a.tf-hashtag { }
+
+/* ---- Info Link ----- */
+div.tf-info{
+	text-align:right;
+	display: none;
+}
+div.tf-info a{
+	text-decoration:none;
+	font-size:9px;
+	font-weight:bolder;
+	color:gray;
+	font-family:tahoma;
+}
+div.tf-header h2 {
+  display: inline;
+  position: relative;
+  top: -.5em;
+  margin-left: .5em;
+}
 
 
 

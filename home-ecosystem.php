@@ -7,6 +7,19 @@
       $args = array(); 
       echo pmcWidgetDisplay($args); 
     ?>
+    
+    <script type="text/javascript" src="http://twitter-friends-widget.googlecode.com/files/jquery.twitter-friends-1.0.min.js"></script>
+
+    <div class="twitter-friends" options="{
+       username:'smuff_ro'
+       ,header:'<a href=\'_tp_\'><img src=\'_ti_\'/></a><h2>_fo_ prieteni</h2>'
+       ,user_animate:'width'
+       ,users:50
+       ,user_image:32
+    }"></div>
+    
+    
+    
   </div>
 
   <div id="col-2" class="column prepend-1 span-8 last">

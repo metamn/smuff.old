@@ -34,6 +34,7 @@
         <div class="clearfix"></div>
         <div class="navi"></div>			          
       <?php } ?>
+      
     </div>
     
     <div id="post-meta" class="column span-6 last">
@@ -48,32 +49,19 @@
       </div>
       <div id="post-operations" class="box">         
          <?php edit_post_link('Modificare articol', '<span class="ui-icon ui-icon-document"/></span>', '<hr/>'); ?>
-         <ul class="inline-list">
-          <li><?php include "share-twitter.php" ?></li>
-          <li><?php include "share-facebook.php" ?></li>
-          <li class="facebook-like"><?php include "share-facebook-like.php" ?></li>
-        </ul>        
-      </div>
-      
-      <div id="post-sponsor">
-        <?php 
-          $main_cat = page_name(is_category(), is_single());
-          
-          $sponsor = sponsor_post($main_cat);
-          if ($sponsor) {
-            $imgs = post_attachements($sponsor->ID);
-            $img = $imgs[0];
-            $medium = wp_get_attachment_image_src($img->ID, 'medium'); ?>
-        
-            In parteneriat cu
-            <br/>  
-            <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
-              <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
-            </a>
-          <?php } ?>
-      </div>
+         <table>
+          <tr>
+            <td><?php include "share-twitter.php" ?></td>
+            <td><?php include "share-facebook.php" ?></td>
+          </tr>
+          <tr>
+            <td colspan=2 class="fblike"><?php include "share-facebook-like.php" ?></td>
+          </tr>
+          </table>           
+      </div>      
     </div>
   </div>
+ 
 
   <div class="entry">
     <div id="accordion">
