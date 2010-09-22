@@ -28,7 +28,7 @@ License: GPL2
 
 
 
-/* Admin
+/* Plugin scheleton
 */
 
 add_action('admin_menu', 'my_plugin_menu');
@@ -37,15 +37,14 @@ add_action('admin_menu', 'my_plugin_menu');
 function my_plugin_menu() {
   add_menu_page('Datafeed', 'Datafeed', 'manage_options', 'datafeed-menu', 'datafeed_main_page' );
   
-  add_submenu_page('datafeed-menu', 'GoShopping', 'GoShopping', 'manage_options', 'datafeed-goshopping', 'goshopping_options');
+  add_submenu_page('datafeed-menu', 'Marcare produse', 'Marcare produse', 'manage_options', 'datafeed-shops', 'shops_options');
   add_action( 'admin_init', 'register_options' );
 }
 
 // Adding DB field in Options database
 function register_options() {
-  register_setting( 'datafeed', 'goshopping' );
+  //register_setting( 'datafeed', 'datafeed_shops' );
 }
-
 
 // Main datafeed dashboard
 function datafeed_main_page() {
@@ -54,70 +53,149 @@ function datafeed_main_page() {
   }
   
   echo '<div class="wrap">';
-  echo '<h2>Datafeed</h2>';
+  echo '<h2>Generare datafeed</h2>';
   echo '</div>';
 }
 
-
-/* Goshopping
-*/
-
 // Main function on Admin screen
-function goshopping_options() {
+function shops_options() {
 
   if (!current_user_can('edit_posts'))  {
     wp_die( 'Nu aveti drepturi suficiente de acces.' );
   }
   
   echo '<div class="wrap">';
-  echo '<h2>GoShopping</h2>';
+  echo '<h2>Marcare produse pentru Datafeed</h2>';
   
   if ($_POST) {
-    goshopping_process_form($_POST);
+    datafeed_process_form($_POST);
   } else { 
-    goshopping_display_form();
+    datafeed_display_form();
   }
   
   echo '</div>';
 }
 
 
+
+
+// Plugin body
+//-------------
+
+
+
 // Precessing input
-function goshopping_process_form($data) {
-  echo 'processing ... ' . '<br/>';
-  echo 'hidden = ' . $data['hide'];
-  $posts = $data['posts'];
-  print_r($posts);
+function datafeed_process_form($data) {
+  $shopmania = $data['shopmania'];  
+  $bizoo = $data['bizoo']; 
+  $go4it = $data['go4it']; 
+  $youmago = $data['youmago']; 
+  $magazineonline = $data['magazineonline']; 
+  $goshopping = $data['goshopping'];  
+  
+  $posts = get_posts('numberposts=-1&category=10');
+  if ($posts) {
+    foreach ($posts as $p) {
+      set_meta_checked($p->ID, $p->post_title, $shopmania, 'shopmania');
+      set_meta_checked($p->ID, $p->post_title, $bizoo, 'bizoo');
+      set_meta_checked($p->ID, $p->post_title, $go4it, 'go4it');
+      set_meta_checked($p->ID, $p->post_title, $youmago, 'youmago');
+      set_meta_checked($p->ID, $p->post_title, $magazineonline, 'magazineonline');
+      set_meta_checked($p->ID, $p->post_title, $goshopping, 'goshopping');
+      echo '<br/>';          
+    }
+  }  
 }
 
 // Displaying a form
-function goshopping_display_form() {
+function datafeed_display_form() {
 ?>
-<form method="post" action="">
-    <?php settings_fields( 'datafeed' ); ?>
+<form method="post" action="">    
     <input type="hidden" name="hide" value="1">
-    <ul>
+    <table>
+      <tr>
+        <td>Produs Smuff</td>
+        <td>shopmania</td>
+        <td>bizoo</td>
+        <td>go4it</td>
+        <td>youmago</td>
+        <td>magazine-online</td>
+        <td>goshopping</td>
+        <td><input type="submit" class="button-primary" value="Run" /></td>
+      </tr>  
       <?php 
         $posts = get_posts('numberposts=-1&category=10');
         if ($posts) {
           foreach ($posts as $p) {
-            $meta = get_post_meta($p->ID, 'goshopping', true);
-            if (!($meta == '')) {
-              $checked = 'checked';
-            } else {
-              $checked = '';
-            }
-            echo '<li><input type="checkbox" name="posts[]" value="' . $p->ID . '" '. $checked .' /> '. $p->post_title .'</li>';
-            echo '<br/>';
-          }
+            $shopmania = get_meta_checked($p->ID, 'shopmania');
+            $bizoo = get_meta_checked($p->ID, 'bizoo');
+            $go4it = get_meta_checked($p->ID, 'go4it');
+            $youmago = get_meta_checked($p->ID, 'youmago');
+            $magazineonline = get_meta_checked($p->ID, 'magazineonline');
+            $goshopping = get_meta_checked($p->ID, 'goshopping'); ?>
+            <tr>
+              <td><?php echo short_name($p->post_title)?></td>
+              <td><input type="checkbox" name="shopmania[]" value="<?php echo $p->ID ?>" <?php echo $shopmania ?>/></td>
+              <td><input type="checkbox" name="bizoo[]" value="<?php echo $p->ID ?>" <?php echo $bizoo ?>/></td>
+              <td><input type="checkbox" name="go4it[]" value="<?php echo $p->ID ?>" <?php echo $go4it ?>/></td>
+              <td><input type="checkbox" name="youmago[]" value="<?php echo $p->ID ?>" <?php echo $youmago ?>/></td>
+              <td><input type="checkbox" name="magazineonline[]" value="<?php echo $p->ID ?>" <?php echo $magazineonline ?>/></td>
+              <td><input type="checkbox" name="goshopping[]" value="<?php echo $p->ID ?>" <?php echo $goshopping ?>/></td>
+            </tr>            
+          <?php }
         }
       ?>
-    </ul>
-    
-    <p class="submit">
-      <input type="submit" class="button-primary" value="Run" />
-    </p>
+      <tr><td><input type="submit" class="button-primary" value="Run" /></td></tr>
+    </table>   
 </form>
 <?php }
+
+
+
+
+// Helper functions
+// ----------------
+
+
+// Updates a posts' meta field
+// - $id = post id
+// - $title = post title, for the output message
+// - $meta = the array containing the checkboxes
+// - $meta_name = 'shopmania' or 'go4it'
+function set_meta_checked($id, $title, $meta, $meta_name) {
+  if ($meta) {
+    if (in_array($id, $meta)) {
+      echo 'Adding '. $meta_name .' for ' . $title . '<br/>';
+      add_post_meta($id, $meta_name, 1);
+    } else {        
+      delete_post_meta($id, $meta_name);
+    }
+  } else {
+    delete_post_meta($id, $meta_name);
+  }  
+}
+
+// Checks if a product is added to a shop or not using post's meta field
+function get_meta_checked($id, $shopname) {
+  $s = get_post_meta($id, $shopname, true);
+  if (!($s == '')) {
+    return 'checked';
+  } else {
+    return '';
+  }
+}
+
+
+// Shorten product name
+function short_name($name) {
+  $s = explode(' -- ', $name);
+  if (!$s[1]) {
+    $s = explode(' — ', $name);
+  }
+  if (!$s[1]) {
+    $s = explode(' – ', $name);
+  }
+  return $s[0];
+}
 
 ?>
