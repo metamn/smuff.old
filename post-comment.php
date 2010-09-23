@@ -9,7 +9,7 @@
         </div>
         <div class="post-oneliner-body span-12 last">
           <p class="comment-content">
-            <?php echo $comment->comment_content ?>
+            "<?php echo $comment->comment_content ?>"
           </p>          
         </div>
       <?php } ?>

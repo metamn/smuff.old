@@ -1143,6 +1143,8 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 #post-body p.comment-content {
   background: #DFDBD0;
   padding-top: .2em;
+  font-style: italic;
+  font-size: larger;fs
 }
 #post-body .tumblr a p {
   font-size: large;
