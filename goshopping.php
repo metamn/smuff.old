@@ -1,6 +1,6 @@
 <?php
   /*
-  Template Name: Shopmania
+  Template Name: GoShopping
    * @package WordPress
    * @subpackage Default_Theme
    */
@@ -8,21 +8,23 @@
 
 <?php 
 
-// Datafeed for shopmania
+// Datafeed for goshopping
 // Syntax: 
-// Telefoane Mobile|LG||12345|LG KE800|Aici este descrierea produsului...|http://www.example.com/product.php?id=12345|http://www.example.com/images/12345.jpg|156.00|RON
+// Categorie | Producator | Model | Cod produs | Titlu produs | Descriere produs | URL produs | URL imagine produs | Pret produs | Moneda
 
-$separator = "|";
+
+$separator = " | ";
 $currency = "RON";
 
 $posts = get_posts('numberposts=-1&category=10');
 if ($posts) {
   foreach ($posts as $p) {
     $id = $p->ID;
-    $yes = get_post_meta($id, 'shopmania', true);
+    $yes = get_post_meta($id, 'goshopping', true);
     if ($yes) {
       $category = $yes;
-      $brand = get_post_meta($id, 'brand', true);
+      $brand = '';
+      $model = '';
       $product_id = get_post_meta($id, 'product_id', true);
       $title = product_name($product_id);
       $description = product_excerpt($p->post_content);
@@ -34,8 +36,7 @@ if ($posts) {
       $price = product_price($id);
             
       print
-      $category . $separator .
-      $brand . $separator .
+      $category . ' ||| ' .
       $product_id . $separator .
       $title . $separator .
       $description . $separator .

@@ -156,7 +156,7 @@ function set_meta_checked($meta, $meta_name) {
         delete_post_meta($key, $meta_name);
       } else {
         echo 'Adding '. $meta_name .' for ' . $key . '<br/>';
-        add_post_meta($key, $meta_name, $value);
+        update_post_meta($key, $meta_name, $value);
       }
     }
   } else {
