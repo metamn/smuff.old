@@ -86,25 +86,12 @@ function shops_options() {
 
 // Precessing input
 function datafeed_process_form($data) {
-  $shopmania = $data['shopmania'];  
-  $bizoo = $data['bizoo']; 
-  $go4it = $data['go4it']; 
-  $youmago = $data['youmago']; 
-  $magazineonline = $data['magazineonline']; 
-  $goshopping = $data['goshopping'];  
-  
-  $posts = get_posts('numberposts=-1&category=10');
-  if ($posts) {
-    foreach ($posts as $p) {
-      set_meta_checked($p->ID, $p->post_title, $shopmania, 'shopmania');
-      set_meta_checked($p->ID, $p->post_title, $bizoo, 'bizoo');
-      set_meta_checked($p->ID, $p->post_title, $go4it, 'go4it');
-      set_meta_checked($p->ID, $p->post_title, $youmago, 'youmago');
-      set_meta_checked($p->ID, $p->post_title, $magazineonline, 'magazineonline');
-      set_meta_checked($p->ID, $p->post_title, $goshopping, 'goshopping');
-      echo '<br/>';          
-    }
-  }  
+  set_meta_checked($data['shopmania'], 'shopmania'); 
+  set_meta_checked($data['bizoo'], 'bizoo'); 
+  set_meta_checked($data['go4it'], 'go4it'); 
+  set_meta_checked($data['youmago'], 'youmago'); 
+  set_meta_checked($data['magazineonline'], 'magazineonline'); 
+  set_meta_checked($data['goshopping'], 'goshopping');   
 }
 
 // Displaying a form
@@ -135,12 +122,12 @@ function datafeed_display_form() {
             $goshopping = get_meta_checked($p->ID, 'goshopping'); ?>
             <tr>
               <td><?php echo short_name($p->post_title)?></td>
-              <td><input type="checkbox" name="shopmania[]" value="<?php echo $p->ID ?>" <?php echo $shopmania ?>/></td>
-              <td><input type="checkbox" name="bizoo[]" value="<?php echo $p->ID ?>" <?php echo $bizoo ?>/></td>
-              <td><input type="checkbox" name="go4it[]" value="<?php echo $p->ID ?>" <?php echo $go4it ?>/></td>
-              <td><input type="checkbox" name="youmago[]" value="<?php echo $p->ID ?>" <?php echo $youmago ?>/></td>
-              <td><input type="checkbox" name="magazineonline[]" value="<?php echo $p->ID ?>" <?php echo $magazineonline ?>/></td>
-              <td><input type="checkbox" name="goshopping[]" value="<?php echo $p->ID ?>" <?php echo $goshopping ?>/></td>
+              <td><input type="text" name="shopmania[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $shopmania ?>"/></td>
+              <td><input type="text" name="bizoo[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $bizoo ?>"/></td>
+              <td><input type="text" name="go4it[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $go4it ?>"/></td>
+              <td><input type="text" name="youmago[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $youmago ?>"/></td>
+              <td><input type="text" name="magazineonline[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $magazineonline ?>"/></td>
+              <td><input type="text" name="goshopping[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $goshopping ?>"/></td>
             </tr>            
           <?php }
         }
@@ -162,27 +149,25 @@ function datafeed_display_form() {
 // - $title = post title, for the output message
 // - $meta = the array containing the checkboxes
 // - $meta_name = 'shopmania' or 'go4it'
-function set_meta_checked($id, $title, $meta, $meta_name) {
+function set_meta_checked($meta, $meta_name) {
   if ($meta) {
-    if (in_array($id, $meta)) {
-      echo 'Adding '. $meta_name .' for ' . $title . '<br/>';
-      add_post_meta($id, $meta_name, 1);
-    } else {        
-      delete_post_meta($id, $meta_name);
+    foreach ($meta as $key => $value) {
+      if ($value == '') {
+        delete_post_meta($key, $meta_name);
+      } else {
+        echo 'Adding '. $meta_name .' for ' . $key . '<br/>';
+        add_post_meta($key, $meta_name, $value);
+      }
     }
   } else {
-    delete_post_meta($id, $meta_name);
-  }  
+    delete_post_meta($key, $meta_name);
+  }
 }
 
 // Checks if a product is added to a shop or not using post's meta field
 function get_meta_checked($id, $shopname) {
   $s = get_post_meta($id, $shopname, true);
-  if (!($s == '')) {
-    return 'checked';
-  } else {
-    return '';
-  }
+  return $s;
 }
 
 
