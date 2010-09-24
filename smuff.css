@@ -1150,8 +1150,12 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
   font-size: large;
   padding-bottom: 1em;
 }
-
-
+#post-body .tumblr {
+  padding: .5em;
+}
+#post-body .tumblr a.title {
+  text-decoration: none;
+}
 
 
 

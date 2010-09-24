@@ -1,7 +1,7 @@
 <div id="post-<?php the_ID(); ?>" class="post block default">
   <div id="post-body" class="column span-18">
     <?php 
-      $content = explode('<br/>', $post->post_content);
+      $content = explode('<!--more-->', $post->post_content);      
     ?>
     <div class="post-oneliner-header span-6">
       <a href="<?php echo get_category_link($main_category) ?>">#international</a>
@@ -10,25 +10,16 @@
         <?php echo $content[0]; ?>
       </div>
     </div>
-    <div class="entry tumblr span-12 last">
-      <a href="<?php the_permalink() ?>" title="Link direct la sursa articol"><?php echo $content[2]; ?></a>
+    <div class="entry span-12 last">
+      <div class="tumblr">
+        <h3><a class="title" href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_title() ?></a></h3>
+        <?php echo $content[1]; ?>
+      </div>
       <!-- not dry, post-meta-share cannot be used here -->
       <div class="meta-and-share">
-        <div class="meta span-6">
+        <div class="meta block">
           <?php include "post-meta-and-share.php" ?>	
-        </div>
-        <div class="modify-post span-2 last">
-          &nbsp;
-          <?php edit_post_link('Modificare', '', ''); 	?>
-        </div>
-        <div class="share span-4 last">
-          <div class="facebook opacity-3 span-2 last">
-            <?php if (function_exists('fbshare_manual')) echo fbshare_manual(); ?> 
-          </div>
-          <div class="twitter opacity-3 span-2 last">
-            <?php include "share-twitter.php" ?>
-          </div>
-        </div>     
+        </div>                   
       </div>        
     </div> 					          
   </div>

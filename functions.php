@@ -62,8 +62,7 @@ function get_sponsor_category($post_categories, $parent_id) {
     }   
   }
   
-  global $wplogger;
-	$wplogger->log('sponsor='.$slug);
+  
   $c = get_category(96);
   $suffix = $slug . "-" . $c->slug;
   
