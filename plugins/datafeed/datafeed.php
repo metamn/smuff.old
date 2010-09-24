@@ -35,9 +35,9 @@ add_action('admin_menu', 'my_plugin_menu');
 
 // Adding menus and submenus
 function my_plugin_menu() {
-  add_menu_page('Datafeed', 'Datafeed', 'manage_options', 'datafeed-menu', 'datafeed_main_page' );
+  add_menu_page('Datafeed', 'Datafeed', 'delete_others_posts', 'datafeed-menu', 'datafeed_main_page' );
   
-  add_submenu_page('datafeed-menu', 'Marcare produse', 'Marcare produse', 'manage_options', 'datafeed-shops', 'shops_options');
+  add_submenu_page('datafeed-menu', 'Marcare produse', 'Marcare produse', 'delete_others_posts', 'datafeed-shops', 'shops_options');
   add_action( 'admin_init', 'register_options' );
 }
 
@@ -48,7 +48,7 @@ function register_options() {
 
 // Main datafeed dashboard
 function datafeed_main_page() {
-  if (!current_user_can('edit_posts'))  {
+  if (!current_user_can('delete_others_posts'))  {
     wp_die( 'Nu aveti drepturi suficiente de acces.' );
   }
   
@@ -60,7 +60,7 @@ function datafeed_main_page() {
 // Main function on Admin screen
 function shops_options() {
 
-  if (!current_user_can('edit_posts'))  {
+  if (!current_user_can('delete_others_posts'))  {
     wp_die( 'Nu aveti drepturi suficiente de acces.' );
   }
   
