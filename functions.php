@@ -363,7 +363,7 @@ function display_post_categories($post_categories, $parent_id) {
   $ret = "";
   
   // Patching ....
-  if ($parent_id == 22) {
+  if (in_array($parent_id, array(22,9))) {
     $cat = $parent_id;
   } else {
     // First category

@@ -15,7 +15,7 @@
       <!-- not dry, post-meta-share cannot be used here -->
       <div class="meta-and-share">
         <div class="meta span-6">
-          <?php include "post-meta.php" ?>	
+          <?php include "post-meta-and-share.php" ?>	
         </div>
         <div class="modify-post span-2 last">
           &nbsp;

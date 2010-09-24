@@ -30,7 +30,7 @@ get_header();
 		          $main_category = 39;
 		          include "post-comment.php";
 		        } elseif (in_category(26)) { //tumblr
-		          $main_category = 26; //post
+		          $main_category = 9; //post
 		          include "post-tumblr.php";
 		        } elseif (in_category(18)) { //social
 		          $main_category = 18;
