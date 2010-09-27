@@ -845,8 +845,8 @@ width:96%;
 #home-menu li.search-link {
   cursor: pointer;
 }
-#home-menu li.old-site {
-  /*background: #DFDBD0;*/
+#home-menu li.highlight {
+  background: #DFDBD0;
 }
 #home-menu li.old-site a {
   padding: .5em 0;
@@ -881,8 +881,7 @@ width:96%;
   margin: 0;
 }
 #home-sponsor h3 {
-  /*margin-top: 15.7em;*/
-  margin-top: 6.5em;
+  margin-top: 39.9em;
 }
 #home-sponsor ul {
   margin: 1em 0 0;

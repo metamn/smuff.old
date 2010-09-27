@@ -25,7 +25,7 @@
     <a href="http://twitter.com/smuff_ro" title="twitter" alt="twitter"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter_t_logo.png"></a>
     <a title="youtube" alt="youtube" target="_blank" href="http://www.youtube.com/user/smuffro">
       <img class="youtube" src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.png" /></a>
-    <a href="<?php echo get_page_link(469); ?>" title="rss" alt="rss"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
+    <a href="http://feeds.feedburner.com/smuff" title="rss" alt="rss"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
   </div>
 </div>  
   

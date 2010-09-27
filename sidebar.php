@@ -31,9 +31,11 @@
     <?php } ?>
     
     <?php include "home-news.php" ?>
+    <!--
     <center>
       <a href="http://www.letsdoitromania.ro" target="_blank"> <img title="Curatenie in toata tara. Intr-o singura zi!" src="http://www.letsdoitromania.ro/wp-content/uploads/2010/02/160.gif" border="0" alt="Let’s Do It, Romania!" /></a>
     </center>
+    -->
     <?php include "home-banners.php" ?>
 </div>
 
