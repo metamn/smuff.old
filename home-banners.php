@@ -2,7 +2,7 @@
   <?php
     if (is_front_page()) {
             
-      $partners = query_posts2('posts_per_page=5&cat=96');  
+      $partners = query_posts2('posts_per_page=7&cat=96');  
       if ($partners->have_posts()) {
         echo '<h3>Parteneri</h3>';
         echo '<center><ul>';

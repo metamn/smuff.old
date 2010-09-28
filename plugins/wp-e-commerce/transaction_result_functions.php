@@ -1,6 +1,10 @@
 <?php
 function transaction_results($sessionid, $echo_to_screen = true, $transaction_id = null) {
 	global $wpdb,$wpsc_cart, $wpsc_shipping_modules;
+	
+	
+	// cs
+	$ga_transactions = '';
 
 	//$curgateway = get_option('payment_gateway');
 	$curgateway = $wpdb->get_var("SELECT gateway FROM ".WPSC_TABLE_PURCHASE_LOGS." WHERE sessionid='$sessionid'");
@@ -69,7 +73,11 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 		$product_list='';
 		
 		if(($cart != null) && ($errorcode == 0)) {
-				foreach($cart as $row) {
+		
+		  // cs
+		  $ga_items = '';
+		
+			foreach($cart as $row) {
 				$link = "";
 				$product_data = $wpdb->get_row("SELECT * FROM `".WPSC_TABLE_PRODUCT_LIST."` WHERE `id`='{$row['prodid']}' LIMIT 1", ARRAY_A) ;
 				if($purchase_log['email_sent'] != 1) {
@@ -94,6 +102,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 						AND `".WPSC_TABLE_DOWNLOAD_STATUS."`.`id` NOT IN ('".implode("','",$previous_download_ids)."')",ARRAY_A);
 					$link=array();
 						//exit('IM HERE'.$errorcode.'<pre>'.print_r($download_data).'</pre>');
+					
 					if(sizeof($download_data) != 0) {
 						foreach($download_data as $single_download){
 							if($single_download['uniqueid'] == null){// if the uniqueid is not equal to null, its "valid", regardless of what it is
@@ -109,7 +118,8 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 					$previous_download_ids[] = $download_data['id'];
 					do_action('wpsc_confirm_checkout', $purchase_log['id']);
 				}
-			//	do_action('wpsc_confirm_checkout', $purchase_log['id']);
+			
+			  //	do_action('wpsc_confirm_checkout', $purchase_log['id']);
 				$shipping = $row['pnp'];
 				$total_shipping += $shipping;
 		
@@ -147,13 +157,17 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 					$variation_list = " (".stripslashes(implode(", ",$value_names)).")";
 				}
 			
+			
+			  $ga_items .= "_gaq.push(['_addItem','".$purchase_log['id']."','".$row['prodid']."','".$product_data['name'];
+			  $ga_items .= "','".stripslashes($variation_list)."','".$row['price']."','".$row['quantity']."']);";
+			  
+			
 				if($link != '' && (!empty($link))) {
 				  $additional_content = apply_filters('wpsc_transaction_result_content', array("purchase_id" =>$purchase_log['id'], "cart_item"=>$row, "purchase_log"=>$purchase_log));
+					
 					if(!is_string($additional_content)) {
 				    $additional_content = '';
-				  }
-
-				  
+				  }				  
 					//$product_list .= " - ". $product_data['name'] . stripslashes($variation_list) ."  ".$message_price ." ".__('Click to download', 'wpsc').":\n\r $link\n\r".$additional_content;
 					//$product_list_html .= " - ". $product_data['name'] . stripslashes($variation_list) ."  ".$message_price ."&nbsp;&nbsp;<a href='$link'>".__('Click to download', 'wpsc')."</a>\n". $additional_content;
 
@@ -203,6 +217,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				// echo $total;
 				// $message.= "\n\r";
 				$product_list.= "Numar comanda: ".$purchase_log['id']."\n\r";
+				
 				if($purchase_log['discount_value'] > 0) {
 					$discount_email.= "Reducere"."\n\r: ";
 					$discount_email .=$purchase_log['discount_data'].' : '.nzshpcrt_currency_display($purchase_log['discount_value'], 1, true)."\n\r";
@@ -223,6 +238,26 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				} else {
 					$report_id = "Nr. comanda ".$purchase_log['id']."\n\r";
 				}
+        
+        $ga_transactions .= "_gaq.push(['_addTrans','" . $purchase_log['id'] . "','Smuff','" . $total . "','0','0','city', 'state', 'province']);";
+        $ga_transactions .= $ga_items;
+        
+?>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1587157-1']);
+  _gaq.push(['_trackPageview']);
+
+  <?php echo $ga_transactions ?>
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php
         
         
 				//echo "<pre>".print_r($purchase_log,true)."</pre>";

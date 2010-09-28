@@ -38,7 +38,7 @@
     <div class="modify-post span-6 last">
       &nbsp;
     </div>
-    <?php include "post-share.php" ?>
+    
   </div>
   
   

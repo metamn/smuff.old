@@ -13,6 +13,9 @@
   ?>
 </div>
 
+
+<!-- GA for Ecommerce goes into transaction_result_functions.php -->
+<?php if (!(is_page(429))) { ?>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -24,8 +27,8 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
+<?php } ?>
 
 </div> <!-- content-container opened in header -->
 
