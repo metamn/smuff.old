@@ -5,6 +5,7 @@
  */
 
 get_header(); 
+
 ?>
 	<div id="blog" class="block">	  
     <div class="block">
@@ -19,7 +20,7 @@ get_header();
 	  <div id="content" class="block">
 	    <?php if (have_posts()) : 
 	      $counter = 1;
-	      $random = rand(3, 10);
+	      $random = rand(3, 9);
 	      ?>
 		    <?php while (have_posts()) : the_post(); ?>
 		      <?php 

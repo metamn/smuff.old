@@ -880,8 +880,9 @@ width:96%;
   padding: 1.5em 2em;
   margin: 0;
 }
-#home-sponsor h3 {
-  margin-top: 39.9em;
+#home-sponsor {
+  top: 168em;
+  position: absolute;
 }
 #home-sponsor ul {
   margin: 1em 0 0;
@@ -1631,5 +1632,9 @@ ul.inline-list li {
 }
 .opacity {
   opacity: .8;
+}
+
+.hidden {
+  display: none;
 }
 

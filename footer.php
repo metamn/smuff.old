@@ -7,6 +7,10 @@
   <p>    
     &copy; 2006-2010 Smuff.ro. <a href="<?php echo get_page_link(466);?>">Toate drepturile rezervate</a>.
   </p>	
+  <?php 
+    $p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
+    if ($p) { echo $p->post_content; }
+  ?>
 </div>
 
 <script type="text/javascript">
