@@ -16,6 +16,14 @@
 	    echo "</div>\n\r";
     }
     $_SESSION['wpsc_checkout_misc_error_messages'] =array();
+    
+    while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); 
+      if(wpsc_the_checkout_item_error() != ''): 
+		    echo "<div class='login_error'>\n\r";
+		    echo wpsc_the_checkout_item_error();
+		    echo "</div>\n\r";
+			endif;
+    endwhile;
 ?>
 
 
