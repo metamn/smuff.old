@@ -44,6 +44,13 @@
 		</div>
 	</center>
 	
+	<div id="partners">
+	  <?php 
+      $p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
+      if ($p) { echo $p->post_content; }
+    ?>
+	</div>
+	
 	
 	<?php if ( !bnc_wptouch_is_exclusive() ) { wp_footer(); } ?>
 </div>
@@ -52,5 +59,7 @@
 // WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
 // If you modify it for yourself, please keep the link credit *visible* in the footer (and keep the WordPress credit, too!) that's all we ask folks.
 ?>
+
+
 </body>
 </html>
