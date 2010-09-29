@@ -89,7 +89,7 @@ function datafeed_process_form($data) {
   set_meta_checked($data['shopmania'], 'shopmania'); 
   set_meta_checked($data['bizoo'], 'bizoo'); 
   set_meta_checked($data['go4it'], 'go4it'); 
-  set_meta_checked($data['youmago'], 'youmago'); 
+  set_meta_checked($data['allshops'], 'youmago'); 
   set_meta_checked($data['magazineonline'], 'magazineonline'); 
   set_meta_checked($data['goshopping'], 'goshopping');   
 }
@@ -105,7 +105,7 @@ function datafeed_display_form() {
         <td>shopmania</td>
         <td>bizoo</td>
         <td>go4it</td>
-        <td>youmago</td>
+        <td>allshops</td>
         <td>magazine-online</td>
         <td>goshopping</td>
         <td><input type="submit" class="button-primary" value="Run" /></td>
@@ -117,7 +117,7 @@ function datafeed_display_form() {
             $shopmania = get_meta_checked($p->ID, 'shopmania');
             $bizoo = get_meta_checked($p->ID, 'bizoo');
             $go4it = get_meta_checked($p->ID, 'go4it');
-            $youmago = get_meta_checked($p->ID, 'youmago');
+            $allshops = get_meta_checked($p->ID, 'allshops');
             $magazineonline = get_meta_checked($p->ID, 'magazineonline');
             $goshopping = get_meta_checked($p->ID, 'goshopping'); ?>
             <tr>
@@ -125,7 +125,7 @@ function datafeed_display_form() {
               <td><input type="text" name="shopmania[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $shopmania ?>"/></td>
               <td><input type="text" name="bizoo[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $bizoo ?>"/></td>
               <td><input type="text" name="go4it[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $go4it ?>"/></td>
-              <td><input type="text" name="youmago[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $youmago ?>"/></td>
+              <td><input type="text" name="allshops[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $allshops ?>"/></td>
               <td><input type="text" name="magazineonline[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $magazineonline ?>"/></td>
               <td><input type="text" name="goshopping[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $goshopping ?>"/></td>
             </tr>            
