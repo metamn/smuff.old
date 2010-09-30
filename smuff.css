@@ -237,7 +237,7 @@ table.total td.c3 {
 }
 
 .wpsc_checkout_forms #info {
-  background: #FDF3C6;
+  background: #fefae7;
   width: 645px;
   margin: 1.5em 0;
   padding: 1em 0;
@@ -287,39 +287,40 @@ table.total td.c3 {
   border-bottom:25px solid transparent;  
 }
 .wpsc_checkout_forms .steps #step-1 {
-  background: #f25e18;  
+  background: #f79668;  
 }
 .wpsc_checkout_forms .step-1 .arrow-right {
-  border-left:25px solid #f25e18;
-  border-top:25px solid #26BF5A;
-  border-right:25px solid #26BF5A;
-  border-bottom:25px solid #26BF5A; 
+  border-left:25px solid #f79668;
+  border-top:25px solid #6ae192;
+  border-right:25px solid #6ae192;
+  border-bottom:25px solid #6ae192; 
 }
 .wpsc_checkout_forms .steps #step-2 {
-  background: #26BF5A;
-  color: #eee;    
+  background: #6ae192;
+  color: #fff;    
 }
 .wpsc_checkout_forms .step-2 .arrow-right {
-  border-left:25px solid #26BF5A;
-  border-top:25px solid #48C0D9;
-  border-right:25px solid #48C0D9;
-  border-bottom:25px solid #48C0D9;
+  border-left:25px solid #6ae192;
+  border-top:25px solid #80d3e5;
+  border-right:25px solid #80d3e5;
+  border-bottom:25px solid #80d3e5;
 }
 .wpsc_checkout_forms .steps #step-3 {
-  background: #48C0D9;  
-  color: #eee;
+  background: #80d3e5;  
+  color: #fff;
 }
 .wpsc_checkout_forms .step-3 .arrow-right {
-  border-left:25px solid #48C0D9;
+  border-left:25px solid #80d3e5;
 }
 
 
 #checkout #form {
-  background: #b79b70;
+  background: #d8d1c6;
   width: 380px;  
   -moz-border-radius:10px 10px 10px 10px;
 }
-#checkout #login {  
+#checkout #login input.make_purchase {
+  width: 90%;  
 }
 #checkout #login h4 {
   margin-top: 1.7em;
@@ -330,9 +331,18 @@ table.total td.c3 {
 }
 
 table.wpsc_checkout_table textarea, table.wpsc_checkout_table input.text {
-  width: 280px;
+  margin: 0;
 }
-
+table.wpsc_checkout_table textarea {
+  width: 30.5em;
+  height: 5em;
+}
+table.wpsc_checkout_table input.text {
+  width: 23em;
+}
+.hide-company-checkout-info {
+  display: none;
+}
 
 #checkout input.green {
   background: #26BF5A;

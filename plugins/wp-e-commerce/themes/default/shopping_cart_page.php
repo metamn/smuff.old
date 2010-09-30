@@ -246,7 +246,7 @@
     
     <div id="step-2" class="step column span-5 last">
       <span class="stepnr">2</span>
-      <span class="value">Trimit comanda</span>
+      <span class="value">Trimitere comanda</span>
     </div>
     <div class="column step-2 span-1 last arrow-vertical">
       <div class="arrow-right"></div>
@@ -254,8 +254,8 @@
     
     <div id="step-3" class="step column span-5 last">
       <span class="stepnr">3</span>
-      <span class="value">Primesc telefon si email</span>
-      <span class="value v2">de confirmare</span>
+      <span class="value">Primesc email si</span>
+      <span class="value v2">Smuff ma suna</span>
     </div>
     <div class="column step-3 span-1 last arrow-vertical">
       <div class="arrow-right"></div>
@@ -275,17 +275,7 @@
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
 			    <?php if(wpsc_is_shipping_details()) : ?>
-					    <tr>
-						    <td colspan ='2'>
-							    <br/><br/>
-							    <input type='checkbox' value='true' name='shippingSameBilling' id='shippingSameBilling' />
-							    <label for='shippingSameBilling'>Adresa de livrare este acelasi ca adresa de facturare?</label>						
-							    <br/>
-							    <input type='checkbox' value='true' name='contactBefore' id='contactBefore' />
-							    <label for='shippingSameBilling'>Doriti sa fiti contactat telefonic de catre curierat inainte de livrare?</label>													      
-							    <br/><br/>
-						    </td>
-					    </tr>
+					    
 			    <?php endif; ?>
 
 		      <?php if(wpsc_checkout_form_is_header() == true) : ?>
@@ -297,25 +287,28 @@
 			          </td>
 				    </tr>
 		      <?php else: ?>
-		      <?php if((!wpsc_uses_shipping()) && $wpsc_checkout->checkout_item->unique_name == 'shippingstate'): ?>
-		      <?php else : ?>
-		      		<tr <?php echo wpsc_the_checkout_item_error_class();?>>
-			        <td>
-				        <label for='<?php echo wpsc_checkout_form_element_id(); ?>'>
-				        <?php echo wpsc_checkout_form_name();?>
-				        </label>
-			        </td>
-			        <td>
-				        <?php echo wpsc_checkout_form_field();?>				
-		            <?php if(wpsc_the_checkout_item_error() != ''): ?>
-		              <p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
-			          <?php endif; ?>
-		          </td>
-		          </tr>
+		        <?php if((!wpsc_uses_shipping()) && $wpsc_checkout->checkout_item->unique_name == 'shippingstate'): ?>
+		        <?php else : ?>
+		        		<tr <?php echo wpsc_the_checkout_item_error_class();?>>
+			          <td colspan=2>
+				          <label for='<?php echo wpsc_checkout_form_element_id(); ?>'>
+				          <?php echo wpsc_checkout_form_name();?>
+				          </label>
+			            <br/>
+			            <?php echo wpsc_checkout_form_field();?>				
+		              <?php if(wpsc_the_checkout_item_error() != ''): ?>
+		                <p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
+			            <?php endif; ?>
+			            <?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_8") { ?>			              
+			                <br/><br/>
+			                <h4 class="note">Va rugam completati campurile de mai jos numai daca doriti factura pe firma.</h4>
+			                <br/>
+			            <?php } ?>
+		            </td>
+		            </tr>
+			      <?php endif; ?>		
 			    <?php endif; ?>		
-			    <?php endif; ?>		
-		    <?php endwhile; ?>
-		
+		    <?php endwhile; ?>		    
 		
 		    <?php if (get_option('display_find_us') == '1') : ?>
 		    <tr>
@@ -376,6 +369,7 @@
        		</td>
      	   </tr>
 		    <?php endif; ?>	
+		    
 		    <tr>
 		      <td></td>
 			    <td>
@@ -385,7 +379,7 @@
 				    <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 				     if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 					    <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					    <input type='submit' value='Trimit comanda' name='submit' class='make_purchase' />
+					    <input type='submit' value='Trimitere comanda' name='submit' class='make_purchase' />
 				    <?php }/* else: ?>
 				
 				    <br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />
@@ -420,7 +414,7 @@
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return; ?>
           <p>
-             <input type='submit' value="Trimit comanda" name='submit' class='make_purchase green' />
+             <input type='submit' value="Trimitere comanda" name='submit' class='make_purchase' />
           </p>
           <h4>Contul Dumneavoastra</h4>
           <ul class="info">
