@@ -7,7 +7,9 @@
 ?>
 
 
+
 <?php
+    // Error messages for checkout
     if(count($_SESSION['wpsc_checkout_misc_error_messages']) > 0) {
 	    echo "<div class='login_error'>\n\r";
 	    foreach((array)$_SESSION['wpsc_checkout_misc_error_messages'] as $user_error ) {
@@ -17,6 +19,7 @@
     }
     $_SESSION['wpsc_checkout_misc_error_messages'] =array();
     
+    // Error messages for invalid form fields
     while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); 
       if(wpsc_the_checkout_item_error() != ''): 
 		    echo "<div class='login_error'>\n\r";
@@ -30,7 +33,7 @@
 <table class="productcart">
 	<tr class="firstrow">
 		<td class='firstcol'></td>
-		<td><?php echo __('Produs'); ?></td>
+		<td class='productname'><?php echo __('Produs'); ?></td>
 		<td><?php echo __('Cantitate'); ?></td>
 		<!--
 		<?php if(wpsc_uses_shipping()): ?>
@@ -40,22 +43,21 @@
 		<td>Pret</td>
 		<td></td>
 	</tr>
-	<?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>
 	
+	<?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>	
 	  <?php 
 	    // Getting the original post item for the product
 	    $product_id = wpsc_cart_item_product_id();
 	    $post_id = post_id($product_id);
 	    $link = get_permalink($post_id);   
-	  ?>
-		
+	  ?>		
 		<tr class="product_row">
 			<td class="firstcol">
 			  <a href="<?php echo $link ?>">
 			    <img src='<?php echo wpsc_cart_item_image(48,48); ?>' alt='<?php echo wpsc_cart_item_name(); ?>' title='<?php echo wpsc_cart_item_name(); ?>' />
         </a>			   
 			</td>
-			<td class="firstcol">
+			<td class="productname firstcol">
 			  <a href="<?php echo $link ?>"><?php echo wpsc_cart_item_name(); ?></a>
 			</td>
 			<td>
@@ -83,9 +85,8 @@
 			</td>
 		</tr>
 	<?php endwhile; ?>
-	<?php //this HTML displays coupons if there are any active coupons to use ?>
-	<?php if(wpsc_uses_coupons()): ?>
-		
+	
+	<?php if(wpsc_uses_coupons()): ?>		
 		<?php if(wpsc_coupons_error()): ?>
 			<tr><td><?php echo __('Cuponul nu este valid'); ?></td></tr>
 		<?php endif; ?>
@@ -100,12 +101,18 @@
 		</tr>
 	<?php endif; ?>	
 	
-	
-		
-	
+	<!-- cant get cart total ...
+	<tr class="subtotal">
+	<td></td>
+	<td>Subtotal</td>
+	<td></td>
+	<td>12 RON</td>
+	<td></td>
+	</tr>
+	-->	
 	</table>
-	<?php  //this HTML dispalys the calculate your order HTML	?>
-
+	
+	
 	<?php if(isset($_SESSION['nocamsg']) && isset($_GET['noca']) && $_GET['noca'] == 'confirm'): ?>
 		<p class='validation-error'><?php echo $_SESSION['nocamsg']; ?></p>
 	<?php endif; ?>
@@ -123,56 +130,58 @@
 	?>
 	
 		
-	<?php do_action('wpsc_before_shipping_of_shopping_cart'); ?>
-	<div id='wpsc_shopping_cart_container'>
-	<?php if(wpsc_uses_shipping()) : ?>
 		
-		<table class="productcart">
-						
+	<?php 
+	// Shipping module
+	  do_action('wpsc_before_shipping_of_shopping_cart'); ?>
+	
+	<div id='wpsc_shopping_cart_container'>
+	<?php if(wpsc_uses_shipping()) : ?>		
+		<table class="shipping">						
 			<?php if (wpsc_have_morethanone_shipping_quote()) :?>
 				<?php while (wpsc_have_shipping_methods()) : wpsc_the_shipping_method(); ?>
-						<?php 	if (!wpsc_have_shipping_quotes()) { continue; } // Don't display shipping method if it doesn't have at least one quote ?>
-						<tr><td class='shipping_header' colspan='5'><h3>Metoda de livrare</h3></td></tr>
+						<?php if (!wpsc_have_shipping_quotes()) { continue; } // Don't display shipping method if it doesn't have at least one quote ?>						
+						<?php $cnt = 0; ?>
 						<?php while (wpsc_have_shipping_quotes()) : wpsc_the_shipping_quote();	?>
-							<tr>
-								<td colspan='3'>
-									<label for='<?php echo wpsc_shipping_quote_html_id(); ?>'><?php echo wpsc_shipping_quote_name(); ?></label>
-								</td>
-								<td style='text-align:center;'>
-									<label for='<?php echo wpsc_shipping_quote_html_id(); ?>'><?php echo wpsc_shipping_quote_value(); ?></label>
-								</td>
-								<td style='text-align:center;'>
-									<?php if(wpsc_have_morethanone_shipping_methods_and_quotes()): ?>
-										<input type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>' <?php echo wpsc_shipping_quote_selected_state(); ?>  onclick='switchmethod("<?php echo wpsc_shipping_quote_name(); ?>", "<?php echo wpsc_shipping_method_internal_name(); ?>")' value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
-									<?php else: ?>
-										<input <?php echo wpsc_shipping_quote_selected_state(); ?> disabled='disabled' type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>'  value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
-											<?php wpsc_update_shipping_single_method(); ?>
-									<?php endif; ?>
-								</td>
+						  <tr><td class="c1"></td>
+						  <?php if ($cnt == 0) { 
+						    $cnt += 1;
+						    echo '<td class="c2"><strong>Metoda de livrare</strong></td>';
+						  } else { 
+						    echo '<td class="c2"></td>';
+						  } ?>							  
+							<td class="c3"><?php echo wpsc_shipping_quote_name(); ?></td>
+							<td class="c4"><?php echo wpsc_shipping_quote_value(); ?></td>
+							<td class="c5">
+								<?php if(wpsc_have_morethanone_shipping_methods_and_quotes()): ?>
+									<input type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>' <?php echo wpsc_shipping_quote_selected_state(); ?>  onclick='switchmethod("<?php echo wpsc_shipping_quote_name(); ?>", "<?php echo wpsc_shipping_method_internal_name(); ?>")' value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
+								<?php else: ?>
+									<input <?php echo wpsc_shipping_quote_selected_state(); ?> disabled='disabled' type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>'  value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
+										<?php wpsc_update_shipping_single_method(); ?>
+								<?php endif; ?>
+							</td>
 							</tr>
 						<?php endwhile; ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
 			
-			<?php wpsc_update_shipping_multiple_methods(); ?>
-
-			
+			<?php wpsc_update_shipping_multiple_methods(); ?>			
 			<?php if (!wpsc_have_shipping_quote()) : // No valid shipping quotes ?>
-					</table>
-					</div>
+				</table>
+				</div>
 				<?php return; ?>
 			<?php endif; ?>
 		</table>
 	<?php endif;  ?>
 	
-	<table class="productcart">
+	<table class="total">
 	<?php if(wpsc_cart_tax(false) > 0) : ?>
-		<tr class="total_price total_tax">
-			<td colspan="3">
+		<tr>
+			<td class="c1"></td>
+			<td class="c2">
 				<?php echo wpsc_display_tax_label(true); ?>
-
 			</td>
-			<td colspan="2">
+			<td class="c3">
 				<span id="checkout_tax" class="pricedisplay checkout-tax"><?php echo wpsc_cart_tax(); ?></span>
 			</td>
 		</tr>
@@ -204,15 +213,15 @@
 
 		
 	
-	<tr class='total_price full_total'>
-		<td colspan='4'>
-		<h4>Total</h4>
+	<tr>
+		<td class="c1"></td>
+		<td class="c2">
+		  <h4><strong>Total</strong></h4>
 		</td>
-		<td colspan='1'>
-			<h4><span id='checkout_total' class="pricedisplay checkout-total"><?php echo wpsc_cart_total(); ?></span></h4>
+		<td class="c3">
+			<h4><strong><?php echo wpsc_cart_total(); ?></strong></h4>
 		</td>
-	</tr>
-	
+	</tr>	
 	</table>
 	
 	

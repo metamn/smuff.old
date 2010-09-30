@@ -178,20 +178,64 @@ div#widgetshoppingcart {
 /* Shopping cart / wp-e-commerce pages
 */
 
-
-.shop-user-info, .transaction-results {
-  background: #DFDBD0;
-  padding: 1em;
-  margin: 2em 0;
-}
-.productcart {
-  margin-bottom: 3em;
+table.productcart {
+  margin-bottom: 1em;
 }
 table.productcart tr.firstrow td {
   background-color: #CAC1B2 !important;
-  bortableder-left: 1px dotted #111111 !important;
+  border-left: 1px dotted #eee !important;
   font-weight: bold;
 }
+table.productcart tr.firstrow td.firstcol {
+  border-left: none;
+}
+table.productcart tr.product_row td {
+  border-bottom: 1px solid #cac1b2;
+}
+table.productcart td.productname {
+  width: 30%;
+}
+table.productcart tr.subtotal td {
+  font-weight: bold;
+  border-top: 1px solid #cac1b2;
+}
+
+table.shipping td {
+  vertical-align: top;
+}
+table.shipping td.c3, table.shipping td.c4, table.shipping td.c5 {
+  border-bottom: 1px solid #cac1b2;
+}
+table.shipping td.c1 {
+  width: 4.5em;
+}
+table.shipping td.c2 {
+  width: 30%;
+}
+table.shipping td.c3 {
+  width: 29.5%;
+}
+table.shipping td.c4 {
+  width: 14%;
+}
+
+table.total {
+  background: #cac1b2;  
+}
+table.total td h4 {
+  margin-bottom: 0;
+}
+table.total td.c1 {
+  width: 4.5em;
+}
+table.total td.c2 {
+  width: 60%;
+}
+table.total td.c3 {
+  width: 30%;
+}
+
+
 tr.full_total span.checkout-total {
   margin-left: 31em;
 }
@@ -208,6 +252,13 @@ tr.full_total span.checkout-total {
   background: #A53B08;
   color: #DFDBD0;
 }
+.shop-user-info, .transaction-results {
+  background: #DFDBD0;
+  padding: 1em;
+  margin: 2em 0;
+}
+
+
 
 
 /* Startpage / Home
