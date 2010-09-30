@@ -182,7 +182,7 @@ table.productcart {
   margin-bottom: 1em;
 }
 table.productcart tr.firstrow td {
-  background-color: #CAC1B2 !important;
+  background-color: #d1c9bc !important;
   border-left: 1px dotted #eee !important;
   font-weight: bold;
 }
@@ -220,7 +220,7 @@ table.shipping td.c4 {
 }
 
 table.total {
-  background: #cac1b2; 
+  background: #d1c9bc; 
   margin-bottom: 3em; 
 }
 table.total td h4, table.wpsc_checkout_table td h4, #checkout h4 {
@@ -319,8 +319,8 @@ table.total td.c3 {
   width: 380px;  
   -moz-border-radius:10px 10px 10px 10px;
 }
-#checkout #login input.make_purchase {
-  width: 90%;  
+#checkout #login button.make_purchase {
+  width: 99%;  
 }
 #checkout #login h4 {
   margin-top: 1.7em;
@@ -340,9 +340,7 @@ table.wpsc_checkout_table textarea {
 table.wpsc_checkout_table input.text {
   width: 23em;
 }
-.hide-company-checkout-info {
-  display: none;
-}
+
 
 #checkout input.green {
   background: #26BF5A;
@@ -358,7 +356,11 @@ table.wpsc_checkout_table input.text {
   background: #A53B08;
   color: #DFDBD0;
 }
-
+.termeni {
+  background: #FEFAE7;
+  -moz-border-radius:10px 10px 10px 10px;
+  padding: .5em;
+}
 
 
 

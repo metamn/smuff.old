@@ -360,18 +360,15 @@
 				
 			    </td>
 		    </tr>
-		    <?php if(get_option('terms_and_conditions') != '') : ?>
 		    <tr>
-			    <td colspan='2'>
-         		<input type='checkbox' value='yes' name='agree' /> 
-         		Prin confirmarea comenzii va exprimati acordul cu 
+			    <td colspan='2' class="termeni">         		
+         		Prin trimiterea comenzii va exprimati automat acordul cu 
             <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
        		</td>
      	   </tr>
-		    <?php endif; ?>	
 		    
 		    <tr>
-		      <td></td>
+		      
 			    <td>
 				    <?php if(get_option('terms_and_conditions') == '') : ?>
 					    <input type='hidden' value='yes' name='agree' />
@@ -413,8 +410,12 @@
         if (is_user_logged_in()) {
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return; ?>
+          <p class="termeni">
+          Prin trimiterea comenzii va exprimati automat acordul cu 
+            <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+          </p>
           <p>
-             <input type='submit' value="Trimitere comanda" name='submit' class='make_purchase' />
+             <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
           </p>
           <h4>Contul Dumneavoastra</h4>
           <ul class="info">
