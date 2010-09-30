@@ -220,9 +220,10 @@ table.shipping td.c4 {
 }
 
 table.total {
-  background: #cac1b2;  
+  background: #cac1b2; 
+  margin-bottom: 3em; 
 }
-table.total td h4 {
+table.total td h4, table.wpsc_checkout_table td h4, #checkout h4 {
   margin-bottom: 0;
 }
 table.total td.c1 {
@@ -235,15 +236,110 @@ table.total td.c3 {
   width: 30%;
 }
 
+.wpsc_checkout_forms #info {
+  background: #FDF3C6;
+  width: 645px;
+  margin: 1.5em 0;
+  padding: 1em 0;
+  -moz-border-radius:10px 10px 10px 10px;
+}
+.wpsc_checkout_forms #info ul {
+  margin: 0 0 0 9em;
+}
 
-tr.full_total span.checkout-total {
-  margin-left: 31em;
+.wpsc_checkout_forms .step {
+  height: 4.2em;
+  width: 195px;
 }
-.user-profile-links, .shop-user-info a, .shop-user-info a:visited {
+.wpsc_checkout_forms .steps .value {
   font-size: larger;
+  line-height: .1;
+  font-weight: bold;
 }
-.user-profile-links a, .shop-user-info a {
-  text-decoration: underline;
+.wpsc_checkout_forms .steps .v2 {
+  margin-left: 1.8em;
+}
+.wpsc_checkout_forms .steps .stepnr {
+  -moz-border-radius:10px 10px 10px 10px;
+  line-height:3 !important;
+  margin-right: 4px;
+  padding: 3px 6px;
+  background: #e6e2d9;
+  font-weight: bold;
+}
+.wpsc_checkout_forms .steps #step-1 .stepnr {
+  border: 1px solid #f25e18;
+  color: #444;  
+}
+.wpsc_checkout_forms .steps #step-2 .stepnr {
+  border: 1px solid lightgreen;
+  color: green;  
+}
+.wpsc_checkout_forms .steps #step-3 .stepnr {
+  border: 1px solid lightblue;
+  color: blue;  
+}
+.wpsc_checkout_forms .steps .arrow-right {
+  width:0; height:0;
+  line-height:0;
+  border-top:25px solid transparent;
+  border-right:25px solid transparent;
+  border-bottom:25px solid transparent;  
+}
+.wpsc_checkout_forms .steps #step-1 {
+  background: #f25e18;  
+}
+.wpsc_checkout_forms .step-1 .arrow-right {
+  border-left:25px solid #f25e18;
+  border-top:25px solid #26BF5A;
+  border-right:25px solid #26BF5A;
+  border-bottom:25px solid #26BF5A; 
+}
+.wpsc_checkout_forms .steps #step-2 {
+  background: #26BF5A;
+  color: #eee;    
+}
+.wpsc_checkout_forms .step-2 .arrow-right {
+  border-left:25px solid #26BF5A;
+  border-top:25px solid #48C0D9;
+  border-right:25px solid #48C0D9;
+  border-bottom:25px solid #48C0D9;
+}
+.wpsc_checkout_forms .steps #step-3 {
+  background: #48C0D9;  
+  color: #eee;
+}
+.wpsc_checkout_forms .step-3 .arrow-right {
+  border-left:25px solid #48C0D9;
+}
+
+
+#checkout #form {
+  background: #b79b70;
+  width: 380px;  
+  -moz-border-radius:10px 10px 10px 10px;
+}
+#checkout #login {  
+}
+#checkout #login h4 {
+  margin-top: 1.7em;
+  margin-left: 1em;
+}
+#checkout #login ul {
+  margin: 0 2.5em 2.5em;
+}
+
+table.wpsc_checkout_table textarea, table.wpsc_checkout_table input.text {
+  width: 280px;
+}
+
+
+#checkout input.green {
+  background: #26BF5A;
+  padding: .2em 1em;
+  border: 1px outset green;
+  color: #eee;
+  font-weight: bold;
 }
 
 .login_error {
@@ -251,11 +347,6 @@ tr.full_total span.checkout-total {
   margin: 1em 0 !important;
   background: #A53B08;
   color: #DFDBD0;
-}
-.shop-user-info, .transaction-results {
-  background: #DFDBD0;
-  padding: 1em;
-  margin: 2em 0;
 }
 
 

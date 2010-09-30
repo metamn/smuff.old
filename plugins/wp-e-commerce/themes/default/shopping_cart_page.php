@@ -227,90 +227,51 @@
 	
 
 
-  <?php do_action('wpsc_before_form_of_shopping_cart'); ?>
-	
-	<form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">
-	
+  <?php do_action('wpsc_before_form_of_shopping_cart'); ?>	
+	<form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">	
 	   <?php 
 	   /**  
 	    * Both the registration forms and the checkout details forms must be in the same form element as they are submitted together, you cannot have two form elements submit together without the use of JavaScript.
 	   */
-	   ?>
-	   
-	   
-	   
-	   
-	   
-	   
-  <div class="shop-user-info block">
-	 <?php if(!is_user_logged_in()) {
-			 global $current_user;
-			 get_currentuserinfo();	  ?>
-		
-		  <h2>Inca nu aveti cont Smuff?</h2>
-		  <p>
-		    A creea cont Smuff nu este obligatorie, se poate cumpara si fara cont.
-		    <br/>
-		    Contul Smuff este recomandat pentru:
-		    <ul>
-		      <li>Cei care cumpara de mai multe ori de la noi</li>
-		      <li>Cei care doresc sa devina colaboratori Smuff</li>
-		    </ul>
-		    <br/>
-		    Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail.
-		  </p>		
-		  
-		  <a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">
-		    Intrare in cont / Inregistrare cont
-		  </a>	    
-	  
-	  <?php } else { ?>
+	   ?>	   
 	
-	    <?php 
-	      if (is_user_logged_in()) {
-	        $current_user = wp_get_current_user();
-	        if ( !($current_user instanceof WP_User) )
-            return; ?>
-          
-          <h2>Contul Dumneavoastra</h2>
-          <ul>
-            <li>Nume utilizator: <?php echo $current_user->display_name ?></li>
-            <li>Adresa email: <?php echo $current_user->user_email ?></li>
-          </ul>
-          <div class='user-profile-links'>
-            <a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a>
-            | 
-            <a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a>
-            | 
-            <a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a>
-            | 
-            <a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a> 
-          </div>  
-          <br/><br/>   
-      <?php } ?>
-      
-    <?php } ?>
+	<div class="steps block">
+	  <div id="step-1" class="step column span-5 last">
+      <span class="stepnr">1</span>
+      <span class="value">Adresa de livrare</span>
     </div>
-	    
-	    <div class="block shop-user-info">
-	      <h3>Va rugam verificati daca aceste date sunt corecte</h3>	
-	      <p>Doriti factura fiscala pe societate comerciala? Va rugam sa completati si datele firmei.</p>
-	      <p>Campurile marcate cu * sunt obligatorii.</p> 	    
-	    </div>
-	    
-	    <?php if(get_option('terms_and_conditions') != '') : ?>
-	    <p>
-     		<input type='checkbox' value='yes' name='agree' /> 
-     		Prin confirmarea comenzii va exprimati acordul cu 
-        <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-     	</p>
-	    <?php endif; ?>	
-	    <p>
-	      <input type='submit' value="Datele de mai jos sunt corecte, confirm comanda" name='submit' class='make_purchase' />
-	    </p>
-      
-	   	    
-	    
+    <div class="column step-1 span-1 last arrow-vertical">
+      <div class="arrow-right"></div>
+    </div>
+    
+    <div id="step-2" class="step column span-5 last">
+      <span class="stepnr">2</span>
+      <span class="value">Trimit comanda</span>
+    </div>
+    <div class="column step-2 span-1 last arrow-vertical">
+      <div class="arrow-right"></div>
+    </div>
+    
+    <div id="step-3" class="step column span-5 last">
+      <span class="stepnr">3</span>
+      <span class="value">Primesc telefon si email</span>
+      <span class="value v2">de confirmare</span>
+    </div>
+    <div class="column step-3 span-1 last arrow-vertical">
+      <div class="arrow-right"></div>
+    </div>
+	</div>
+	
+	<div id="info">
+	  <ul>
+	    <li>Livrare in 24 de ore</li>
+	    <li>Garantie min. 1 an, returnam produsele stricate</li>
+	    <li>Nu retinem datele Dvs. personale</li>
+	  </ul>
+	</div>
+	   
+  <div id="checkout" class="block">
+    <div id="form" class="column span-10 append-1 last">	    
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
 			    <?php if(wpsc_is_shipping_details()) : ?>
@@ -330,9 +291,9 @@
 		      <?php if(wpsc_checkout_form_is_header() == true) : ?>
 		      		<tr <?php echo wpsc_the_checkout_item_error_class();?>>
 			          <td <?php if(wpsc_is_shipping_details()) echo "class='wpsc_shipping_forms'"; ?> colspan='2'>
-				          <h3>
+				          <h4>
 					          <?php echo wpsc_checkout_form_name();?>
-				          </h3>
+				          </h4>
 			          </td>
 				    </tr>
 		      <?php else: ?>
@@ -416,14 +377,15 @@
      	   </tr>
 		    <?php endif; ?>	
 		    <tr>
-			    <td colspan='2'>
+		      <td></td>
+			    <td>
 				    <?php if(get_option('terms_and_conditions') == '') : ?>
 					    <input type='hidden' value='yes' name='agree' />
 				    <?php endif; ?>	
 				    <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 				     if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 					    <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					    <input type='submit' value='Confirm comanda' name='submit' class='make_purchase' />
+					    <input type='submit' value='Trimit comanda' name='submit' class='make_purchase' />
 				    <?php }/* else: ?>
 				
 				    <br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />
@@ -433,7 +395,48 @@
 			    </td>
 		    </tr>
 	    </table>
-	    
+	  </div>
+	  
+	  <div id="login" class="column span-5 prepend-1 last">
+	    <?php if(!is_user_logged_in()) {
+        global $current_user;
+        get_currentuserinfo(); ?>
+        <h4>Inca nu aveti cont Smuff?</h4>
+        <p>
+          A creea cont Smuff nu este obligatorie, se poate cumpara si fara cont.
+          <br/>
+          Contul Smuff este recomandat pentru:
+          <ul>
+            <li>Cei care cumpara de mai multe ori de la noi</li>
+            <li>Cei care doresc sa devina colaboratori Smuff</li>
+          </ul>
+          <br/>
+          Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail.
+        </p>
+        <a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">
+        Intrare in cont / Inregistrare cont</a>
+      <?php } else { 
+        if (is_user_logged_in()) {
+          $current_user = wp_get_current_user();
+          if ( !($current_user instanceof WP_User) ) return; ?>
+          <p>
+             <input type='submit' value="Trimit comanda" name='submit' class='make_purchase green' />
+          </p>
+          <h4>Contul Dumneavoastra</h4>
+          <ul class="info">
+            <li>Nume utilizator: <?php echo $current_user->display_name ?></li>
+            <li>Adresa email: <?php echo $current_user->user_email ?></li>
+          </ul>
+          <ul class="links">
+            <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
+            <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
+            <li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
+            <li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
+          </ul>          
+        <?php } 
+      } ?>   
+	  </div>
+	</div>  
 </form>
 </div>
 <?php else: ?>  
