@@ -45,7 +45,8 @@ if ($posts) {
       $image = $medium[0];
       
       $price = product_price($id);
-            
+           
+      /*      
       print
       base64_encode($category_id) . $separator .  
       base64_encode($category) . $separator .
@@ -62,6 +63,24 @@ if ($posts) {
       base64_encode($discount) . $separator . 
       base64_encode($currency) . $separator . 
       base64_encode($url) . $separator . "\n\r";
+      */
+      
+      print
+      $category_id . $separator .  
+      $category . $separator .
+      $title . $separator .
+      $product_id . $separator .
+      $description . $separator .
+      $image . $separator .
+      $category . $separator .
+      $tag . $separator .
+      $tag . $separator .
+      $tag . $separator .
+      $brand . $separator .
+      $price . $separator .
+      $discount . $separator . 
+      $currency . $separator . 
+      $url . $separator . "\n\r";
     }
   }
 }

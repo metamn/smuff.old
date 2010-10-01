@@ -39,7 +39,11 @@ get_header(); ?>
 		</div>
 		<?php endwhile; endif; ?>
 		
-		<?php if (comments_open()) {comments_template();}  ?>
+		<?php 
+		  if (!(is_page(430))) {
+		    if (comments_open()) {comments_template();}  
+		  }		  
+		?>
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
 	</div>    

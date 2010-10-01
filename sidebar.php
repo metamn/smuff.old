@@ -38,7 +38,11 @@
       }      
     ?>
     
-    <?php include "home-news.php" ?>
+    <?php 
+      if (!(is_page(430))) {
+        include "home-news.php";
+      }          
+    ?>
     
     <?php include "home-campaign.php" ?>
        

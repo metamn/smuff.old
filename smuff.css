@@ -1015,7 +1015,15 @@ width:96%;
   margin: 1em 0 6em;
   padding: 0;
 }
-
+#sidebar #contact-info {
+  margin-top: 1em;
+}
+#sidebar #no-shoutbox {
+  margin: 0;
+}
+#sidebar #no-shoutbox input, #sidebar #no-shoutbox textarea {
+  width: 90%;
+}
 
 /* Home News + Sticky
 */
