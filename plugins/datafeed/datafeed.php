@@ -89,7 +89,7 @@ function datafeed_process_form($data) {
   set_meta_checked($data['shopmania'], 'shopmania'); 
   set_meta_checked($data['bizoo'], 'bizoo'); 
   set_meta_checked($data['go4it'], 'go4it'); 
-  set_meta_checked($data['allshops'], 'youmago'); 
+  set_meta_checked($data['allshops'], 'allshops'); 
   set_meta_checked($data['magazineonline'], 'magazineonline'); 
   set_meta_checked($data['goshopping'], 'goshopping');   
 }

@@ -262,12 +262,16 @@
     </div>
 	</div>
 	
-	<div id="info">
-	  <ul>
-	    <li>Livrare in 24 de ore</li>
-	    <li>Garantie min. 1 an, returnam produsele stricate</li>
-	    <li>Nu retinem datele Dvs. personale</li>
-	  </ul>
+	<div id="info" class="block">
+	  <div id="icon-1" class="icon column span-5 append-1 last">
+	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/truck.jpg" width="150" />
+	  </div>
+	  <div id="icon-2" class="icon column span-5 last">
+	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/garantie.jpg" width="150" />
+	  </div>
+	  <div id="icon-3" class="icon column span-5 prepend-1 last">
+	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/return.jpg" width="150" />
+	  </div>
 	</div>
 	   
   <div id="checkout" class="block">
@@ -279,13 +283,7 @@
 			    <?php endif; ?>
 
 		      <?php if(wpsc_checkout_form_is_header() == true) : ?>
-		      		<tr <?php echo wpsc_the_checkout_item_error_class();?>>
-			          <td <?php if(wpsc_is_shipping_details()) echo "class='wpsc_shipping_forms'"; ?> colspan='2'>
-				          <h4>
-					          <?php echo wpsc_checkout_form_name();?>
-				          </h4>
-			          </td>
-				    </tr>
+		      		
 		      <?php else: ?>
 		        <?php if((!wpsc_uses_shipping()) && $wpsc_checkout->checkout_item->unique_name == 'shippingstate'): ?>
 		        <?php else : ?>
@@ -361,9 +359,11 @@
 			    </td>
 		    </tr>
 		    <tr>
-			    <td colspan='2' class="termeni">         		
-         		Prin trimiterea comenzii va exprimati automat acordul cu 
+			    <td colspan='2'>         		
+         		<p class="termeni">
+         		Prin trimiterea comenzii va exprimati <strong>automat</strong> acordul cu 
             <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+            </p>
        		</td>
      	   </tr>
 		    
@@ -392,7 +392,7 @@
 	    <?php if(!is_user_logged_in()) {
         global $current_user;
         get_currentuserinfo(); ?>
-        <h4>Inca nu aveti cont Smuff?</h4>
+        <h4>Vreti cont Smuff?</h4>
         <p>
           A creea cont Smuff nu este obligatorie, se poate cumpara si fara cont.
           <br/>
@@ -411,23 +411,25 @@
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return; ?>
           <p class="termeni">
-          Prin trimiterea comenzii va exprimati automat acordul cu 
+          Prin trimiterea comenzii va exprimati <strong>automat</strong> acordul cu 
             <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
           </p>
           <p>
              <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
           </p>
-          <h4>Contul Dumneavoastra</h4>
-          <ul class="info">
-            <li>Nume utilizator: <?php echo $current_user->display_name ?></li>
-            <li>Adresa email: <?php echo $current_user->user_email ?></li>
-          </ul>
-          <ul class="links">
-            <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
-            <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
-            <li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
-            <li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
-          </ul>          
+          <div id="account" class="box">
+            <h4>Contul Dumneavoastra</h4>
+            <ul class="info">
+              <li>Nume utilizator: <?php echo $current_user->display_name ?></li>
+              <li>Adresa email: <?php echo $current_user->user_email ?></li>
+            </ul>
+            <ul class="links">
+              <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
+              <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
+              <li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
+              <li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
+            </ul>
+          </div>          
         <?php } 
       } ?>   
 	  </div>
@@ -435,7 +437,7 @@
 </form>
 </div>
 <?php else: ?>  
-  <h4>Cosul Dvs. este gol</h4>	
+  <h4>Cosul Dvs. este gol. Va rugam <a href="<?php bloginfo('home') ?>">vizitati magazinul nostru.</a></h4>	
 <?php endif;
 do_action('wpsc_bottom_of_shopping_cart');
 ?>

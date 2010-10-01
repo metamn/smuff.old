@@ -57,21 +57,21 @@ class my_shipping {
 		
 		$output .= '<tr>';
 		$output .= '	<td>';
-		$output .= '		Posta Romana, cu plata la livrare:<br/>';
+		$output .= '		Posta Romana, cu plata la livrare 4-6 zile:<br/>';
 		$output .= '		<input type="text" name="shipping[posta]" value="'.htmlentities($shipping['posta']).'"><br/>';
 		$output .= '	</td>';
 		$output .= '</tr>';
 		
 		$output .= '<tr>';
 		$output .= '	<td>';
-		$output .= '		Fan Curier, cu plata la livrare:<br/>';
+		$output .= '		Fan Curier, cu plata la livrare 24 ore:<br/>';
 		$output .= '		<input type="text" name="shipping[ramburs]" value="'.htmlentities($shipping['ramburs']).'"><br/>';
 		$output .= '	</td>';
 		$output .= '</tr>';
 		
 		$output .= '<tr>';
 		$output .= '	<td>';
-		$output .= '		Fan Curier, cu plata prin transfer bancar:<br/>';
+		$output .= '		Fan Curier, cu plata prin transfer bancar in avans 1-2 zile:<br/>';
 		$output .= '		<input type="text" name="shipping[transfer]" value="'.htmlentities($shipping['transfer']).'"><br/>';
 		$output .= '	</td>';
 		$output .= '</tr>';
@@ -195,9 +195,9 @@ class my_shipping {
 			  
 		// Return an array of options for the user to choose
 		// The first option is the default
-		return array ("Posta Romana, cu plata la livrare" => (float) $my_shipping_rates['posta'],
-		              "Fan Curier, cu plata la livrare" => (float) $my_shipping_rates['ramburs'],
-		              "Fan Curier, cu plata prin transfer bancar" => (float) $my_shipping_rates['transfer'],
+		return array ("Posta Romana, cu plata la livrare 4-6 zile" => (float) $my_shipping_rates['posta'],
+		              "Fan Curier, cu plata la livrare 24 ore" => (float) $my_shipping_rates['ramburs'],
+		              "Fan Curier, cu plata prin transfer bancar in avans 1-2 zile" => (float) $my_shipping_rates['transfer'],
 		              "Ridicare din sediul Tg. Mures" => (float) $my_shipping_rates['ridicare']);
 
 	}
