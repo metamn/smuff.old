@@ -49,6 +49,8 @@
 	    // Getting the original post item for the product
 	    $product_id = wpsc_cart_item_product_id();
 	    $post_id = post_id($product_id);
+	    $stock = product_stock($product_id);
+	    if ($stock > 0) { $delivery = $stock; }
 	    $link = get_permalink($post_id);   
 	  ?>		
 		<tr class="product_row">
@@ -264,7 +266,14 @@
 	
 	<div id="info" class="block">
 	  <div id="icon-1" class="icon column span-5 append-1 last">
-	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/truck.jpg" width="150" />
+	    <?php 
+	      if ($delivery > 0) {
+	        $src = 'car';
+	      } else {
+	        $src = 'truck';
+	      }
+	    ?>
+	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/<?php echo $src ?>.jpg" width="150" />
 	  </div>
 	  <div id="icon-2" class="icon column span-5 last">
 	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/garantie.jpg" width="150" />
