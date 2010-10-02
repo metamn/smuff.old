@@ -35,18 +35,14 @@
     <?php 
       if (is_page(430)) {
         include "shoutbox.php";
-      }      
-    ?>
-    
-    <?php 
-      if (!(is_page(430))) {
+      } else {
         include "home-news.php";
-      }          
+        include "home-campaign.php";
+        include "home-banners.php";
+      }     
     ?>
     
-    <?php include "home-campaign.php" ?>
-       
-    <?php include "home-banners.php" ?>
+        
 </div>
 
 

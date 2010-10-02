@@ -221,7 +221,7 @@
 		  <h4><strong>Total</strong></h4>
 		</td>
 		<td class="c3">
-			<h4><strong><?php echo wpsc_cart_total(); ?></strong></h4>
+			<h4><strong><span id='checkout_total' class="pricedisplay checkout-total"><?php echo wpsc_cart_total(); ?></span></strong></h4>
 		</td>
 	</tr>	
 	</table>
@@ -306,7 +306,7 @@
 		              <?php if(wpsc_the_checkout_item_error() != ''): ?>
 		                <p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
 			            <?php endif; ?>
-			            <?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_8") { ?>			              
+			            <?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_22") { ?>			              
 			                <br/><br/>
 			                <h4 class="note">Va rugam completati campurile de mai jos numai daca doriti factura pe firma.</h4>
 			                <br/>
@@ -379,9 +379,12 @@
 		    <tr>
 		      
 			    <td>
+				    <!--
 				    <?php if(get_option('terms_and_conditions') == '') : ?>
 					    <input type='hidden' value='yes' name='agree' />
-				    <?php endif; ?>	
+				    <?php endif; ?>
+				    -->
+				    <input type='hidden' value='yes' name='agree' />	
 				    <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 				     if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 					    <input type='hidden' value='submit_checkout' name='wpsc_action' />
