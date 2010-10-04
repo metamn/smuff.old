@@ -273,18 +273,22 @@
 	        $src = 'truck';
 	      }
 	    ?>
-	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/<?php echo $src ?>.jpg" width="150" />
+	    <a class="lightbox" href="<?php bloginfo('stylesheet_directory')?>/livrare.html">
+	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/<?php echo $src ?>.jpg" width="150" /></a>
 	  </div>
 	  <div id="icon-2" class="icon column span-5 last">
-	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/garantie.jpg" width="150" />
+	    <a class="lightbox" href="<?php bloginfo('stylesheet_directory')?>/garantie.html">
+	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/garantie.jpg" width="150" /></a>
 	  </div>
 	  <div id="icon-3" class="icon column span-5 prepend-1 last">
-	    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/return.jpg" width="150" />
+	    <a class="lightbox" href="<?php bloginfo('stylesheet_directory')?>/returnare.html">
+	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/return.jpg" width="150" /></a>
 	  </div>
 	</div>
 	   
   <div id="checkout" class="block">
     <div id="form" class="column span-10 append-1 last">	    
+	    <h3 class="checkout">Shopping rapid</h3>
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
 			    <?php if(wpsc_is_shipping_details()) : ?>
@@ -370,7 +374,7 @@
 		    <tr>
 			    <td colspan='2'>         		
          		<p class="termeni">
-         		Prin trimiterea comenzii va exprimati <strong>automat</strong> acordul cu 
+         		Prin trimiterea comenzii va exprimati acordul cu 
             <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
             </p>
        		</td>
@@ -404,22 +408,19 @@
 	    <?php if(!is_user_logged_in()) {
         global $current_user;
         get_currentuserinfo(); ?>
-        <h4>Vreti cont Smuff?</h4>
+        <h4>Doriti cont Smuff?</h4>
         <p>
-          A creea cont Smuff nu este obligatorie, se poate cumpara si fara cont.
-          <br/>
-          Contul Smuff este recomandat pentru:
-          <ul>
-            <li>Cei care cumpara de mai multe ori de la noi</li>
-            <li>Cei care doresc sa devina colaboratori Smuff</li>
-          </ul>
-          <br/>
           Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail.
         </p>
         <a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">
-        Intrare in cont / Inregistrare cont</a>
+        Intrare in cont / Inregistrare cont</a>        
+        <p>
+          A crea cont pe Smuff nu este obligatoriu, se poate cumpara si fara cont prin Shopping Rapid.
+        </p>
+          
       <?php } else { 
         if (is_user_logged_in()) {
+
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return; ?>
           <p class="termeni">

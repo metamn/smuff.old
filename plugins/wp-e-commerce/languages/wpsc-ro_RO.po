@@ -511,7 +511,7 @@ msgstr "Please select your country from the list."
 
 #: wp-e-commerce/edit-profile.php:61
 msgid "Please enter a valid"
-msgstr "Va rugam completati corect"
+msgstr "Va rugam completati corect campul"
 
 #: wp-e-commerce/edit-profile.php:84
 #, fuzzy

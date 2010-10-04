@@ -102,7 +102,7 @@ $(document).ready(function() {
       $(this).addClass('opacity-3');
   });
   
-  
+    
 }); 
 
 
