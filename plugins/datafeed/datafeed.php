@@ -87,7 +87,7 @@ function shops_options() {
 // Precessing input
 function datafeed_process_form($data) {
   set_meta_checked($data['shopmania'], 'shopmania'); 
-  set_meta_checked($data['bizoo'], 'bizoo'); 
+  set_meta_checked($data['cautiro'], 'cautiro'); 
   set_meta_checked($data['go4it'], 'go4it'); 
   set_meta_checked($data['allshops'], 'allshops'); 
   set_meta_checked($data['magazineonline'], 'magazineonline'); 
@@ -103,7 +103,7 @@ function datafeed_display_form() {
       <tr>
         <td>Produs Smuff</td>
         <td>shopmania</td>
-        <td>bizoo</td>
+        <td>cautiro</td>
         <td>go4it</td>
         <td>allshops</td>
         <td>magazine-online</td>
@@ -115,7 +115,7 @@ function datafeed_display_form() {
         if ($posts) {
           foreach ($posts as $p) {
             $shopmania = get_meta_checked($p->ID, 'shopmania');
-            $bizoo = get_meta_checked($p->ID, 'bizoo');
+            $cautiro = get_meta_checked($p->ID, 'cautiro');
             $go4it = get_meta_checked($p->ID, 'go4it');
             $allshops = get_meta_checked($p->ID, 'allshops');
             $magazineonline = get_meta_checked($p->ID, 'magazineonline');
@@ -123,7 +123,7 @@ function datafeed_display_form() {
             <tr>
               <td><?php echo short_name($p->post_title)?></td>
               <td><input type="text" name="shopmania[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $shopmania ?>"/></td>
-              <td><input type="text" name="bizoo[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $bizoo ?>"/></td>
+              <td><input type="text" name="cautiro[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cautiro ?>"/></td>
               <td><input type="text" name="go4it[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $go4it ?>"/></td>
               <td><input type="text" name="allshops[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $allshops ?>"/></td>
               <td><input type="text" name="magazineonline[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $magazineonline ?>"/></td>

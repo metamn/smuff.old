@@ -1,6 +1,7 @@
 <?php 
   $news_posts = query_posts2('posts_per_page=5&cat=22');   
-  $campaign = query_posts2('posts_per_page=1&cat=1043');    
+  $campaign = query_posts2('posts_per_page=1&cat=1043');  
+  $randoms = query_posts2('posts_per_page=3&cat=10&orderby=rand');
   $banner_id = 1; // the first banner which is a skyscraper  1043
 ?>
 
@@ -33,9 +34,33 @@
     <?php } ?>
     
     <?php 
-      if (is_page(430)) {
-        include "shoutbox.php";
-      } else {
+      if (is_page(430)) { ?>
+        
+        <div id="contact-info">
+          <center>
+            <h2>0740-456127</h2>
+            <p>
+              Suport online Luni-Vineri intre 9.00-17.00    
+            </p>
+            <!-- BEGIN Comm100 Live Chat Button Code --><div><div id="comm100_LiveChatDiv"></div><a href="http://www.comm100.com/livechat/" onclick="comm100_Chat();return false;" target="_blank" title = "Live Chat Live Help Software for Website"><img id="comm100_ButtonImage" src="http://chatserver.comm100.com/BBS.aspx?siteId=43909&planId=484" border="0px" alt="Live Chat Live Help Software for Website" /></a><script src="http://chatserver.comm100.com/js/LiveChat.js?siteId=43909&planId=484"type="text/javascript"></script><div id="comm100_track" style="z-index:99;"><span style="font-size:10px; font-family:Arial, Helvetica, sans-serif;color:#555"><a href="http://www.comm100.com/livechat/" style="text-decoration:none;color:#555" target="_blank"><b>Live Chat Software</b></a> by <a href="http://www.comm100.com/" style="text-decoration:none;color:#009999;" target="_blank">Comm100</a></span></div></div><!-- End Comm100 Live Chat Button Code -->
+          </center>
+        </div>
+        
+        <div id="similar-buys">
+          <h3>Produse similare</h3>
+          
+          <p class="intro">Cei care au cumparat acest produs au mai cumparat si produsele:</p>
+          <?php 
+            if ($randoms) {
+              while ($randoms->have_posts()) : $randoms->the_post(); update_post_caches($posts); 
+                include "product-thumb.php";
+              endwhile;
+            }
+          ?>
+          
+        </div>
+        
+      <?php } else {
         include "home-news.php";
         include "home-campaign.php";
         include "home-banners.php";

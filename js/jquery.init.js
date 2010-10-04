@@ -55,6 +55,10 @@ $(document).ready(function() {
   $("#company h3").click(function() {
     $(".date-firma-info").toggle();
   });
+  // Show comments on last checkout page
+  $("#page.checkout-final #feedback .pointer").click(function() {
+    $("#page.checkout-final #comments").toggle();
+  });
 
 
   // Hover on Product thumbs

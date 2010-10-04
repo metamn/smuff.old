@@ -209,6 +209,18 @@ function styled_comments($comment, $args, $depth){
 //
 
 
+// The product ids during the transaction are saved into wpsc_purchase_logs
+// The session id identifies the current transaction
+// This function returns an array of products ids just transacted
+function get_transaction_products($sessionid) {
+  if ($sessionid) {
+    global $wpdb;
+    $billing_country = $wpdb->get_var("SELECT `billing_country` FROM `".$wpdb->prefix."wpsc_purchase_logs` WHERE `sessionid`=".$sessionid." LIMIT 1");
+    if ($billing_country) {
+      return explode(';', $billing_country);
+    }
+  }  
+}
 
 // Get the main category of a page
 // - used in header
@@ -474,6 +486,16 @@ function product_name($product_id) {
     return $name;
   }  
 }
+
+// Get the product thumbnail from wpsc
+function product_thumb($product_id) {
+  if ($product_id) {
+    global $wpdb;
+    $image = $wpdb->get_var("SELECT `image` FROM `".$wpdb->prefix."wpsc_product_images` WHERE `product_id`=".$product_id." LIMIT 1");
+    return $image;
+  }  
+}
+
 
 // Get the product stoc from wpsc
 // DEPRECATED: stock is getting directly from wpsc:$product_data['sku'] = get_product_meta($product_id, 'sku', true); 

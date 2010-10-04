@@ -76,6 +76,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 		
 		  // cs
 		  $ga_items = '';
+		  $product_ids = '';
 		
 			foreach($cart as $row) {
 				$link = "";
@@ -160,6 +161,11 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 			
 			  $ga_items .= "_gaq.push(['_addItem','".$purchase_log['id']."','".$row['prodid']."','".$product_data['name'];
 			  $ga_items .= "','".stripslashes($variation_list)."','".$row['price']."','".$row['quantity']."']);";
+			  $ga_items .= " ";
+			  
+			  $product_ids .= $row['prodid'].';';
+			  
+			  
 			  
 			
 				if($link != '' && (!empty($link))) {
@@ -240,7 +246,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				}
         
         $ga_transactions .= "_gaq.push(['_addTrans','" . $purchase_log['id'] . "','Smuff','" . $total . "','0','0','city', 'state', 'province']);";
-        $ga_transactions .= $ga_items;
+        $ga_transactions .= ' '.$ga_items;
         
 ?>
 <script type="text/javascript">
@@ -258,6 +264,11 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
   })();
 </script>
 <?php
+
+      // purchased product ids will be but in 'billing_country' to use them later in page.php for facebook share
+      $update_sql = "UPDATE `".WPSC_TABLE_PURCHASE_LOGS."` SET `billing_country` = '$product_ids' WHERE `sessionid` = ".$sessionid." LIMIT 1";
+			$wpdb->query($update_sql) ;
+
         
         
 				//echo "<pre>".print_r($purchase_log,true)."</pre>";
@@ -411,6 +422,8 @@ $form_sql = "SELECT * FROM `".WPSC_TABLE_SUBMITED_FORM_DATA."` WHERE `log_id` = 
 					}
 					echo '</div>';
 				}
+	  			
+	          			
 			} else {
 				if(true === $echo_to_screen) {
 					echo '<div class="wrap">';

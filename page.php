@@ -3,10 +3,16 @@
  * @package WordPress
  * @subpackage Default_Theme
  */
+ 
+ $klass = '';
+ if (is_page(429)) { // Finalizare comanda
+  $promo_posts = query_posts2('posts_per_page=6&cat=15'); 
+  $klass = "checkout-final";
+ } 
 
 get_header(); ?>
 
-<div id="page" class="block">
+<div id="page" class="block <?php echo $klass ?>">
   <div id="content" class="column span-18">
 	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
@@ -14,36 +20,102 @@ get_header(); ?>
 		  
 		  
 			<div class="entry block">
-				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>				
+				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>							
 			</div>
 			
-			<?php 
-			  $subs = get_pages('child_of='.$post->ID);
-			  if ($subs) { ?>
-			    <div class="subpages">
-		        Informatii aditionale: 
-		        <ul class="inline-list">
-		          <?php wp_list_pages('child_of='.$post->ID.'&title_li='); ?>
-		        </ul>
-		      </div>
-			<?php } ?>
+			<?php if (!(is_page(array(429, 430)))) { //No additional info on the last shopping pages ?>
 			
-			<?php if ( is_page('despre-noi') || $post->post_parent == 331 || in_array( 331, $post->ancestors) ) { ?>
-		    <div class="subpages">
-		      Alte informatii: 
-		      <ul class="inline-list">
-		        <?php wp_list_pages('child_of=331&depth=1&title_li='); ?>
-		      </ul>
-		    </div>		    
+			  <?php 
+			    $subs = get_pages('child_of='.$post->ID);
+			    if ($subs) { ?>
+			      <div class="subpages">
+		          Informatii aditionale: 
+		          <ul class="inline-list">
+		            <?php wp_list_pages('child_of='.$post->ID.'&title_li='); ?>
+		          </ul>
+		        </div>
+			  <?php } ?>
+			
+			  <?php if ( is_page('despre-noi') || $post->post_parent == 331 || in_array( 331, $post->ancestors) ) { ?>
+		      <div class="subpages">
+		        Alte informatii: 
+		        <ul class="inline-list">
+		          <?php wp_list_pages('child_of=331&depth=1&title_li='); ?>
+		        </ul>
+		      </div>		    
+			  <?php } ?>
+			
 			<?php } ?>
 		</div>
 		<?php endwhile; endif; ?>
+
+    <?php 
+      if (is_page(429)) { ?>
+        
+        <div id="subscribe" class="block box">
+          <div id="share" class="column subscribe span-6 last">
+            <?php 
+              $products = get_transaction_products($_GET["sessionid"]);
+              $i = 0;
+              foreach ($products as $product) {
+                if ($product) {
+                  $id = post_id($product);
+                  $post = get_post($id); 
+                  $imgs = post_attachements($post->ID);
+                  $img = $imgs[0];
+                  $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+                  
+                  if ($i <=0) { ?>  
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg" title="Share pe Facebook">
+                  <?php } else { ?>
+                    <div class="spacerx">&nbsp</div>
+                  <?php } ?>
+                  
+                  <a target="_blank" name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink($id) ?>&t=<?php echo $post->post_title ?>">                    
+                    <img src="<?php echo $thumb[0] ?>" title="Share <?php echo $post->post_title?> pe Facebook">
+                  </a>
+                  <br/>
+                <?php 
+                $i += 1;
+                }                
+              }
+            ?>
+          </div>
+          <div id="newsletter" class="column subscribe span-5 last">
+            <form style="text-align:left;" action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
+	            <input class="text" type="text" name="email" value="Adresa dvs. de e-mail" autocomplete="off"/>
+              <input type="hidden" value="http://feeds.feedburner.com/~e?ffid=585076" name="url"/>
+              <input type="hidden" value="smuff.ro" name="title"/>
+              <input class="button" type="submit" value="Inscriere la newsletter" />
+	          </form>	          
+          </div>
+          <div id="feedback" class="column subscribe span-6 last">            
+            <img class="pointer" src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" title="Asteptam parerea Dvs. despre experienta Smuff" />            
+          </div>
+        </div>
+        
+        <div id="comments" class="block hidden">
+          <?php if (comments_open()) {comments_template();} ?>
+        </div>
+        
+        <?php if ($promo_posts) { ?>
+          <div id="recommended">
+          <h3>Reduceri curente pe Smuff</h3>
+          <p>Orice produs adaugat la comanda Dvs. curenta va fi livrat gratis.</p>
+            <?php while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+              include "product-thumb.php";
+            endwhile; ?>
+          </div>
+        <?php }
+      }
+    ?>
 		
 		<?php 
-		  if (!(is_page(430))) {
+		  if (!(is_page(array(429, 430)))) { // no comments on the checkout page
 		    if (comments_open()) {comments_template();}  
 		  }		  
 		?>
+		
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
 	</div>    
