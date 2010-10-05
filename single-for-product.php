@@ -35,6 +35,7 @@
         <div class="navi"></div>			          
       <?php } ?>
       
+      
     </div>
     
     <div id="post-meta" class="column span-6 last">
@@ -54,10 +55,35 @@
             <td><?php include "share-twitter.php" ?></td>
             <td><?php include "share-facebook.php" ?></td>
           </tr>
+          <!--
           <tr>
             <td colspan=2 class="fblike"><?php include "share-facebook-like.php" ?></td>
           </tr>
+          -->
           </table>           
+      </div>
+      <div id="post-sponsor">        
+        In parteneriat cu
+        <br/>  
+        <?php 
+          $main_cat = page_name(false, true, $post->ID);
+          global $wplogger;
+          $wplogger->log('main_cat = '.$main_cat);
+          $wplogger->log('post = '.$post->post_title);
+          
+          $sponsor = sponsor_post($main_cat);
+          if ($sponsor) {
+            $imgs = post_attachements($sponsor->ID);
+            $img = $imgs[0];
+            $medium = wp_get_attachment_image_src($img->ID, 'medium'); ?>
+                        
+            <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
+              <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
+            </a>
+          <?php } else { ?>
+            <a href="<?php bloginfo('home')?>/<?php echo get_page_uri(2277)?>" title="Cum devin partener Smuff?">
+              <img class="half-banner" src="<?php bloginfo('stylesheet_directory')?>/img/empty-logo.jpg" /></a>      
+          <?php } ?>              
       </div>      
     </div>
   </div>
@@ -95,12 +121,7 @@
           <h3>Produse similare</h3>
           <?php foreach ($related_posts as $post) {
             setup_postdata($post);
-            $product_id = product_id($post->ID);
-            $product_price = product_price($post->ID);
-            $product_name = product_name($product_id);             
-            $imgs = post_attachements($post->ID);
-            $img = $imgs[0];  
-            $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+            $medium = false;
             include "product-thumb.php";
           }
         } 

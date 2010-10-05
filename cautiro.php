@@ -37,6 +37,7 @@ if ($posts) {
       $product_id = get_post_meta($id, 'product_id', true);      
       $category = $yes;
       $brand = get_post_meta($id, 'brand', true);
+      if ($brand == '') { $brand = '-'; }
       $title = product_name($product_id);
       $description = htmlentities(strip_tags(product_excerpt($p->post_content)));
       $url = get_permalink($id);

@@ -1,5 +1,5 @@
 <?php
-  $cat = category_id(true, false);
+  $cat = category_id(true, false, null);
   $args = array (
     'posts_per_page' => 8,
     'category__and' => array(15, $cat)

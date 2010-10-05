@@ -1,6 +1,6 @@
 <?php
 // get all posts, not just 10/page
-  $cat = category_id(true, false);    
+  $cat = category_id(true, false, null);    
   $all_posts = query_posts2('posts_per_page=-1&cat='.$cat);  
   $cat_name = '';
   if (!($cat == 10)) {

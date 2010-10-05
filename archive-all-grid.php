@@ -1,6 +1,6 @@
 <?php
 // get all posts, not just 10/page
-  $cat = category_id(true, false);    
+  $cat = category_id(true, false, null);    
   $all_posts = query_posts2('posts_per_page=-1&cat='.$cat);  
   $cat_name = '';
   if (!($cat == 10)) {
@@ -29,13 +29,7 @@
       <?php 
       $counter = 1;
       while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
-		    $product_id = product_id($post->ID);
-        $product_price = product_price($post->ID);
-        $product_name = product_name($product_id); 
-        $product_stoc = product_stock($product_id);
-        $imgs = post_attachements($post->ID);
-        $img = $imgs[0];  
-        $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');         
+		    $medium = false;        
         $klass = 'col-' .($counter % 3);
         $counter += 1;
 		  ?>

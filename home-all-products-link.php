@@ -1,5 +1,5 @@
 <?php 
-  $cat_id = category_id(is_category(), is_single());  
+  $cat_id = category_id(is_category(), is_single(), null);  
   if ($cat_id) {
     $link = get_category_link($cat_id);    
   } else {

@@ -102,6 +102,7 @@ get_header(); ?>
           <h3>Reduceri curente pe Smuff</h3>
           <p>Orice produs adaugat la comanda Dvs. curenta va fi livrat gratis.</p>
             <?php while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+              $medium = false;
               include "product-thumb.php";
             endwhile; ?>
           </div>

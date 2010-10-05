@@ -24,10 +24,10 @@ if ($posts) {
       $category_id = "1";
       $tag = "";
       $discount = "";
+      $brand = "";
       
       $category = $yes;
-      $brand = get_post_meta($id, 'brand', true);
-      $model = get_post_meta($id, 'model', true);
+      $brand = get_post_meta($id, 'brand', true);      
       $product_id = get_post_meta($id, 'product_id', true);
       $title = product_name($product_id);
       
@@ -46,7 +46,7 @@ if ($posts) {
       
       $price = product_price($id);
            
-      /*      
+      
       print
       base64_encode($category_id) . $separator .  
       base64_encode($category) . $separator .
@@ -55,16 +55,19 @@ if ($posts) {
       base64_encode($description) . $separator .
       base64_encode($image) . $separator .
       base64_encode($category) . $separator .
-      base64_encode($tag) . $separator .
-      base64_encode($tag) . $separator .
-      base64_encode($tag) . $separator .
-      base64_encode($brand) . $separator .
+      base64_encode("keyword1") . $separator .
+      base64_encode("keyword2") . $separator .
+      base64_encode("keyword3") . $separator .
+      base64_encode("producator") . $separator .
       base64_encode($price) . $separator .
       base64_encode($discount) . $separator . 
       base64_encode($currency) . $separator . 
       base64_encode($url) . $separator . "\n\r";
-      */
       
+      
+      
+      
+      /*
       print
       $category_id . $separator .  
       $category . $separator .
@@ -81,6 +84,7 @@ if ($posts) {
       $discount . $separator . 
       $currency . $separator . 
       $url . $separator . "\n\r";
+      */
     }
   }
 }

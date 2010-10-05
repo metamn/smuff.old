@@ -2,7 +2,7 @@
   <?php
     if (is_front_page()) {
             
-      $partners = query_posts2('posts_per_page=7&cat=96');  
+      $partners = query_posts2('posts_per_page=10&cat=96,-1043');  
       if ($partners->have_posts()) {
         echo '<h3>Parteneri</h3>';
         echo '<center><ul>';
@@ -30,7 +30,7 @@
         </ul></center>
       <?php }
     } elseif (is_category()) {      
-      $main_cat = page_name(is_category(), is_single());
+      $main_cat = page_name(is_category(), is_single(), null);
       
       $sponsor = sponsor_post($main_cat);
       if ($sponsor) {

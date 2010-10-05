@@ -100,7 +100,7 @@
 			      
 			      
 			      <div id="main-name" class="column span-8 last">			        
-			        <h1><?php echo page_name(is_category(), is_single()) ?></h1>
+			        <h1><?php echo page_name(is_category(), is_single(), null) ?></h1>
 			      </div>
 			    </div>
 			    <?php if (!($is_blog)) { ?>
