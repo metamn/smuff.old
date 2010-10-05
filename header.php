@@ -4,6 +4,8 @@
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<?php include "facebook-meta.php" ?>
+		<meta name="google-site-verification" content="3NvL8OPM6rq9nvaT31vA5p2qAjbmwaMGFxQaVv9w0PQ" />
+		
 		<title>		  		  
 		  <?php wp_title(' pe ', true, 'right'); bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>
 		</title> 

@@ -245,7 +245,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 					$report_id = "Nr. comanda ".$purchase_log['id']."\n\r";
 				}
         
-        $ga_transactions .= "_gaq.push(['_addTrans','" . $purchase_log['id'] . "','Smuff','" . $total . "','0','0','city', 'state', 'province']);";
+        $ga_transactions .= "_gaq.push(['_addTrans','" . $purchase_log['id'] . "','Smuff','" . $total . "','0.00','0','city', 'state', 'province']);";
         $ga_transactions .= ' '.$ga_items;
         
 ?>
@@ -256,6 +256,8 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
   _gaq.push(['_trackPageview']);
 
   <?php echo $ga_transactions ?>
+  
+  _gaq.push(['_trackTrans']);
   
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

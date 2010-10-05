@@ -54,12 +54,8 @@
           <tr>
             <td><?php include "share-twitter.php" ?></td>
             <td><?php include "share-facebook.php" ?></td>
+            <!--<td><?php include "share-facebook-like.php" ?></td>-->
           </tr>
-          <!--
-          <tr>
-            <td colspan=2 class="fblike"><?php include "share-facebook-like.php" ?></td>
-          </tr>
-          -->
           </table>           
       </div>
       <div id="post-sponsor">        

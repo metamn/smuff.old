@@ -54,11 +54,10 @@ if ($posts) {
       base64_encode($product_id) . $separator .
       base64_encode($description) . $separator .
       base64_encode($image) . $separator .
-      base64_encode($category) . $separator .
-      base64_encode("keyword1") . $separator .
-      base64_encode("keyword2") . $separator .
-      base64_encode("keyword3") . $separator .
-      base64_encode("producator") . $separator .
+      base64_encode($tag) . $separator .
+      base64_encode($tag) . $separator .
+      base64_encode($tag) . $separator .
+      base64_encode($brand) . $separator .
       base64_encode($price) . $separator .
       base64_encode($discount) . $separator . 
       base64_encode($currency) . $separator . 
