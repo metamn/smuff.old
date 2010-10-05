@@ -59,9 +59,9 @@ get_header(); ?>
               $i = 0;
               foreach ($products as $product) {
                 if ($product) {
-                  $id = post_id($product);
-                  $post = get_post($id); 
-                  $imgs = post_attachements($post->ID);
+                  $post_id = post_id($product);
+                  $p = get_post($post_id); 
+                  $imgs = post_attachements($p->ID);
                   $img = $imgs[0];
                   $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
                   
@@ -70,9 +70,8 @@ get_header(); ?>
                   <?php } else { ?>
                     <div class="spacerx">&nbsp</div>
                   <?php } ?>
-                  
-                  <a target="_blank" name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink($id) ?>&t=<?php echo $post->post_title ?>">                    
-                    <img src="<?php echo $thumb[0] ?>" title="Share <?php echo $post->post_title?> pe Facebook">
+                  <a name="fb_share" type="box_count" href="javascript:void(window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post_id) ?>&t=<?php echo $p->post_title ?>', 'Share pe Facebook', 'width=640,height=480'))">                    
+                    <img src="<?php echo $thumb[0] ?>" title="Share <?php echo $p->post_title?> pe Facebook">
                   </a>
                   <br/>
                 <?php 
