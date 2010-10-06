@@ -360,6 +360,13 @@ table.wpsc_checkout_table input.text {
 }
 
 
+#page #subscribe #share p {
+  margin-bottom: 4em;
+}
+#page #subscribe #feedback p {
+  text-align: right;
+}
+
 #page #subscribe #share img, #page #subscribe #share .spacerx {
   width: 72px;
   height: 72px;
@@ -378,6 +385,9 @@ table.wpsc_checkout_table input.text {
 #page.checkout-final #comments {
   margin-top: 2em;
 }
+
+
+
 
 /* Startpage / Home
 */
@@ -1050,9 +1060,11 @@ width:96%;
   margin: 0 0 3em 1.5em;
 }
 #sidebar #similar-buys p.intro {
-  margin-left: 1.5em;
+  margin: 1em 0 1.5em 1.5em;
 }
-
+#sidebar #similar-buys h3 {
+  padding-left: 1em;
+}
 
 
 /* Home News + Sticky

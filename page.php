@@ -5,8 +5,8 @@
  */
  
  $klass = '';
- if (is_page(429)) { // Finalizare comanda
-  $promo_posts = query_posts2('posts_per_page=6&cat=15'); 
+ if (is_page(429)) { // Finalizare comanda  
+  $randoms = query_posts2('posts_per_page=6&cat=10&orderby=rand');
   $klass = "checkout-final";
  } 
 
@@ -53,7 +53,8 @@ get_header(); ?>
       if (is_page(429)) { ?>
         
         <div id="subscribe" class="block box">
-          <div id="share" class="column subscribe span-6 last">
+          <div id="share" class="column subscribe span-5 last">
+            <p>Aratati shoppingul prietenilor!</p>
             <?php 
               $products = get_transaction_products($_GET["sessionid"]);
               $i = 0;
@@ -80,15 +81,19 @@ get_header(); ?>
               }
             ?>
           </div>
-          <div id="newsletter" class="column subscribe span-5 last">
+          
+          <div id="newsletter" class="column subscribe span-7 last">
+            <p>Doriti sa va notificam cand apar noi produse pe Smuff?</p>
             <form style="text-align:left;" action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
 	            <input class="text" type="text" name="email" value="Adresa dvs. de e-mail" autocomplete="off"/>
               <input type="hidden" value="http://feeds.feedburner.com/~e?ffid=585076" name="url"/>
               <input type="hidden" value="smuff.ro" name="title"/>
-              <input class="button" type="submit" value="Inscriere la newsletter" />
+              <input class="button" type="submit" value="Inscriere la noutati" />
 	          </form>	          
           </div>
-          <div id="feedback" class="column subscribe span-6 last">            
+          
+          <div id="feedback" class="column subscribe span-3 prepend-2 last">   
+            <p>Spuneti-ne opinia despre Smuff!</p>         
             <img class="pointer" src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" title="Asteptam parerea Dvs. despre experienta Smuff" />            
           </div>
         </div>
@@ -97,11 +102,11 @@ get_header(); ?>
           <?php if (comments_open()) {comments_template();} ?>
         </div>
         
-        <?php if ($promo_posts) { ?>
+        <?php if ($randoms) { ?>
           <div id="recommended">
-          <h3>Reduceri curente pe Smuff</h3>
-          <p>Orice produs adaugat la comanda Dvs. curenta va fi livrat gratis.</p>
-            <?php while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+          <h3>Produse similare</h3>
+          <p>Cei care au cumparat acest produs au mai cumparat si produsele:</p>
+            <?php while ($randoms->have_posts()) : $randoms->the_post(); update_post_caches($posts); 
               $medium = false;
               include "product-thumb.php";
             endwhile; ?>

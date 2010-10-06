@@ -88,7 +88,7 @@ function shops_options() {
 function datafeed_process_form($data) {
   set_meta_checked($data['shopmania'], 'shopmania'); 
   set_meta_checked($data['cautiro'], 'cautiro'); 
-  set_meta_checked($data['go4it'], 'go4it'); 
+  set_meta_checked($data['cumparaturi'], 'cumparaturi'); 
   set_meta_checked($data['allshops'], 'allshops'); 
   set_meta_checked($data['magazineonline'], 'magazineonline'); 
   set_meta_checked($data['goshopping'], 'goshopping');   
@@ -104,7 +104,7 @@ function datafeed_display_form() {
         <td>Produs Smuff</td>
         <td>shopmania</td>
         <td>cautiro</td>
-        <td>go4it</td>
+        <td>cumparaturi</td>
         <td>allshops</td>
         <td>magazine-online</td>
         <td>goshopping</td>
@@ -116,7 +116,7 @@ function datafeed_display_form() {
           foreach ($posts as $p) {
             $shopmania = get_meta_checked($p->ID, 'shopmania');
             $cautiro = get_meta_checked($p->ID, 'cautiro');
-            $go4it = get_meta_checked($p->ID, 'go4it');
+            $cumparaturi = get_meta_checked($p->ID, 'cumparaturi');
             $allshops = get_meta_checked($p->ID, 'allshops');
             $magazineonline = get_meta_checked($p->ID, 'magazineonline');
             $goshopping = get_meta_checked($p->ID, 'goshopping'); ?>
@@ -124,7 +124,7 @@ function datafeed_display_form() {
               <td><?php echo short_name($p->post_title)?></td>
               <td><input type="text" name="shopmania[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $shopmania ?>"/></td>
               <td><input type="text" name="cautiro[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cautiro ?>"/></td>
-              <td><input type="text" name="go4it[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $go4it ?>"/></td>
+              <td><input type="text" name="cumparaturi[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cumparaturi ?>"/></td>
               <td><input type="text" name="allshops[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $allshops ?>"/></td>
               <td><input type="text" name="magazineonline[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $magazineonline ?>"/></td>
               <td><input type="text" name="goshopping[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $goshopping ?>"/></td>
@@ -148,7 +148,7 @@ function datafeed_display_form() {
 // - $id = post id
 // - $title = post title, for the output message
 // - $meta = the array containing the checkboxes
-// - $meta_name = 'shopmania' or 'go4it'
+// - $meta_name = 'shopmania' or 'cumparaturi'
 function set_meta_checked($meta, $meta_name) {
   if ($meta) {
     foreach ($meta as $key => $value) {

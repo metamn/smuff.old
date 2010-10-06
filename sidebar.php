@@ -1,7 +1,7 @@
 <?php 
   $news_posts = query_posts2('posts_per_page=5&cat=22');   
   $campaign = query_posts2('posts_per_page=1&cat=1043');  
-  $randoms = query_posts2('posts_per_page=3&cat=10&orderby=rand');
+  $promo_posts = query_posts2('posts_per_page=3&cat=15&orderby=rand'); 
   $banner_id = 1; // the first banner which is a skyscraper  1043
 ?>
 
@@ -22,12 +22,11 @@
         </div>
         
         <div id="similar-buys">
-          <h3>Produse similare</h3>
-          
-          <p class="intro">Cei care au cumparat acest produs au mai cumparat si produsele:</p>
+          <h3>Promotii Smuff</h3>
+          <p class="intro">Acestea sunt produsele in oferta actuala la Smuff. Adaugati orice produs secundar (langa ce aveti in cos acum) si livrarea pentru acestea va fi GRATUITA!</p>
           <?php 
-            if ($randoms) {
-              while ($randoms->have_posts()) : $randoms->the_post(); update_post_caches($posts); 
+            if ($promo_posts) {
+              while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
                 $medium = false;
                 include "product-thumb.php";
               endwhile;

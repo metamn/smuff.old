@@ -424,7 +424,7 @@
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return; ?>
           <p class="termeni">
-          Prin trimiterea comenzii va exprimati <strong>automat</strong> acordul cu 
+          Prin trimiterea comenzii va exprimati acordul cu 
             <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
           </p>
           <p>
