@@ -134,6 +134,8 @@ function dynamic_shopping_cart() {
 //
 
 
+
+
 // Email obfuscator 
 function obfuscate($email, $display_text) { 
   $length = strlen($email);

@@ -58,27 +58,29 @@ get_header(); ?>
             <?php 
               $products = get_transaction_products($_GET["sessionid"]);
               $i = 0;
-              foreach ($products as $product) {
-                if ($product) {
-                  $post_id = post_id($product);
-                  $p = get_post($post_id); 
-                  $imgs = post_attachements($p->ID);
-                  $img = $imgs[0];
-                  $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
-                  
-                  if ($i <=0) { ?>  
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg" title="Share pe Facebook">
-                  <?php } else { ?>
-                    <div class="spacerx">&nbsp</div>
-                  <?php } ?>
-                  <a name="fb_share" type="box_count" href="javascript:void(window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post_id) ?>&t=<?php echo $p->post_title ?>', 'Share pe Facebook', 'width=640,height=480'))">                    
-                    <img src="<?php echo $thumb[0] ?>" title="Share <?php echo $p->post_title?> pe Facebook">
-                  </a>
-                  <br/>
-                <?php 
-                $i += 1;
-                }                
-              }
+              if ($products) {
+                foreach ($products as $product) {
+                  if ($product) {
+                    $post_id = post_id($product);
+                    $p = get_post($post_id); 
+                    $imgs = post_attachements($p->ID);
+                    $img = $imgs[0];
+                    $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+                    
+                    if ($i <=0) { ?>  
+                      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg" title="Share pe Facebook">
+                    <?php } else { ?>
+                      <div class="spacerx">&nbsp</div>
+                    <?php } ?>
+                    <a name="fb_share" type="box_count" href="javascript:void(window.open('http://www.facebook.com/sharer.php?u=<?php echo get_permalink($post_id) ?>&t=<?php echo $p->post_title ?>', 'Share pe Facebook', 'width=640,height=480'))">                    
+                      <img src="<?php echo $thumb[0] ?>" title="Share <?php echo $p->post_title?> pe Facebook">
+                    </a>
+                    <br/>
+                    <?php 
+                    $i += 1;
+                  }                
+                }
+              }              
             ?>
           </div>
           

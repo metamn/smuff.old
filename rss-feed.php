@@ -32,19 +32,25 @@ echo '<?xml version="1.0"?>';
   <pubDate><?php yoast_rss_date( strtotime($ps[$lastpost]->post_date_gmt) ); ?></pubDate>
   <lastBuildDate><?php yoast_rss_date( strtotime($ps[$lastpost]->post_date_gmt) ); ?></lastBuildDate>
   <managingEditor>cs@smuff.ro</managingEditor>
-<?php foreach ($posts as $post) { 
-  $imgs = post_attachements($post->ID);
-  $img = $imgs[0];  
-  $medium = wp_get_attachment_image_src($img->ID, 'medium');
-  $image = '';
-  if ($medium) {
-    $image = '<img src="'.$medium[0].'" />';
-  } 
+<?php foreach ($posts as $post) {   
+  if (in_category(10)) {
+    $imgs = post_attachements($post->ID);
+    $img = $imgs[0];  
+    $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+    $image = '';
+    if ($thumb) {
+      $image = '<img src="'.$thumb[0].'" />';
+    }
+    $body = '<table valign="top"><tr><td>' . $image . '</td><td><div>' . product_excerpt($post->post_content) . '</div></td></tr></table>';
+  } else {
+    $body = $post->post_content;
+  }
+  
 ?>
   <item>
     <title><?php echo get_the_title($post->ID); ?></title>
     <link><?php echo get_permalink($post->ID); ?></link>
-    <description><?php echo '<![CDATA['. $image . '<br/>' . yoast_rss_text_limit($post->post_content, 600).'<br/>Detalii: <a href="'.get_permalink($post->ID).'">'.get_the_title($post->ID).'</a>'.']]>';  ?></description>
+    <description><?php echo '<![CDATA['. $body .']]>';  ?></description>
     <pubDate><?php yoast_rss_date( strtotime($post->post_date_gmt) ); ?></pubDate>
     <guid><?php echo get_permalink($post->ID); ?></guid>
   </item>
