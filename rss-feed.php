@@ -42,6 +42,7 @@ echo '<?xml version="1.0"?>';
       $image = '<img src="'.$thumb[0].'" />';
     }
     $body = '<table valign="top"><tr><td>' . $image . '</td><td><div>' . product_excerpt($post->post_content) . '</div></td></tr></table>';
+    //$body = '<div class="rss-item"><div class="image" style="float:left">' . $image . '</div><div class="description" style="padding: 0 1em;">' . product_excerpt($post->post_content) . '</div></div>';
   } else {
     $body = $post->post_content;
   }

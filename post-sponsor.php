@@ -15,13 +15,14 @@
     $sponsor_posts = query_posts2($args);     
     if ($sponsor_posts) {
       while ($sponsor_posts->have_posts()) : $sponsor_posts->the_post(); update_post_caches($posts);
+        $link = get_post_meta($post->ID, 'Link', true);
         $imgs = post_attachements($post->ID);
         $img = $imgs[0];
         $medium = wp_get_attachment_image_src($img->ID, 'medium'); 
       ?>
       
       <p>In parteneriat cu</p>  
-      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+      <a target="_blank" href="<?php echo $link ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
         <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
       </a>
     <?php 

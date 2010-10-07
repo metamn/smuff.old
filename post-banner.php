@@ -6,13 +6,14 @@
       $counter = 0;
       while ($partners->have_posts()) : $partners->the_post(); update_post_caches($posts);
         if ($counter == $random) {
+          $link = get_post_meta($post->ID, 'Link', true);
           $imgs = post_attachements($post->ID);
           $img = $imgs[1];        
           $large = wp_get_attachment_image_src($img->ID, 'large');            
           if ($large) { ?>                    
             <center>
             <p><?php echo $post->post_title ?></p>
-            <a href="<?php echo get_permalink($post) ?>" title="<?php echo $post->post_title ?>" alt="<?php $post->post_title ?>">
+            <a target="_blank" href="<?php echo $link ?>" title="<?php echo $post->post_title ?>" alt="<?php $post->post_title ?>">
               <img class="pop-under" src="<?php echo $large[0] ?>" title="<?php $post->post_title ?>" alt="<?php $post->post_title ?>"/>
             </a>
             </center>            

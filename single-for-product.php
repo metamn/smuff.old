@@ -62,18 +62,15 @@
         In parteneriat cu
         <br/>  
         <?php 
-          $main_cat = page_name(false, true, $post->ID);
-          global $wplogger;
-          $wplogger->log('main_cat = '.$main_cat);
-          $wplogger->log('post = '.$post->post_title);
-          
+          $main_cat = page_name(false, true, $post->ID);          
           $sponsor = sponsor_post($main_cat);
           if ($sponsor) {
+            $link = get_post_meta($sponsor->ID, 'Link', true);
             $imgs = post_attachements($sponsor->ID);
             $img = $imgs[0];
             $medium = wp_get_attachment_image_src($img->ID, 'medium'); ?>
                         
-            <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
+            <a target="_blank" href="<?php echo $link ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
               <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
             </a>
           <?php } else { ?>

@@ -11,6 +11,7 @@
           $img = $imgs[0];        
           $medium = wp_get_attachment_image_src($img->ID, 'medium');  
           $enddate = get_post_meta($post->ID, 'parteneriat-sfarsit', true);
+          $link = get_post_meta($post->ID, 'Link', true);
           //global $wplogger;
           //$wplogger->log('enddate='.$enddate);
           $expired = false;
@@ -20,7 +21,7 @@
           }
           if (!($expired)) { ?>
             <li>
-            <a href="<?php echo get_permalink($post) ?>" title="<?php echo $post->post_title ?>" alt="<?php $post->post_title ?>">
+            <a target="_blank" href="<?php echo $link ?>" title="<?php echo $post->post_title ?>" alt="<?php $post->post_title ?>">
               <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php $post->post_title ?>" alt="<?php $post->post_title ?>"/>
             </a>
             </li>
@@ -34,6 +35,7 @@
       
       $sponsor = sponsor_post($main_cat);
       if ($sponsor) {
+        $link = get_post_meta($sponsor->ID, 'Link', true);
         $imgs = post_attachements($sponsor->ID);
         $img = $imgs[2];
         $klass = 'vertical-rectangle';
@@ -46,7 +48,7 @@
           <h3>Partener categorie</h3>
           <br/>
           <center>
-          <a href="<?php echo get_permalink($sponsor) ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
+          <a href="<?php echo $link ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
             <img class="<?php echo $klass ?>" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
           </a>
           </center>
