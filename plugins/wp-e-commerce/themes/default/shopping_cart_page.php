@@ -410,12 +410,13 @@
         get_currentuserinfo(); ?>
         <h4>Doriti cont Smuff?</h4>
         <p>
-          Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail.
+          A crea cont pe Smuff nu este obligatoriu, se poate cumpara si fara cont prin Shopping Rapid.  
         </p>
-        <a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">
-        Intrare in cont / Inregistrare cont</a>        
         <p>
-          A crea cont pe Smuff nu este obligatoriu, se poate cumpara si fara cont prin Shopping Rapid.
+          Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail sau cont Facebook.
+          <ul class="loginlist">
+            <li><?php do_action('fbc_display_login_button') ?></li>
+            <li><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
         </p>
           
       <?php } else { 
@@ -423,18 +424,25 @@
 
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return; ?>
-          <p class="termeni">
-          Prin trimiterea comenzii va exprimati acordul cu 
-            <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-          </p>
-          <p>
-             <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
-          </p>
+          
+          <?php if (check_profile_info($current_user->ID)) { ?>
+            <p class="termeni">
+            Prin trimiterea comenzii va exprimati acordul cu 
+              <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+            </p>
+            <p>
+               <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
+            </p>
+          <?php } else { ?>
+            <p class="termeni">
+              Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
+            </p>
+          <?php } ?>
+          
           <div id="account" class="box">
             <h4>Contul Dumneavoastra</h4>
             <ul class="info">
-              <li>Nume utilizator: <?php echo $current_user->display_name ?></li>
-              <li>Adresa email: <?php echo $current_user->user_email ?></li>
+              <li>Nume utilizator: <?php echo $current_user->display_name ?></li>              
             </ul>
             <ul class="links">
               <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>

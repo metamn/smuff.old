@@ -327,6 +327,12 @@ table.total td.c3 {
 #checkout #login h4 {
   margin-bottom: 1.25em;
 }
+#checkout #login ul.loginlist {
+  list-style-type: none;
+}
+#checkout #login ul.loginlist li {
+
+}
 
 table.wpsc_checkout_table textarea, table.wpsc_checkout_table input.text {
   margin: 0;
@@ -922,8 +928,32 @@ li.comment ul.children {
   margin-top: 1em;  
 }
 
+#fbc_login {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#fbc_login span {
+  display: none;
+}
+.fbc_profile_header {
+  bottom: 0 !important;
+  background: #DFDBD0 !important;
+}
 
-
+#cart .fb-profile table {
+  margin: 0;
+}
+#cart .fb-profile table td {
+  padding: 0 0 0 .5em;
+}
+#cart .fb-profile img, #cart .FB_profile_pic {
+  width: 32px;
+  height: 32px;
+}
+#cart ul.emptycart {
+  margin-bottom: 1em !important;
+} 
 
 /* Search
 */

@@ -5,7 +5,7 @@
     <li><a href="<?php echo $url ?>"><?php echo wpsc_cart_item_count() ?> produs(e)</a></li>
     <li><a href="<?php echo $url ?>"><?php echo wpsc_cart_total_widget(); ?></a></li>
     <li><a href="<?php echo $url ?>">Finalizare comanda &rarr;</a></li>
-  </ul>
+  </ul>  
   <?php if(count($cart_messages) > 0) { ?>  
     <ul>
     <?php foreach((array)$cart_messages as $cart_message) { ?>
@@ -15,12 +15,15 @@
   <?php } ?>
 	
 <?php else: ?>
-	<ul>
+	<ul class='emptycart'>
 	  <li><a href="<?php echo get_option('shopping_cart_url'); ?>">0 produse</a></li>
 	  <li>0.00 RON</li>
 	</ul>	
 <?php endif; ?>
 
+<div class="fb-profile">
+  <?php echo fbc_render_login_state() ?>
+</div>
 
 
 

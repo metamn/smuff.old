@@ -410,9 +410,33 @@ function display_post_categories($post_categories, $parent_id) {
 
 
 
-// Product 
+// Product - WP-E-Commerce
 //
 
+
+// checking if an user has all mandatory fields completed or not
+// - used in checkout
+// - the unserialize format help: http://blog.tanist.co.uk/files/unserialize/index.php
+function check_profile_info($id) {
+  global $wpdb;
+  $query = "SELECT `meta_value` FROM `".$wpdb->prefix."usermeta` WHERE `user_id`=".$id." AND `meta_key`='wpshpcrt_usr_profile' LIMIT 1"; 
+  $info = $wpdb->get_var($query);
+  
+  global $wplogger;
+  $wplogger->log('profile id= '.$id);
+  $wplogger->log('profile info= '.$info);
+  $wplogger->log('profile info query = '.$query);
+  
+  $ret = false;
+  if ($info) {
+    $i = unserialize($info);
+    if ($i[2] && $i[4] && $i[5] && $i[17] && $i[8]) { 
+      $ret = true; 
+    }
+  } 
+  
+  return $ret;
+}
 
 
 

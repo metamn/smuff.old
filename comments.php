@@ -75,14 +75,21 @@
 
 <?php else : ?>
 
-<p><input class="required" type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="author"><small>Nume <?php if ($req) echo "(obligatoriu)"; ?></small></label></p>
+<div class="block">
+  <div id="normal" class="column span-12 last">
+    <p><input class="required" type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+    <label for="author"><small>Nume <?php if ($req) echo "(obligatoriu)"; ?></small></label></p>
 
-<p><input class="required email" type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="email"><small>E-mail (va ramane confidential) <?php if ($req) echo "(obligatoriu)"; ?></small></label></p>
+    <p><input class="required email" type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+    <label for="email"><small>E-mail (va ramane confidential) <?php if ($req) echo "(obligatoriu)"; ?></small></label></p>
 
-<p><input class="url" type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
-<label for="url"><small>Adresa web</small></label></p>
+    <p><input class="url" type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+    <label for="url"><small>Adresa web</small></label></p>
+  </div>
+  <div id="social" class="column span-3 prepend-1 last">
+    <?php do_action('fbc_display_login_button') ?>
+  </div>
+</div>
 
 <?php endif; ?>
 
