@@ -1645,6 +1645,12 @@ body.blog #post-sponsor {
   margin-top: .5em;
 }
 
+#footer .partners img {
+  max-height: 31px;
+  margin-left: .5em;
+}
+
+
 
 /* Pagination
 */

@@ -91,7 +91,8 @@ function datafeed_process_form($data) {
   set_meta_checked($data['cumparaturi'], 'cumparaturi'); 
   set_meta_checked($data['allshops'], 'allshops'); 
   set_meta_checked($data['magazineonline'], 'magazineonline'); 
-  set_meta_checked($data['goshopping'], 'goshopping');   
+  set_meta_checked($data['goshopping'], 'goshopping');
+  set_meta_checked($data['cadouri-cadou'], 'cadouri-cadou');   
 }
 
 // Displaying a form
@@ -108,6 +109,7 @@ function datafeed_display_form() {
         <td>allshops</td>
         <td>magazine-online</td>
         <td>goshopping</td>
+        <td>cadouri-cadou</td>
         <td><input type="submit" class="button-primary" value="Run" /></td>
       </tr>  
       <?php 
@@ -119,7 +121,9 @@ function datafeed_display_form() {
             $cumparaturi = get_meta_checked($p->ID, 'cumparaturi');
             $allshops = get_meta_checked($p->ID, 'allshops');
             $magazineonline = get_meta_checked($p->ID, 'magazineonline');
-            $goshopping = get_meta_checked($p->ID, 'goshopping'); ?>
+            $goshopping = get_meta_checked($p->ID, 'goshopping'); 
+            $cadouricadou = get_meta_checked($p->ID, 'cadouricadou'); 
+            ?>                      
             <tr>
               <td><?php echo short_name($p->post_title)?></td>
               <td><input type="text" name="shopmania[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $shopmania ?>"/></td>
@@ -128,6 +132,7 @@ function datafeed_display_form() {
               <td><input type="text" name="allshops[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $allshops ?>"/></td>
               <td><input type="text" name="magazineonline[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $magazineonline ?>"/></td>
               <td><input type="text" name="goshopping[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $goshopping ?>"/></td>
+              <td><input type="text" name="cadouricadou[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cadouricadou ?>"/></td>
             </tr>            
           <?php }
         }

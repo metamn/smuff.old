@@ -1,12 +1,15 @@
-<?php
+<?php 
+
+
+
 /** WordPress's config file **/
 /** http://wordpress.org/   **/
 
 // ** MySQL settings ** //
-define('WP_CACHE', true); //Added by WP-Cache Manager
+ //Added by WP-Cache Manager
 define('DB_NAME', 'ujsmuff');     // The name of the database
-define('DB_USER', 'cs');     // Your MySQL username
-define('DB_PASSWORD', ''); // ...and password
+define('DB_USER', 'ujsmuff');     // Your MySQL username
+define('DB_PASSWORD', '5FJFuy6Ff6bHNCcs'); // ...and password
 define('DB_HOST', 'localhost');     // ...and the server MySQL is running on
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');

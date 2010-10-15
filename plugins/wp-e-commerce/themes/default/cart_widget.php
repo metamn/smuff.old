@@ -21,9 +21,7 @@
 	</ul>	
 <?php endif; ?>
 
-<div class="fb-profile">
-  <?php echo fbc_render_login_state() ?>
-</div>
+
 
 
 

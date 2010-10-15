@@ -20,7 +20,7 @@
     <br/>
     <a href="http://www.facebook.com/pages/smuffro-magazin-gadget-gizmo/213629083432" title="facebook" alt="facebook">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
-    <a href="http://smuff.tumblr.com" title="tumblr" alt="tumblr">
+    <a href="http://gadgetoman.smuff.ro/" title="tumblr" alt="tumblr">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/img/tumblr.png"></a>
     <a href="http://twitter.com/smuff_ro" title="twitter" alt="twitter"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter_t_logo.png"></a>
     <a title="youtube" alt="youtube" target="_blank" href="http://www.youtube.com/user/smuffro">
