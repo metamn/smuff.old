@@ -1,6 +1,19 @@
 $(document).ready(function() { 
 
-
+  // jQZoom
+  // On Product 
+  // after image change jqzoom is reloaded, see below
+  $('.product-zoom').jqzoom({
+	    zoomWidth: 480,
+	    zoomHeight: 325,
+      xOffset: 10,
+      yOffset: 0,
+      position: "right",
+      title: false,
+      preload: 0,
+      zoomType: 'reverse'
+  });
+  
   // Slider
   // Home page Hot
   $("#hot-slider").sudoSlider({ 
@@ -18,7 +31,8 @@ $(document).ready(function() {
   
   // Single post images
   $("#single-scroll").scrollable().navigator();
-   // Single post thumb click
+  
+  // Single post thumb click
   $("#single-scroll img.small-image").click(function(){
     var newImage = $(this).attr('rev');
     var wrap = $("#large-image");
@@ -26,8 +40,21 @@ $(document).ready(function() {
     img.onload = function() {
       // change the image
       wrap.find("img").attr("src", newImage);
+      wrap.find("a").attr("href", newImage);
     };
     img.src = newImage;
+    
+    // jQZoom
+    $('.product-zoom').jqzoom({
+	      zoomWidth: 480,
+	      zoomHeight: 315,
+        xOffset: 10,
+        yOffset: 0,
+        position: "right",
+        title: false,
+        preload: 0,
+        zoomType: 'reverse'
+    });
   }).filter(":first").click();
 
 

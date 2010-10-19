@@ -14,7 +14,9 @@
         $large = wp_get_attachment_image_src($img->ID, 'full');                			        
       ?>
       <div id="large-image">
-        <img class="large-image" src="<?php echo $large[0]?>" />
+        <a href="<?php echo $large[0]?>" class="product-zoom">
+          <img class="large-image" src="<?php echo $large[0]?>" />
+        </a>
       </div>
       <div id="single-scroll" class="scrollable">
         <div class="items">
@@ -56,6 +58,10 @@
             <td><?php include "share-facebook.php" ?></td>
             <!--<td><?php include "share-facebook-like.php" ?></td>-->
           </tr>
+          <tr>
+            <td><?php if(function_exists('the_ratings')) { the_ratings(); } ?></td>
+            <td><?php if (function_exists('wpfp_link')) { wpfp_link(); } ?></td>
+          </tr>
           </table>           
       </div>
       <div id="post-sponsor">        
@@ -91,7 +97,7 @@
         <?php comments_template('', true); ?>
       </div>
       
-      <h3>Informatii technice despre acest articol</h3>
+      <h3>Alte informatii</h3>
       <div class="pane">
         <ul>
           <li>Adresa trackback: <a href="<?php trackback_url(); ?>"><?php trackback_url(); ?></a></li>

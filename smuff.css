@@ -789,8 +789,8 @@ body.blog #single #content #post {
   padding-left: 45%;
 }
 #large-image img {
-  width: 98%;
-  height: auto;
+  width: 461px;
+  height: 325px;
 }
 img.small-image {
   width: 100px;
@@ -862,6 +862,9 @@ div.thanks-error {
 }
 #post-operations img {
   border: none;
+}
+#post-operations .twitter-share-button .vcount .tb {
+  margin-top: 0 !important;
 }
 
 #single #post-sponsor {

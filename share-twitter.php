@@ -6,6 +6,8 @@
         data-via="smuff_ro"
         data-text="<?php the_title() ?> de pe <?php bloginfo('name')?>"
         data-related="anywhere:The Javascript API"
-        data-count="vertical">Tweet</a>
+        data-count="none">Tweet</a>
   </div>
 </div>
+
+
