@@ -815,9 +815,11 @@ img.small-image {
 #post-shopping .wpsc_container table {
   width: 200px !important;
 }
+#post-shopping .wpsc_container td.right {
+  text-align: right;
+}
 #post-shopping .wpsc_container tr.price {
   background: none !important;
-  font-size: small;
 }
 #post-shopping .wpsc_container span.pricedisplay {
   float: none !important;
@@ -835,14 +837,41 @@ div.thanks-error {
   background: #A53B08;
   padding: 1em;
 }
+#post-shopping .wpsc_cart_message {
+  text-align: center;
+}
+
+#shopping-info ul {
+  list-style-type: none;
+  margin: 0;
+}
+#shopping-info ul li {
+  margin-bottom: 1em;
+}
+#shopping-info ul li.shopping-info {
+  cursor: pointer;
+}
+#shopping-info .tooltip {
+	display: none;
+	background: url(http://static.flowplayer.org/tools/img/tooltip/black_arrow_big.png);
+	height: 163px;
+	padding: 2.5em 2em 0 3em;
+	width: 310px;
+	color: #eee;
+}
+#shopping-info .tooltip ol {
+  margin: 0;
+  margin-left: 1em;
+}
+#shopping-info .tooltip ol li {
+  margin-bottom: .5em;
+}
 #single div.entry {
   margin: 2em 0;
 }
 
-#single #post-operations {
-  padding: .5em !important;
-  padding-bottom: 1em !important;
-  margin-top: 1.2em;
+
+#single #post-operations {  
 }
 #single #post-operations hr {
   margin-bottom: .5em !important
@@ -852,6 +881,9 @@ div.thanks-error {
 }
 #single #post-operations table, #single #post-operations th, #single #post-operations td {
   vertical-align: top;
+}
+#single #post-operations table td {
+  width: 100px;
 }
 #single td.fblike {
   padding-top: 1.5em;
@@ -867,8 +899,13 @@ div.thanks-error {
   margin-top: 0 !important;
 }
 
-#single #post-sponsor {
-  margin: 1em 0 0;
+#single #post-sponsor {  
+}
+#single #post-sponsor .text {
+  margin-left: 1em;  
+}
+#single #sidebar #similar-buys {
+  margin-top: 77em;
 }
 #single #sidebar #home-news {
   margin: 0;

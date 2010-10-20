@@ -126,11 +126,17 @@
 					        $delivery = product_delivery_time($product_data['sku']);
 					      ?>
 					      
-					      <tr class='delivery'><td>
-					        <label>Livrare:</label>
+					      <tr class='delivery'>
+					        <td><label>Livrare:</label></td>
+					        <td class='right'><?php  echo $delivery ?></td>
+					      </tr>
+					      					      
+					      <tr class='transport'><td>
+					        <label>Transport:</label>
 					      </td><td class='right'>
-					        <?php  echo $delivery ?>  
+					        8.00 RON  
 					      </td></tr>
+					      
 					      
 					      										
 					      <!-- END OF QUANTITY OPTION -->
@@ -155,6 +161,9 @@
 								        <img title="Loading" alt="Loading" src="<?php echo WPSC_URL ;?>/images/indicator.gif" class="loadingimage" />
 								          Actualizare cos...
 							        </div>
+							        <div class='wpsc_cart_message'>
+							          
+							        </div>
 							       </td></tr>							      
 							      							
 						      <?php else : ?>
@@ -164,6 +173,16 @@
 					  </table>
 					</form>
 					
+					
+	        <?php if(count($cart_messages) > 0) { ?>  
+            <ul>
+            <?php foreach((array)$cart_messages as $cart_message) { ?>
+              <li><?php echo $cart_message; ?></li>
+            <?php } ?>
+            </ul>	
+          <?php } ?>
+          
+          
 					
 					<?php if((get_option('hide_addtocart_button') == 0) && (get_option('addtocart_or_buynow')=='1')) : ?>
 						<?php echo wpsc_buy_now_button(wpsc_the_product_id()); ?>

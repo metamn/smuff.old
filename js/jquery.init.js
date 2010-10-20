@@ -59,18 +59,7 @@ $(document).ready(function() {
 
 
 
-  // Accordions
-  // For post body
-  $("#accordion h3").toggle(
-    function () {
-      $(this).addClass("current");
-      $(this).next(".pane").show();
-    },
-    function () {
-      $(this).removeClass("current");
-      $(this).next(".pane").hide();
-    }
-  );
+  // Accordions  
   // Info pages above footer    
   $("#accordion-footer-info").tabs(
     "#accordion-footer-info div.pane", {
@@ -111,6 +100,9 @@ $(document).ready(function() {
       $('#tooltips').html('');
       $('#tooltips').removeClass('tooltips-highlighted');
   });
+  
+  // jQuery Tools Tooltip
+  $("#shopping-info .shopping-info").tooltip({ effect: 'slide'});
 
   
   

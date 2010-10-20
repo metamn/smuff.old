@@ -1,11 +1,15 @@
-#accordion, .accordion {
+#accordion {
+  background: #DFDBD0;
 }
 
 /* accordion header */
 #accordion h3, .accordion h3 {
-	cursor: pointer;		
 	padding: .5em;
-	border-bottom: solid 1px #CAC1B2;
+	margin-bottom: 0;
+}
+.accordion h3 {
+  border-bottom: 1px solid #cac1b2;
+  cursor: pointer;
 }
 
 /* currently active header */
@@ -17,9 +21,16 @@
 
 /* accordion pane */
 #accordion div.pane, .accordion div.pane {
-	display: none;
 	padding: 1em;
-	border: 1px solid #CAC1B2;
 	margin-bottom: 1em;
+	font-size: 1.1em;
+}
+.accordion div.pane {
+  display: none;
+  border: 1px solid #cac1b2;
+}
+
+#accordion div.normal {
+  font-size: 1em;
 }
 

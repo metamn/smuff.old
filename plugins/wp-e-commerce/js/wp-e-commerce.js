@@ -120,6 +120,7 @@ jQuery(document).ready(function () {
       jQuery.post( '?ajax=true', form_values, function(returned_data) {			
 				eval(returned_data);
 				jQuery('div.wpsc_loading_animation').css('visibility', 'hidden');
+				jQuery('div.wpsc_cart_message').html('Success!');
 				
 				if(jQuery('#fancy_notification') != null) {
 					jQuery('#loading_animation').css("display", 'none');
