@@ -200,6 +200,10 @@ table.productcart tr.subtotal td {
   border-top: 1px solid #cac1b2;
 }
 
+table.productcart input.coupon {
+  width: 10em;
+}
+
 table.shipping td {
   vertical-align: top;
 }

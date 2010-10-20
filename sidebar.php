@@ -9,7 +9,7 @@
     <?php include "home-menu.php" ?>   
     
     <?php 
-      if (is_page(430) || in_category(10)) { ?>
+      if (is_page(430) || is_single()) { ?>
         
         <div id="contact-info">
           <center>

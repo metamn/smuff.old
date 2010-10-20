@@ -90,14 +90,21 @@
 	
 	<?php if(wpsc_uses_coupons()): ?>		
 		<?php if(wpsc_coupons_error()): ?>
-			<tr><td><?php echo __('Cuponul nu este valid'); ?></td></tr>
+			<tr>
+			  <td>&nbsp;</td>
+			  <td colspan=4><div class="login_error"><?php echo __('Cuponul nu este valid'); ?></div></td>
+			</tr>
 		<?php endif; ?>
-		<tr>
-			<td colspan="2"><?php _e('Introduceti codul cuponului'); ?></td>
-			<td  colspan="3" align='left'>
-				<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">
-					<input type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
-					<input type='submit' value="<?php echo __('Actualizare') ?>" />
+		<tr class="coupon">
+			<td>&nbsp;</td>
+			<td><?php _e('Introduceti codul cuponului'); ?></td>
+			<td  colspan="2" align='left'>
+				<!--<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">-->
+				<form  method='post' action="http://localhost/smuff/comenzi/cos-cumparaturi/">
+					<input class="coupon" type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
+			</td>
+			<td>
+			  <input type='submit' value="<?php echo __('Actualizare') ?>" />		
 				</form>
 			</td>
 		</tr>
@@ -203,12 +210,13 @@
   -->
   
 	  <?php if(wpsc_uses_coupons() && (wpsc_coupon_amount(false) > 0)): ?>
-	<tr class="total_price">
-		<td colspan="3">
-			<?php echo __('Discount', 'wpsc'); ?>
-		</td>
-		<td colspan="2">
-			<span id="coupons_amount" class="pricedisplay"><?php echo wpsc_coupon_amount(); ?></span>
+	  <tr class="discount">
+		  <td>&nbsp;</td>
+		  <td>
+			  <?php echo __('Discount', 'wpsc'); ?>
+		  </td>
+		  <td>
+			  <span id="coupons_amount" class="pricedisplay"><?php echo wpsc_coupon_amount(); ?></span>
 	    </td>
    	</tr>
 	  <?php endif ?>

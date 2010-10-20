@@ -5,7 +5,7 @@ $(document).ready(function() {
   // after image change jqzoom is reloaded, see below
   $('.product-zoom').jqzoom({
 	    zoomWidth: 480,
-	    zoomHeight: 325,
+	    zoomHeight: 330,
       xOffset: 10,
       yOffset: 0,
       position: "right",
@@ -47,7 +47,7 @@ $(document).ready(function() {
     // jQZoom
     $('.product-zoom').jqzoom({
 	      zoomWidth: 480,
-	      zoomHeight: 315,
+	      zoomHeight: 330,
         xOffset: 10,
         yOffset: 0,
         position: "right",
