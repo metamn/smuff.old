@@ -35,9 +35,7 @@
       <?php if ($img_count > 4) { ?>
         <div class="clearfix"></div>
         <div class="navi"></div>			          
-      <?php } ?>
-      
-      
+      <?php } ?>      
     </div>
     
     <div id="post-meta" class="column span-6 last">
@@ -80,11 +78,12 @@
           <tr>
             <td><?php if(function_exists('the_ratings')) { the_ratings(); } ?></td>
             <td><?php if(function_exists('the_views')) { the_views(); } ?> vizualizari</td>
-            <td><?php echo get_comments_number(); ?> comentarii</td>          
-            <td>
-              <?php include "share-twitter.php" ?>
-              <?php include "share-facebook.php" ?>
-            </td>
+            <td><?php echo get_comment_number($post->ID); ?> comentarii</td>
+          </tr>
+          <tr>          
+            <td><?php include "share-twitter.php" ?></td>
+            <td><?php include "share-facebook.php" ?></td>
+            <td><?php include "share-facebook-like.php" ?></td>
           </tr>
           </table>                     
       </div>

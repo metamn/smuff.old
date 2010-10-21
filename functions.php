@@ -205,6 +205,15 @@ function styled_comments($comment, $args, $depth){
 }
 
 
+// Getting comment number for a post
+function get_comment_number($id) {
+  if ($id) {
+    global $wpdb;
+    $comms = $wpdb->get_var("SELECT count(*) FROM `wp_cp53mf_comments` WHERE `comment_post_ID`=".$id);
+    return $comms;
+  } 
+}
+
 
 
 // WP Extensions

@@ -99,8 +99,7 @@
 			<td>&nbsp;</td>
 			<td><?php _e('Introduceti codul cuponului'); ?></td>
 			<td  colspan="2" align='left'>
-				<!--<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">-->
-				<form  method='post' action="http://localhost/smuff/comenzi/cos-cumparaturi/">
+				<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">				
 					<input class="coupon" type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
 			</td>
 			<td>

@@ -18,7 +18,7 @@
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
-	<h4 class="comments" id="comments"><?php comments_number('Fara comentarii', 'Un comentariu', '% comentarii' );?> pentru &#8220;<?php the_title(); ?>&#8221;</h4>
+	<h4 class="comments" id="comments">Comentarii pentru &#8220;<?php the_title(); ?>&#8221;</h4>
 
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>

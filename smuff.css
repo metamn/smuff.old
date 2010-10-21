@@ -881,7 +881,7 @@ div.thanks-error {
   margin-bottom: .5em !important
 }
 #single #post-operations table {
-  margin-bottom: 0;
+  margin-bottom: 2em;
 }
 #single #post-operations table, #single #post-operations th, #single #post-operations td {
   vertical-align: top;
@@ -902,6 +902,13 @@ div.thanks-error {
 #post-operations .twitter-share-button .vcount .tb {
   margin-top: 0 !important;
 }
+#post-operations .twitter-button {
+  width: 100px;
+}
+#post-operations #fb_share_1 {
+  
+}
+
 
 #single #post-sponsor {  
 }
