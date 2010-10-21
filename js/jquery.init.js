@@ -60,6 +60,18 @@ $(document).ready(function() {
 
 
   // Accordions  
+  // Product page 
+  $("#accordion h3.toggle").toggle(
+    function () {
+      $(this).addClass("current");
+      $(this).next(".pane").show();
+    },
+    function () {
+      $(this).removeClass("current");
+      $(this).next(".pane").hide();
+    }
+  );
+  
   // Info pages above footer    
   $("#accordion-footer-info").tabs(
     "#accordion-footer-info div.pane", {

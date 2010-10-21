@@ -1,15 +1,20 @@
-#accordion {
-  background: #DFDBD0;
-}
 
 /* accordion header */
 #accordion h3, .accordion h3 {
 	padding: .5em;
-	margin-bottom: 0;
+	margin-bottom: 0;	
 }
-.accordion h3 {
-  border-bottom: 1px solid #cac1b2;
+.accordion h3{  
   cursor: pointer;
+  border-bottom: 1px solid #cac1b2;
+}
+#accordion h3 {
+  border-bottom: 1px solid #ddd;
+  background: #cac1b2;
+}
+#accordion h3.toggle {
+  cursor: pointer;
+  border-bottom: 1px solid #dfdbd0;
 }
 
 /* currently active header */
@@ -25,11 +30,14 @@
 	margin-bottom: 1em;
 	font-size: 1.1em;
 }
-.accordion div.pane {
+.accordion div.pane, #accordion div.toggle {
   display: none;
   border: 1px solid #cac1b2;
 }
-
+#accordion .pane {
+  background: #DFDBD0;
+  margin-bottom: 2em !important;  
+}
 #accordion div.normal {
   font-size: 1em;
 }

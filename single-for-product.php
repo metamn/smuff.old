@@ -113,13 +113,13 @@
     <div id="accordion">
       <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
         
-      <h3>Comentarii</h3>
-      <div class="normal pane">
+      <h3 class="toggle">Comentarii &rarr;</h3>
+      <div class="toggle normal pane">
         <?php comments_template('', true); ?>
       </div>
       
-      <h3>Alte informatii</h3>
-      <div class="normal pane">
+      <h3 class="toggle">Alte informatii &rarr;</h3>
+      <div class="toggle normal pane">
         <ul>
           <li>Adresa trackback: <a href="<?php trackback_url(); ?>"><?php trackback_url(); ?></a></li>
           <li><?php post_comments_feed_link('Urmarire articol prin RSS'); ?></li>

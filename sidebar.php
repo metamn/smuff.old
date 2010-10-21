@@ -21,6 +21,7 @@
           </center>
         </div>
         
+        <?php if (!(is_single())) { ?>
         <div id="similar-buys">
           <h3>Promotii Smuff</h3>
           <p class="intro">Acestea sunt produsele in oferta actuala la Smuff. Adaugati orice produs secundar (langa ce aveti in cos acum) si livrarea pentru acestea va fi GRATUITA!</p>
@@ -31,9 +32,9 @@
                 include "product-thumb.php";
               endwhile;
             }
-          ?>
-          
+          ?>          
         </div>
+        <?php } ?>
         
       <?php } else {
         include "home-news.php";
