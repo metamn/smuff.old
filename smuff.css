@@ -911,6 +911,7 @@ div.thanks-error {
 
 
 #single #post-sponsor {  
+  margin-bottom: 1em;
 }
 #single #post-sponsor .text {
   margin-left: 1em;  
@@ -1271,6 +1272,20 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 }
 
 
+
+/* Wishlist
+*/
+
+
+#wishlist table th.header {
+  background: #cac1b2;
+  border-right: 1px dotted #dfdbd0;
+}
+#wishlist .remove-all span {
+  text-align: right;
+  margin-right: 1em;
+  float: right;
+}
 
 
 
