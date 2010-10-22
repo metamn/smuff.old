@@ -1286,7 +1286,9 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
   margin-right: 1em;
   float: right;
 }
-
+#wishlist input.url {
+  width: 30em;
+}
 
 
 

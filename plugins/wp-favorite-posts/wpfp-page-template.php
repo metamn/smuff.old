@@ -1,3 +1,11 @@
+<?php
+  $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);
+  $split = explode("=", $params);
+  $id = $split[2];    
+?>
+
+
+
 <div id="wishlist">
   <?php 
     if (!empty($user)):
@@ -56,11 +64,16 @@
       <?php if(!is_user_logged_in()) {
         global $current_user;
         get_currentuserinfo(); 
-        $url = $_COOKIE['wpfp_url']; 
         
+        echo "not logged in .." . "<br/>";
+        
+        $url = $_COOKIE['wpfp_url'];         
         if (!($url)) {
-          $random = uniqid("wpfp", false);          
-          $url = $random;
+          $random = uniqid("wpfp", false);  
+          $expire = time()+60*60*24*30;
+          //setcookie("wpfp_url", $random, $expire, "/", "localhost/smuff", false, true);        
+          //$url = $random;
+          echo "url not found in cookie, created: " . $url . "<br/>";
         }
         
       } else { 
@@ -68,29 +81,48 @@
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return;
           
+          echo "logged in .." . "<br/>";
+          
           $url = get_user_meta($current_user->ID, 'wpfp_url', true);          
           if (!($url)) {
             $random = uniqid("wpfp", false);
             update_user_meta($current_user->ID, 'wpfp_url', $random);
-            $url = $random;          
+            $url = $random; 
+            echo "url not found in usermeta, created: " . $url . "<br/>";         
           }
         }     
-      } 
-      
-      update_option($url, $favorite_post_ids);
-      
-      $ids = get_option($url);
-      if ($ids) {
-        foreach ($ids as $id) {
-          $post = get_post($id);
-          echo $post->post_title . '<br/>';
-        }
       }
       
+      echo "url = " . $url . "<br/>";
       
+      // Saving the wishlist
+      if ($id) {
+        update_option($id, $favorite_post_ids);
+        echo 'Salvat!';   
+      }
+                 
       ?>
       
-      
+      <table>
+        <tr>
+          <td>
+            <p>
+              Aceasta este adresa unica a wishlist-ului Dvs. 
+              <br/>
+              Dupa salvare puteti trimite prietenilor.
+            </p>
+            <form action="<?php echo curPageURL2() ?>" method="get">
+              <input class="url" type="text" name="url" readonly="readonly" value="<?php bloginfo('home')?>/wishlist/share/?id=<?php echo $url ?>" />
+              <button type='submit' name='submit' value="<?php echo $url ?>" >Salvare</button>
+            </form>
+          </td>          
+        <tr>
+        <tr>
+          <td>
+            facebook, twitter, email ....
+          </td>
+        </tr>
+      </table>
       
       
     </div>

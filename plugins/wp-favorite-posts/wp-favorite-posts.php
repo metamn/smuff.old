@@ -67,9 +67,10 @@ function wpfp_add_favorite($post_id = "") {
             $str = wpfp_link(1, "remove", 0, array( 'post_id' => $post_id ) );
             wpfp_die_or_go($str);
         } else {
-            wpfp_die_or_go(wpfp_get_option('added'));
+            wpfp_die_or_go(wpfp_get_option('added'));            
         }
     }
+    
 }
 function wpfp_do_add_to_list($post_id) {
     if (wpfp_check_favorited($post_id))
@@ -77,6 +78,15 @@ function wpfp_do_add_to_list($post_id) {
     if (is_user_logged_in()) {
         return wpfp_add_to_usermeta($post_id);
     } else {
+        // by cs
+        // setting wishlist id into the cookie
+        $url = $_COOKIE['wpfp_url'];         
+        if (!($url)) {
+          echo "no url found, adding ...";
+          $random = uniqid("wpfp", false);  
+          $expire = time()+60*60*24*30;
+          setcookie("wpfp_url", $random, $expire, "/");
+        }
         return wpfp_set_cookie($post_id, "added");
     }
 }
