@@ -50,6 +50,50 @@
     <div class="remove-all">
       <span><?php wpfp_clear_list_link(); ?></span>
     </div>
+    <div class="clear"></div>
+    
+    <div id="operations">      
+      <?php if(!is_user_logged_in()) {
+        global $current_user;
+        get_currentuserinfo(); 
+        $url = $_COOKIE['wpfp_url']; 
+        
+        if (!($url)) {
+          $random = uniqid("wpfp", false);          
+          $url = $random;
+        }
+        
+      } else { 
+        if (is_user_logged_in()) {
+          $current_user = wp_get_current_user();
+          if ( !($current_user instanceof WP_User) ) return;
+          
+          $url = get_user_meta($current_user->ID, 'wpfp_url', true);          
+          if (!($url)) {
+            $random = uniqid("wpfp", false);
+            update_user_meta($current_user->ID, 'wpfp_url', $random);
+            $url = $random;          
+          }
+        }     
+      } 
+      
+      update_option($url, $favorite_post_ids);
+      
+      $ids = get_option($url);
+      if ($ids) {
+        foreach ($ids as $id) {
+          $post = get_post($id);
+          echo $post->post_title . '<br/>';
+        }
+      }
+      
+      
+      ?>
+      
+      
+      
+      
+    </div>
           
   <?php } else { ?>
     <h4>Nu aveti nici un produs adaugat la wishlist</h4>

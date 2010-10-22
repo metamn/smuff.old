@@ -134,6 +134,11 @@ function dynamic_shopping_cart() {
 //
 
 
+// Set cookies
+// - cannot be done in the template only here 
+function set_cookie($cookie, $value, $expire, $root) {
+  setcookie($cookie, $value, $expire, $root);
+}
 
 
 // Email obfuscator 
