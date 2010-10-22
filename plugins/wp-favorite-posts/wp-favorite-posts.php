@@ -82,7 +82,6 @@ function wpfp_do_add_to_list($post_id) {
         // setting wishlist id into the cookie
         $url = $_COOKIE['wpfp_url'];         
         if (!($url)) {
-          echo "no url found, adding ...";
           $random = uniqid("wpfp", false);  
           $expire = time()+60*60*24*30;
           setcookie("wpfp_url", $random, $expire, "/");

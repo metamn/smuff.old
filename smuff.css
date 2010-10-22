@@ -377,7 +377,7 @@ table.wpsc_checkout_table input.text {
   text-align: right;
 }
 
-#page #subscribe #share img, #page #subscribe #share .spacerx {
+#page #subscribe #share img, #page #subscribe #share .spacerx, #wishlist img.icon {
   width: 72px;
   height: 72px;
   float: left;
@@ -1277,7 +1277,7 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 */
 
 
-#wishlist table th.header {
+#wishlist table th.header, #page.wishlist table th.header {
   background: #cac1b2;
   border-right: 1px dotted #dfdbd0;
 }
@@ -1289,7 +1289,12 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 #wishlist input.url {
   width: 30em;
 }
-
+#wishlist #operations {
+  margin-top: .5em;
+}
+#wishlist table.share td.fb, #wishlist table.share td.tw {
+  width: 10em;
+}
 
 
 /* Authors & Common Blog Styles
