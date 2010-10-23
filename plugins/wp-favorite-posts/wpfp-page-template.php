@@ -19,7 +19,7 @@
 <?php
   $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);
   $split = explode("=", $params);
-  $id = $split[2];    
+  $id = wp_specialchars($split[2]);    
 ?>
 
 
@@ -125,7 +125,7 @@
         <tr>
           <td class="fb">
             <a name="fb_share" type="box_count" href="javascript:void(window.open('http://www.facebook.com/sharer.php?u=<?php echo $share_url ?>&t=<?php echo $product_name ?>', 'Share pe Facebook', 'width=640,height=480'))">                    
-              <img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg" title="Share <?php echo $p->post_title?> pe Facebook">
+              <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook-share-button.jpg" title="Share <?php echo $p->post_title?> pe Facebook">
             </a>
           </td>
           <td class="tw">
@@ -142,7 +142,7 @@
           </div>
           </td>
           <td class="email">
-            <?php insert_cform(); ?>
+            <a href="mailto:?subject=Wishlist-ul meu de pe Smuff&body=<?php echo $share_url ?>"><img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/img/mail.png" title="Trimitere prin email" alt="Trimitere prin email"</a>
           </td>
         </tr>
       </table>

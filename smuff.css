@@ -377,7 +377,7 @@ table.wpsc_checkout_table input.text {
   text-align: right;
 }
 
-#page #subscribe #share img, #page #subscribe #share .spacerx, #wishlist img.icon {
+#page #subscribe #share img, #page #subscribe #share .spacerx {
   width: 72px;
   height: 72px;
   float: left;
@@ -1293,7 +1293,14 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
   margin-top: .5em;
 }
 #wishlist table.share td.fb, #wishlist table.share td.tw {
-  width: 10em;
+  width: 5em;
+}
+#wishlist table.share td.fb {
+  margin-top: .5em;
+}
+#wishlist img.icon {
+  height: 24px;
+  width: auto;
 }
 
 
