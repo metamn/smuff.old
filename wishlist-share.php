@@ -10,8 +10,9 @@
 
 <?php 
   $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);	
-  $subs = explode("=", $params);
+  $subs = explode("id=", $params);
   $wish = $subs[1];
+    
 ?>
 
 <div id="page" class="wishlist share block">

@@ -18,8 +18,8 @@
 
 <?php
   $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);
-  $split = explode("=", $params);
-  $id = wp_specialchars($split[2]);    
+  $split = explode("submit=", $params);
+  $id = $split[1];    
 ?>
 
 
@@ -98,9 +98,12 @@
       }
       
       // Saving the wishlist
-      if ($id) {
-        update_option($id, $favorite_post_ids);
-        echo "<div class='notice'>Wishlist salvat cu success</div>";   
+      if ($id) {        
+        if (update_option($id, $favorite_post_ids)) {
+          echo "<div class='notice'>Wishlist salvat cu success</div>";   
+        } else {
+          echo "<div class='error'>Eroare la salvare Wishlist. Analizam aceasta problema, va rugam reveniti mai tarziu.</div>";
+        }
       }
                  
       ?>
@@ -124,9 +127,7 @@
         <tr>
         <tr>
           <td class="fb">
-            <a name="fb_share" type="box_count" href="javascript:void(window.open('http://www.facebook.com/sharer.php?u=<?php echo $share_url ?>&t=<?php echo $product_name ?>', 'Share pe Facebook', 'width=640,height=480'))">                    
-              <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook-share-button.jpg" title="Share <?php echo $p->post_title?> pe Facebook">
-            </a>
+            <a name="fb_share" type="button" share_url="http://www.smuff.ro/wishlist/share/?id=wpfp4cc297bbeab13" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
           </td>
           <td class="tw">
             <div class="twitter-button">
