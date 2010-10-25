@@ -67,11 +67,13 @@ function batcheditor_main_page() {
 
 // Processing input
 function plugin_process_form($data) {
-  echo "running ...";
+  echo "running ..." . '<br/>';
   $posts = get_posts('numberposts=-1&category=10');
   if ($posts) {
     foreach ($posts as $p) {
       setup_postdata($p);
+      echo 'Post: ' . $p->post_title . '<br/>';
+      
       $descr = $p->post_content;
       $items = explode("<h3>Intrebari frecvente</h3>", $descr);
       // cut faq;
@@ -86,8 +88,8 @@ function plugin_process_form($data) {
       $update = array();
       $update['ID'] = $p->ID;
       $update['post_content'] = $final;
-      wp_update_post($update);
-      echo 'ok ';
+      
+      echo "Result: " . $final . '<br/><br/>';      
     }
   }
   echo "done!";

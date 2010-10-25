@@ -35,7 +35,7 @@ add_action('admin_menu', 'my_plugin_menu');
 
 // Adding menus and submenus
 function my_plugin_menu() {
-  add_menu_page('Datafeed', 'Datafeed', 'delete_others_posts', 'datafeed-menu', 'datafeed_main_page' );
+  add_menu_page('Selectare atafeed', 'Datafeed', 'delete_others_posts', 'datafeed-menu', 'datafeed_main_page' );
   
   add_submenu_page('datafeed-menu', 'Marcare produse', 'Marcare produse', 'delete_others_posts', 'datafeed-shops', 'shops_options');
   add_action( 'admin_init', 'register_options' );
@@ -46,18 +46,66 @@ function register_options() {
   //register_setting( 'datafeed', 'datafeed_shops' );
 }
 
+
+
 // Main datafeed dashboard
+// - user selects which datafeeds to edit
 function datafeed_main_page() {
   if (!current_user_can('delete_others_posts'))  {
     wp_die( 'Nu aveti drepturi suficiente de acces.' );
-  }
+  } 
   
-  echo '<div class="wrap">';
-  echo '<h2>Generare datafeed</h2>';
-  echo '</div>';
+  if ($_POST) {
+    datafeed_process_forms($_POST);
+  } else { 
+    datafeed_display_select_form();
+  }
 }
 
-// Main function on Admin screen
+
+// Main datafeed dashboard
+// - processing feed selection and feed edit
+// - the only function handling all forms
+function datafeed_process_forms($data) {
+  if ($data['datafeed']) {
+    $params = $data['datafeed'];
+    $items = array();
+    $count = 0;
+    foreach ($params as $p) {
+      $items[] = $p;
+      $count += 1;    
+      if ($count == 3) { break; }
+    }
+    
+    datafeed_display_form($items);
+  } else {
+    datafeed_process_form($data);
+  }  
+}
+
+// Main datafeed dashboard
+// - displaying feed selection
+function datafeed_display_select_form() { 
+  $datafeeds = array('shopmania', 'cautiro', 'cumparaturi', 'allshops', 'magazineonline', 'goshopping', 'cadouri-cadou'); ?>
+  <div class="wrap">
+    <h2>Selectare datafeed</h2>
+    <p>Selectati <strong>maxim 3</strong> datafeeduri pentru editare.</p>
+    <form method="post" action="">
+      <ul>
+        <?php foreach ($datafeeds as $df) { ?>
+          <li><input type="checkbox" name="datafeed[]" value="<?php echo $df ?>" /><?php echo $df ?></li>
+        <?php } ?>
+      </ul>
+      <input type="submit" class="button-primary" value="Selectare" />    
+    </form>  
+  </div>
+<?php 
+}
+
+
+
+
+// Datafeed editor
 function shops_options() {
 
   if (!current_user_can('delete_others_posts'))  {
@@ -77,62 +125,54 @@ function shops_options() {
 }
 
 
-
-
-// Plugin body
-//-------------
-
-
-
-// Precessing input
+// Datafeed editor
+// - processing a datafeed edit form
 function datafeed_process_form($data) {
-  set_meta_checked($data['shopmania'], 'shopmania'); 
-  set_meta_checked($data['cautiro'], 'cautiro'); 
-  set_meta_checked($data['cumparaturi'], 'cumparaturi'); 
-  set_meta_checked($data['allshops'], 'allshops'); 
-  set_meta_checked($data['magazineonline'], 'magazineonline'); 
-  set_meta_checked($data['goshopping'], 'goshopping');
-  set_meta_checked($data['cadouri-cadou'], 'cadouri-cadou');   
+  $datafeeds = array('shopmania', 'cautiro', 'cumparaturi', 'allshops', 'magazineonline', 'goshopping', 'cadouri-cadou');
+  foreach ($datafeeds as $df) {
+    if ($data[$df]) {
+      set_meta_checked($data[$df], $df);  
+    }
+  }  
 }
 
-// Displaying a form
-function datafeed_display_form() {
+// Datafeed editor
+// - displaying a datafeed edit form
+function datafeed_display_form($items = null) {
+
+  if (!($items)) {
+    wp_die('In primul pas selectati datafeedurile ce vor fi editate');    
+  }
+  
 ?>
 <form method="post" action="">    
     <input type="hidden" name="hide" value="1">
     <table>
       <tr>
         <td>Produs Smuff</td>
-        <td>shopmania</td>
-        <td>cautiro</td>
-        <td>cumparaturi</td>
-        <td>allshops</td>
-        <td>magazine-online</td>
-        <td>goshopping</td>
-        <td>cadouri-cadou</td>
+        <?php foreach ($items as $i) { 
+          echo "<td>$i</td>";
+        } ?>
         <td><input type="submit" class="button-primary" value="Run" /></td>
       </tr>  
       <?php 
         $posts = get_posts('numberposts=-1&category=10');
         if ($posts) {
           foreach ($posts as $p) {
-            $shopmania = get_meta_checked($p->ID, 'shopmania');
-            $cautiro = get_meta_checked($p->ID, 'cautiro');
-            $cumparaturi = get_meta_checked($p->ID, 'cumparaturi');
-            $allshops = get_meta_checked($p->ID, 'allshops');
-            $magazineonline = get_meta_checked($p->ID, 'magazineonline');
-            $goshopping = get_meta_checked($p->ID, 'goshopping'); 
-            $cadouricadou = get_meta_checked($p->ID, 'cadouricadou'); 
+            $values = array();
+            foreach ($items as $i) {
+              $values[] = get_meta_checked($p->ID, $i);
+            }          
             ?>                      
             <tr>
-              <td><?php echo short_name($p->post_title)?></td>
-              <td><input type="text" name="shopmania[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $shopmania ?>"/></td>
-              <td><input type="text" name="cautiro[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cautiro ?>"/></td>
-              <td><input type="text" name="cumparaturi[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cumparaturi ?>"/></td>
-              <td><input type="text" name="allshops[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $allshops ?>"/></td>
-              <td><input type="text" name="magazineonline[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $magazineonline ?>"/></td>
-              <td><input type="text" name="goshopping[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $goshopping ?>"/></td>
-              <td><input type="text" name="cadouricadou[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $cadouricadou ?>"/></td>
+              <td><?php echo short_name($p->post_title)?></td>              
+              <?php 
+                $index = 0;
+                foreach ($items as $i) { ?>
+                  <td><input type="text" name="<?php echo $i ?>[<?php echo $p->ID ?>]" id="<?php echo $p->ID ?>" value="<?php echo $values[$index] ?>"/></td>
+                <?php 
+                  $index += 1;
+                } ?>              
             </tr>            
           <?php }
         }
