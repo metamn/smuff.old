@@ -42,7 +42,7 @@
         <th class="header">Pret<br/>RON</th>
         <th class="header">Reducere<br/>RON</th>
         <th class="header">Livrare</th>
-        <th class="no-sort">Retragere</th>        
+        <th class="no-sort">&nbsp;</th>        
       </tr></thead>
       <tbody>
       <?php foreach ($favorite_post_ids as $post_id) {
@@ -111,11 +111,15 @@
       <table class="share">
         <tr>
           <td colspan=3>
+            <h4>Impartasiti sau salvati lista Dumneavoastra.</h4> 
             <p>
-              Aceasta este adresa unica a wishlist-ului Dvs. 
-              <br/>
-              Dupa salvare puteti trimite prietenilor.
+              Cand ati terminat de ales si cules, apasati butonul Salveaza, si acesta va fi adresa unica a Listei de dorinte, adica a Wishlistului personal. Astfel data viitoare nu va trebui sa mai cautati pe site produsele dorite, veti avea deja lista personala. Totodata puteti afisa cu un click lista pe Facebook sau Twitter! Sau trimiteti lista (prin apasarea iconului Plic) prin email catre prieteni sau catre adresa Dvs. personala de email (o veti avea salvat cu siguranta).
             </p>
+            <!--
+            <p>        
+              In momentul in care doriti sa cumparati produsele din Wishlist, veti avea totul la indemana, editati lista si apasati Cumpar acum!
+            </p>
+            -->              
             <?php 
               $share_url = get_bloginfo('home') . "/wishlist/share/?id=" . $url;
             ?>

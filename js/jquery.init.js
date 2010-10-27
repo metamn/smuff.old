@@ -61,7 +61,20 @@ $(document).ready(function() {
 
   // Accordions  
   // Product page 
-  $("#accordion h3.toggle").toggle(
+  
+  // - open the first pane
+  $("#accordion h3").first().addClass("current");
+  $("#accordion h3").first().next(".pane").show();
+  
+  // - add arrow to the accordion titles 
+  $("#accordion h3").each(function(){
+    var original = $(this).html();
+    var neu = original + "<span>&rsaquo;</span>";
+    $(this).html(neu);
+  });
+
+  
+  $("#accordion h3").toggle(
     function () {
       $(this).addClass("current");
       $(this).next(".pane").show();

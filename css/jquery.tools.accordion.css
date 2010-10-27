@@ -3,9 +3,9 @@
 #accordion h3, .accordion h3 {
 	padding: .5em;
 	margin-bottom: 0;	
+	cursor: pointer;
 }
-.accordion h3{  
-  cursor: pointer;
+.accordion h3{ 
   border-bottom: 1px solid #cac1b2;
 }
 #accordion h3 {
@@ -16,6 +16,9 @@
   cursor: pointer;
   border-bottom: 1px solid #dfdbd0;
 }
+#accordion h3 span {
+  float: right;
+}
 
 /* currently active header */
 #accordion h3.current, .accordion h3.current  {
@@ -23,14 +26,17 @@
 	background-color: #CAC1B2;
 	margin-bottom: 0;
 }
+#accordion h3.current {
+  cursor: pointer;
+  background: #d1ccbc;
+  border: none;
+}
 
 /* accordion pane */
 #accordion div.pane, .accordion div.pane {
 	padding: 1em;
 	margin-bottom: 1em;
 	font-size: 1.1em;
-}
-.accordion div.pane, #accordion div.toggle {
   display: none;
   border: 1px solid #cac1b2;
 }

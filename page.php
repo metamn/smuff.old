@@ -23,7 +23,7 @@ get_header(); ?>
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>							
 			</div>
 			
-			<?php if (!(is_page(array(429, 430)))) { //No additional info on the last shopping pages ?>
+			<?php if (!(is_page(array(429, 430, 2819)))) { //No additional info on the last shopping pages ?>
 			
 			  <?php 
 			    $subs = get_pages('child_of='.$post->ID);
