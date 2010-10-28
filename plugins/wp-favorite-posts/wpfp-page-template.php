@@ -113,7 +113,12 @@
           <td colspan=3>
             <h4>Impartasiti sau salvati lista Dumneavoastra.</h4> 
             <p>
-              Cand ati terminat de ales si cules, apasati butonul Salveaza, si acesta va fi adresa unica a Listei de dorinte, adica a Wishlistului personal. Astfel data viitoare nu va trebui sa mai cautati pe site produsele dorite, veti avea deja lista personala. Totodata puteti afisa cu un click lista pe Facebook sau Twitter! Sau trimiteti lista (prin apasarea iconului Plic) prin email catre prieteni sau catre adresa Dvs. personala de email (o veti avea salvat cu siguranta).
+              Cand ati terminat de ales si cules, apasati butonul <strong>Salveaza</strong>, 
+              si acesta va fi adresa unica a Listei de dorinte, adica a Wishlistului personal. 
+              Astfel data viitoare nu va trebui sa mai cautati pe site produsele dorite, veti avea deja lista personala. 
+              <br/>
+              Totodata puteti afisa cu un click lista pe <strong>Facebook</strong> sau <strong>Twitter!</strong> 
+              Sau trimiteti lista (prin apasarea iconului Plic) prin <strong>email catre prieteni</strong> sau catre adresa Dvs. personala de email (o veti avea salvat cu siguranta).
             </p>
             <!--
             <p>        

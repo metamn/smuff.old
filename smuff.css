@@ -911,7 +911,7 @@ div.thanks-error {
 
 
 #single #post-sponsor {  
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 #single #post-sponsor .text {
   margin-left: 1em;  
@@ -935,6 +935,16 @@ div.thanks-error {
 }
 #accordion .pane img {
   border: none;
+}
+
+
+#single #recommended {
+  margin-top: 5em;
+}
+#single #recommended h3 {
+  background: #dfdbd0;
+  border-bottom: 1px solid #cac1b2;
+  padding: .5em;
 }
 
 #recommended {
