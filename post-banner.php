@@ -1,6 +1,6 @@
 <div id="post-sponsor" class="post block default">
   <?php 
-    $partners = query_posts2('posts_per_page=-1&cat=96');  
+    $partners = query_posts2('posts_per_page=-1&cat=96,1151');  
     if ($partners->have_posts()) {
       $random = rand(0, $partners->post_count);
       $counter = 0;
@@ -30,7 +30,7 @@
 			                  class="flashmovie"
 			                  width="<?php echo $w ?>"
 			                  height="<?php echo $h ?>">
-	                  <param name="movie" value="wp-content/themes/smuff/flash/<?php echo $bif ?>" />
+	                  <param name="movie" value="wp-content/themes/smuff/flash/<?php echo $big ?>" />
 	                  <!--[if !IE]>-->
 	                  <object	type="application/x-shockwave-flash"
 			                  data="wp-content/themes/smuff/flash/<?php echo $big ?>"

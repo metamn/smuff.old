@@ -14,6 +14,41 @@
 //
 
 
+// Getting the banner of the sponsor to display
+// - $id: post id
+// - $imgs: post attachemnts
+// - $sizes: the desired banner sizes, sorted by priority
+//   0 - logo
+//   1 - pop-under (blog)
+//   2 - rectangle
+//   3 - wide scyscraper
+// - if flash, the id is stored in a meta field
+//   parteneriat-0, parteneriat-1, ....
+// - returns either an url to an image or a filename.swf
+function sponsor_banner($id, $imgs, $size) {
+  $ret = "";
+  
+  if ($size) {
+    foreach ($size as $s) {
+      $img = $imgs[$s];        
+      $large = wp_get_attachment_image_src($img->ID, 'large');
+      if (!($large)) {
+        // checking flash
+        $flash = get_post_meta($id, "parteneriat-".$s, true);
+        if ($flash) {
+          $ret = $flash;
+          break;
+        } 
+      } else {
+        $ret = $large[0];
+        break;
+      }
+    }
+  }
+  
+  return $ret;
+}
+
 // Getting the sponsor of a post
 function sponsor_post($main_category){
   $ret = '';
