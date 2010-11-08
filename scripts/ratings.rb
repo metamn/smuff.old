@@ -36,7 +36,7 @@ posts.each do |p|
   v = p.post_metas.where(:meta_key => 'views').first.meta_value
   
   a = 4 + rand(99).to_f/100
-  u = v.to_i/20 + 1 + rand(2)
+  u = v.to_i*15/100 + 1 + rand(2)
   s = u*a  
   #puts " - views: #{v}"
   #puts " - ratings average: #{printf('%.2f', a)}"
