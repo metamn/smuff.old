@@ -23,7 +23,7 @@
 <div id="lets" class="column span-9 last">
   <?php 
     $campaign = query_posts2('posts_per_page=1&cat=1043'); 
-    $banner_id = 2; // which is a rectangle
+    $banner_id = 0; // which is a rectangle
     include "home-campaign.php"; 
   ?>
 </div>

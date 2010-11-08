@@ -100,6 +100,15 @@ get_header(); ?>
           </div>
         </div>
         
+        <div id="partner">
+          <center>
+          <a href="http://skimania.ro" target="_blank" title="Skimania">
+            <img src="<?php bloginfo('home') ?>/wp-content/uploads/2010/11/Skimaniac-Full-Banner-468×60.jpg" />
+          </a>
+          </center>
+        </div>
+        
+        
         <div id="comments" class="block hidden">
           <?php if (comments_open()) {comments_template();} ?>
         </div>

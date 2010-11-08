@@ -395,6 +395,11 @@ table.wpsc_checkout_table input.text {
 #page.checkout-final #comments {
   margin-top: 2em;
 }
+#page.checkout-final #partner{
+  margin: 2em 0;
+  padding: 2em;
+  background: #DFDBD0; 
+}
 
 
 
@@ -924,6 +929,9 @@ div.thanks-error {
 }
 
 
+#single #accordion {
+  margin-bottom: 5em;
+}
 #accordion .pane {
   line-height: 2;  
 }
@@ -937,6 +945,13 @@ div.thanks-error {
   border: none;
 }
 
+
+#single .navigation a, #single .navigation a:active, #single .navigation a:visited {
+  text-decoration: none;
+}
+.navigation .alignleft {
+  margin-right: 5em;
+}
 
 #single #recommended {
   margin-top: 5em;

@@ -110,7 +110,7 @@
     </div>
     
     
-    <div id="accordion">
+    <div id="accordion" class="block">
       <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
         
       <h3>Comentarii</h3>
@@ -131,10 +131,14 @@
         </ul>
       </div>
     </div>
+    
+    <div class="block">
+      <?php include "navigation.php"; ?>
+    </div>
   </div>
   
     
-  <div id="recommended">    
+  <div id="recommended" class="block">    
      <?php
         $related_posts = MRP_get_related_posts($post->ID, true);
         if ($related_posts) { ?>        
