@@ -17,47 +17,57 @@
 $separator = "|";
 $currency = "RON cu TVA";
 
-$posts = get_posts('numberposts=-1&category=10');
-if ($posts) {
-  foreach ($posts as $p) {
-    $id = $p->ID;
-    $yes = get_post_meta($id, 'cumparaturi', true);
-    if ($yes) {
-      $product_id = get_post_meta($id, 'product_id', true);      
-      $category = $yes;
-      $brand = "";
-      $brand = get_post_meta($id, 'brand', true);
-      $title = product_name($product_id);
-      $description = product_excerpt($p->post_content);
-      $description = html_to_text($description);
-      $description = replace_not_in_tags("\n", "<BR />", $description);
-		  $description = str_replace("\n", " ", $description);
-		  $description = str_replace("\r", "", $description);
-      $url = get_permalink($id);
-      $imgs = post_attachements($id);
-      $img = $imgs[0];  
-      $medium = wp_get_attachment_image_src($img->ID, 'medium'); 
-      $image = $medium[0];
-      $price = product_price($id);
-      $stoc = "disponibil in stoc";
-      $garantie = "1 an";
-            
-      print      
-      $product_id . $separator .
-      $category . $separator .
-      $brand . $separator .
-      $title . $separator .
-      $product_id . $separator .
-      $price . $separator .
-      $currency . $separator .
-      $stoc . $separator .
-      $garantie . $separator .
-      $url . $separator .
-      $image . $separator .
-      $description . "\n";
+
+$offset = 0;
+while ($offset >= 0) {
+  $posts = get_posts('numberposts=&category=10&offset='.$offset);
+  if ($posts) {
+    foreach ($posts as $p) {
+      $id = $p->ID;
+      $yes = get_post_meta($id, 'cumparaturi', true);
+      if ($yes) {
+        $product_id = get_post_meta($id, 'product_id', true);      
+        $category = $yes;
+        $brand = "";
+        $brand = get_post_meta($id, 'brand', true);
+        $title = product_name($product_id);
+        $description = product_excerpt($p->post_content);
+        $description = html_to_text($description);
+        $description = replace_not_in_tags("\n", "<BR />", $description);
+		    $description = str_replace("\n", " ", $description);
+		    $description = str_replace("\r", "", $description);
+        $url = get_permalink($id);
+        $imgs = post_attachements($id);
+        $img = $imgs[0];  
+        $medium = wp_get_attachment_image_src($img->ID, 'medium'); 
+        $image = $medium[0];
+        $price = product_price($id);
+        $stoc = "disponibil in stoc";
+        $garantie = "1 an";
+              
+        print      
+        $product_id . $separator .
+        $category . $separator .
+        $brand . $separator .
+        $title . $separator .
+        $product_id . $separator .
+        $price . $separator .
+        $currency . $separator .
+        $stoc . $separator .
+        $garantie . $separator .
+        $url . $separator .
+        $image . $separator .
+        $description . "\n";
+        
+        flush();
+      }
     }
+    $offset += 10;
+  } else {
+    $offset = -1;
   }
 }
+
 
 
 ?>

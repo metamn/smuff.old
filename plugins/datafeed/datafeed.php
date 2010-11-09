@@ -158,10 +158,15 @@ function datafeed_display_form($items = null) {
       <?php 
         $posts = get_posts('numberposts=-1&category=10');
         if ($posts) {
+          $counter = array();
           foreach ($posts as $p) {
-            $values = array();
+            $values = array();            
             foreach ($items as $i) {
-              $values[] = get_meta_checked($p->ID, $i);
+              $meta = get_meta_checked($p->ID, $i);
+              $values[] = $meta;
+              if ($meta) {
+                $counter[$i] += 1;
+              }
             }          
             ?>                      
             <tr>
@@ -174,8 +179,14 @@ function datafeed_display_form($items = null) {
                   $index += 1;
                 } ?>              
             </tr>            
-          <?php }
-        }
+          <?php } ?>
+          <tr>
+            <td>Items</td>
+            <?php foreach ($items as $i) { 
+              echo "<td>$counter[$i]</td>";
+            } ?>
+          </tr>
+        <?php }
       ?>
       <tr><td><input type="submit" class="button-primary" value="Run" /></td></tr>
     </table>   
