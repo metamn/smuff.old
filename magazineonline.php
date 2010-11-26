@@ -26,6 +26,7 @@ while ($offset >= 0) {
       if ($yes) {
         $category = $yes;
         $brand = get_post_meta($id, 'brand', true);
+        if ($brand == '') { $brand = 'smuff'; }
         $model = get_post_meta($id, 'model', true);
         $product_id = get_post_meta($id, 'product_id', true);
         $title = product_name($product_id);

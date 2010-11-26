@@ -6,8 +6,13 @@
       $imgs = post_attachements($post->ID);
       $link = get_post_meta($post->ID, 'Link', true);
       $title = $post->post_title;
+            
+      if ($banner_id == 0) {
+        $banner = sponsor_banner($post->ID, $imgs, array(3,0));
+      } else {
+        $banner = sponsor_banner($post->ID, $imgs, array(2,3,0));
+      }      
       
-      $banner = sponsor_banner($post->ID, $imgs, array(3,2,0));
       if ($banner) {                    
         if (!(strpos($banner, "http://") === false)) { ?>
           

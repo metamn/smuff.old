@@ -315,6 +315,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				}
 				remove_filter('wp_mail_from_name', 'wpsc_replace_reply_name');
  				remove_filter('wp_mail_from', 'wpsc_replace_reply_address');
+				
 				$report_user = __('Customer Details', 'wpsc')."\n\r";
 						$report_user .= "Billing Info \n\r";
 			foreach((array)$thepurchlogitem->userinfo as $userinfo){
@@ -403,7 +404,16 @@ $form_sql = "SELECT * FROM `".WPSC_TABLE_SUBMITED_FORM_DATA."` WHERE `log_id` = 
 	
 				if((get_option('purch_log_email') != null) && ($purchase_log['email_sent'] != 1)) {
 				
-					wp_mail(get_option('purch_log_email'), __('Purchase Report', 'wpsc'), $report);
+				
+				    if ($purchase_log['processed'] == 1) {
+				      $subject = "Procesul de cumparare";
+				    } else {
+				      $subject = "Confirmare comanda";
+				    }
+				
+			      wp_mail(get_option('purch_log_email'), $subject, $report);
+			      
+			
 					
 				}
 
@@ -411,6 +421,9 @@ $form_sql = "SELECT * FROM `".WPSC_TABLE_SUBMITED_FORM_DATA."` WHERE `log_id` = 
 					echo "<br />" . nl2br(str_replace("$",'\$',$message_html));
 					return;
 				}
+				
+				
+				
 
 				/// Empty the cart
 				$wpsc_cart->submit_stock_claims($purchase_log['id']);

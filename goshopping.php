@@ -13,7 +13,7 @@
 // Categorie | Producator | Model | Cod produs | Titlu produs | Descriere produs | URL produs | URL imagine produs | Pret produs | Moneda
 
 
-$separator = " | ";
+$separator = "|";
 $currency = "RON";
 
 
@@ -39,7 +39,9 @@ while ($offset >= 0) {
         $price = product_price($id);
               
         print
-        $category . ' ||| ' .
+        $category . $separator .
+        $brand . $separator .
+        $model . $separator .
         $product_id . $separator .
         $title . $separator .
         $description . $separator .

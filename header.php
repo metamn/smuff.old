@@ -99,6 +99,11 @@
 	            Sustinem proiectul Let's Do It Romania! Curatenie in toata tara. Intr-o singura zi!
 	          </a>
 	          -->
+	          <!--
+	          <a href="http://www.smuff.ro/2010/11/18/urmatoarea-livrare-luni-saptamana-viitoare/" target="_blank">
+	            Preluam comenzi insa urmatoarea livrare se va face luni 22 Noiembrie.
+	          </a>
+	          -->
 	        </div>                
           <div id="headlines" class="block">	          
 	          <div id="logo" class="column span-10 last">
