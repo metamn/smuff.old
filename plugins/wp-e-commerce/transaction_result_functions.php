@@ -159,7 +159,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				}
 			
 			
-			  $ga_items .= "_gaq.push(['_addItem','".$purchase_log['id']."','".$row['prodid']."','".$product_data['name'];
+			  $ga_items .= "_gaq.push(['_addItem','".$purchase_log['id']."','".$purchase_log['discount_data']."','".$product_data['name'];
 			  $ga_items .= "','".stripslashes($variation_list)."','".$row['price']."','".$row['quantity']."']);";
 			  $ga_items .= " ";
 			  
