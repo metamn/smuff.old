@@ -8,6 +8,8 @@
   }  
 ?>  
   <meta property="og:title" content="<?php the_title(); ?>" />
+  <!-- All in One Seo pack takes post excerpt as content, this is a hack-->
+  <meta name="description" content="<?php the_title(); ?>" />
   <meta property="og:type" content="product" />
   <?php if ($medium) { ?>
     <meta property="og:image" content="<?php echo $medium[0] ?>" />

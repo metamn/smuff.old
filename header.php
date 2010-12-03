@@ -7,8 +7,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<meta content="Magazin online de gadget, gizmo, lifestyle, self care, eco, ceasuri binare cu livrare imediata din stoc" name="description">
-		<meta content="magazin, online, gadget, gizmo, shop, cumparaturi, pret, lifestyle, self care, eco, ceasuri binare, robot" name="keywords">
 		
 		<?php include "facebook-meta.php" ?>
 		
@@ -16,7 +14,21 @@
 		<META name="y_key" content="694535270b47ea68">
 		
 		<title>		  		  
-		  <?php wp_title(' pe ', true, 'right'); bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>
+		  <?php 
+		    $title = wp_title('', false, 'right');
+		    $subs = explode("&#8212;", $title);
+		    
+		    if ($subs[0]) {
+		      echo $subs[0] . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+		    } else {
+		      if ($title) {
+		        echo $title . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+		      } else {
+            echo get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+		      }
+		      
+		    }
+		  ?>
 		</title> 
 		
 		

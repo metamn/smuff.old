@@ -2,6 +2,8 @@
 <?php 
   $product_id = product_id($post->ID);
   $product_price = product_price($post->ID);
+  $product_name = product_name($product_id);
+  $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 ?>
 
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -14,8 +16,8 @@
         $large = wp_get_attachment_image_src($img->ID, 'full');                			        
       ?>
       <div id="large-image">
-        <a href="<?php echo $large[0]?>" class="product-zoom">
-          <img class="large-image" src="<?php echo $large[0]?>" />
+        <a href="<?php echo $large[0]?>" class="product-zoom" title="<?php echo $title ?>" alt="<?php echo $title ?>">
+          <img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
         </a>
       </div>
       <div id="single-scroll" class="scrollable">
@@ -25,7 +27,7 @@
           $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
           $large = wp_get_attachment_image_src($img->ID, 'full'); ?>
           <div class="item">
-            <img class="small-image" src="<?php echo $thumb[0]?>" rev="<?php echo $large[0]?>"/>
+            <img class="small-image" src="<?php echo $thumb[0]?>" rev="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
           </div>
         <?php 
           $img_count = $img_count + 1;

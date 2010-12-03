@@ -11,12 +11,13 @@
   } else {
     $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');  
   }    
+  $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 ?>
 
 <div class="item product-thumb">    
   <?php if ($product_id) { ?>
   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"> 
-    <img src="<?php echo $thumb[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>  
+    <img src="<?php echo $thumb[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>  
   </a>
   <div class="text">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">

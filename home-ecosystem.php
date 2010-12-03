@@ -29,7 +29,7 @@
   </div>
   
   <div id="title" class="block span-18">
-    <h1>Prietenii Smuff</h1>
+    <h1>Gadgetomani</h1>
   </div>
 
   

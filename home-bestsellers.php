@@ -2,7 +2,7 @@
     $cat = category_id(is_category(), is_single(), null);    
     $cat_name = '';
     if (!($cat == 0)) {
-      $cat_name = ' din '. get_cat_name($cat);
+      $cat_name = ' din <b>'. get_cat_name($cat) . '</b>';
     } else {
       $cat_name = ' Smuff';
     } 

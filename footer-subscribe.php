@@ -15,17 +15,23 @@
     </div>
   </div>
   
+  <?php 
+    $title = get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description') . ' pe ';
+  ?>
+  
   <div id="social" class="column span-12 last">
     Ne puteti urmarii si pe
     <br/>
-    <a href="http://www.facebook.com/pages/smuffro-magazin-gadget-gizmo/213629083432" title="facebook" alt="facebook">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
-    <a href="http://gadgetoman.smuff.ro/" title="tumblr" alt="tumblr">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/tumblr.png"></a>
-    <a href="http://twitter.com/smuff_ro" title="twitter" alt="twitter"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter_t_logo.png"></a>
-    <a title="youtube" alt="youtube" target="_blank" href="http://www.youtube.com/user/smuffro">
-      <img class="youtube" src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.png" /></a>
-    <a href="http://feeds.feedburner.com/smuff" title="rss" alt="rss"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
+    <a href="http://www.facebook.com/pages/smuffro-magazin-gadget-gizmo/213629083432" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
+      <img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
+    <a href="http://gadgetoman.smuff.ro/" title="<?php echo $title ?> Tumblr" alt="<?php echo $title ?> Tumblr">
+      <img title="<?php echo $title ?> Tumblr" alt="<?php echo $title ?> Tumblr" src="<?php bloginfo('stylesheet_directory'); ?>/img/tumblr.png"></a>
+    <a href="http://twitter.com/smuff_ro" title="<?php echo $title ?> Twitter" alt="<?php echo $title ?> Twitter">
+      <img title="<?php echo $title ?> Twitter" alt="<?php echo $title ?> Twitter" src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter_t_logo.png"></a>
+    <a target="_blank" href="http://www.youtube.com/user/smuffro" title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube">
+      <img title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube" class="youtube" src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.png" /></a>
+    <a href="http://feeds.feedburner.com/smuff" title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS">
+      <img title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS" src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
   </div>
 </div>  
   

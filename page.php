@@ -102,8 +102,8 @@ get_header(); ?>
         
         <div id="partner">
           <center>
-          <a href="http://skimania.ro" target="_blank" title="Skimania">
-            <img src="<?php bloginfo('home') ?>/wp-content/uploads/2010/11/Skimaniac-Full-Banner-468×60.jpg" />
+          <a href="http://bit.ly/bXkaYK" target="_blank" title="Skimania">
+            <img src="<?php bloginfo('home') ?>/wp-content/uploads/2010/11/Skimaniac-Full-Banner-468×601.jpg" />
           </a>
           </center>
         </div>

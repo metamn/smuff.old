@@ -674,6 +674,7 @@ h4.all-products-link a{
   text-transform: uppercase;
   color: #E6E2D9;
   margin-bottom: 0;
+  text-align: center;
 }
 #home-ecosystem #col-1, #home-ecosystem #col-2 {
   margin: 2em 0 3em;

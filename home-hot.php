@@ -18,12 +18,14 @@
             $product_sale_price = $product_price - $product_discount;
             $product_name = product_name($product_id);
             
+            $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+            
             $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.$product_name.'"><img src="'.$thumb[0].'" alt="'.$product_name.'" /></a>';            
             $i += 1;
           ?>
           <li>
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-              <img src="<?php echo $large[0] ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>"/>
+              <img src="<?php echo $large[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
               <div id="home-hot-title" class="block"> 
                 <div id="text" class="column span-3 last">
                   Nou!
