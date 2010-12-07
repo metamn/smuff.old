@@ -279,6 +279,9 @@ function get_transaction_products($sessionid) {
 function page_name($is_category, $is_single, $post_id) {
   $page_name = '&nbsp;';
   
+  $count = 25 - date("j", strtotime("now"));
+  $page_name = 'Inca <span class="days">' . $count . '</span> zile';
+  
   if ($is_category) {
     $page_name = single_cat_title('', false);
   } elseif ($is_single) {
@@ -593,11 +596,18 @@ function product_stock($product_id) {
 // Calculate Delivery time based on stock
 function product_delivery_time($stock) {
   $ret = "";
-  if ($stock > 0) {
-    $ret = "1-2 zile";
+  
+  if ($stock) {
+    switch ($stock) {
+      case -1:
+        $ret = "Stoc terminat";
+        break;
+      default:
+        $ret = "1-2 zile";  
+    }
   } else {
     $ret = "5-7 zile";
-  }
+  }  
   return $ret;
 }
 

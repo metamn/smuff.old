@@ -4,13 +4,24 @@
     <li><span class="ui-icon ui-icon-search"/></span>
       <a href="<?php bloginfo('home'); ?>/cautare-avansata" title="Cautare avansata" alt="Cautare avansata">Cautare avansata</a>
     </li>
-    <li><span class="ui-icon ui-icon-script"/></span>
+    <!--
+    <li class="all-products-link"><span class="ui-icon ui-icon-script"/></span>
       <?php
-        $title = 'Vezi toate produsele'; 
+        $cat = category_id(is_category(), is_single(), null);    
+        $cat_name = '';
+        if (!($cat == 0)) {
+          $cat_name = ' din '. get_cat_name($cat);
+        } else {
+          $cat_name = ' Smuff';
+        } 
+        //$wplogger->log( 'catname '.$cat_name );
+        $title = 'Vezi toate produsele' . $cat_name; 
+      
         $link_type = '2'; // 2=table view, 3=grid view
         include "home-all-products-link.php"; 
       ?>
-    </li> 
+    </li>
+    --> 
     <li><span class="ui-icon ui-icon-info"/></span>
       <a href="#footer-info" title="Informatii" alt="Informatii">Informatii</a></li>
     <li><span class="ui-icon ui-icon-person"/></span>0740-456127</li>

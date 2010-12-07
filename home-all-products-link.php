@@ -7,5 +7,5 @@
   }
   $link = $link . '?view=' . $link_type;
 ?>
-<a href="<?php echo $link ?>" alt="<?php echo $title?>"><?php echo $title?></a>            
+<a class="all-products-link" href="<?php echo $link ?>" alt="<?php echo $title?>"><?php echo $title?></a>            
 

@@ -146,6 +146,7 @@
 		                <a class="tooltip" alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>?view=1" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 		              </li>
 		            <?php } ?>
+		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate<br/>produsele</a></li>
 		        </ul>
 			    </div>			    
 			    <?php } ?>

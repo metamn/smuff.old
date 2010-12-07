@@ -32,7 +32,7 @@ a, a:visited {
 
 
 body {
-  background: #e6e2d9;
+  background: #e6e2d9 url(img/smuff-karacsony-2010-background.jpg) no-repeat center top;
 }
 .container {
   margin: 0 auto;
@@ -95,6 +95,9 @@ body {
   text-align: right;
   color: #bbb8b1;
 }
+#main-name h1 .days {
+  font-weight: bold;
+}
 
 
 #menu {
@@ -112,6 +115,15 @@ body {
 }
 #menu li.last {
   width: 25%;
+}
+#menu li.all-products-link {
+  width: 4em;
+  border-right: none;
+  padding: 1.2em 1em 0;
+  line-height: 1;
+}
+#menu li.all-products-link a, #menu li.all-products-link a:visited {
+  color: #f25e18;
 }
 #searchform {
  margin-bottom: 1.5em; 
@@ -539,7 +551,7 @@ h4.all-products-link {
   font-style: italic;
 } 
 h4.all-products-link a{
-  color: #999;
+  color: #555;
 }
 
 
@@ -564,37 +576,43 @@ h4.all-products-link a{
 #bestsellers h3.last {
   padding-bottom: 1em;
 }
-#bestsellers a {
+#bestsellers a, .special .items a {
   background: #DFDBD0;
 }
-#bestsellers .item {
+#bestsellers .item, .special .item {
   margin-bottom: 6em;
   height: 30em;
   box-shadow: 0 .5em #cac1b2;
   -moz-box-shadow: 0 .5em #cac1b2;
   -webkit-box-shadow: 0 .5em #cac1b2;
 }
-#bestsellers .item .text {
+#bestsellers .item .text, .special .item .text {
   margin: 0;
   padding: 1em 1.5em;
   background: #DFDBD0; 
   height: 15em; 
 }
-#bestsellers .item img {
+#bestsellers .item img, .special .item img {
   border: 1px solid #ccc;
   width: 270px;
   height: auto;
   cursor: pointer;
   padding: .2em;
 }
-#bestsellers .item h4 {
+#bestsellers .item h4, .special .item h4 {
   margin: 0 0 .5em;
 }
-#bestsellers .item p {
+#bestsellers .item p, .special .item p {
   width: 100%;
 }
-
-
+.special .item {
+  width: 40%;
+  margin: 0 4%;
+  float: left;
+}
+.special .item a {
+  text-decoration: none !important;
+}
 
 /* Promo 
 */
@@ -1124,6 +1142,7 @@ width:96%;
 #home-menu ul {
   list-style-type: none;
   margin-bottom: 1.9em;
+  height: 32.2em;
 }
 #home-menu li {
   line-height: 2.4;  
@@ -1140,6 +1159,10 @@ width:96%;
 #home-menu .ui-icon {
   display: inline-block;
   margin-right: .5em;
+}
+#home-menu li.all-products-link {
+  line-height: 1.5;
+  margin-bottom: .5em;  
 }
 #contact {
   font-size: larger;
