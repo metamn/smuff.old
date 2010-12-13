@@ -7,6 +7,44 @@
         <?php 
           $thumbs = array();
           $i = 1;
+          
+          if ($special_posts) {
+            while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
+              $imgs = post_attachements($post->ID);
+              $random = rand(0, 2);
+              $img = $imgs[$random];
+              $large = wp_get_attachment_image_src($img->ID, 'large');
+              $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+              $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.get_the_title().'"><img src="'.$thumb[0].'" alt="'.get_the_title().'" /></a>';            
+              $i += 1; ?>
+              
+              <li>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+                  <img src="<?php echo $large[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
+                  <div id="home-hot-title" class="block"> 
+                    <div id="text" class="column span-3 last">
+                      Nou!
+                    </div>
+                    <div id="info" class="column span-13 last">
+                      <div class="arrow-right"></div>
+                      <table>
+                        <tr>
+                        <td><h3><?php the_title(); ?></h3></td>
+                        <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        <td class="excerpt"><br/><?php the_excerpt(); ?></td>
+                        <td>&nbsp;</td>
+                        </tr>
+                      </table>
+                    </div>  
+                  </div>               
+                </a>
+              </li>
+                              
+            <?php endwhile; 
+          }
+          
           while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
             $imgs = post_attachements($post->ID);
             $img = $imgs[0];

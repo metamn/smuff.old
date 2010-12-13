@@ -13,8 +13,10 @@
   // - only for content
   // - sidebar posts are queryied in sidebar
   $promo_posts = query_posts2('posts_per_page=8&cat=15');
-  $top_sales = query_posts2('posts_per_page=6&cat=14');  
+  $top_sales = query_posts2('posts_per_page=6&cat=715');  /* 14 */
   $new_products = query_posts2('posts_per_page=15&cat=10');
+  
+  $special_posts = query_posts2('posts_per_page=1&cat=1318');
 ?>
 
 

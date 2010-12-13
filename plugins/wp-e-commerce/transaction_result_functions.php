@@ -157,11 +157,19 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 					$value_names = $wpdb->get_col("SELECT `name` FROM `".WPSC_TABLE_VARIATION_VALUES."` WHERE `id` IN ('".implode("','",$variation_values)."')");
 					$variation_list = " (".stripslashes(implode(", ",$value_names)).")";
 				}
-			
-			
-			  $ga_items .= "_gaq.push(['_addItem','".$purchase_log['id']."','".$purchase_log['discount_data']."','".$product_data['name'];
-			  $ga_items .= "','".stripslashes($variation_list)."','".$row['price']."','".$row['quantity']."']);";
-			  $ga_items .= " ";
+						
+				$ga_items .= "_gaq.push(['_addItem'";
+				$ga_items .= " , '" . $purchase_log['id'];
+			  $ga_items .= "' , '" . $purchase_log['discount_data'];
+			  $ga_items .= "' , '" . $product_data['name'];
+			  $ga_items .= "' , '" . stripslashes($variation_list);
+			  $ga_items .= "' , '" . $row['price'];
+			  $ga_items .= "' , '" . $row['quantity'];			  
+				$ga_items .= "']); ";		
+			  
+//			  $ga_items .= "_gaq.push(['_addItem','".$purchase_log['id']."','".$purchase_log['discount_data']."','".$product_data['name'];
+//			  $ga_items .= "','".stripslashes($variation_list)."','".$row['price']."','".$row['quantity']."']);";
+//			  $ga_items .= " ";
 			  
 			  $product_ids .= $row['prodid'].';';
 			  
@@ -225,18 +233,20 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 				$product_list.= "Numar comanda: ".$purchase_log['id']."\n\r";
 				
 				if($purchase_log['discount_value'] > 0) {
-					$discount_email.= "Reducere"."\n\r: ";
-					$discount_email .=$purchase_log['discount_data'].' : '.nzshpcrt_currency_display($purchase_log['discount_value'], 1, true)."\n\r";
-				}
+				  $discount_text = "Reducere: " . nzshpcrt_currency_display($purchase_log['discount_value'], 1, true) . " (Cod cupon " . $purchase_log['discount_data'] . ")" . "\n\r";
+					$total_shipping_email .= $discount_text;
+        }
+        
 				$total_shipping_email.= "Transport".": ".nzshpcrt_currency_display($total_shipping,1,true)."\n\r";
 				$total_price_email.= __('Total', 'wpsc').": ".nzshpcrt_currency_display($total,1,true)."\n\r";
 				$product_list_html.= "Numar comanda: ".$purchase_log['id']."\n\n\r";
+				
 				if($purchase_log['discount_value'] > 0) {
-					$report.= $discount_email."\n\r";
-					$total_shipping_html.= "Reducere".": ".nzshpcrt_currency_display($purchase_log['discount_value'], 1, true)."\n\r";
+					$total_shipping_html .= $discount_text;         					
 				}
-				$total_shipping_html.= "Transport".": ".nzshpcrt_currency_display($total_shipping,1,true)."\n\r";
-				$total_price_html.= __('Total', 'wpsc').": ".nzshpcrt_currency_display($total, 1,true)."\n\r";
+				$total_shipping_html .= "Transport".": ".nzshpcrt_currency_display($total_shipping,1,true)."\n\r";
+				$total_price_html .= __('Total', 'wpsc').": ".nzshpcrt_currency_display($total, 1,true)."\n\r";
+				
 				if(isset($_GET['ti'])) {
 					$message.= "\n\r"."Numar tranzactie".": " . $_GET['ti'];
 					$message_html.= "\n\r"."Numar tranzactie".": " . $_GET['ti'];
@@ -245,6 +255,7 @@ function transaction_results($sessionid, $echo_to_screen = true, $transaction_id
 					$report_id = "Nr. comanda ".$purchase_log['id']."\n\r";
 				}
         
+                
         $ga_transactions .= "_gaq.push(['_addTrans','" . $purchase_log['id'] . "','Smuff','" . $total . "','0.00','0','city', 'state', 'province']);";
         $ga_transactions .= ' '.$ga_items;
         

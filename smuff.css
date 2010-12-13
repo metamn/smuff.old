@@ -614,6 +614,22 @@ h4.all-products-link a{
   text-decoration: none !important;
 }
 
+#bestsellers #info p {
+  padding: 1em;
+  background: #DFDBD0;
+  font-style: italic;
+  font-size: larger;  
+}
+#bestsellers #info a, #bestsellers #info a:visited, #bestsellers #info a:active {
+  text-decoration: underline;
+}
+
+#bestsellers a.all-products-link {
+  padding: .2em;
+  background: #FDF3C6 !important;
+}
+
+
 /* Promo 
 */
 
@@ -981,14 +997,14 @@ div.thanks-error {
   padding: .5em;
 }
 
-#recommended {
+#recommended, #cadouri {
   margin-top: 3em;
 }
-#recommended h3 {
+#recommended h3, #cadouri h3 {
   background: #cac1b2;
   padding: .5em;
 }
-#recommended .item {
+#recommended .item, #cadouri .item {
   width: 25%;
   height: 28em;
   padding: 0 2.4em;

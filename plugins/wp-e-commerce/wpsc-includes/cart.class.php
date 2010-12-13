@@ -835,7 +835,7 @@ class wpsc_cart {
 	*/
   function set_item($product_id, $parameters, $updater = false) {
     // default action is adding
-    
+            
     if(($parameters['quantity'] > 0) && ($this->check_remaining_quantity($product_id, $parameters['variation_values'], $parameters['quantity']) == true)) {
 			$new_cart_item = new wpsc_cart_item($product_id,$parameters, $this);
 			
@@ -856,7 +856,7 @@ class wpsc_cart {
 						} else {
 							$this->cart_items[$key]->quantity  = $new_cart_item->quantity;
 
-						}
+						}						
 						$this->cart_items[$key]->refresh_item();
 						$add_item = false;
 						$edit_item = true;
@@ -898,7 +898,7 @@ class wpsc_cart {
 			$quantity = $parameters['quantity'] - $this->cart_items[$key]->quantity;
 			if($this->check_remaining_quantity($product_id, $this->cart_items[$key]->variation_values, $quantity) == true) {
 				foreach($parameters as $name => $value) {
-					$this->cart_items[$key]->$name = $value; 
+					$this->cart_items[$key]->$name = $value; 					
 				}
 				$this->cart_items[$key]->refresh_item();
 				$this->clear_cache();
@@ -1588,7 +1588,7 @@ class wpsc_cart {
 			$this->coupons_amount += $this->total_price;
 			$this->total_price = null;
 			$this->calculate_total_price();
-		}
+		}		
 	}
 	
 }

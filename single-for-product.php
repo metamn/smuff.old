@@ -139,6 +139,28 @@
     </div>
   </div>
   
+  <div id="cadouri" class="block">
+    <h3>Produse oferite cadou</h3>
+    <p>
+      La fiecare comanda pana <b>1 ianuarie</b> noi punem un cadou, unul dintre cele prezentate aici.
+      <br/>
+      Surpriza este ca nimeni nu stie care dintre acestea va fi al lui. Speram sa va placa, speram sa va bucurati mult de Gadgeturile Smuff.
+    </p>
+    <?php 
+      $specials = query_posts2('posts_per_page=-1&cat=1318');
+      if ($specials) {
+        if ($specials->have_posts()) {
+          while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+            if (in_category(10)) {
+              $medium = true;
+              include "product-thumb.php";
+            }                    
+          endwhile; 
+        }		      
+      }
+    ?>
+  </div>
+  <div class='clearfix'></div>
     
   <div id="recommended" class="block">    
      <?php
