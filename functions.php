@@ -278,10 +278,7 @@ function get_transaction_products($sessionid) {
 // - if used in sidebar it doesn't works!
 function page_name($is_category, $is_single, $post_id) {
   $page_name = '&nbsp;';
-  
-  $count = 25 - date("j", strtotime("now"));
-  $page_name = 'Inca <span class="days">' . $count . '</span> zile';
-  
+    
   if ($is_category) {
     $page_name = single_cat_title('', false);
   } elseif ($is_single) {
