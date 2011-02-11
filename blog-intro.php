@@ -26,4 +26,10 @@
     $banner_id = 0; // which is a rectangle
     include "home-campaign.php"; 
   ?>
+  
+  <div id="season">
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-valentines-2010-sziv-3.jpg" />
+  </div>
 </div>
+
+

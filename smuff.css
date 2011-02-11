@@ -32,7 +32,7 @@ a, a:visited {
 
 
 body {
-  background: #e6e2d9 url(img/smuff-karacsony-2010-background.jpg) no-repeat center top;
+  background: #e6e2d9 url(img/smuff-valentines-2010-sziv.jpg) no-repeat left top;
 }
 .container {
   margin: 0 auto;
@@ -557,6 +557,7 @@ h4.all-products-link a{
 
 #bestsellers {
   margin: 1.7em 0;
+  background: url("img/smuff-valentines-2010-sziv-3.jpg") no-repeat scroll left 30% #E6E2D9;
 }
 #bestsellers #col-2 .items {
   float: right;
@@ -987,7 +988,9 @@ div.thanks-error {
 .navigation .alignleft {
   margin-right: 5em;
 }
-
+#recommended {
+  background: url("img/smuff-valentines-2010-sziv-5.jpg") no-repeat scroll right top #E6E2D9;
+}
 #single #recommended {
   margin-top: 5em;
 }
@@ -1308,6 +1311,11 @@ body.blog {
   top: -8.7em;
   left: 12.5em;
 }
+#blog-intro #season {
+  position: absolute;
+  left: 1em;
+  top: 9em;
+}
 
 #archive-blog #blog-intro #image-1 {
   top: 2.7em;
@@ -1374,6 +1382,7 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 
 #author #content, #archive-blog #content, #single #content {
   margin-top: 1.5em;
+  background: url("img/smuff-valentines-2010-sziv-5.jpg") no-repeat scroll right top #E6E2D9;
 }
 #author #info, #author .item {
   background: #DFDBD0;
@@ -1724,6 +1733,7 @@ body.blog #post-sponsor {
 #footer-info {
   margin: 5em 0 0;
   padding-top: 5em;  
+  background: url("img/smuff-valentines-2010-sziv-4.jpg") no-repeat scroll right top #E6E2D9;
 }
 #footer-info div {
   margin-bottom: 2em; 

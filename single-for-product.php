@@ -4,6 +4,8 @@
   $product_price = product_price($post->ID);
   $product_name = product_name($product_id);
   $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+  
+  $postid = $post->ID;
 ?>
 
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -139,6 +141,7 @@
     </div>
   </div>
   
+  <!--
   <div id="cadouri" class="block">
     <h3>Produse oferite cadou</h3>
     <p>
@@ -161,10 +164,11 @@
     ?>
   </div>
   <div class='clearfix'></div>
+  -->
     
   <div id="recommended" class="block">    
      <?php
-        $related_posts = MRP_get_related_posts($post->ID, true);
+        $related_posts = MRP_get_related_posts($postid, true);
         if ($related_posts) { ?>        
           <h3>Produse similare</h3>
           <?php foreach ($related_posts as $post) {
