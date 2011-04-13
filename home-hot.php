@@ -11,8 +11,9 @@
           if ($special_posts) {
             while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
               $imgs = post_attachements($post->ID);
-              $random = rand(0, 2);
-              $img = $imgs[$random];
+              //$random = rand(0, 2);
+              //$img = $imgs[$random];
+              $img = $imgs[0];
               $large = wp_get_attachment_image_src($img->ID, 'large');
               $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
               $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.get_the_title().'"><img src="'.$thumb[0].'" alt="'.get_the_title().'" /></a>';            

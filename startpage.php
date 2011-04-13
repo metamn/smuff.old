@@ -17,7 +17,7 @@
   $new_products = query_posts2('posts_per_page=15&cat=10');
   
   // - Special posts are put first on HOT
-  //$special_posts = query_posts2('posts_per_page=1&cat=1318');
+  $special_posts = query_posts2('posts_per_page=1&cat=1317');
 ?>
 
 

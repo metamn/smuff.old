@@ -28,7 +28,7 @@
   ?>
   
   <div id="season">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-valentines-2010-sziv-3.jpg" />
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/flowers.png" />
   </div>
 </div>
 
