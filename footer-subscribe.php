@@ -20,7 +20,7 @@
   ?>
   
   <div id="social" class="column span-12 last">
-    Ne puteti urmarii si pe
+    Ne puteti urmarii si prin
     <br/>
     <a href="http://www.facebook.com/pages/smuffro-magazin-gadget-gizmo/213629083432" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
       <img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>

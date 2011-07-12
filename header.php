@@ -57,6 +57,12 @@
     <!-- jqzoom -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jqzoom.pack.1.0.1.js"></script>
     
+    <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
+      {lang: 'ro'}
+    </script>
+
+    
+    
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.tablesorter.css" type="text/css" media="screen" />    
     <!-- jQuery Theme -->

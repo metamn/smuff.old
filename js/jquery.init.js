@@ -142,7 +142,7 @@ $(document).ready(function() {
   });   
     
   // add opacity on twitter fb buttons on mouse hover, blog index
-  $(".post .facebook, .post .twitter").hover(
+  $(".post .facebook, .post .twitter, .post .google").hover(
     function () {
       $(this).removeClass('opacity-3');
     }, 

@@ -1572,9 +1572,14 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 .post .meta-and-share .twitter, .post .meta-and-share .facebook {
   margin-top: .2em;  
 }
-.post .meta-and-share .twitter {  
-  margin-left: 20em;
+.meta-and-share table {
+  margin: 1em;
+  width: 70%;
 }
+#single .meta-and-share .opacity-3 {
+  opacity: 1;
+}
+
 .tweetmeme_button {
   float: right;
   margin: 0 !important;
