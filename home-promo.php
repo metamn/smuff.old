@@ -3,7 +3,9 @@
 
 <div id="promo" class="block">  
   <div id="percent" class="column span-3 last">
-    <span class="value">%</span>
+    <span class="value">
+      <a title="Vezi toate promotiile Smuff" href="<?php bloginfo('home'); ?>/category/meta/promotii/">%</a>
+    </span>
   </div>
   <div class="column span-1 last arrow-vertical">
     <div class="arrow-right"></div>
@@ -25,6 +27,13 @@
 	    <div class="clearfix"></div>
       <div class="navi"></div>
   </div>   
+  
+  <div class="clearfix"></div>
+  
+  <h4 class="all-products-link">
+    <a class="all-products-link" title="Vezi toate promotiile Smuff" href="<?php bloginfo('home'); ?>/category/meta/promotii/">
+    Vezi toate promotiile Smuff &rarr;</a>
+  </h4>
 </div>
 
 

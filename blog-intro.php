@@ -28,7 +28,7 @@
   ?>
   
   <div id="season">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/flowers.png" />
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/sales.png" />
   </div>
 </div>
 
