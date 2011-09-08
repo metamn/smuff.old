@@ -34,6 +34,14 @@ a, a:visited {
 body {
   background: #e6e2d9 url(img/smuff-autumn-3a.jpg) no-repeat 1% 0;
 }
+#background-image-container {
+  background: #e6e2d9 url(img/smuff-autumn-II.png) no-repeat 1% 0 transparent;
+  width: 320px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 70%;
+}
 .container {
   margin: 0 auto;
   width: 950px;

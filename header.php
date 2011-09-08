@@ -101,7 +101,9 @@
         $klass = '';
 	 } ?>
 	
-	<body class="<?php echo $klass ?>">			  	
+	<body class="<?php echo $klass ?>">
+	
+	  <div id="background-image-container"></div>			  	
 	  
 	  <div class="container"><!-- closed in the footer -->
 	    
