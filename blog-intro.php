@@ -28,7 +28,7 @@
   ?>
   
   <div id="season">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/sales.png" />
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-autumn-4.jpg" />
   </div>
 </div>
 
