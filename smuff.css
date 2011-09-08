@@ -1297,14 +1297,11 @@ width:96%;
 */
 
 body.blog {
-  background: #e6e2d9 url(img/v2.jpg) no-repeat top center;
+  background: #e6e2d9 url(img/v2.png) no-repeat top center;
 }
 .entry_author_image img, #blog-intro .avatar img, #author #gravatar img.photo {
   width: 110px;
   height: 120px;
-}
-#blog-intro {
-  background: url("img/smuff-autumn-2.jpg") 0 0 transparent;
 }
 #blog-intro .avatar {
   position: relative;

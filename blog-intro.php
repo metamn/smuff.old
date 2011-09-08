@@ -27,6 +27,7 @@
     include "home-campaign.php"; 
   ?>
   
+  
   <div id="season">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-autumn-4.jpg" />
   </div>
