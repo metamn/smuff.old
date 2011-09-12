@@ -130,9 +130,9 @@
 	            <h1>
 	              <a class="tooltip" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
 	              <span class="strapline">	                
-	                <a class="tooltip <?php echo $shop?>" alt="<?php echo page_excerpt('magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Magazinul Smuff">shop</a>
+	                <a class="tooltip <?php echo $shop?>" alt="<?php echo page_excerpt('despre-noi/magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Magazinul Smuff">shop</a>
 	                 & 
-	                <a class="tooltip <?php echo $blog ?>" alt="<?php echo page_excerpt('blogul-smuff'); ?>" href="<?php bloginfo('home'); ?>/blog" title="Blogul Smuff">blog</a>
+	                <a class="tooltip <?php echo $blog ?>" alt="<?php echo page_excerpt('despre-noi/blogul-smuff'); ?>" href="<?php bloginfo('home'); ?>/blog" title="Blogul Smuff">blog</a>
 	              </span>			      
 	           </h1>			      
 			      </div>
