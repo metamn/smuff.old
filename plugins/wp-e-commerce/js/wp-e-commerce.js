@@ -165,6 +165,7 @@ jQuery(document).ready(function () {
   // ORIGINAL: jQuery("div.wpsc_variation_forms .wpsc_select_variation").change(function() {  
   
   jQuery("select.wpsc_select_variation").change(function() {
+    jQuery('.product_form .price .pricedisplay').html('Actualizare...');
     parent_form = jQuery(this).parents("form.product_form");
     form_values =jQuery("input[name=product_id],select.wpsc_select_variation",parent_form).serialize( );
 		//cs

@@ -12,7 +12,7 @@
 // Syntax: http://merchant.cauti.ro/listele_mele.php
 
 
-$xmlHead = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<produse xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"http://www.cauti.ro/produse.xsd\">\n";
+$xmlHead = "<produse xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"http://www.cauti.ro/produse.xsd\">\n";
 echo $xmlHead;		// afiseaza capul de document
 flush();			// forteaza afisare
 
@@ -41,7 +41,7 @@ while ($offset >= 0) {
         $brand = get_post_meta($id, 'brand', true);
         if ($brand == '') { $brand = '-'; }
         $title = product_name($product_id);
-        $description = htmlentities(strip_tags(product_excerpt($p->post_content)));
+        $description = '';
         $url = get_permalink($id);
         $imgs = post_attachements($id);
         $img = $imgs[0];  
