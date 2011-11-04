@@ -27,10 +27,11 @@
     include "home-campaign.php"; 
   ?>
   
-  
+  <!--
   <div id="season">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-halloween-6.jpg" />
   </div>
+  -->
 </div>
 
 
