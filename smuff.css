@@ -32,10 +32,10 @@ a, a:visited {
 
 
 body {
-  background: #e6e2d9 url(img/smuff-autumn-3a.jpg) no-repeat 1% 0;
+  background: #e6e2d9 url(img/smuff-halloween-1.jpg) no-repeat 1% 0;
 }
 #background-image-container {
-  background: transparent url(img/smuff-autumn-II.png) no-repeat 1% 0;
+  background: transparent url(img/smuff-halloween-2.png) no-repeat 1% 0;
   width: 320px;
   height: 200px;
   position: absolute;
@@ -564,7 +564,7 @@ h4.all-products-link a{
 
 #bestsellers {
   margin: 1.7em 0;
-  background: url("img/smuff-autumn-3.jpg") no-repeat scroll 61% 30% #E6E2D9;
+  background: url("img/smuff-halloween-3.jpg") no-repeat scroll 73% 30% #E6E2D9;
 }
 #bestsellers #col-2 .items {
   float: right;
@@ -999,7 +999,7 @@ div.thanks-error {
   margin-right: 5em;
 }
 #recommended {
-  background: url("img/smuff-autumn-4.jpg") no-repeat scroll 72% 61% #E6E2D9;
+  background: url("img/smuff-halloween-5.jpg") no-repeat scroll 72% 61% #E6E2D9;
 }
 #single #recommended {
   margin-top: 5em;
@@ -1759,7 +1759,7 @@ body.blog #post-sponsor {
 #footer-info {
   margin: 5em 0 0;
   padding-top: 5em;  
-  background: url("img/smuff-autumn-2.jpg") no-repeat scroll 35% 60% #E6E2D9;
+  background: url("img/smuff-halloween-4.jpg") no-repeat scroll 35% 360% #E6E2D9;
 }
 #footer-info div {
   margin-bottom: 2em; 

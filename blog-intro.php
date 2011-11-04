@@ -29,7 +29,7 @@
   
   
   <div id="season">
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-autumn-4.jpg" />
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-halloween-6.jpg" />
   </div>
 </div>
 
