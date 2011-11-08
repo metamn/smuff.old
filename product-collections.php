@@ -1,7 +1,7 @@
 <div class="item">
   <?php
     // Get the collection category
-    $category = get_categories('child_of=1152');
+    $category = get_categories('child_of=1695');
     foreach ($category as $c) {
       $category_slug = $c->slug;
       break;

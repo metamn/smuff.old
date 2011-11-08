@@ -12,16 +12,27 @@
   // Multiple loops 
   // - only for content
   // - sidebar posts are queryied in sidebar
-  $promo_posts = query_posts2('posts_per_page=8&cat=15');
+  
+  // products filed under 'Nou-2' are excluded!
+  $new_products = query_posts2( array(
+    'posts_per_page' => 15,
+    'cat' => 10,
+    'category__not_in' => array(1694)
+  ));
+  
+  
   $top_sales = query_posts2('posts_per_page=6&cat=14');  /* 14 */
-  $new_products = query_posts2('posts_per_page=15&cat=10');
+  
+  
+  $promo_posts = query_posts2('posts_per_page=8&cat=15');
+  
   
   // - Special posts are put first on HOT
   $special_posts = query_posts2('posts_per_page=1&cat=1317');
   
   // - Collections are put in between Hot & Bestsellers
   // - Collections are items who are filed under Stiri + Collections category
-  $collections = query_posts2( array( 'category__and' => array( 22, 1152 ) ) );
+  $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
 ?>
 
 
