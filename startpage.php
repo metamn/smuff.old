@@ -20,7 +20,8 @@
   $special_posts = query_posts2('posts_per_page=1&cat=1317');
   
   // - Collections are put in between Hot & Bestsellers
-  $collections = query_posts2('posts_per_page=15&cat=1695');
+  // - Collections are items who are filed under Stiri + Collections category
+  $collections = query_posts2( array( 'category__and' => array( 22, 1152 ) ) );
 ?>
 
 

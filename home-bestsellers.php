@@ -1,18 +1,18 @@
 <?php 
-    $cat = category_id(is_category(), is_single(), null);    
-    $cat_name = '';
-    if (!($cat == 0)) {
-      $cat_name = ' din <b>'. get_cat_name($cat) . '</b>';
-    } else {
-      $cat_name = ' Smuff';
-    } 
-    //$wplogger->log( 'catname '.$cat_name );
-    $title = 'Vezi toate produsele' . $cat_name . ' &rarr;'; 
-    $link_type = '3'; // 2=table view, 3=grid view
-    echo '<h4 class="all-products-link">';
-    include "home-all-products-link.php"; 
-    echo '</h4>';
-  ?>
+  $cat = category_id(is_category(), is_single(), null);    
+  $cat_name = '';
+  if (!($cat == 0)) {
+    $cat_name = ' din <b>'. get_cat_name($cat) . '</b>';
+  } else {
+    $cat_name = ' Smuff';
+  } 
+  //$wplogger->log( 'catname '.$cat_name );
+  $title = 'Vezi toate produsele' . $cat_name . ' &rarr;'; 
+  $link_type = '3'; // 2=table view, 3=grid view
+  echo '<h4 class="all-products-link">';
+  include "home-all-products-link.php"; 
+  echo '</h4>';
+?>
   
 
 <div id="bestsellers" class="block"> 
