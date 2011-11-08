@@ -18,6 +18,9 @@
   
   // - Special posts are put first on HOT
   $special_posts = query_posts2('posts_per_page=1&cat=1317');
+  
+  // - Collections are put in between Hot & Bestsellers
+  $collections = query_posts2('posts_per_page=15&cat=1695');
 ?>
 
 
@@ -29,6 +32,8 @@
         } else {
           echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in magazin.</h2>';
         }?>        
+        
+      <?php if ($collections->have_posts()) { include "home-collections.php"; } ?>   
       <?php if ($top_sales->have_posts()) { include "home-bestsellers.php"; } ?> 
       <?php if ($promo_posts->have_posts()) { include "home-promo.php"; }  ?>
       <?php include "home-ecosystem.php" ?>    
