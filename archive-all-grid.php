@@ -32,11 +32,12 @@
 		    $medium = false;        
         $klass = 'col-' .($counter % 3);
         $counter += 1;
+        if (in_category(10)) {
 		  ?>
 		    <div id="item" class="<?php echo $klass?> column span-6 last">
 		      <?php include "product-thumb.php"?>
 		    </div>
-		  <?php endwhile; ?>
+		  <?php } endwhile; ?>
 		</div>
 	  <p class="alignright">
 	    <?php echo $all_posts->post_count . ' produse. ' ?>

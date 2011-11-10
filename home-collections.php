@@ -1,3 +1,4 @@
+
 <div id="collections" class="block">
   <div class="items">
     <?php
