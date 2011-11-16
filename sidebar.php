@@ -1,8 +1,10 @@
 <?php 
   $news_posts = query_posts2('posts_per_page=5&cat=22');   
-  $campaign = query_posts2('posts_per_page=5&cat=1151,1043&orderby=rand');  // gets a random Partners/campaigns + News/Smuff features
+  //$campaign = query_posts2('posts_per_page=5&cat=1151,1043&orderby=rand');  // gets a random Partners/campaigns + News/Smuff features
   $promo_posts = query_posts2('posts_per_page=3&cat=15&orderby=rand'); 
   $banner_id = 1; // the first banner which is a skyscraper  1043
+  
+  $random_posts = query_posts2('posts_per_page=7&cat=10&orderby=rand');
 ?>
 
 <div id="sidebar" class="column span-6 last">
@@ -21,6 +23,8 @@
           </center>
         </div>
         
+        <?php include "home-random.php"; ?>
+        
         <?php if (!(is_single())) { ?>
         <div id="similar-buys">
           <h3>Promotii Smuff</h3>
@@ -38,8 +42,9 @@
         
       <?php } else {
         include "home-news.php";
-        include "home-campaign.php";
-        include "home-banners.php";
+        include "home-random.php";
+        //include "home-campaign.php";
+        //include "home-banners.php";
       }     
     ?>
     

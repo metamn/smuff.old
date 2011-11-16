@@ -338,6 +338,8 @@ function is_blog2() {
   return $ret;
 }
 
+
+
 // Query for multiple posts
 // - the query string has the syntax of the query_posts WP function
 function query_posts2($query_string) {
