@@ -3,7 +3,16 @@ $(document).ready(function() {
 
   // Click on side icons
   $("#left-side-icons li img").click(function() {
-    $(".container").animate({"margin-left" : "40%"}, 800);
+    if ($('.container').css('margin-left') == '0px') {
+      $(".container").animate({
+        "margin-left": "40%"
+      }, 800);
+    } else {
+      $(".container").animate({
+        "margin": "0 auto"
+      }, 800);
+    };
+    
     $("#left-side-text").toggle('slow');
   });
   
