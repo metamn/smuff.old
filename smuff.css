@@ -32,7 +32,7 @@ a, a:visited {
 
 
 body {
- background: #e6e2d9 url(img/snow.jpg) no-repeat 1% 0;
+ background: #e6e2d9;
 }
 
 /*
@@ -56,6 +56,10 @@ body {
 
 /* Header
 */
+
+#header {
+  background: #e6e2d9 url(img/snow.jpg) no-repeat -9% 0;
+}
 
 #tooltips {
   margin: 0;  
