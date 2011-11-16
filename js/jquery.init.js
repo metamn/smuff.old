@@ -3,7 +3,8 @@ $(document).ready(function() {
 
   // Click on side icons
   $("#left-side-icons li img").click(function() {
-    if ($('.container').css('margin-left') == '0px') {
+    var w = $('.container').css('margin-left');
+    if ((w == '0px') || (w == 'auto')) {
       $(".container").animate({
         "margin-left": "40%"
       }, 800);
