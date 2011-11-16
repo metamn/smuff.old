@@ -203,6 +203,47 @@ div#widgetshoppingcart {
 
 
 
+/* Left side icons 
+*/
+
+#left-side-icons {
+  width: 10%;
+  height: auto;
+  position: fixed;
+  top: 40%;
+}
+
+#left-side-icons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#left-side-icons ul li {
+  margin-bottom: 3em;
+  padding: 0;
+}
+#left-side-icons img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+#left-side-text {
+  display: none;
+  
+  width: 20%;
+  height: 12000px;
+  position: absolute;
+  left: 12%;
+  
+  padding: 0 2em;
+  z-index: 10;
+  background: blue;
+}
+#left-side-text .inner {
+  margin-top: 25%;
+}
+
 
 /* Shopping cart / wp-e-commerce pages
 */

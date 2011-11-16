@@ -1,5 +1,14 @@
 $(document).ready(function() { 
 
+
+  // Click on side icons
+  $("#left-side-icons li img").click(function() {
+    $(".container").animate({"margin-left" : "40%"}, 800);
+    $("#left-side-text").toggle('slow');
+  });
+  
+
+
   // jQZoom
   // On Product 
   // after image change jqzoom is reloaded, see below

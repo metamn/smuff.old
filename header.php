@@ -103,6 +103,32 @@
 	
 	<body class="<?php echo $klass ?>">
 	
+	  <div id="left-side-icons">
+	    <ul>
+	      <li>
+	        <img src="<?php bloginfo('stylesheet_directory') ?>/img/youtube.png" />	        
+	      </li>	      
+	      <li>
+	        <img src="<?php bloginfo('stylesheet_directory') ?>/img/igoogle.png" />	        
+	      </li>
+	    </ul>
+	  </div>
+	  <div id="left-side-text">
+      <div class="inner">
+        <a href="http://smuff.ro/2010/08/05/test-2/">
+          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
+          </a>
+          
+          <a href="http://www.letsdoitromania.ro/" target="_blank">
+            Sustinem proiectul Let's Do It Romania! Curatenie in toata tara. Intr-o singura zi!
+          </a>
+          
+          <a href="http://www.smuff.ro/2010/11/18/urmatoarea-livrare-luni-saptamana-viitoare/" target="_blank">
+            Preluam comenzi insa urmatoarea livrare se va face luni 22 Noiembrie.
+          </a>
+      </div>
+	  </div>
+	
 	  <div id="background-image-container"></div>			  	
 	  
 	  <div class="container"><!-- closed in the footer -->
