@@ -167,6 +167,11 @@
   </div>
   <div class='clearfix'></div>
   -->
+  
+  <?php 
+    $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
+    if ($collections->have_posts()) { include "home-collections.php"; }
+  ?>
     
   <div id="recommended" class="block">    
      <?php
