@@ -601,6 +601,9 @@ function product_delivery_time($stock) {
       case -1:
         $ret = "Stoc terminat";
         break;
+      case 2:
+        $ret = "2-4 zile";
+        break;
       default:
         $ret = "1-2 zile";  
     }

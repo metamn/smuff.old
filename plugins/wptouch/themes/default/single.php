@@ -73,7 +73,12 @@
 		    <li><a href="mailto:?subject=<?php
     bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?>%20<?php the_permalink() ?>" onclick="return confirm('<?php _e( "Mail a link to this post?", "wptouch" ); ?>');" id="omail"></a></li>
 		    <?php wptouch_twitter_link(); // This detects if it's an Apple mobile device or not and serves up the right Twitter link ?>
+		    
+		    <!--
 		    <li><a href="javascript:return false;" onclick="wptouch_toggle_bookmarks();" id="obook"></a></li>
+		    -->
+		    
+		    <li><a href="http://www.facebook.com/smuffgadget"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/Facebook.png" /></a></li>
 		    <?php $nextPost = get_next_post(); if ($nextPost) { ?>
 			    <li><a href="<?php $nextPost = get_next_post(false); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>
 		    <?php } ?>
