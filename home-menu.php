@@ -35,8 +35,7 @@
       <a href="<?php bloginfo('home'); ?>/despre-noi/business-2-business" title="Business si media" alt="Business si media">Business si Media</a></li>
     <li><span class="ui-icon ui-icon-transfer-e-w"/></span>
       <a href="<?php bloginfo('home'); ?>/despre-noi/parteneri" title="Parteneri" alt="Parteneri">Parteneri</a></li>    
-    <li><span class="ui-icon ui-icon-play"/></span>
-      <a href="http://v1.smuff.ro" title="Siteul vechi" alt="Siteul vechi">Site-ul vechi</a></li>
+    <li>&nbsp;</li>
   </ul>  
 </div>
 
