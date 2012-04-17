@@ -58,12 +58,19 @@ get_header(); ?>
         </table>
       </div>
       
-      
       <div id="search-results-items">
         <?php 
           $allsearch = &new WP_Query("s=$s&showposts=-1"); 
-          if ($allsearch->have_posts()) { 
-            $counter = 1;
+          if ($allsearch->have_posts()) { ?> 
+          
+            <div id="advanced-search-link" class="block">
+              <h3><a href="<?php bloginfo('home'); ?>/cautare-avansata" title="Cautare avansata" alt="Cautare avansata">
+              Am gasit <em><span id="counter">...</span></em> produse. 
+              Pentru o cautare mai avansata click aici &rarr;</a>
+              </h3>
+            </div>
+                            
+            <?php $counter = 1;
             while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
               if (advanced_search($post, $price, $categories)) { 
                 $klass = 'col-' .($counter % 3);
@@ -72,8 +79,21 @@ get_header(); ?>
                   <?php include "product-thumb.php"; ?>                        
                 </div>
               <?php }
-            endwhile;                     
-          } else {
+            endwhile; 
+            $counter -= 1;
+            ?>
+            
+            
+            <div class="clear"></div>
+            <span id="search-count" class="hidden"><?php echo $counter; ?></span>
+            <div id="advanced-search-link" class="block">
+              <h3><a href="<?php bloginfo('home'); ?>/cautare-avansata" title="Cautare avansata" alt="Cautare avansata">
+              Am gasit <em><?php echo $counter; ?></em> produse. 
+              Pentru o cautare mai avansata click aici &rarr;</a>
+              </h3>
+            </div>                    
+            
+          <?php } else {
             echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";
           } ?>	
       </div>      

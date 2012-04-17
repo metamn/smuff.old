@@ -142,31 +142,7 @@ body {
 #menu li.all-products-link a, #menu li.all-products-link a:visited {
   color: #f25e18;
 }
-#searchform {
- margin-bottom: 1.5em; 
-}
-#searchform input, #searchform select  { 
-  background: #DFDBD0;
-  font-size: small;
-}
-#searchform input {
-  width: 99%;
-}
-#searchform select {
-  width: 12.5em;
-}
-#searchform input.submit {
-  width: 12.5em;
-}
-#searchform label {
-  font-weight: normal;
-}
 
-input.search {
-  background: #111;
-  color: #999;
-  width: 100%;  
-}
 
 #cart {
   background: #111;
@@ -1251,8 +1227,6 @@ width:96%;
 }
 #home-menu ul {
   list-style-type: none;
-  margin-bottom: 1.9em;
-  height: 32.2em;
 }
 #home-menu li {
   line-height: 2.4;  
@@ -1274,6 +1248,42 @@ width:96%;
   line-height: 1.5;
   margin-bottom: .5em;  
 }
+
+#sidebar #searchform {
+  padding: .5em 1em .6em;
+  margin: 0;
+  background: #E5ECF9;
+}
+#sidebar #searchform ul, #searchform ul {
+  margin: 0;
+  list-style-type: none;
+}
+#sidebar #searchform ul li {
+  margin: .5em 0;
+  line-height: 2.4;
+}
+#sidebar #searchform input {
+  width: 99%;
+}
+input.search {
+  background: #111;
+  color: #999;
+  width: 100%;  
+}
+#sidebar input.submit {
+  background: #4CDFFF;
+  padding: .5em 0;
+}
+
+#advanced-search-link {
+  padding: 1.25em .5em 1em;
+  margin: 5em 0;
+  background: #DFDBD0;
+}
+
+
+
+
 #contact {
   font-size: larger;
   padding-top: .5em;
@@ -1318,6 +1328,7 @@ width:96%;
 #home-news #item,
 #random-posts .item {
   margin: 1em 0 1em 3em;
+  height: auto;
 } 
 #home-news h3, #home-sponsor h3, #similar-buys h3,
 #random-posts h3 {

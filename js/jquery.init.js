@@ -1,6 +1,14 @@
 $(document).ready(function() { 
 
 
+  // Adding search result count
+  $("#advanced-search-link #counter").html(
+    $("#search-count").html()
+  );
+
+  // Removing "Opiniile Cumparatorilor" from Product page
+  $("#accordion h3:eq(3)").hide();
+
   // Click on side icons
   $("#left-side-icons li img").click(function() {
     var w = $('.container').css('margin-left');

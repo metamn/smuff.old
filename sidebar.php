@@ -10,6 +10,10 @@
 <div id="sidebar" class="column span-6 last">
     <?php include "home-menu.php" ?>   
     
+    <div id="searchform">
+      <?php get_search_form(); ?>
+    </div>
+    
     <?php 
       if (is_page(430) || is_single()) { ?>
         

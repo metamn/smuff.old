@@ -1,9 +1,13 @@
-<select name="price" id="search-price">
-  <option value="">toate preturile</option>
-  <option value="0-100">mai putin de 100 RON</option>
-  <option value="100-250">intre 100 - 250 RON</option>
-  <option value="250-600">intre 250 - 600 RON</option>
-  <option value="600-1000">intre 600 - 1.000 RON</option>
-  <option value="1000-1500">intre 1.000 - 1.500 RON</option>
-  <option value="1500">banii nu conteaza!</option>
-</select>
+
+<ul id="search-price-list">
+  <li><input id="search-price" type="radio" name="price" value="0-100" />
+    < 100 RON</li>
+  <li><input id="search-price" type="radio" name="price" value="100-250" />
+    100 - 250 RON</li>
+  <li><input id="search-price" type="radio" name="price" value="250-350" />
+    250 - 350 RON</li>
+  <li><input id="search-price" type="radio" name="price" value="350-600" />
+    350 - 600 RON</li>
+  <li><input id="search-price" type="radio" name="price" value="600" />
+    Banii nu conteaza!</li>  
+</ul>

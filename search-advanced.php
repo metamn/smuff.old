@@ -48,7 +48,7 @@ get_header();
           <input type="submit" id="searchsubmit" value="Cautare" />
         </div>
         
-        <div id="right" class="column span-8 prepend-1 last">                       
+        <div id="right" class="column span-7 prepend-1 last">                       
           <input type="submit" id="searchsubmit" value="Cautare" />            
         </div>
       </form>      
