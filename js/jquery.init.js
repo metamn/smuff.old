@@ -39,7 +39,12 @@ $(document).ready(function() {
     prevNext: false,
     fade: true,
     customLink: 'a.hot-slider-link',
-    updateBefore: true
+    updateBefore: true,
+    beforeAniFunc: function(t) { 
+      var img = $("#hot-slider ul li:nth-child(" + t + ")").find('img').attr('rel');
+      //var img2 = img.replace('localhost/smuff', 'smuff.ro');
+      $("#hot-slider ul li:nth-child(" + t + ")").find('img').attr('src', img); 
+    }
   });
   
   

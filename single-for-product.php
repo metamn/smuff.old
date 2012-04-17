@@ -79,15 +79,8 @@
     <div class="block">
       <div id="post-operations" class="column span-12 last">                
          <table>
-          <tr>
-            <td><?php if(function_exists('the_ratings')) { the_ratings(); } ?></td>
-            <td><?php if(function_exists('the_views')) { the_views(); } ?> vizualizari</td>
-            <td><?php echo get_comment_number($post->ID); ?> comentarii</td>
-            <td>&nbsp;</td>
-          </tr>
           <tr>          
             <td><?php include "share-twitter.php" ?></td>
-            <td><?php include "share-facebook.php" ?></td>
             <td><?php include "share-facebook-like.php" ?></td>
             <td><g:plusone size="medium"></g:plusone></td>
           </tr>

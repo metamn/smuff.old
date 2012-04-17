@@ -2,24 +2,8 @@
 
   
   <div id="col-1" class="column span-9 last">
-    <h4>Prietenii nostrii pe <a href="http://www.twitter.com/smuff_ro"><img src="http://twitter-badges.s3.amazonaws.com/twitter-b.png" alt="Smuff pe Twitter"/></a></h4>
-    <?php
-      $args = array(); 
-      echo pmcWidgetDisplay($args); 
-    ?>
-    
-    <script type="text/javascript" src="http://twitter-friends-widget.googlecode.com/files/jquery.twitter-friends-1.0.min.js"></script>
-
-    <div class="twitter-friends" options="{
-       username:'smuff_ro'
-       ,header:'<a href=\'_tp_\'><img src=\'_ti_\'/></a><h2>_fo_ prieteni</h2>'
-       ,user_animate:'width'
-       ,users:50
-       ,user_image:32
-    }"></div>
-    
-    
-    
+    <a href="https://twitter.com/smuff_ro" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @smuff_ro</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
 
   <div id="col-2" class="column prepend-1 span-8 last">

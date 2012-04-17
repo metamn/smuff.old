@@ -5,7 +5,7 @@
 <div class='spacer'>&nbsp;</div>
 <div id="footer" class="block">  
   <p>    
-    &copy; 2006-2011 Smuff.ro. <a href="<?php echo get_page_link(466);?>">Toate drepturile rezervate</a>.
+    &copy; 2006-2012 Smuff.ro. <a href="<?php bloginfo('home')?>/despre-noi/termeni-si-conditii">Toate drepturile rezervate</a>.
   </p>	
   <p class="partners">
   <?php 
@@ -14,6 +14,25 @@
   ?>
   </p>
 </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script>!window.jQuery && document.write('<script src="/wp-includes/js/jquery/jquery.js"><\/script>')</script>
+		<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/all/jquery.tools.min.js"></script>
+		<!-- S3 slider -->
+		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.sudoSlider.min.js" ></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.thumbslider.js" ></script>
+    <!-- jquery table sorter -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tablesorter.min.js"></script>
+    <!-- jqzoom -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jqzoom.pack.1.0.1.js"></script>
+    
+    <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
+      {lang: 'ro'}
+    </script>
+
+    <!-- init all jquery functions -->
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js"></script>
 
 
 <!-- GA for Ecommerce goes into transaction_result_functions.php -->

@@ -39,28 +39,11 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css" type="text/css" media="screen" />
 		
-		<!-- jQuery Tools 
-		
+		<!-- jQuery Tools 		
 		<script type="text/javascript" src="<?php bloginfo('home')?>/wp-includes/js/jquery/jquery.js"></script>
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tools.min.js"></script>
-		
-		
 		-->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script>!window.jQuery && document.write('<script src="/wp-includes/js/jquery/jquery.js"><\/script>')</script>
-		<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/all/jquery.tools.min.js"></script>
-		<!-- S3 slider -->
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.sudoSlider.min.js" ></script>
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.thumbslider.js" ></script>
-    <!-- jquery table sorter -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tablesorter.min.js"></script>
-    <!-- jqzoom -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jqzoom.pack.1.0.1.js"></script>
-    
-    <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
-      {lang: 'ro'}
-    </script>
-
+		
     
     
     
@@ -73,8 +56,9 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.tools.accordion.css" type="text/css" media="screen" />
     <!-- slider -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.sudoslider.css" type="text/css" media="screen" />
-    <!-- jqzoom -->
+    <!-- jqzoom
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jqzoom.css" type="text/css" media="screen" />
+    -->
     
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts RSS Feed', 'buddypress' ) ?>" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
@@ -82,9 +66,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
 		<?php wp_head(); ?>
-
-    <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js"></script>
+    
 	</head>
 	
 	<?php
@@ -103,6 +85,7 @@
 	
 	<body class="<?php echo $klass ?>">
 	
+	  <!--
 	  <div id="left-side-icons">
 	    <ul>
 	      <li>
@@ -128,7 +111,9 @@
           </a>
       </div>
 	  </div>
-	
+	  -->
+	  
+	  
 	  <div id="background-image-container"></div>			  	
 	  
 	  <div class="container"><!-- closed in the footer -->
