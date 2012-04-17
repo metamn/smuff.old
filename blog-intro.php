@@ -1,3 +1,4 @@
+<!--
 <div class="column span-9 last">
 <?php 
   $authors = array(1,3,4,5);  
@@ -27,11 +28,8 @@
     include "home-campaign.php"; 
   ?>
   
-  <!--
   <div id="season">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/smuff-halloween-6.jpg" />
   </div>
-  -->
 </div>
-
-
+-->
