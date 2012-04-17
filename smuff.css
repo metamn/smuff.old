@@ -1265,6 +1265,9 @@ width:96%;
 #sidebar #searchform input {
   width: 99%;
 }
+#sidebar #searchform input[type="radio"] {
+  width: 10%;
+}
 input.search {
   background: #111;
   color: #999;
