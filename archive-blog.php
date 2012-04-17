@@ -1,39 +1,40 @@
-<div id="archive-blog" class="block">  
-  <div id="content" class="column span-18 content">
-    
-    <div id="blog-intro" class="block">
-      <?php include "blog-intro.php" ?>
-    </div>
+<?php
+  $tag = get_tag_id_by_name(single_tag_title("", false));
   
-    <?php if (have_posts()) : ?>
-		    <?php while (have_posts()) : the_post(); ?>
-		      <?php 
-		        if (in_category(10)) { //produse
-		          $main_category = 10;
-		          include "post-product.php";		          
-		        } elseif (in_category(39)) { //comment
-		          $main_category = 39;
-		          include "post-comment.php";
-		        } elseif (in_category(26)) { //tumblr
-		          $main_category = 26; //post
-		          include "post-tumblr.php";
-		        } elseif (in_category(18)) { //social
-		          $main_category = 18;
-		          include "post-social.php";
-		        } else {
-		          $main_category = 22; // Stiri
-		          include "post-default.php";		          
-		        }
-		      ?>		  		       
-		    <?php endwhile; ?>		    
-        <?php wp_paginate(); ?>		    
-	    <?php else :
-        include "not-found.php";  		    
-	    endif; ?>
-  </div>
+  $args = array (
+    'posts_per_page' => 8,
+    'category__and' => array(15),
+    'tag__in' => array($tag)
+  );
+  $promo_posts = query_posts2($args);
   
-  <?php include "sidebar-blog.php" ?>
+  $args = array (
+    'posts_per_page' => 6,
+    'category__and' => array(715),
+    'tag__in' => array($tag)
+  );
+  $top_sales = query_posts2($args);  
+  
+  $args = array (
+    'posts_per_page' => 6,
+    'category__and' => array(10),
+    'tag__in' => array($tag)
+  );
+  $new_products = query_posts2($args);
+?>
 
+<div id="home" class="block">  
+  <div id="content" class="column span-18">   
+    <?php if ($new_products->have_posts()) {
+        include "home-hot.php";
+      } else {
+        echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in aceasta categorie</h2>';
+      }?>        
+    <?php if ($top_sales->have_posts()) { include "home-bestsellers.php"; } ?> 
+    <?php if ($promo_posts->have_posts()) { include "home-promo.php"; }  ?>
+    <?php include "home-ecosystem.php" ?>        
+  </div>  
+  <?php get_sidebar(); ?>
 </div>
 
 <?php get_footer(); ?>

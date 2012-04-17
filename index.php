@@ -8,15 +8,7 @@ get_header();
 
 ?>
 	<div id="blog" class="block">	  
-    <div class="block">
-      <div id="blog-intro" class="column span-18">&nbsp;
-        <?php include "blog-intro.php" ?>
-      </div>
-      <div class="column span-6 last opacity">
-        <?php include "home-menu.php" ?>
-      </div>
-    </div>	
-	
+    
 	  <div id="content" class="block">
 	    <?php if (have_posts()) : 
 	      $counter = 1;
@@ -50,7 +42,9 @@ get_header();
 	    <?php else :
         include "not-found.php";  		    
 	    endif; ?>
-	</div>
+	  </div>
+	  
+	  <?php include "sidebar-blog.php" ?>
 </div>
 
 <?php get_footer(); ?>

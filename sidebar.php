@@ -1,5 +1,5 @@
 <?php 
-  $news_posts = query_posts2('posts_per_page=5&cat=22');   
+  //$news_posts = query_posts2('posts_per_page=5&cat=22');   
   //$campaign = query_posts2('posts_per_page=5&cat=1151,1043&orderby=rand');  // gets a random Partners/campaigns + News/Smuff features
   $promo_posts = query_posts2('posts_per_page=3&cat=15&orderby=rand'); 
   $banner_id = 1; // the first banner which is a skyscraper  1043
@@ -45,8 +45,9 @@
         <?php } ?>
         
       <?php } else {
-        include "home-news.php";
-        include "home-random.php";
+        //include "home-news.php";
+        include "home-tags.php";
+        //include "home-random.php";
         //include "home-campaign.php";
         //include "home-banners.php";
       }     

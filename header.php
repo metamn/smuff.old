@@ -68,51 +68,8 @@
     
 	</head>
 	
-	<?php
-      $is_blog = is_blog(); 
-      if ($is_blog) {
-        $shop = '';
-        $blog = 'active';
-        $opacity = 'opacity';
-        $klass = 'blog';
-      } else {
-        $shop = 'active';
-        $blog = '';
-        $opacity = '';
-        $klass = '';
-	 } ?>
 	
-	<body class="<?php echo $klass ?>">
-	
-	  <!--
-	  <div id="left-side-icons">
-	    <ul>
-	      <li>
-	        <img src="<?php bloginfo('stylesheet_directory') ?>/img/youtube.png" />	        
-	      </li>	      
-	      <li>
-	        <img src="<?php bloginfo('stylesheet_directory') ?>/img/igoogle.png" />	        
-	      </li>
-	    </ul>
-	  </div>
-	  <div id="left-side-text">
-      <div class="inner">
-        <a href="http://smuff.ro/2010/08/05/test-2/">
-          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
-          </a>
-          
-          <a href="http://www.letsdoitromania.ro/" target="_blank">
-            Sustinem proiectul Let's Do It Romania! Curatenie in toata tara. Intr-o singura zi!
-          </a>
-          
-          <a href="http://www.smuff.ro/2010/11/18/urmatoarea-livrare-luni-saptamana-viitoare/" target="_blank">
-            Preluam comenzi insa urmatoarea livrare se va face luni 22 Noiembrie.
-          </a>
-      </div>
-	  </div>
-	  -->
-	  
-	  
+	<body>
 	  <div id="background-image-container"></div>			  	
 	  
 	  <div class="container"><!-- closed in the footer -->
@@ -123,15 +80,6 @@
 	          <!--
 	          <a href="http://smuff.ro/2010/08/05/test-2/">
 	          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
-	          </a>
-	          
-	          <a href="http://www.letsdoitromania.ro/" target="_blank">
-	            Sustinem proiectul Let's Do It Romania! Curatenie in toata tara. Intr-o singura zi!
-	          </a>
-	          -->
-	          <!--
-	          <a href="http://www.smuff.ro/2010/11/18/urmatoarea-livrare-luni-saptamana-viitoare/" target="_blank">
-	            Preluam comenzi insa urmatoarea livrare se va face luni 22 Noiembrie.
 	          </a>
 	          -->
 	        </div>                
@@ -149,10 +97,19 @@
 			      
 			      
 			      <div id="main-name" class="column span-8 last">			        
-			        <h1><?php echo page_name(is_category(), is_single(), null) ?></h1>
+			        <h1>
+			        <?php 
+			          $tag = single_tag_title("", false);
+			          if ($tag) {
+			            echo ucfirst($tag);
+			          } else {
+			            echo page_name(is_category(), is_single(), null);
+			          }			        
+			         ?>
+			        </h1>
 			      </div>
 			    </div>
-			    <?php if (!($is_blog)) { ?>
+			    
 			    <div id="menu" class="last">
 			      <ul class="inline-list">
 		          <?php 
@@ -167,7 +124,7 @@
 		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate<br/>produsele</a></li>
 		        </ul>
 			    </div>			    
-			    <?php } ?>
+			    
 		    </div>		    
 		    
 	      <div id="cart" class="column span-6 last <?php echo $opacity ?>">

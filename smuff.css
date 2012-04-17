@@ -1249,23 +1249,28 @@ width:96%;
   margin-bottom: .5em;  
 }
 
-#sidebar #searchform {
+#sidebar #searchform, 
+#sidebar-blog #searchform {
   padding: .5em 1em .6em;
   margin: 0;
   background: #E5ECF9;
 }
-#sidebar #searchform ul, #searchform ul {
+#sidebar #searchform ul, #searchform ul,
+#sidebar-blog #searchform ul {
   margin: 0;
   list-style-type: none;
 }
-#sidebar #searchform ul li {
+#sidebar #searchform ul li,
+#sidebar-blog #searchform ul li {
   margin: .5em 0;
   line-height: 2.4;
 }
-#sidebar #searchform input {
+#sidebar #searchform input,
+#sidebar-blog #searchform input {
   width: 99%;
 }
-#sidebar #searchform input[type="radio"] {
+#sidebar #searchform input[type="radio"],
+#sidebar-blog #searchform input[type="radio"] {
   width: 10%;
 }
 input.search {
@@ -1273,7 +1278,8 @@ input.search {
   color: #999;
   width: 100%;  
 }
-#sidebar input.submit {
+#sidebar input.submit,
+#sidebar-blog input.submit {
   background: #4CDFFF;
   padding: .5em 0;
 }
@@ -1282,6 +1288,41 @@ input.search {
   padding: 1.25em .5em 1em;
   margin: 5em 0;
   background: #DFDBD0;
+}
+
+
+#sidebar-navigation {
+  background: #DFDBD0 !important;
+}
+#sidebar-navigation h3 {
+  text-transform: uppercase;
+  margin-left: 1em;
+}
+#sidebar-navigation .entry {
+  margin-bottom: 4em;
+}
+#sidebar-navigation .tagcloud {
+  margin-left: 1.5em;
+}
+#sidebar-navigation ul {
+  list-style-type: none;
+  margin: 0;
+}
+#sidebar-navigation ul li a {
+  color: #DFDBD0;
+}
+
+#sidebar-navigation ul.children {  
+  margin-bottom: 1em;
+  margin-left: 1.5em;
+}
+#sidebar-navigation ul.children li {
+  border-bottom: 1px solid #cac1b2;
+  margin-bottom: .2em;
+  text-transform: uppercase;
+}
+#sidebar-navigation ul.children li a {
+  color: #111;
 }
 
 
@@ -1848,38 +1889,6 @@ body.blog #post-sponsor {
 .postmetadata {
   border-top: 1px solid #DFDBD0;
   color: #777;
-}
-#sidebar-navigation {
-  background: #DFDBD0;
-}
-#sidebar-navigation h3 {
-  text-transform: uppercase;
-  margin-left: 1em;
-}
-#sidebar-navigation .entry {
-  margin-bottom: 4em;
-}
-#sidebar-navigation .tagcloud {
-  margin-left: 1.5em;
-}
-#sidebar-navigation ul {
-  list-style-type: none;
-  margin: 0;
-}
-#sidebar-navigation ul li a {
-  color: #DFDBD0;
-}
-#sidebar-navigation ul.children {  
-  margin-bottom: 1em;
-  margin-left: 1.5em;
-}
-#sidebar-navigation ul.children li {
-  border-bottom: 1px solid #cac1b2;
-  margin-bottom: .2em;
-  text-transform: uppercase;
-}
-#sidebar-navigation ul.children li a {
-  color: #111;
 }
 
 
