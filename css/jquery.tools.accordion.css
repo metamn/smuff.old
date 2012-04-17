@@ -28,8 +28,6 @@
 }
 #accordion h3.current {
   cursor: pointer;
-  background: #d1ccbc;
-  border: none;
 }
 
 /* accordion pane */

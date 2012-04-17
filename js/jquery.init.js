@@ -5,9 +5,11 @@ $(document).ready(function() {
   $("#advanced-search-link #counter").html(
     $("#search-count").html()
   );
+  
 
   // Removing "Opiniile Cumparatorilor" from Product page
   $("#accordion h3:eq(3)").hide();
+
 
   // Click on side icons
   $("#left-side-icons li img").click(function() {
@@ -41,8 +43,9 @@ $(document).ready(function() {
       zoomType: 'reverse'
   });
   
+  
   // Slider
-  // Home page Hot
+  // Home page Hot / New products
   $("#hot-slider").sudoSlider({ 
     prevNext: false,
     fade: true,
@@ -55,11 +58,6 @@ $(document).ready(function() {
     }
   });
   
-  
-  // jQueryTools Scrollables
-  // --
-  // Home page Promotions 
-  $("#promo-scroll").scrollable().navigator();	
   
   // Single post images
   $("#single-scroll").scrollable().navigator();
@@ -124,10 +122,14 @@ $(document).ready(function() {
       effect: 'slide', 
       initialIndex: null
   });  
+  
+  
   // Company info toggle
   $("#company h3").click(function() {
     $(".date-firma-info").toggle();
   });
+  
+  
   // Show comments on last checkout page
   $("#page.checkout-final #feedback .pointer").click(function() {
     $("#page.checkout-final #comments").toggle();

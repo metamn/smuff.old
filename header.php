@@ -38,21 +38,14 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css" type="text/css" media="screen" />
 		
-		<!-- jQuery Tools 		
-		<script type="text/javascript" src="<?php bloginfo('home')?>/wp-includes/js/jquery/jquery.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tools.min.js"></script>
-		-->
-		
-    
-    
-    
+    <!-- tablesorter -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.tablesorter.css" type="text/css" media="screen" />    
     <!-- jQuery Theme -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen, projection">
-		<!-- scrollable -->
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.tools.scrollable.css" type="text/css" media="screen" />
-    <!-- accordion -->
+		<!-- accordion -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.tools.accordion.css" type="text/css" media="screen" />
+    <!-- scrollable -->
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.tools.scrollable.css" type="text/css" media="screen" />
     <!-- slider -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.sudoslider.css" type="text/css" media="screen" />
     <!-- jqzoom

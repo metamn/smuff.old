@@ -12,20 +12,18 @@
   </div>
   
   <div id="items" class="column span-14 last">
-    <div class="scrollable" id="promo-scroll">			        
-        <div class="items">	
-          <?php
-            if ($promo_posts->have_posts()) {
-              while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
-                $medium = false;
-                include "product-thumb.php";
-              endwhile; 
-            }
-          ?>               		        
-	      </div>        
-	    </div> <!-- scrollable -->
-	    <div class="clearfix"></div>
-      <div class="navi"></div>
+    <div id="promo-scroll">			        
+      <div class="items">	
+        <?php
+          if ($promo_posts->have_posts()) {
+            while ($promo_posts->have_posts()) : $promo_posts->the_post(); update_post_caches($posts); 
+              $medium = false;
+              include "product-thumb.php";
+            endwhile; 
+          }
+        ?>               		        
+      </div>        
+	  </div> 
   </div>   
   
   <div class="clearfix"></div>

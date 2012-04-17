@@ -701,16 +701,14 @@ h4.all-products-link a{
 #promo {
   margin-top: 4em;
 }
-#promo .scrollable {
-  width: 550px;
-  height: 30em;
-}
-#promo .scrollable .item {
+#promo .item {
   height: 28em;
+  margin-bottom: 2em;
   padding: 0 2em;
-  width: 150px;
+  width: 130px;
+  float: left;
 }
-#promo .scrollable img {
+#promo img {
   width: 120px;
 	height: 120px;
 	margin: 0;
@@ -718,13 +716,13 @@ h4.all-products-link a{
 	border: 1px solid #ccc;		
 	cursor: pointer;
 }
-#promo .scrollable h4 {
+#promo  h4 {
   margin: .5em 0;
 }
-#promo .scrollable .item .text p {
+#promo .item .text p {
   width: 90%;
 }
-#promo .scollable .active {
+#promo  .active {
   border:1px solid #444;	
 }
 #promo .promo-item-hover {
