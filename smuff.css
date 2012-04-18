@@ -952,6 +952,7 @@ img.small-image {
   padding: .2em;
 }
 
+
 #post-shopping {
   background: #444;
   color: #F25E18;  
@@ -1004,23 +1005,49 @@ div.thanks-error {
 }
 #shopping-info .tooltip {
 	display: none;
-	background: black;
-	height: 163px;
+	background: #39A712;
+	height: 310px;
 	padding: 2.5em 2em 0 3em;
 	width: 310px;
-	color: #eee;
+	color: white;
+	font-size: medium;
 }
-#shopping-info .tooltip ol {
+#shopping-info .tooltip ul {
   margin: 0;
   margin-left: 1em;
+  list-style: square;
 }
-#shopping-info .tooltip ol li {
-  margin-bottom: .5em;
+#shopping-info .tooltip ul li {
+  margin-bottom: .75em;
 }
 #single div.entry {
   margin: 2em 0;
 }
 
+#post-shopping2 {
+  background: #39A712;
+  height: 320px;
+}
+
+#post-shopping2 #post-shopping {
+  width: 28%;
+  margin-right: 10%;
+  float: left;
+  height: 320px;
+}
+#post-shopping2 #shopping-incentives {
+  width: 50%;
+  float: left;
+  padding: 1.5em 0;
+}
+#post-shopping2 #shopping-incentives h4 {
+  margin-bottom: .25em;
+  color: white;
+}
+#post-shopping2 #shopping-incentives p {
+  margin-bottom: 1.75em;
+  color: white;
+}
 
 #single #post-operations {  
 }
@@ -1094,26 +1121,26 @@ div.thanks-error {
 .navigation .alignleft {
   margin-right: 5em;
 }
-#recommended {
+.more-products  {
   background: url(img/flowers.png) no-repeat scroll 62% 25.5% #E6E2D9;
 }
-#single #recommended {
+#single .more-products  {
   margin-top: 5em;
 }
-#single #recommended h3 {
+#single .more-products h3 {
   background: #dfdbd0;
   border-bottom: 1px solid #cac1b2;
   padding: .5em;
 }
 
-#recommended, #cadouri {
+.more-products {
   margin-top: 3em;
 }
-#recommended h3, #cadouri h3 {
+.more-products h3 {
   background: #cac1b2;
   padding: .5em;
 }
-#recommended .item, #cadouri .item {
+.more-products .item {
   width: 25%;
   height: 28em;
   padding: 0 2.4em;
@@ -1333,7 +1360,7 @@ input.search {
 #sidebar-navigation {
   background: #DFDBD0 !important;
 }
-#sidebar-navigation h3 {
+#sidebar-navigation h3, #sidebar h3 {
   text-transform: uppercase;
   margin-left: 1em;
 }
@@ -1382,7 +1409,7 @@ input.search {
   padding: 0;
 }
 #sidebar #contact-info {
-  margin-top: 1em;
+  margin: 22em 0 6em;
 }
 #sidebar #no-shoutbox {
   margin: 0;

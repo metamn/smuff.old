@@ -6,6 +6,8 @@
   $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
   
   $postid = $post->ID;
+  
+  $cat = category_id(false, true, $postid); 
 ?>
 
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -56,16 +58,17 @@
       <div id="shopping-info" class="box"> 
         <ul>                
           <li class="shopping-info">
-            Cum cumpar? informatii despre livrare, retur si garantie          
+            Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
           </li>
           <div class="tooltip">
-            <ol>
-              <li>Urmarire online colet pe tot parcursul livrarii</li>
+            <ul>
+              <li>Cele mai performante preturi din tara</li>
+              <li>Shopping simplu fara procedura de inregistrare</li>
               <li>Livrare se face acasa sau la birou</li>
               <li>Plata se face la livrare dupa verificarea produselor primite</li>
               <li>Returnare produs in 10 zile</li>
               <li>Garantie cel putin 1 an</li>
-            </ol>
+            </ul>
           </div>
           <li><?php if (function_exists('wpfp_link')) { wpfp_link(); } ?></li>
         </ul>               
@@ -86,6 +89,8 @@
           </tr>
           </table>                     
       </div>
+      
+      <!--
       <div id="post-sponsor" class="column span-6 last">      
         <span class="text">In parteneriat cu</span>
         <br/>  
@@ -105,7 +110,8 @@
             <a href="<?php bloginfo('home')?>/<?php echo get_page_uri(2277)?>" title="Cum devin partener Smuff?">
               <img class="half-banner" src="<?php bloginfo('stylesheet_directory')?>/img/empty-logo.jpg" /></a>      
           <?php } ?>              
-      </div> 
+      </div>
+      --> 
     </div>
     
     
@@ -131,9 +137,46 @@
       </div>
     </div>
     
-    <div class="block">
-      <?php include "navigation.php"; ?>
+    <div id="post-shopping2" class="block">
+      <div id="post-shopping" class="box">
+        <?php //include "shop-form.php" ?>
+        <?php 
+          $product_id = get_post_meta($post->ID, 'product_id', single);
+          if ($product_id) {        
+            echo wpsc_display_products_page('product_id='.$product_id);         
+          }      
+        ?>
+      </div>
+      
+      <div id="shopping-incentives">
+        <h4>Preturi imbatabile</h4>
+        <p>
+          Exact ca si cand ati cumpara din magazinele din strainatate.  
+        </p>
+        
+        <h4>Shopping rapid</h4>
+        <p>
+          Fara procedura de inregistrare, numai cu un singur click.            
+        </p>
+        
+        <h4>Plata la livrare</h4>
+        <p>
+          Si dupa ce ati verificat produsele primite.
+        </p>
+        
+        <h4>Returnare in 10 zile</h4>
+        <p>
+          Fara interbari din partea noastra.
+        </p>
+        
+        <h4>Garantie minim 1 an</h4>
+        <p>
+          Schimbare produs sau returnare bani.
+        </p>        
+      </div>
+    
     </div>
+   
   </div>
   
   <!--
@@ -165,8 +208,38 @@
     $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
     if ($collections->have_posts()) { include "home-collections.php"; }
   ?>
+  
+  <div id="from-category" class="more-products block">    
+    <?php 
+      $tag = page_name(is_category(), is_single(), null);            
+    ?>
+     
+    <h3>Alte produse din categoria <?php echo $tag; ?></h3>
+    <?php 
+      $specials = query_posts2('posts_per_page=3&cat='.$cat);
+      if ($specials) {
+        if ($specials->have_posts()) {
+          while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+            if (in_category(10)) {
+              $medium = true;
+              include "product-thumb.php";
+            }                    
+          endwhile; 
+        }		      
+      }
+    ?>
     
-  <div id="recommended" class="block">    
+    <h4 class="all-products-link">
+      <?php 
+        $title = 'Vezi toate noutatiile ' . $tag . ' &rarr;'; 
+        $link_type = '3'; // 2=table view, 3=grid view 
+        include "home-all-products-link.php"; 
+      ?>
+    </h4>
+    
+  </div>
+    
+  <div id="recommended" class="more-products block">    
      <?php
         $related_posts = MRP_get_related_posts($postid, true);
         if ($related_posts) { ?>        
@@ -179,6 +252,49 @@
         } 
       ?>
   </div>
+  
+  
+  
+  <div id="promos" class="more-products block">    
+    <h3>Promotii si oferte</h3>
+    <?php       
+      $specials = query_posts2('posts_per_page=3&cat=15&orderby=rand');
+      if ($specials) {
+        if ($specials->have_posts()) {
+          while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+            if (in_category(10)) {
+              $medium = true;
+              include "product-thumb.php";
+            }                    
+          endwhile; 
+        }		      
+      }      
+    ?>
+    
+    <h4 class="all-products-link">
+      <a class="all-products-link" title="Vezi toate promotiile Smuff" href="<?php bloginfo('home'); ?>/category/meta/promotii/?view=3">
+      Vezi toate promotiile Smuff &rarr;</a>
+    </h4>
+  </div>
+  
+  
+  <div id="random" class="more-products block">    
+    <h3>Din mixerul Smuff</h3>
+    <?php       
+      $specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');
+      if ($specials) {
+        if ($specials->have_posts()) {
+          while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+            if (in_category(10)) {
+              $medium = true;
+              include "product-thumb.php";
+            }                    
+          endwhile; 
+        }		      
+      }      
+    ?>
+  </div>  
+  
   <div class='clearfix'></div>
   
 </div>
