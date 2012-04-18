@@ -1,6 +1,19 @@
 $(document).ready(function() { 
 
 
+  // Showing all new products alternative way
+  $("#new-products-link").click(function() {
+    var res = "";
+    
+    $("#hot-slider li").each(function(){
+      $(this).find('img').attr('src', $(this).find('img').attr('rel'));
+      res += '<div id="item">' + $(this).html() + '</div>';  
+    });
+    
+    $("#noutati").html(res);
+  });
+  
+
   // Adding search result count
   $("#advanced-search-link #counter").html(
     $("#search-count").html()

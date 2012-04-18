@@ -51,6 +51,7 @@
             $img = $imgs[0];
             $large = wp_get_attachment_image_src($img->ID, 'large');
             $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+                        
             $product_id = product_id($post->ID);
             $product_price = product_price($post->ID);
             $product_discount = product_discount($product_id);

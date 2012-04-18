@@ -49,7 +49,7 @@
       <?php if ($top_sales->have_posts()) { include "home-bestsellers.php"; } ?> 
       <?php if ($promo_posts->have_posts()) { include "home-promo.php"; }  ?>
 
-      <!-- <?php include "home-ecosystem.php" ?>    -->
+      
       
     </div>  
     <?php get_sidebar(); ?>

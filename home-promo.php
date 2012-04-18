@@ -4,7 +4,7 @@
 <div id="promo" class="block">  
   <div id="percent" class="column span-3 last">
     <span class="value">
-      <a title="Vezi toate promotiile Smuff" href="<?php bloginfo('home'); ?>/category/meta/promotii/?view=3">%</a>
+      %
     </span>
   </div>
   <div class="column span-1 last arrow-vertical">
