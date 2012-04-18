@@ -1004,7 +1004,7 @@ div.thanks-error {
 }
 #shopping-info .tooltip {
 	display: none;
-	background: url(http://static.flowplayer.org/tools/img/tooltip/black_arrow_big.png);
+	background: black;
 	height: 163px;
 	padding: 2.5em 2em 0 3em;
 	width: 310px;
@@ -1348,7 +1348,9 @@ input.search {
   margin: 0;
 }
 #sidebar-navigation ul li a {
-  color: #DFDBD0;
+  font-size: large;
+  font-variant: small-caps;
+  line-height: 3;
 }
 
 #sidebar-navigation ul.children {  
@@ -1362,6 +1364,8 @@ input.search {
 }
 #sidebar-navigation ul.children li a {
   color: #111;
+  font-size: 100%;
+  line-height: 2;
 }
 
 

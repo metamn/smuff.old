@@ -1,6 +1,16 @@
 $(document).ready(function() { 
 
 
+  // Show shopping info on Product page on click, not just on hover
+  $("#shopping-info .shopping-info").click(function() {
+    if ($(this).next().is(":visible")) {
+      $(this).next().show('slow');
+    } else {
+      $(this).next().hide('slow');
+    }
+  });
+  
+
   // Showing all new products alternative way
   $("#new-products-link").click(function() {
     var res = "";
