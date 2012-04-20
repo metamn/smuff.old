@@ -6,7 +6,7 @@
  
  $klass = '';
  if (is_page(429)) { // Finalizare comanda  
-  $randoms = query_posts2('posts_per_page=6&cat=10&orderby=rand');
+  $randoms = query_posts2('posts_per_page=10&cat=10&orderby=rand');
   $klass = "checkout-final";
  } 
 
@@ -114,11 +114,11 @@ get_header(); ?>
         </div>
         
         <?php if ($randoms) { ?>
-          <div id="recommended">
-          <h3>Produse similare</h3>
-          <p>Cei care au cumparat acest produs au mai cumparat si produsele:</p>
+          <div id="recommended" class="after-sales bestsellers block">
+            <h2>Produse similare</h2>
+            <p>Cei care au cumparat acest produs au mai cumparat si produsele:</p>
             <?php while ($randoms->have_posts()) : $randoms->the_post(); update_post_caches($posts); 
-              $medium = false;
+              $medium = true;
               include "product-thumb.php";
             endwhile; ?>
           </div>

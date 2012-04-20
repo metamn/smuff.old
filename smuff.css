@@ -1300,13 +1300,17 @@ width:96%;
 }
 */
 
-#archive-all-grid .item, #search-results .item {
+#archive-all-grid .item, 
+#search-results .item,
+.after-sales .item {
   width: 39.5%;
   height: auto;
   float: left;
   margin-right: 10%;  
 }
-
+.after-sales .item { 
+  height: 30em;
+}
 
 /* Sidebar 
 */
