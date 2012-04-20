@@ -41,7 +41,8 @@
 		<?php endif; ?>
 		-->
 		<td>Pret</td>
-		<td></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
 	</tr>
 	
 	<?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>	
@@ -244,6 +245,7 @@
 	   */
 	   ?>	   
 	
+	<!--
 	<div class="steps block">
 	  <div id="step-1" class="step column span-5 last">
       <span class="stepnr">1</span>
@@ -292,9 +294,95 @@
 	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/return.jpg" width="150" /></a>
 	  </div>
 	</div>
+	
+	-->
 	   
   <div id="checkout" class="block">
-    <div id="form" class="column span-10 append-1 last">	    
+  
+    <div id="col" class="column span-7 append-1 last">
+      <div id="shopping-incentives">
+        <h4>Preturi imbatabile</h4>
+        <p>
+          Exact ca si cand ati cumpara din magazinele din strainatate.  
+        </p>
+        
+        <h4>Shopping rapid</h4>
+        <p>
+          Fara procedura de inregistrare, numai cu un singur click.            
+        </p>
+        
+        <h4>Plata la livrare</h4>
+        <p>
+          Si dupa ce ati verificat produsele primite.
+        </p>
+        
+        <h4>Returnare in 10 zile</h4>
+        <p>
+          Fara interbari din partea noastra.
+        </p>
+        
+        <h4>Garantie minim 1 an</h4>
+        <p>
+          Schimbare produs sau returnare bani.
+        </p>        
+      </div>	
+      
+      <div id="login">
+	      <?php if(!is_user_logged_in()) {
+          global $current_user;
+          get_currentuserinfo(); ?>
+          <div id="account" class="box">
+            <h4>Doriti cont Smuff?</h4>
+            <p>
+              A crea cont pe Smuff nu este obligatoriu, se poate cumpara si fara cont prin Shopping Rapid.  
+            </p>
+            <p>
+              Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail sau cont Facebook.
+              <ul class="loginlist">
+                <li><?php do_action('fbc_display_login_button') ?></li>
+                <li><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
+            </p>
+          </div>
+        <?php } else { 
+          if (is_user_logged_in()) {
+
+            $current_user = wp_get_current_user();
+            if ( !($current_user instanceof WP_User) ) return; ?>
+            
+            <?php if (check_profile_info($current_user->ID)) { ?>
+              <!--
+              <p class="termeni">
+              Prin trimiterea comenzii va exprimati acordul cu 
+                <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+              </p>
+              <p>
+                 <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
+              </p>
+              -->
+            <?php } else { ?>
+              <p class="termeni">
+                Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
+              </p>
+            <?php } ?>
+            
+            <div id="account" class="box">
+              <h4>Contul Dumneavoastra</h4>
+              <ul class="info">
+                <li>Nume utilizator: <?php echo $current_user->display_name ?></li>              
+              </ul>
+              <ul class="links">
+                <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
+                <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
+                <li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
+                <li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
+              </ul>
+            </div>          
+          <?php } 
+        } ?>   
+	    </div>
+	  </div>
+  
+    <div id="form" class="column span-9 last">	    
 	    <h3 class="checkout">Shopping rapid</h3>
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
@@ -411,56 +499,7 @@
 	    </table>
 	  </div>
 	  
-	  <div id="login" class="column span-5 prepend-1 last">
-	    <?php if(!is_user_logged_in()) {
-        global $current_user;
-        get_currentuserinfo(); ?>
-        <h4>Doriti cont Smuff?</h4>
-        <p>
-          A crea cont pe Smuff nu este obligatoriu, se poate cumpara si fara cont prin Shopping Rapid.  
-        </p>
-        <p>
-          Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail sau cont Facebook.
-          <ul class="loginlist">
-            <li><?php do_action('fbc_display_login_button') ?></li>
-            <li><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
-        </p>
-          
-      <?php } else { 
-        if (is_user_logged_in()) {
-
-          $current_user = wp_get_current_user();
-          if ( !($current_user instanceof WP_User) ) return; ?>
-          
-          <?php if (check_profile_info($current_user->ID)) { ?>
-            <p class="termeni">
-            Prin trimiterea comenzii va exprimati acordul cu 
-              <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-            </p>
-            <p>
-               <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
-            </p>
-          <?php } else { ?>
-            <p class="termeni">
-              Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
-            </p>
-          <?php } ?>
-          
-          <div id="account" class="box">
-            <h4>Contul Dumneavoastra</h4>
-            <ul class="info">
-              <li>Nume utilizator: <?php echo $current_user->display_name ?></li>              
-            </ul>
-            <ul class="links">
-              <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
-              <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
-              <li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
-              <li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
-            </ul>
-          </div>          
-        <?php } 
-      } ?>   
-	  </div>
+	  
 	</div>  
 </form>
 </div>

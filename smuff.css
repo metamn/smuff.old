@@ -227,6 +227,12 @@ div#widgetshoppingcart {
 table.productcart {
   margin-bottom: 1em;
 }
+table.productcart, table.productcart td, table.productcart tr {
+  vertical-align: top;
+} 
+table.productcart th, table.productcart td, table.productcart caption {
+  padding: 1em;
+}
 table.productcart tr.firstrow td {
   background-color: #d1c9bc !important;
   border-left: 1px dotted #eee !important;
@@ -257,10 +263,10 @@ table.shipping td.c3, table.shipping td.c4, table.shipping td.c5 {
   border-bottom: 1px solid #cac1b2;
 }
 table.shipping td.c1 {
-  width: 4.5em;
+  width: 5.3em;
 }
 table.shipping td.c2 {
-  width: 30%;
+  width: 24.4%;
 }
 table.shipping td.c3 {
   width: 29.5%;
@@ -285,6 +291,11 @@ table.total td.c2 {
 table.total td.c3 {
   width: 30%;
 }
+
+.adjustform input[type="text"] {
+  width: 94%;
+}
+
 
 .wpsc_checkout_forms #info {  
   margin: 1.5em 0 2em;  
@@ -361,11 +372,10 @@ table.total td.c3 {
 }
 
 
-#checkout #form {
-  width: 380px;    
-}
+
 #checkout #login {
-  margin-top: 1.7em;    
+  margin-top: 2em;  
+  width: 100%;  
 }
 #checkout #login button.make_purchase {
   width: 99%;  
@@ -1027,7 +1037,7 @@ div.thanks-error {
   margin: 2em 0;
 }
 
-#post-shopping2 {
+#post-shopping2, #shopping-incentives  {
   background: #39A712;
   height: 320px;
 }
@@ -1038,18 +1048,24 @@ div.thanks-error {
   float: left;
   height: 320px;
 }
-#post-shopping2 #shopping-incentives {
+#shopping-incentives {
   width: 50%;
   float: left;
   padding: 1.5em 0;
 }
-#post-shopping2 #shopping-incentives h4 {
+#shopping-incentives h4 {
   margin-bottom: .25em;
   color: white;
 }
-#post-shopping2 #shopping-incentives p {
+#shopping-incentives p {
   margin-bottom: 1.75em;
   color: white;
+}
+
+#wpsc_shopping_cart_container #shopping-incentives {
+  padding: 1.5em;
+  width: 87%;
+  float: none;
 }
 
 #single #post-operations {  
