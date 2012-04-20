@@ -8,6 +8,8 @@
 
 
 
+
+
 function get_tag_id_by_name($tag_name) {
   global $wpdb;
   $tag_ID = $wpdb->get_var("SELECT * FROM ".$wpdb->terms." WHERE `name` = '".$tag_name."'");

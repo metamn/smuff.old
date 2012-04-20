@@ -293,6 +293,14 @@
         }		      
       }      
     ?>
+    
+    <h4 class="all-products-link">
+      <a class="all-products-link" title="Vezi toate produsele Smuff" href="<?php bloginfo('home'); ?>/category/produse/?view=3">
+      Vezi toate produsele Smuff &rarr;</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
+      Inapoi la inceputul paginii &uarr;</a>
+    </h4>
   </div>  
   
   <div class='clearfix'></div>

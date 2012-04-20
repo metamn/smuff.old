@@ -17,7 +17,7 @@
 <div id="noutati" class="block"></div>
   
   
-<div id="bestsellers" class="block"> 
+<div id="bestsellers" class="bestsellers block"> 
     
   <div id="col-0" class="column span-2 last">    
     <h3 class='first'>B</h3>
@@ -81,9 +81,8 @@
     $title = 'Vezi toate produsele' . $cat_name . ' &rarr;'; 
     $link_type = '3'; // 2=table view, 3=grid view
     echo '<h4 class="all-products-link">';
-    include "home-all-products-link.php"; 
-    echo '</h4>';
+    include 'home-all-products-link.php'; 
+    echo '</h4>';    
   ?>
-
 </div>
 

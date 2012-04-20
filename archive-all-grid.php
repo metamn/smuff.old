@@ -1,11 +1,11 @@
 <?php
-// get all posts, not just 10/page
+  // get all posts, not just 10/page
   $cat = category_id(true, false, null);    
   $all_posts = query_posts2('posts_per_page=-1&cat='.$cat);  
   $cat_name = '';
   if (!($cat == 10)) {
     $cat_name = ' din '. get_cat_name($cat);
-  } 
+  }
 ?>
 
 <div id="archive-all" class="block">  
@@ -24,28 +24,23 @@
       </div>
     </div>
     
-    <?php if ($all_posts->have_posts()) : ?>
-    <div id="archive-all-grid" class="block">
-      <?php 
-      $counter = 1;
-      while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
-		    $medium = false;        
-        $klass = 'col-' .($counter % 3);
-        $counter += 1;
-        if (in_category(10)) {
-		  ?>
-		    <div id="item" class="<?php echo $klass?> column span-6 last">
-		      <?php include "product-thumb.php"?>
-		    </div>
-		  <?php } endwhile; ?>
-		</div>
-	  <p class="alignright">
-	    <?php echo $all_posts->post_count . ' produse. ' ?>
-	    <a href="#archive-all">[ &uarr; Top ]</a>
-	  </p>		  	  
-		<?php else : 
-      include "not-found.php";  
-	  endif; ?>
+    <div id="archive-all-grid" class="bestsellers block">
+      <?php if ($all_posts->have_posts()) : 
+        while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
+		      $medium = true;        
+          if (in_category(10)) { 
+		        include "product-thumb.php";
+		      } 
+		    endwhile; 
+		  ?>		
+	    <p class="alignright">
+	      <?php echo $all_posts->post_count . ' produse. ' ?>
+	      <a href="#archive-all">[ &uarr; Top ]</a>
+	    </p>		  	  
+		  <?php else : 
+        include "not-found.php";  
+	    endif; ?>
+	  </div>
   </div>
   
   <?php get_sidebar(); ?>

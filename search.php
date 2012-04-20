@@ -69,20 +69,18 @@ get_header(); ?>
               Pentru o cautare mai avansata click aici &rarr;</a>
               </h3>
             </div>
-                            
-            <?php $counter = 1;
-            while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
-              if (advanced_search($post, $price, $categories)) { 
-                $klass = 'col-' .($counter % 3);
-                $counter += 1; ?>
-                <div id="item" class="column span-6 last <?php echo $klass ?>">
-                  <?php include "product-thumb.php"; ?>                        
-                </div>
-              <?php }
-            endwhile; 
-            $counter -= 1;
-            ?>
             
+            
+            <div id="search-results" class="bestsellers">                
+              <?php 
+              while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
+                if (advanced_search($post, $price, $categories)) { 
+                  $medium = true;
+                  include "product-thumb.php";                        
+                }
+              endwhile; 
+              ?>
+            </div>
             
             <div class="clear"></div>
             <span id="search-count" class="hidden"><?php echo $counter; ?></span>

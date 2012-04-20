@@ -655,8 +655,11 @@ h4.all-products-link {
   text-align: center;
   font-style: italic;
 } 
-h4.all-products-link a{
+h4.all-products-link a, h4.all-products-link span {
   color: #555;
+}
+.link {
+  cursor: pointer;
 }
 
 
@@ -668,7 +671,7 @@ h4.all-products-link a{
   float: right;
   margin-right: 0;
 }
-#bestsellers h3 {
+.bestsellers h3 {
   background: #4A4742;
   color: #f25e18;
   padding: 0.1em 1em;
@@ -676,39 +679,39 @@ h4.all-products-link a{
   text-transform: uppercase;  
   font-weight: bold;
 }
-#bestsellers h3.first {
+.bestsellers h3.first {
   padding-top: 1em;
 }
-#bestsellers h3.last {
+.bestsellers h3.last {
   padding-bottom: 1em;
 }
-#bestsellers a, .special .items a {
+.bestsellers a, .special .items a {
   background: #DFDBD0;
 }
-#bestsellers .item, .special .item {
+.bestsellers .item, .special .item {
   margin-bottom: 6em;
   height: 30em;
   box-shadow: 0 .5em #cac1b2;
   -moz-box-shadow: 0 .5em #cac1b2;
   -webkit-box-shadow: 0 .5em #cac1b2;
 }
-#bestsellers .item .text, .special .item .text {
+.bestsellers .item .text, .special .item .text {
   margin: 0;
   padding: 1em 1.5em;
   background: #DFDBD0; 
   height: 15em; 
 }
-#bestsellers .item img, .special .item img {
+.bestsellers .item img, .special .item img {
   border: 1px solid #ccc;
   width: 270px;
   height: auto;
   cursor: pointer;
   padding: .2em;
 }
-#bestsellers .item h4, .special .item h4 {
+.bestsellers .item h4, .special .item h4 {
   margin: 0 0 .5em;
 }
-#bestsellers .item p, .special .item p {
+.bestsellers .item p, .special .item p {
   width: 100%;
 }
 .special .item {
@@ -720,17 +723,17 @@ h4.all-products-link a{
   text-decoration: none !important;
 }
 
-#bestsellers #info p {
+.bestsellers #info p {
   padding: 1em;
   background: #DFDBD0;
   font-style: italic;
   font-size: larger;  
 }
-#bestsellers #info a, #bestsellers #info a:visited, #bestsellers #info a:active {
+.bestsellers #info a, .bestsellers #info a:visited, .bestsellers #info a:active {
   text-decoration: underline;
 }
 
-#bestsellers a.all-products-link, #promo a.all-products-link {
+a.all-products-link, span.all-products-link {
   padding: .2em;
   background: #FDF3C6 !important;
 }
@@ -1267,6 +1270,8 @@ width:96%;
 #archive-all #content #right a, #archive-all #content #right a:visited {
   text-decoration: underline;
 }
+
+/*
 #archive-all-grid #item {
   height: 30em;
   margin-bottom: 3em;
@@ -1277,7 +1282,14 @@ width:96%;
 #archive-all-grid #item.col-0 .item {
   margin-left: 3em;
 }
+*/
 
+#archive-all-grid .item, #search-results .item {
+  width: 39.5%;
+  height: auto;
+  float: left;
+  margin-right: 10%;  
+}
 
 
 /* Sidebar 

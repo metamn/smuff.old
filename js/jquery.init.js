@@ -1,6 +1,5 @@
 $(document).ready(function() { 
 
-
   // Show shopping info on Product page on click, not just on hover
   $("#shopping-info .shopping-info").click(function() {
     if ($(this).next().is(":visible")) {
@@ -196,7 +195,8 @@ $(document).ready(function() {
   // - on Partner list 
   $("#partners-table").tablesorter({
     sortList: [[1,1]]    
-  });   
+  });  
+   
     
   // add opacity on twitter fb buttons on mouse hover, blog index
   $(".post .facebook, .post .twitter, .post .google").hover(

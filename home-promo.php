@@ -31,6 +31,9 @@
   <h4 class="all-products-link">
     <a class="all-products-link" title="Vezi toate promotiile Smuff" href="<?php bloginfo('home'); ?>/category/meta/promotii/?view=3">
     Vezi toate promotiile Smuff &rarr;</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
+    Inapoi la inceputul paginii &uarr;</a>
   </h4>
 </div>
 
