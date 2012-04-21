@@ -78,7 +78,7 @@
       $cat_name = ' Smuff';
     } 
     //$wplogger->log( 'catname '.$cat_name );
-    $title = 'Vezi toate produsele' . $cat_name . ' &rarr;'; 
+    $title = 'Vezi toate cadourile' . $cat_name . ' &rarr;'; 
     $link_type = '3'; // 2=table view, 3=grid view
     echo '<h4 class="all-products-link">';
     include 'home-all-products-link.php'; 

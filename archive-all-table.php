@@ -1,7 +1,9 @@
 <?php
 // get all posts, not just 10/page
   $cat = category_id(true, false, null);    
-  $all_posts = query_posts2('posts_per_page=-1&cat='.$cat);  
+  $all_posts = query_posts2('posts_per_page=-1&cat='.$cat); 
+  //$all_posts2 = query_posts2('posts_per_page=200&offset=200&cat='.$cat);  
+  //$all_posts3 = query_posts2('posts_per_page=200&offset=400&cat='.$cat); 
   $cat_name = '';
   if (!($cat == 10)) {
     $cat_name = ' din '. get_cat_name($cat);
@@ -24,7 +26,9 @@
       </div>
     </div>
     
-    <?php if ($all_posts->have_posts()) : ?>
+    <?php if ($all_posts->have_posts()) : 
+      $counter = 0;
+      ?>
       <table id="archive-all-table" class="tablesorter">
       <thead><tr>
         <th class="header">Data publicarii</th>
@@ -44,6 +48,62 @@
           $imgs = post_attachements($post->ID);
           $img = $imgs[0];  
           $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+          
+          $counter += 1;
+		    ?>
+		      <tr>
+		        <td><?php the_time('Y-m-d') ?></td>
+		        <td>
+		          <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+		            <img src="<?php echo $thumb[0]?>" alt="<?php echo $product_name ?>" title="<?php echo $product_name ?>"/></a>		        
+		        </td>
+		        <td>
+		          <?php the_title(); ?>
+		        </td>
+		        <td><?php echo $product_price ?></td>
+		        <td><?php echo product_discount($product_id) ?></td>
+		        <td><?php echo product_delivery_time($product_stoc) ?></td>		      
+		      </tr>
+		  <?php } endwhile; ?>
+		  
+		  <?php while ($all_posts2->have_posts()) : $all_posts2->the_post(); update_post_caches($posts); 
+		    if (in_category(10)) {
+		      $product_id = product_id($post->ID);
+          $product_price = product_price($post->ID);
+          $product_name = product_name($product_id); 
+          $product_stoc = product_stock($product_id);
+          $imgs = post_attachements($post->ID);
+          $img = $imgs[0];  
+          $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+          
+          $counter += 1;
+		    ?>
+		      <tr>
+		        <td><?php the_time('Y-m-d') ?></td>
+		        <td>
+		          <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+		            <img src="<?php echo $thumb[0]?>" alt="<?php echo $product_name ?>" title="<?php echo $product_name ?>"/></a>		        
+		        </td>
+		        <td>
+		          <?php the_title(); ?>
+		        </td>
+		        <td><?php echo $product_price ?></td>
+		        <td><?php echo product_discount($product_id) ?></td>
+		        <td><?php echo product_delivery_time($product_stoc) ?></td>		      
+		      </tr>
+		  <?php } endwhile; ?>
+		  
+		  <?php while ($all_posts3->have_posts()) : $all_posts3->the_post(); update_post_caches($posts); 
+		    if (in_category(10)) {
+		      $product_id = product_id($post->ID);
+          $product_price = product_price($post->ID);
+          $product_name = product_name($product_id); 
+          $product_stoc = product_stock($product_id);
+          $imgs = post_attachements($post->ID);
+          $img = $imgs[0];  
+          $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+          
+          $counter += 1;
 		    ?>
 		      <tr>
 		        <td><?php the_time('Y-m-d') ?></td>
@@ -62,7 +122,7 @@
 		  </tbody>
 		  </table>
 		  <p class="alignright">
-		    <?php echo $all_posts->post_count . ' produse. ' ?>
+		    <?php echo $counter . ' produse. ' ?>
 		    <a href="#archive-all">[ &uarr; Top ]</a>
 		  </p>
 		  <p class="note alignleft">

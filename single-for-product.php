@@ -81,13 +81,13 @@
   <div class="entry">
     <div class="block">
       <div id="post-operations" class="column span-12 last">                
-         <table>
+        <table>
           <tr>          
             <td><?php include "share-twitter.php" ?></td>
             <td><?php include "share-facebook-like.php" ?></td>
             <td><g:plusone size="medium"></g:plusone></td>
           </tr>
-          </table>                     
+        </table>                     
       </div>
       
       <!--
@@ -148,11 +148,10 @@
         ?>
       </div>
       
-      <?php include "shopping-incentives.php"; ?>
-    
-    </div>
-   
+      <?php include "shopping-incentives.php"; ?>    
+    </div> 
   </div>
+  
   
   <!--
   <div id="cadouri" class="block">
@@ -176,7 +175,7 @@
       }
     ?>
   </div>
-  <div class='clearfix'></div>
+  
   -->
   
   <?php 
@@ -206,12 +205,11 @@
     
     <h4 class="all-products-link">
       <?php 
-        $title = 'Vezi toate noutatiile ' . $tag . ' &rarr;'; 
+        $title = 'Vezi toate cadourile ' . $tag . ' &rarr;'; 
         $link_type = '3'; // 2=table view, 3=grid view 
         include "home-all-products-link.php"; 
       ?>
-    </h4>
-    
+    </h4>    
   </div>
     
   <div id="recommended" class="more-products block">    
@@ -270,8 +268,8 @@
     ?>
     
     <h4 class="all-products-link">
-      <a class="all-products-link" title="Vezi toate produsele Smuff" href="<?php bloginfo('home'); ?>/category/produse/?view=3">
-      Vezi toate produsele Smuff &rarr;</a>
+      <a class="all-products-link" title="Vezi toate cadourile Smuff" href="<?php bloginfo('home'); ?>/category/produse/?view=3">
+      Vezi toate cadourile Smuff &rarr;</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
       Inapoi la inceputul paginii &uarr;</a>

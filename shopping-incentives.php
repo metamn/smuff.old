@@ -25,4 +25,3 @@
   </p>        
 </div>
 
-<!-- also edit in shopping_cart_page.php !!! !>

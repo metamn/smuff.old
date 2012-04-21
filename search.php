@@ -71,23 +71,47 @@ get_header(); ?>
         
         <div id="search-results-items">
           <?php 
-            $allsearch = &new WP_Query("s=$s&showposts=-1"); 
-            if ($allsearch->have_posts()) { ?> 
+            $allsearch = &new WP_Query("s=$s&showposts=200");
+            $allsearch2 = &new WP_Query("s=$s&showposts=200&offset=200");
+            $allsearch3 = &new WP_Query("s=$s&showposts=200&offset=400");
             
+            if ($allsearch->have_posts()) { ?>             
               <div id="advanced-search-link" class="block">
                 <h3><a href="<?php bloginfo('home'); ?>/cautare-avansata" title="Cautare avansata" alt="Cautare avansata">
                 Am gasit <em><span id="counter">...</span></em> produse. 
                 Pentru o cautare mai avansata click aici &rarr;</a>
                 </h3>
-              </div>
-              
+              </div>              
               
               <div id="search-results" class="bestsellers">                
+                
                 <?php 
+                $counter = 0;
                 while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
                   if (advanced_search($post, $price, $categories)) { 
                     $medium = true;
                     include "product-thumb.php";                        
+                    $counter += 1;
+                  }
+                endwhile; 
+                ?>
+                
+                <?php
+                while ($allsearch2->have_posts()) : $allsearch2->the_post(); update_post_caches($posts); 
+                  if (advanced_search($post, $price, $categories)) { 
+                    $medium = true;
+                    include "product-thumb.php";                        
+                    $counter += 1;
+                  }
+                endwhile; 
+                ?>
+                
+                <?php 
+                while ($allsearch3->have_posts()) : $allsearch3->the_post(); update_post_caches($posts); 
+                  if (advanced_search($post, $price, $categories)) { 
+                    $medium = true;
+                    include "product-thumb.php";                        
+                    $counter += 1;
                   }
                 endwhile; 
                 ?>
@@ -100,7 +124,11 @@ get_header(); ?>
                 Am gasit <em><?php echo $counter; ?></em> produse. 
                 Pentru o cautare mai avansata click aici &rarr;</a>
                 </h3>
-              </div>                    
+              </div> 
+              <center>
+                <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
+      Inapoi la inceputul paginii &uarr;</a>
+              </center>                   
               
             <?php } else {
               echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";

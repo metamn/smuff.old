@@ -89,7 +89,7 @@ body {
   color: #f25e18;
   font-size: .4em;
   font-weight: bold;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
   vertical-align: super;
 }
 .strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {
@@ -403,6 +403,15 @@ table.wpsc_checkout_table textarea {
 }
 table.wpsc_checkout_table input.text {
   width: 97%;
+}
+
+
+#wpsc_checkout_form_2,
+#wpsc_checkout_form_4,
+#wpsc_checkout_form_5,
+#wpsc_checkout_form_8,
+#wpsc_checkout_form_17 {
+  background: #FEFAE7;
 }
 
 

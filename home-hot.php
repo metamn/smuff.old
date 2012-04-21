@@ -17,11 +17,18 @@
               $large = wp_get_attachment_image_src($img->ID, 'large');
               $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
               $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.get_the_title().'"><img src="'.$thumb[0].'" alt="'.get_the_title().'" /></a>';            
+              
+              if ($i == 1) {
+                $img_path = $large[0];
+              } else {
+                $img_path = get_bloginfo('stylesheet_directory') . "/img/home-hot-blank.jpg";
+              }
+              
               $i += 1; ?>
               
               <li>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-                  <img src="<?php bloginfo('stylesheet_directory') ?>/img/home-hot-blank.jpg" rel="<?php echo $large[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
+                  <img src="<?php echo $img_path ?>" rel="<?php echo $large[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
                   <div id="home-hot-title" class="block"> 
                     <div id="text" class="column span-3 last">
                       Nou!
@@ -61,11 +68,18 @@
             $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
             
             $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.$product_name.'"><img src="'.$thumb[0].'" alt="'.$product_name.'" /></a>';            
+            
+            if ($i == 1) {
+              $img_path = $large[0];
+            } else {
+              $img_path = get_bloginfo('stylesheet_directory') . "/img/home-hot-blank.jpg";
+            }
+            
             $i += 1;
           ?>
           <li>
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-              <img src="<?php bloginfo('stylesheet_directory') ?>/img/home-hot-blank.jpg" rel="<?php echo $large[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
+              <img src="<?php echo $img_path ?>" rel="<?php echo $large[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
               <div id="home-hot-title" class="block"> 
                 <div id="text" class="column span-3 last">
                   Nou!
