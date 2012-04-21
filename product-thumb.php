@@ -12,6 +12,12 @@
     $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');  
   }    
   $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+  
+  if ($show_category) {
+    $main_cat = post_main_category(get_post_categories_array($post), 10);  
+    $category = $main_cat->cat_name;
+    $category_link = get_category_link( $main_cat->cat_ID );
+  }
 ?>
 
 <div class="item product-thumb">    
@@ -28,9 +34,17 @@
         <span class="old-price"><?php echo $product_price; ?></span>    
       <?php } else { ?>
         <span class="normal-price"><?php echo $product_price; ?></span> RON
-      <?php } ?>
+      <?php } ?>      
     </a>
   </div>
+  
+  <?php if ($show_category) { ?>
+    <div id="category">
+      <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
+      <?php echo $category ?></a>
+    </div>
+  <?php } ?>
+  
   <?php } else { ?>
     <div class="text">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">

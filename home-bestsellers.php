@@ -42,7 +42,12 @@
             $count = $top_sales->post_count / 2;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
               if ($counter < $count) {   
-                $medium = true;             
+                $medium = true;    
+                if ($cat == 0 || $cat == 10) {
+                  $show_category = true;         
+                } else {
+                  $show_category = false;         
+                }
                 include "product-thumb.php";              
               }
               $counter += 1;
@@ -60,6 +65,11 @@
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
               if ($counter >= $count) {    
                 $medium = true;            
+                if ($cat == 0 || $cat == 10) {
+                  $show_category = true;         
+                } else {
+                  $show_category = false;         
+                }
                 include "product-thumb.php";              
               }
               $counter += 1;

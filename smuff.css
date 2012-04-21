@@ -704,9 +704,8 @@ h4.all-products-link a, h4.all-products-link span {
 .bestsellers h3.last {
   padding-bottom: 1em;
 }
-.bestsellers a, .special .items a {
-  background: #DFDBD0;
-}
+
+
 .bestsellers .item, .special .item {
   margin-bottom: 6em;
   height: 30em;
@@ -896,6 +895,17 @@ a.all-products-link, span.all-products-link {
   -moz-box-shadow: 0 .5em #cac1b2;
   -webkit-box-shadow: 0 .5em #cac1b2;
 }
+
+.product-thumb #category {
+  position: relative;
+  top: -2.5em;
+  margin-left: 1.5em;
+}
+.product-thumb #category a {
+  padding: .3em;
+}
+
+
 
 
 /* Page

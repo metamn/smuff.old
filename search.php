@@ -90,6 +90,7 @@ get_header(); ?>
                 while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
                   if (advanced_search($post, $price, $categories)) { 
                     $medium = true;
+                    $show_category = true;
                     include "product-thumb.php";                        
                     $counter += 1;
                   }
