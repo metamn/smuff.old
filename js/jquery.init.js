@@ -20,6 +20,7 @@ $(document).ready(function() {
     });
     
     $("#noutati").html(res);
+    $("#noutati").fadeIn("slow");
   });
   
 

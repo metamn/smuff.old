@@ -1,3 +1,10 @@
+<div id="announcement" class="block">
+  <h4>Am facut mici schimbari la designul siteului Smuff. 
+  <br/>
+  Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
+  Va multumim.</h4> 
+</div>
+
 <?php 
   $cat = category_id(is_category(), is_single(), null);    
   $cat_name = '';
@@ -14,7 +21,7 @@
   echo '</h4>';
 ?>
 
-<div id="noutati" class="block"></div>
+<div id="noutati" class="hidden block"></div>
   
   
 <div id="bestsellers" class="bestsellers block"> 

@@ -75,6 +75,14 @@ body {
   background: #FDF3C6;
 }
 
+#announcement {
+  margin: 2em 0;
+  padding: 1em 0 0;
+  text-align: center;
+  background: #FDF3C6;
+}
+
+
 #headlines {
   margin: 0;
   padding: 0;
@@ -93,7 +101,9 @@ body {
   vertical-align: super;
 }
 .strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {
-  color: #f25e18;
+  
+  color: #DFDBD0;
+  background: #f25e18;
   padding: .1em;
   -moz-border-radius: 10%;  
   -webkit-border-radius: 10%;
@@ -1331,6 +1341,9 @@ width:96%;
 }
 .after-sales .item { 
   height: 30em;
+}
+.after-sales .item a, .after-sales .item a:visited { 
+  text-decoration: none !important;
 }
 
 /* Sidebar 

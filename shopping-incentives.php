@@ -1,5 +1,5 @@
 <div id="shopping-incentives">
-  <h4>Preturi acesibile</h4>
+  <h4>Preturi accesibile</h4>
   <p>
     La Smuff toate preturile sunt corecte.  
   </p>
@@ -21,7 +21,7 @@
   
   <h4>Garantie minim 1 an</h4>
   <p>
-    Garantie un an, Service Express / schimb cu un produs NOU.
+    Service Express sau schimb cu un produs NOU.
   </p>        
 </div>
 

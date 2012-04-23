@@ -33,6 +33,11 @@
         while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
 		      $medium = true;        
           if (in_category(10)) { 
+            if ($cat == 0 || $cat == 10) {
+              $show_category = true;         
+            } else {
+              $show_category = false;         
+            }
 		        include "product-thumb.php";
 		        $counter += 1;
 		      } 
