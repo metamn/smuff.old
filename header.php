@@ -81,7 +81,7 @@
 	            <h1>
 	              <a class="tooltip" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
 	              <span class="strapline">	                
-	                <a class="tooltip <?php echo $shop?>" alt="<?php echo page_excerpt('despre-noi/magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Smuff -- cadouri premium">cadouri premium</a>	                
+	                <a class="tooltip <?php echo $shop?>" alt="<?php echo page_excerpt('despre-noi/magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Smuff -- cadouri premium">inseamna cadouri</a>	                
 	              </span>			      
 	           </h1>			      
 			      </div>

@@ -62,7 +62,6 @@
           </li>
           <div class="tooltip">
             <ul>
-              <li>Cele mai performante preturi din tara</li>
               <li>Shopping simplu fara procedura de inregistrare</li>
               <li>Livrare se face acasa sau la birou</li>
               <li>Plata se face la livrare dupa verificarea produselor primite</li>

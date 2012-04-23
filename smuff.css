@@ -906,7 +906,9 @@ a.all-products-link, span.all-products-link {
 }
 
 
-
+.wpsc_loading_animation {
+  display: none;
+}
 
 /* Page
 */
@@ -1159,8 +1161,8 @@ div.thanks-error {
 .navigation .alignleft {
   margin-right: 5em;
 }
-.more-products  {
-  background: url(img/flowers.png) no-repeat scroll 62% 25.5% #E6E2D9;
+#from-category, #random  {
+  background: url(img/flowers.png) no-repeat scroll 62% 94.5% #E6E2D9;
 }
 #single .more-products  {
   margin-top: 5em;
@@ -1323,7 +1325,7 @@ width:96%;
 #search-results .item,
 .after-sales .item {
   width: 39.5%;
-  height: auto;
+  margin-bottom: 10em;
   float: left;
   margin-right: 10%;  
 }
