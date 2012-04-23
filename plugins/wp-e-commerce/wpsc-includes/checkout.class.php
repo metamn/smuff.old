@@ -401,7 +401,7 @@ class wpsc_checkout {
 	/**
 	* form_field method, returns the form html
 	* @access public
-	*/
+	*/	
   function form_field() {
 		global $wpdb, $user_ID;
 		//$meta_data[$form_field['id']]
