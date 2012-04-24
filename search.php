@@ -34,8 +34,9 @@ get_header(); ?>
     }
   } catch (Exception $e) {
     $error = true;
-  }	  
-  				  
+  }	 
+   		
+  $fullsearch = true; 				  
 ?>
 
 <div id="search-results" class="block">
@@ -52,92 +53,81 @@ get_header(); ?>
           <h1>Rezultate cautare</h1>
           <table>
             <tr><td>Expresia cautata:</td><td>
-              <?php if (!($text == '+')) { echo $text; }  ?>
+              <?php if ($text == '+') {
+                echo "Toate produsele";
+              } else { 
+                echo $text; 
+                $fullsearch = false;
+              } ?>
             </td></tr>
-            <tr><td>Cautare dupa pret:</td><td> <?php echo $price; ?></td></tr>
-            <tr><td>Categorii produse:</td><td> 
-              <?php
-                $categories = array();  
-                if ($cats) {
-                  $categories = explode(",", $cats);
-                  foreach ($categories as $cat) {
-                    echo get_cat_name($cat) . ', ';
-                  }
-                } 
-              ?>
-            </td></tr>          
+            <tr><td>Cautare dupa pret:</td><td> 
+              <?php if ($price == "0-100000") {
+                echo "Cautare fara pret";
+              } else { 
+                echo $price; 
+                $fullsearch = false;
+              } ?>
+            </td></tr> 
+            <tr><td>Numar rezultate:</td>
+            <td><span id="counter">...</span></td></tr>           
           </table>
         </div>
         
         <div id="search-results-items">
-          <?php 
-            $allsearch = &new WP_Query("s=$s&showposts=200");
-            $allsearch2 = &new WP_Query("s=$s&showposts=200&offset=200");
-            $allsearch3 = &new WP_Query("s=$s&showposts=200&offset=400");
-            
-            if ($allsearch->have_posts()) { ?>             
-              <div id="advanced-search-link" class="block">
-                <h3><a href="<?php bloginfo('home'); ?>/cautare-avansata" title="Cautare avansata" alt="Cautare avansata">
-                Am gasit <em><span id="counter">...</span></em> produse. 
-                Pentru o cautare mai avansata click aici &rarr;</a>
-                </h3>
-              </div>              
-              
-              <div id="search-results" class="bestsellers">                
-                
-                <?php 
-                $counter = 0;
-                while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts); 
-                  if (advanced_search($post, $price, $categories)) { 
-                    $medium = true;
-                    $show_category = true;
-                    include "product-thumb.php";                        
-                    $counter += 1;
-                  }
-                endwhile; 
-                ?>
-                
-                <?php
-                while ($allsearch2->have_posts()) : $allsearch2->the_post(); update_post_caches($posts); 
-                  if (advanced_search($post, $price, $categories)) { 
-                    $medium = true;
-                    include "product-thumb.php";                        
-                    $counter += 1;
-                  }
-                endwhile; 
-                ?>
-                
-                <?php 
-                while ($allsearch3->have_posts()) : $allsearch3->the_post(); update_post_caches($posts); 
-                  if (advanced_search($post, $price, $categories)) { 
-                    $medium = true;
-                    include "product-thumb.php";                        
-                    $counter += 1;
-                  }
-                endwhile; 
-                ?>
+          <?php if ($fullsearch) {          
+            if (have_posts()) { ?>  
+              <div id="navigation" class="block">
+                <?php if(function_exists('wp_paginate')) {
+                  wp_paginate();
+                } ?>  
               </div>
-              
+            
+              <div id="search-results" class="bestsellers">    
+                <?php 
+                  $counter = $wp_query->found_posts;
+                  while (have_posts()) : the_post();
+                    if (advanced_search($post, $price, $categories)) { 
+                      $medium = true;
+                      $show_category = true;
+                      include "product-thumb.php";    
+                    }
+                  endwhile; ?>
+              </div>              
               <div class="clear"></div>
-              <span id="search-count" class="hidden"><?php echo $counter; ?></span>
-              <div id="advanced-search-link" class="block">
-                <h3><a href="<?php bloginfo('home'); ?>/cautare-avansata" title="Cautare avansata" alt="Cautare avansata">
-                Am gasit <em><?php echo $counter; ?></em> produse. 
-                Pentru o cautare mai avansata click aici &rarr;</a>
-                </h3>
-              </div> 
-              <center>
-                <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
-      Inapoi la inceputul paginii &uarr;</a>
-              </center>                   
-              
+            
+              <div id="navigation" class="block">
+	              <?php if(function_exists('wp_paginate')) {
+                  wp_paginate();
+                } ?>
+              </div>              
             <?php } else {
               echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";
-            } ?>	
-        </div> 
-     
-     <?php } ?>   
+            } 
            
+           } else { 
+            
+            $allsearch = &new WP_Query("s=$s&showposts=-1");
+            if ($allsearch->have_posts()) { ?> 
+            
+              <div id="search-results" class="bestsellers">
+                <?php
+                $counter = 0;
+                while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts);
+                  if (advanced_search($post, $price, $categories)) {
+                    $medium = true;
+                    $show_category = true;
+                    include "product-thumb.php";
+                    $counter += 1;
+                  }
+                endwhile;
+                ?>
+              </div>
+              <div class="clear"></div>              
+           	<?php }
+           } ?>
+        <span id="search-count" class="hidden"><?php echo $counter; ?></span>           
+        </div>      
+     <?php } ?>
    </div>
   </div>  
   <?php get_sidebar(); ?>

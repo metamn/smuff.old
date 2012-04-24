@@ -122,6 +122,7 @@
         <?php comments_template('', true); ?>
       </div>
       
+      <!--
       <h3>Alte informatii</h3>
       <div class="pane normal">
         <ul>
@@ -134,6 +135,7 @@
           <?php edit_post_link('Modificare articol.', '<p>', '</p>'); ?>
         </ul>
       </div>
+      -->
     </div>
     
     <div id="post-shopping2" class="block">

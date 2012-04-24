@@ -3,8 +3,8 @@
 
 // Logging
 // --
-// global $wplogger;
-// $wplogger->log('message'.$value);
+global $wplogger;
+//$wplogger->log('message'.$value);
 
 
 
@@ -720,7 +720,7 @@ function advanced_search($post, $price, $categories) {
       $ret = true;
     }
   }  
-  return $ret;
+  return $ret;  
 }
 
 

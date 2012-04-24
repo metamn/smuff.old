@@ -82,6 +82,10 @@ body {
   background: #FDF3C6;
 }
 
+#navigation {
+  margin: 2em 0;
+}
+
 
 #headlines {
   margin: 0;
