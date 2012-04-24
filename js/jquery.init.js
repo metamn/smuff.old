@@ -25,7 +25,7 @@ $(document).ready(function() {
   
 
   // Adding search result count
-  $("#search-results-header #counter").html(
+  $("#search-counter").html(
     $("#search-count").html()
   );
   

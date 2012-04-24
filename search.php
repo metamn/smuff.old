@@ -14,13 +14,23 @@ get_header(); ?>
     $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);	
     $subs = explode("&", $params);
     
-    $tmp = explode("=", $subs[0]);
+    echo strpos($subs[0], 'page');
+    
+    // Eliminate pagination on nginx
+    $index = 0;
+    if (!(strpos($subs[0], 'page') === false)) {
+      $index +=1 ;
+    }
+    
+    $tmp = explode("=", $subs[$index]);
     $text = $tmp[1];
+    $index +=1;
     
-    $tmp = explode("=", $subs[1]);
+    $tmp = explode("=", $subs[$index]);
     $price = $tmp[1];
+    $index +=1;
     
-    $tmp = explode("=", $subs[2]);
+    $tmp = explode("=", $subs[$index]);
     $is_search = $tmp[1];
     
     $cats = "";
@@ -69,7 +79,7 @@ get_header(); ?>
               } ?>
             </td></tr> 
             <tr><td>Numar rezultate:</td>
-            <td><span id="counter">...</span></td></tr>           
+            <td><span id="search-counter">...</span></td></tr>           
           </table>
         </div>
         
@@ -122,7 +132,11 @@ get_header(); ?>
                 endwhile;
                 ?>
               </div>
-              <div class="clear"></div>              
+              <div class="clear"></div>	  
+              <h4 class="all-products-link">
+                <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
+                Inapoi la inceputul paginii &uarr;</a>
+              </h4>            
            	<?php }
            } ?>
         <span id="search-count" class="hidden"><?php echo $counter; ?></span>           

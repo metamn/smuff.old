@@ -723,6 +723,16 @@ function advanced_search($post, $price, $categories) {
   return $ret;  
 }
 
+// On search deal only with products
+function SearchFilter($query) {
+    if (!$query->is_admin && $query->is_search) {
+        $query->set('cat','10');
+    }
+    return $query;
+} 
+add_filter('pre_get_posts','SearchFilter');
+
+
 
 
 // Goodies
