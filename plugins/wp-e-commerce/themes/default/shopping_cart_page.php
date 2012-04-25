@@ -57,7 +57,7 @@
 		<tr class="product_row">
 			<td class="firstcol">
 			  <a href="<?php echo $link ?>">
-			    <img src='<?php echo wpsc_cart_item_image(48,48); ?>' alt='<?php echo wpsc_cart_item_name(); ?>' title='<?php echo wpsc_cart_item_name(); ?>' />
+			    <img src="<?php echo wpsc_cart_item_image(48,48); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" />
         </a>			   
 			</td>
 			<td class="productname firstcol">
@@ -71,7 +71,7 @@
 					<input type="submit" value="<?php echo __('Actualizare', 'wpsc'); ?>" name="submit" />
 				</form>
 			</td>
-			<!-->
+			<!--
 			<?php if(wpsc_uses_shipping()): ?>
 			<td><span class="pricedisplay" id='shipping_<?php echo wpsc_the_cart_item_key(); ?>'><?php echo wpsc_cart_item_shipping(); ?></span></td>
 			<?php endif; ?>
