@@ -179,19 +179,26 @@
   
   -->
   
+  <div id="announcement" class="block">
+    <h4>Am facut mici schimbari la designul siteului Smuff. 
+    <br/>
+    Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
+    Va multumim.</h4> 
+  </div>
+  
   <?php 
     $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
     if ($collections->have_posts()) { include "home-collections.php"; }
   ?>
   
-  <div id="from-category" class="more-products block">    
+  <div id="from-category" class="bestsellers block">    
     <?php 
       $tag = page_name(is_category(), is_single(), null);            
     ?>
      
-    <h3>Alte produse din categoria <?php echo $tag; ?></h3>
+    <h2>Alte produse din categoria <?php echo $tag; ?></h2>
     <?php 
-      $specials = query_posts2('posts_per_page=3&cat='.$cat);
+      $specials = query_posts2('posts_per_page=4&cat='.$cat);
       if ($specials) {
         if ($specials->have_posts()) {
           while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
@@ -213,14 +220,14 @@
     </h4>    
   </div>
     
-  <div id="recommended" class="more-products block">    
+  <div id="recommended" class="bestsellers block">    
      <?php
         $related_posts = MRP_get_related_posts($postid, true);
         if ($related_posts) { ?>        
-          <h3>Produse similare</h3>
+          <h2>Produse similare</h2>
           <?php foreach ($related_posts as $post) {
             setup_postdata($post);
-            $medium = false;
+            $medium = true;
             include "product-thumb.php";
           }
         } 
@@ -229,10 +236,10 @@
   
   
   
-  <div id="promos" class="more-products block">    
-    <h3>Promotii si oferte</h3>
+  <div id="promos" class="bestsellers block">    
+    <h2>Promotii si oferte</h2>
     <?php       
-      $specials = query_posts2('posts_per_page=3&cat=15&orderby=rand');
+      $specials = query_posts2('posts_per_page=4&cat=15&orderby=rand');
       if ($specials) {
         if ($specials->have_posts()) {
           while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
@@ -252,8 +259,8 @@
   </div>
   
   
-  <div id="random" class="more-products block">    
-    <h3>Din mixerul Smuff</h3>
+  <div id="random" class="bestsellers block">    
+    <h2>Din mixerul Smuff</h2>
     <?php       
       $specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');
       if ($specials) {

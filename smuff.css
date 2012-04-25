@@ -1337,7 +1337,11 @@ width:96%;
 
 #archive-all-grid .item, 
 #search-results .item,
-.after-sales .item {
+.after-sales .item,
+#random .item,
+#promos .item,
+#recommended .item,
+#from-category .item {
   width: 39.5%;
   margin-bottom: 10em;
   float: left;
