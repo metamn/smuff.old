@@ -60,8 +60,18 @@
       {lang: 'ro'}
     </script>
 
+
+    <!-- Init GA to be able to add custom variables -->
+		<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1587157-1']);
+      _gaq.push(['_trackPageview']);
+      
+      // The rest is in the footer and jquery.init.js 
+    </script>
+
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20120423"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20120503"></script>
 		
 		
 		
@@ -88,6 +98,9 @@
 		
 		
 		<?php wp_head(); ?>
+		
+		
+		
     
 	</head>
 	

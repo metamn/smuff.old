@@ -22,11 +22,9 @@
 <!-- GA for Ecommerce goes into transaction_result_functions.php -->
 <?php if (!(is_page(429))) { ?>
 <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1587157-1']);
-  _gaq.push(['_trackPageview']);
-
+  
+  // Init _gaq is in the header .......
+  
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
