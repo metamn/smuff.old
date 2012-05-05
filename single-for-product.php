@@ -57,17 +57,19 @@
       
       <div id="shopping-info" class="box"> 
         <ul>                
-          <li class="shopping-info">
+          <li id="tooltip-trigger" class="shopping-info">
             Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
           </li>
-          <div class="tooltip">
+          <div id="tooltip-content">
             <ul>
+              <li>Preturi corecte si accesibile</li>
               <li>Shopping simplu fara procedura de inregistrare</li>
               <li>Livrare se face acasa sau la birou</li>
               <li>Plata se face la livrare dupa verificarea produselor primite</li>
               <li>Returnare produs in 10 zile</li>
               <li>Garantie cel putin 1 an</li>
             </ul>
+            <span id="tooltip-close">X inchide</span>
           </div>
           <li><?php if (function_exists('wpfp_link')) { wpfp_link(); } ?></li>
         </ul>               
@@ -76,6 +78,12 @@
     </div>
   </div>
  
+  <div id="announcement" class="block">
+    <h4>Am facut mici schimbari la designul siteului Smuff. 
+    <br/>
+    Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
+    Va multumim.</h4> 
+  </div>
 
   <div class="entry">
     <div class="block">
@@ -117,7 +125,7 @@
     <div id="accordion" class="block">
       <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
         
-      <h3>Comentarii</h3>
+      <h3 id="comments">Comentarii</h3>
       <div class="pane normal">
         <?php comments_template('', true); ?>
       </div>
@@ -179,12 +187,7 @@
   
   -->
   
-  <div id="announcement" class="block">
-    <h4>Am facut mici schimbari la designul siteului Smuff. 
-    <br/>
-    Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-    Va multumim.</h4> 
-  </div>
+  
   
   <?php 
     $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );

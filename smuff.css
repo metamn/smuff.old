@@ -1051,23 +1051,34 @@ div.thanks-error {
 #shopping-info ul li.shopping-info {
   cursor: pointer;
 }
-#shopping-info .tooltip {
+#shopping-info #tooltip-content {
 	display: none;
 	background: #39A712;
-	height: 310px;
-	padding: 2.5em 2em 0 3em;
-	width: 310px;
 	color: white;
 	font-size: medium;
+	padding: 2.5em 2em 0 3em;
+	
+	height: 310px;
+	width: 310px;
+	position: absolute;
+	top: 12.5em;
+	left: 35em;
 }
-#shopping-info .tooltip ul {
+#shopping-info #tooltip-content ul {
   margin: 0;
   margin-left: 1em;
   list-style: square;
 }
-#shopping-info .tooltip ul li {
+#shopping-info #tooltip-content ul li {
   margin-bottom: .75em;
 }
+#shopping-info #tooltip-close {
+  margin-left: 8em;
+  font-size: smaller;
+  font-style: italic;
+  cursor: pointer;
+}
+
 #single div.entry {
   margin: 2em 0;
 }

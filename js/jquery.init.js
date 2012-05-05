@@ -321,7 +321,7 @@ $(document).ready(function() {
   
 
   // Removing "Opiniile Cumparatorilor" from Product page
-  $("#accordion h3:eq(3)").hide();
+  $("#accordion h3#comments").prev().prev().hide();
 
 
   // Click on side icons
@@ -474,9 +474,15 @@ $(document).ready(function() {
   });
   
   // jQuery Tools Tooltip
-  $("#shopping-info .shopping-info").tooltip({ effect: 'slide'});
+  // $("#shopping-info .shopping-info").tooltip({ effect: 'slide'});
 
+  $("#tooltip-trigger").click(function() {
+    $("#tooltip-content").slideToggle('slow');
+  });
   
+  $("#tooltip-close").click(function() {
+    $("#tooltip-content").hide('slow');
+  });
   
   // Sortable table
   // - on View all products
