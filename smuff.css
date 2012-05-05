@@ -267,7 +267,7 @@ table.productcart tr.subtotal td {
 }
 
 table.productcart input.coupon {
-  width: 10em;
+  width: 6.6em;
 }
 
 table.shipping td {
@@ -307,9 +307,11 @@ table.total td.c3 {
 }
 
 .adjustform input[type="text"] {
-  width: 94%;
+  width: 75%;
 }
-
+.adjustform .remove_button {
+  width: 100%;
+}
 
 .wpsc_checkout_forms #info {  
   margin: 1.5em 0 2em;  
@@ -1043,7 +1045,7 @@ div.thanks-error {
 
 #shopping-info ul {
   list-style-type: none;
-  margin: 0;
+  margin: 1.5em 0;
 }
 #shopping-info ul li {
   margin-bottom: 1em;
