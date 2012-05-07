@@ -466,11 +466,13 @@ $(document).ready(function() {
     function () {
       tooltip = $(this).attr('alt');
       $('#tooltips').html(tooltip);
-      $('#tooltips').addClass('tooltips-highlighted');
+      $('#main-name').addClass('hidehide');
+      $('#tooltips').addClass('tooltips-highlighted');      
     }, 
     function () {
       $('#tooltips').html('');
       $('#tooltips').removeClass('tooltips-highlighted');
+      $('#main-name').removeClass('hidehide');
   });
   
   // jQuery Tools Tooltip

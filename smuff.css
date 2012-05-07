@@ -62,15 +62,23 @@ body {
 }
 
 #tooltips {
-  margin: 0;  
-  padding: .2em;
+  margin: 0.5em 0 0;  
+  padding: .5em;
   position: absolute;
-  width: 700px;
-  font-size: 90%;
+  width: 300px;
+  left: 550px;
+  
+  font-size: larger;
+  font-style: italic;
+  background: #e6e2d9;
 }
 .tooltips-highlighted {
   background: #DFDBD0;  
 }
+#main-name.hidehide h1 {
+  color: #e6e2d9;
+}
+
 #tooltips a, #tooltips a:visited {
   background: #FDF3C6;
 }
