@@ -2,6 +2,22 @@ $(document).ready(function() {
 
   
   // Add Custom variables for Google Analytics
+  
+  // Sidebar icons to categories
+  $("#sidebar #home-tag-icons a").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Sidebar icons',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Sidebar icons'
+   ]);
+  });
+  
+  
   // The main nav menu
   $("#menu a").click(function() {    
     _gaq.push(['_setCustomVar',

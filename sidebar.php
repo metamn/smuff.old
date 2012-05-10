@@ -51,6 +51,7 @@
       <?php } else {
         //include "home-news.php";
         include "home-tags.php";
+        include "home-icons.php";
         //include "home-random.php";
         //include "home-campaign.php";
         //include "home-banners.php";
