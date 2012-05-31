@@ -15,8 +15,8 @@
   </p>
 </div>
 
-      
-    
+
+  
 
 
 <!-- GA for Ecommerce goes into transaction_result_functions.php -->

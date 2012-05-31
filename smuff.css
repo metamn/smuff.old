@@ -1132,9 +1132,6 @@ div.thanks-error {
 #single #post-operations table, #single #post-operations th, #single #post-operations td {
   vertical-align: top;
 }
-#single #post-operations table td {
-  width: 100px;
-}
 #single td.fblike {
   padding-top: 1.5em;
 }
@@ -1513,7 +1510,7 @@ input.search {
   padding: 0;
 }
 #sidebar #contact-info {
-  margin: 22em 0 6em;
+  margin: 8em 0;
 }
 #sidebar #no-shoutbox {
   margin: 0;

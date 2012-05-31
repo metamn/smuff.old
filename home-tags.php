@@ -1,7 +1,7 @@
 <div id="sidebar-navigation" class="box last">
   <div class="entry">
     <ul>
-      <?php wp_list_categories('title_li=&exclude=8,96,9,10,22'); ?>     
+      <?php wp_list_categories('title_li=&exclude=8,96,9,10,22, 714, 716, 715, 717, 711, 712, 713'); ?>     
     </ul>
   </div>
   <!--

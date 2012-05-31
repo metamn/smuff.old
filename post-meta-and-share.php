@@ -13,6 +13,7 @@
       <tr>          
         <td class="twitter opacity-3"><?php include "share-twitter.php" ?></td>
         <td class="facebook opacity-3"><?php include "share-facebook-like.php" ?></td>
+        <td class="facebook opacity-3"><?php include "share-facebook.php" ?></td>
         <td class="google google-share opacity-3"><g:plusone size="medium"></g:plusone></td>
       </tr>
     </table>

@@ -87,11 +87,13 @@
 
   <div class="entry">
     <div class="block">
-      <div id="post-operations" class="column span-12 last">                
+      <div id="post-operations" class="column span-18 last">                
         <table>
           <tr>          
             <td><?php include "share-twitter.php" ?></td>
             <td><?php include "share-facebook-like.php" ?></td>
+            <td><?php include "share-facebook.php" ?></td>
+            <td><?php include "share-pinterest.php" ?></td>
             <td><g:plusone size="medium"></g:plusone></td>
           </tr>
         </table>                     
@@ -288,6 +290,7 @@
   </div>  
   
   <div class='clearfix'></div>
+  
   
 </div>
 

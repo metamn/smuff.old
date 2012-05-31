@@ -528,7 +528,9 @@ function product_price($post_id) {
     global $wpdb;
     $price = $wpdb->get_var("SELECT `price` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
     return $price;
-  }  
+  } else {
+    return -1;
+  } 
 }
 
 

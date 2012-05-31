@@ -38,10 +38,23 @@ echo '<?xml version="1.0"?>';
     $img = $imgs[0];  
     $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
     $image = '';
+    
+    $product_id = product_id($post->ID);
+    $product_price = product_price($post->ID);
+    
     if ($thumb) {
       $image = '<img src="'.$thumb[0].'" />';
     }
-    $body = '<table valign="top"><tr><td>' . $image . '</td><td><div>' . product_excerpt($post->post_content) . '</div></td></tr></table>';
+    
+    $body = '<table valign="top"><tr><td style="padding: 1%">';
+    $body .= $image;
+    if ($product_price) {
+      $body .= '<p>' . $product_price .' RON</p>';
+    }
+    $body .= '</td><td><p>';
+    $body .= product_excerpt($post->post_content) . '</p>';
+    $body .= '</td></tr></table>';
+    
     //$body = '<div class="rss-item"><div class="image" style="float:left">' . $image . '</div><div class="description" style="padding: 0 1em;">' . product_excerpt($post->post_content) . '</div></div>';
   } else {
     $body = $post->post_content;
