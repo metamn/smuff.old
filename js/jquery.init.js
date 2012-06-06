@@ -1,248 +1,10 @@
 $(document).ready(function() { 
 
-  
-  // Add Custom variables for Google Analytics
-  
-  // Sidebar icons to categories
-  $("#sidebar #home-tag-icons a").click(function() {    
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Sidebar icons',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on Sidebar icons'
-   ]);
+  // Hide/show sidebar elements on Checkout page  
+  $(".page-coscumparaturi #sidebar #home-menu, .page-coscumparaturi #sidebar #searchform").click(function() {
+    $(this).attr('style', 'height:auto');  
   });
-  
-  
-  // The main nav menu
-  $("#menu a").click(function() {    
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Menu',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on Menu'
-   ]);
-  });
-
-  // Hot products
-  $("#hot-slider a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Hot',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on Hot products'
-   ]);
-  });
-  
-  // Hot products link  
-  $("a#new-products-link").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Hot products link',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on Hot products link'
-   ]);
-  });
-  
-  // Hot products, expanded with hot products link
-  $("#noutati a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Hot products expanded',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Expand hot products'
-   ]);
-  });
-  
-  // Bestsellers
-  $("#bestsellers a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Bestsellers',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on Bestsellers'
-   ]);
-  });  
-  
-  // Bestsellers > See more from category
-  $("#bestsellers a.all-products-link").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Bestsellers: See more from category link',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on See more from category link'
-   ]);
-  });
-  
-  // Promo
-  $("#promo a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Promo',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on Promo products'
-   ]);
-  });
-  
-  // Promo > See all promo link
-  $("#promo a.all-products-link").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Magazine view',
-      'Promo: See more promo link',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Magazine view', 
-      'Click on See more Promo products'
-   ]);
-  });
-  
-  
-  // Product page, small images click
-  $("#single-scroll img").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Click on small images',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on small images'
-   ]);
-  });
-  
-  // Product page, accordion
-  $("#single #accordion h3").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Click on accordion',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on accordion'
-   ]);
-  });
-  
-  // Product page, main shopping
-  $("#post-shopping").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Main shopping box click',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on main shopping box'
-   ]);
-  });
-  
-  // Product page, bottom shopping
-  $("#post-shopping2").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Secondary shopping box click',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on secondary shopping box'
-   ]);
-  });
-  
-  // Product page, other products 
-  $("#from-category a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Other products from category',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on Other products from category'
-   ]);
-  });
-  
-  // Product page, recommended 
-  $("#single #recommended a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Recommended products',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on Recommended products'
-   ]);
-  });
-  
-  // Product page, promos
-  $("#promos a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Promotions',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on Promo products'
-   ]);
-  });
-  
-  // Product page, random 
-  $("#random a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Product page',
-      'Random products',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Product Page', 
-      'Click on Random products'
-   ]);
-  });
-  
+    
   
   // Checkout page, recommended 
   $("page.checkout-final #recommended a").click(function() {
@@ -522,6 +284,249 @@ $(document).ready(function() {
       $(this).addClass('opacity-3');
   });
   
+
+  // Add Custom variables for Google Analytics
+  
+  // Sidebar icons to categories
+  $("#sidebar #home-tag-icons a").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Sidebar icons',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Sidebar icons'
+   ]);
+  });
+  
+  
+  // The main nav menu
+  $("#menu a").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Menu',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Menu'
+   ]);
+  });
+
+  // Hot products
+  $("#hot-slider a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Hot',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Hot products'
+   ]);
+  });
+  
+  // Hot products link  
+  $("a#new-products-link").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Hot products link',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Hot products link'
+   ]);
+  });
+  
+  // Hot products, expanded with hot products link
+  $("#noutati a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Hot products expanded',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Expand hot products'
+   ]);
+  });
+  
+  // Bestsellers
+  $("#bestsellers a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Bestsellers',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Bestsellers'
+   ]);
+  });  
+  
+  // Bestsellers > See more from category
+  $("#bestsellers a.all-products-link").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Bestsellers: See more from category link',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on See more from category link'
+   ]);
+  });
+  
+  // Promo
+  $("#promo a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Promo',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on Promo products'
+   ]);
+  });
+  
+  // Promo > See all promo link
+  $("#promo a.all-products-link").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Magazine view',
+      'Promo: See more promo link',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Magazine view', 
+      'Click on See more Promo products'
+   ]);
+  });
+  
+  
+  // Product page, small images click
+  $("#single-scroll img").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Click on small images',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on small images'
+   ]);
+  });
+  
+  // Product page, accordion
+  $("#single #accordion h3").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Click on accordion',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on accordion'
+   ]);
+  });
+  
+  // Product page, main shopping
+  $("#post-shopping").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Main shopping box click',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on main shopping box'
+   ]);
+  });
+  
+  // Product page, bottom shopping
+  $("#post-shopping2").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Secondary shopping box click',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on secondary shopping box'
+   ]);
+  });
+  
+  // Product page, other products 
+  $("#from-category a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Other products from category',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on Other products from category'
+   ]);
+  });
+  
+  // Product page, recommended 
+  $("#single #recommended a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Recommended products',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on Recommended products'
+   ]);
+  });
+  
+  // Product page, promos
+  $("#promos a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Promotions',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on Promo products'
+   ]);
+  });
+  
+  // Product page, random 
+  $("#random a").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Random products',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Click on Random products'
+   ]);
+  });
+
     
 }); 
 

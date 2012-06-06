@@ -32,12 +32,14 @@
       </div>
     </div>
     
+    <!--
     <div id="announcement" class="block">
       <h4>Am facut mici schimbari la designul siteului Smuff. 
       <br/>
       Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
       Va multumim.</h4> 
     </div>
+    -->
     
     <?php if ($cat == 10) { ?>
       <div id="navigation" class="block">

@@ -1533,6 +1533,16 @@ input.search {
 }
 
 
+
+.page-coscumparaturi #sidebar #home-menu,
+.page-coscumparaturi #sidebar #searchform {
+  height: 5em;
+  cursor: pointer;
+}
+.page-coscumparaturi #sidebar #home-menu {
+  height: 3.5em;
+}
+
 /* Home News + Sticky
 */
 

@@ -78,12 +78,14 @@
     </div>
   </div>
  
+  <!--
   <div id="announcement" class="block">
     <h4>Am facut mici schimbari la designul siteului Smuff. 
     <br/>
     Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
     Va multumim.</h4> 
   </div>
+  -->
 
   <div class="entry">
     <div class="block">

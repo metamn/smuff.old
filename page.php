@@ -9,10 +9,17 @@
   $randoms = query_posts2('posts_per_page=10&cat=10&orderby=rand');
   $klass = "checkout-final";
  } 
+ 
+ 
+ $page_name = wp_title('', false, '');
+ $to_replace = array(' ', '.', '_');
+ $page_name = str_replace($to_replace, '', $page_name);
+ $page_name = 'page-' . strtolower($page_name);
+ 
 
 get_header(); ?>
 
-<div id="page" class="block <?php echo $klass ?>">
+<div id="page" class="block <?php echo $page_name ?> <?php echo $klass ?>">
   <div id="content" class="column span-18">
 	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
