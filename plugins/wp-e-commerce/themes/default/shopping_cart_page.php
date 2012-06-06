@@ -309,32 +309,16 @@
   <div id="checkout" class="block">
   
     <div id="col" class="column span-7 append-1 last">
-      <div id="shopping-incentives">
-        <h4>Preturi accesibile</h4>
-        <p>
-          La Smuff toate preturile sunt corecte.  
-        </p>
-        
-        <h4>Shopping rapid</h4>
-        <p>
-          Fara procedura de inregistrare, numai cu un singur click.            
-        </p>
-        
-        <h4>Plata la livrare</h4>
-        <p>
-          Plata ramburs cand aveti deja produsul in mana.
-        </p>
-        
-        <h4>10 zile drept de retur</h4>
-        <p>
-          Fara interbari din partea noastra.
-        </p>
-        
-        <h4>Garantie minim 1 an</h4>
-        <p>
-          Service Express sau schimb cu un produs NOU.
-        </p>  
-      </div>	
+      
+      <div id="contact-info">
+        <center>
+          <h2>
+            Comenzi prin telefon
+            <br/>
+            0740-456127
+          </h2>          
+        </center>
+      </div>
       
       
       <div id="login">
@@ -393,7 +377,7 @@
 	  </div>
   
     <div id="form" class="column span-9 last">	    
-	    <h3 class="checkout">Shopping rapid</h3>
+	    <h2 class="checkout">Shopping rapid <br/>in 10 secunde</h2>
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
 			    <?php if(wpsc_is_shipping_details()) : ?>
@@ -416,6 +400,20 @@
 		                <p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
 			            <?php endif; ?>
 			            <?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_22") { ?>			              
+			                <br/><br/>              		
+                   		<p class="termeni">
+                   		Prin trimiterea comenzii va exprimati acordul cu 
+                      <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+                      </p>
+		
+		                  <input type='hidden' value='yes' name='agree' />	
+				              <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
+				               if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
+					              <input type='hidden' value='submit_checkout' name='wpsc_action' />
+					              <input type='submit' value='Trimitere comanda' name='submit' class='make_purchase' />
+				              <?php } ?>
+		
+			                <br/><br/>
 			                <br/><br/>
 			                <h4 class="note">Va rugam completati campurile de mai jos numai daca doriti factura pe firma.</h4>
 			                <br/>

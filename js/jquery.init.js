@@ -1,9 +1,5 @@
 $(document).ready(function() { 
 
-  // Hide/show sidebar elements on Checkout page  
-  $(".page-coscumparaturi #sidebar #home-menu, .page-coscumparaturi #sidebar #searchform").click(function() {
-    $(this).attr('style', 'height:auto');  
-  });
     
   
   // Checkout page, recommended 

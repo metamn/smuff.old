@@ -1534,13 +1534,28 @@ input.search {
 
 
 
-.page-coscumparaturi #sidebar #home-menu,
-.page-coscumparaturi #sidebar #searchform {
-  height: 5em;
-  cursor: pointer;
+.page-coscumparaturi #sidebar #shopping-incentives {
+  width: 230px;
+  height: auto;
+  padding: 1.5em;
+  margin-top: 7.5em;
 }
-.page-coscumparaturi #sidebar #home-menu {
-  height: 3.5em;
+
+.page-coscumparaturi #sidebar #shopping-incentives p {
+  width: 90%;  
+}
+
+.page-coscumparaturi #sidebar #shopping-incentives h4 {
+  font-size: large;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin-bottom: .5em;  
+}
+
+.page-coscumparaturi #sidebar #announcement {
+  background: none;
+  margin-top: 2.5em;
+  font-size: smaller;
 }
 
 /* Home News + Sticky
