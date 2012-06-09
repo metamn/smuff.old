@@ -518,6 +518,12 @@
 	  
 	  <div id="wishlist" class="column span-7 last">
 	    <h2>Adauga la wishlist</h2>
+	    
+	    
+	    <h2 id="survey">Sunteti satisfacuti cu cumparaturile pe Smuff?</h2>
+	    <div id="survey-body" class="hidden">
+	      <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFBPMWNiTlpXZUwxb0JrY1dFSWh6U1E6MQ" width="300" height="943" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	    </div>
 	  </div>
 	  
 	</div>  

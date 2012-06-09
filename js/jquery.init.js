@@ -1,7 +1,13 @@
 $(document).ready(function() { 
 
+
+  // Show Survey form on Checkout page
+  $(".page-coscumparaturi #wishlist #survey").click(function() {
+    $(".page-coscumparaturi #wishlist #survey-body").slideToggle();
+  });
   
-  // Show Pricing policy
+  
+  // Show Pricing policy on Chekout page
   $("#pricing-policy").click(function() {
     $("#pricing-policy-details").slideToggle();
   });
