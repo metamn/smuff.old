@@ -1,6 +1,14 @@
 $(document).ready(function() { 
 
   
+  // Show Pricing policy
+  $("#pricing-policy").click(function() {
+    $("#pricing-policy-details").slideToggle();
+  });
+  $("#pricing-policy-details #close").click(function() {
+    $("#pricing-policy-details").slideUp();
+  });
+  
 
   // Show shopping info on Product page on click, not just on hover
   $("#shopping-info .shopping-info").click(function() {

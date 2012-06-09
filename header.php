@@ -105,7 +105,7 @@
 	</head>
 	
 	
-	<body>
+	 <body <?php body_class(); ?>> 
 	  <div id="background-image-container"></div>			  	
 	  
 	  <div class="container"><!-- closed in the footer -->
@@ -162,9 +162,21 @@
 			    
 		    </div>		    
 		    
-	      <div id="cart" class="column span-6 last <?php echo $opacity ?>">
-	        <?php dynamic_shopping_cart(); ?>          
-	      </div>
+		    <?php if (is_page(430)) { ?>
+		      <div id="pricing-policy" class="column span-6 last">
+	          <h2>Politica de preturi</h2>
+	          <p>
+	            La Smuff practicam cele mai bune preturi.
+	          </p>
+	          <p>
+	            Click aici pentru informatii.
+	          </p>
+	        </div>
+		    <?php } else { ?>		    
+	        <div id="cart" class="column span-6 last <?php echo $opacity ?>">
+	          <?php dynamic_shopping_cart(); ?>          
+	        </div>
+	      <?php } ?>
 	    </div>  	
 	    
 <?php } //facebook header ?> 		

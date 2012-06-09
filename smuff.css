@@ -163,7 +163,7 @@ body {
 }
 
 
-#cart {
+#cart, #pricing-policy {
   background: #111;
   margin: 0;
   height: 13.5em;
@@ -195,6 +195,37 @@ div#widgetshoppingcart {
 #cart p {
   margin: 0 0 1em;
 }
+
+
+#pricing-policy {
+  background: #39A712;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+#pricing-policy h2 {
+  color: white;
+  padding: 1em 0 0;
+}
+#pricing-policy p {
+  padding: 0 2em;
+}
+
+#pricing-policy-details {
+  background: #39A712;
+  color: white;
+  
+  padding: 1em;
+  margin: 1em 0;
+  
+  font-size: larger;
+}
+#pricing-policy-details #close {
+  text-align: right;
+  font-style: italic;
+  cursor: pointer;
+}
+
 
 
 
@@ -282,10 +313,10 @@ table.shipping td.c3, table.shipping td.c4, table.shipping td.c5 {
   border-bottom: 1px solid #cac1b2;
 }
 table.shipping td.c1 {
-  width: 5.3em;
+  width: 12.7em;
 }
 table.shipping td.c2 {
-  width: 24.4%;
+  width: 10em;
 }
 table.shipping td.c3 {
   width: 29.5%;
@@ -312,7 +343,7 @@ table.total td.c3 {
 }
 
 .adjustform input[type="text"] {
-  width: 75%;
+  width: 25%;
 }
 .adjustform .remove_button {
   width: 100%;
@@ -395,7 +426,7 @@ table.total td.c3 {
 
 
 #checkout #login {
-  margin-top: 2em;  
+  margin-top: 25.5em;  
   width: 100%;  
 }
 #checkout #login button.make_purchase {

@@ -57,11 +57,13 @@
 		<tr class="product_row">
 			<td class="firstcol">
 			  <a href="<?php echo $link ?>">
-			    <img src="<?php echo wpsc_cart_item_image(48,48); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" />
+			    <img src="<?php echo wpsc_cart_item_image(128,128); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" />
         </a>			   
 			</td>
 			<td class="productname firstcol">
-			  <a href="<?php echo $link ?>"><?php echo wpsc_cart_item_name(); ?></a>
+			  <h4>
+			    <a href="<?php echo $link ?>"><?php echo wpsc_cart_item_name(); ?></a>
+			  </h4>
 			</td>
 			<td>
 				<form action="<?php echo get_option('shopping_cart_url'); ?>" method="post" class="adjustform">
@@ -76,7 +78,13 @@
 			<td><span class="pricedisplay" id='shipping_<?php echo wpsc_the_cart_item_key(); ?>'><?php echo wpsc_cart_item_shipping(); ?></span></td>
 			<?php endif; ?>
 			-->
-			<td><span class="pricedisplay"><?php echo wpsc_cart_item_price(); ?></span></td>
+			<td>
+			  <h4>
+			    <strong>
+			    <span class="pricedisplay"><?php echo wpsc_cart_item_price(); ?></span>
+			    </strong>
+			  </h4>
+			</td>
 			
 			<td>
 				<form action="<?php echo get_option('shopping_cart_url'); ?>" method="post" class="adjustform">
@@ -308,7 +316,7 @@
 	   
   <div id="checkout" class="block">
   
-    <div id="col" class="column span-7 append-1 last">
+    <div id="col" class="column span-7 append-1">
       
       <div id="contact-info">
         <center>
@@ -376,7 +384,7 @@
 	    </div>
 	  </div>
   
-    <div id="form" class="column span-9 last">	    
+    <div id="form" class="column span-7 append-1">	    
 	    <h2 class="checkout">Shopping rapid <br/>in 10 secunde</h2>
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
@@ -508,6 +516,9 @@
 	    </table>
 	  </div>
 	  
+	  <div id="wishlist" class="column span-7 last">
+	    <h2>Adauga la wishlist</h2>
+	  </div>
 	  
 	</div>  
 </form>
