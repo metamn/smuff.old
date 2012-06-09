@@ -16,7 +16,7 @@
   
   <h4>10 zile drept de retur</h4>
   <p>
-    Fara interbari din partea noastra.
+    Fara intrebari din partea noastra.
   </p>
   
   <h4>Garantie minim 1 an</h4>

@@ -93,12 +93,12 @@ get_header(); ?>
           
           <div id="newsletter" class="column subscribe span-7 last">
             <p>Doriti sa va notificam cand apar noi produse pe Smuff?</p>
-            <form style="text-align:left;" action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">	
-	            <input class="text" type="text" name="email" value="Adresa dvs. de e-mail" autocomplete="off"/>
-              <input type="hidden" value="http://feeds.feedburner.com/~e?ffid=585076" name="url"/>
-              <input type="hidden" value="smuff.ro" name="title"/>
-              <input class="button" type="submit" value="Inscriere la noutati" />
-	          </form>	          
+            <!-- Begin MailChimp Signup Form -->
+            <form action="http://smuff.us5.list-manage.com/subscribe/post?u=95ca3987b6e9b0c1d25211911&amp;id=4622c90106" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">	
+	            <input class="text" type="email" name="EMAIL"  value="" id="mce-EMAIL" placeholder="Adresa Dvs. de email" required>
+	            <br/>
+	            <input class="button" type="submit" value="Inscriere la newsletter" name="subscribe" id="mc-embedded-subscribe" >
+            </form>
           </div>
           
           <div id="feedback" class="column subscribe span-3 prepend-2 last">   

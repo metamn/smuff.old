@@ -4,7 +4,7 @@
   <ul>
     <li><a href="<?php echo $url ?>"><?php echo wpsc_cart_item_count() ?> produs(e)</a></li>
     <li><a href="<?php echo $url ?>"><?php echo wpsc_cart_total_widget(); ?></a></li>
-    <li><a href="<?php echo $url ?>">Finalizare comanda &rarr;</a></li>
+    <li id="checkout"><a href="<?php echo $url ?>">Finalizare comanda &rarr;</a></li>
   </ul>  
   <?php if(count($cart_messages) > 0) { ?>  
     <ul>

@@ -226,7 +226,7 @@
 	<tr>
 		<td class="c1"></td>
 		<td class="c2">
-		  <h4><strong>Total</strong></h4>
+		  <h4><strong>Total cu TVA</strong></h4>
 		</td>
 		<td class="c3">
 			<h4><strong><span id='checkout_total' class="pricedisplay checkout-total"><?php echo wpsc_cart_total(); ?></span></strong></h4>
@@ -257,7 +257,7 @@
     
     <div id="step-2" class="step column span-5 last">
       <span class="stepnr">2</span>
-      <span class="value">Trimitere comanda</span>
+      <span class="value">Trimite comanda</span>
     </div>
     <div class="column step-2 span-1 last arrow-vertical">
       <div class="arrow-right"></div>
@@ -410,7 +410,7 @@
 				              <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 				               if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 					              <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					              <input type='submit' value='Trimitere comanda' name='submit' class='make_purchase' />
+					              <input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
 				              <?php } ?>
 		
 			                <br/><br/>
@@ -420,6 +420,7 @@
 			            <?php } ?>
 		            </td>
 		            </tr>
+
 			      <?php endif; ?>		
 			    <?php endif; ?>		
 		    <?php endwhile; ?>		    
@@ -495,7 +496,7 @@
 				    <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 				     if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 					    <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					    <input type='submit' value='Trimitere comanda' name='submit' class='make_purchase' />
+					    <input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
 				    <?php }/* else: ?>
 				
 				    <br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />

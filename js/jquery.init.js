@@ -1,67 +1,5 @@
 $(document).ready(function() { 
 
-    
-  
-  // Checkout page, recommended 
-  $("page.checkout-final #recommended a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Checkout',
-      'Recommended products',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Checkout Page', 
-      'Click on Recommended products'
-   ]);
-  });
-  
-  
-  
-  // Sidebar categories link
-  $("#sidebar-navigation a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Sidebar',
-      'Categories',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Sidebar', 
-      'Click on sidebar categories'
-   ]);
-  });
-  
-  // Footer info
-  $("#footer-info a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Footer',
-      'Info',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Footer', 
-      'Click on footer info links'
-   ]);
-  });
-  
-  // Footer subscribe
-  $("#footer-subscribe a").click(function() {
-    _gaq.push(['_setCustomVar',
-      1,
-      'Footer',
-      'Subscribe',
-      3              
-   ]);
-   _gaq.push(['_trackEvent', 
-      'Footer', 
-      'Click on footer subscribe buttons'
-   ]);
-  });
-  
-  
-  
   
 
   // Show shopping info on Product page on click, not just on hover
@@ -281,6 +219,9 @@ $(document).ready(function() {
   });
   
 
+
+
+
   // Add Custom variables for Google Analytics
   
   // Sidebar icons to categories
@@ -453,6 +394,37 @@ $(document).ready(function() {
    ]);
   });
   
+  // Product page, main shopping, Add To Cart
+  $("#post-shopping .submit .wpsc_buy_button").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Main shopping box, Add To Cart',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Add To Cart',
+      'Main shopping box' 
+   ]);
+  });
+  
+  // Product page, main shopping, Checkout
+  $("#post-shopping .checkout .checkout-button").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Main shopping box, Checkout',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Checkout',
+      'Main shopping box'
+   ]);
+  });
+  
+  
   // Product page, bottom shopping
   $("#post-shopping2").click(function() {
     _gaq.push(['_setCustomVar',
@@ -466,6 +438,66 @@ $(document).ready(function() {
       'Click on secondary shopping box'
    ]);
   });
+  
+  // Product page, bottom shopping, Add To Cart
+  $("#post-shopping2 .submit .wpsc_buy_button").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Secondary shopping box, Add To Cart',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Add To Cart',
+      'Secondary shopping box'
+   ]);
+  });
+  
+  // Product page, bottom shopping, Checkout
+  $("#post-shopping2 .checkout .checkout-button").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product page',
+      'Secondary shopping box, Checkout',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Checkout',
+      'Secondary shopping box' 
+   ]);
+  });
+  
+  
+  // Every page, Cart in Header, Checkout
+  $("#cart #sliding_cart #checkout").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Header',
+      'Checkout',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Header', 
+      'Checkout'
+   ]);
+  });
+  
+  // Checkout Page, Make Purchase
+  $(".page-coscumparaturi .wpsc_checkout_forms input.make_purchase").click(function() {
+    _gaq.push(['_setCustomVar',
+      1,
+      'Checkout Page',
+      'Make Purchase',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Checkout Page', 
+      'Make Purchase'
+   ]);
+  });  
+  
   
   // Product page, other products 
   $("#from-category a").click(function() {

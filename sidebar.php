@@ -10,32 +10,7 @@
 <div id="sidebar" class="column span-6 last">        
     <?php if (is_page(430)) { ?>
     
-      <div id="shopping-incentives">
-        <h4>Preturi accesibile</h4>
-        <p>
-          La Smuff toate preturile sunt corecte.  
-        </p>
-        
-        <h4>Shopping rapid</h4>
-        <p>
-          Fara procedura de inregistrare, numai cu un singur click.            
-        </p>
-        
-        <h4>Plata la livrare</h4>
-        <p>
-          Plata ramburs cand aveti deja produsul in mana.
-        </p>
-        
-        <h4>10 zile drept de retur</h4>
-        <p>
-          Fara interbari din partea noastra.
-        </p>
-        
-        <h4>Garantie minim 1 an</h4>
-        <p>
-          Service Express sau schimb cu un produs NOU.
-        </p>  
-      </div>	
+      <?php include "shopping-incentives.php" ?>	
       <div class="clear"></div>
       
 	    <div id="announcement" class="block">
@@ -43,6 +18,24 @@
         <br/>
         Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
         Va multumim.</h4> 
+      </div>
+      
+      <div id="comments">
+        <?php 
+          $args = array(
+            "label_submit" => 'Trimite sugestii',
+            "logged_in_as" => '',
+            "title_reply" => '',
+            "comment_notes_after" => '',
+            "comment_notes_before" => '',
+            "fields" => array(
+              "author" => '<input id="author" name="author" type="hidden" value="checkout_suggestions"/>',
+              "email" => '<input id="email" name="email" type="hidden" value="checkout_suggestions@aaa.ro"/>'
+            ),
+            "comment_field" => '<br/><p class="comment-form-comment"><label for="comment">' . _x( 'Am sugestii despre cumparaturi pentru Smuff', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+          );
+          comment_form($args); 
+        ?>
       </div>
     
     <?php } else if (is_single()) { ?>
