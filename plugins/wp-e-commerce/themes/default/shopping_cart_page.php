@@ -45,14 +45,19 @@
 		<td>&nbsp;</td>
 	</tr>
 	
+	<?php 
+	  $wishlist = array();
+	?>
 	<?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>	
 	  <?php 
 	    // Getting the original post item for the product
 	    $product_id = wpsc_cart_item_product_id();
 	    $post_id = post_id($product_id);
+	    
 	    $stock = product_stock($product_id);
 	    if ($stock > 0) { $delivery = $stock; }
-	    $link = get_permalink($post_id);   
+	    $link = get_permalink($post_id);
+	    array_push($wishlist, $link . '?wpfpaction=add&postid=' . $post_id);   
 	  ?>		
 		<tr class="product_row">
 			<td class="firstcol">
@@ -518,7 +523,23 @@
 	  
 	  <div id="wishlist" class="column span-7 last">
 	    <h2>Adauga la wishlist</h2>
-	    
+	    <div id="wishlist-body">
+	      <?php 
+	        $favorite_post_ids = wpfp_get_users_favorites();	      
+	        if ($favorite_post_ids) { ?>
+	          Aveti <?php echo count($favorite_post_ids) ?> produs(e) in wishlist.
+	        <?php } 
+	      
+	        $post_ids = "";
+	        foreach ($wishlist as $post) {
+	          $post_ids .= $post .',';
+	        }
+	      ?>
+	        
+        <div id="add-to-wishlist">
+          <a href="<?php bloginfo('home') ?>/wishlist" rel="<?php echo $post_ids ?>">Adaug continutul cosului la wishlist</a>
+        </div>
+	    </div>
 	    
 	    <h2 id="survey">Sunteti satisfacuti cu cumparaturile pe Smuff?</h2>
 	    <div id="survey-body" class="hidden">

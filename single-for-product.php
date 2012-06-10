@@ -53,6 +53,10 @@
             echo wpsc_display_products_page('product_id='.$product_id);         
           }      
         ?>
+        
+        <div id="wishlist">
+          <?php if (function_exists('wpfp_link')) { wpfp_link(); } ?>
+        </div>
       </div>
       
       <div id="shopping-info" class="box"> 
@@ -70,8 +74,7 @@
               <li>Garantie cel putin 1 an</li>
             </ul>
             <span id="tooltip-close">X inchide</span>
-          </div>
-          <li><?php if (function_exists('wpfp_link')) { wpfp_link(); } ?></li>
+          </div>          
         </ul>               
       </div>      
        

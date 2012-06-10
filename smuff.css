@@ -1777,6 +1777,25 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
   width: auto;
 }
 
+#post-shopping #wishlist {
+  padding: 0 .5em;
+}
+#post-shopping #wishlist .wpfp-span {
+  padding: .5em;
+  border: 1px solid #f1f1f1;
+}
+#post-shopping #wishlist a, #post-shopping #wishlist a:visited {
+  color: white;
+}
+.wpfp-img {
+  margin-right: 5px;
+}
+.page-wishlist #description {
+  padding: 2em 0;
+}
+
+
+
 
 /* Authors & Common Blog Styles
 */

@@ -8,8 +8,7 @@
   On this page
   1. if visitor the wpfp_url is read from coookie
   2. if user the wpfp_url is created / read from user_meta
-  3. the wishlist is saved into wp_options under the wpfp_url key
-   
+  3. the wishlist is saved into wp_options under the wpfp_url key   
 
 */?>
 
@@ -22,6 +21,10 @@
   $id = $split[1];    
 ?>
 
+
+<div id="description" class="block">
+  La ce este bun wishlistul ........
+</div>
 
 <div id="wishlist">
   <?php 

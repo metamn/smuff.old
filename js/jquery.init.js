@@ -1,5 +1,16 @@
 $(document).ready(function() { 
 
+  // Add Cart contents to Wishlist
+  $("#wishlist #add-to-wishlist a").live('click', function() {
+    var posts = $(this).attr('rel').split(',');
+    posts.map( function(item) {
+     if (item != '') {      
+      $.get(item);
+     }
+    });    
+  });
+  
+    
 
   // Show Survey form on Checkout page
   $(".page-coscumparaturi #wishlist #survey").click(function() {
