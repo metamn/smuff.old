@@ -17,14 +17,15 @@
 
 <?php
   $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);
-  $split = explode("submit=", $params);
-  $id = $split[1];    
+  $split = explode("&", $params);
+  $split1 = explode("email=", $split[0]);
+  $email = $split1[1];
+  
+  $split2 = explode("id=", $split[1]);
+  $id = $split2[1]; 
 ?>
 
 
-<div id="description" class="block">
-  La ce este bun wishlistul ........
-</div>
 
 <div id="wishlist">
   <?php 
@@ -35,7 +36,8 @@
             echo "Wishlistul pentru $user nu este public.";
         endif;
     endif;
-  ?> 
+  ?>   
+  
   
   <?php if ($favorite_post_ids) { ?>
     <table id="archive-all-table" class="tablesorter">
@@ -101,12 +103,12 @@
       }
       
       // Saving the wishlist
-      if ($id) {        
-        if (update_option($id, $favorite_post_ids)) {
-          echo "<div class='notice'>Wishlist salvat cu success</div>";   
+      if ($email) {        
+        if (wp_mail("shop@smuff.ro", 'Wishlist nou', "id: $id" . "<br/>" . "email: $email")) {
+          echo "<div class='notice'>Wishlist salvat cu success</div>";     
         } else {
           echo "<div class='error'>Eroare la salvare Wishlist. Analizam aceasta problema, va rugam reveniti mai tarziu.</div>";
-        }
+        }       
       }
                  
       ?>
@@ -114,15 +116,16 @@
       <table class="share">
         <tr>
           <td colspan=3>
-            <h4>Impartasiti sau salvati lista Dumneavoastra.</h4> 
-            <p>
-              Cand ati terminat de ales si cules, apasati butonul <strong>Salveaza</strong>, 
-              si acesta va fi adresa unica a Listei de dorinte, adica a Wishlistului personal. 
-              Astfel data viitoare nu va trebui sa mai cautati pe site produsele dorite, veti avea deja lista personala. 
+            <h3>Impartasiti sau salvati lista Dumneavoastra.</h3> 
+            <h4>
+              Cu lista de dorinte, adica a Wishlistului personal 
+              data viitoare nu va trebui sa mai cautati pe site produsele dorite, veti avea deja in lista personala. 
               <br/>
+              <br/>
+              Prin salvarea listei de dorinte va putem contacta 
+              cand avem reduceri la produsele din lista Dumneavoastra.
               Totodata puteti afisa cu un click lista pe <strong>Facebook</strong> sau <strong>Twitter!</strong> 
-              Sau trimiteti lista (prin apasarea iconului Plic) prin <strong>email catre prieteni</strong> sau catre adresa Dvs. personala de email (o veti avea salvat cu siguranta).
-            </p>
+            </h4>
             <!--
             <p>        
               In momentul in care doriti sa cumparati produsele din Wishlist, veti avea totul la indemana, editati lista si apasati Cumpar acum!
@@ -130,13 +133,25 @@
             -->              
             <?php 
               $share_url = get_bloginfo('home') . "/wishlist/share/?id=" . $url;
-            ?>
-            <form action="<?php echo curPageURL2() ?>" method="get">
-              <input class="url" type="text" name="url" readonly="readonly" value="<?php echo $share_url ?>" />
-              <button type='submit' name='submit' value="<?php echo $url ?>" >Salvare</button>
-            </form>
+            
+              if ($email) { ?>
+                <h4>
+                  Adresa Dvs. de wishlist: 
+                  <strong>
+                    <a href="<?php echo $share_url ?>"><?php echo $share_url ?></a>
+                  <strong>
+                </h4>              
+              <?php } else { ?>              
+                <form action="<?php echo curPageURL2() ?>" method="get">
+                  <input class="url" type="email" name="email" value="" placeholder="Adresa Dvs. de email" />
+                  <input type="hidden" name="id" value="<?php echo $url ?>"/>
+                  <button type='submit' name='submit'>Salvare</button>
+                </form>                
+             <?php } ?>
           </td>          
         <tr>
+        
+        <?php if ($email) { ?>
         <tr>
           <td class="fb">
             <a name="fb_share" type="button" share_url="http://www.smuff.ro/wishlist/share/?id=wpfp4cc297bbeab13" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
@@ -158,13 +173,22 @@
             <a href="mailto:?subject=Wishlist-ul meu de pe Smuff&body=<?php echo $share_url ?>"><img class="icon" src="<?php bloginfo('stylesheet_directory'); ?>/img/mail.png" title="Trimitere prin email" alt="Trimitere prin email"</a>
           </td>
         </tr>
+        <?php } ?>
       </table>
       
       
     </div>
           
   <?php } else { ?>
-    <h4>Nu aveti nici un produs adaugat la wishlist</h4>
+    <h2>Nu aveti nici un produs adaugat la wishlist.</h2>
+    
+    <h4>Puteti adauga pe pagina produsului sau puteti salva tot
+    continutul cosului la finalizarea comenzii.</h4>
+    
+    <h4>
+      Cand produsele din wishlist-ul Dvs. sunt reduse va contactam prin email
+      pentru a notifica despre aceste ocazii speciale.
+    </h4>
   <?php } ?>  
  
 </div>

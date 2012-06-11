@@ -47,6 +47,7 @@
 	
 	<?php 
 	  $wishlist = array();
+	  $wishlist_title = array();
 	?>
 	<?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>	
 	  <?php 
@@ -55,9 +56,11 @@
 	    $post_id = post_id($product_id);
 	    
 	    $stock = product_stock($product_id);
-	    if ($stock > 0) { $delivery = $stock; }
+	    if ($stock > 0) { $delivery = $stock; }	   
+	    
 	    $link = get_permalink($post_id);
-	    array_push($wishlist, $link . '?wpfpaction=add&postid=' . $post_id);   
+	    array_push($wishlist, $link . '?wpfpaction=add&postid=' . $post_id);     
+	    array_push($wishlist_title, wpsc_cart_item_name());
 	  ?>		
 		<tr class="product_row">
 			<td class="firstcol">
@@ -251,66 +254,7 @@
 
 
   <?php do_action('wpsc_before_form_of_shopping_cart'); ?>	
-	<form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">	
-	   <?php 
-	   /**  
-	    * Both the registration forms and the checkout details forms must be in the same form element as they are submitted together, you cannot have two form elements submit together without the use of JavaScript.
-	   */
-	   ?>	   
-	
-	<!--
-	<div class="steps block">
-	  <div id="step-1" class="step column span-5 last">
-      <span class="stepnr">1</span>
-      <span class="value">Adresa de livrare</span>
-    </div>
-    <div class="column step-1 span-1 last arrow-vertical">
-      <div class="arrow-right"></div>
-    </div>
-    
-    <div id="step-2" class="step column span-5 last">
-      <span class="stepnr">2</span>
-      <span class="value">Trimite comanda</span>
-    </div>
-    <div class="column step-2 span-1 last arrow-vertical">
-      <div class="arrow-right"></div>
-    </div>
-    
-    <div id="step-3" class="step column span-5 last">
-      <span class="stepnr">3</span>
-      <span class="value">Primesc email si</span>
-      <span class="value v2">Smuff ma suna</span>
-    </div>
-    <div class="column step-3 span-1 last arrow-vertical">
-      <div class="arrow-right"></div>
-    </div>
-	</div>
-	
-	<div id="info" class="block">
-	  <div id="icon-1" class="icon column span-5 append-1 last">
-	    <?php 
-	      if ($delivery > 0) {
-	        $src = 'car';
-	      } else {
-	        $src = 'truck';
-	      }
-	    ?>
-	    <a class="lightbox" href="<?php bloginfo('stylesheet_directory')?>/livrare.html">
-	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/<?php echo $src ?>.jpg" width="150" /></a>
-	  </div>
-	  <div id="icon-2" class="icon column span-5 last">
-	    <a class="lightbox" href="<?php bloginfo('stylesheet_directory')?>/garantie.html">
-	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/garantie.jpg" width="150" /></a>
-	  </div>
-	  <div id="icon-3" class="icon column span-5 prepend-1 last">
-	    <a class="lightbox" href="<?php bloginfo('stylesheet_directory')?>/returnare.html">
-	      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/return.jpg" width="150" /></a>
-	  </div>
-	</div>
-	
-	-->
-	
-	<!--
+  <!--
 	<div id="announcement" class="block">
     <h4>Am facut mici schimbari la designul siteului Smuff. 
     <br/>
@@ -321,6 +265,13 @@
 	   
   <div id="checkout" class="block">
   
+    <form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">	
+     <?php 
+     /**  
+
+      * Both the registration forms and the checkout details forms must be in the same form element as they are submitted together, you cannot have two form elements submit together without the use of JavaScript.
+     */
+     ?>	 
     <div id="col" class="column span-7 append-1">
       
       <div id="contact-info">
@@ -520,6 +471,7 @@
 		    </tr>
 	    </table>
 	  </div>
+	  </form>
 	  
 	  <div id="wishlist" class="column span-7 last">
 	    <h2>Adauga la wishlist</h2>
@@ -530,14 +482,22 @@
 	          Aveti <?php echo count($favorite_post_ids) ?> produs(e) in wishlist.
 	        <?php } 
 	      
-	        $post_ids = "";
+	        $post_ids = "";	        
 	        foreach ($wishlist as $post) {
-	          $post_ids .= $post .',';
+	          $post_ids .= $post .',';	          
 	        }
-	      ?>
+          // the last item is not added to the cart ...
+          // ... so we always add a fake item to be the last	        
+	        $post_ids .= "http://localhost/smuff/2012/04/02/griffin-husa-de-supravietuire-pentru-iphone-44s-si-ipad-23/?wpfpaction=add&postid=4147,";	      
 	        
+	        $post_titles = "";	        
+	        foreach ($wishlist_title as $post) {
+	          $post_titles .= $post .'|';	          
+	        }
+	        $post_titles .= "Am completat wishlistul Dvs. cu success!|";
+	      ?>	        
         <div id="add-to-wishlist">
-          <a href="<?php bloginfo('home') ?>/wishlist" rel="<?php echo $post_ids ?>">Adaug continutul cosului la wishlist</a>
+          <a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">Adaug continutul cosului la Wishlist</a>
         </div>
 	    </div>
 	    
@@ -548,7 +508,6 @@
 	  </div>
 	  
 	</div>  
-</form>
 </div>
 <?php else: ?>  
   <h4>Cosul Dvs. este gol. Va rugam <a href="<?php bloginfo('home') ?>">vizitati magazinul nostru.</a></h4>	

@@ -3,15 +3,21 @@ $(document).ready(function() {
   // Add Cart contents to Wishlist
   $("#wishlist #add-to-wishlist a").live('click', function() {
     var posts = $(this).attr('rel').split(',');
-    posts.map( function(item) {
+    var titles = $(this).attr('rev').split('|');
+    var size = posts.length - 2;
+    posts.map( function(item, index) {
      if (item != '') {      
-      $.get(item);
+      var title = titles[index];
+      if (index < size) {
+        title += " este adaugat la wishlist";
+      }
+      alert(title);
+      $.get(item);      
      }
     });    
   });
   
-    
-
+  
   // Show Survey form on Checkout page
   $(".page-coscumparaturi #wishlist #survey").click(function() {
     $(".page-coscumparaturi #wishlist #survey-body").slideToggle();

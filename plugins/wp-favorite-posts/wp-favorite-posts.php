@@ -90,6 +90,7 @@ function wpfp_do_add_to_list($post_id) {
     }
 }
 
+
 function wpfp_remove_favorite($post_id = "") {
     $wpfp_options = wpfp_get_options();
     if (empty($post_id)) $post_id = $_REQUEST['postid'];
