@@ -5,6 +5,7 @@ $(document).ready(function() {
     var posts = $(this).attr('rel').split(',');
     var titles = $(this).attr('rev').split('|');
     var size = posts.length - 2;
+    
     posts.map( function(item, index) {
      if (item != '') {      
       var title = titles[index];

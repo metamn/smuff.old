@@ -93,24 +93,28 @@
           $current_user = wp_get_current_user();
           if ( !($current_user instanceof WP_User) ) return;
           
-          $url = get_user_meta($current_user->ID, 'wpfp_url', true);          
-          if (!($url)) {
-            $random = uniqid("wpfp", false);
-            update_user_meta($current_user->ID, 'wpfp_url', $random);
-            $url = $random;             
-          }
+          $url = get_user_meta($current_user->ID, 'wpfp_url', true); 
         }     
       }
+      if (!($url)) {
+        $random = uniqid("wpfp", false);
+        update_user_meta($current_user->ID, 'wpfp_url', $random);
+        $url = $random;             
+      }
+      
+      //echo "URL: $url";
       
       // Saving the wishlist
-      if ($email) {        
-        if (wp_mail("shop@smuff.ro", 'Wishlist nou', "id: $id" . "<br/>" . "email: $email")) {
+      if ($id) {
+        $update = update_option($id, $favorite_post_ids);
+        $email = wp_mail("shop@smuff.ro", 'Wishlist nou', "id: $id" . "<br/>" . "email: $email");
+        
+        if ($email && $update) {
           echo "<div class='notice'>Wishlist salvat cu success</div>";     
         } else {
-          echo "<div class='error'>Eroare la salvare Wishlist. Analizam aceasta problema, va rugam reveniti mai tarziu.</div>";
-        }       
-      }
-                 
+          echo "<div class='error'>Eroare salvare wishlist. Va rugam reveniti mai tarziu.</div>";        
+        }
+      }          
       ?>
       
       <table class="share">

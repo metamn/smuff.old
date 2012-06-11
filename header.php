@@ -173,7 +173,7 @@
 	          </p>
 	        </div>
 		    <?php } else { ?>		    
-	        <div id="cart" class="column span-6 last <?php echo $opacity ?>">
+	        <div id="cart" class="column span-6 last">
 	          <?php dynamic_shopping_cart(); ?>          
 	        </div>
 	      <?php } ?>
