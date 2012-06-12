@@ -11,8 +11,37 @@ get_header(); ?>
   
     
     <div id="pricing-policy-details" class="block hidden">
-      Describe here the pricing policy ........
-      <div id="close">[x] inchide</div>
+      
+      <h2>Politica de preturi Smuff</h2>
+      
+      <div class="col-1">
+        <ol>
+          <li>
+            <h4>
+            Noi suntem primii in Romania care va aduc cele mai noi gadgeturi si gizmouri 
+            premium din intreaga lume.
+            </h4>
+            <h4>
+            La aceste produse noi practicam preturi ca si cum vi le-ati cumpara direct din strainatate. 
+            In plus, la acelasi pret la noi primiti servicii impecabile &mdash; suport si garantie pe plan local.
+            </h4>
+          </li>
+          <li>
+            <h4>
+            Cu timpul unele produse de pe Smuff devin foarte populare &mdash;
+            tigara electronica, Parror IR Drone, tricourile elctronice etc &mdash; 
+            si sunt vandute de catre alte magazine din tara la preturi discount.
+            </h4>
+          </li>
+          <li>
+            <h4>
+            La acest capitol incercam sa tinem pasul prin reduceri.
+            Insa misiunea noastra ramane de a va aduce noutatiile la preturi accesibile
+            </h4>
+          </li>
+        </ol>
+      </div>
+      <div id="close" class="col-2">[x] inchide</div>
     </div>
   
 	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

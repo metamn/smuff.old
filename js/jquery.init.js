@@ -1,6 +1,7 @@
 $(document).ready(function() { 
 
   // Add Cart contents to Wishlist
+  // -- the ajax call works only if before there is an alert ...
   $("#wishlist #add-to-wishlist a").live('click', function() {
     var posts = $(this).attr('rel').split(',');
     var titles = $(this).attr('rev').split('|');
@@ -13,7 +14,7 @@ $(document).ready(function() {
         title += " este adaugat la wishlist";
       }
       alert(title);
-      $.get(item);      
+      $.get(item);
      }
     });    
   });

@@ -130,6 +130,12 @@
               cand avem reduceri la produsele din lista Dumneavoastra.
               Totodata puteti afisa cu un click lista pe <strong>Facebook</strong> sau <strong>Twitter!</strong> 
             </h4>
+            
+            <h4>
+              <strong>Important!</strong>
+              <br/>
+              La fiecare modificare lista de dorinte trebuie salvata din nou.
+            </h4>
             <!--
             <p>        
               In momentul in care doriti sa cumparati produsele din Wishlist, veti avea totul la indemana, editati lista si apasati Cumpar acum!
@@ -184,15 +190,17 @@
     </div>
           
   <?php } else { ?>
-    <h2>Nu aveti nici un produs adaugat la wishlist.</h2>
-    
-    <h4>Puteti adauga pe pagina produsului sau puteti salva tot
-    continutul cosului la finalizarea comenzii.</h4>
-    
-    <h4>
-      Cand produsele din wishlist-ul Dvs. sunt reduse va contactam prin email
-      pentru a notifica despre aceste ocazii speciale.
-    </h4>
+    <div class="box">
+      <h2>Nu aveti nici un produs adaugat la wishlist.</h2>
+      
+      <h4>Puteti adauga pe pagina produsului sau puteti salva tot
+      continutul cosului la finalizarea comenzii.</h4>
+      
+      <h4>
+        Cand produsele din wishlist-ul Dvs. sunt reduse va contactam prin email
+        pentru a notifica despre aceste ocazii speciale.
+      </h4>
+    </div>
   <?php } ?>  
  
 </div>

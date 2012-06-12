@@ -496,12 +496,17 @@
 	        }
 	        $post_titles .= "Am completat wishlistul Dvs. cu success!|";
 	      ?>	        
-        <div id="add-to-wishlist">
-          <a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">Adaug continutul cosului la Wishlist</a>
+        <div id="add-to-wishlist" class="block">          
+          <a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
+            <span id="text">Adaug continutul cosului la Wishlist</span>
+          </a>
         </div>
 	    </div>
 	    
-	    <h2 id="survey">Sunteti satisfacuti cu cumparaturile pe Smuff?</h2>
+	    <div class="box">
+	      <h2 id="survey">Sunteti satisfacuti cu cumparaturile pe Smuff? &rarr;</h2>
+	    </div>
 	    <div id="survey-body" class="hidden">
 	      <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFBPMWNiTlpXZUwxb0JrY1dFSWh6U1E6MQ" width="300" height="943" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 	    </div>

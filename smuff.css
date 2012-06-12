@@ -217,17 +217,41 @@ div#widgetshoppingcart {
   
   padding: 1em;
   margin: 1em 0;
-  
-  font-size: larger;
+}
+#pricing-policy-details h4, #pricing-policy-details h2 {
+  color: white;
 }
 #pricing-policy-details #close {
   text-align: right;
   font-style: italic;
   cursor: pointer;
 }
+#pricing-policy-details .col-1 {
+  width: 60%;
+  margin-right: 10%;
+  float: left;
+}
+#pricing-policy-details .col-2 {
+  width: 30%;
+  float: left;
+}
 
 .page-coscumparaturi #wishlist #survey {
   cursor: pointer;
+}
+.page-coscumparaturi #wishlist #add-to-wishlist {
+  margin-bottom: 20.5em;
+}
+.page-coscumparaturi #wishlist #add-to-wishlist img {
+  width: auto;
+  float: left;
+  margin-right: 1em;
+}
+.page-coscumparaturi #wishlist #add-to-wishlist #text {
+  width: 10em;
+  float: left;
+  position: relative;
+  top: 2em;
 }
 
 
