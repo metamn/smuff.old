@@ -40,7 +40,7 @@
 	
 <?php else: ?>
 	<ul class='emptycart'>
-	  <li><a href="<?php echo get_option('shopping_cart_url'); ?>">0 produse in cos</a></li>
+	  <li><a href="<?php echo get_option('shopping_cart_url'); ?>">0 cadouri in cos</a></li>
 	  <li id="wishlist"><a href="<?php bloginfo('home')?>/wishlist"><?php echo $wishlist ?><?php echo $wishlist_text ?> in wishlist &rarr;</a></li>
 	</ul>	
 <?php endif; ?>

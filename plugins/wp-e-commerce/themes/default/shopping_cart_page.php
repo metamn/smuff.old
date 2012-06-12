@@ -29,6 +29,13 @@
     endwhile;
 ?>
 
+<div id="announcement" class="block">
+  <h4>Am facut mici schimbari la designul siteului Smuff. 
+  <br/>
+  Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
+  Va multumim.</h4> 
+</div>
+
 
 <table class="productcart">
 	<tr class="firstrow">
@@ -124,6 +131,14 @@
 				</form>
 			</td>
 		</tr>
+		<tr class="coupon coupon-codes">
+		  <td>&nbsp;</td>
+		  <td colspan="4">
+		    Codurile de cupon cu reduceri se gasesc pe 
+		    <a target="_blank" href="http://www.facebook.com/smuffgadget">Facebook</a>
+		    si in <a target="_blank" href="http://eepurl.com/mjWSL">newsletter</a>.
+		  </td>
+		</td>
 	<?php endif; ?>	
 	
 	<!-- cant get cart total ...

@@ -22,7 +22,7 @@
   <div id="social" class="column span-12 last">
     Ne puteti urmarii si prin
     <br/>
-    <a href="http://www.facebook.com/pages/smuffro-magazin-gadget-gizmo/213629083432" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
+    <a href="http://www.facebook.com/smuffgadget" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
       <img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
     <!--
     <a href="http://gadgetoman.smuff.ro/" title="<?php echo $title ?> Tumblr" alt="<?php echo $title ?> Tumblr">
@@ -34,6 +34,8 @@
     <a target="_blank" href="http://www.youtube.com/user/smuffro" title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube">
       <img title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube" class="youtube" src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.png" /></a>
     -->
+    <a href="http://pinterest.com/baloghami/smuff-ro/" title="<?php echo $title ?> Pinterest" alt="<?php echo $title ?> Pinterest">
+      <img title="<?php echo $title ?> Pinterest" alt="<?php echo $title ?> Pinterest" src="<?php bloginfo('stylesheet_directory'); ?>/img/pinterest.png"></a>
     <a href="http://feeds.feedburner.com/smuff" title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS">
       <img title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS" src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
   </div>

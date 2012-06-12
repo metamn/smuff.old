@@ -11,11 +11,9 @@ get_header(); ?>
   <div id="content" class="column span-24 last">
   
     
-    <div id="pricing-policy-details" class="block hidden">
-      
-      <h2>Politica de preturi Smuff</h2>
-      
+    <div id="pricing-policy-details" class="block hidden">      
       <div class="col-1">
+        <h2>Politica de preturi Smuff</h2>
         <ol>
           <li>
             <h4>
@@ -41,6 +39,11 @@ get_header(); ?>
             </h4>
           </li>
         </ol>
+        
+        <h2>Costuri de livrare</h2>
+        <h4>Noi am ales preturi cat se poate de mici in magazinul Smuff.
+          Din acest motiv costurile de livrare nu pot fi incorporate in pretul produselor.
+        </h4>
       </div>
       <div id="close" class="col-2">[x] inchide</div>
     </div>

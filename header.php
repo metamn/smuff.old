@@ -109,17 +109,6 @@
 	  <div id="background-image-container"></div>			  	
 	  
 	  <div class="container"><!-- closed in the footer -->
-	  
-	    <?php if (is_page(430)) { ?>
-	    <div id="announcement" class="block">
-        <h4>Am facut mici schimbari la designul siteului Smuff. 
-        <br/>
-        Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-        Va multumim.</h4> 
-      </div>
-      <?php } ?>
-
-	    
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 
 	        <div id="tooltips" class="block">

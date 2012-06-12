@@ -330,8 +330,12 @@ table.productcart tr.subtotal td {
 }
 
 table.productcart input.coupon {
-  width: 6.6em;
+  width: 10em;
 }
+.coupon-codes td {
+  border-bottom: 1px solid #cac1b2;
+}
+
 
 table.shipping td {
   vertical-align: top;
