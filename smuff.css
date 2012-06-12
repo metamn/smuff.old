@@ -1803,6 +1803,8 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 
 #post-shopping #wishlist {
   padding: 0 .5em;
+  position: relative;
+  top: -1em;
 }
 #post-shopping #wishlist .wpfp-span {
   padding: .5em;
@@ -1814,8 +1816,12 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 .wpfp-img {
   margin-right: 5px;
 }
-
-
+.product_form select {
+  margin: 0;
+}
+.product_form .checkout td {
+  padding-top: 0;
+}
 
 
 
