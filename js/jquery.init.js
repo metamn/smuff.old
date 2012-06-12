@@ -257,6 +257,93 @@ $(document).ready(function() {
 
   // Add Custom variables for Google Analytics
   
+  // Click on Wishlist in Header
+  $("#cart #wishlist a").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Header',
+      'Go To Wishlist',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Header', 
+      'Go To Wishlist'
+   ]);
+  });
+  
+  // Add to Wishlist in Product Page
+  $("#post-shopping #wishlist a.wpfp-link").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product Page',
+      'Add To Wishlist',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Product Page', 
+      'Add To Wishlist'
+   ]);
+  });
+  
+  // Go to Wishlist in Product Page
+  $("#post-shopping #wishlist a").click(function() {    
+   if (!($(this).hasClass('wpfp-link'))) {   
+    _gaq.push(['_setCustomVar',
+      1,
+      'Product Page',
+      'Go To Wishlist',
+      3              
+     ]);
+     _gaq.push(['_trackEvent', 
+        'Product Page', 
+        'Go To Wishlist'
+     ]);
+   }
+  });
+  
+  // Add to Wishlist in Checkout Page
+  $("#checkout #add-to-wishlist a").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Checkout Page',
+      'Add To Wishlist',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Checkout Page', 
+      'Add To Wishlist'
+   ]);
+  });
+  
+  // Share and save wishlist
+  $(".page-wishlist button").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Wishlist Page',
+      'Save Wishlist',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Wishlist Page', 
+      'Save Wishlist'
+   ]);
+  });
+  
+  // Take survey on Checkout page
+  $(".page-coscumparaturi #survey").click(function() {    
+    _gaq.push(['_setCustomVar',
+      1,
+      'Checkout Page',
+      'Take Survey',
+      3              
+   ]);
+   _gaq.push(['_trackEvent', 
+      'Checkout Page', 
+      'Take Survey'
+   ]);
+  });
+  
+  
   // Sidebar icons to categories
   $("#sidebar #home-tag-icons a").click(function() {    
     _gaq.push(['_setCustomVar',
