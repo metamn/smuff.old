@@ -45,7 +45,7 @@
   
   // Query products
   $products = query_posts2(array(
-    'numberposts' => '-1',
+    'posts_per_page' => '-1',
     'category_and' => $cats
   ));
 

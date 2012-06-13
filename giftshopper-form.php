@@ -41,9 +41,9 @@
               <?php foreach ($childrens as $ch) { ?>
                 <li>
                   <?php if (in_array($c, $checkboxes)) { ?>
-                    <input type="checkbox" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" /> <?php echo $ch->name ?>
+                    <input type="checkbox" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" alt="<?php echo $ch->name ?>" /> <?php echo $ch->name ?>
                   <?php } else { ?>
-                    <input type="radio" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" /> <?php echo $ch->name ?>
+                    <input type="radio" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" alt="<?php echo $ch->name ?>" /> <?php echo $ch->name ?>
                   <?php } ?>                              
                 </li>
               <?php } ?>
@@ -58,10 +58,10 @@
       <?php $counter += 1; } ?>
       <div id="step-budget" class="step">
         <ul>
-          <li><input id="search-price" type="radio" name="price" value="0-100"/>< 100 RON</li>
-          <li><input id="search-price" type="radio" name="price" value="100-250" />100 - 250 RON</li>
-          <li><input id="search-price" type="radio" name="price" value="250-350" />250 - 350 RON</li>
-          <li><input id="search-price" type="radio" name="price" value="350" />Banii nu conteaza!</li>
+          <li><input id="search-price" type="radio" name="price" value="0-100" alt="< 100 RON"/>< 100 RON</li>
+          <li><input id="search-price" type="radio" name="price" value="100-250" alt="100 - 250 RON" />100 - 250 RON</li>
+          <li><input id="search-price" type="radio" name="price" value="250-350" alt="250 - 350 RON" />250 - 350 RON</li>
+          <li><input id="search-price" type="radio" name="price" value="350" alt="Banii nu conteaza!" />Banii nu conteaza!</li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -74,4 +74,23 @@
 
 <div id="profile" class="column span-5 prepend-1 last">
   <h3>Profil</h3>
+  <dl>
+    <?php 
+        $counter = 1;
+        foreach ($cats as $c) {  ?>          
+          <dt id="step-<?php echo $counter ?>">            
+            <?php 
+              if ($counter == 5 ) {
+                echo "Ce il face fericit?";
+              } else {
+                echo get_the_category_by_ID($c);
+              } ?>
+            <dd>&mdash;</dd>
+          </dt>
+        <?php
+        $counter += 1; 
+      } ?>
+    <dt id="step-budget">Buget</dt>
+    <dd>&mdash;</dd>
+  </dl>
 </div>  

@@ -8,19 +8,19 @@ $(document).ready(function() {
     $(this).parent().parent().removeClass('active');
     $(this).parent().parent().next().addClass('active');
     
-    // Highlight the current navigation items
+    // Highlight the current navigation item
     var id = $(this).parent().parent().next().attr('id');
     $(".giftshopper #form #nav li").removeClass('active');
-    $(".giftshopper #form #nav li#" + id).addClass('active');
+    $(".giftshopper #form #nav li#" + id).addClass('active');    
   });
   $(".giftshopper #steps #prev").click(function() {
     $(this).parent().parent().removeClass('active');
     $(this).parent().parent().prev().addClass('active');
     
-    // Highlight the current navigation items
+    // Highlight the current navigation item
     var id = $(this).parent().parent().prev().attr('id');
     $(".giftshopper #form #nav li").removeClass('active');
-    $(".giftshopper #form #nav li#" + id).addClass('active');
+    $(".giftshopper #form #nav li#" + id).addClass('active');    
   });
   
   
@@ -31,8 +31,30 @@ $(document).ready(function() {
       
     var id = $(this).attr('id');
     $(".giftshopper #steps .step").removeClass('active');
-    $(".giftshopper #steps #" + id).addClass('active');
+    $(".giftshopper #steps #" + id).addClass('active');    
   });
+  
+  // Update profile info based on form data  
+  $(".giftshopper #form input").click(function() {
+    var content = $(this).attr('alt'); 
+    var id = $(this).parent().parent().parent().attr('id');
+    
+    if ($(this).attr('checked')) {      
+      if ($(this).attr('type') == 'checkbox') {
+        content = $(".giftshopper #profile #" + id).next().html() + "<br/>" + content;
+      }
+      $(".giftshopper #profile #" + id).next().html(content);
+    } else {
+      if ($(this).attr('type') == 'checkbox') {
+        var old = $(".giftshopper #profile #" + id).next().html();
+        var neu = old.replace("<br>" + content, '');
+        $(".giftshopper #profile #" + id).next().html(neu);
+      }      
+    }
+  });
+  
+  
+  
 
 
   // Add Cart contents to Wishlist
