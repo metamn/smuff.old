@@ -22,6 +22,7 @@
     <form action="<?php echo curPageURL2() ?>" method="get">                                  
       <?php 
         $counter = 1;
+        $cats[] = 10;
         foreach ($cats as $c) {
           $childrens = get_categories("child_of=" . $c); ?>
           <div id="step-<?php echo $counter ?>">
@@ -38,6 +39,14 @@
             </ul>
           </div>
       <?php $counter += 1; } ?>
+      <div id="step-budget">
+        <ul>
+          <li><input id="search-price" type="radio" name="price" value="0-100"/>< 100 RON</li>
+          <li><input id="search-price" type="radio" name="price" value="100-250" />100 - 250 RON</li>
+          <li><input id="search-price" type="radio" name="price" value="250-350" />250 - 350 RON</li>
+          <li><input id="search-price" type="radio" name="price" value="350" />Banii nu conteaza!</li>
+        </ul>
+      </div>
     <button type='submit' name='submit'>Cautare cadouri</button>
     </form>
   </div>
