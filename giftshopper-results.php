@@ -61,6 +61,9 @@
       <?php }
     endwhile; 
   } else { ?>
-    <h3>Nu am gasit nici un rezultat</h3>
+    <div class="notice">
+        Nu am gasit nici un rezultat.
+        <a href="<?php bloginfo('home') ?>/gitftshopper/">Va rugam incercati din nou</a>.
+    </div>
   <?php } ?>
 </div>
