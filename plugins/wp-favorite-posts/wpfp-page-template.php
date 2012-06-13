@@ -17,11 +17,16 @@
 
 <?php
   $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);
+  
+  //echo "params: $params";
+  //$counter = 0; // Apache
+  $counter = 1; // Nginx
+  
   $split = explode("&", $params);
-  $split1 = explode("email=", $split[0]);
+  $split1 = explode("email=", $split[$counter]);
   $email = $split1[1];
   
-  $split2 = explode("id=", $split[1]);
+  $split2 = explode("id=", $split[$counter+1]);
   $id = $split2[1]; 
 ?>
 
@@ -102,14 +107,28 @@
         $url = $random;             
       }
       
-      //echo "URL: $url";
       
       // Saving the wishlist
       if ($id) {
         $update = update_option($id, $favorite_post_ids);
-        $email = wp_mail("shop@smuff.ro", 'Wishlist nou', "id: $id" . "<br/>" . "email: $email");
+        // Returns true if new items are added
+        // Returns false if the old list is updated without new items
+        // Returns false if the operation is unsuccessful
+        // ==> cannot be used to display status messages (notice, error)
         
-        if ($email && $update) {
+        $body = "";
+        $body .= "De la: " . str_replace("%40", "@", $email) . "\r\n";
+        $body .= "Wishlist URL: " . get_bloginfo('home') . "/wishlist/share/?id=$id\r\n";
+        $body .= "Produse: \r\n";
+        foreach ($favorite_post_ids as $post_id) {
+          $post = get_post($post_id);
+          setup_postdata($post);
+          $link = get_permalink($post_id);
+          $body .= " - " . $link . "\r\n";
+        }
+        $email = wp_mail("shop@smuff.ro", 'Wishlist nou', $body);
+        
+        if ($email) {
           echo "<div class='notice'>Wishlist salvat cu success</div>";     
         } else {
           echo "<div class='error'>Eroare salvare wishlist. Va rugam reveniti mai tarziu.</div>";        
@@ -120,15 +139,11 @@
       <table class="share">
         <tr>
           <td colspan=3>
-            <h3>Impartasiti sau salvati lista Dumneavoastra.</h3> 
-            <h4>
-              Cu lista de dorinte, adica a Wishlistului personal 
-              data viitoare nu va trebui sa mai cautati pe site produsele dorite, veti avea deja in lista personala. 
-              <br/>
-              <br/>
+            <h3>Salvati lista Dumneavoastra.</h3> 
+            <h4>              
               Prin salvarea listei de dorinte va putem contacta 
               cand avem reduceri la produsele din lista Dumneavoastra.
-              Totodata puteti afisa cu un click lista pe <strong>Facebook</strong> sau <strong>Twitter!</strong> 
+              Totodata puteti impartasi cu prietenii lista pe <strong>Facebook</strong> sau <strong>Twitter!</strong> 
             </h4>
             
             <h4>
