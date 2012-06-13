@@ -141,21 +141,13 @@
           <td colspan=3>
             <h3>Salvati lista Dumneavoastra.</h3> 
             <h4>              
-              Prin salvarea listei de dorinte va putem contacta 
-              cand avem reduceri la produsele din lista Dumneavoastra.
-              Totodata puteti impartasi cu prietenii lista pe <strong>Facebook</strong> sau <strong>Twitter!</strong> 
+              Cand faceti modificari la lista de produse dorite in viitor, va rugam sa o salvati. Astfel va vom trimite notificari daca produsele selectate intra in promotie.              
             </h4>
             
             <h4>
-              <strong>Important!</strong>
-              <br/>
-              La fiecare modificare lista de dorinte trebuie salvata din nou.
+              Totodata, acest Wishlist de gadgeturi si cadouri smuff se poate impartasi pe Facebook si Twitter! 
             </h4>
-            <!--
-            <p>        
-              In momentul in care doriti sa cumparati produsele din Wishlist, veti avea totul la indemana, editati lista si apasati Cumpar acum!
-            </p>
-            -->              
+                         
             <?php 
               $share_url = get_bloginfo('home') . "/wishlist/share/?id=" . $url;
             

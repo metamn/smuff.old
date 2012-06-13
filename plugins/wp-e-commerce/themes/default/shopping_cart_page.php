@@ -530,7 +530,7 @@
 	</div>  
 </div>
 <?php else: ?>  
-  <h4>Cosul Dvs. este gol. Va rugam <a href="<?php bloginfo('home') ?>">vizitati magazinul nostru.</a></h4>	
+  <h4>Cosul Tau este gol golut. <a href="<?php bloginfo('home') ?>">Aici te poti intoarce la cumparaturi.</a></h4>	
 <?php endif;
 do_action('wpsc_bottom_of_shopping_cart');
 ?>

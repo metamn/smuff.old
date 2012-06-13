@@ -66,12 +66,12 @@
           </li>
           <div id="tooltip-content">
             <ul>
-              <li>Preturi corecte si accesibile</li>
+              <li>Preturi corecte, servicii stabile si asistenta rapida.</li>
               <li>Shopping simplu fara procedura de inregistrare</li>
               <li>Livrare se face acasa sau la birou</li>
-              <li>Plata se face la livrare dupa verificarea produselor primite</li>
-              <li>Returnare produs in 10 zile</li>
-              <li>Garantie cel putin 1 an</li>
+              <li>Plata se face la livrare, ramburs, sau prin OP</li>
+              <li>Satisfactie sau returnare produs in 10 zile</li>
+              <li>Garantie tehnica cel putin 1 an</li>
             </ul>
             <span id="tooltip-close">X inchide</span>
           </div>          
