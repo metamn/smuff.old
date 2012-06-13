@@ -256,6 +256,37 @@ div#widgetshoppingcart {
 
 
 
+/* Giftshopper
+*/
+
+.giftshopper #nav {
+  margin-bottom: 2em;
+}
+
+.giftshopper #nav li {
+  cursor: pointer;
+}
+.giftshopper #nav li.active {
+  border: 1px solid;
+  cursor: normal;
+}
+
+.giftshopper #steps .step {
+  display: none;
+}
+.giftshopper #steps div.active {
+  display: inline-block;
+}
+.giftshopper #steps ul {
+  list-style: none;
+}
+.giftshopper #steps #move {
+  font-size: larger;
+  cursor: pointer;
+}
+
+
+
 /* Left side icons 
 */
 

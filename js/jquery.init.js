@@ -1,5 +1,40 @@
 $(document).ready(function() { 
 
+
+  // Giftshopper
+  // 
+  // Move steps
+  $(".giftshopper #steps #next").click(function() {
+    $(this).parent().parent().removeClass('active');
+    $(this).parent().parent().next().addClass('active');
+    
+    // Highlight the current navigation items
+    var id = $(this).parent().parent().next().attr('id');
+    $(".giftshopper #form #nav li").removeClass('active');
+    $(".giftshopper #form #nav li#" + id).addClass('active');
+  });
+  $(".giftshopper #steps #prev").click(function() {
+    $(this).parent().parent().removeClass('active');
+    $(this).parent().parent().prev().addClass('active');
+    
+    // Highlight the current navigation items
+    var id = $(this).parent().parent().prev().attr('id');
+    $(".giftshopper #form #nav li").removeClass('active');
+    $(".giftshopper #form #nav li#" + id).addClass('active');
+  });
+  
+  
+  // Click on breadcrumbs
+  $(".giftshopper #form #nav li").click(function() {
+    $(".giftshopper #form #nav li").removeClass('active');
+    $(this).addClass('active');
+      
+    var id = $(this).attr('id');
+    $(".giftshopper #steps .step").removeClass('active');
+    $(".giftshopper #steps #" + id).addClass('active');
+  });
+
+
   // Add Cart contents to Wishlist
   // -- the ajax call works only if before there is an alert ...
   $("#wishlist #add-to-wishlist a").live('click', function() {
