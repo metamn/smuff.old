@@ -53,6 +53,17 @@ $(document).ready(function() {
     }
   });
   
+  // Get list name
+  $(".giftshopper #form input#name").change(function() {
+    var nume = $(this).val();
+    if (nume != '') {
+      var neu = " pentru " + "<span class='highlight'>" + nume + "</span>";
+      $(".giftshopper #profile #name").html(neu);
+    }
+  });
+  
+  
+  
   
   
 

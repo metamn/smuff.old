@@ -284,6 +284,12 @@ div#widgetshoppingcart {
   font-size: larger;
   cursor: pointer;
 }
+.giftshopper #steps #name {
+  width: 41.5em;
+}
+.giftshopper #steps #name input {
+  width: 100%;
+}
 
 
 

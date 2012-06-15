@@ -20,7 +20,7 @@
         <span>></span>
       </li>
       <li id="step-budget">Buget</li>
-    </ul>            
+    </ul>     
   </div>
   
   <div id="steps">
@@ -37,6 +37,13 @@
         
           $childrens = get_categories("child_of=" . $c); ?>
           <div id="step-<?php echo $counter ?>" class="step <?php echo $klass; ?>">
+             
+            <?php if ($counter == 1 ) { ?>
+              <div id="name">
+                <input id="name" name="nume" type="text" value="" placeholder="Numele persoanei pentru care construiti cadoul perfect"/>
+              </div>
+            <?php } ?>
+            
             <ul>                  
               <?php foreach ($childrens as $ch) { ?>
                 <li>
@@ -48,6 +55,7 @@
                 </li>
               <?php } ?>
             </ul>
+            
             <ul id="move" class="inline-list">
               <?php if (!($counter == 1)) { ?>
                 <li id="prev">&larr;</li>
@@ -66,14 +74,14 @@
       </div>
       <div class="clear"></div>
       
-      <button type='submit' name='submit'>Cautare cadouri</button>
+      <button type='submit'>Cautare cadouri</button>
     </form>
   </div>
   
 </div>
 
 <div id="profile" class="column span-5 prepend-1 last">
-  <h3>Profil</h3>
+  <h3>Cadoul perfect <span id="name"></span></h3>
   <dl>
     <?php 
         $counter = 1;
