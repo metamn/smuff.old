@@ -182,6 +182,10 @@ function set_cookie($cookie, $value, $expire, $root) {
   setcookie($cookie, $value, $expire, $root);
 }
 
+function get_cookie($cookie) {
+  return $_COOKIE[$cookie];
+}
+
 
 // Email obfuscator 
 function obfuscate($email, $display_text) { 
