@@ -1,7 +1,6 @@
 <?php
 
-  // Query products
-  
+  // Query products  
   $products = query_posts2(array(
     'posts_per_page' => '10',
     'category_and' => $cats

@@ -61,6 +61,10 @@
   echo "<br/> button: $button"; 
   
   
+  // The categories upon the gift quiz is built
+  $steps = array(670, 686, 704, 726);
+  // Which categories are checkboxes?
+  $checkboxes = array(686, 726, 10);
  
 ?>
 
@@ -100,15 +104,20 @@
                 Aveti urmatoarele liste salvate: ...........
               </p>                                          
           </div>
-              <div class="block">                           
+              <div class="block">                                          
                 <?php 
-                  if ($nume == '') { 
-                    include 'giftshopper-form.php'; 
-                  } else {
-                    if ($button == 'dosearch') { 
-                      include 'giftshopper-results.php';
-                    } 
-                  } ?>
+                  if ($nume == '') { ?>
+                    <div id="form" class="column span-17"> 
+                      <?php include 'giftshopper-form.php'; ?>
+                    </div>
+                  <?php } elseif ($button == 'dosearch') { ?>
+                      <div id="results" class="column span-17"> 
+                        <?php include 'giftshopper-results.php'; ?>
+                      </div>
+                  <?php } ?>
+                  <div id="profile" class="column span-5 prepend-1 last">
+                    <?php include 'giftshopper-profile.php'; ?>
+                  </div>
               </div>
         <?php } ?>
         </form>        
