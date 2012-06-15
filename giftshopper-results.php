@@ -1,57 +1,12 @@
 <?php
 
-  //echo "params: $params";
-  $counter = 0; // Apache
-  //$counter = 1; // Nginx
-  
-  $split = explode("&", $params);
-  
-  $cats = array();
-  $price = "";
-  $name = "";
-  
-  // Get form values
-  foreach ($split as $s) {
-    $val = explode("=", $s);
-  
-    if ($val[0] == 'price') {
-      $price = $val[1];
-    } else if ($val[0] == 'nume') {
-      $name = $val[1];
-    } else {
-      $cats[] = $val[1];
-    }
-  }
-  
-  
-  // Split price
-  $lower = 0;
-  $higher = 10000;
-  if ($price) {
-    $tmp = explode('-', $price);
-    $lower = (int)$tmp[0];
-    if (!$tmp[1]) {
-      $tmp[1] = 10000;
-    }
-    $higher = (int)$tmp[1];    
-  }
-  
-  echo "<br/> name: $name";
-  echo "<br/> cats: ";
-  print_r($cats);
-  echo "<br/> price: $price";
-  echo "<br/> lower: $lower";
-  echo "<br/> higher: $higher";
-  
-  
-  
   // Query products
-  /*
+  
   $products = query_posts2(array(
-    'posts_per_page' => '100',
+    'posts_per_page' => '10',
     'category_and' => $cats
   ));
-  */
+  
 ?>
 
 <?php if (($name == '') || (empty($cats))) { ?> 
