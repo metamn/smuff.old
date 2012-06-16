@@ -78,21 +78,23 @@
           <?php the_content() ?>
         </div>        
         <form action="<?php echo curPageURL2() ?>" method="get">
-          <div class="box">
+          <?php if ($button == 'dosave') {
+              echo "saving the list ...";
+            } ?>
+          
+          <div class="box">            
             <?php if ($email == '') {
               $cookie = get_cookie("smuff_giftshopper");
               if ($cookie) {
                 echo "cookie: $cookie" . "<br/>";
-              } else { 
-                echo "no cookie" . "<br/>";
-                echo "ask for email or create new" . "<br/>"; ?>
+              } else { ?>
                 <h3>Ati salvat cumva mai demult o lista Giftshopper?</h3>
                 <p>
                   Introduceti adresa Dvs. de email pentru a cauta lista
                   in baza noastra de date.
                 </p> 
                 <input id="email" name="email" type="email" value="" placeholder="Adresa email"/>                
-                <button type='submit'>Cautare lista Giftshopper salvata</button>
+                <button type='submit'>Cautare lista Giftshopper salvata / Creare lista noua</button>
                 </form>
           </div>
               <?php }
@@ -106,7 +108,7 @@
           </div>
               <div class="block">                                          
                 <?php 
-                  if ($nume == '') { ?>
+                  if (($nume == '') && ($button != 'dosearch')) { ?>
                     <div id="form" class="column span-17"> 
                       <?php include 'giftshopper-form.php'; ?>
                     </div>

@@ -18,7 +18,7 @@
       Inapoi la <a href="<?php bloginfo('home')?>/giftshopper">Giftshopper</a>
     </p>
   </div>
-  
+  <?php include 'giftshopper-form.php'; ?>
 
 <?php } else { ?>
   <div id="products">
@@ -35,5 +35,9 @@
           <a href="<?php bloginfo('home') ?>/giftshopper/">Va rugam incercati din nou</a>.
       </div>
     <?php } ?>
+  </div>
+  
+  <div id="save">
+    <button type='submit' name="button" id="button" value="dosave">Salvare lista</button>
   </div>
 <?php } ?>
