@@ -60,7 +60,7 @@ function gsh_save($profile, $products) {
     echo "<br/> email: $email";
     echo "<br/> name: $nume";
     echo "<br/> cats: ";
-    print_r($cats);
+    print_r(serialize($cats));
     echo "<br/> price: $price";
     echo "<br/> lower: $lower";
     echo "<br/> higher: $higher";    
@@ -83,44 +83,28 @@ function gsh_save($profile, $products) {
 // - $cats, $products are arrays
 function gsh_save_db($email, $nume, $cats, $lower, $higher, $products) {
   global $wpdb;
-  
-  $prods = "";
-  foreach ($products as $p) {
-    $prods .= $p . ',';
-  }
-  
+  $wpdb->show_errors();
+    
   // Save profile  
   $wpdb->insert(
-    $wpdb->prefix . 'profiles',
+    $wpdb->prefix . 'giftshopper',
     array(
+      'email' => $email,
       'name' => $nume,
+      'categories' => serialize($cats),
       'budget_start' => $lower,
       'budget_end' => $higher,
-      'product_id' => $prods 
+      'products' => serialize($products) 
     )
-  );
-  $profile = $wpdb->insert_id;
+  );  
   
-  if ($profile == false) {
-    return false;
-  } else {
-    
-    // Save profile/list to user
-    $wpdb->insert(
-      $wpdb->prefix . 'giftshopper',
-      array(
-        'email' => $email,
-        'profile_id' => $profile 
-      )
-    );
-    return $wpdb->insert_id;  
-  }
+  //$wpdb->print_error();
+  return $wpdb->insert_id;  
 }
 
 
 // Get profiles of a user
 function gsh_get_profiles($email) {
-  echo "EMAIL:: $email";
   if ($email == '') {
     return false;
   } else {
@@ -129,7 +113,7 @@ function gsh_get_profiles($email) {
     //return $wpdb->get_row("SELECT * FROM `wp_cp53mf_giftshopper` WHERE `id`=2");
     
     return $wpdb->get_results( 
-	    "SELECT * FROM `wp_cp53mf_profiles` WHERE `id`=2"
+	    "SELECT * FROM `wp_cp53mf_giftshopper` WHERE `email`=" . $email
     );
   }
 }

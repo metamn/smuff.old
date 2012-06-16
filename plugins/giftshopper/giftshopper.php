@@ -26,30 +26,16 @@ function giftshopper_tables() {
   $table = $wpdb->prefix . "giftshopper";
   $sql = "CREATE TABLE $table (
       id INT(9) NOT NULL AUTO_INCREMENT,
-      email VARCHAR(80) NOT NULL,
-      profile_id VARCHAR(20) NOT NULL,
+      email VARCHAR(80) NOT NULL,      
+      name VARCHAR(80) NOT NULL,
+      categories VARCHAR(1200) NOT NULL,
+      budget_start INT(9),
+      budget_end INT(9),
+      products VARCHAR(1200),
       UNIQUE KEY id (id)
   );";
   
   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-  dbDelta($sql);
-  
-  // Profiles
-  $table = $wpdb->prefix . "profiles";
-  $sql = "CREATE TABLE $table (
-      id INT(9) NOT NULL AUTO_INCREMENT,
-      name VARCHAR(80) NOT NULL,
-      cine_id VARCHAR(20),
-      personalitate_id VARCHAR(20),
-      ocazie_id VARCHAR(20),
-      folosi_id VARCHAR(20),
-      fericit_id VARCHAR(20),
-      budget_start INT(9),
-      budget_end INT(9),
-      product_id VARCHAR(20),
-      UNIQUE KEY id (id)
-  );";
-  
   dbDelta($sql);
 }
 
@@ -65,23 +51,7 @@ function giftshopper_main_page() {
     <h2>Giftshopper</h2>
     
     <div id="giftshoppers">
-      <?php 
-        global $wpdb;
-        
-        $results = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix . "giftshopper");
-        if ($results) {
-          foreach($results as $result) { ?>
-            <div id="item">
-              <ul>
-                <li>User: <?php echo $result->email ?></li>
-                <li>Numar profile:</li> 
-              </ul>
-            </div>
-          <?php }
-        } else {
-          echo "<p>Nu avem inca giftshopperi ...</p>";
-        }
-      ?>
+      to be done ...
     </div>
   </div>
   

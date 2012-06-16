@@ -29,7 +29,7 @@
         if ($price >= $lower && $price <= $higher) { ?>
           <h3><?php 
             the_title(); 
-            $prods .= $post->ID . ',';
+            $prods .= $post->ID . '-';
           ?></h3>
         <?php }
       endwhile; 
@@ -42,7 +42,9 @@
   </div>
   
   <div id="save">
-    <input type="hidden" name="profile" value="<?php echo $params ?>" />
+    <input type="hidden" name="nume" value="<?php echo $nume ?>" />
+    <input type="hidden" name="cats" value="<?php echo $cats ?>" />
+    <input type="hidden" name="price" value="<?php echo $price ?>" />
     <input type="hidden" name="products" value="<?php echo $prods ?>" />
     <button type='submit' name="button" id="button" value="dosave">Salvare lista</button>
   </div>

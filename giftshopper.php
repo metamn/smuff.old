@@ -32,21 +32,23 @@
     $val = explode("=", $s);
 
     if ($val[0] == 'email') {
-      $email = $val[1];
+      $email = sanitize_email(str_replace("%40", "@", $val[1]));
     } else if ($val[0] == 'nume') {
-      $nume = $val[1];
+      $nume = sanitize_text_field($val[1]);
     } else if ($val[0] == 'price') {
-      $price = $val[1];
+      $price = sanitize_text_field($val[1]);
     } else if ($val[0] == 'button') {
-      $button = $val[1];
+      $button = sanitize_text_field($val[1]);
     } else if ($val[0] == 'profile') {
-      $profile = $val[1];
+      $profile = sanitize_text_field($val[1]);
     } else if ($val[0] == 'products') {
-      $products = $val[1];  
+      $products = sanitize_title($val[1]);  
     } else {
-      $cats[] = $val[1];
+      $cats[] = sanitize_title($val[1]);
     }
   }  
+  
+  $cats = implode("-", $cats);
 
   // Split price
   $lower = 0;
@@ -62,8 +64,7 @@
 
   echo "<br/> email: $email";
   echo "<br/> name: $nume";
-  echo "<br/> cats: ";
-  print_r($cats);
+  echo "<br/> cats: $cats";
   echo "<br/> price: $price";
   echo "<br/> lower: $lower";
   echo "<br/> higher: $higher";   

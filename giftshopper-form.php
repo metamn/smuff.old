@@ -25,7 +25,8 @@
 <div id="steps">    
   <?php 
     $counter = 1;
-    $cats[] = 10;
+    $cats2 = unserialize($cats);
+    $cats2[] = 10;
     foreach ($steps as $c) {
       if ($counter == 1) { 
         $klass = 'active';
