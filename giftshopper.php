@@ -16,11 +16,16 @@
 
   // We are expecting something like:
   // ?email=aaa@aaa.ro&nume=zolika&670=128&678=345&price=100-150&button=dosearch
+  // When saving a list we expect:
+  // ?email=aaa@aa.ro&profile=.....&products=id1,id2,&button=dosave
   $email = "";
   $nume = "";
   $cats = array();
   $price = ""; 
   $button = "";
+  
+  $profile = "";
+  $products = "";
 
   // Parse params
   foreach ($split as $s) {
@@ -34,6 +39,10 @@
       $price = $val[1];
     } else if ($val[0] == 'button') {
       $button = $val[1];
+    } else if ($val[0] == 'profile') {
+      $profile = $val[1];
+    } else if ($val[0] == 'products') {
+      $products = $val[1];  
     } else {
       $cats[] = $val[1];
     }
@@ -59,6 +68,8 @@
   echo "<br/> lower: $lower";
   echo "<br/> higher: $higher";   
   echo "<br/> button: $button"; 
+  echo "<br/> profile: $profile"; 
+  echo "<br/> products: $products"; 
   
   
   // The categories upon the gift quiz is built
@@ -78,8 +89,18 @@
           <?php the_content() ?>
         </div>        
         <form action="<?php echo curPageURL2() ?>" method="get">
+          
           <?php if ($button == 'dosave') {
-              echo "saving the list ...";
+              $save = gsh_save($profile, $products);
+              if ($save) { ?>
+                <div class="notice">
+                  Lista Dvs. a fost salvata cu success.
+                </div>
+              <?php } else { ?>
+                <div class="error">
+                  Nu am reusit sa salvam lista Dvs. Va cerem scuze, va rugam sa reveniti mai tarziu.
+                </div>
+              <?php }
             } ?>
           
           <div class="box">            
@@ -103,7 +124,15 @@
               
               <h3><?php echo $email ?></h3>
               <p>
-                Aveti urmatoarele liste salvate: ...........
+                <?php 
+                  $profiles = gsh_get_profiles($email);
+                  if ($profiles) {
+                    foreach ($profiles as $p) {
+                      echo $p->name . ',';
+                    }
+                  } else {
+                    echo "Nu aveti liste salvate ....";
+                  } ?>                
               </p>                                          
           </div>
               <div class="block">                                          

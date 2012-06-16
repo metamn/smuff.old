@@ -23,10 +23,14 @@
 <?php } else { ?>
   <div id="products">
     <?php if ($products) {
+      $prods = "";
       while ($products->have_posts()) : $products->the_post(); update_post_caches($posts); 
         $price = product_price($post->ID);                      
         if ($price >= $lower && $price <= $higher) { ?>
-          <h3><?php the_title(); ?></h3>
+          <h3><?php 
+            the_title(); 
+            $prods .= $post->ID . ',';
+          ?></h3>
         <?php }
       endwhile; 
     } else { ?>
@@ -38,6 +42,8 @@
   </div>
   
   <div id="save">
+    <input type="hidden" name="profile" value="<?php echo $params ?>" />
+    <input type="hidden" name="products" value="<?php echo $prods ?>" />
     <button type='submit' name="button" id="button" value="dosave">Salvare lista</button>
   </div>
 <?php } ?>
