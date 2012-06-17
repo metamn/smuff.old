@@ -6,6 +6,18 @@
     'category_and' => $cats
   ));
   
+  // Split price
+  $lower = 0;
+  $higher = 10000;
+  if ($price) {
+    $tmp = explode('-', $price);
+    $lower = (int)$tmp[0];
+    if (!$tmp[1]) {
+      $tmp[1] = 10000;
+    }
+    $higher = (int)$tmp[1];    
+  }
+  
 ?>
 
 <?php if (($name == '') || (empty($cats))) { ?> 
@@ -25,8 +37,8 @@
     <?php if ($products) {
       $prods = "";
       while ($products->have_posts()) : $products->the_post(); update_post_caches($posts); 
-        $price = product_price($post->ID);                      
-        if ($price >= $lower && $price <= $higher) { ?>
+        $pr = product_price($post->ID);                      
+        if ($pr >= $lower && $pr <= $higher) { ?>
           <h3><?php 
             the_title(); 
             $prods .= $post->ID . '-';

@@ -20,86 +20,31 @@ function get_tag_id_by_name($tag_name) {
 // Giftshopper
 //
 
-// Save a new list
-function gsh_save($profile, $products) {
-  if ( ($profile == '') || ($products == '') ) {
-    return false;
-  } else {
-    $split = explode("%26", $profile);
-    
-    $email = '';
-    $nume = '';
-    $price = '';
-    $cats = array();
-    
-    foreach ($split as $s) {
-      $val = explode("%3D", $s);    
-      if ($val[0] == 'email') {
-        $email = $val[1];
-      } else if ($val[0] == 'nume') {
-        $nume = $val[1];
-      } else if ($val[0] == 'price') {
-        $price = $val[1];  
-      } else {
-        $cats[] = $val[1];
-      }
-    } 
-    
-    // Split price
-    $lower = 0;
-    $higher = 10000;
-    if ($price) {
-      $tmp = explode('-', $price);
-      $lower = (int)$tmp[0];
-      if (!$tmp[1]) {
-        $tmp[1] = 10000;
-      }
-      $higher = (int)$tmp[1];    
-    }
-
-    echo "<br/> email: $email";
-    echo "<br/> name: $nume";
-    echo "<br/> cats: ";
-    print_r(serialize($cats));
-    echo "<br/> price: $price";
-    echo "<br/> lower: $lower";
-    echo "<br/> higher: $higher";    
-    
-    
-    $prods = explode("%2C", $products);
-    echo "<br/> prods: ";
-    print_r($prods);
-    
-    
-    if ( ($email == '') || ($nume == '') || (empty($cats)) || (empty($prods)) ) {
-      return false;
-    } else {      
-      return gsh_save_db($email, $nume, $cats, $lower, $higher, $prods);    
-    }
-  }
-}
-
 // Add a new list to the DB
 // - $cats, $products are arrays
-function gsh_save_db($email, $nume, $cats, $lower, $higher, $products) {
-  global $wpdb;
-  $wpdb->show_errors();
-    
-  // Save profile  
-  $wpdb->insert(
-    $wpdb->prefix . 'giftshopper',
-    array(
-      'email' => $email,
-      'name' => $nume,
-      'categories' => serialize($cats),
-      'budget_start' => $lower,
-      'budget_end' => $higher,
-      'products' => serialize($products) 
-    )
-  );  
+function gsh_save($email, $nume, $cats, $price, $products) {  
+  if ( ($email == '') || ($nume == '') || ($cats == '') || ($products == '') ) {
+    return false;
+  } else {
   
-  //$wpdb->print_error();
-  return $wpdb->insert_id;  
+    global $wpdb;
+    $wpdb->show_errors();
+      
+    // Save profile  
+    $wpdb->insert(
+      $wpdb->prefix . 'giftshopper',
+      array(
+        'email' => $email,
+        'name' => $nume,
+        'categories' => $cats,
+        'price' => $price,
+        'products' => $products 
+      )
+    );  
+    
+    //$wpdb->print_error();
+    return $wpdb->insert_id;  
+  }
 }
 
 
@@ -108,12 +53,9 @@ function gsh_get_profiles($email) {
   if ($email == '') {
     return false;
   } else {
-    global $wpdb;
-    //return $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "->giftshopper WHERE email = ". $email);
-    //return $wpdb->get_row("SELECT * FROM `wp_cp53mf_giftshopper` WHERE `id`=2");
-    
+    global $wpdb;    
     return $wpdb->get_results( 
-	    "SELECT * FROM `wp_cp53mf_giftshopper` WHERE `email`=" . $email
+	    "SELECT * FROM `wp_cp53mf_giftshopper` WHERE `email`='" . $email ."'"
     );
   }
 }

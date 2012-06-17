@@ -23,8 +23,6 @@
   $cats = array();
   $price = ""; 
   $button = "";
-  
-  $profile = "";
   $products = "";
 
   // Parse params
@@ -39,8 +37,6 @@
       $price = sanitize_text_field($val[1]);
     } else if ($val[0] == 'button') {
       $button = sanitize_text_field($val[1]);
-    } else if ($val[0] == 'profile') {
-      $profile = sanitize_text_field($val[1]);
     } else if ($val[0] == 'products') {
       $products = sanitize_title($val[1]);  
     } else {
@@ -50,18 +46,6 @@
   
   $cats = implode("-", $cats);
 
-  // Split price
-  $lower = 0;
-  $higher = 10000;
-  if ($price) {
-    $tmp = explode('-', $price);
-    $lower = (int)$tmp[0];
-    if (!$tmp[1]) {
-      $tmp[1] = 10000;
-    }
-    $higher = (int)$tmp[1];    
-  }
-
   echo "<br/> email: $email";
   echo "<br/> name: $nume";
   echo "<br/> cats: $cats";
@@ -69,7 +53,6 @@
   echo "<br/> lower: $lower";
   echo "<br/> higher: $higher";   
   echo "<br/> button: $button"; 
-  echo "<br/> profile: $profile"; 
   echo "<br/> products: $products"; 
   
   
@@ -92,7 +75,7 @@
         <form action="<?php echo curPageURL2() ?>" method="get">
           
           <?php if ($button == 'dosave') {
-              $save = gsh_save($profile, $products);
+              $save = gsh_save($email, $nume, $cats, $price, $products);
               if ($save) { ?>
                 <div class="notice">
                   Lista Dvs. a fost salvata cu success.

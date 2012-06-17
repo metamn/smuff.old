@@ -29,9 +29,8 @@ function giftshopper_tables() {
       email VARCHAR(80) NOT NULL,      
       name VARCHAR(80) NOT NULL,
       categories VARCHAR(1200) NOT NULL,
-      budget_start INT(9),
-      budget_end INT(9),
-      products VARCHAR(1200),
+      price VARCHAR(80),
+      products VARCHAR(1200) NOT NULL,
       UNIQUE KEY id (id)
   );";
   
