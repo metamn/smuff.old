@@ -48,14 +48,26 @@ function gsh_save($email, $nume, $cats, $price, $products) {
 }
 
 
-// Get profiles of a user
-function gsh_get_profiles($email) {
+// Get lists of a user
+function gsh_get_lists($email) {
   if ($email == '') {
     return false;
   } else {
     global $wpdb;    
     return $wpdb->get_results( 
 	    "SELECT * FROM `wp_cp53mf_giftshopper` WHERE `email`='" . $email ."'"
+    );
+  }
+}
+
+// Get a list of a user
+function gsh_get_list($email, $nume) {
+  if ( ($email == '') && ($nume == '') ) {
+    return false;
+  } else {
+    global $wpdb;    
+    return $wpdb->get_results( 
+	    "SELECT * FROM `wp_cp53mf_giftshopper` WHERE `email`='" . $email ."' AND `name`='" . $nume ."'"
     );
   }
 }

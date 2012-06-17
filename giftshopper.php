@@ -16,8 +16,6 @@
 
   // We are expecting something like:
   // ?email=aaa@aaa.ro&nume=zolika&670=128&678=345&price=100-150&button=dosearch
-  // When saving a list we expect:
-  // ?email=aaa@aa.ro&profile=.....&products=id1,id2,&button=dosave
   $email = "";
   $nume = "";
   $cats = array();
@@ -109,11 +107,11 @@
               <h3><?php echo $email ?></h3>
               <p>
                 <?php 
-                  $profiles = gsh_get_profiles($email);
-                  if ($profiles) {
-                    foreach ($profiles as $p) {
-                      echo $p->name . ',';
-                    }
+                  $lists = gsh_get_lists($email);
+                  if ($lists) {
+                    foreach ($lists as $l) { ?>
+                      <a href="<?php bloginfo('home')?>/giftshopper/?email=<?php echo $l->email ?>&nume=<?php echo $l->name ?>"><?php echo $l->name ?></a>, 
+                    <?php }
                   } else {
                     echo "Nu aveti liste salvate ....";
                   } ?>                
@@ -121,7 +119,7 @@
           </div>
               <div class="block">                                          
                 <?php 
-                  if (($nume == '') && ($button != 'dosearch')) { ?>
+                  if ($button != 'dosearch') { ?>
                     <div id="form" class="column span-17"> 
                       <?php include 'giftshopper-form.php'; ?>
                     </div>

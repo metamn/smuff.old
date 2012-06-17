@@ -1,3 +1,13 @@
+<?php 
+  if ($nume !== '') {
+    $list = gsh_get_list($email, $nume);
+    if ($list) {
+      $profile = $list[0];
+      $categories = explode('-', $profile->categories);
+    }
+  }
+?>
+
 <div id="nav">
   <ul class="inline-list">
     <?php 
@@ -25,8 +35,7 @@
 <div id="steps">    
   <?php 
     $counter = 1;
-    $cats2 = unserialize($cats);
-    $cats2[] = 10;
+    $steps[] = 10;
     foreach ($steps as $c) {
       if ($counter == 1) { 
         $klass = 'active';
@@ -39,17 +48,33 @@
          
         <?php if ($counter == 1 ) { ?>
           <div id="name">
-            <input id="name" name="nume" type="text" value="" placeholder="Numele persoanei pentru care construiti cadoul perfect"/>
+          
+            <?php if ($profile) { 
+              $val = $profile->name;
+              $place = $val; 
+            } else {
+              $val = '';
+              $place = "Numele persoanei pentru care construiti cadoul perfect";
+            } ?>
+          
+            <input id="name" name="nume" type="text" value="<?php echo $val ?>" placeholder="<?php echo $place ?>"/>
           </div>
         <?php } ?>
         
         <ul>                  
-          <?php foreach ($childrens as $ch) { ?>
+          <?php foreach ($childrens as $ch) { 
+            $checked = '';
+            if ($profile) {
+              if (in_array($ch->term_id, $categories)) {
+                $checked = 'checked';
+              }
+            }          
+          ?>
             <li>
               <?php if (in_array($c, $checkboxes)) { ?>
-                <input type="checkbox" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" alt="<?php echo $ch->name ?>" /> <?php echo $ch->name ?>
+                <input <?php echo $checked ?> type="checkbox" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" alt="<?php echo $ch->name ?>" /> <?php echo $ch->name ?>
               <?php } else { ?>
-                <input type="radio" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" alt="<?php echo $ch->name ?>" /> <?php echo $ch->name ?>
+                <input <?php echo $checked ?> type="radio" name="<?php echo $c ?>" value="<?php echo $ch->term_id ?>" alt="<?php echo $ch->name ?>" /> <?php echo $ch->name ?>
               <?php } ?>                              
             </li>
           <?php } ?>
@@ -65,10 +90,17 @@
   <?php $counter += 1; } ?>
   <div id="step-budget" class="step">
     <ul>
-      <li><input id="search-price" type="radio" name="price" value="0-100" alt="< 100 RON"/>< 100 RON</li>
-      <li><input id="search-price" type="radio" name="price" value="100-250" alt="100 - 250 RON" />100 - 250 RON</li>
-      <li><input id="search-price" type="radio" name="price" value="250-350" alt="250 - 350 RON" />250 - 350 RON</li>
-      <li><input id="search-price" type="radio" name="price" value="350" alt="Banii nu conteaza!" />Banii nu conteaza!</li>
+      <?php 
+        $prices = array("0-100", "100-250", "250-350", "350");
+        foreach ($prices as $p) { 
+          $checked = '';
+          if ($profile) {
+            if ($p == $profile->price) {
+              $checked = "checked";
+            }
+          } ?>
+          <li><input id="search-price" type="radio" name="price" value="<?php echo $p ?>" <?php echo $checked ?> alt="<?php echo $p ?>"/><?php echo $p ?></li>
+        <?php }       ?>
     </ul>
   </div>
   <div class="clear"></div>
