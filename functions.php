@@ -31,6 +31,7 @@ function gsh_save($email, $nume, $cats, $price, $products) {
     $wpdb->show_errors();
       
     // Save profile  
+    /*
     $wpdb->insert(
       $wpdb->prefix . 'giftshopper',
       array(
@@ -44,6 +45,17 @@ function gsh_save($email, $nume, $cats, $price, $products) {
     
     //$wpdb->print_error();
     return $wpdb->insert_id;  
+    */
+    
+    return $wpdb->query( 
+      $wpdb->prepare( 
+	    "
+		    INSERT INTO wp_cp53mf_giftshopper
+		    (email, name, categories, price, products)
+		    VALUES (%s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE categories=VALUES(categories), price=VALUES(price), products=VALUES(products)
+	    ", array($email, $nume, $cats, $price, $products)
+	    )
+	  );
   }
 }
 

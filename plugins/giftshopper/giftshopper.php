@@ -31,7 +31,8 @@ function giftshopper_tables() {
       categories VARCHAR(1200) NOT NULL,
       price VARCHAR(80),
       products VARCHAR(1200) NOT NULL,
-      UNIQUE KEY id (id)
+      PRIMARY KEY(id),
+      UNIQUE KEY name_email (email, name)
   );";
   
   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');

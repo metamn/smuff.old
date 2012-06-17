@@ -1,13 +1,16 @@
-<?php
-  
-  $name = '';
+<?php  
   if ($profile) {
-    $name = "pentru <span class='highlight'>$profile->name</span>";
+    $list_name = "pentru <span class='highlight'>$profile->name</span>";
+    $pret = $profile->price;
+  } else {
+    $list_name = "pentru <span class='highlight'>$nume</span>";
+    $categories = explode("-", $cats);
+    $pret = $price;
   }
 
 ?>
 
-<h3>Cadoul perfect <span id="name"><?php echo $name?></span></h3>
+<h3>Cadoul perfect <span id="name"><?php echo $list_name?></span></h3>
 <dl>
   <?php 
       $counter = 1;
@@ -46,8 +49,8 @@
     } ?>
   <dt id="step-budget">Buget</dt>
   <dd>
-    <?php if ($profile->price) {
-      echo $profile->price;
+    <?php if ($pret) {
+      echo $pret;
     } else {
       echo "---";
     } ?>
