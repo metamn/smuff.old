@@ -297,7 +297,14 @@ div#widgetshoppingcart {
 }
 
 .giftshopper #products .product-thumb {
-  margin-bottom: 5em;
+  margin-bottom: 10em;
+  width: 42%;
+  margin-right: 5%;
+  float: left;
+}
+.giftshopper #products .product-thumb a,
+.giftshopper #products .product-thumb a:visited {
+  text-decoration: none !important;
 }
 
 

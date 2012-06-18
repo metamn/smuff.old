@@ -136,6 +136,17 @@
                   <?php } ?>
                   <div id="profile" class="column span-6 prepend-1 last">
                     <?php include 'giftshopper-profile.php'; ?>
+                    <?php if ($button == 'dosearch') { ?>
+                      <div id="save">
+                        <input type="hidden" name="nume" value="<?php echo $nume ?>" />
+                        <input type="hidden" name="cats" value="<?php echo $cats ?>" />
+                        <input type="hidden" name="price" value="<?php echo $price ?>" />
+                        <input type="hidden" name="products" value="<?php echo $prods ?>" />
+                        <button type='submit' name="button" id="button" value="dosave">Salvare lista</button>
+                        <br/>
+                        <button type='submit'>Modificare lista</button>
+                      </div>
+                    <?php } ?>
                   </div>
               </div>
         <?php } ?>

@@ -1,8 +1,8 @@
 <?php
 
-  // Query products  
+  // Query products
   $products = query_posts2(array(
-    'posts_per_page' => '200',
+    'posts_per_page' => '20',
     'category_and' => $cats
   ));
   
@@ -41,7 +41,7 @@
   <?php include 'giftshopper-form.php'; ?>
 
 <?php } else { ?>
-  <div id="products">
+  <div id="products" class="bestsellers">
     <?php if ($products) {
       $prods = "";
       while ($products->have_posts()) : $products->the_post(); update_post_caches($posts); 

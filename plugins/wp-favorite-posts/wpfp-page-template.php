@@ -24,10 +24,10 @@
   
   $split = explode("&", $params);
   $split1 = explode("email=", $split[$counter]);
-  $email = $split1[1];
+  $email = sanitize_email(str_replace("%40", "@", $split1[1]));;
   
   $split2 = explode("id=", $split[$counter+1]);
-  $id = $split2[1]; 
+  $id = sanitize_text_field($split2[1]); 
 ?>
 
 
@@ -110,28 +110,48 @@
       
       // Saving the wishlist
       if ($id) {
-        $update = update_option($id, $favorite_post_ids);
-        // Returns true if new items are added
-        // Returns false if the old list is updated without new items
-        // Returns false if the operation is unsuccessful
-        // ==> cannot be used to display status messages (notice, error)
         
-        $body = "";
-        $body .= "De la: " . str_replace("%40", "@", $email) . "\r\n";
-        $body .= "Wishlist URL: " . get_bloginfo('home') . "/wishlist/share/?id=$id\r\n";
-        $body .= "Produse: \r\n";
-        foreach ($favorite_post_ids as $post_id) {
-          $post = get_post($post_id);
-          setup_postdata($post);
-          $link = get_permalink($post_id);
-          $body .= " - " . $link . "\r\n";
-        }
-        $email = wp_mail("shop@smuff.ro", 'Wishlist nou', $body);
-        
-        if ($email) {
-          echo "<div class='notice'>Wishlist salvat cu success</div>";     
-        } else {
-          echo "<div class='error'>Eroare salvare wishlist. Va rugam reveniti mai tarziu.</div>";        
+        if (function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) { ?>
+          <div class='error'>Va rugam completati codul de verificare.</div>
+          <p>
+          <form action="<?php echo curPageURL2() ?>" method="get">
+            <input class="url" type="email" name="email" value="" placeholder="Adresa Dvs. de email" />
+            <input type="hidden" name="id" value="<?php echo $url ?>"/>                  
+            <button type='submit' name='submit'>Salvare</button>
+            <br/>
+            <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { 
+              echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />";
+              echo cptch_display_captcha_custom(); 
+            } ?>
+          </form>
+          </p>
+          <br/>          
+        <?php } else {        
+          $update = update_option($id, $favorite_post_ids);
+          // Returns true if new items are added
+          // Returns false if the old list is updated without new items
+          // Returns false if the operation is unsuccessful
+          // ==> cannot be used to display status messages (notice, error)
+          
+          $body = "";
+          $body .= "De la: " . str_replace("%40", "@", $email) . "\r\n";
+          $body .= "Wishlist URL: " . get_bloginfo('home') . "/wishlist/share/?id=$id\r\n";
+          $body .= "Produse: \r\n";
+          foreach ($favorite_post_ids as $post_id) {
+            $post = get_post($post_id);
+            setup_postdata($post);
+            $link = get_permalink($post_id);
+            $body .= " - " . $link . "\r\n";
+          }
+          
+          $headers = 'From: Smuff <shop@smuff.ro>';        
+          $send = wp_mail("shop@smuff.ro, $email", 'Wishlist nou', $body, $headers);
+          
+          if ($send) {
+            echo "<div class='notice'>Wishlist salvat cu success</div>";     
+          } else {
+            echo "<div class='error'>Eroare salvare wishlist. Va rugam reveniti mai tarziu.</div>";        
+          }
         }
       }          
       ?>
@@ -158,12 +178,17 @@
                     <a href="<?php echo $share_url ?>"><?php echo $share_url ?></a>
                   <strong>
                 </h4>              
-              <?php } else { ?>              
+              <?php } else { ?>
                 <form action="<?php echo curPageURL2() ?>" method="get">
                   <input class="url" type="email" name="email" value="" placeholder="Adresa Dvs. de email" />
-                  <input type="hidden" name="id" value="<?php echo $url ?>"/>
+                  <input type="hidden" name="id" value="<?php echo $url ?>"/>                  
                   <button type='submit' name='submit'>Salvare</button>
-                </form>                
+                  <br/>
+                  <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { 
+                    echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />";
+                    echo cptch_display_captcha_custom(); 
+                  } ?>
+                </form>  
              <?php } ?>
           </td>          
         <tr>
