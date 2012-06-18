@@ -109,7 +109,7 @@
       
       
       // Saving the wishlist
-      if ($id) {
+      if ($id && ($email != '')) {
         
         if (function_exists( 'cptch_check_custom_form' ) && cptch_check_custom_form() !== true ) { ?>
           <div class='error'>Va rugam completati codul de verificare.</div>
@@ -153,7 +153,11 @@
             echo "<div class='error'>Eroare salvare wishlist. Va rugam reveniti mai tarziu.</div>";        
           }
         }
-      }          
+      } else {
+        if ($id && ($email == '')) {
+          echo "<div class='error'>Va rugam completati adresa de email.</div>";        
+        }        
+      }         
       ?>
       
       <table class="share">
@@ -184,10 +188,14 @@
                   <input type="hidden" name="id" value="<?php echo $url ?>"/>                  
                   <button type='submit' name='submit'>Salvare</button>
                   <br/>
+                  <p class="captcha">
+                  <strong>Va rugam completati codul de verificare</strong>
+                  <br/>
                   <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { 
                     echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />";
                     echo cptch_display_captcha_custom(); 
                   } ?>
+                  </p>
                 </form>  
              <?php } ?>
           </td>          

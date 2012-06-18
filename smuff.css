@@ -307,6 +307,10 @@ div#widgetshoppingcart {
   text-decoration: none !important;
 }
 
+p.captcha {
+  padding: 1em 0;
+}
+
 
 /* Left side icons 
 */
