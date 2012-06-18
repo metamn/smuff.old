@@ -291,6 +291,14 @@ div#widgetshoppingcart {
   width: 100%;
 }
 
+.giftshopper #profile {
+  background: #DFDBD0;
+  padding: 1em;
+}
+
+.giftshopper #products .product-thumb {
+  margin-bottom: 5em;
+}
 
 
 /* Left side icons 

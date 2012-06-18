@@ -56,6 +56,11 @@
               $val = '';
               $place = "Numele persoanei pentru care construiti cadoul perfect";
             } ?>
+            
+            <?php if ($nume != '') {
+              $val = $nume;
+              $place = $val;
+            } ?>
           
             <input id="name" name="nume" type="text" value="<?php echo $val ?>" placeholder="<?php echo $place ?>"/>
           </div>

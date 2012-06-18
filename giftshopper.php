@@ -44,6 +44,7 @@
   
   $cats = implode("-", $cats);
 
+  /*
   echo "<br/> email: $email";
   echo "<br/> name: $nume";
   echo "<br/> cats: $cats";
@@ -52,6 +53,7 @@
   echo "<br/> higher: $higher";   
   echo "<br/> button: $button"; 
   echo "<br/> products: $products"; 
+  */
   
   
   // The categories upon the gift quiz is built
@@ -90,30 +92,34 @@
               $cookie = get_cookie("smuff_giftshopper");
               if ($cookie) {
                 echo "cookie: $cookie" . "<br/>";
-              } else { ?>
-                <h3>Ati salvat cumva mai demult o lista Giftshopper?</h3>
-                <p>
-                  Introduceti adresa Dvs. de email pentru a cauta lista
-                  in baza noastra de date.
-                </p> 
+              } else { ?>                
                 <input id="email" name="email" type="email" value="" placeholder="Adresa email"/>                
-                <button type='submit'>Cautare lista Giftshopper salvata / Creare lista noua</button>
+                <button type='submit'>Cautare lista Giftshopper salvata</button>
+                <button type='submit'>Creare lista noua</button>
+                <p>&nbsp;</p>
+                <p class="notice">
+                  Introduceti adresa de email pentru a cauta listele Dvs.
+                  in baza noastra de date, sau pentru a crea a lista noua.
+                </p> 
                 </form>
           </div>
               <?php }
             } else { ?>
               <input id="email" name="email" type="hidden" value="<?php echo $email ?>" />                
               
-              <h3><?php echo $email ?></h3>
+              <h3>Listele mele (<?php echo $email ?>)</h3>
               <p>
                 <?php 
                   $lists = gsh_get_lists($email);
-                  if ($lists) {
-                    foreach ($lists as $l) { ?>
-                      <a href="<?php bloginfo('home')?>/giftshopper/?email=<?php echo $l->email ?>&nume=<?php echo $l->name ?>"><?php echo $l->name ?></a>, 
-                    <?php }
-                  } else {
-                    echo "Nu aveti liste salvate ....";
+                  if ($lists) { ?>
+                  <ul>
+                    <?php foreach ($lists as $l) { ?>
+                      <li><a href="<?php bloginfo('home')?>/giftshopper/?email=<?php echo $l->email ?>&nume=<?php echo $l->name ?>"><?php echo $l->name ?></a></li>
+                    <?php } ?>
+                      <li><a href="<?php bloginfo('home')?>/giftshopper/?email=<?php echo $l->email ?>">Lista noua</a></li>                    
+                  </ul>
+                  <?php } else {
+                    echo "Inca nu aveti liste salvate.";
                   } ?>                
               </p>                                          
           </div>
@@ -128,7 +134,7 @@
                         <?php include 'giftshopper-results.php'; ?>
                       </div>
                   <?php } ?>
-                  <div id="profile" class="column span-5 prepend-1 last">
+                  <div id="profile" class="column span-6 prepend-1 last">
                     <?php include 'giftshopper-profile.php'; ?>
                   </div>
               </div>
