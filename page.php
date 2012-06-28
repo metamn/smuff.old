@@ -10,7 +10,6 @@
   $klass = "checkout-final";
  } 
  
- 
  $page_name = wp_title('', false, '');
  $to_replace = array(' ', '.', '_');
  $page_name = str_replace($to_replace, '', $page_name);
@@ -55,6 +54,8 @@ get_header(); ?>
 			<?php } ?>
 		</div>
 		<?php endwhile; endif; ?>
+		
+		
 
     <?php 
       if (is_page(429)) { ?>
@@ -141,6 +142,11 @@ get_header(); ?>
 		    if (comments_open()) {comments_template();}  
 		  }		  
 		?>
+		
+		<?php 
+		// deal of the week  
+    $dow_posts = query_posts2('posts_per_page=1&cat=15');
+		include 'deal-of-the-week.php'; ?>
 		
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>

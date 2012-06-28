@@ -169,6 +169,13 @@
   </div>
   
   
+  <?php 
+    // deal of the week  
+    $dow_posts = query_posts2('posts_per_page=1&cat=15');
+    include 'deal-of-the-week.php'; 
+  ?>
+  
+  
   <!--
   <div id="cadouri" class="block">
     <h3>Produse oferite cadou</h3>

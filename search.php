@@ -47,6 +47,10 @@ get_header(); ?>
   }	 
    		
   $fullsearch = true; 				  
+
+  // deal of the week  
+  $dow_posts = query_posts2('posts_per_page=1&cat=15');
+
 ?>
 
 <div id="search-results" class="block">
@@ -104,11 +108,15 @@ get_header(); ?>
               <div id="search-results" class="bestsellers">    
                 <?php 
                   $counter = $wp_query->found_posts;
+                  $i = 1;
                   while (have_posts()) : the_post();
                     if (advanced_search($post, $price, $categories)) { 
                       $medium = true;
                       $show_category = true;
                       include "product-thumb.php";    
+                      
+                      if ($i == 7) { include 'deal-of-the-week.php';}
+                      $i++;
                     }
                   endwhile; ?>
               </div>              
@@ -137,6 +145,8 @@ get_header(); ?>
                     $show_category = true;
                     include "product-thumb.php";
                     $counter += 1;
+                    
+                    if ($counter == 7) { include 'deal-of-the-week.php';}
                   }
                 endwhile;
                 ?>

@@ -4,7 +4,7 @@
   //$promo_posts = query_posts2('posts_per_page=3&cat=15&orderby=rand'); 
   $banner_id = 1; // the first banner which is a skyscraper  1043
   
-  //$random_posts = query_posts2('posts_per_page=7&cat=10&orderby=rand');
+  //$random_posts = query_posts2('posts_per_page=7&cat=10&orderby=rand');  
 ?>
 
 <div id="sidebar" class="column span-6 last">        
