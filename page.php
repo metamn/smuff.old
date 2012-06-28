@@ -148,6 +148,8 @@ get_header(); ?>
     $dow_posts = query_posts2('posts_per_page=1&cat=15');
 		include 'deal-of-the-week.php'; ?>
 		
+		<?php include 'subscribe-to-newsletter.php'; ?>
+		
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>
 	</div>    

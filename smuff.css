@@ -65,7 +65,8 @@ body {
   margin: 1.2em 0 0;  
   padding: .5em;
   position: absolute;
-  width: 300px;
+  width: auto;
+  max-width: 300px;
   left: 550px;
   
   font-size: larger;
@@ -285,6 +286,37 @@ div#widgetshoppingcart {
   margin-top: 4em;
   width: auto;
 }
+
+/* Subscribe to newsletter
+*/
+
+#subscribe-newsletter {
+  background: #E5ECF9;
+}
+#subscribe-newsletter h1, #subscribe-newsletter form {
+  padding: .5em;
+}
+#subscribe-newsletter h1 {
+  font-family: serif;
+  font-style: italic;
+  line-height: 1.5em;
+}
+#subscribe-newsletter input.text,
+#subscribe-newsletter input.button {
+  height: auto;
+  padding: .2em;
+}
+#subscribe-newsletter input.button {
+  width: 98%;
+}
+#subscribe-newsletter input.text {
+  width: 95%;
+  margin-bottom: .5em;
+  text-align: center;
+  background: white;
+}
+
+
 
 
 /* Giftshopper

@@ -115,7 +115,8 @@ get_header(); ?>
                       $show_category = true;
                       include "product-thumb.php";    
                       
-                      if ($i == 7) { include 'deal-of-the-week.php';}
+                      if ($i == 3) { include 'subscribe-to-newsletter.php'; }
+                      if ($i == 8) { include 'deal-of-the-week.php';}
                       $i++;
                     }
                   endwhile; ?>
@@ -146,7 +147,8 @@ get_header(); ?>
                     include "product-thumb.php";
                     $counter += 1;
                     
-                    if ($counter == 7) { include 'deal-of-the-week.php';}
+                    if ($counter == 3) { include 'subscribe-to-newsletter.php'; }
+                    if ($counter == 8) { include 'deal-of-the-week.php';}
                   }
                 endwhile;
                 ?>

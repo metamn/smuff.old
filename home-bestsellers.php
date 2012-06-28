@@ -75,7 +75,7 @@
           if ($top_sales->have_posts()) {
             $counter = 0;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if ($counter >= $count) {    
+              if($counter >= $count) {    
                 $medium = true;            
                 if ($cat == 0 || $cat == 10) {
                   $show_category = true;         
@@ -87,6 +87,7 @@
               $counter += 1;
             endwhile; 
           }
+        include 'subscribe-to-newsletter.php';
         ?>       		        
 	  </div>
   </div>

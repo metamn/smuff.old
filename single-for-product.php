@@ -218,10 +218,14 @@
       $specials = query_posts2('posts_per_page=4&cat='.$cat);
       if ($specials) {
         if ($specials->have_posts()) {
+          $counter = 0;
           while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
             if (in_category(10)) {
               $medium = true;
               include "product-thumb.php";
+              
+              if ($counter == 3) { include 'subscribe-to-newsletter.php'; }
+              $counter += 1;
             }                    
           endwhile; 
         }		      
