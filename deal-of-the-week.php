@@ -40,6 +40,9 @@
           </h3>
           <h1 id="sale">&mdash; <?php echo $percentage?>%</h1>
           <h3>+ livrare gratuita</h3>
+          <h4 id="sale">
+            Ce este?
+          </h4>
         </div>
         <div id="product" class="column span-7 prepend-1 last">
           <?php  include "product-thumb.php"; ?>
