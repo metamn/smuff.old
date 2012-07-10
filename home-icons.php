@@ -24,7 +24,7 @@
     <li>
       <a title="Cadouri pentru comfortul de acasa" href="<?php bloginfo('home')?>/tag/magazin-comfort-pentru-acasa">
         <img title="Cadouri pentru comfortul de acasa" src="<?php bloginfo('stylesheet_directory')?>/img/icon-homeimprovement.png" />
-        <h4>Comfortul de acasa</h4>
+        <h4>Confortul de acasa</h4>
       </a>      
     </li>
   </ul>

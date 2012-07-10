@@ -65,8 +65,19 @@
         <?php get_search_form(); ?>
       </div>
       
+      <div id="giftshopper">
+        <a href="" title="Personalizare cadouri cu GiftShopper">
+          <img id="id1" src="<?php bloginfo('stylesheet_directory'); ?>/img/giftshopper.jpg" title="Personalizare cadouri cu GiftShopper" />
+          <img id="id2" src="<?php bloginfo('stylesheet_directory'); ?>/img/hands.jpg" title="Personalizare cadouri cu GiftShopper" />
+          <h1 id="id1">Personalizare</h1>
+          <h1 id="id2">cadouri cu</h1>
+          <h1 id="id3">GiftShopper</h1>
+          </h1>
+        </a>
+      </div>
+      
       <?php 
-        include "home-tags.php";
+        //include "home-tags.php";
         include "home-icons.php";
       ?>
     

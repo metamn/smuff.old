@@ -14,8 +14,9 @@
   ?>
   
   <div id="social" class="column span-12 last">
-    Ne puteti urmarii si prin
+    Ne puteti urmari si prin
     <br/>
+   
     <a href="http://www.facebook.com/smuffgadget" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
       <img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
     <!--

@@ -324,6 +324,8 @@ $(document).ready(function() {
 
 
   // Add Custom variables for Google Analytics
+  // ... and Mixpanel
+  
   
   // Click on Wishlist in Header
   $("#cart #wishlist a").click(function() {    
@@ -351,6 +353,7 @@ $(document).ready(function() {
       'Product Page', 
       'Add To Wishlist'
    ]);
+   mixpanel.track("Add product to wishlist");
   });
   
   // Go to Wishlist in Product Page
@@ -381,6 +384,7 @@ $(document).ready(function() {
       'Checkout Page', 
       'Add To Wishlist'
    ]);
+   mixpanel.track("Add all products to wishlist on the Chekout page");
   });
   
   // Share and save wishlist
@@ -395,6 +399,7 @@ $(document).ready(function() {
       'Wishlist Page', 
       'Save Wishlist'
    ]);
+   mixpanel.track("Share and save wishlist");
   });
   
   // Take survey on Checkout page
@@ -579,7 +584,7 @@ $(document).ready(function() {
    _gaq.push(['_trackEvent', 
       'Product Page', 
       'Click on main shopping box'
-   ]);
+   ]);   
   });
   
   // Product page, main shopping, Add To Cart
@@ -595,6 +600,7 @@ $(document).ready(function() {
       'Add To Cart',
       'Main shopping box' 
    ]);
+   mixpanel.track("Add to cart", {"Source" : "Main shopping box"});
   });
   
   // Product page, main shopping, Checkout
@@ -610,6 +616,7 @@ $(document).ready(function() {
       'Checkout',
       'Main shopping box'
    ]);
+   mixpanel.track("Go to Checkout", {"Source" : "Main shopping box"});
   });
   
   
@@ -640,6 +647,7 @@ $(document).ready(function() {
       'Add To Cart',
       'Secondary shopping box'
    ]);
+   mixpanel.track("Add to cart", {"Source" : "Secondary shopping box"});
   });
   
   // Product page, bottom shopping, Checkout
@@ -655,6 +663,7 @@ $(document).ready(function() {
       'Checkout',
       'Secondary shopping box' 
    ]);
+   mixpanel.track("Go to Checkout", {"Source" : "Secondary shopping box"});
   });
   
   
@@ -670,6 +679,7 @@ $(document).ready(function() {
       'Header', 
       'Checkout'
    ]);
+   mixpanel.track("Go to checkout", {"Source" : "Header"});
   });
   
   // Checkout Page, Make Purchase
@@ -684,6 +694,7 @@ $(document).ready(function() {
       'Checkout Page', 
       'Make Purchase'
    ]);
+   mixpanel.track("Make purchase");
   });  
   
   

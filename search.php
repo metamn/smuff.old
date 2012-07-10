@@ -119,7 +119,9 @@ get_header(); ?>
                       if ($i == 8) { include 'deal-of-the-week.php';}
                       $i++;
                     }
-                  endwhile; ?>
+                  endwhile; 
+                  include 'subscribe-to-newsletter.php';
+                  ?>
               </div>              
               <div class="clear"></div>
             
@@ -151,6 +153,7 @@ get_header(); ?>
                     if ($counter == 8) { include 'deal-of-the-week.php';}
                   }
                 endwhile;
+                include 'subscribe-to-newsletter.php';
                 ?>
               </div>
               <div class="clear"></div>	  
