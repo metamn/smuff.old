@@ -27,7 +27,9 @@
 <div id="noutati" class="hidden block"></div>
 
 
+<?php include 'fatboy.php'; ?>
 <?php include 'deal-of-the-week.php' ?>  
+
   
 <div id="bestsellers" class="bestsellers block"> 
     

@@ -264,7 +264,7 @@ div#widgetshoppingcart {
   margin: 5em 0;
   background: url(img/stripe.png);
 }
-.search #dow {
+.search #dow, .search #fatboy {
   width: 100%;
   float: left;
 }
@@ -291,6 +291,14 @@ div#widgetshoppingcart {
   height: 40em;
   width: auto;
   background: #DFDBD0;
+}
+
+#fatboy {
+  margin: 2.5em 0;
+}
+#fatboy img {
+  width: 100%;
+  height: auto;
 }
 
 /* Subscribe to newsletter

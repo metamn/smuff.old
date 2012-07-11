@@ -1,5 +1,5 @@
 <?php
-  if ($dow_posts->have_posts()) {
+  if ( ($dow_posts) && ($dow_posts->have_posts())) {
     while ($dow_posts->have_posts()) : $dow_posts->the_post(); update_post_caches($posts); 
       $medium = true;
       
@@ -27,8 +27,7 @@
       );
       $month = $m[intval(date('n')-1)]; 
       
-      $week = date('W');
-    ?>   
+      $week = date('W'); ?>   
       
       <div id="dow" class="bestsellers block">
         <div id="text" class="column span-10 last">
@@ -41,15 +40,19 @@
           <h1 id="sale">&mdash; <?php echo $percentage?>%</h1>
           <h3>+ livrare gratuita</h3>
           <h4 id="sale">
-            Ce este?
+            <a href="" title="Promotia saptamanii pe Smuff">Cum functioneaza?</a>
           </h4>
         </div>
         <div id="product" class="column span-7 prepend-1 last">
           <?php  include "product-thumb.php"; ?>
         </div>
-     <?php
-       break;
-       endwhile; 
-      }
-    ?>      
-      </div> 
+      </div>   
+      
+<?php
+    break;
+    endwhile; 
+  }    
+?>      
+      
+      
+

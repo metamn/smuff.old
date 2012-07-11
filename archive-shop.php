@@ -17,6 +17,9 @@
     'category__and' => array(10, $cat)
   );
   $new_products = query_posts2($args);
+  
+  // deal of the week  
+  $dow_posts = query_posts2('posts_per_page=1&cat=2135');
 ?>
 
 <div id="home" class="block">  
@@ -25,7 +28,8 @@
         include "home-hot.php";
       } else {
         echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in aceasta categorie</h2>';
-      }?>        
+      }?>     
+           
     <?php if ($top_sales->have_posts()) { include "home-bestsellers.php"; } ?> 
     <?php if ($promo_posts->have_posts()) { include "home-promo.php"; }  ?>
     <?php include "home-ecosystem.php" ?>        

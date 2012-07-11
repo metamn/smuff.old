@@ -49,7 +49,7 @@ get_header(); ?>
   $fullsearch = true; 				  
 
   // deal of the week  
-  $dow_posts = query_posts2('posts_per_page=1&cat=15');
+  $dow_posts = query_posts2('posts_per_page=1&cat=2135');
 
 ?>
 
@@ -117,6 +117,7 @@ get_header(); ?>
                       
                       if ($i == 3) { include 'subscribe-to-newsletter.php'; }
                       if ($i == 8) { include 'deal-of-the-week.php';}
+                      if ($i == 17) { include 'fatboy.php';}
                       $i++;
                     }
                   endwhile; 
@@ -151,6 +152,7 @@ get_header(); ?>
                     
                     if ($counter == 3) { include 'subscribe-to-newsletter.php'; }
                     if ($counter == 8) { include 'deal-of-the-week.php';}
+                    if ($counter == 17) { include 'fatboy.php';}
                   }
                 endwhile;
                 include 'subscribe-to-newsletter.php';
