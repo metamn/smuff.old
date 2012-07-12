@@ -1,4 +1,4 @@
-<div id="subscribe-newsletter" class="item product-thumb">
+<div id="subscribe-newsletter" class="campaign-box">
   <h1>
     Fii la curent cu ultimele <strong>noutati</strong> si <strong>promotii</strong>
   </h1>

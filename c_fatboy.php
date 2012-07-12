@@ -3,4 +3,3 @@
     <img src="http://www.smuff.ro/wp-content/uploads/2012/07/smuff-castiga-un-fatboy-original-950x631.jpg" title="Castiga un Fatboy original" />
   </a>
 </div>
-<div class="clear"></div>

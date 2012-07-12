@@ -1,6 +1,12 @@
 $(document).ready(function() { 
 
 
+  // Del of the Week
+  $("#campaigns.small #dow #text").click(function() {
+    $(this).next().slideUp();
+    $(this).addClass('slideup');  
+  });
+
   // Giftshopper
   // 
   // Move steps

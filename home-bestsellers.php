@@ -27,8 +27,12 @@
 <div id="noutati" class="hidden block"></div>
 
 
-<?php include 'fatboy.php'; ?>
-<?php include 'deal-of-the-week.php' ?>  
+<div id="campaigns" class="block small">
+  <?php include 'c_fatboy.php'; ?>
+  <?php include 'c_deal-of-the-week.php' ?>  
+  <?php include 'c_subscribe-to-newsletter.php'; ?>
+  <?php include 'c_invite-a-friend.php'; ?>
+</div>
 
   
 <div id="bestsellers" class="bestsellers block"> 
@@ -88,8 +92,7 @@
               }
               $counter += 1;
             endwhile; 
-          }
-        include 'subscribe-to-newsletter.php';
+          }        
         ?>       		        
 	  </div>
   </div>

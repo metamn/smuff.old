@@ -293,6 +293,10 @@ div#widgetshoppingcart {
   background: #DFDBD0;
 }
 
+
+/* Fatboy
+*/
+
 #fatboy {
   margin: 2.5em 0;
 }
@@ -301,36 +305,75 @@ div#widgetshoppingcart {
   height: auto;
 }
 
-/* Subscribe to newsletter
+/* Subscribe to newsletter, Invite a friend
 */
 
-#subscribe-newsletter {
+.campaign-box {
   background: #E5ECF9;
 }
-#subscribe-newsletter h1, #subscribe-newsletter form {
+.campaign-box h1, .campaign-box form {
   padding: .5em;
 }
-#subscribe-newsletter h1 {
+.campaign-box h1 {
   font-family: serif;
   font-style: italic;
   line-height: 1.5em;
 }
-#subscribe-newsletter input.text,
-#subscribe-newsletter input.button {
+.campaign-box input.text,
+.campaign-box input.button {
   height: auto;
   padding: .2em;
 }
-#subscribe-newsletter input.button {
+.campaign-box input.button {
   width: 98%;
 }
-#subscribe-newsletter input.text {
+.campaign-box input.text {
   width: 95%;
   margin-bottom: .5em;
   text-align: center;
   background: white;
 }
 
+.home .campaign-box,
+#campaigns.small #dow,
+#campaigns.small #fatboy {
+  float: left;
+  width: 45%;
+  height: 40em;  
+  margin: 2.5em 0;
+}
+.home #subscribe-newsletter,
+#campaigns.small #fatboy {
+  margin-right: 10%;
+}
 
+#campaigns.small #dow #text,
+#campaigns.small #dow #product {
+  width: auto;
+  padding: 0 1%;
+}
+#campaigns.small #dow #text h1 {
+  font-size: 3.6em;
+  cursor: pointer;
+}
+
+#campaigns.small #dow #product {
+  height: 35em;
+  overflow: hidden;
+  position: relative;
+  top: -14em;
+}
+#campaigns.small #dow #text {
+  height: 10em;
+  position: relative;
+  top: 33em;
+}
+#campaigns.small #dow #text h1#sale {
+  text-shadow: 2px 2px #F25E18;
+}
+#campaigns.small #dow #text.slideup {
+  top: 0;
+}
 
 
 /* Giftshopper
