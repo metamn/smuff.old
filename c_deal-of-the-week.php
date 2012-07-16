@@ -39,16 +39,19 @@
           </div>
         </div>
         <div id="text">
-          <h4 id="title">Promotia saptamanii</h4>
+          <h4 id="title">Promotia<br/>saptamanii</h4>
           <h4 id="week"><?php 
             echo $first_day_of_week . ' - ' . $last_day_of_week;
             echo ' ' . $month . '<br/>'; 
             echo 'saptamana #' . $week; ?> 
           </h4>
-          <h4 id="offer"><strong>&mdash; <?php echo $percentage ?> %</strong> <br/> + livrare gratuita</h4>
+          <h4 id="offer"><strong>&mdash; <?php echo $percentage ?>%</strong> <br/> + livrare gratuita</h4>
           <h4 id="whatis">
             <a href="" title="Promotia saptamanii pe Smuff">Ce este?</a>
           </h4>
+          <div id="star">
+            <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-star.png">
+          </div>
         </div>
       </div>
 <?php

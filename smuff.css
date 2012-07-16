@@ -100,8 +100,7 @@ body {
   margin: 0;
   padding: 0;
 }
-#header #logo h1,
-#dow h1 {
+#header #logo h1 {
   font-weight: bold;
   font-size: 4.5em;
   letter-spacing: -4px;
@@ -260,37 +259,80 @@ div#widgetshoppingcart {
 /* Deal of the week
 */
 
-#dow {
-  margin: 5em 0;
-  background: url(img/stripe.png);
+#campaigns {
+  margin: 2.5em 0;
 }
-.search #dow, .search #fatboy {
-  width: 100%;
+#campaigns strong {
+  font-size: large;
+}
+
+
+
+#dow {
+  background: white;
+  height: 17em;
+  width: 65%;
+  margin-right: 5%;
   float: left;
 }
-#dow h1 {
-  margin-left: .3em;
-  font-size: 6.5em;
-  color: #4A4742;
-  text-shadow: 1px 1px #fff;
+
+#dow #arrow, #dow #product {
+  float: left;
 }
-#dow h1#sale {
-  margin: .3em;
-  font-size: 8.5em;
-  text-shadow: 5px 5px #F25E18;
+#dow #arrow {
+  width: 33%;
 }
-#dow h3 {
-  padding: .5em 1.5em;
-  background: #fff;
+#dow #product {
+  width: 66%;
 }
-#dow h4#sale {
-  margin: 1.25em 1.75em;
-}
+
 #dow #product .item {
-  margin-top: 4.5em;
-  height: 40em;
-  width: auto;
-  background: #DFDBD0;
+  height: auto;
+  box-shadow: 0 0 #fff;
+}
+#dow #product .item img {
+  border: 0px solid #fff;
+}
+#dow #product .item .text {
+  display: none;
+}
+
+#dow #text #title,
+#dow #text #week,
+#dow #text #whatis {
+  position: relative;
+  margin-left: .5em;
+  color: white;
+  top: -18em;
+}
+#dow #text #title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f25e18;
+}
+#dow #text #week {
+  font-weight: bold;
+}
+#dow #text #offer {
+  position: relative;
+  top: -29em;
+  left: 390px;
+  width: 6em;
+  text-align: center;
+  z-index: 2;
+  text-shadow:1px 1px #f0f0f0;
+}
+#dow #text #whatis {
+  top: -23em;
+}
+#dow #text #whatis a, #dow #text #whatis a:visited {
+  color: white;
+}
+#dow #star {
+  position: relative;
+  top:-48.5em;
+  left: 360px;
+  z-index: 1;
 }
 
 
@@ -298,82 +340,34 @@ div#widgetshoppingcart {
 */
 
 #fatboy {
-  margin: 2.5em 0;
+  float: right;
+  width: 30%;
 }
-#fatboy img {
-  width: 100%;
-  height: auto;
+#fatboy h1 {
+  padding: 1em .3em;
+  font-variant: small-caps;
+  font-weight: bold;
+  background: white;
 }
+
+
 
 /* Subscribe to newsletter, Invite a friend
 */
 
 .campaign-box {
-  background: #E5ECF9;
-}
-.campaign-box h1, .campaign-box form {
-  padding: .5em;
-}
-.campaign-box h1 {
-  font-family: serif;
-  font-style: italic;
-  line-height: 1.5em;
-}
-.campaign-box input.text,
-.campaign-box input.button {
-  height: auto;
-  padding: .2em;
-}
-.campaign-box input.button {
-  width: 98%;
-}
-.campaign-box input.text {
-  width: 95%;
-  margin-bottom: .5em;
-  text-align: center;
-  background: white;
-}
-
-.home .campaign-box,
-#campaigns.small #dow,
-#campaigns.small #fatboy {
+  margin: 5em 0;
+  
+  width: 65%;
   float: left;
-  width: 45%;
-  height: 40em;  
-  margin: 2.5em 0;
+  
+  text-align: center;
+  font-size: larger;
 }
-.home #subscribe-newsletter,
-#campaigns.small #fatboy {
-  margin-right: 10%;
-}
-
-#campaigns.small #dow #text,
-#campaigns.small #dow #product {
-  width: auto;
-  padding: 0 1%;
-}
-#campaigns.small #dow #text h1 {
-  font-size: 3.6em;
-  cursor: pointer;
+.campaign-box form input.text {
+  text-align: center;
 }
 
-#campaigns.small #dow #product {
-  height: 35em;
-  overflow: hidden;
-  position: relative;
-  top: -14em;
-}
-#campaigns.small #dow #text {
-  height: 10em;
-  position: relative;
-  top: 33em;
-}
-#campaigns.small #dow #text h1#sale {
-  text-shadow: 2px 2px #F25E18;
-}
-#campaigns.small #dow #text.slideup {
-  top: 0;
-}
 
 
 /* Giftshopper
