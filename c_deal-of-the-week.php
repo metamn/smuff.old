@@ -30,24 +30,27 @@
       $week = date('W'); ?>   
       
       <div id="dow" class="bestsellers block">
-        <div id="text" class="column span-10 last">
-          <h1>Promotia saptamanii &raquo;</h1>
-          <h3><?php 
+        <div class="block">
+          <div id="arrow">
+            <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-arrow.png">
+          </div>                  
+          <div id="product">
+            <?php  include "product-thumb.php"; ?>
+          </div>
+        </div>
+        <div id="text">
+          <h4 id="title">Promotia saptamanii</h4>
+          <h4 id="week"><?php 
             echo $first_day_of_week . ' - ' . $last_day_of_week;
-            echo ' ' . $month; 
-            echo ' (saptamana ' . $week . ')'; ?> 
-          </h3>
-          <h1 id="sale">&mdash; <?php echo $percentage?>%</h1>
-          <h3>+ livrare gratuita</h3>
-          <h4 id="sale">
-            <a href="" title="Promotia saptamanii pe Smuff">Cum functioneaza?</a>
+            echo ' ' . $month . '<br/>'; 
+            echo 'saptamana #' . $week; ?> 
+          </h4>
+          <h4 id="offer"><strong>&mdash; <?php echo $percentage ?> %</strong> <br/> + livrare gratuita</h4>
+          <h4 id="whatis">
+            <a href="" title="Promotia saptamanii pe Smuff">Ce este?</a>
           </h4>
         </div>
-        <div id="product" class="column span-7 prepend-1 last">
-          <?php  include "product-thumb.php"; ?>
-        </div>
-      </div>   
-      
+      </div>
 <?php
     break;
     endwhile; 

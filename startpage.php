@@ -27,7 +27,7 @@
   $promo_posts = query_posts2('posts_per_page=8&cat=15');
   
   // deal of the week  
-  $dow_posts = query_posts2('posts_per_page=1&cat=2101'); /* 2135, 2101 */
+  $dow_posts = query_posts2('posts_per_page=1&cat=2135'); /* 2135, 2101 */
   
   // - Special posts are put first on HOT
   $special_posts = query_posts2('posts_per_page=1&cat=1317');
