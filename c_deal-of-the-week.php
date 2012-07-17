@@ -7,6 +7,8 @@
       $price = product_price($post->ID);
       $discount = product_discount($product_id);
       $percentage = intval($discount*100 / $price);
+      $product_title = get_the_title();
+      $product_link = get_permalink();
       
       $first_day_of_week = date('j', strtotime('Last Monday', time()));
       $last_day_of_week = date('j', strtotime('Next Sunday', time()));
@@ -44,7 +46,11 @@
             echo ' ' . $month . '<br/>'; 
             echo 'saptamana #' . $week; ?> 
           </h4>
-          <h4 id="offer"><strong>&mdash; <?php echo $percentage ?>%</strong> <br/> + livrare gratuita</h4>
+          <h4 id="offer">
+            <a href="<?php echo $product_link ?>" title="<?php echo $product_title ?>">
+              <strong>&mdash; <?php echo $percentage ?>%</strong> <br/> + livrare gratuita
+            </a>
+          </h4>
           <h4 id="whatis">
             <a href="" title="Promotia saptamanii pe Smuff">Ce este?</a>
           </h4>

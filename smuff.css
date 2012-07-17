@@ -302,7 +302,6 @@ div#widgetshoppingcart {
   position: relative;
   margin-left: .5em;
   color: white;
-  top: -18em;
 }
 #dow #text #title {
   text-transform: uppercase;
@@ -316,7 +315,8 @@ div#widgetshoppingcart {
   color: #f25e18;
 }
 #dow #text #week {
-  font-weight: bold;
+  font-weight: bold;  
+  top: -19em;
 }
 #dow #text #offer {
   position: relative;
@@ -328,7 +328,7 @@ div#widgetshoppingcart {
   text-shadow:1px 1px #f0f0f0;
 }
 #dow #text #whatis {
-  top: -23em;
+  top: -25em;
 }
 #dow #text #whatis a, #dow #text #whatis a:visited {
   color: white;
@@ -358,7 +358,11 @@ div#widgetshoppingcart {
   margin-top: 13em;
   height: 5.2em;
 }
-
+#fatboy p {
+  font-size: larger;
+  background: white;
+  padding: 1em;
+}
 
 
 /* Subscribe to newsletter, Invite a friend
@@ -379,8 +383,8 @@ div#widgetshoppingcart {
 }
 #stamp {
   position: relative;
-  top:-29em;
-  left: 350px;
+  top:-35em;
+  left: 340px;
   z-index: 1;
   height: 150px;
 }
