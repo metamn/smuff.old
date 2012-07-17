@@ -17,7 +17,7 @@
     $cat_name = ' Smuff';
   } 
   //$wplogger->log( 'catname '.$cat_name );
-  $title = 'Vezi toate noutatiile' . $cat_name . ' &rarr;'; 
+  $title = 'Vezi toate noutatile' . $cat_name . ' &rarr;'; 
   $link_type = '3'; // 2=table view, 3=grid view
   echo '<h4 class="all-products-link">';
   echo '<a href="#noutati" id="new-products-link">' . $title . '</a>'; 

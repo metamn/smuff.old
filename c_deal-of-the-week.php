@@ -28,18 +28,17 @@
       $month = $m[intval(date('n')-1)]; 
       
       $week = date('W'); ?>   
-      
-      <div id="dow" class="bestsellers block">
-        <div class="block">
-          <div id="arrow">
-            <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-arrow.png">
-          </div>                  
+            
+      <div id="dow" class="bestsellers block">        
+        <div class="block">          
           <div id="product">
             <?php  include "product-thumb.php"; ?>
           </div>
         </div>
         <div id="text">
-          <h4 id="title">Promotia<br/>saptamanii</h4>
+          <h4 id="title"><a href="" title="Promotia saptamanii pe Smuff">
+            Promotia<br/>saptamanii
+          </a></h4>
           <h4 id="week"><?php 
             echo $first_day_of_week . ' - ' . $last_day_of_week;
             echo ' ' . $month . '<br/>'; 
@@ -51,8 +50,8 @@
           </h4>
           <div id="star">
             <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-star.png">
-          </div>
-        </div>
+          </div>       
+        </div>          
       </div>
 <?php
     break;

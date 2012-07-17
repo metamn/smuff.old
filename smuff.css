@@ -13,6 +13,7 @@
 . narancs/kiemeles: #f25e18
   . zold/ok: #26BF5A
   . piros/error: #A53B08
+  . sarga: #FFCE0D
 . kek/price: #84C4D1
   . melyebb/hot: #48C0D9
 . blog
@@ -259,8 +260,10 @@ div#widgetshoppingcart {
 /* Deal of the week
 */
 
+
 #campaigns {
   margin: 2.5em 0;
+  background: url(img/dow-fatb-newsletter-3.png) no-repeat;
 }
 #campaigns strong {
   font-size: large;
@@ -268,24 +271,20 @@ div#widgetshoppingcart {
 
 
 
-#dow {
-  background: white;
-  height: 17em;
+#dow {   
+  height: 17.2em;
   width: 65%;
   margin-right: 5%;
   float: left;
-}
-
-#dow #arrow, #dow #product {
-  float: left;
-}
-#dow #arrow {
-  width: 33%;
+  
+  position: relative;
+  top: -.2em;
 }
 #dow #product {
-  width: 66%;
+  float: left;
+  width: 68%;
+  margin-left: 32%;
 }
-
 #dow #product .item {
   height: auto;
   box-shadow: 0 0 #fff;
@@ -308,6 +307,12 @@ div#widgetshoppingcart {
 #dow #text #title {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: large;
+  color: #f25e18;
+  top:  -12em;
+  margin-left: .2em;
+}
+#dow #text #title a, #dow #text #title a:visited {
   color: #f25e18;
 }
 #dow #text #week {
@@ -316,7 +321,7 @@ div#widgetshoppingcart {
 #dow #text #offer {
   position: relative;
   top: -29em;
-  left: 390px;
+  left: 370px;
   width: 6em;
   text-align: center;
   z-index: 2;
@@ -331,9 +336,10 @@ div#widgetshoppingcart {
 #dow #star {
   position: relative;
   top:-48.5em;
-  left: 360px;
+  left: 340px;
   z-index: 1;
 }
+
 
 
 /* Fatboy
@@ -348,6 +354,9 @@ div#widgetshoppingcart {
   font-variant: small-caps;
   font-weight: bold;
   background: white;
+  line-height: 1.2;
+  margin-top: 13em;
+  height: 5.2em;
 }
 
 
@@ -356,16 +365,24 @@ div#widgetshoppingcart {
 */
 
 .campaign-box {
-  margin: 5em 0;
-  
-  width: 65%;
+  margin-top: 2.5em; 
+  padding: 1.5em; 
+  width: 54.3%;
   float: left;
-  
-  text-align: center;
   font-size: larger;
 }
-.campaign-box form input.text {
-  text-align: center;
+#subscribe-newsletter {
+  background: #f25e18;
+}
+#invite-friend {
+  background: #F99B0C;
+}
+#stamp {
+  position: relative;
+  top:-29em;
+  left: 350px;
+  z-index: 1;
+  height: 150px;
 }
 
 
