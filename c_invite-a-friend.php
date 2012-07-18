@@ -4,7 +4,13 @@
     <br/><br/>
     <strong class="inverted"><?php echo $product_title ?></strong>
   </h4>
-  <input type="email" required="" placeholder="Adresa Dvs. de email" id="mce-EMAIL" value="" name="EMAIL" class="text">
-  <?php include 'mailchimp.php'; ?>
+  
+  <div id="invite-friend-form" data-nonce="<?php echo wp_create_nonce('invite-friend') ?>" >
+    <input type="email" required="" placeholder="Adresa Dvs. de email" id="email" value="" name="EMAIL" class="text">    
+    <br/>
+    <input type="email" required="" placeholder="Adresa prietenului de email" id="friend-email" value="" name="EMAIL" class="text">    
+    <br/>
+    <input type="submit" value="Invita la newsletter" name="subscribe" id="invite" >
+  </div>
 </div>
 

@@ -17,6 +17,60 @@ function get_tag_id_by_name($tag_name) {
 
 
 
+// Invite a friend
+function invite_friend() {
+  $nonce = $_POST['nonce'];  
+  if ( wp_verify_nonce( $nonce, 'invite-friend' ) ) {
+    
+    $email = strval( $_POST['email'] );
+    $friend_email = strval( $_POST['friend-email'] );
+    
+    $msg = '';
+    
+    if (!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+      $msg .= 'Adresa Dvs. de email nu este ok';
+    } 
+    if (!(filter_var($friend_email, FILTER_VALIDATE_EMAIL))) {
+      $msg .= "\n\r" . 'Adresa de email al prietenului Dvs. nu este ok';
+    }
+    
+    if ($msg == '') {
+      $headers = "From: Smuff <shop@smuff.ro>";
+      $subject = "Invitatie de inscriere la newsletter-ul Smuff";
+      $message = "Buna, \n\r\n\r";
+      $message .= "Prietenul tau XXX te-a invitat la newsletterul Smuff.\n\r";
+      $message .= "etc etc...";
+      
+      if (wp_mail($friend_email, $subject, $message, $headers)) {
+        $msg = "Invitatia Dvs. a fost trimis cu succes.";
+      } else {
+        $msg = "Nu am reusit sa trimitem invitatia Dvs. \n\r Va cerem scuze, va rugam incercati mai tarziu.";
+      }
+    }
+   
+    $ret = array(
+      'success' => true,
+      'message' => $msg
+    );  
+  
+  } else {
+    $ret = array(
+      'success' => false,
+      'message' => 'Eroare de sistem. Va cerem scuze, analizam problema.'
+    );
+  }
+    
+  $response = json_encode($ret);
+  header( "Content-Type: application/json" );
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_invite_friend', 'invite_friend');
+add_action( 'wp_ajax_nopriv_invite_friend', 'invite_friend' );
+
+
+
+
 // Giftshopper
 //
 

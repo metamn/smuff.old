@@ -1,11 +1,30 @@
 $(document).ready(function() { 
 
+  var ajaxurl = $("#ajax-url").attr("data-url");
 
-  // Del of the Week
-  $("#campaigns.small #dow #text").click(function() {
-    $(this).next().slideUp();
-    $(this).addClass('slideup');  
+  // Invite a friend
+  $("#invite-friend #invite").click(function() {  
+    // Get query parameters
+    var nonce = $("#invite-friend-form").attr("data-nonce");    
+    var email = $("#invite-friend-form #email").val();
+    var friendEmail = $("#invite-friend-form #friend-email").val();
+    
+    // Do the ajax
+    $.post(
+      ajaxurl, 
+      {
+        'action' : 'invite_friend',
+        'nonce' : nonce,
+        'email' : email,
+        'friend-email' : friendEmail
+      }, 
+      function(response) {        
+        alert(response.message);
+      }
+    );
+    
   });
+  
 
   // Giftshopper
   // 

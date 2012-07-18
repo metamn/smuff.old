@@ -109,7 +109,9 @@ mixpanel.init("36dfdbc4e573367ed7236e84ebd4d842");</script><!-- end Mixpanel -->
 	
 	
 	 <body <?php body_class(); ?>> 
-	  <div id="background-image-container"></div>			  	
+	  <div id="background-image-container"></div>		
+	  
+	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-loading="<?php bloginfo('stylesheet_directory')?>/assets/ajax-loader.gif" class="hidden"></div>	  	
 	  
 	  <div class="container"><!-- closed in the footer -->
 	    <div class="block">	      
