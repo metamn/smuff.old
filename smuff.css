@@ -348,12 +348,12 @@ div#widgetshoppingcart {
 #fatboy {
   float: right;
   width: 30%;
+  height: 55em;
 }
-#fatboy p {
-  font-size: larger;
-  background: white;
-  padding: 1em;
-  margin-top: 44em;
+#fatboy a {
+  width: 22em;
+  height: 55em;
+  display: block;
 }
 
 
