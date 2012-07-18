@@ -378,6 +378,14 @@ div#widgetshoppingcart {
   color: #F99B0C;
   line-height: 1.5;
 }
+#invite-friend input.text {
+  width: 120px;
+}
+#invite-friend input.email {
+  width: 220px;
+  padding: 5px;
+}
+
 #stamp {
   position: relative;
   top:-29em;

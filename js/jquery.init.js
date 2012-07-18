@@ -8,6 +8,8 @@ $(document).ready(function() {
     var nonce = $("#invite-friend-form").attr("data-nonce");    
     var email = $("#invite-friend-form #email").val();
     var friendEmail = $("#invite-friend-form #friend-email").val();
+    var name = $("#invite-friend-form #name").val();
+    var friendName = $("#invite-friend-form #friend-name").val();
     
     // Do the ajax
     $.post(
@@ -16,7 +18,9 @@ $(document).ready(function() {
         'action' : 'invite_friend',
         'nonce' : nonce,
         'email' : email,
-        'friend-email' : friendEmail
+        'friend-email' : friendEmail,
+        'name' : name,
+        'friend-name' : friendName
       }, 
       function(response) {        
         alert(response.message);

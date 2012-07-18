@@ -44,7 +44,7 @@
           <h4 id="week"><?php 
             echo $first_day_of_week . ' - ' . $last_day_of_week;
             echo ' ' . $month . '<br/>'; 
-            echo 'saptamana #' . $week; ?> 
+            echo 'saptamana ' . $week; ?> 
           </h4>
           <h4 id="offer">
             <a href="<?php echo $product_link ?>" title="<?php echo $product_title ?>">

@@ -33,6 +33,7 @@
   <?php include 'c_subscribe-to-newsletter.php'; ?>
   <?php include 'c_invite-a-friend.php'; ?>    
 </div>
+<div class="clear"></div>
 
   
 <div id="bestsellers" class="bestsellers block"> 

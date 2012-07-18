@@ -24,6 +24,8 @@ function invite_friend() {
     
     $email = strval( $_POST['email'] );
     $friend_email = strval( $_POST['friend-email'] );
+    $name = strval( $_POST['name'] );
+    $friend_name = strval( $_POST['friend-name'] );
     
     $msg = '';
     
@@ -38,7 +40,7 @@ function invite_friend() {
       $headers = "From: Smuff <shop@smuff.ro>";
       $subject = "Invitatie de inscriere la newsletter-ul Smuff";
       $message = "Buna, \n\r\n\r";
-      $message .= "Prietenul tau XXX te-a invitat la newsletterul Smuff.\n\r";
+      $message .= "Prietenul tau (cu adresa email $email) te-a invitat la newsletterul Smuff.\n\r";
       $message .= "etc etc...";
       
       if (wp_mail($friend_email, $subject, $message, $headers)) {

@@ -6,11 +6,13 @@
   </h4>
   
   <div id="invite-friend-form" data-nonce="<?php echo wp_create_nonce('invite-friend') ?>" >
-    <input type="email" required="" placeholder="Adresa Dvs. de email" id="email" value="" name="EMAIL" class="text">    
+    <input type="text" required="" placeholder="Numele Dvs." id="name" value="" name="nume" class="text">
+    <input type="email" required="" placeholder="Adresa Dvs. de email" id="email" value="" name="EMAIL" class="email">    
     <br/>
-    <input type="email" required="" placeholder="Adresa prietenului de email" id="friend-email" value="" name="EMAIL" class="text">    
+    <input type="text" required="" placeholder="Prietenul Dvs." id="friend-name" value="" name="EMAIL" class="text">
+    <input type="email" required="" placeholder="Adresa prietenului de email" id="friend-email" value="" name="EMAIL" class="email">    
     <br/>
-    <input type="submit" value="Invita la newsletter" name="subscribe" id="invite" >
+    <input type="submit" value="Invitatie la newsletter" name="subscribe" id="invite" >
   </div>
 </div>
 
