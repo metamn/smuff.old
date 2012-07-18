@@ -262,7 +262,7 @@ div#widgetshoppingcart {
 
 
 #campaigns {
-  margin: 2.5em 0;
+  margin: 5em 0;
   background: url(img/dow-fatb-newsletter-3.png) no-repeat;
 }
 #campaigns strong {
@@ -349,19 +349,11 @@ div#widgetshoppingcart {
   float: right;
   width: 30%;
 }
-#fatboy h1 {
-  padding: 1em .3em;
-  font-variant: small-caps;
-  font-weight: bold;
-  background: white;
-  line-height: 1.2;
-  margin-top: 13em;
-  height: 5.2em;
-}
 #fatboy p {
   font-size: larger;
   background: white;
   padding: 1em;
+  margin-top: 44em;
 }
 
 
@@ -381,10 +373,15 @@ div#widgetshoppingcart {
 #invite-friend {
   background: #F99B0C;
 }
+#invite-friend .inverted {
+  background: black;
+  color: #F99B0C;
+  line-height: 1.5;
+}
 #stamp {
   position: relative;
-  top:-35em;
-  left: 340px;
+  top:-29em;
+  left: -7em;
   z-index: 1;
   height: 150px;
 }
