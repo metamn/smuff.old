@@ -352,17 +352,46 @@ div#widgetshoppingcart {
 */
 
 .campaign-box {
-  margin-top: 2.5em; 
-  padding: 1.5em; 
-  width: 54.3%;
+  margin-top: 2.5em;
+  width: 59%;
   float: left;
   font-size: larger;
 }
+
+
 #subscribe-newsletter {
-  background: #f25e18;
+  background: white;
 }
+#subscribe-newsletter #arrow {
+  width: 30%;
+  float: left;
+}
+#subscribe-newsletter #text {
+  width: 70%;
+  float: left;
+}
+#subscribe-newsletter #text h4 {
+  padding: 1em 3em 0;
+}
+#subscribe-newsletter #text form {
+  padding: 0 3.5em;
+}
+#subscribe-newsletter #text form input.text {
+  width: 90%;
+}
+#subscribe-newsletter #text #whatis {
+  position: relative;
+  top: -2em;
+  margin-left: 5em; 
+}
+
+
+
+
 #invite-friend {
   background: #F99B0C;
+  padding: 1.5em;
+  width: 54%;
 }
 #invite-friend .inverted {
   background: black;
@@ -379,7 +408,8 @@ div#widgetshoppingcart {
 .campaign-box #whatis {
   font-size: smaller;
   left: 180px;
-  top: -1.5em;
+  top: -1.6em;
+  position: relative;
 }
 
 #stamp {
