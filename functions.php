@@ -53,7 +53,7 @@ function invite_friend() {
       if (wp_mail($friend_email, $subject, $message, $headers)) {
         $msg = "Invitatia Dvs. a fost trimis cu succes.";
       } else {
-        $msg = "Nu am reusit sa trimitem invitatia Dvs. \n\r Va cerem scuze, va rugam incercati mai tarziu.";
+        $msg = "Nu am reusit sa trimitem invitatia Dvs. \n\rVa cerem scuze, va rugam incercati mai tarziu.";
       }
     }
    

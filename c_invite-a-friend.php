@@ -14,5 +14,9 @@
     <br/>
     <input type="submit" value="Invitatie la newsletter" name="subscribe" id="invite" >
   </div>
+  
+  <h4 id="whatis">
+    <a href="" title="Invita un prieten la newsletterul Smuff">Ce este?</a>
+  </h4>
 </div>
 
