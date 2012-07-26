@@ -35,29 +35,27 @@
         <div class="block">          
           <div id="product">
             <?php  include "product-thumb.php"; ?>
-          </div>
-        </div>
-        <div id="text">
-          <h4 id="title"><a href="" title="Promotia saptamanii pe Smuff">
-            Promotia<br/>saptamanii
-          </a></h4>
-          <h4 id="week"><?php 
-            echo $first_day_of_week . ' - ' . $last_day_of_week;
-            echo ' ' . $month . '<br/>'; 
-            echo 'saptamana ' . $week; ?> 
-          </h4>
-          <h4 id="offer">
-            <a href="<?php echo $product_link ?>" title="<?php echo $product_title ?>">
-              <strong>&mdash; <?php echo $percentage ?>%</strong> <br/> + livrare gratuita
-            </a>
-          </h4>
-          <h4 id="whatis">
-            <a href="" title="Promotia saptamanii pe Smuff">Ce este?</a>
-          </h4>
-          <div id="star">
-            <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-star.png">
-          </div>       
-        </div>          
+          </div>        
+          <div id="text">
+            <h4 id="title"><a href="" title="Promotia saptamanii pe Smuff">
+              Promotia<br/>saptamanii<br/><?php echo $week; ?>
+            </a></h4>
+            <h4 id="week"><?php 
+              echo $first_day_of_week . ' - ' . $last_day_of_week . ' ' .$month; ?>
+            </h4>
+            <h4 id="offer">
+              <a href="<?php echo $product_link ?>" title="<?php echo $product_title ?>">
+                <strong>&mdash; <?php echo $percentage ?>%</strong> <br/> + livrare gratuita
+              </a>
+            </h4>
+            <h4 id="whatis">
+              <a href="" title="Promotia saptamanii pe Smuff">Ce este?</a>
+            </h4>
+            <div id="star">
+              <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-star.png">
+            </div>       
+          </div> 
+        </div>         
       </div>
 <?php
     break;

@@ -263,7 +263,7 @@ div#widgetshoppingcart {
 
 #campaigns {
   margin: 5em 0;
-  background: url(img/dow-fatb-newsletter-3.png) no-repeat;
+  background: url(img/dow-fatb-newsletter-4.png) no-repeat;
 }
 #campaigns strong {
   font-size: large;
@@ -273,54 +273,46 @@ div#widgetshoppingcart {
 
 #dow {   
   height: 17.2em;
-  width: 65%;
-  margin-right: 5%;
-  float: left;
-  
-  position: relative;
-  top: -.2em;
 }
 #dow #product {
-  float: left;
-  width: 68%;
-  margin-left: 32%;
+  float: right;
+  width: 70%;
 }
 #dow #product .item {
   height: auto;
   box-shadow: 0 0 #fff;
 }
 #dow #product .item img {
-  border: 0px solid #fff;
+  padding: 0;
+  border: 0 none;
 }
 #dow #product .item .text {
   display: none;
 }
 
-#dow #text #title,
-#dow #text #week,
-#campaigns #whatis {
-  position: relative;
-  margin-left: .5em;
-  color: white;
+#dow #text {
+  background: white;
+  width: 29%;
+  float: left;
 }
+
 #dow #text #title {
   text-transform: uppercase;
   font-weight: bold;
   font-size: large;
   color: #f25e18;
-  top:  -12em;
-  margin-left: .2em;
+  margin: 1em;
 }
 #dow #text #title a, #dow #text #title a:visited {
   color: #f25e18;
 }
 #dow #text #week {
-  font-weight: bold;  
-  top: -19em;
+  font-weight: bold; 
+  margin-left: 1.5em;
 }
 #dow #text #offer {
   position: relative;
-  top: -29em;
+  top: -11em;
   left: 370px;
   width: 6em;
   text-align: center;
@@ -328,14 +320,13 @@ div#widgetshoppingcart {
   text-shadow:1px 1px #f0f0f0;
 }
 #dow #text #whatis {
-  top: -25em;
-}
-#campaigns #whatis a, #campaigns #whatis a:visited {
-  color: white;
+  top: -5em; 
+  position: relative;
+  margin-left: 1.5em;
 }
 #dow #star {
   position: relative;
-  top:-48.5em;
+  top:-26.5em;
   left: 340px;
   z-index: 1;
 }
