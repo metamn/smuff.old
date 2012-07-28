@@ -136,7 +136,8 @@ get_header(); ?>
         <?php }
       }
     ?>
-		
+    
+   		
 		<?php 
 		  if (!(is_page(array(429, 430)))) { // no comments on the checkout page
 		    if (comments_open()) {comments_template();}  
@@ -146,9 +147,9 @@ get_header(); ?>
 		<?php 
 		// deal of the week  
     $dow_posts = query_posts2('posts_per_page=1&cat=15');
-		include 'deal-of-the-week.php'; ?>
+		include 'c_deal-of-the-week.php'; ?>
 		
-		<?php include 'subscribe-to-newsletter.php'; ?>
+		<?php include 'c_subscribe-to-newsletter.php'; ?>
 		
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>

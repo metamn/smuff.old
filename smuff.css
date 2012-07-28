@@ -263,10 +263,26 @@ div#widgetshoppingcart {
 
 #campaigns {
   margin: 5em 0;
-  background: url(img/dow-fatb-newsletter-4.png) no-repeat;
+  background: url(img/dow-fatb-newsletter-4.png) no-repeat 0 100%;
+  border-bottom: 2px solid #cac1b2;
 }
+
+#campaigns h1 {
+  border-bottom: 1px solid #cac1b2;
+  text-shadow: 1px 1px #cac1b2;
+  padding: .5em;
+  font-size: 4.4em;
+}
+#campaigns h1 span {
+  background: #ea0d1c;
+  color: white;
+}
+
 #campaigns strong {
   font-size: large;
+}
+#dow #text, .campaign-box {
+  opacity: .9;
 }
 
 
@@ -304,7 +320,7 @@ div#widgetshoppingcart {
   margin: 1em;
 }
 #dow #text #title a, #dow #text #title a:visited {
-  color: #f25e18;
+  color: #ea0d1c;
 }
 #dow #text #week {
   font-weight: bold; 
@@ -389,13 +405,14 @@ div#widgetshoppingcart {
 
 
 #invite-friend {
-  background: #F99B0C;
+  background: white;
   padding: 1.5em;
   width: 54%;
+  opacity: .8;
 }
 #invite-friend .inverted {
-  background: black;
-  color: #F99B0C;
+  background: #EA0D1C;
+  color: white;
   line-height: 1.5;
 }
 #invite-friend input.text {

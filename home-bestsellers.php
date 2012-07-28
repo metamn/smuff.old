@@ -27,7 +27,8 @@
 <div id="noutati" class="hidden block"></div>
 
 
-<div id="campaigns" class="block small">  
+<div id="campaigns" class="block small">
+  <h1><span>Promotiile si concursurile veri 2012<span></h1>  
   <?php include 'c_fatboy.php'; ?>  
   <?php include 'c_deal-of-the-week.php' ?>
   <?php include 'c_subscribe-to-newsletter.php'; ?>

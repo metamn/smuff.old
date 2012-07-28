@@ -37,7 +37,7 @@
             <?php  include "product-thumb.php"; ?>
           </div>        
           <div id="text">
-            <h4 id="title"><a href="" title="Promotia saptamanii pe Smuff">
+            <h4 id="title"><a href="http://www.smuff.ro/despre-noi/promotia-saptamanii-2/" title="Promotia saptamanii pe Smuff">
               Promotia<br/>saptamanii<br/><?php echo $week; ?>
             </a></h4>
             <h4 id="week"><?php 
@@ -49,7 +49,7 @@
               </a>
             </h4>
             <h4 id="whatis">
-              <a href="" title="Promotia saptamanii pe Smuff">Ce este?</a>
+              <a href="http://www.smuff.ro/despre-noi/promotia-saptamanii-2/" title="Promotia saptamanii pe Smuff">Ce este?</a>
             </h4>
             <div id="star">
               <img src="<?php bloginfo('stylesheet_directory')?>/img/dow-star.png">

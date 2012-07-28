@@ -16,7 +16,7 @@
   </div>
   
   <h4 id="whatis">
-    <a href="" title="Invita un prieten la newsletterul Smuff">Ce este?</a>
+    <a href="http://www.smuff.ro/despre-noi/invita-un-prieten-la-newsletterul-smuff/" title="Invita un prieten la newsletterul Smuff">Ce este?</a>
   </h4>
 </div>
 
