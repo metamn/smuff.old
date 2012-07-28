@@ -30,10 +30,10 @@ function invite_friend() {
     $msg = '';
     
     if (!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
-      $msg .= 'Adresa Dvs. de email nu este ok';
+      $msg .= 'Adresa Dvs. de email nu este valid';
     } 
     if (!(filter_var($friend_email, FILTER_VALIDATE_EMAIL))) {
-      $msg .= "\n\r" . 'Adresa de email al prietenului Dvs. nu este ok';
+      $msg .= "\n\r" . 'Adresa de email al prietenului Dvs. nu este valid';
     }
     
     if ($msg == '') {
