@@ -257,6 +257,10 @@ div#widgetshoppingcart {
 }
 
 
+
+/* Campaigns
+*/
+
 /* Deal of the week
 */
 
@@ -266,17 +270,17 @@ div#widgetshoppingcart {
   background: url(img/dow-fatb-newsletter-4.png) no-repeat 0 100%;
   border-bottom: 2px solid #cac1b2;
 }
+.search #campaigns {
+  float: left;
+}
 
 #campaigns h1 {
-  border-bottom: 1px solid #cac1b2;
-  text-shadow: 1px 1px #cac1b2;
   padding: .5em;
   font-size: 4.4em;
-}
-#campaigns h1 span {
-  background: #ea0d1c;
+  background: #1c80b7;
   color: white;
 }
+
 
 #campaigns strong {
   font-size: large;
@@ -411,7 +415,7 @@ div#widgetshoppingcart {
   opacity: .8;
 }
 #invite-friend .inverted {
-  background: #EA0D1C;
+  background: #1c80b7;
   color: white;
   line-height: 1.5;
 }
@@ -436,6 +440,8 @@ div#widgetshoppingcart {
   z-index: 1;
   height: 150px;
 }
+
+
 
 
 

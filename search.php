@@ -115,13 +115,14 @@ get_header(); ?>
                       $show_category = true;
                       include "product-thumb.php";    
                       
-                      if ($i == 3) { include 'subscribe-to-newsletter.php'; }
-                      if ($i == 8) { include 'deal-of-the-week.php';}
-                      if ($i == 17) { include 'fatboy.php';}
+                      if ($i == 10) {                      
+                        // deal of the week  
+                        $dow_posts = query_posts2('posts_per_page=1&cat=2135');     
+                        include 'c_summer-2012.php';
+                      }
                       $i++;
                     }
-                  endwhile; 
-                  include 'subscribe-to-newsletter.php';
+                  endwhile;                   
                   ?>
               </div>              
               <div class="clear"></div>
@@ -150,12 +151,14 @@ get_header(); ?>
                     include "product-thumb.php";
                     $counter += 1;
                     
-                    if ($counter == 3) { include 'subscribe-to-newsletter.php'; }
-                    if ($counter == 8) { include 'deal-of-the-week.php';}
-                    if ($counter == 17) { include 'fatboy.php';}
+                    if ($counter == 10) {                      
+                      // deal of the week  
+                      $dow_posts = query_posts2('posts_per_page=1&cat=2135');     
+                      include 'c_summer-2012.php';
+                    }
+                    
                   }
                 endwhile;
-                include 'subscribe-to-newsletter.php';
                 ?>
               </div>
               <div class="clear"></div>	  

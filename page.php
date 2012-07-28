@@ -145,11 +145,9 @@ get_header(); ?>
 		?>
 		
 		<?php 
-		// deal of the week  
-    $dow_posts = query_posts2('posts_per_page=1&cat=15');
-		include 'c_deal-of-the-week.php'; ?>
-		
-		<?php include 'c_subscribe-to-newsletter.php'; ?>
+    // deal of the week  
+    $dow_posts = query_posts2('posts_per_page=1&cat=2135');     
+    include 'c_summer-2012.php' ?>
 		
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>

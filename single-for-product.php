@@ -169,12 +169,6 @@
   </div>
   
   
-  <?php 
-    // deal of the week  
-    $dow_posts = query_posts2('posts_per_page=1&cat=2135');
-    include 'deal-of-the-week.php'; 
-  ?>
-  
   
   <!--
   <div id="cadouri" class="block">
@@ -223,8 +217,7 @@
             if (in_category(10)) {
               $medium = true;
               include "product-thumb.php";
-              
-              if ($counter == 3) { include 'subscribe-to-newsletter.php'; }
+             
               $counter += 1;
             }                    
           endwhile; 
@@ -241,7 +234,14 @@
     </h4>    
   </div>
   
-  <?php include 'fatboy.php'; ?>
+  
+  
+  <?php 
+    // deal of the week  
+    $dow_posts = query_posts2('posts_per_page=1&cat=2135');     
+    include 'c_summer-2012.php' ?>
+  
+  
     
   <div id="recommended" class="bestsellers block">    
      <?php

@@ -19,7 +19,7 @@
   $new_products = query_posts2($args);
   
   // deal of the week  
-  $dow_posts = query_posts2('posts_per_page=1&cat=2135');
+  $dow_posts = query_posts2('posts_per_page=1&cat=2135'); /* 2135, 2101 */
 ?>
 
 <div id="home" class="block">  
