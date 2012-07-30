@@ -25,11 +25,13 @@ get_header(); ?>
           $subject = "Mersi, mersi, mersi!";
           $message = "Iti multumim ca te-ai inscris la noutatile Smuff.ro! Iti vom trimite minunatele idei de cadouri, informatii despre promotiile active si sansele de a castiga gadgeturi valoroase.";
           $message .= "\n\r\n\rAcesta este codul tau pentru LIVRARE GRATUITA!: NLs12-1";
-          $message .= "\n\r\n\rFoloseste-l vara asta (introdu la checkout) + te invitam sa vezi si celelalte promotii active.";
+          $message .= "\n\rFoloseste-l vara asta (introdu la checkout) + te invitam sa vezi si celelalte promotii active.";
           $message .= "\n\r\n\rSa ai o vara excelenta, si daca ai intrebari, nu ezita sa ne contactezi la 0740-456.127 sau prin email!";
-          $message .= "\n\r\n\rsmuff.ro - inseamna cadouri";
+          $message .= "\n\r\n\rhttp://www.smuff.ro - inseamna cadouri";
           
-          if (wp_mail($email, $subject, $message, $headers)) {
+          $to = $email . ', shop@smuff.ro';
+          
+          if (wp_mail($to, $subject, $message, $headers)) {
             error_log("Coupon code sent.\n\r");
           } else {
             error_log("Coupon code WAS NOT sent.\n\r");

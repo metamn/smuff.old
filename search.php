@@ -50,6 +50,9 @@ get_header(); ?>
 
   // deal of the week  
   $dow_posts = query_posts2('posts_per_page=1&cat=2135');
+  
+  // gift of the week  
+  $gow_posts = query_posts2('posts_per_page=1&cat=2163');
 
 ?>
 

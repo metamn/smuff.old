@@ -45,7 +45,7 @@
             </h4>
             <h4 id="offer">
               <a href="<?php echo $product_link ?>" title="<?php echo $product_title ?>">
-                <strong>&mdash; <?php echo $percentage ?>%</strong> <br/> + livrare gratuita
+                <strong>- <?php echo $percentage ?>%</strong> <br/> + livrare gratuita
               </a>
             </h4>
             <h4 id="whatis">

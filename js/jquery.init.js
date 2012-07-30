@@ -10,6 +10,8 @@ $(document).ready(function() {
     var friendEmail = $("#invite-friend-form #friend-email").val();
     var name = $("#invite-friend-form #name").val();
     var friendName = $("#invite-friend-form #friend-name").val();
+    var gow = $("#invite-friend-form #gow").val();
+    var gowLink = $("#invite-friend-form #gow-link").val();
     
     // Do the ajax
     $.post(
@@ -20,7 +22,9 @@ $(document).ready(function() {
         'email' : email,
         'friend-email' : friendEmail,
         'name' : name,
-        'friend-name' : friendName
+        'friend-name' : friendName,
+        'gow': gow,
+        'gow-link' : gowLink
       }, 
       function(response) {        
         alert(response.message);

@@ -24,8 +24,27 @@ function invite_friend() {
     
     $email = strval( $_POST['email'] );
     $friend_email = strval( $_POST['friend-email'] );
+    
     $name = strval( $_POST['name'] );
+    if (!(isset($name))) $name = '';
+    
     $friend_name = strval( $_POST['friend-name'] );
+    if (!(isset($friend_name))) $friend_name = '';
+    
+    $invite_product_title = strval( $_POST['gow'] );
+    if (!(isset($invite_product_title))) {
+      $product_title = '';
+    } else {
+      $product_title = ' pentru ' . $invite_product_title;
+    }  
+    
+    $invite_product_link = strval( $_POST['gow-link'] );
+    if (!(isset($invite_product_link))) {
+      $product_link = '';
+    } else {
+      $product_link = ': ' . $invite_product_link;
+    } 
+          
     
     $msg = '';
     
@@ -42,15 +61,16 @@ function invite_friend() {
       $message = "Salut $friend_name, \n\r\n\r";
       $message .= "Speram ca totul este ok la tine, si lucrurile iti merg bine. \n\r\n\r";
       $message .= "Prietenul tau $name te-a invitat sa te inscrii la newsletterul magazinului online de gadgeturi si cadouri Smuff (www.smuff.ro). \n\r";
-      $message .= "Astfel vei primi toate noutatile si promotiile ce apar, dar acum daca te inscrii la invitatia lui $name, amandoi intrati la concursul saptamanii pentru un set de pahare gheata. \n\r\n\r";
-      $message .= "<a href='http://eepurl.com/mjWSL'>Confirma aici, cu un singur click.</a> \n\r\n\r";
+      $message .= "Astfel vei primi toate noutatile si promotiile ce apar, dar acum daca te inscrii la invitatia lui $name, amandoi intrati la concursul saptamanii $product_title $product_link. \n\r\n\r";
+      $message .= "Confirma aici, cu un singur click: http://eepurl.com/mjWSL \n\r\n\r";
       $message .= " + avem si alte chestii mega misto! PISICUTE MOR CAND DAI CADOURI URATE, dar Smuff te scapa de la acest gand! Hai sa vezi ce avem, vei gasi Ocelari viruali, Tricouri electronice, Sabii laser Star Wars, Masina de bere si multe multe alte gadgeturi interesante. \n\r\n\r";
       $message .= " + + daca cumperi orice de la noi, intri si la Marele Concurs Smuff pentru un FATBOY ORIGINAL! \n\r";
       $message .= "Iti multumim ca ai devenit gizmonaut!  \n\r";
-      $message .= "$nume prin smuff.ro \n\r";
+      $message .= "$name prin http://www.smuff.ro \n\r";
       
+      $to = $friend_email . ', shop@smuff.ro';
       
-      if (wp_mail($friend_email, $subject, $message, $headers)) {
+      if (wp_mail($to, $subject, $message, $headers)) {
         $msg = "Invitatia Dvs. a fost trimis cu succes.";
       } else {
         $msg = "Nu am reusit sa trimitem invitatia Dvs. \n\rVa cerem scuze, va rugam incercati mai tarziu.";

@@ -414,7 +414,9 @@ div#widgetshoppingcart {
   width: 54%;
   opacity: .8;
 }
-#invite-friend .inverted {
+#invite-friend .inverted,
+#invite-friend .inverted a,
+#invite-friend .inverted a:visited  {
   background: #1c80b7;
   color: white;
   line-height: 1.5;
