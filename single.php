@@ -5,6 +5,13 @@
  */
 
 get_header();
+
+
+    // On special posts insert more data
+    // - summer sale 2012, 50% off
+    if (is_single(4721)) {
+    	$specials = query_posts2('posts_per_page=-1&cat=15');
+    }
 ?>
 
 

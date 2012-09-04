@@ -267,7 +267,7 @@ div#widgetshoppingcart {
 
 #campaigns {
   margin: 5em 0;
-  background: url(img/dow-fatb-newsletter-4.png) no-repeat 0 100%;
+  background: url(img/dow-fatb-newsletter-4.png) no-repeat 0 10em;
   border-bottom: 2px solid #cac1b2;
 }
 .search #campaigns {
@@ -279,6 +279,7 @@ div#widgetshoppingcart {
   font-size: 4.4em;
   background: #1c80b7;
   color: white;
+  margin-bottom: 0;
 }
 
 
@@ -378,9 +379,20 @@ div#widgetshoppingcart {
   font-size: larger;
 }
 
+#sales-50 {
+	height: 27.7em;
+	background: red;
+	opacity: 1;
+}
+#sales-50 img {
+	max-width: 100%;
+	height: auto;
+}
+
 
 #subscribe-newsletter {
   background: white;
+  margin-top: 1em;
 }
 #subscribe-newsletter #arrow {
   width: 30%;
