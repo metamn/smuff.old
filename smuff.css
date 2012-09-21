@@ -356,7 +356,7 @@ div#widgetshoppingcart {
 
 /* Fatboy
 */
-
+/*
 #fatboy {
   float: right;
   width: 30%;
@@ -367,6 +367,13 @@ div#widgetshoppingcart {
   height: 55em;
   display: block;
 }
+*/
+
+#sidebar #fatboy-campaign {
+	display: block;
+	margin-bottom: 2em;
+}
+
 
 
 /* Subscribe to newsletter, Invite a friend

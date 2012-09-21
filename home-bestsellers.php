@@ -27,7 +27,7 @@
 <div id="noutati" class="hidden block"></div>
 
 
-<?php include 'c_summer-2012.php' ?>
+<?php //include 'c_summer-2012.php' ?>
 
   
 <div id="bestsellers" class="bestsellers block"> 

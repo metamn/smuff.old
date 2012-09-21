@@ -151,7 +151,7 @@ get_header(); ?>
     // gift of the week  
     //$gow_posts = query_posts2('posts_per_page=1&cat=2163');
     
-    include 'c_summer-2012.php' ?>
+    //include 'c_summer-2012.php' ?>
 		
 		
 	  <?php edit_post_link('Modificare pagina.', '<p>', '</p>'); ?>

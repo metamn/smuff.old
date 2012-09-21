@@ -120,8 +120,8 @@ get_header(); ?>
                       
                       if ($i == 10) {                      
                         // deal of the week  
-                        $dow_posts = query_posts2('posts_per_page=1&cat=2135');     
-                        include 'c_summer-2012.php';
+                        //$dow_posts = query_posts2('posts_per_page=1&cat=2135');     
+                        //include 'c_summer-2012.php';
                       }
                       $i++;
                     }

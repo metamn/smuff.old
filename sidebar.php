@@ -78,6 +78,12 @@
       </div>
       -->
       
+      <div id="fatboy-campaign">
+      	<a href="http://www.smuff.ro/despre-noi/marele-concurs-pentru-marele-fatboy/">
+      		<img src="<?php bloginfo('stylesheet_directory'); ?>/img/fatboy.png" />
+      	</a>
+      </div>
+      
       <?php 
         include "home-tags.php";
         include "home-icons.php";
