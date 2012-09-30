@@ -59,7 +59,7 @@ body {
 */
 
 #header {
-  background: #e6e2d9 url(img/flowers.png) no-repeat 0 -3em;
+  background: #e6e2d9;
 }
 
 #tooltips {
@@ -1067,7 +1067,8 @@ h4.all-products-link a, h4.all-products-link span {
 
 #bestsellers {
   margin: 1.7em 0;
-  background: url(img/flowers.png) no-repeat scroll 55% 22.5% #E6E2D9;
+  /*background: url(img/flowers.png) no-repeat scroll 55% 22.5% #E6E2D9;*/
+  background: #E6E2D9;
 }
 #bestsellers #col-2 .items {
   float: right;
@@ -1553,7 +1554,8 @@ div.thanks-error {
   margin-right: 5em;
 }
 #from-category, #random  {
-  background: url(img/flowers.png) no-repeat scroll 62% 94.5% #E6E2D9;
+  /*background: url(img/flowers.png) no-repeat scroll 62% 94.5% #E6E2D9; */
+  background: #E6E2D9;
 }
 #single .more-products  {
   margin-top: 5em;
@@ -2459,7 +2461,8 @@ body.blog #post-sponsor {
 #footer-info {
   margin: 5em 0 0;
   padding-top: 5em;  
-  background: url(img/flowers.png) no-repeat scroll 0% 110% #E6E2D9;
+  /*background: url(img/flowers.png) no-repeat scroll 0% 110% #E6E2D9; */
+  background: #E6E2D9;
 }
 #footer-info div {
   margin-bottom: 2em; 
