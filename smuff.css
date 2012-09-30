@@ -1851,16 +1851,27 @@ input.search {
 }
 
 
-#sidebar #home-tag-icons {
+#home-tag-icons {
   margin: 10em 0 5em;
 }
-#sidebar #home-tag-icons ul {
+#home-tag-icons ul {
   list-style: none;
   text-align: center;
 }
-#sidebar #home-tag-icons ul li {
+#home-tag-icons ul li {
+  width: 20%;
+  margin-right: 5%;
   margin-bottom: 5em;
 }
+#home-tag-icons ul li.last {
+  margin-right: 0;
+}
+#home-tag-icons ul li img {
+  margin-bottom: 1em;
+  height: 100px;
+}
+
+
 
 
 #contact {

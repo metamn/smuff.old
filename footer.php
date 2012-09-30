@@ -1,4 +1,4 @@
-
+<?php include "home-icons.php" ?>
 <?php include "footer-info.php" ?>
 <?php include "footer-subscribe.php" ?>		
 

@@ -1,5 +1,5 @@
-<div id="home-tag-icons">
-  <ul>
+<div id="home-tag-icons" class="block">
+  <ul class="inline-list">
     <li>
       <a title="Cadouri pentru smarthpone" href="<?php bloginfo('home')?>/tag/magazin-accesorii-apple">
         <img title="Cadouri pentru smarthpone" src="<?php bloginfo('stylesheet_directory')?>/img/icon-smartphone.png" />
@@ -21,7 +21,7 @@
       </a>      
     </li>
     
-    <li>
+    <li class="last">
       <a title="Cadouri pentru comfortul de acasa" href="<?php bloginfo('home')?>/tag/magazin-comfort-pentru-acasa">
         <img title="Cadouri pentru comfortul de acasa" src="<?php bloginfo('stylesheet_directory')?>/img/icon-homeimprovement.png" />
         <h4>Confortul de acasa</h4>

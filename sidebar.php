@@ -86,7 +86,6 @@
       
       <?php 
         include "home-tags.php";
-        include "home-icons.php";
       ?>
     
     <?php } ?>
