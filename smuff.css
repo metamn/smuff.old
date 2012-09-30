@@ -63,12 +63,12 @@ body {
 }
 
 #tooltips {
-  margin: 1.2em 0 0;  
+  margin: 2em 0 0;  
   padding: .5em;
   position: absolute;
   width: auto;
   max-width: 300px;
-  left: 550px;
+  left: 450px;
   
   font-size: larger;
   font-style: italic;
