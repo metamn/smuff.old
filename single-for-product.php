@@ -101,7 +101,9 @@
             <td><?php include "share-pinterest.php" ?></td>
             <td><g:plusone size="medium"></g:plusone></td>
           </tr>
-        </table>                     
+        </table>    
+        
+        <?php include 'c_subscribe-to-newsletter.php' ?>
       </div>
       
       <!--
@@ -127,6 +129,8 @@
       </div>
       --> 
     </div>
+    
+    
     
     
     <div id="accordion" class="block">
@@ -244,14 +248,14 @@
     //$gow_posts = query_posts2('posts_per_page=1&cat=2163');
      
     // include 'c_summer-2012.php' ?>
-  
-  
+
     
   <div id="recommended" class="bestsellers block">    
      <?php
         $related_posts = MRP_get_related_posts($postid, true);
         if ($related_posts) { ?>        
           <h2>Produse similare</h2>
+          <div class="block"><?php include 'c_subscribe-to-newsletter.php' ?></div>
           <?php foreach ($related_posts as $post) {
             setup_postdata($post);
             $medium = true;

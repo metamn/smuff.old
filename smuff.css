@@ -424,6 +424,25 @@ div#widgetshoppingcart {
   margin-left: 5em; 
 }
 
+.single #subscribe-newsletter {
+	width: 100%;
+	margin: 1em 0;
+	background: #FFCE0D;
+}
+.single #subscribe-newsletter #arrow {
+	display: none;
+}
+.single #subscribe-newsletter #text #whatis {
+	top: -1.5em;
+	margin-left: 18em;
+}
+.single #subscribe-newsletter #text h4 {
+  padding: 1em 1em 0;
+}
+.single #subscribe-newsletter #text form {
+  padding: 0 1em;
+}
+
 
 
 
@@ -1885,7 +1904,7 @@ input.search {
   padding: 0;
 }
 #sidebar #contact-info {
-  margin: 8em 0;
+  margin: 18em 0;
 }
 #sidebar #no-shoutbox {
   margin: 0;
