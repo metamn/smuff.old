@@ -381,7 +381,7 @@ div#widgetshoppingcart {
 
 .campaign-box {
   margin-top: 2.5em;
-  width: 59%;
+  width: 100%;
   float: left;
   font-size: larger;
 }
@@ -420,26 +420,26 @@ div#widgetshoppingcart {
 }
 #subscribe-newsletter #text #whatis {
   position: relative;
-  top: -2em;
-  margin-left: 5em; 
+  top: -1.5em;
+  margin-left: 15.5em; 
 }
 
-.single #subscribe-newsletter {
+#subscribe-newsletter {
 	width: 100%;
 	margin: 1em 0;
 	background: #FFCE0D;
 }
-.single #subscribe-newsletter #arrow {
+#subscribe-newsletter #arrow {
 	display: none;
 }
-.single #subscribe-newsletter #text #whatis {
+#subscribe-newsletter #text #whatis {
 	top: -1.5em;
 	margin-left: 18em;
 }
-.single #subscribe-newsletter #text h4 {
+#subscribe-newsletter #text h4 {
   padding: 1em 1em 0;
 }
-.single #subscribe-newsletter #text form {
+#subscribe-newsletter #text form {
   padding: 0 1em;
 }
 

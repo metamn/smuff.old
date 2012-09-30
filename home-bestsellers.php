@@ -28,7 +28,7 @@
 
 
 <?php //include 'c_summer-2012.php' ?>
-<?php include 'c_subscribe-to-newsletter.php' ?>
+<div class='block'><?php include 'c_subscribe-to-newsletter.php' ?></div>
 
   
 <div id="bestsellers" class="bestsellers block"> 
