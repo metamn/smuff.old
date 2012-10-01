@@ -1,6 +1,3 @@
-<meta property="fb:admins" content="csbartus"/>
-<meta property="fb:app_id" content="213629083432"/>
-
 <?php if (is_single()) { 
   $imgs = post_attachements($post->ID);
   if ($imgs) {
