@@ -401,7 +401,7 @@ div#widgetshoppingcart {
 #subscribe-newsletter {
 	width: 100%;
 	margin: 1em 0;
-	background: #FFCE0D;
+	background: #cac1b2;
 }
 #subscribe-newsletter .arrow-right {
   width: 0; 
@@ -410,22 +410,26 @@ div#widgetshoppingcart {
   border-top: 5em solid transparent;
   border-right: 5em solid transparent;
   border-bottom: 5em solid transparent;
-  border-left: 5em solid #000;
+  border-left: 5em solid #4A4742;
   
   float: left;
 }
 #subscribe-newsletter #text {
-  width: 55%;
+  width: 51%;
+  margin-right: 4%;
   float: left;
 }
 #subscribe-newsletter h4 {
   padding: 1em 0 0;
 }
+#subscribe-newsletter #text h4 {
+  border-bottom: 1px dotted;
+}
 #subscribe-newsletter #text form {
   padding: 0;
 }
 #subscribe-newsletter #text form input.text {
-  width: 90%;
+  width: 98%;
 }
 #subscribe-newsletter #text #whatis {
 	position: relative;
@@ -790,7 +794,9 @@ table.total td.c3 {
   list-style-type: none;
 }
 #checkout #login ul.loginlist li {
-
+}
+#checkout .fb-login-button {
+	margin-bottom: 1em;
 }
 
 table.wpsc_checkout_table textarea, table.wpsc_checkout_table input.text {
