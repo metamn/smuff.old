@@ -109,6 +109,8 @@
 	  
 	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-loading="<?php bloginfo('stylesheet_directory')?>/assets/ajax-loader.gif" class="hidden"></div>	  	
 	  
+	  <?php include 'facebook-sdk.php' ?>
+	  
 	  <div class="container"><!-- closed in the footer -->
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 

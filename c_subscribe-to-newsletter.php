@@ -9,6 +9,6 @@
   </div>
   <div id="facebook-connect">
   	<h4>Sau</h4>
-  	Facebook connect
+  	<div class="fb-login-button" scope="email">Conectare cu Facebook</div>
   </div>
 </div>

@@ -437,6 +437,9 @@ div#widgetshoppingcart {
 	float: left;
 	width: 10%;
 }
+#subscribe-newsletter #facebook-connect .fb-login-button {
+	margin-top: .5em;
+}
 
 
 
