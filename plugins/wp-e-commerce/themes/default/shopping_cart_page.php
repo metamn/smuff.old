@@ -358,7 +358,7 @@
   
     <div id="form" class="column span-7 append-1">	    
 	    <h2 class="checkout">Shopping rapid <br/>in 10 secunde</h2>
-	    <div class="fb-login-button" scope="email">Conectare cu Facebook</div>
+	    
 	    <table class='wpsc_checkout_table'>
 		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
 			    <?php if(wpsc_is_shipping_details()) : ?>
