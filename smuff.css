@@ -439,12 +439,15 @@ div#widgetshoppingcart {
 
 #subscribe-newsletter #facebook-connect {
 	float: left;
-	width: 10%;
+	width: 20%;
 }
 #subscribe-newsletter #facebook-connect .fb-login-button {
 	margin-top: .5em;
 }
-
+#subscribe-newsletter #facebook-connect #auth-loggedin {
+	padding: 1.5em 1em;
+	font-size: small;
+}
 
 
 #invite-friend {
