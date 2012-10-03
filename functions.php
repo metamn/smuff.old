@@ -16,6 +16,42 @@ function get_tag_id_by_name($tag_name) {
 }
 
 
+// Subscribe via mailchimp
+function mailchimp_subscribe() {
+  $nonce = $_POST['nonce'];  
+  if ( wp_verify_nonce( $nonce, 'mailchimp_subscribe' ) ) {
+  
+    $email = strval( $_POST['email'] );
+    if (!is_email($email)) {
+      $ret = array(
+        'success' => false,
+        'message' => 'Adresa de email nu este valida.'
+      );      
+    } else {
+      $birthday = strval( $_POST['birthday'] );
+      
+      $msg = "Okay";
+      
+      $ret = array(
+        'success' => true,
+        'message' => $msg
+      );  
+    }  
+  } else {
+    $ret = array(
+      'success' => false,
+      'message' => 'Nonce error'
+    );
+  }
+    
+  $response = json_encode($ret);
+  header( "Content-Type: application/json" );
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_mailchimp_subscribe', 'mailchimp_subscribe');
+add_action( 'wp_ajax_nopriv_mailchimp_subscribe', 'mailchimp_subscribe' );
+
 
 // Invite a friend
 function invite_friend() {

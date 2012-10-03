@@ -32,6 +32,24 @@
 				// user logs ins
 				FB.api('/me', function(me) {
 					if (me.email) {
+						jQuery(document).ready(function() {
+						
+							var ajaxurl = jQuery("#ajax-url").attr("data-url");
+							var nonce = jQuery("#fb-login-nonce").attr("data-nonce");
+						
+							jQuery.post(
+								ajaxurl, 
+								{
+									'action' : 'mailchimp_subscribe',
+									'nonce' : nonce,
+									'email' : me.email,
+									'birthday' : me.birthday
+								}, 
+								function(response) {        
+									alert(response.message);       
+								}
+							);
+						});
 						alert(me.email);
 					} else {
 						alert('no email');
@@ -65,6 +83,7 @@
 		<div id="auth-loggedout">
 			<h4>Sau</h4>
 			<div class="fb-login-button" scope="email,user_birthday">Conectare cu Facebook</div>
+			<span id="fb-login-nonce" data-nonce="<?php echo wp_create_nonce('mailchimp_subscribe') ?>"></span>
 		</div>
 		<div id="auth-loggedin" style="display:none">
 			<strong><span id="auth-displayname"></span></strong>, deja esti conectat cu Smuff prin Facebook.
