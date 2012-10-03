@@ -30,7 +30,22 @@ function mailchimp_subscribe() {
     } else {
       $birthday = strval( $_POST['birthday'] );
       
-      $msg = "Okay";
+      	
+			// Set up Mailchimp
+			require_once('MCAPI.class.php');
+			$api = new MCAPI('bd5532985c6eeb4e315fcd8ad323d2fe-us5');
+			$merge_vars = Array( 
+					'EMAIL' => $email
+			);
+			$list_id = "4622c90106";
+			
+			if ($api->listSubscribe($list_id, $email, $merge_vars) === true) {
+					// It worked!   
+					$msg = 'Succes! Un email de confirmare de inscriere la newsletter a fost trimis la adresa ' . $email;
+			} else {
+					// An error ocurred, return error message   
+					$msg = 'Eroare inscriere la newsletter. ' . $api->errorMessage;
+			}
       
       $ret = array(
         'success' => true,

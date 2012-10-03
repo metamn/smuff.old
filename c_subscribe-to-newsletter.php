@@ -50,9 +50,8 @@
 								}
 							);
 						});
-						alert(me.email);
 					} else {
-						alert('no email');
+						alert('Eroare: Nu am primit adresa Dvs. de email de la Facebook.');
 					}
 				});
 			}
@@ -86,7 +85,7 @@
 			<span id="fb-login-nonce" data-nonce="<?php echo wp_create_nonce('mailchimp_subscribe') ?>"></span>
 		</div>
 		<div id="auth-loggedin" style="display:none">
-			<strong><span id="auth-displayname"></span></strong>, deja esti conectat cu Smuff prin Facebook.
+			<strong><span id="auth-displayname"></span></strong>, esti conectat cu Smuff prin Facebook.
 		</div>
   </div>
 </div>
