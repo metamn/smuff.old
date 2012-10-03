@@ -1347,6 +1347,11 @@ a.all-products-link, span.all-products-link {
 */
 
 
+#single .category-discontinued .item {
+	margin: 1em 0;
+}
+
+
 body.blog #single #content #post {
   background: #DFDBD0;
   padding: 1em;
