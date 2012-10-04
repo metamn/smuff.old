@@ -181,7 +181,7 @@
 							<p>Anunta-ma cand va fi disponibil.</p>
 							<?php 
 								$mailchimp_button = 'Anunta-ma';
-								include 'mailchimp.php'; 
+								include 'mailchimp-direct.php'; 
 							?>
 						</div>
           <?php }

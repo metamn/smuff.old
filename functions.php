@@ -15,6 +15,56 @@ function get_tag_id_by_name($tag_name) {
   return $tag_ID;
 }
 
+// Subscribe by email, but not via Mailchimp, instead manually will be added to a list
+function susbscribe_email() {
+  $nonce = $_POST['nonce'];  
+  if ( wp_verify_nonce( $nonce, 'mailchimp_subscribe' ) ) {
+    
+    $email = strval( $_POST['email'] );
+    
+    $msg = '';
+    
+    if (!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+      $msg .= 'Adresa Dvs. de email nu este valid';
+    } 
+    
+    if ($msg == '') {
+      $headers = "From: Smuff <shop@smuff.ro>";
+      $subject = "New email address";
+      $message = "A new email address to add to Mailchimp, \n\r\n\r";
+      $message .= $email;
+      
+      $to = 'shop@smuff.ro';
+      
+      if (wp_mail($to, $subject, $message, $headers)) {
+        $msg = "Adresa Dvs. de email a fost inregistrata";
+      } else {
+        $msg = "Nu am reusit sa inregistram adresa Dvs. de email. \n\rVa cerem scuze, va rugam incercati mai tarziu.";
+      }
+    }
+   
+    $ret = array(
+      'success' => true,
+      'message' => $msg
+    );  
+  
+  } else {
+    $ret = array(
+      'success' => false,
+      'message' => 'Eroare de sistem. Va cerem scuze, analizam problema.'
+    );
+  }
+    
+  $response = json_encode($ret);
+  header( "Content-Type: application/json" );
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_subscribe_email', 'subscribe_email');
+add_action( 'wp_ajax_nopriv_subscribe_email', 'subscribe_email' );
+
+
+
 // Subscribe via mailchimp
 function mailchimp_subscribe() {
   $nonce = $_POST['nonce'];  

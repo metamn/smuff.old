@@ -2,11 +2,48 @@ $(document).ready(function() {
 
   var ajaxurl = $("#ajax-url").attr("data-url");
   
-  // Mailchimp direct
+  
+  // Tooltips on email subscribe
+  // - on hover for smuff, straplines, main categories
+  $('.campaign-box .tooltip').hover(
+    function () {
+      tooltip = $(this).attr('alt');
+      $('.campaign-box #tooltips').html(tooltip);
+      $('.campaign-box #main-name').addClass('hidehide');
+      $('.campaign-box #tooltips').addClass('tooltips-highlighted');      
+    }, 
+    function () {
+      $('.campaign-box #tooltips').html('');
+      $('.campaign-box #tooltips').removeClass('tooltips-highlighted');
+      $('.campaign-box #main-name').removeClass('hidehide');
+  });
+  
+  // Mailchimp, manual subscribe
   $("#mailchimp-direct #invite").click(function() {  
     // Get query parameters
     var nonce = $("#mailchimp-direct").attr("data-nonce");    
     var email = $("#mailchimp-direct #email").val();
+    
+    // Do the ajax
+    $.post(
+      ajaxurl, 
+      {
+        'action' : 'subscribe_email',
+        'nonce' : nonce,
+        'email' : email
+      }, 
+      function(response) {        
+        alert(response.message);
+      }
+    );
+    
+  });
+  
+  // Mailchimp, subscribe via api
+  $("#mailchimp-api #invite").click(function() {  
+    // Get query parameters
+    var nonce = $("#mailchimp-api").attr("data-nonce");    
+    var email = $("#mailchimp-api #email").val();
     
     // Do the ajax
     $.post(
@@ -331,17 +368,17 @@ $(document).ready(function() {
 
   // Tooltips on startpage
   // - on hover for smuff, straplines, main categories
-  $('.tooltip').hover(
+  $('#header .tooltip').hover(
     function () {
       tooltip = $(this).attr('alt');
-      $('#tooltips').html(tooltip);
-      $('#main-name').addClass('hidehide');
-      $('#tooltips').addClass('tooltips-highlighted');      
+      $('#header #tooltips').html(tooltip);
+      $('#header #main-name').addClass('hidehide');
+      $('#header #tooltips').addClass('tooltips-highlighted');      
     }, 
     function () {
-      $('#tooltips').html('');
-      $('#tooltips').removeClass('tooltips-highlighted');
-      $('#main-name').removeClass('hidehide');
+      $('#header #tooltips').html('');
+      $('#header #tooltips').removeClass('tooltips-highlighted');
+      $('#header #main-name').removeClass('hidehide');
   });
   
   // jQuery Tools Tooltip
