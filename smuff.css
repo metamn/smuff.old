@@ -432,6 +432,7 @@ div#widgetshoppingcart {
   width: 98%;
 }
 #subscribe-newsletter #text #whatis {
+	display: none;
 	position: relative;
 	top: -1.5em;
 	margin-left: 11em;

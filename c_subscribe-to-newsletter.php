@@ -3,6 +3,7 @@
 	window.fbAsyncInit = function() {
 		FB.init({
 			appId      : '348406981918786', // App ID
+			channelUrl : '//' + window.location.hostname + '/facebook-channel-url.php',
 			status     : true, // check login status
 			cookie     : true, // enable cookies to allow the server to access the session
 			xfbml      : true  // parse XFBML
@@ -46,7 +47,9 @@
 									'birthday' : me.birthday
 								}, 
 								function(response) {        
-									alert(response.message);       
+									if (response.success) { 
+										alert(response.message);  
+									}
 								}
 							);
 						});

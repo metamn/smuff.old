@@ -255,7 +255,7 @@
         $related_posts = MRP_get_related_posts($postid, true);
         if ($related_posts) { ?>        
           <h2>Produse similare</h2>
-          <div class="block"><?php include 'c_subscribe-to-newsletter.php' ?></div>
+          <div class="block"><?php // second FB Connect not working .... include 'c_subscribe-to-newsletter.php' ?></div>
           <?php foreach ($related_posts as $post) {
             setup_postdata($post);
             $medium = true;
