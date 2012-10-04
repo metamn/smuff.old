@@ -15,7 +15,6 @@ function get_tag_id_by_name($tag_name) {
   return $tag_ID;
 }
 
-
 // Subscribe via mailchimp
 function mailchimp_subscribe() {
   $nonce = $_POST['nonce'];  
@@ -27,10 +26,8 @@ function mailchimp_subscribe() {
         'success' => false,
         'message' => 'Adresa de email nu este valida.'
       );      
-    } else {
-      $birthday = strval( $_POST['birthday'] );
-      
-      	
+    } else {	
+			
 			// Set up Mailchimp
 			require_once('MCAPI.class.php');
 			$api = new MCAPI('bd5532985c6eeb4e315fcd8ad323d2fe-us5');

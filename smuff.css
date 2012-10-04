@@ -257,6 +257,17 @@ div#widgetshoppingcart {
 }
 
 
+/* New developments
+*/
+
+
+#product-discontinued h3 {
+	color: #f25e18;
+}
+#product-discontinued input.text {
+	width: 80%;
+}
+
 
 /* Campaigns
 */

@@ -46,17 +46,27 @@
     
     <div id="post-meta" class="column span-6 last">
       <div id="post-shopping" class="box">
-        <?php //include "shop-form.php" ?>
         <?php 
-          $product_id = get_post_meta($post->ID, 'product_id', single);
-          if ($product_id) {        
-            echo wpsc_display_products_page('product_id='.$product_id);         
-          }      
+          if (in_category(10)) {
+          	$product_id = get_post_meta($post->ID, 'product_id', single);
+						if ($product_id) {        
+							echo wpsc_display_products_page('product_id='.$product_id);         
+						} ?>
+						<div id="wishlist">
+							<?php 
+							if (function_exists('wpfp_link')) { wpfp_link(); } ?>
+						</div>
+          <?php } else { ?>
+          	<div id="product-discontinued">
+							<h3>Acest produs a fost discontinuat</h3>
+							<p>Anunta-ma cand va fi disponibil.</p>
+							<?php 
+								$mailchimp_button = 'Anunta-ma';
+								include 'mailchimp-direct.php'; 
+							?>
+						</div>
+          <?php }
         ?>
-        
-        <div id="wishlist">
-          <?php if (function_exists('wpfp_link')) { wpfp_link(); } ?>
-        </div>
       </div>
       
       <div id="shopping-info" class="box"> 
@@ -159,12 +169,22 @@
     
     <div id="post-shopping2" class="block">
       <div id="post-shopping" class="box">
-        <?php //include "shop-form.php" ?>
         <?php 
-          $product_id = get_post_meta($post->ID, 'product_id', single);
-          if ($product_id) {        
-            echo wpsc_display_products_page('product_id='.$product_id);         
-          }      
+          if (in_category(10)) {
+          	$product_id = get_post_meta($post->ID, 'product_id', single);
+						if ($product_id) {        
+							echo wpsc_display_products_page('product_id='.$product_id);         
+						} ?>
+          <?php } else { ?>
+          	<div id="product-discontinued">
+							<h3>Acest produs a fost discontinuat</h3>
+							<p>Anunta-ma cand va fi disponibil.</p>
+							<?php 
+								$mailchimp_button = 'Anunta-ma';
+								include 'mailchimp.php'; 
+							?>
+						</div>
+          <?php }
         ?>
       </div>
       
@@ -199,6 +219,8 @@
   
   -->
   
+  
+	<?php include 'c_subscribe-to-new-products.php' ?>
   
   
   <?php 

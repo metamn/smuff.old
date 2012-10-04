@@ -1,6 +1,29 @@
 $(document).ready(function() { 
 
   var ajaxurl = $("#ajax-url").attr("data-url");
+  
+  // Mailchimp direct
+  $("#mailchimp-direct #invite").click(function() {  
+    // Get query parameters
+    var nonce = $("#mailchimp-direct").attr("data-nonce");    
+    var email = $("#mailchimp-direct #email").val();
+    
+    // Do the ajax
+    $.post(
+      ajaxurl, 
+      {
+        'action' : 'mailchimp_subscribe',
+        'nonce' : nonce,
+        'email' : email
+      }, 
+      function(response) {        
+        alert(response.message);
+      }
+    );
+    
+  });
+  
+  
 
   // Invite a friend
   $("#invite-friend #invite").click(function() {  
