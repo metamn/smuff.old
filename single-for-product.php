@@ -64,6 +64,7 @@
 									<p>Anunta-ma cand va fi disponibil.</p>
 									<?php 
 										$mailchimp_button = 'Anunta-ma';
+										$mailchimp_param = $product_name;
 										include 'mailchimp-direct.php'; 
 									?>
 								</div> <?php

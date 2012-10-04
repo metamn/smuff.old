@@ -18,11 +18,14 @@ $(document).ready(function() {
       $('.campaign-box #main-name').removeClass('hidehide');
   });
   
+  
+  
   // Mailchimp, manual subscribe
   $("#mailchimp-direct #invite").click(function() {  
     // Get query parameters
     var nonce = $("#mailchimp-direct").attr("data-nonce");    
     var email = $("#mailchimp-direct #email").val();
+    var param = $("#mailchimp-direct #param").val();
     
     // Do the ajax
     $.post(
@@ -30,7 +33,8 @@ $(document).ready(function() {
       {
         'action' : 'subscribe_email',
         'nonce' : nonce,
-        'email' : email
+        'email' : email,
+        'param' : param
       }, 
       function(response) {        
         alert(response.message);

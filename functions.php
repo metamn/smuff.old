@@ -21,6 +21,7 @@ function susbscribe_email() {
   if ( wp_verify_nonce( $nonce, 'mailchimp_subscribe' ) ) {
     
     $email = strval( $_POST['email'] );
+    $param = strval( $_POST['param'] );
     
     $msg = '';
     
@@ -32,7 +33,8 @@ function susbscribe_email() {
       $headers = "From: Smuff <shop@smuff.ro>";
       $subject = "New email address";
       $message = "A new email address to add to Mailchimp, \n\r\n\r";
-      $message .= $email;
+      $message .= "Email: " . $email . "\n\r";
+      $message .= "Info: " . $param;
       
       $to = 'shop@smuff.ro';
       
