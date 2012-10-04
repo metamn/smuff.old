@@ -8,6 +8,7 @@
     	$mailchimp_button = 'Da, vreau!';
     	include 'mailchimp-direct.php'; 
     ?>  
-    <a id="whatis" href="http://www.smuff.ro/despre-noi/inscriere-la-newsletter/" title="Newsletterul Smuff">Ce este?</a>  
+    <div id="tooltips" class="block"></div>    
+    <a id="whatis" class="tooltip" alt="<?php echo page_excerpt('despre-noi/inscriere-la-newsletter'); ?>" href="<?php bloginfo('home'); ?>/despre-noi/inscriere-la-newsletter" title="Ce este newsletterul Smuff">Ce este?</a> 
   </div>
 </div>

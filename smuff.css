@@ -472,6 +472,25 @@ div#widgetshoppingcart {
 }
 
 
+#subscribe-new-products {
+	background: yellow;
+	margin: 2em 0;
+	padding: 1em;
+}
+#subscribe-new-products h4, #subscribe-new-products #mailchimp-direct {
+	float: left;
+	width: 35%;
+	margin-right: 5%;
+}
+#subscribe-new-products #whatis {
+	float: left;
+	top: 0;
+	left: 0;
+	width: 10%;
+}
+
+
+
 #invite-friend {
   background: white;
   padding: 1.5em;
@@ -1370,11 +1389,6 @@ a.all-products-link, span.all-products-link {
 
 /* Single for Post 
 */
-
-
-#single .category-discontinued .item {
-	margin: 1em 0;
-}
 
 
 body.blog #single #content #post {

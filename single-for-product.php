@@ -219,9 +219,9 @@
   
   -->
   
-  
-	<?php include 'c_subscribe-to-new-products.php' ?>
-  
+  <div class="block">
+		<?php include 'c_subscribe-to-new-products.php' ?>
+  </div>
   
   <?php 
     $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
