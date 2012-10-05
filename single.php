@@ -26,7 +26,7 @@ get_header();
 	      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 	      
 	        <?php 	          
-	          if ((in_category(10)) || (in_category(2221))) {
+	          if ((in_category(10)) || (in_category(2237))) { //2221
 	            include "single-for-product.php";
 	          } else {
 	            include "single-for-post.php";

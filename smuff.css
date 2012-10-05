@@ -10,8 +10,8 @@
 . szurke/feketen: #666;
 . szurke/hatteren: #bbb8b1
 . fekete/font: #111
-. narancs/kiemeles: #f25e18
-  . zold/ok: #26BF5A
+. narancs/kiemeles: #F25F18 // #F25F18
+  . zold/ok: #10A26F // #10A26F
   . piros/error: #A53B08
   . sarga: #FFCE0D
 . kek/price: #84C4D1
@@ -108,7 +108,7 @@ body {
   margin: .7em 0 .2em 0;
 }
 .strapline{  
-  color: #f25e18;
+  color: #F25F18;
   font-size: .4em;
   font-weight: bold;
   letter-spacing: -1px;
@@ -116,12 +116,12 @@ body {
 }
 .strapline a, .strapline a:visited, .strapline a:active, .strapline a:hover {  
   color: #DFDBD0;
-  background: #f25e18;
+  background: #F25F18;
   padding: .1em;
 }
 .strapline a:hover, .strapline a.active {
   color: #DFDBD0;
-  background: #f25e18;  
+  background: #F25F18;  
 }
 
 
@@ -161,7 +161,7 @@ body {
   line-height: 1;
 }
 #menu li.all-products-link a, #menu li.all-products-link a:visited {
-  color: #f25e18;
+  color: #F25F18;
 }
 
 
@@ -175,7 +175,7 @@ div#widgetshoppingcart {
   margin-bottom: 1.5em;
 }
 #cart a, #cart a:visited {
-  color: #f25e18;
+  color: #F25F18;
 }
 #cart h3 {
   text-transform: uppercase;
@@ -200,7 +200,7 @@ div#widgetshoppingcart {
 
 
 #pricing-policy {
-  background: #39A712;
+  background: #10A26F;
   color: white;
   text-align: center;
   cursor: pointer;
@@ -214,7 +214,7 @@ div#widgetshoppingcart {
 }
 
 #pricing-policy-details {
-  background: #39A712;
+  background: #10A26F;
   color: white;
   
   padding: 1em;
@@ -262,7 +262,7 @@ div#widgetshoppingcart {
 
 
 #product-discontinued h3 {
-	color: #f25e18;
+	color: #F25F18;
 }
 #product-discontinued input.text {
 	width: 80%;
@@ -332,7 +332,7 @@ div#widgetshoppingcart {
   text-transform: uppercase;
   font-weight: bold;
   font-size: large;
-  color: #f25e18;
+  color: #F25F18;
   margin: 1em;
 }
 #dow #text #title a, #dow #text #title a:visited {
@@ -405,7 +405,10 @@ div#widgetshoppingcart {
   left: 550px;
   
   font-style: italic;
-  background: #FDF3C6;
+  background: #FFCE0D;
+}
+.campaign-box .tooltips-highlighted {
+  padding: 1.5em;
 }
 
 #sales-50 {
@@ -473,7 +476,7 @@ div#widgetshoppingcart {
 
 
 #subscribe-new-products {
-	background: yellow;
+	background: #CAC1B2;
 	margin: 2em 0;
 	padding: 1em;
 }
@@ -773,7 +776,7 @@ table.total td.c3 {
   font-weight: bold;
 }
 .wpsc_checkout_forms .steps #step-1 .stepnr {
-  border: 1px solid #f25e18;
+  border: 1px solid #F25F18;
   color: #444;  
 }
 .wpsc_checkout_forms .steps #step-2 .stepnr {
@@ -865,7 +868,7 @@ table.wpsc_checkout_table input.text {
 
 
 #checkout input.green {
-  background: #26BF5A;
+  background: #10A26F;
   padding: .2em 1em;
   border: 1px outset green;
   color: #eee;
@@ -985,7 +988,7 @@ table.wpsc_checkout_table input.text {
   display: none;
 }
 #home-hot-title #text, #noutati #home-hot-title #text {
-  background: #f25e18;
+  background: #F25F18;
   color: #e6e2d9;
   font-size: 3.33em;
   text-align: center;
@@ -996,7 +999,7 @@ table.wpsc_checkout_table input.text {
   border-top:30px solid transparent;
   border-right:30px solid transparent;
   border-bottom:30px solid transparent;
-  border-left:30px solid #f25e18;
+  border-left:30px solid #F25F18;
 }
 
 #home-hot-content, #noutati #home-hot-content {
@@ -1023,7 +1026,7 @@ table.wpsc_checkout_table input.text {
   top: 0;
 }
 #home-hot-content table h3, #noutati  table h3 {
-  color: #f25e18;
+  color: #F25F18;
   font-size: large;
   font-weight: bold;
   text-align: right;
@@ -1142,7 +1145,7 @@ h4.all-products-link a, h4.all-products-link span {
 }
 .bestsellers h3 {
   background: #4A4742;
-  color: #f25e18;
+  color: #F25F18;
   padding: 0.1em 1em;
   margin:0; 
   text-transform: uppercase;  
@@ -1253,10 +1256,10 @@ a.all-products-link, span.all-products-link {
   border-top:15px solid transparent;
   border-right:15px solid transparent;
   border-bottom:15px solid transparent;
-  border-left:15px solid #f25e18;
+  border-left:15px solid #F25F18;
 }
 #percent {
-  background: #f25e18;
+  background: #F25F18;
   color: #E6E2D9;  
   text-align: center;
   font-size: 7em;
@@ -1313,7 +1316,7 @@ a.all-products-link, span.all-products-link {
   -webkit-border-radius: 10%;    
 }
 .price {
-  background: #f25e18;
+  background: #F25F18;
 }
 .old-price {
   text-decoration: line-through;
@@ -1439,7 +1442,7 @@ img.small-image {
 
 #post-shopping {
   background: #444;
-  color: #F25E18;  
+  color: #F25F18;  
   height: 295px;
 }
 #post-shopping .wpsc_container .imagecol {
@@ -1466,7 +1469,7 @@ input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {
   font-size: small;
 }
 div.thanks-ok {
-  background: #26BF5A;
+  background: #10A26F;
   padding: 1em;
 }
 div.thanks-error {
@@ -1489,7 +1492,7 @@ div.thanks-error {
 }
 #shopping-info #tooltip-content {
 	display: none;
-	background: #39A712;
+	background: #10A26F;
 	color: white;
 	font-size: medium;
 	padding: 2.5em 2em 0 3em;
@@ -1520,7 +1523,7 @@ div.thanks-error {
 }
 
 #post-shopping2, #shopping-incentives  {
-  background: #39A712;
+  background: #10A26F;
   height: 320px;
 }
 
@@ -2019,7 +2022,7 @@ input.search {
   font-style: italic;
 }
 #home-news a, #home-news a:active, #home-news a:visited {
-  color: #F25E18;
+  color: #F25F18;
 }
 
 #sticky {
@@ -2306,7 +2309,7 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
 }
 #post-body #post-price .price {
   background: none;
-  color: #F25E18;
+  color: #F25F18;
 }
 #post-body #post-price .normal-price {
   background: none;
@@ -2461,7 +2464,7 @@ body.blog #single #content #post, body.blog #archive-blog #blog-intro, body.blog
   background: #FDF3C6;
 }
 .promotii {
-  background: #F25E18;
+  background: #F25F18;
 }
 .produse-populare {
   background: #F99B0C;

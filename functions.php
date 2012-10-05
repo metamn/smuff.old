@@ -15,8 +15,9 @@ function get_tag_id_by_name($tag_name) {
   return $tag_ID;
 }
 
+
 // Subscribe by email, but not via Mailchimp, instead manually will be added to a list
-function susbscribe_email() {
+function subscribe_email() {
   $nonce = $_POST['nonce'];  
   if ( wp_verify_nonce( $nonce, 'mailchimp_subscribe' ) ) {
     
