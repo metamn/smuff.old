@@ -133,14 +133,10 @@ a, a:visited {
 #home-hot-content #hot-slider.slider, #home-hot-content #hot-slider.slider2 { 
 	width: 690px !important;
 }
-#home-hot-content #hot-slider img {
-  width: 100%;
-  height: auto;
-}
 
 #home-hot-content .hot-slider-thumb-menu-wrapper {
 	width: 250px;
-	height: 486px;
+	height: 512px;
 }
 
 #home-hot-content #hot-slider-thumbs {
@@ -170,12 +166,106 @@ a, a:visited {
 }
 
 
+/* Table
+*/
+#home-hot #info, #noutati #info {
+  background: #111;  
+  width: 580px;
+  height: 5em;
+}
+#noutati #info {
+  width: 100%;
+  height: 6em;
+  opacity: .9;
+}
+#home-hot-title, #noutati #home-hot-title {
+  top: -35px;
+  position: relative;
+}
+#noutati #home-hot-title {
+	top: 0;
+}
+#noutati #text {
+  display: none;
+}
+#home-hot-title #text, #noutati #home-hot-title #text {
+  background: #F25F18;
+  color: #e6e2d9;
+  font-size: 3.33em;
+  text-align: center;
+}
+#home-hot .arrow-right, #noutati #home-hot .arrow-right  {
+  width:0; height:0;
+  line-height:0;
+  border-top:30px solid transparent;
+  border-right:30px solid transparent;
+  border-bottom:30px solid transparent;
+  border-left:30px solid #F25F18;
+}
 
+#home-hot-content table, #noutati  table {
+  color: #e6e2d9;
+  margin: 0;
+  padding: .5em 0;  
+  position: relative;
+  top: -65px; 
+}
+#noutati  table {
+  top: 0;
+}
+#home-hot-content table h3, #noutati  table h3 {
+  color: #F25F18;
+  font-size: large;
+  font-weight: bold;
+  text-align: right;
+  margin: .2em 1em 0 0;
+} 
+#home-hot-content table p, #noutati  table p {
+  display: inline-block;
+  margin: .3em 0 0;
+}
+
+#home-hot-content table td.small, #noutati  table td.small {
+  width: 9em;
+}
+#home-hot-content table td.excerpt p, #noutati  table td.excerpt p {
+  text-align: right;
+  margin: .625em 1.6em 0 8em;  
+  display: block;
+  top: -.5em;
+  position: relative;
+}
+#noutati  table h3, #noutati  table p {
+  text-align: left !important;
+  margin-left: .3em !important;
+}
+#home-hot-content table td, #noutati  table td {
+  padding: 0;
+  margin: .5em;
+  vertical-align: middle;
+}
+#home-hot-content .normal-price, #noutati  .normal-price {
+  color: #111;
+  background: #48C0D9;
+  padding: .312em;
+}
+
+#noutati #item {
+	width: 45%;
+	margin-right: 5%;
+	float: left;
+  margin-bottom: 10em;
+}
 
 
 
 /* Common 
 */
+
+img {
+	width: 100%;
+	height: auto;
+}
 
 ul.inline-list {
   display: block;
