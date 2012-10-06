@@ -7,6 +7,65 @@
 ?>
 
 
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '348406981918786', // App ID
+			channelUrl : '//' + window.location.hostname + '/facebook-channel-url.php',
+			status     : true, // check login status
+			cookie     : true, // enable cookies to allow the server to access the session
+			xfbml      : true  // parse XFBML
+		});
+		
+		// listen for and handle auth.statusChange events
+		FB.Event.subscribe('auth.statusChange', function(response) {
+			if (response.authResponse) {
+				// user has auth'd your app and is logged into Facebook
+				FB.api('/me', function(me){
+					if (me.name) {
+						document.getElementById('auth-displayname').innerHTML = me.name;
+						document.getElementById('wpsc_checkout_form_2').value = me.name;
+						document.getElementById('wpsc_checkout_form_8').value = me.email;
+					}
+				})
+				document.getElementById('auth-loggedout').style.display = 'none';
+				document.getElementById('auth-loggedin').style.display = 'block';
+				document.getElementById('checkout-form').style.display = 'block';
+			} else {
+				// user has not auth'd your app, or is not logged into Facebook
+				document.getElementById('auth-loggedout').style.display = 'block';
+				document.getElementById('auth-loggedin').style.display = 'none';
+			}
+		});
+		
+		// listen for and handle auth.login events
+		FB.Event.subscribe('auth.login', function(response) {
+			if (response.authResponse) {
+				// user logs ins
+				FB.api('/me', function(me) {
+					if (me.email) {
+						document.getElementById('wpsc_checkout_form_2').value = me.name;
+						document.getElementById('wpsc_checkout_form_8').value = me.email;
+					}	
+				});
+			}
+		});
+		
+	};
+	
+	// Load the SDK Asynchronously
+	(function(d){
+		 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement('script'); js.id = id; js.async = true;
+		 js.src = "//connect.facebook.net/en_US/all.js";
+		 ref.parentNode.insertBefore(js, ref);
+	 }(document));
+</script>
+
+
+
 
 <?php
     // Error messages for checkout
@@ -122,25 +181,22 @@
 		<?php endif; ?>
 		<tr class="coupon">
 			<td>&nbsp;</td>
-			<td><?php _e('Introduceti codul cuponului'); ?></td>
-			<td  colspan="2" align='left'>
+			<td>
+				<p><?php _e('Introduceti codul cuponului'); ?><p>
+				<p class="hint">Codurile de cupon cu reduceri se gasesc pe 
+				<a target="_blank" href="http://www.facebook.com/smuffgadget">Facebook</a>
+		    si in <a target="_blank" href="http://eepurl.com/mjWSL">newsletter</a>.</p>
+			</td>
+			<td  align='left'>
 				<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">				
 					<input class="coupon" type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
 			</td>
-			<td>
+			<td  colspan="2">
 			  <input type='submit' value="<?php echo __('Actualizare') ?>" />		
 				</form>
 			</td>
 		</tr>
-		<tr class="coupon coupon-codes">
-		  <td>&nbsp;</td>
-		  <td colspan="4">
-		    Codurile de cupon cu reduceri se gasesc pe 
-		    <a target="_blank" href="http://www.facebook.com/smuffgadget">Facebook</a>
-		    si in <a target="_blank" href="http://eepurl.com/mjWSL">newsletter</a>.
-		  </td>
-		</td>
-	<?php endif; ?>	
+		<?php endif; ?>	
 	
 	<!-- cant get cart total ...
 	<tr class="subtotal">
@@ -280,256 +336,247 @@
   -->
 	   
   <div id="checkout" class="block">
-  
-    <form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">	
-     <?php 
-     /**  
-
-      * Both the registration forms and the checkout details forms must be in the same form element as they are submitted together, you cannot have two form elements submit together without the use of JavaScript.
-     */
-     ?>	 
-    <div id="col" class="column span-7 append-1">
-      
-      <div id="contact-info">
-        <center>
-          <h2>
-            Comenzi prin telefon
-            <br/>
-            0740-456127
-          </h2>          
-        </center>
-      </div>
-      
-      
-      <div id="login">
-	      <?php if(!is_user_logged_in()) {
-          global $current_user;
-          get_currentuserinfo(); ?>
-          <div id="account" class="box">
-            <h4>Doriti cont Smuff?</h4>
-            <p>
-              A crea cont pe Smuff nu este obligatoriu, se poate cumpara si fara cont prin Shopping Rapid.  
-            </p>
-            <p>
-              Procedura de inregistrare este foarte simpla, aveti nevoie numai de o adresa e-mail sau cont Facebook.
-              <ul class="loginlist">
-                <li><?php do_action('fbc_display_login_button') ?></li>
-                <li><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
-            </p>
-          </div>
-        <?php } else { 
-          if (is_user_logged_in()) {
-
-            $current_user = wp_get_current_user();
-            if ( !($current_user instanceof WP_User) ) return; ?>
-            
-            <?php if (check_profile_info($current_user->ID)) { ?>
-              <!--
-              <p class="termeni">
-              Prin trimiterea comenzii va exprimati acordul cu 
-                <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-              </p>
-              <p>
-                 <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
-              </p>
-              -->
-            <?php } else { ?>
-              <p class="termeni">
-                Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
-              </p>
-            <?php } ?>
-            
-            <div id="account" class="box">
-              <h4>Contul Dumneavoastra</h4>
-              <ul class="info">
-                <li>Nume utilizator: <?php echo $current_user->display_name ?></li>              
-              </ul>
-              <ul class="links">
-                <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
-                <li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
-                <li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
-                <li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
-              </ul>
-            </div>          
-          <?php } 
-        } ?>   
-	    </div>
-	  </div>
-  
-    <div id="form" class="column span-7 append-1">	    
-	    <h2 class="checkout">Shopping rapid <br/>in 10 secunde</h2>
-	    
-	    <table class='wpsc_checkout_table'>
-		    <?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
-			    <?php if(wpsc_is_shipping_details()) : ?>
-					    
-			    <?php endif; ?>
-
-		      <?php if(wpsc_checkout_form_is_header() == true) : ?>
-		      		
-		      <?php else: ?>
-		        <?php if((!wpsc_uses_shipping()) && $wpsc_checkout->checkout_item->unique_name == 'shippingstate'): ?>
-		        <?php else : ?>
-		        		<tr <?php echo wpsc_the_checkout_item_error_class();?>>
-			          <td colspan=2>
-				          <label for='<?php echo wpsc_checkout_form_element_id(); ?>'>
-				          <?php echo wpsc_checkout_form_name();?>
-				          </label>
-			            <br/>
-			            <?php echo wpsc_checkout_form_field();?>				
-		              <?php if(wpsc_the_checkout_item_error() != ''): ?>
-		                <p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
-			            <?php endif; ?>
-			            <?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_22") { ?>			              
-			                <br/><br/>              		
-                   		<p class="termeni">
-                   		Prin trimiterea comenzii va exprimati acordul cu 
-                      <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-                      </p>
-		
-		                  <input type='hidden' value='yes' name='agree' />	
-				              <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
-				               if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
-					              <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					              <input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
-				              <?php } ?>
-		
-			                <br/><br/>
-			                <br/><br/>
-			                <h4 class="note">Va rugam completati campurile de mai jos numai daca doriti factura pe firma.</h4>
-			                <br/>
-			            <?php } ?>
-		            </td>
-		            </tr>
-
-			      <?php endif; ?>		
-			    <?php endif; ?>		
-		    <?php endwhile; ?>		    
-		
-		    <?php if (get_option('display_find_us') == '1') : ?>
-		    <tr>
-			    <td>How did you find us:</td>
-			    <td>
-				    <select name='how_find_us'>
-					    <option value='Word of Mouth'>Word of mouth</option>
-					    <option value='Advertisement'>Advertising</option>
-					    <option value='Internet'>Internet</option>
-					    <option value='Customer'>Existing Customer</option>
-				    </select>
-			    </td>
-		    </tr>
-		    <?php endif; ?>		
-		    <tr>
-			    <td colspan='2' class='wpsc_gateway_container'>
+  	
+		<form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">	
+					 
+			<div id="order-by-phone" class="col column span-7 append-1">
+				<h2>Comenzi prin telefon<br/>0740-456127</h2>          
+			</div>
 			
-			    <?php  //this HTML displays activated payment gateways?>
-			      
-				    <?php if(wpsc_gateway_count() > 1): // if we have more than one gateway enabled, offer the user a choice ?>
-					    <h3><?php echo __('Select a payment gateway', 'wpsc');?></h3>
-					    <?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
-						    <div class="custom_gateway">
-							    <?php if(wpsc_gateway_internal_name() == 'noca'){ ?>
-								    <label><input type="radio" id='noca_gateway' value="<?php echo wpsc_gateway_internal_name();?>" <?php echo wpsc_gateway_is_checked(); ?> name="custom_gateway" class="custom_gateway"/><?php echo wpsc_gateway_name();?></label>
-							    <?php }else{ ?>
-								    <label><input type="radio" value="<?php echo wpsc_gateway_internal_name();?>" <?php echo wpsc_gateway_is_checked(); ?> name="custom_gateway" class="custom_gateway"/><?php echo wpsc_gateway_name();?></label>
-							    <?php } ?>
-
-							
-							    <?php if(wpsc_gateway_form_fields()): ?> 
-								    <table class='<?php echo wpsc_gateway_form_field_style();?>'>
-									    <?php echo wpsc_gateway_form_fields();?> 
-								    </table>		
-							    <?php endif; ?>			
-						    </div>
-					    <?php endwhile; ?>
-				    <?php else: // otherwise, there is no choice, stick in a hidden form ?>
-					    <?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
-						    <input name='custom_gateway' value='<?php echo wpsc_gateway_internal_name();?>' type='hidden' />
+			<div id="form" class="col column span-14 last">	    
+				<h2>Finalizare comanda in 10 secunde</h2>
+				
+				<div id="login">
+					<?php if(!is_user_logged_in()) {
 						
-							    <?php if(wpsc_gateway_form_fields()): ?> 
-								    <table>
-									    <?php echo wpsc_gateway_form_fields();?> 
-								    </table>		
-							    <?php endif; ?>	
-					    <?php endwhile; ?>				
-				    <?php endif; ?>				
+						global $current_user;
+						get_currentuserinfo(); 
+						
+						$checkout_klass = '';
+						
+						?>
+						
+						<div id="account" class="box">	
+							<ul class="loginlist">
+								<li id="facebook-connect">
+									<div id="auth-loggedout">
+										<div class="fb-login-button" scope="email,user_birthday">Conectare cu Facebook</div>
+									</div>
+									<div id="auth-loggedin" style="display:none">
+										<strong><span id="auth-displayname"></span></strong>, esti conectat cu Smuff prin Facebook.
+									</div>
+								</li>
+								<li id="smuff-account"><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
+								<li id="manual-fill">
+									Introducerea manuala a datelor
+								</li>
+							</ul>
+						</div>
+						
+					<?php } else { 
+						if (is_user_logged_in()) {
+		
+							$current_user = wp_get_current_user();
+							if ( !($current_user instanceof WP_User) ) return; 
+							
+							$checkout_klass = 'active';
+							
+							?>
+							
+							
+							<?php if (check_profile_info($current_user->ID)) { ?>
+								<!--
+								<p class="termeni">
+								Prin trimiterea comenzii va exprimati acordul cu 
+									<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+								</p>
+								<p>
+									 <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
+								</p>
+								-->
+							<?php } else { ?>
+								<p class="termeni">
+									Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
+								</p>
+							<?php } ?>
+							
+							<div id="account" class="box">
+								<ul class="info">
+									<li>Nume utilizator: <?php echo $current_user->display_name ?></li>              
+								</ul>
+								<ul class="links">
+									<li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/">Istoric comenzi</a></li>
+									<li><a href="<?php bloginfo('home') ?>/cont-cumparaturi/?edit_profile=true">Detalii facturare/livrare</a></li>
+									<li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
+									<li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
+								</ul>
+							</div>          
+						<?php } 
+					} ?>   
+	  		</div>
+
+				<div id="checkout-form" class="<?php echo $checkout_klass ?>">
+					<table class='wpsc_checkout_table'>
+						<?php while (wpsc_have_checkout_items()) : wpsc_the_checkout_item(); ?>
+							<?php if(wpsc_is_shipping_details()) : ?>
+									
+							<?php endif; ?>
+		
+							<?php if(wpsc_checkout_form_is_header() == true) : ?>
+									
+							<?php else: ?>
+								<?php if((!wpsc_uses_shipping()) && $wpsc_checkout->checkout_item->unique_name == 'shippingstate'): ?>
+								<?php else : ?>
+										<tr <?php echo wpsc_the_checkout_item_error_class();?>>
+										<td colspan=2>
+											<label for='<?php echo wpsc_checkout_form_element_id(); ?>'>
+											<?php echo wpsc_checkout_form_name();?>
+											</label>
+											<br/>
+											<?php echo wpsc_checkout_form_field();?>				
+											<?php if(wpsc_the_checkout_item_error() != ''): ?>
+												<p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
+											<?php endif; ?>
+											<?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_22") { ?>			              
+													<br/><br/>              		
+													<p class="termeni">
+													Prin trimiterea comenzii va exprimati acordul cu 
+													<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+													</p>
 				
-			    </td>
-		    </tr>
-		    <tr>
-			    <td colspan='2'>         		
-         		<p class="termeni">
-         		Prin trimiterea comenzii va exprimati acordul cu 
-            <a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-            </p>
-       		</td>
-     	   </tr>
-		    
-		    <tr>
-		      
-			    <td>
-				    <!--
-				    <?php if(get_option('terms_and_conditions') == '') : ?>
-					    <input type='hidden' value='yes' name='agree' />
-				    <?php endif; ?>
-				    -->
-				    <input type='hidden' value='yes' name='agree' />	
-				    <?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
-				     if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
-					    <input type='hidden' value='submit_checkout' name='wpsc_action' />
-					    <input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
-				    <?php }/* else: ?>
+													<input type='hidden' value='yes' name='agree' />	
+													<?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
+													 if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
+														<input type='hidden' value='submit_checkout' name='wpsc_action' />
+														<input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
+													<?php } ?>
 				
-				    <br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />
-				    <?php echo __('If you have just registered, please check your email and login before you make your purchase', 'wpsc');?>
-				    </td>
-				    <?php endif;  */?>				
-			    </td>
-		    </tr>
-	    </table>
-	  </div>
-	  </form>
-	  
-	  <div id="wishlist" class="column span-7 last">
-	    <h2>Adauga la wishlist</h2>
-	    <div id="wishlist-body">
-	      <?php 
-	        $favorite_post_ids = wpfp_get_users_favorites();	      
-	        if ($favorite_post_ids) { ?>
-	          Aveti <?php echo count($favorite_post_ids) ?> produs(e) in wishlist.
-	        <?php } 
-	      
-	        $post_ids = "";	        
-	        foreach ($wishlist as $post) {
-	          $post_ids .= $post .',';	          
-	        }
-          // the last item is not added to the cart ...
-          // ... so we always add a fake item to be the last	        
-	        $post_ids .= "http://localhost/smuff/2012/04/02/griffin-husa-de-supravietuire-pentru-iphone-44s-si-ipad-23/?wpfpaction=add&postid=4147,";	      
-	        
-	        $post_titles = "";	        
-	        foreach ($wishlist_title as $post) {
-	          $post_titles .= $post .'|';	          
-	        }
-	        $post_titles .= "Am completat wishlistul Dvs. cu success!|";
-	      ?>	        
-        <div id="add-to-wishlist" class="block">          
-          <a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
-            <span id="text">Adaug continutul cosului la Wishlist</span>
-          </a>
-        </div>
-	    </div>
-	    
-	    <div class="box">
-	      <h2 id="survey">Sunteti satisfacuti cu cumparaturile pe Smuff? &rarr;</h2>
-	    </div>
-	    <div id="survey-body" class="hidden">
-	      <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFBPMWNiTlpXZUwxb0JrY1dFSWh6U1E6MQ" width="300" height="943" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-	    </div>
-	  </div>
-	  
-	</div>  
+													<br/><br/>
+													<br/><br/>
+													<h4 class="note">Va rugam completati campurile de mai jos numai daca doriti factura pe firma.</h4>
+													<br/>
+											<?php } ?>
+										</td>
+										</tr>
+		
+								<?php endif; ?>		
+							<?php endif; ?>		
+						<?php endwhile; ?>		    
+				
+						<?php if (get_option('display_find_us') == '1') : ?>
+						<tr>
+							<td>How did you find us:</td>
+							<td>
+								<select name='how_find_us'>
+									<option value='Word of Mouth'>Word of mouth</option>
+									<option value='Advertisement'>Advertising</option>
+									<option value='Internet'>Internet</option>
+									<option value='Customer'>Existing Customer</option>
+								</select>
+							</td>
+						</tr>
+						<?php endif; ?>		
+						<tr>
+							<td colspan='2' class='wpsc_gateway_container'>
+					
+							<?php  //this HTML displays activated payment gateways?>
+								
+								<?php if(wpsc_gateway_count() > 1): // if we have more than one gateway enabled, offer the user a choice ?>
+									<h3><?php echo __('Select a payment gateway', 'wpsc');?></h3>
+									<?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
+										<div class="custom_gateway">
+											<?php if(wpsc_gateway_internal_name() == 'noca'){ ?>
+												<label><input type="radio" id='noca_gateway' value="<?php echo wpsc_gateway_internal_name();?>" <?php echo wpsc_gateway_is_checked(); ?> name="custom_gateway" class="custom_gateway"/><?php echo wpsc_gateway_name();?></label>
+											<?php }else{ ?>
+												<label><input type="radio" value="<?php echo wpsc_gateway_internal_name();?>" <?php echo wpsc_gateway_is_checked(); ?> name="custom_gateway" class="custom_gateway"/><?php echo wpsc_gateway_name();?></label>
+											<?php } ?>
+		
+									
+											<?php if(wpsc_gateway_form_fields()): ?> 
+												<table class='<?php echo wpsc_gateway_form_field_style();?>'>
+													<?php echo wpsc_gateway_form_fields();?> 
+												</table>		
+											<?php endif; ?>			
+										</div>
+									<?php endwhile; ?>
+								<?php else: // otherwise, there is no choice, stick in a hidden form ?>
+									<?php while (wpsc_have_gateways()) : wpsc_the_gateway(); ?>
+										<input name='custom_gateway' value='<?php echo wpsc_gateway_internal_name();?>' type='hidden' />
+								
+											<?php if(wpsc_gateway_form_fields()): ?> 
+												<table>
+													<?php echo wpsc_gateway_form_fields();?> 
+												</table>		
+											<?php endif; ?>	
+									<?php endwhile; ?>				
+								<?php endif; ?>				
+						
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								<!--
+								<?php if(get_option('terms_and_conditions') == '') : ?>
+									<input type='hidden' value='yes' name='agree' />
+								<?php endif; ?>
+								-->
+								<input type='hidden' value='yes' name='agree' />	
+								<?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
+								 if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
+									<input type='hidden' value='submit_checkout' name='wpsc_action' />
+									<input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
+								<?php }/* else: ?>
+						
+								<br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />
+								<?php echo __('If you have just registered, please check your email and login before you make your purchase', 'wpsc');?>
+								</td>
+								<?php endif;  */?>				
+							</td>
+						</tr>
+					</table>	
+				</div>
+		</form>
+	</div> <!-- checkout -->
+	<div class="clear"></div>
+	
+	<div id="other-operations" class="block">
+		<div id="back-to-shopping" class="column span-7 append-1">
+			&larr; Inapoi la cumparaturi
+		</div>
+		<div id="wishlist" class="column span-15 last">
+			<div id="wishlist-body">
+				<?php 
+					$favorite_post_ids = wpfp_get_users_favorites();	      
+					if ($favorite_post_ids) { ?>
+						<!-- Aveti <?php echo count($favorite_post_ids) ?> produs(e) in wishlist. -->
+					<?php } 
+				
+					$post_ids = "";	        
+					foreach ($wishlist as $post) {
+						$post_ids .= $post .',';	          
+					}
+					// the last item is not added to the cart ...
+					// ... so we always add a fake item to be the last	        
+					$post_ids .= "http://localhost/smuff/2012/04/02/griffin-husa-de-supravietuire-pentru-iphone-44s-si-ipad-23/?wpfpaction=add&postid=4147,";	      
+					
+					$post_titles = "";	        
+					foreach ($wishlist_title as $post) {
+						$post_titles .= $post .'|';	          
+					}
+					$post_titles .= "Am completat wishlistul Dvs. cu success!|";
+				?>	        
+				<div id="add-to-wishlist" class="block">          
+					<a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
+						<span id="text">Adaug continutul cosului la Wishlist</span>
+					</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="clear"></div>	    
+	
 </div>
 <?php else: ?>  
   <h4>Cosul Tau este gol golut. <a href="<?php bloginfo('home') ?>">Aici te poti intoarce la cumparaturi.</a></h4>	
