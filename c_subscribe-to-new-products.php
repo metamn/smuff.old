@@ -2,7 +2,7 @@
 <div id="subscribe-new-products" class="campaign-box">
   <div id="text">
     <h4>
-      Vrei sa aflii despre produse noi?
+      Vrei sa afli despre produse noi?
     </h4>
     <?php 
     	$mailchimp_button = 'Da, vreau!';
