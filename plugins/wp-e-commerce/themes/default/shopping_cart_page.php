@@ -340,7 +340,8 @@
 		<form name='wpsc_checkout_forms' class='wpsc_checkout_forms' action='' method='post' enctype="multipart/form-data">	
 					 
 			<div id="order-by-phone" class="col column span-7 append-1">
-				<h2>Comenzi prin telefon<br/>0740-456127</h2>          
+				<h2>Comenzi prin telefon</h2>
+				<h2 id="tel">0740-456127</h2>          
 			</div>
 			
 			<div id="form" class="col column span-14 last">	    
@@ -358,6 +359,10 @@
 						
 						<div id="account" class="box">	
 							<ul class="loginlist">
+								<li id="manual-fill">
+									Introducerea manuala a datelor &rarr;
+								</li>
+								<li id="smuff-account"><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
 								<li id="facebook-connect">
 									<div id="auth-loggedout">
 										<div class="fb-login-button" scope="email,user_birthday">Conectare cu Facebook</div>
@@ -366,9 +371,35 @@
 										<strong><span id="auth-displayname"></span></strong>, esti conectat cu Smuff prin Facebook.
 									</div>
 								</li>
-								<li id="smuff-account"><a href="<?php echo wp_login_url(get_option('shopping_cart_url'))?>" alt="Intrare / inregistrare cont" title="Intrare / inregistrare cont">Intrare in cont / Inregistrare cont Smuff</a></li>
-								<li id="manual-fill">
-									Introducerea manuala a datelor
+								<li id="wishlist">
+									<div id="wishlist-body">
+										<?php 
+											$favorite_post_ids = wpfp_get_users_favorites();	      
+											if ($favorite_post_ids) { ?>
+												<!-- Aveti <?php echo count($favorite_post_ids) ?> produs(e) in wishlist. -->
+											<?php } 
+										
+											$post_ids = "";	        
+											foreach ($wishlist as $post) {
+												$post_ids .= $post .',';	          
+											}
+											// the last item is not added to the cart ...
+											// ... so we always add a fake item to be the last	        
+											$post_ids .= "http://localhost/smuff/2012/04/02/griffin-husa-de-supravietuire-pentru-iphone-44s-si-ipad-23/?wpfpaction=add&postid=4147,";	      
+											
+											$post_titles = "";	        
+											foreach ($wishlist_title as $post) {
+												$post_titles .= $post .'|';	          
+											}
+											$post_titles .= "Am completat wishlistul Dvs. cu success!|";
+										?>	        
+										<div id="add-to-wishlist" class="block">          
+											<a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">
+												<img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
+												<span id="text">Adaugare produse la Wishlist</span>
+											</a>
+										</div>
+									</div>								
 								</li>
 							</ul>
 						</div>
@@ -437,25 +468,22 @@
 											<?php if(wpsc_the_checkout_item_error() != ''): ?>
 												<p class='validation-error'><?php echo wpsc_the_checkout_item_error(); ?></p>		    
 											<?php endif; ?>
+											
 											<?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_22") { ?>			              
-													<br/><br/>              		
-													<p class="termeni">
-													Prin trimiterea comenzii va exprimati acordul cu 
-													<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-													</p>
-				
-													<input type='hidden' value='yes' name='agree' />	
+												<br/><br/> 
+												<div id="checkout-button" class="checkout-button-1">
 													<?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 													 if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
 														<input type='hidden' value='submit_checkout' name='wpsc_action' />
 														<input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
 													<?php } ?>
-				
-													<br/><br/>
-													<br/><br/>
-													<h4 class="note">Va rugam completati campurile de mai jos numai daca doriti factura pe firma.</h4>
-													<br/>
+												</div>
+												
+												<h4 id="checkout-personal-data">Date personale &rarr;</h4>
+												<br/>
+												<h4 id="checkout-billing-data">Date facturare &rarr;</h4>
 											<?php } ?>
+											
 										</td>
 										</tr>
 		
@@ -516,22 +544,20 @@
 						
 						<tr>
 							<td>
-								<!--
-								<?php if(get_option('terms_and_conditions') == '') : ?>
-									<input type='hidden' value='yes' name='agree' />
-								<?php endif; ?>
-								-->
+								
+								<p class="termeni">
+									Prin trimiterea comenzii va exprimati acordul cu 
+									<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+								</p>
 								<input type='hidden' value='yes' name='agree' />	
-								<?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
-								 if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
-									<input type='hidden' value='submit_checkout' name='wpsc_action' />
-									<input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
-								<?php }/* else: ?>
-						
-								<br /><strong><?php echo __('Please login or signup above to make your purchase', 'wpsc');?></strong><br />
-								<?php echo __('If you have just registered, please check your email and login before you make your purchase', 'wpsc');?>
-								</td>
-								<?php endif;  */?>				
+								
+								<div id="checkout-button" class="checkout-button-2">
+									<?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
+									 if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
+										<input type='hidden' value='submit_checkout' name='wpsc_action' />
+										<input type='submit' value='Trimite comanda' name='submit' class='make_purchase' />
+									<?php } ?>	
+								</div>
 							</td>
 						</tr>
 					</table>	
@@ -544,36 +570,6 @@
 		<div id="back-to-shopping" class="column span-7 append-1">
 			&larr; Inapoi la cumparaturi
 		</div>
-		<div id="wishlist" class="column span-15 last">
-			<div id="wishlist-body">
-				<?php 
-					$favorite_post_ids = wpfp_get_users_favorites();	      
-					if ($favorite_post_ids) { ?>
-						<!-- Aveti <?php echo count($favorite_post_ids) ?> produs(e) in wishlist. -->
-					<?php } 
-				
-					$post_ids = "";	        
-					foreach ($wishlist as $post) {
-						$post_ids .= $post .',';	          
-					}
-					// the last item is not added to the cart ...
-					// ... so we always add a fake item to be the last	        
-					$post_ids .= "http://localhost/smuff/2012/04/02/griffin-husa-de-supravietuire-pentru-iphone-44s-si-ipad-23/?wpfpaction=add&postid=4147,";	      
-					
-					$post_titles = "";	        
-					foreach ($wishlist_title as $post) {
-						$post_titles .= $post .'|';	          
-					}
-					$post_titles .= "Am completat wishlistul Dvs. cu success!|";
-				?>	        
-				<div id="add-to-wishlist" class="block">          
-					<a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
-						<span id="text">Adaug continutul cosului la Wishlist</span>
-					</a>
-				</div>
-			</div>
-		</div>	
 	</div>
 	<div class="clear"></div>	    
 	
