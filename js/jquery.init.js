@@ -162,7 +162,15 @@ $(document).ready(function() {
   
   
   
-  
+  // Show checkout form details
+   $("#checkout #checkout-personal-data").click(function() {
+    $("#checkout .wpsc_checkout_field2, #checkout .wpsc_checkout_field4, #checkout .wpsc_checkout_field26, #checkout .wpsc_checkout_field27").slideToggle();
+  	$("#checkout .checkout-button-2").show();
+  });
+   $("#checkout #checkout-billing-data").click(function() {
+    $("#checkout .wpsc_checkout_field19, #checkout .wpsc_checkout_field20, #checkout .wpsc_checkout_field21, #checkout .wpsc_checkout_field23, #checkout .wpsc_checkout_field24").slideToggle();
+  	$("#checkout .checkout-button-2").show();
+  });
 
 
   // Add Cart contents to Wishlist
@@ -182,12 +190,6 @@ $(document).ready(function() {
       $.get(item);
      }
     });    
-  });
-  
-  
-  // Show Survey form on Checkout page
-  $(".page-coscumparaturi #wishlist #survey").click(function() {
-    $(".page-coscumparaturi #wishlist #survey-body").slideToggle();
   });
   
   

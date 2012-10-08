@@ -182,17 +182,14 @@
 		<tr class="coupon">
 			<td>&nbsp;</td>
 			<td>
-				<p><?php _e('Introduceti codul cuponului'); ?><p>
-				<p class="hint">Codurile de cupon cu reduceri se gasesc pe 
-				<a target="_blank" href="http://www.facebook.com/smuffgadget">Facebook</a>
-		    si in <a target="_blank" href="http://eepurl.com/mjWSL">newsletter</a>.</p>
+				<p>Daca aveti cod reducere, introduceti aici.</p>
 			</td>
 			<td  align='left'>
 				<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">				
 					<input class="coupon" type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
 			</td>
 			<td  colspan="2">
-			  <input type='submit' value="<?php echo __('Actualizare') ?>" />		
+			  <input type='submit' value="<?php echo __('Recalculeaza') ?>" />		
 				</form>
 			</td>
 		</tr>
@@ -568,7 +565,9 @@
 	
 	<div id="other-operations" class="block">
 		<div id="back-to-shopping" class="column span-7 append-1">
-			&larr; Inapoi la cumparaturi
+			<script>
+					document.write('<a href="' + document.referrer + '">&larr; Inapoi la cumparaturi</a>');
+			</script>
 		</div>
 	</div>
 	<div class="clear"></div>	    
