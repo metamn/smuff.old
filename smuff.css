@@ -24,6 +24,7 @@
 - gray: #AAA
 	- dark gray: #4A4742
 	- light gray: #ccc;
+	- very light gray: #f1f1f1
 */
 
 
@@ -40,6 +41,196 @@ a, a:visited {
 }
 
 
+
+
+/* Product page 
+----------------------------------------------------
+*/
+
+.single #post-images, .single .entry {
+	width: 710px;
+}
+
+
+#large-image {
+  margin: 0 0 1em 0;
+}
+#single-scroll {
+  width: 99%;
+  height: 110px;
+}
+#single-scroll .item {
+  margin-right: 1em;
+}
+#post-images .navi {
+  padding-left: 45%;
+}
+#large-image img {
+  width: 690px;
+  height: 489px;
+}
+img.small-image {
+  width: 100px;
+  height: auto;
+}
+#large-image img, img.small-image, #recommended img {
+  border: 1px solid #ccc;
+  padding: .2em;
+}
+
+.single .campaign-box {
+	width: 100%;
+}
+
+#accordion h3, #accordion h3.current {
+	background-color: #ccc !important;
+}
+#accordion .pane {
+	background: #f1f1f1 !important;
+	border-color: #ccc !important;
+}
+
+
+
+/* Add to cart 2
+*/
+
+#post-shopping2 {
+	margin: 5em 0;
+}
+
+#post-shopping2, #shopping-incentives  {
+  background: #8AEA4C;
+  height: 320px;
+}
+
+#post-shopping2 #post-shopping {
+  width: 28%;
+  margin-right: 10%;
+  float: left;
+  height: 320px;
+}
+#shopping-incentives {
+  width: 50%;
+  float: left;
+  padding: 1.5em 0;
+}
+#shopping-incentives h4 {
+  margin-bottom: .25em;
+  color: white;
+}
+#shopping-incentives p {
+  margin-bottom: 1.75em;
+  color: white;
+}
+
+
+/* Other products
+*/
+
+.single .bestsellers .product-thumb {
+	width: 30%;
+	margin-right: 3%;
+	float: left;
+}
+.single .bestsellers .product-thumb .text {
+	padding: 0;
+	width: 98%;
+}
+.single .bestsellers .product-thumb .text a {
+	padding: 1em 1.5em;
+	display: block;
+}
+
+
+/* Add to cart
+*/
+
+#post-shopping, #shopping-info {
+	background: white url(img/stripe.png);
+}
+#post-shopping {
+	margin-bottom: 5em;
+}
+#post-shopping img {
+	width: auto;
+}
+#post-shopping tr.animation {
+	display: none;
+}
+
+#post-shopping .wpsc_container .imagecol {
+  display: none;
+}
+#post-shopping .wpsc_container div.single_product_display div.textcol  {
+  margin-left: 0 !important;
+}
+#post-shopping .wpsc_container table {
+  width: 200px !important;
+}
+#post-shopping .wpsc_container td.right {
+  text-align: right;
+}
+#post-shopping .wpsc_container tr.price {
+  background: none !important;
+}
+#post-shopping .wpsc_container span.pricedisplay {
+  float: none !important;
+  width: 99%;
+}
+input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {  
+  width: 100%;
+  font-size: small;
+}
+div.thanks-ok {
+  background: #10A26F;
+  padding: 1em;
+}
+div.thanks-error {
+  background: #A53B08;
+  padding: 1em;
+}
+#post-shopping .wpsc_cart_message {
+  text-align: center;
+}
+
+#shopping-info ul {
+  list-style-type: none;
+  margin: 1.5em 0;
+}
+#shopping-info ul li {
+  margin-bottom: 1em;
+}
+#shopping-info ul li.shopping-info {
+  cursor: pointer;
+}
+#shopping-info #tooltip-content {
+	display: none;
+	background: #10A26F;
+	color: white;
+	font-size: medium;
+	padding: 2.5em 2em 0 3em;
+	
+	height: 310px;
+	width: 310px;
+	position: absolute;
+	top: 12.5em;
+	left: 35em;
+}
+#shopping-info #tooltip-content ul {
+  margin: 0;
+  margin-left: 1em;
+  list-style: square;
+}
+#shopping-info #tooltip-content ul li {
+  margin-bottom: .75em;
+}
+#shopping-info #tooltip-close {
+  margin-left: 8em;
+  font-size: smaller;
+  font-style: italic;
+  cursor: pointer;
+}
 
 
 
@@ -122,13 +313,16 @@ a, a:visited {
 
 
 /* Remove sidebar */
-.home .container #content {
+.container #content {
 	width: 100%;
 }
-.home .container #sidebar {
+.container #sidebar {
 	display: none;
 }
 
+.home .campaign-box {
+  width: 88%;
+}
 
 
 
@@ -529,8 +723,7 @@ a, a:visited {
 */
 
 .campaign-box {
-  margin: 2.5em 0;
-  width: 88%;
+  margin: 2.5em 0 !important;
   float: left;
   font-size: larger;
 }
@@ -599,6 +792,24 @@ a, a:visited {
 	font-size: small;
 }
 
+
+
+#subscribe-new-products {
+	background: #aaa;
+	margin: 2em 0;
+	padding: 1em;
+}
+#subscribe-new-products h4, #subscribe-new-products #mailchimp-direct {
+	float: left;
+	width: 35%;
+	margin-right: 5%;
+}
+#subscribe-new-products #whatis {
+	float: left;
+	top: 0;
+	left: 0;
+	width: 10%;
+}
 
 
 
