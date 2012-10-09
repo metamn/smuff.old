@@ -332,6 +332,24 @@ a, a:visited {
   text-decoration: underline;
 }
 
+.bestsellers .product-thumb .text {
+	background: url(img/stripe.png);
+}
+.bestsellers .product-thumb h4 {
+	background: white;
+	padding: .5em;
+}
+.bestsellers .product-thumb .text p {
+	background: white;
+	padding: .7em;
+}
+.bestsellers .product-thumb .normal-price {
+	position: relative;
+	top: 2.5em;
+}
+
+
+
 
 /* Promo 
 */
@@ -348,6 +366,7 @@ a, a:visited {
   padding: 0 2em;
   width: 130px;
   float: left;
+  border-bottom: 3px solid white;
 }
 #promo img {
   width: 120px;
@@ -366,9 +385,12 @@ a, a:visited {
 #promo  .active {
   border:1px solid #444;	
 }
-#promo .promo-item-hover {
+#promo .product-thumb-highlighted {
   border-bottom: 3px solid #F25D18;
-  background: #DFDBD0;
+  background: url(img/stripe.png);
+}
+#promo .product-thumb-highlighted h4, #promo .product-thumb-highlighted p {
+  background: white;
 }
 #promo .navi {
   padding-left: 29%;
@@ -613,22 +635,14 @@ a, a:visited {
 /* Product Thumb 
 */
 
-.product-thumb .text {
-	background: url(img/stripe.png);
-}
 
 .product-thumb h4 {
   margin-bottom: .5em;
   font-size: large;
   font-weight: bold;
-  background: white;
-  padding: .5em;
 }
 .product-thumb p {
-  color: #4A4742; 
-  background: white;
-  padding: .7em;
-  
+  color: #4A4742;
   margin: 0;
   margin-bottom: 2em;
   text-align: justify;
@@ -654,10 +668,7 @@ a, a:visited {
 .product-thumb #category a:hover, .product-thumb #category a:active {
   background: #4A4742;
 }
-.product-thumb .normal-price {
-	position: relative;
-	top: 2.5em;
-}
+
 
 
 /* Prices
