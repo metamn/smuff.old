@@ -43,6 +43,40 @@ a, a:visited {
 
 
 
+/* Forms
+----------------------------------------------------
+*/
+
+
+input, textarea {
+	border: none;
+	outline: 0;
+
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input[type='submit'],
+input[type='button'], 
+.wpfp-link,
+.wpfp-span {		
+	background: #111;
+	color: #aaa;
+	padding: .625em;
+}
+input[type='submit']:hover,
+input[type='button']:hover, 
+.wpfp-link:hover,
+.wpfp-span:hover {
+	cursor: pointer;
+	color: white;
+}
+
+
+
+
+
 /* Product page 
 ----------------------------------------------------
 */
@@ -82,6 +116,9 @@ img.small-image {
 	width: 100%;
 }
 
+#accordion img {
+	width: auto;
+}
 #accordion h3, #accordion h3.current {
 	background-color: #ccc !important;
 }
@@ -101,14 +138,14 @@ img.small-image {
 
 #post-shopping2, #shopping-incentives  {
   background: #8AEA4C;
-  height: 320px;
+  height: 370px;
 }
 
 #post-shopping2 #post-shopping {
   width: 28%;
   margin-right: 10%;
   float: left;
-  height: 320px;
+  height: 370px;
 }
 #shopping-incentives {
   width: 50%;
@@ -117,12 +154,17 @@ img.small-image {
 }
 #shopping-incentives h4 {
   margin-bottom: .25em;
-  color: white;
+  font-weight: bold;
 }
 #shopping-incentives p {
   margin-bottom: 1.75em;
-  color: white;
 }
+#post-shopping2 #post-shopping .wpfp-span {
+	display: block;
+	margin: 0 .5em;
+	width: auto;
+}
+
 
 
 /* Other products
@@ -146,11 +188,8 @@ img.small-image {
 /* Add to cart
 */
 
-#post-shopping, #shopping-info {
-	background: white url(img/stripe.png);
-}
 #post-shopping {
-	margin-bottom: 5em;
+	background: #4D8FCE;
 }
 #post-shopping img {
 	width: auto;
@@ -167,6 +206,19 @@ img.small-image {
 }
 #post-shopping .wpsc_container table {
   width: 200px !important;
+}
+#post-shopping .wpsc_container table label {
+  font-weight: normal;
+}
+#post-shopping .wpsc_container td {
+  border-bottom: 1px dotted;
+}
+#post-shopping .wpsc_container tr.transport td {
+  border-bottom: none;
+}
+#post-shopping .wpsc_container tr.submit td {
+	border-top: 1px solid;
+	padding-top: 1.5em;
 }
 #post-shopping .wpsc_container td.right {
   text-align: right;
@@ -194,15 +246,43 @@ div.thanks-error {
   text-align: center;
 }
 
+
+#post-shopping input.wpsc_buy_button {
+	background: #8AEA4C;
+	color: #333;
+	border: 1px dotted;
+}
+#post-shopping input.wpsc_buy_button:hover {
+	color: #111;
+	font-weight: bold;
+}
+.wpfp-span {
+	display: block;
+	text-align: center;
+}
+#post-shopping .wpfp-span {
+	width: 92%;
+	margin-left: .5em;
+}
+
+
+#shopping-info {
+	background: url(img/stripe.png);
+	position: absolute;
+	top: 54em;
+	width: 185px;
+}
 #shopping-info ul {
   list-style-type: none;
-  margin: 1.5em 0;
+  margin: 0;
 }
 #shopping-info ul li {
   margin-bottom: 1em;
 }
 #shopping-info ul li.shopping-info {
   cursor: pointer;
+  background: white;
+  padding: .5em;
 }
 #shopping-info #tooltip-content {
 	display: none;
@@ -265,6 +345,17 @@ div.thanks-error {
 }
 #header #logo h1 .strapline a, #header #logo h1 .strapline a:visited, #header #logo h1 .strapline a:hover {  
   color: #F25F18;
+}
+
+#main-name {
+  margin-top: 2.2em;
+}
+#main-name h1{  
+  text-align: right;
+  color: #aaa;
+}
+#main-name h1 .days {
+  font-weight: bold;
 }
 
 
