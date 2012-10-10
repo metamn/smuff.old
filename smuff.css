@@ -170,6 +170,10 @@ img.small-image {
 /* Other products
 */
 
+.single .bestsellers h2 {
+	margin-top: 2em;
+	border-bottom: 1px solid;
+}
 .single .bestsellers .product-thumb {
 	width: 30%;
 	margin-right: 3%;
@@ -781,13 +785,7 @@ div.thanks-error {
 }
 #footer-subscribe input.text {
   width: 96%;
-  color: #cac1b2;
   margin: 0;
-}
-#footer-subscribe input.button {
-  background: #cac1b2;
-  padding: 5px;
-  color: #666;
 }
 #footer-subscribe img {
   width: 72px;
@@ -886,22 +884,32 @@ div.thanks-error {
 
 
 #subscribe-new-products {
-	background: #aaa;
+	background: #ccc;
 	margin: 2em 0;
-	padding: 1em;
 }
-#subscribe-new-products h4, #subscribe-new-products #mailchimp-direct {
+#subscribe-new-products #text {
+	padding: 1.5em 1em;
+	width: 100%;
 	float: left;
-	width: 35%;
-	margin-right: 5%;
+}
+#subscribe-new-products h4, #subscribe-new-products #mailchimp-direct, #subscribe-new-products #whatis {
+	float: left;
+	width: 30%;
+	margin-right: 3% !important;
+}
+#subscribe-new-products h4 {
+	padding-top: .3em;
 }
 #subscribe-new-products #whatis {
-	float: left;
-	top: 0;
-	left: 0;
-	width: 10%;
+	font-size: smaller;
+	text-decoration: underline;
+	width: 20%;
+	padding-top: .5em;
 }
-
+#subscribe-new-products input.email {
+	padding: .625em;
+	width: 68%;
+}
 
 
 
