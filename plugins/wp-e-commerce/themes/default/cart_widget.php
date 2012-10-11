@@ -20,29 +20,33 @@
   $cart_text = " cadouri";
   if ($cart == 1) {
     $cart_text = " cadou";
-  }
-?>  
+  } ?>  
   <ul>
     <li>
-      <a href="<?php echo $url ?>"><?php echo $cart ?><?php echo $cart_text ?> in cos, </a>
-      <a href="<?php echo $url ?>"><?php echo wpsc_cart_total_widget(); ?></a>
+      <a href="<?php echo $url ?>"><strong><?php echo $cart ?></strong><?php echo $cart_text ?> in cos, <strong><?php echo wpsc_cart_total_widget(); ?></strong></a>
     </li>    
-    <li id="checkout"><a href="<?php echo $url ?>">Finalizare comanda &rarr;</a></li>
-    <li id="wishlist"><a href="<?php bloginfo('home')?>/wishlist"><?php echo $wishlist ?><?php echo $wishlist_text ?> in wishlist &rarr;</a></li>
-  </ul>  
+    <li id="wishlist">
+    	<a href="<?php bloginfo('home')?>/wishlist"><strong><?php echo $wishlist ?></strong><?php echo $wishlist_text ?> in wishlist</a>
+    </li>
   <?php if(count($cart_messages) > 0) { ?>  
-    <ul>
     <?php foreach((array)$cart_messages as $cart_message) { ?>
       <li><?php echo $cart_message; ?></li>
     <?php } ?>
-    </ul>	
   <?php } ?>
+		<li>0740-456.127</li>
+		<li><a href="#footer-info">Informatii</a></li>
+	</ul>
+	
 	
 <?php else: ?>
+	
 	<ul class='emptycart'>
-	  <li><a href="<?php echo get_option('shopping_cart_url'); ?>">0 cadouri in cos</a></li>
-	  <li id="wishlist"><a href="<?php bloginfo('home')?>/wishlist"><?php echo $wishlist ?><?php echo $wishlist_text ?> in wishlist &rarr;</a></li>
+	  <li><a href="<?php echo get_option('shopping_cart_url'); ?>"><strong>0</strong> cadouri in cos</a></li>
+	  <li id="wishlist"><a href="<?php bloginfo('home')?>/wishlist"><strong><?php echo $wishlist ?></strong><?php echo $wishlist_text ?> in wishlist</a></li>
+	  <li>0740-456.127</li>
+	  <li><a href="#footer-info">Informatii</a></li>
 	</ul>	
+
 <?php endif; ?>
 
 

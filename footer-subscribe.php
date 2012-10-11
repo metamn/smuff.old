@@ -4,8 +4,6 @@
       <?php include 'mailchimp.php'; ?>
 	  </div>
 	  <div class="column span-2 last">	
-	    <a href="http://feeds.feedburner.com/smuff" title="Inscriere la feed-ul smuff.ro" rel="alternate" type="application/rss+xml">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/feedburner.png" alt="feedburner" /></a>
     </div>
   </div>
   
