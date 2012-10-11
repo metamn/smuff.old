@@ -406,9 +406,7 @@ div.thanks-error {
 #header #menu li a:hover {
 	border-bottom: 2px solid;
 }
-#header #menu li.all-products-link {
-	display: none;
-}
+
 
 
 /* Cart
@@ -458,16 +456,15 @@ div.thanks-error {
 }
 
 #home-hot-content .hot-slider-thumb-menu-wrapper {
-	width: 250px;
+	width: auto;
 	height: 512px;
-}
-#home-hot-content .hot-slider-thumb-menu {
 	background: url('img/stripe.png');
 }
-
-#home-hot-content #hot-slider-thumbs {
-	margin-left: 1.25em;
+#home-hot-content .hot-slider-thumb-menu {
+	margin-left: 2.5em;
+	padding: 1em 0;
 }
+
 #home-hot-content #hot-slider-thumbs img {
   width: 100px;
   height: 100px;
@@ -488,7 +485,6 @@ div.thanks-error {
 	font-size: larger;
 	padding: 1.25em;
 	display: block;
-	left: 120px !important;
 }
 
 
@@ -602,39 +598,31 @@ div.thanks-error {
   padding-bottom: 1em;
 }
 
-#bestsellers #col-0, #bestsellers #col-1 {
-	margin-right: 5.6em;
+.bestsellers .item {
+  margin-bottom: 6em;
+  height: 30em;
+  width: 30%;
+  margin-right: 4.9%;
+  float: left;
 }
-#bestsellers #col-2 .items {
-  float: right;
+.bestsellers .item.c3,
+.bestsellers .item.c6,
+.bestsellers .item.c9,
+.bestsellers .item.c12 {
   margin-right: 0;
 }
 
-.bestsellers .item, .special .item {
-  margin-bottom: 6em;
-  height: 30em;
-}
-.bestsellers .item .text, .special .item .text {
+.bestsellers .item .text {
   margin: 0;
   padding: 1em 1.5em;
   height: 15em; 
 }
-.bestsellers .item img, .special .item img {
-  width: 270px;
+.bestsellers .item img {
+  width: 98%;
   height: auto;
   cursor: pointer;
   padding: .2em;
 }
-
-.special .item {
-  width: 40%;
-  margin: 0 4%;
-  float: left;
-}
-.special .item a {
-  text-decoration: none !important;
-}
-
 .bestsellers #info p {
   padding: 1em;
   font-style: italic;
@@ -643,7 +631,6 @@ div.thanks-error {
 .bestsellers #info a, .bestsellers #info a:visited, .bestsellers #info a:active {
   text-decoration: underline;
 }
-
 .bestsellers .product-thumb .text {
 	background: url(img/stripe.png);
 }
@@ -655,9 +642,9 @@ div.thanks-error {
 	background: white;
 	padding: .7em;
 }
-.bestsellers .product-thumb .normal-price {
+.bestsellers .product-thumb #price {
 	position: relative;
-	top: 2.5em;
+	top: 3em;
 }
 
 
@@ -669,14 +656,11 @@ div.thanks-error {
 #promo {
   margin-top: 4em;
 }
-#promo #items {
-	width: 750px;
-}
 #promo .item {
   height: 28em;
   margin-bottom: 2em;
   padding: 0 2em;
-  width: 130px;
+  width: 18.9%;
   float: left;
   border-bottom: 3px solid white;
 }
@@ -873,7 +857,7 @@ li.comment ul.children {
   margin: 2.5em 0 !important;
   float: left;
   font-size: larger;
-  width: 88%;
+  width: 100%;
 }
 .campaign-box #tooltips {
   margin: 2em 0 0; 
@@ -904,7 +888,7 @@ li.comment ul.children {
   float: left;
 }
 #subscribe-newsletter #text {
-  width: 51%;
+  width: 53%;
   margin-right: 4%;
   float: left;
 }

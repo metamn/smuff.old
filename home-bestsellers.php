@@ -48,22 +48,19 @@
   </div>
   
   
-  <div id="col-1" class="column span-7 prepend-1 last">
+  <div class="column span-21 prepend-1 last">
     <div class="items">	
         <?php
           if ($top_sales->have_posts()) {
-            $counter = 0;
-            $count = $top_sales->post_count / 2;
+            $counter = 1;
             while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if ($counter < $count) {   
-                $medium = true;    
-                if ($cat == 0 || $cat == 10) {
-                  $show_category = true;         
-                } else {
-                  $show_category = false;         
-                }
-                include "product-thumb.php";              
-              }
+							$medium = true;    
+							if ($cat == 0 || $cat == 10) {
+								$show_category = true;         
+							} else {
+								$show_category = false;         
+							}
+							include "product-thumb.php";              
               $counter += 1;
             endwhile; 
           }
@@ -71,27 +68,6 @@
 	  </div>
   </div>
   
-  <div id="col-2" class="column span-7 prepend-1 last">
-    <div class="items">	
-        <?php
-          if ($top_sales->have_posts()) {
-            $counter = 0;
-            while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-              if($counter >= $count) {    
-                $medium = true;            
-                if ($cat == 0 || $cat == 10) {
-                  $show_category = true;         
-                } else {
-                  $show_category = false;         
-                }
-                include "product-thumb.php";              
-              }
-              $counter += 1;
-            endwhile; 
-          }        
-        ?>       		        
-	  </div>
-  </div>
   
   <?php 
     $cat = category_id(is_category(), is_single(), null);    

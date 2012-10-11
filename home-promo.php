@@ -11,7 +11,7 @@
     <div class="arrow-right"></div>
   </div>
   
-  <div id="items" class="column span-14 last">
+  <div id="items" class="column span-20 last">
     <div id="promo-scroll">			        
       <div class="items">	
         <?php

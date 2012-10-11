@@ -156,7 +156,7 @@
 		                <a class="tooltip" alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>?view=1" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 		              </li>
 		            <?php } ?>
-		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate<br/>cadourile</a></li>
+		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate cadourile</a></li>
 		        </ul>
 			    </div>			    
 			    
@@ -173,7 +173,7 @@
 	          </p>
 	        </div>
 		    <?php } else { ?>		    
-	        <div id="cart" class="column span-6 last">
+	        <div id="cart" class="column span-5 prepend-1 last">
 	          <?php dynamic_shopping_cart(); ?>          
 	        </div>
 	      <?php } ?>

@@ -1,7 +1,7 @@
 <div id="home-hot" class="block"> 
 
   <div id="home-hot-content" class="block">    
-    <div id="hot-slider" class="slider column span-15 last">
+    <div id="hot-slider" class="slider column span-18">
       <?php if ($new_products) { ?>
         <ul>
         <?php 
@@ -113,7 +113,7 @@
         </ul>
       <?php } ?>
     </div>
-    <div id="hot-slider-thumbs" class="column span-3 last">
+    <div id="hot-slider-thumbs" class="column span-5 prepend-1 last">
       <?php if ($thumbs) { ?>
         <div class="hot-slider-thumb-menu-wrapper">
         <div class="hot-slider-thumb-menu">
