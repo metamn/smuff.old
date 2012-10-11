@@ -109,7 +109,7 @@ input[type='button']:hover,
 */
 
 .single #post-images, .single .entry {
-	width: 710px;
+	width: 700px;
 }
 
 
@@ -225,10 +225,9 @@ img.small-image {
 #post-shopping img {
 	width: auto;
 }
-#post-shopping tr.animation {
-	display: none;
+#post-shopping .wpsc_container {
+  padding: 1em;
 }
-
 #post-shopping .wpsc_container .imagecol {
   display: none;
 }
@@ -236,7 +235,8 @@ img.small-image {
   margin-left: 0 !important;
 }
 #post-shopping .wpsc_container table {
-  width: 200px !important;
+  width: 90%;
+  margin-bottom: 0;
 }
 #post-shopping .wpsc_container table label {
   font-weight: normal;
@@ -254,8 +254,12 @@ img.small-image {
 #post-shopping .wpsc_container td.right {
   text-align: right;
 }
+#post-shopping .wpsc_container tr.animation {
+  display: none;
+}
 #post-shopping .wpsc_container tr.price {
   background: none !important;
+  font-size: 100%;
 }
 #post-shopping .wpsc_container span.pricedisplay {
   float: none !important;
@@ -287,25 +291,31 @@ div.thanks-error {
 	color: #111;
 	font-weight: bold;
 }
-.wpfp-span {
-	display: block;
-	text-align: center;
+
+#post-shopping #wishlist {
+	margin-bottom: 1em;
+	padding: 0 1em;
 }
 #post-shopping .wpfp-span {
-	width: 92%;
-	margin-left: .5em;
+	width: 85%;
+	margin-left: .312em;
+	padding: .6125em .312em;
+	
+	display: block;
+	text-align: center;
 }
 
 
 #shopping-info {
 	background: url(img/stripe.png);
 	position: absolute;
-	top: 54em;
+	top: 52.5em;
 	width: 185px;
 }
 #shopping-info ul {
   list-style-type: none;
   margin: 0;
+  padding: 2em 1em;
 }
 #shopping-info ul li {
   margin-bottom: 1em;

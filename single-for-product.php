@@ -14,7 +14,7 @@
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
   <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>			    
   <div id="top-section" class="block">			      
-    <div id="post-images" class="column span-12 last">
+    <div id="post-images" class="column span-18">
       <?php 
         $imgs = post_attachements($post->ID);
         $img = $imgs[0];  
@@ -45,8 +45,8 @@
       <?php } ?>      
     </div>
     
-    <div id="post-meta" class="column span-6 last">
-      <div id="post-shopping" class="box">
+    <div id="post-meta" class="column span-5 prepend-1 last">
+      <div id="post-shopping" class="block">
         <?php 
           if (in_category(10)) {
           	// $product_id = get_post_meta($post->ID, 'product_id', single);
@@ -54,7 +54,7 @@
 							if ($product_stock != '-1') {
 								echo wpsc_display_products_page('product_id='.$product_id); ?>
 								
-								<div id="wishlist">
+								<div id="wishlist" class="block">
 									<?php 
 									if (function_exists('wpfp_link')) { wpfp_link(); } ?>
 								</div> <?php
@@ -77,7 +77,7 @@
         	} ?>
       </div>
       
-      <div id="shopping-info" class="box"> 
+      <div id="shopping-info" class="block"> 
         <ul>                
           <li id="tooltip-trigger" class="shopping-info">
             Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
@@ -176,7 +176,7 @@
     </div>
     
     <div id="post-shopping2" class="block">
-      <div id="post-shopping" class="box">
+      <div id="post-shopping" class="block">
         <?php 
           if (in_category(10)) {
           	// $product_id = get_post_meta($post->ID, 'product_id', single);
@@ -184,7 +184,7 @@
 							if ($product_stock != '-1') {
 								echo wpsc_display_products_page('product_id='.$product_id); ?>
 								
-								<div id="wishlist">
+								<div id="wishlist" class="block">
 									<?php 
 									if (function_exists('wpfp_link')) { wpfp_link(); } ?>
 								</div> <?php
