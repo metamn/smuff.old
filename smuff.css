@@ -40,7 +40,7 @@ a, a:visited {
   text-decoration: none;
 }
 
-.post a, .post a:visited {
+#accordion a, #accordion a:visited {
 	border-bottom: 1px dotted;
 }
 
@@ -104,11 +104,11 @@ input[type='button']:hover,
 
 
 
-/* Product page 
+/* Product page / Single
 ----------------------------------------------------
 */
 
-.single #post-images, .single .entry {
+#single #post-images, #single .entry, #single .post h2  {
 	width: 700px;
 }
 
@@ -186,11 +186,7 @@ img.small-image {
 #shopping-incentives p {
   margin-bottom: 1.75em;
 }
-#post-shopping2 #post-shopping .wpfp-span {
-	display: block;
-	margin: 0 .5em;
-	width: auto;
-}
+
 
 
 
@@ -226,7 +222,7 @@ img.small-image {
 	width: auto;
 }
 #post-shopping .wpsc_container {
-  padding: 1em;
+  padding: 1em .5em;
 }
 #post-shopping .wpsc_container .imagecol {
   display: none;
@@ -235,7 +231,7 @@ img.small-image {
   margin-left: 0 !important;
 }
 #post-shopping .wpsc_container table {
-  width: 90%;
+  width: 100%;
   margin-bottom: 0;
 }
 #post-shopping .wpsc_container table label {
@@ -297,10 +293,8 @@ div.thanks-error {
 	padding: 0 1em;
 }
 #post-shopping .wpfp-span {
-	width: 85%;
-	margin-left: .312em;
+	width: 94%;
 	padding: .6125em .312em;
-	
 	display: block;
 	text-align: center;
 }
@@ -308,22 +302,18 @@ div.thanks-error {
 
 #shopping-info {
 	background: url(img/stripe.png);
-	position: absolute;
-	top: 52.5em;
-	width: 185px;
+	margin-top: 2em;
+	text-align: justify;
 }
 #shopping-info ul {
   list-style-type: none;
   margin: 0;
   padding: 2em 1em;
 }
-#shopping-info ul li {
-  margin-bottom: 1em;
-}
 #shopping-info ul li.shopping-info {
   cursor: pointer;
   background: white;
-  padding: .5em;
+  padding: 1em;
 }
 #shopping-info #tooltip-content {
 	display: none;
@@ -1051,7 +1041,7 @@ li.comment ul.children {
 .price {
   background: #F25F18;
 }
-.old-price {
+.old-price, .oldprice {
   text-decoration: line-through;
 }
 .normal-price {
