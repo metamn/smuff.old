@@ -35,6 +35,10 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/blueprint/print.css" type="text/css" media="print">	
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <!-- jqZoom
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.jqzoom.css" type="text/css" media="screen" />
+    -->
+    
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css?refresh=20121005" type="text/css" media="screen" />
 		
@@ -53,8 +57,9 @@
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.thumbslider.js" ></script>
     <!-- jquery table sorter -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.tablesorter.min.js"></script>
-    <!-- jqzoom -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jqzoom.pack.1.0.1.js"></script>
+    <!-- jqzoom
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.jqzoom-core-pack.js"></script>
+    -->
     
     <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
       {lang: 'ro'}
@@ -71,8 +76,7 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121005"></script>
-		
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121012"></script>
 		
 		
 		

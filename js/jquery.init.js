@@ -257,17 +257,14 @@ $(document).ready(function() {
   // jQZoom
   // On Product 
   // after image change jqzoom is reloaded, see below
+  /*
   $('.product-zoom').jqzoom({
-	    zoomWidth: 480,
-	    zoomHeight: 330,
-      xOffset: 10,
-      yOffset: 0,
-      position: "right",
-      title: false,
-      preload: 0,
-      zoomType: 'reverse'
+    zoomType: 'reverse',
+		lens: true,
+		preloadImages: false,
+		alwaysOn: false
   });
-  
+  */
   
   // Slider
   // Home page Hot / New products
@@ -299,17 +296,15 @@ $(document).ready(function() {
     };
     img.src = newImage;
     
+    /*
     // jQZoom
     $('.product-zoom').jqzoom({
-	      zoomWidth: 480,
-	      zoomHeight: 330,
-        xOffset: 10,
-        yOffset: 0,
-        position: "right",
-        title: false,
-        preload: 0,
-        zoomType: 'reverse'
+    	zoomType: 'reverse',
+			lens: true,
+			preloadImages: false,
+			alwaysOn: false
     });
+    */
   }).filter(":first").click();
 
 
@@ -855,5 +850,3 @@ $(document).ready(function() {
 
     
 }); 
-
-

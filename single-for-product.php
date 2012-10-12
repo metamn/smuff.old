@@ -18,10 +18,11 @@
       <?php 
         $imgs = post_attachements($post->ID);
         $img = $imgs[0];  
-        $large = wp_get_attachment_image_src($img->ID, 'full');                			        
+        $full = wp_get_attachment_image_src($img->ID, 'full');
+        $large = wp_get_attachment_image_src($img->ID, 'large');    
       ?>
       <div id="large-image">
-        <a href="<?php echo $large[0]?>" class="product-zoom" title="<?php echo $title ?>" alt="<?php echo $title ?>">
+        <a href="<?php echo $full[0]?>" class="product-zoom" title="<?php echo $title ?>" alt="<?php echo $title ?>">
           <img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
         </a>
       </div>
