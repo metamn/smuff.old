@@ -34,16 +34,19 @@
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
       <h4><?php echo $product_name; ?></h4>
       <?php the_excerpt(); ?>  
-      <div id="price">
-				<?php if ($product_discount > 0) { ?>
-					<span class="price"><?php echo $product_sale_price; ?> RON</span>
-					<span class="old-price"><?php echo $product_price; ?></span>    
-				<?php } else { ?>
-					<span class="normal-price"><?php echo $product_price; ?></span> RON
-				<?php } ?>
-			</div>
     </a>
   </div>
+  
+  <div id="price">
+  	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+		<?php if ($product_discount > 0) { ?>
+			<span class="price"><?php echo $product_sale_price; ?> RON</span>
+			<span class="old-price"><?php echo $product_price; ?></span>    
+		<?php } else { ?>
+			<span class="normal-price"><?php echo $product_price; ?></span> RON
+		<?php } ?>
+		</a>
+	</div>
   
   <?php if ($show_category) { ?>
     <div id="category">

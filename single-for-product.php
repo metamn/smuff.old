@@ -12,7 +12,7 @@
 ?>
 
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-  <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>			    
+  <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>			    
   <div id="top-section" class="block">			      
     <div id="post-images" class="column span-18">
       <?php 
@@ -100,14 +100,18 @@
     </div>
   </div>
  
-  <!--
-  <div id="announcement" class="block">
-    <h4>Am facut mici schimbari la designul siteului Smuff. 
-    <br/>
-    Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-    Va multumim.</h4> 
-  </div>
-  -->
+ 
+ 	<div id="contact-info">
+		<center>
+			<h2>Aveti intrebari?</h2>
+			<p>
+				Suport online <br/> Luni-Vineri intre 9.00-17.00    
+			</p>
+			<h2>0740-456127</h2>
+			<!-- BEGIN Comm100 Live Chat Button Code --><div><div id="comm100_LiveChatDiv"></div><a href="http://www.comm100.com/livechat/" onclick="comm100_Chat();return false;" target="_blank" title = "Live Chat Live Help Software for Website"><img id="comm100_ButtonImage" src="http://chatserver.comm100.com/BBS.aspx?siteId=43909&planId=484" border="0px" alt="Live Chat Live Help Software for Website" /></a><script src="http://chatserver.comm100.com/js/LiveChat.js?siteId=43909&planId=484"type="text/javascript"></script><div id="comm100_track" style="z-index:99;"><span style="font-size:10px; font-family:Arial, Helvetica, sans-serif;color:#555"><a href="http://www.comm100.com/livechat/" style="text-decoration:none;color:#555" target="_blank"><b>Live Chat Software</b></a> by <a href="http://www.comm100.com/" style="text-decoration:none;color:#009999;" target="_blank">Comm100</a></span></div></div><!-- End Comm100 Live Chat Button Code -->
+		</center>
+	</div>
+    
 
   <div class="entry">
     <div class="block">
@@ -124,32 +128,7 @@
         
         <?php include 'c_subscribe-to-newsletter.php' ?>
       </div>
-      
-      <!--
-      <div id="post-sponsor" class="column span-6 last">      
-        <span class="text">In parteneriat cu</span>
-        <br/>  
-        <?php 
-          $main_cat = page_name(false, true, $post->ID);          
-          $sponsor = sponsor_post($main_cat);
-          if ($sponsor) {
-            $link = get_post_meta($sponsor->ID, 'Link', true);
-            $imgs = post_attachements($sponsor->ID);
-            $img = $imgs[0];
-            $medium = wp_get_attachment_image_src($img->ID, 'medium'); ?>
-                        
-            <a target="_blank" href="<?php echo $link ?>" title="<?php echo $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>">
-              <img class="half-banner" src="<?php echo $medium[0] ?>" title="<?php $sponsor->post_title ?>" alt="<?php $sponsor->post_title ?>"/>
-            </a>
-          <?php } else { ?>
-            <a href="<?php bloginfo('home')?>/<?php echo get_page_uri(2277)?>" title="Cum devin partener Smuff?">
-              <img class="half-banner" src="<?php bloginfo('stylesheet_directory')?>/img/empty-logo.jpg" /></a>      
-          <?php } ?>              
-      </div>
-      --> 
     </div>
-    
-    
     
     
     <div id="accordion" class="block">
@@ -159,21 +138,6 @@
       <div class="pane normal">
         <?php comments_template('', true); ?>
       </div>
-      
-      <!--
-      <h3>Alte informatii</h3>
-      <div class="pane normal">
-        <ul>
-          <li>Adresa trackback: <a href="<?php trackback_url(); ?>"><?php trackback_url(); ?></a></li>
-          <li><?php post_comments_feed_link('Urmarire articol prin RSS'); ?></li>
-          <li>Numar vizualizari articol: <?php if(function_exists('the_views')) { the_views(); } ?>  </li>
-          <li>Creat <?php the_time('l, j F Y') ?> ora <?php the_time('G:i') ?> de <?php the_author() ?></li>
-          <li>Categorii: <?php the_category(', ') ?></li>
-          <li><?php the_tags('Etichete: ', ', ', ''); ?></li>
-          <?php edit_post_link('Modificare articol.', '<p>', '</p>'); ?>
-        </ul>
-      </div>
-      -->
     </div>
     
     <div id="post-shopping2" class="block">
@@ -213,32 +177,6 @@
   </div>
   
   
-  
-  <!--
-  <div id="cadouri" class="block">
-    <h3>Produse oferite cadou</h3>
-    <p>
-      La fiecare comanda pana <b>1 ianuarie</b> noi punem un cadou, unul dintre cele prezentate aici.
-      <br/>
-      Surpriza este ca nimeni nu stie care dintre acestea va fi al lui. Speram sa va placa, speram sa va bucurati mult de Gadgeturile Smuff.
-    </p>
-    <?php 
-      $specials = query_posts2('posts_per_page=-1&cat=1318');
-      if ($specials) {
-        if ($specials->have_posts()) {
-          while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
-            if (in_category(10)) {
-              $medium = true;
-              include "product-thumb.php";
-            }                    
-          endwhile; 
-        }		      
-      }
-    ?>
-  </div>
-  
-  -->
-  
   <div class="block">
 		<?php include 'c_subscribe-to-new-products.php' ?>
   </div>
@@ -258,7 +196,7 @@
       $specials = query_posts2('posts_per_page=4&cat='.$cat);
       if ($specials) {
         if ($specials->have_posts()) {
-          $counter = 0;
+          $counter = 1;
           while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
             if (in_category(10)) {
               $medium = true;
@@ -280,28 +218,21 @@
     </h4>    
   </div>
   
-  
-  
-  <?php 
-    // deal of the week  
-    //$dow_posts = query_posts2('posts_per_page=1&cat=2135');    
-    
-    // gift of the week  
-    //$gow_posts = query_posts2('posts_per_page=1&cat=2163');
-     
-    // include 'c_summer-2012.php' ?>
 
     
   <div id="recommended" class="bestsellers block">    
      <?php
+     		$show_category = true;
+     		
         $related_posts = MRP_get_related_posts($postid, true);
-        if ($related_posts) { ?>        
+        if ($related_posts) { 
+        	$counter = 1; ?>        
           <h2>Produse similare</h2>
-          <div class="block"><?php // second FB Connect not working .... include 'c_subscribe-to-newsletter.php' ?></div>
           <?php foreach ($related_posts as $post) {
             setup_postdata($post);
             $medium = true;
             include "product-thumb.php";
+            $counter += 1;
           }
         } 
       ?>
@@ -315,10 +246,12 @@
       $specials = query_posts2('posts_per_page=4&cat=15&orderby=rand');
       if ($specials) {
         if ($specials->have_posts()) {
+        	$counter = 1;
           while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
             if (in_category(10)) {
               $medium = true;
               include "product-thumb.php";
+              $counter += 1;
             }                    
           endwhile; 
         }		      
@@ -338,10 +271,12 @@
       $specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');
       if ($specials) {
         if ($specials->have_posts()) {
+        	$counter = 1;
           while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
             if (in_category(10)) {
               $medium = true;
               include "product-thumb.php";
+              $counter += 1;
             }                    
           endwhile; 
         }		      
