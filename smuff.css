@@ -168,7 +168,7 @@ input[type='checkbox']:checked:after {
 
 #search-enhanced {
 	background: #4D8FCE; 
-	margin-bottom: 2em;
+	margin-bottom: 5em;
 }
 #search-enhanced #searchform, #search-enhanced #categories, #search-enhanced #tags {
 	width: 30%;
@@ -185,10 +185,11 @@ input[type='checkbox']:checked:after {
 }
 #searchform input[type='text'] {
 	margin-left: .5em;
+	width: 92%;
 }
 #searchform ul, #categories ul {
 	list-style: none;
-	margin: 1em 0;
+	margin: 2em 1em;
 }
 #searchform ul li, #categories ul li {
 	border-bottom: 1px dotted;
