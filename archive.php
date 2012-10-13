@@ -5,8 +5,8 @@
     
   $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);		
 	$subs = explode("&", $params);		  	
-	#$tmp = explode("=", $subs[0]);  // for apache
-	$tmp = explode("=", $subs[1]); // for nginx
+	$tmp = explode("=", $subs[0]);  // for apache
+	#$tmp = explode("=", $subs[1]); // for nginx
 	$view = $tmp[1];
 	
   switch ($view) {

@@ -61,6 +61,20 @@ input, textarea {
 	-moz-appearance: none;
 }
 
+input[type='text'] {
+	border-bottom: 1px solid;
+	font-style: italic;
+	color: #ccc;
+	font-family: monospace;
+	font-size: medium;
+	padding: .312em;
+	width: 96%;
+}
+input[type='text']:focus {
+	color: black;
+	font-style: normal;
+}
+
 input[type='submit'],
 input[type='button'], 
 .wpfp-link,
@@ -77,6 +91,110 @@ input[type='button']:hover,
 	color: white;
 }
 
+
+input[type='radio']:after {
+	content: '\2610';
+	margin-right: $pad/2;
+}
+input[type='radio']:checked:after {
+	content: '\25a3';
+}
+
+input[type='checkbox']:after {
+	content: '\272A';
+	margin-right: $pad/4;
+
+	// This glyph is too small, so grow it
+	font-size: 200%;
+	line-height: .5;
+	vertical-align: top;
+
+	color: lightgray;
+}
+input[type='checkbox']:checked:after {
+	color: black;
+}
+
+
+
+/* Archive
+----------------------------------------------------
+*/
+
+
+.container #archive-all #content {
+	width: 100%;
+}
+#archive-header h1 {
+	width: 60%;
+	float: left;
+	margin-right: 5%;
+	font-weight: bold;
+} 
+#archive-header #navigation {
+	width: 35%;
+	float: left;
+	text-align: right;
+	background: #f1f1f1;
+}
+.wp-paginate a {
+  background: none !important;
+  border: 1px solid #f1f1f1 !important;
+  color: #111 !important;
+  
+  line-height: 3  !important;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.wp-paginate .current, .wp-paginate a:hover, .wp-paginate a:focus {
+  background: #4D8FCE !important;
+  border: 1px solid #4D8FCE !important;
+  color: #fff !important;
+  
+  line-height: 3  !important;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+
+
+
+/* Search
+----------------------------------------------------
+*/
+
+#search-enhanced {
+	background: #4D8FCE; 
+	margin-bottom: 2em;
+}
+#search-enhanced #searchform, #search-enhanced #categories, #search-enhanced #tags {
+	width: 30%;
+	margin-right: 4.9%;
+	float: left;
+	padding: 1em 0;
+}
+#search-enhanced #tags {
+	margin-right: 0;
+}
+
+#searchform input, #searchform ul {
+	margin: 0 1em;
+}
+#searchform input[type='text'] {
+	margin-left: .5em;
+}
+#searchform ul {
+	list-style: none;
+	margin: 1em 0;
+}
+#searchform ul li {
+	border-bottom: 1px dotted;
+	padding-bottom: .312em;
+	margin-bottom: .312em;
+}
 
 
 /* Page
@@ -631,7 +749,7 @@ div.thanks-error {
 
 .bestsellers .item {
   margin-bottom: 6em;
-  height: 30em;
+  height: 36em;
   width: 30%;
   margin-right: 4.9%;
   float: left;
@@ -639,7 +757,14 @@ div.thanks-error {
 .bestsellers .item.c3,
 .bestsellers .item.c6,
 .bestsellers .item.c9,
-.bestsellers .item.c12 {
+.bestsellers .item.c12,
+.bestsellers .item.c15,
+.bestsellers .item.c18,
+.bestsellers .item.c21,
+.bestsellers .item.c24,
+.bestsellers .item.c27,
+.bestsellers .item.c30
+{
   margin-right: 0;
 }
 

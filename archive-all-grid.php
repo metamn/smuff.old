@@ -12,46 +12,30 @@
 ?>
 
 <div id="archive-all" class="block">  
-  <div id="content" class="column span-18 content">
-    <div id='title' class='block'>
-      <div id="left" class="column span-14 last">
-        <h2>
-          Toate cadourile<?php echo $cat_name; ?>
-          <?php if (!($cat == 10)) { ?>
-             (<span id="search-counter">...</span>)
-          <?php } ?>
-        </h2>
-      </div>
-      <div id="right" class="column span-4 last">
-        Lista | 
-        <?php 
-          $title = 'Tabela';
-          $link_type = '2'; // 2=table view, 3=grid view
-          include "home-all-products-link.php";
-        ?>
-      </div>
-    </div>
+  <div id="content" class="block">
+		<div id="archive-header" class="block">
+			<h1>
+				Toate cadourile<?php echo $cat_name; ?>
+				<?php if (!($cat == 10)) { ?>
+					 (<span id="search-counter">...</span>)
+				<?php } ?>
+			</h1>
     
-    <!--
-    <div id="announcement" class="block">
-      <h4>Am facut mici schimbari la designul siteului Smuff. 
-      <br/>
-      Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-      Va multumim.</h4> 
-    </div>
-    -->
+			<?php if ($cat == 10) { ?>
+				<div id="navigation" class="block">
+					<?php if(function_exists('wp_paginate')) {
+						wp_paginate();
+					} ?>  
+				</div>
+			<?php } ?>
+		</div>
     
-    <?php if ($cat == 10) { ?>
-      <div id="navigation" class="block">
-        <?php if(function_exists('wp_paginate')) {
-          wp_paginate();
-        } ?>  
-      </div>
-    <?php } ?>
+    <?php include 'search-enhanced.php' ?>
+    
     
     <div id="archive-all-grid" class="bestsellers block">
       <?php if ($all_posts->have_posts()) : 
-        $counter = 0;
+        $counter = 1;
         while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
 		      $medium = true;        
           if (in_category(10)) { 
@@ -76,22 +60,29 @@
 	    endif; ?>
 	  </div>
 	  <div class="clear"></div>	  
-	  <span id="search-count" class="hidden"><?php echo $counter; ?></span>
-	  <h4 class="all-products-link">
-      <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
-      Inapoi la inceputul paginii &uarr;</a>
-    </h4>
 	  
-	  <?php if ($cat == 10) { ?>
-      <div id="navigation" class="block">
-        <?php if(function_exists('wp_paginate')) {
-          wp_paginate();
-        } ?>  
-      </div>
-    <?php } ?>
+	  <?php include 'search-enhanced.php' ?>
+	  
+	  <div id="archive-header" class="block">
+			<h1>
+				Toate cadourile<?php echo $cat_name; ?>
+				<?php if (!($cat == 10)) { ?>
+					 (<span id="search-counter">...</span>)
+				<?php } ?>
+			</h1>
+    
+			<?php if ($cat == 10) { ?>
+				<div id="navigation" class="block">
+					<?php if(function_exists('wp_paginate')) {
+						wp_paginate();
+					} ?>  
+				</div>
+			<?php } ?>
+		</div>
+    
+	  
   </div>
   
-  <?php get_sidebar(); ?>
 
 </div>
 
