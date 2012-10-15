@@ -100,6 +100,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
 		
+		<link href='http://fonts.googleapis.com/css?family=Coda|Oxygen|Oswald:400,700' rel='stylesheet' type='text/css'>
 		
 		<?php wp_head(); ?>
 	
