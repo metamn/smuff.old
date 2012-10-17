@@ -114,19 +114,19 @@ input[type='button']:hover,
 }
 
 
-input[type='radio']:after {
+input[type='checkbox']:after {
 	content: '\2610';
-	margin-right: $pad/2;
+	margin-right: .625em;
 }
-input[type='radio']:checked:after {
+input[type='checkbox']:checked:after {
 	content: '\25a3';
 }
 
+/*
 input[type='checkbox']:after {
 	content: '\272A';
-	margin-right: $pad/4;
+	margin-right: .312em;
 
-	// This glyph is too small, so grow it
 	font-size: 200%;
 	line-height: .5;
 	vertical-align: top;
@@ -136,7 +136,7 @@ input[type='checkbox']:after {
 input[type='checkbox']:checked:after {
 	color: black;
 }
-
+*/
 
 
 /* Archive
@@ -192,61 +192,33 @@ input[type='checkbox']:checked:after {
 	background: #4D8FCE; 
 	margin-bottom: 5em;
 }
-#search-enhanced #searchform, #search-enhanced #categories, #search-enhanced #tags {
+#search-enhanced div {
 	width: 30%;
 	margin-right: 4.9%;
 	float: left;
 	padding: 2em 0;
 }
-#search-enhanced #tags {
+#search-enhanced div.last {
 	margin-right: 0;
 }
-
-#searchform input, #searchform ul {
-	margin: 0 1em;
+#search-enhanced h3 {
+	margin-left: .625em;
 }
-#searchform input[type='text'] {
-	margin-left: .5em;
-	width: 92%;
-}
-#searchform ul, #categories ul {
+#search-enhanced ul {
 	list-style: none;
 	margin: 2em 1em;
 }
-#searchform ul li, #categories ul li {
+#search-enhanced ul li {
 	border-bottom: 1px dotted;
 	padding-bottom: .312em;
 	margin-bottom: .312em;
 }
-#searchform #advanced-search {
+#search-enhanced #submit {
+	margin: 2em 0;
+}
+#search-enhanced #submit #advanced-search {
 	font-style: italic;
 }
-
-
-#categories ul {
-	margin: 0;
-}
-#categories ul.children {
-	display: none;
-}
-
-
-#search-enhanced #tags #home-tag-icons {
-	margin: 0;
-}
-#search-enhanced #tags #home-tag-icons ul li {
-	width: 30%;
-	margin: 4%;
-	border: 1px dotted;
-	padding: 1em;
-}
-#search-enhanced #tags #home-tag-icons ul li img {
-	height: 50px;
-}
-#search-enhanced #tags #home-tag-icons ul li h4 {
-	display: none;
-}
-
 
 
 
@@ -794,7 +766,7 @@ div.thanks-error {
 #bestsellers {
   margin: 1.7em 0;
 }
-.bestsellers h3 {
+.bestsellers #col-0 h3 {
   background: #111;
   color: #F25F18;
   padding: 0.1em 1em;
@@ -802,10 +774,10 @@ div.thanks-error {
   text-transform: uppercase;  
   font-weight: bold;
 }
-.bestsellers h3.first {
+.bestsellers #col-0 h3.first {
   padding-top: 1em;
 }
-.bestsellers h3.last {
+.bestsellers #col-0 h3.last {
   padding-bottom: 1em;
 }
 

@@ -14,6 +14,8 @@ get_header(); ?>
     $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);	
     $subs = explode("&", $params);
     
+    print_r($subs);
+    
     echo strpos($subs[0], 'page');
     
     // Eliminate pagination on nginx
@@ -47,13 +49,6 @@ get_header(); ?>
   }	 
    		
   $fullsearch = true; 				  
-
-  // deal of the week  
-  //$dow_posts = query_posts2('posts_per_page=1&cat=2135');
-  
-  // gift of the week  
-  //$gow_posts = query_posts2('posts_per_page=1&cat=2163');
-
 ?>
 
 <div id="search-results" class="block">
@@ -135,7 +130,7 @@ get_header(); ?>
                   wp_paginate();
                 } ?>
               </div>              
-            <?php } else {
+            <?php break; } else {
               echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";
             } 
            

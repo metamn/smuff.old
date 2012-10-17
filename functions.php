@@ -2,18 +2,16 @@
 
 
 // Logging
-// --
+// -------------------------------------------------------------------------------------------------
+
 global $wplogger;
 //$wplogger->log('message'.$value);
 
 
 
-function get_tag_id_by_name($tag_name) {
-  global $wpdb;
-  $tag_ID = $wpdb->get_var("SELECT * FROM ".$wpdb->terms." WHERE `name` = '".$tag_name."'");
 
-  return $tag_ID;
-}
+// Subscribe to Mailchimp / Newsletter
+// -------------------------------------------------------------------------------------------------
 
 
 // Subscribe by email, but not via Mailchimp, instead manually will be added to a list
@@ -202,7 +200,7 @@ add_action( 'wp_ajax_nopriv_invite_friend', 'invite_friend' );
 
 
 // Giftshopper
-//
+// -------------------------------------------------------------------------------------------------
 
 // Add a new list to the DB
 // - $cats, $products are arrays
@@ -270,164 +268,8 @@ function gsh_get_list($email, $nume) {
 
 
 
-
-// Sponsorship
-//
-
-
-// Getting the banner of the sponsor to display
-// - $id: post id
-// - $imgs: post attachemnts
-// - $sizes: the desired banner sizes, sorted by priority
-//   0 - logo
-//   1 - pop-under (blog)
-//   2 - rectangle
-//   3 - wide scyscraper
-// - if flash, the id is stored in a meta field
-//   parteneriat-0, parteneriat-1, ....
-// - returns either an url to an image or a filename.swf
-function sponsor_banner($id, $imgs, $size) {
-  $ret = "";
-  
-  if ($size) {
-    foreach ($size as $s) {
-      $img = $imgs[$s];        
-      $large = wp_get_attachment_image_src($img->ID, 'large');
-      if (!($large)) {
-        // checking flash
-        $flash = get_post_meta($id, "parteneriat-".$s, true);
-        if ($flash) {
-          $ret = $flash;
-          break;
-        } 
-      } else {
-        $ret = $large[0];
-        break;
-      }
-    }
-  }
-  
-  return $ret;
-}
-
-// Getting the sponsor of a post
-function sponsor_post($main_category){
-  $ret = '';
-  
-  $slug = $main_category.'-parteneri';
-  
-  $posts = get_posts('numberposts=1&category_name='.$slug);
-  if ($posts) {
-    foreach ($posts as $p) {
-      $ret = $p;
-      break; 
-    }
-  }
-    
-  return $ret;
-}
-
-
-
-// Getting the sponsored category the product belongs
-// - used in blog sidebar/taxonomy
-// - input params: see display_post_categories 
-// steps: 
-// 1. get the main category slug, ie 'gadget'
-// 2. get that children category from 'Parteneri' whose slug has 'gadget'
-function get_sponsor_category($post_categories, $parent_id) {
-  $ret = 0;
-  $cats = get_categories('child_of='.$parent_id);
-  $first_cat_ID = 0;
-  
-  // Getting the first, main category slug the post belongs
-  if ($cats) {
-    $ids1 = array();
-    foreach ($cats as $c1) {
-      $ids1[] = $c1->cat_ID;
-    }
-    $ids2 = array();
-    foreach ($post_categories as $c2) {
-      $ids2[] = $c2->cat_ID;
-    }
-    $main = array_intersect($ids1, $ids2);
-    foreach ($main as $m) {
-      $cat = get_category($m);
-      $slug = $cat->slug;
-      break;
-    }   
-  }
-  
-  
-  $c = get_category(96);
-  $suffix = $slug . "-" . $c->slug;
-  
-  //echo "suffix is: " . $suffix . '<br/>'; 
-  
-  return get_category_by_slug($suffix);
-}
-
-
-// Getting the sponsored category the post belongs
-// - used in blog sidebar/taxonomy
-// - get that children category from 'Parteneri' whose slug has 'stiri'
-function get_sponsor_category2($main_category) {
-  $c = get_category($main_category);
-  $slug = $c->slug;
-  
-  $c = get_category(96);
-  $suffix = $slug . "-" . $c->slug;
-  
-  return get_category_by_slug($suffix);
-}
-
-
-// used in partner-list.php
-function get_sponsor_category3($post_categories, $parent_id) {
-  $ret = 0;
-  $cats = get_categories('child_of='.$parent_id);
-  $first_cat_ID = 0;
-  
-  // Getting the first, main category slug the post belongs
-  if ($cats) {
-    $ids1 = array();
-    foreach ($cats as $c1) {
-      $ids1[] = $c1->cat_ID;
-    }
-    $ids2 = array();
-    foreach ($post_categories as $c2) {
-      $ids2[] = $c2->cat_ID;
-    }
-    $main = array_intersect($ids1, $ids2);
-    foreach ($main as $m) {
-      $cat = get_category($m);
-      $slug = $cat->slug;
-      break;
-    }   
-  }
-  
-  $sl = explode('-', $slug);
-  $ret = '';
-  $sl[0] = ucfirst($sl[0]);
-  for($i = 0; $i < sizeof($sl)-1; ++$i) {
-    $ret .= $sl[$i].' ';
-  }
-  return $ret;
-}
-
-
-// Cache
-//
-
-// making the shopping cart dynamic when using the WP SuperCache plugin
-function dynamic_shopping_cart() {
-  echo nzshpcrt_shopping_basket();
-}
-
-
-
-// System
-//
+// System & WP
+// -------------------------------------------------------------------------------------------------
 
 
 // Set cookies
@@ -435,7 +277,6 @@ function dynamic_shopping_cart() {
 function set_cookie($cookie, $value, $expire, $root) {
   setcookie($cookie, $value, $expire, $root);
 }
-
 function get_cookie($cookie) {
   return $_COOKIE[$cookie];
 }
@@ -449,6 +290,7 @@ function obfuscate($email, $display_text) {
     $ret .= "&#" . ord($email[$i]);  // creates ASCII HTML entity
   echo '<a href="mailto:' . $ret . '">'.$display_text.'</a>';
 }
+
 
 // Getting current URL
 // - used by shopping cart 
@@ -521,8 +363,10 @@ function get_comment_number($id) {
 
 
 
+
+
 // WP Extensions
-//
+// -------------------------------------------------------------------------------------------------
 
 
 // The product ids during the transaction are saved into wpsc_purchase_logs
@@ -538,8 +382,22 @@ function get_transaction_products($sessionid) {
   }  
 }
 
+// Get the page title (category or tag name)
+// - it is displayed in the header
+function page_main_name() {
+	$ret = '';
+	$tag = single_tag_title("", false);
+	if ($tag) {
+		$tag2 = str_replace('magazin ', '', $tag);
+		$ret = ucfirst($tag2);
+	} else {
+		$ret = page_name(is_category(), is_single(), null);
+	}			
+
+	return $ret;
+}
+
 // Get the main category of a page
-// - used in header
 // - if used in sidebar it doesn't works!
 function page_name($is_category, $is_single, $post_id) {
   $page_name = '&nbsp;';
@@ -557,105 +415,27 @@ function page_name($is_category, $is_single, $post_id) {
   return $page_name;
 }
 
-
-// Returns the excerpt of a page
-// - $page is the page slug
-function page_excerpt($page) {
-    $p = get_page_by_path($page);   
-    return $p->post_excerpt;
-}
-
-
-function is_blog() {
-  $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
-  $ret = (is_home() || is_author() || is_tag() || in_category($non_shop_categories) || is_category($non_shop_categories));
-  if (is_page() || is_search()) { 
-    return false;
-  } else {
-    return $ret;
-  }
-}
-
-// Checking if the request is for the shop or the blog
-// - used to display different layouts for the shop and the blog
-function is_blog2() {
-  $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
-  
-  $ret = false;
-  if (is_category()) {
-    $category_id =  get_query_var('cat');
-    if (in_array($category_id, $non_shop_categories)) {
-      $ret = true;
-    } 
-  } else if (is_single()) {
-      $post_categories = get_the_category();
+// Getting the category id if there is any
+// - used to determine which category to display in the header
+function category_id($is_cat, $is_single, $post_id) {
+  $cat_id = 0;
+  if ($is_cat) {
+    return get_query_var('cat');
+  } else if ($is_single) {
+      $collection_categories = get_categories('child_of=10');
+      $cats = array();
+      foreach ($collection_categories as $cc) {
+        $cats[] = $cc->cat_ID; 
+      }
+      $post_categories = get_the_category($post_id);
       foreach ($post_categories as $pc) {
-        if (in_array($pc->cat_ID, $non_shop_categories)) {
-          $ret = true;
+        if (in_array($pc->cat_ID, $cats)) {
+          $cat_id = $pc->cat_ID;
         }	        
-        
       }	     
-  } else if (is_home() || is_author()) {
-    $ret = true;  
-  } else {
-    $ret = false;
   }
-  return $ret;
+  return $cat_id;
 }
-
-
-
-// Query for multiple posts
-// - the query string has the syntax of the query_posts WP function
-function query_posts2($query_string) {
-  $q = new WP_Query($query_string);
-  return $q;
-}
-
-// split tumblr imported post content into text and multimedia
-// - used in blog index
-function get_tumblr_media($post_content) {
-  $ret = "";
-  $tmp = explode('<br/>', $post_content);
-  return $tmp[0];
-}
-
-// Generate a link for the current user's all posts
-// - used in blog index
-function get_user_posts($user) {
-  $user_name = $user;
-  if ($user == 'cs') {
-    $user_name = 'admin';
-  }
-  return bloginfo('home') . '/author/' . $user_name;
-}
-
-// Returns the name of the author identified by the $id
-// - used in blog intro
-function get_author_login_name($id) {
-  if ($id) {
-    global $wpdb;
-    $user_login = $wpdb->get_var("SELECT `user_login` FROM `".$wpdb->prefix."users` WHERE `id`=".$id." LIMIT 1");
-    return $user_login;
-  } 
-}
-
-// Getting the categories where a post belongs in a new fashion
-// - some parent categories are removed:
-//   :: alte-categorii-de-produse, distribuim-online, meta, post, produse, produse-folosite-in, produse-pentru, ocazii
-// - used in blog index
-function get_post_categories_array($post) {
-  $parent_categories = array(704, 8, 670, 686, 9, 726, 10);  
-  $ret = array();
-  $cats = get_the_category($post->ID);
-  foreach ($cats as $cat) {
-    if (!(in_array($cat->cat_ID, $parent_categories))) {
-      $ret[] = $cat;
-    }
-  }
-  return $ret;
-}
-
 
 
 // Getting the main category a post belongs
@@ -684,51 +464,61 @@ function post_main_category($post_categories, $parent_id) {
   return $cat;
 }
 
-// Displaying post categories highlighting major categories
-// - the parent is given for the most important category
-// - major categories will go first 
+// Getting the categories where a post belongs in a new fashion
+// - some parent categories are removed:
+//   :: alte-categorii-de-produse, distribuim-online, meta, post, produse, produse-folosite-in, produse-pentru, ocazii
 // - used in blog index
-// - returns list items
-function display_post_categories($post_categories, $parent_id) {
-  $ret = "";
-  
-  // Patching ....
-  if (in_array($parent_id, array(22,9))) {
-    $cat = $parent_id;
-  } else {
-    // First category
-    $cat = post_main_category($post_categories, $parent_id);  
-  }
-  $first_cat_ID = $cat->cat_ID;
-  $name = $cat->cat_name;
-  $ret = '<li><a href="' . get_category_link($cat);
-  $ret .='" title="Toate articolele din ' . $name . '" class="category main ' . $cat->category_nicename . '">' . $name . '</a></li>';
-    
-  // Getting the other categories
-  $i = 0;
-  foreach ($post_categories as $c) {
-    if (!($c->cat_ID == $first_cat_ID)) {
-      $name = $c->cat_name;
-      $ret .= '<li><a href="' . get_category_link($c);
-      $ret .='" title="Toate articolele din ' . $name . '" class="category ' . $c->category_nicename . '">' . $name . '</a></li>';
-    }
-    $i += 1;
-    if ($i == 5) {
-      $ret .= '<li><p> ... </p></li>';
-      break;
+function get_post_categories_array($post) {
+  $parent_categories = array(704, 8, 670, 686, 9, 726, 10);  
+  $ret = array();
+  $cats = get_the_category($post->ID);
+  foreach ($cats as $cat) {
+    if (!(in_array($cat->cat_ID, $parent_categories))) {
+      $ret[] = $cat;
     }
   }
-  
   return $ret;
 }
 
 
 
 
+// Returns the excerpt of a page
+// - $page is the page slug
+function page_excerpt($page) {
+    $p = get_page_by_path($page);   
+    return $p->post_excerpt;
+}
 
-// Product - WP-E-Commerce
-//
 
+function is_blog() {
+  $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
+  $ret = (is_home() || is_author() || is_tag() || in_category($non_shop_categories) || is_category($non_shop_categories));
+  if (is_page() || is_search()) { 
+    return false;
+  } else {
+    return $ret;
+  }
+}
+
+
+
+// Query for multiple posts
+// - the query string has the syntax of the query_posts WP function
+function query_posts2($query_string) {
+  $q = new WP_Query($query_string);
+  return $q;
+}
+
+
+
+// WP-E-Commerce
+// -------------------------------------------------------------------------------------------------
+
+// making the shopping cart dynamic when using the WP SuperCache plugin
+function dynamic_shopping_cart() {
+  echo nzshpcrt_shopping_basket();
+}
 
 // checking if an user has all mandatory fields completed or not
 // - used in checkout
@@ -752,30 +542,6 @@ function check_profile_info($id) {
   } 
   
   return $ret;
-}
-
-
-
-// Getting the category id if there is any
-// - used to determine which category to display in the header
-function category_id($is_cat, $is_single, $post_id) {
-  $cat_id = 0;
-  if ($is_cat) {
-    return get_query_var('cat');
-  } else if ($is_single) {
-      $collection_categories = get_categories('child_of=10');
-      $cats = array();
-      foreach ($collection_categories as $cc) {
-        $cats[] = $cc->cat_ID; 
-      }
-      $post_categories = get_the_category($post_id);
-      foreach ($post_categories as $pc) {
-        if (in_array($pc->cat_ID, $cats)) {
-          $cat_id = $pc->cat_ID;
-        }	        
-      }	     
-  }
-  return $cat_id;
 }
 
 
@@ -842,16 +608,6 @@ function product_thumb($product_id) {
 }
 
 
-// Get the product stoc from wpsc
-// DEPRECATED: stock is getting directly from wpsc:$product_data['sku'] = get_product_meta($product_id, 'sku', true); 
-function product_stock_old($product_id) {
-  if ($product_id) {
-    global $wpdb;
-    $quantity = $wpdb->get_var("SELECT `quantity` FROM `".$wpdb->prefix."wpsc_product_list` WHERE `id`=".$product_id." LIMIT 1");
-    return $quantity;
-  }  
-}
-
 function product_stock($product_id) {
   if ($product_id) {
     return get_product_meta($product_id, 'sku', true);
@@ -907,7 +663,7 @@ function post_attachements($post_id) {
 
 
 // Advanced Search
-//
+// -------------------------------------------------------------------------------------------------
 
 
 
@@ -996,6 +752,7 @@ add_filter('pre_get_posts','SearchFilter');
 
 
 // Goodies
+// -------------------------------------------------------------------------------------------------
 
 function html_to_text($string){
 
@@ -1056,6 +813,15 @@ function replace_not_in_tags($find_str, $replace_str, $string) {
 	}	
 	return $string;
 }
+
+
+function get_tag_id_by_name($tag_name) {
+  global $wpdb;
+  $tag_ID = $wpdb->get_var("SELECT * FROM ".$wpdb->terms." WHERE `name` = '".$tag_name."'");
+
+  return $tag_ID;
+}
+
 
 
 ?>

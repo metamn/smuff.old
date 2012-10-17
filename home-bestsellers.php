@@ -1,35 +1,6 @@
-<!--
-<div id="announcement" class="block">
-  <h4>Am facut mici schimbari la designul siteului Smuff. 
-  <br/>
-  Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-  Va multumim.</h4> 
+<div class='block'>
+	<?php include 'c_subscribe-to-newsletter.php' ?>
 </div>
--->
-
-
-<?php 
-  $cat = category_id(is_category(), is_single(), null);    
-  $cat_name = '';
-  if (!($cat == 0)) {
-    $cat_name = ' din <b>'. get_cat_name($cat) . '</b>';
-  } else {
-    $cat_name = ' Smuff';
-  } 
-  //$wplogger->log( 'catname '.$cat_name );
-  $title = 'Vezi toate noutatile' . $cat_name . ' &rarr;'; 
-  $link_type = '3'; // 2=table view, 3=grid view
-  echo '<h4 class="all-products-link">';
-  echo '<a href="#noutati" id="new-products-link">' . $title . '</a>'; 
-  echo '</h4>';
-?>
-
-<div id="noutati" class="hidden block"></div>
-
-
-<?php //include 'c_summer-2012.php' ?>
-<div class='block'><?php include 'c_subscribe-to-newsletter.php' ?></div>
-
   
 <div id="bestsellers" class="bestsellers block"> 
     
@@ -66,23 +37,8 @@
           }
         ?>       		        
 	  </div>
+  
+  	<?php include 'search-enhanced.php' ?>
   </div>
-  
-  
-  <?php 
-    $cat = category_id(is_category(), is_single(), null);    
-    $cat_name = '';
-    if (!($cat == 0)) {
-      $cat_name = ' din <b>'. get_cat_name($cat) . '</b>';
-    } else {
-      $cat_name = ' Smuff';
-    } 
-    //$wplogger->log( 'catname '.$cat_name );
-    $title = 'Vezi toate cadourile' . $cat_name . ' &rarr;'; 
-    $link_type = '3'; // 2=table view, 3=grid view
-    echo '<h4 class="all-products-link">';
-    include 'home-all-products-link.php'; 
-    echo '</h4>';    
-  ?>
-</div>
 
+</div>

@@ -136,17 +136,7 @@
 			      
 			      
 			      <div id="main-name" class="column span-8 last">			        
-			        <h1>
-			        <?php 
-			          $tag = single_tag_title("", false);
-			          if ($tag) {
-			            $tag2 = str_replace('magazin ', '', $tag);
-			            echo ucfirst($tag2);
-			          } else {
-			            echo page_name(is_category(), is_single(), null);
-			          }			        
-			         ?>
-			        </h1>
+			        <h1><?php echo page_main_name(); ?></h1>
 			      </div>
 			    </div>
 			    
@@ -163,25 +153,13 @@
 		            <?php } ?>
 		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate cadourile &rarr;</a></li>
 		        </ul>
-			    </div>			    
-			    
+			    </div>		
 		    </div>		    
 		    
-		    <?php if (is_page(430)) { ?>
-		      <div id="pricing-policy" class="column span-6 last">
-	          <h2>Politica de preturi</h2>
-	          <p>
-	            La Smuff practicam cele mai bune preturi.
-	          </p>
-	          <p>
-	            Click aici pentru informatii.
-	          </p>
-	        </div>
-		    <?php } else { ?>		    
-	        <div id="cart" class="column span-5 prepend-1 last">
-	          <?php dynamic_shopping_cart(); ?>          
-	        </div>
-	      <?php } ?>
+		    
+				<div id="cart" class="column span-5 prepend-1 last">
+					<?php dynamic_shopping_cart(); ?>          
+				</div>
 	    </div>  	
 	    
 <?php } //facebook header ?> 		
