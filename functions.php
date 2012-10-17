@@ -385,56 +385,27 @@ function get_transaction_products($sessionid) {
 // Get the page title (category or tag name)
 // - it is displayed in the header
 function page_main_name() {
-	$ret = '';
+	$ret = '&nbsp;';
 	$tag = single_tag_title("", false);
 	if ($tag) {
 		$tag2 = str_replace('magazin ', '', $tag);
 		$ret = ucfirst($tag2);
 	} else {
-		$ret = page_name(is_category(), is_single(), null);
+		$ret = single_cat_title('', false);
 	}			
 
 	return $ret;
 }
 
-// Get the main category of a page
-// - if used in sidebar it doesn't works!
-function page_name($is_category, $is_single, $post_id) {
-  $page_name = '&nbsp;';
-    
-  if ($is_category) {
-    $page_name = single_cat_title('', false);
-  } elseif ($is_single) {
-      $cat_id = category_id($is_category, $is_single, $post_id);      
-      if (!($cat_id == 0)) {
-        $page_name = get_cat_name($cat_id);         
-      } 
-  } elseif (is_home()) { 
-    $page_name = "";
-  }
-  return $page_name;
-}
 
 // Getting the category id if there is any
 // - used to determine which category to display in the header
 function category_id($is_cat, $is_single, $post_id) {
-  $cat_id = 0;
   if ($is_cat) {
     return get_query_var('cat');
-  } else if ($is_single) {
-      $collection_categories = get_categories('child_of=10');
-      $cats = array();
-      foreach ($collection_categories as $cc) {
-        $cats[] = $cc->cat_ID; 
-      }
-      $post_categories = get_the_category($post_id);
-      foreach ($post_categories as $pc) {
-        if (in_array($pc->cat_ID, $cats)) {
-          $cat_id = $pc->cat_ID;
-        }	        
-      }	     
+  } else {
+  	return 0;	     
   }
-  return $cat_id;
 }
 
 

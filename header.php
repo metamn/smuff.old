@@ -8,7 +8,41 @@
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		
-		<?php include "facebook-meta.php" ?>
+		<?php if (is_single()) { 
+			$imgs = post_attachements($post->ID);
+			if ($imgs) {
+				$img = $imgs[0];  
+				$medium = wp_get_attachment_image_src($img->ID, 'medium');  
+			}  
+		?>  
+			<meta property="og:title" content="<?php the_title(); ?>" />
+			<!-- All in One Seo pack takes post excerpt as content, this is a hack-->
+			<meta name="description" content="<?php the_title(); ?>" />
+			<meta property="og:type" content="product" />
+			<?php if ($medium) { ?>
+				<meta property="og:image" content="<?php echo $medium[0] ?>" />
+			<?php } else { ?>
+				<meta property="og:image" content="<?php bloginfo('home') ?>/wp-content/down/id/smuff-icon-2.png" />  
+			<?php } ?>
+			<meta property="og:url" content="<?php the_permalink(); ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
+		
+		<?php } elseif (is_home()) { ?>
+			<meta property="og:title" content="<?php bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>" />
+			<meta property="og:type" content="blog" />
+			<meta property="og:image" content="<?php bloginfo('home') ?>/wp-content/down/id/smuff-icon-2.png" />
+			<meta property="og:url" content="<?php bloginfo('home') ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
+		
+		<?php } elseif (is_front_page()) { ?>
+			<meta property="og:title" content="<?php bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image" content="<?php bloginfo('home') ?>/wp-content/down/id/smuff-icon-2.png" />
+			<meta property="og:url" content="<?php bloginfo('home') ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
+		
+		
+		<?php } ?>
 		
 		<meta name="google-site-verification" content="3NvL8OPM6rq9nvaT31vA5p2qAjbmwaMGFxQaVv9w0PQ" />
 		<META name="y_key" content="694535270b47ea68">
@@ -148,10 +182,10 @@
 		              $c = get_category_by_slug($cat);
 		            ?>
 		              <li>
-		                <a class="tooltip" alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>?view=1" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
+		                <a class="tooltip" alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 		              </li>
 		            <?php } ?>
-		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate cadourile &rarr;</a></li>
+		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=grid">Toate cadourile &rarr;</a></li>
 		        </ul>
 			    </div>		
 		    </div>		    

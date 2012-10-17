@@ -106,10 +106,23 @@
 			<div id="post-operations" class="block">                
 				<table>
 					<tr>          
-						<td><?php include "share-twitter.php" ?></td>
-						<td><?php include "share-facebook-like.php" ?></td>
-						<td><?php include "share-facebook.php" ?></td>
-						<td><?php include "share-pinterest.php" ?></td>
+						<td>
+							<div class="twitter-button">
+								<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+								<div>
+									 <a href="http://twitter.com/share" class="twitter-share-button"
+											data-url="<?php the_permalink(); ?>"
+											data-via="smuff_ro"
+											data-text="<?php the_title() ?> de pe <?php bloginfo('name')?>"
+											data-related="anywhere:The Javascript API"
+											data-count="horizontal">Tweet</a>
+								</div>
+							</div>
+						</td>
+						<td>
+							<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&show_faces=true&layout=button_count&action=like&colorscheme=light&width=100&height=21" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:100px; height:21px;"></iframe>
+						</td>
+						<td><?php echo do_shortcode('[pinit]'); ?></td>
 						<td><g:plusone size="medium"></g:plusone></td>
 					</tr>
 				</table>    
@@ -158,7 +171,33 @@
 					?>
 				</div>
 				
-				<?php include "shopping-incentives.php"; ?>   
+				<div id="shopping-incentives">
+					<h4>Preturi accesibile</h4>
+					<p>
+						La Smuff toate preturile sunt corecte.  
+					</p>
+					
+					<h4>Shopping rapid</h4>
+					<p>
+						Fara procedura de inregistrare, numai cu un singur click.            
+					</p>
+					
+					<h4>Plata la livrare</h4>
+					<p>
+						Plata ramburs cand aveti deja produsul in mana.
+					</p>
+					
+					<h4>10 zile drept de retur</h4>
+					<p>
+						Fara intrebari din partea noastra.
+					</p>
+					
+					<h4>Garantie minim 1 an</h4>
+					<p>
+						Service Express sau schimb cu un produs NOU.
+					</p>        
+				</div>
+				   
 			</div>
 			
 			<div class="block">
@@ -177,18 +216,11 @@
 			</center>
 		</div>
   </div>
-  
-  
-
-  
-  <?php 
-    $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
-    if ($collections->have_posts()) { include "home-collections.php"; }
-  ?>
+ 
   
   <div id="from-category" class="bestsellers block">    
     <?php 
-      $tag = page_name(is_category(), is_single(), null);            
+      $tag = page_main_name();            
     ?>
      
     <h2>Alte produse din categoria <?php echo $tag; ?></h2>
@@ -208,14 +240,6 @@
         }		      
       }
     ?>
-    
-    <h4 class="all-products-link">
-      <?php 
-        $title = 'Vezi toate cadourile ' . $tag . ' &rarr;'; 
-        $link_type = '3'; // 2=table view, 3=grid view 
-        include "home-all-products-link.php"; 
-      ?>
-    </h4>    
   </div>
   
 
@@ -282,14 +306,6 @@
         }		      
       }      
     ?>
-    
-    <h4 class="all-products-link">
-      <a class="all-products-link" title="Vezi toate cadourile Smuff" href="<?php bloginfo('home'); ?>/category/produse/?view=3">
-      Vezi toate cadourile Smuff &rarr;</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
-      Inapoi la inceputul paginii &uarr;</a>
-    </h4>
   </div>  
   
   <div class='clearfix'></div>
