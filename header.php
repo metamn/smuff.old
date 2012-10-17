@@ -150,7 +150,7 @@
 			      </div>
 			    </div>
 			    
-			    <div id="menu" class="last">
+			    <div id="menu" class="block">
 			      <ul class="inline-list">
 		          <?php 
 		            $cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            

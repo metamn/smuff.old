@@ -100,86 +100,86 @@
     </div>
   </div>
  
- 
- 	<div id="contact-info">
-		<center>
-			<h2>Aveti intrebari?</h2>
-			<p>
-				Suport online <br/> Luni-Vineri intre 9.00-17.00    
-			</p>
-			<h2>0740-456127</h2>
-			<!-- BEGIN Comm100 Live Chat Button Code --><div><div id="comm100_LiveChatDiv"></div><a href="http://www.comm100.com/livechat/" onclick="comm100_Chat();return false;" target="_blank" title = "Live Chat Live Help Software for Website"><img id="comm100_ButtonImage" src="http://chatserver.comm100.com/BBS.aspx?siteId=43909&planId=484" border="0px" alt="Live Chat Live Help Software for Website" /></a><script src="http://chatserver.comm100.com/js/LiveChat.js?siteId=43909&planId=484"type="text/javascript"></script><div id="comm100_track" style="z-index:99;"><span style="font-size:10px; font-family:Arial, Helvetica, sans-serif;color:#555"><a href="http://www.comm100.com/livechat/" style="text-decoration:none;color:#555" target="_blank"><b>Live Chat Software</b></a> by <a href="http://www.comm100.com/" style="text-decoration:none;color:#009999;" target="_blank">Comm100</a></span></div></div><!-- End Comm100 Live Chat Button Code -->
-		</center>
-	</div>
     
-
-  <div class="entry">
-    <div class="block">
-      <div id="post-operations" class="column span-18 last">                
-        <table>
-          <tr>          
-            <td><?php include "share-twitter.php" ?></td>
-            <td><?php include "share-facebook-like.php" ?></td>
-            <td><?php include "share-facebook.php" ?></td>
-            <td><?php include "share-pinterest.php" ?></td>
-            <td><g:plusone size="medium"></g:plusone></td>
-          </tr>
-        </table>    
-        
-        <?php include 'c_subscribe-to-newsletter.php' ?>
-      </div>
-    </div>
-    
-    
-    <div id="accordion" class="block">
-      <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
-        
-      <h3 id="comments">Comentarii</h3>
-      <div class="pane normal">
-        <?php comments_template('', true); ?>
-      </div>
-    </div>
-    
-    <div id="post-shopping2" class="block">
-      <div id="post-shopping" class="block">
-        <?php 
-          if (in_category(10)) {
-          	// $product_id = get_post_meta($post->ID, 'product_id', single);
-						if ($product_id) {
-							if ($product_stock != '-1') {
-								echo wpsc_display_products_page('product_id='.$product_id); ?>
-								
-								<div id="wishlist" class="block">
-									<?php 
-									if (function_exists('wpfp_link')) { wpfp_link(); } ?>
-								</div> <?php
-          		} else { ?>
-          			<div id="product-discontinued">
-									<h3>Acest produs momentan<br/>nu este pe stoc.</h3>
-									<p>Anunta-ma cand va fi disponibil.</p>
-									<?php 
-										$mailchimp_button = 'Anunta-ma';
-										include 'mailchimp-direct.php'; 
-									?>
-								</div> <?php
+	<div class="block">
+		<div id="post-content" class="column span-18">
+			<div id="post-operations" class="block">                
+				<table>
+					<tr>          
+						<td><?php include "share-twitter.php" ?></td>
+						<td><?php include "share-facebook-like.php" ?></td>
+						<td><?php include "share-facebook.php" ?></td>
+						<td><?php include "share-pinterest.php" ?></td>
+						<td><g:plusone size="medium"></g:plusone></td>
+					</tr>
+				</table>    
+			</div>
+				
+			<?php include 'c_subscribe-to-newsletter.php' ?>
+	
+			<div id="accordion" class="block">
+				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+					
+				<h3 id="comments">Comentarii</h3>
+				<div class="pane normal">
+					<?php comments_template('', true); ?>
+				</div>
+			</div>
+			
+			<div id="post-shopping2" class="block">
+				<div id="post-shopping" class="block">
+					<?php 
+						if (in_category(10)) {
+							// $product_id = get_post_meta($post->ID, 'product_id', single);
+							if ($product_id) {
+								if ($product_stock != '-1') {
+									echo wpsc_display_products_page('product_id='.$product_id); ?>
+									
+									<div id="wishlist" class="block">
+										<?php 
+										if (function_exists('wpfp_link')) { wpfp_link(); } ?>
+									</div> <?php
+								} else { ?>
+									<div id="product-discontinued">
+										<h3>Acest produs momentan<br/>nu este pe stoc.</h3>
+										<p>Anunta-ma cand va fi disponibil.</p>
+										<?php 
+											$mailchimp_button = 'Anunta-ma';
+											include 'mailchimp-direct.php'; 
+										?>
+									</div> <?php
+								}
 							}
-						}
-					} else { ?>
-						<div id="product-discontinued">
-							<h3>Acest produs este discontinuat.</h3>
-						</div> <?php
-        	} 
-        ?>
-      </div>
-      
-      <?php include "shopping-incentives.php"; ?>    
-    </div> 
+						} else { ?>
+							<div id="product-discontinued">
+								<h3>Acest produs este discontinuat.</h3>
+							</div> <?php
+						} 
+					?>
+				</div>
+				
+				<?php include "shopping-incentives.php"; ?>   
+			</div>
+			
+			<div class="block">
+				<?php include 'c_subscribe-to-new-products.php' ?>
+			</div> 
+		</div>
+		
+		<div id="contact-info" class="column span-5 prepend-1 last">
+			<center>
+				<h2>Aveti intrebari?</h2>
+				<p>
+					Suport online <br/> Luni-Vineri intre 9.00-17.00    
+				</p>
+				<h2>0740-456127</h2>
+				<!-- BEGIN Comm100 Live Chat Button Code --><div><div id="comm100_LiveChatDiv"></div><a href="http://www.comm100.com/livechat/" onclick="comm100_Chat();return false;" target="_blank" title = "Live Chat Live Help Software for Website"><img id="comm100_ButtonImage" src="http://chatserver.comm100.com/BBS.aspx?siteId=43909&planId=484" border="0px" alt="Live Chat Live Help Software for Website" /></a><script src="http://chatserver.comm100.com/js/LiveChat.js?siteId=43909&planId=484"type="text/javascript"></script><div id="comm100_track" style="z-index:99;"><span style="font-size:10px; font-family:Arial, Helvetica, sans-serif;color:#555"><a href="http://www.comm100.com/livechat/" style="text-decoration:none;color:#555" target="_blank"><b>Live Chat Software</b></a> by <a href="http://www.comm100.com/" style="text-decoration:none;color:#009999;" target="_blank">Comm100</a></span></div></div><!-- End Comm100 Live Chat Button Code -->
+			</center>
+		</div>
   </div>
   
   
-  <div class="block">
-		<?php include 'c_subscribe-to-new-products.php' ?>
-  </div>
+
   
   <?php 
     $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
