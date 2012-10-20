@@ -11,6 +11,13 @@
 				<li><input id="search-price" type="checkbox" name="price" value="250-350" />250 - 350 RON</li>
 				<li><input id="search-price" type="checkbox" name="price" value="350" />Banii nu conteaza!</li>  
 			</ul>
+			
+			<p id="submit">
+				<input type="hidden" name="current-category" id="s" value="<?php echo page_main_name(); ?>" />
+				
+				<input class="submit" type="submit" id="searchsubmit" value="Filtrare cadouri" />  
+  			<a id="advanced-search" title="Cautare avansata" href="<?php bloginfo('home'); ?>/cautare-avansata/">Cautare avansata</a>
+  		</p>
 		</div>
 		
 		<div id="delivery">
@@ -29,13 +36,6 @@
 				<li><input id="search-meta" type="checkbox" name="meta" value="bestsellers"/>Cele mai vandute</li>
 				<li><input id="search-meta" type="checkbox" name="meta" value="promo"/>Cu pret redus</li>
 			</ul>
-			
-			<p id="submit">
-				<input type="hidden" name="current-category" id="s" value="<?php echo page_main_name(); ?>" />
-				
-				<input class="submit" type="submit" id="searchsubmit" value="Filtrare cadouri" />  
-  			<a id="advanced-search" title="Cautare avansata" href="<?php bloginfo('home'); ?>/cautare-avansata/">Cautare avansata</a>
-  		</p>
 		</div>
 	</form>
 </div>
