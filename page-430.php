@@ -10,7 +10,7 @@ get_header(); ?>
 <div id="page" class="block page-coscumparaturi">
   <div id="content" class="column span-24 last">
   
-    
+    <!--
     <div id="pricing-policy-details" class="block hidden">      
       <div class="col-1">
         <h2>Politica de preturi Smuff</h2>
@@ -47,6 +47,7 @@ get_header(); ?>
       </div>
       <div id="close" class="col-2">[x] inchide</div>
     </div>
+    -->
   
 	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		  <div class="post" id="post-<?php the_ID(); ?>">

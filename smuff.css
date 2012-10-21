@@ -89,7 +89,7 @@ a, a:visited {
 */
 
 
-input, textarea {
+input, textarea, button {
 	border: none;
 	outline: 0;
 
@@ -115,7 +115,8 @@ input[type='text']:focus {
 input[type='submit'],
 input[type='button'], 
 .wpfp-link,
-.wpfp-span {		
+.wpfp-span, 
+button {		
 	background: #111;
 	color: #aaa;
 	padding: .625em;
@@ -123,7 +124,8 @@ input[type='button'],
 input[type='submit']:hover,
 input[type='button']:hover, 
 .wpfp-link:hover,
-.wpfp-span:hover {
+.wpfp-span:hover,
+button:hover {
 	cursor: pointer;
 	color: white;
 }
@@ -137,8 +139,8 @@ input[type='checkbox']:checked:after {
 	content: '\25a3';
 }
 
-/*
-input[type='checkbox']:after {
+
+input[type='radio']:after {
 	content: '\272A';
 	margin-right: .312em;
 
@@ -148,10 +150,10 @@ input[type='checkbox']:after {
 
 	color: lightgray;
 }
-input[type='checkbox']:checked:after {
+input[type='radio']:checked:after {
 	color: black;
 }
-*/
+
 
 
 
@@ -249,12 +251,6 @@ input[type='checkbox']:checked:after {
 ----------------------------------------------------
 */
 
-.container #page #content {
-	width: 710px;
-}
-.container #page #sidebar {
-	display: block;
-}
 
 #page .post h2 {
 	border-bottom: 1px solid;
@@ -264,6 +260,227 @@ input[type='checkbox']:checked:after {
 }
 #page img {
 	width: auto;
+}
+
+
+
+
+/* Checkout Page 
+----------------------------------------------------
+*/
+
+
+
+table.productcart, table.productcart td, table.productcart tr {
+  vertical-align: top;
+} 
+
+table.productcart tr.firstrow td {
+	font-weight: bold;
+}
+table.productcart tr.firstrow td.productname {
+	visibility: hidden;
+}
+
+table.productcart tr.product_row td {
+	padding: 2em 0;
+	border-bottom: 1px solid #ccc;
+}
+
+table.productcart tr.coupon td {
+	padding: 2em 0;
+}
+
+table.shipping {
+	padding: 2em 0;
+	background: url(img/stripe.png);
+}
+table.shipping td {
+  vertical-align: top;
+}
+table.shipping td.c3, table.shipping td.c4, table.shipping td.c5 {
+  border-bottom: 1px solid #ccc;
+  background: white;
+}
+table.shipping td.c1 {
+  width: 1px;
+  padding: 0;
+}
+table.shipping td.c2 {
+  width: 12.5em;
+}
+table.shipping td.c3 {
+  width: 22em;
+  padding-right: 3.5em;
+}
+table.shipping td.c4 {
+  width: 14%;
+}
+table.shipping td.c5 {
+  padding-left: 0;
+}
+
+table.total {
+  background: #ccc; 
+  margin-bottom: 10em; 
+}
+table.total td h4, table.wpsc_checkout_table td h4, #checkout h4 {
+  margin-bottom: 0;
+}
+table.total td.c1 {
+  width: 12.5em;
+}
+table.total td.c2 {
+  width: 46em;
+}
+
+
+#checkout h2 {
+	border-bottom: none !important;
+}
+
+#checkout #order-by-phone h2 {
+	text-align: center;
+}
+
+#checkout #form #login {
+	width: 45%;
+	margin-right: 0;
+	float: left;
+}
+#checkout #login .box {
+	background: none;
+	padding: 0;
+}
+#checkout #login ul {
+  list-style-type: none;
+  margin: 0;
+}
+#checkout #login ul li {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+	padding-bottom: .5em;
+	cursor: pointer;
+}
+#checkout #login ul li#manual-fill {
+	font-weight: bold;
+	font-size: larger;
+}
+#checkout #login ul.info li {
+	cursor: default;
+}
+#checkout #login ul li a, #checkout #login ul li a:visited,
+#checkout #other-operations a, #checkout #other-operations a:visited {
+	text-decoration: none !important;
+}
+#checkout #form #checkout-form {
+	width: 45%;
+	margin-right: 10%;
+	float: left;
+}
+#checkout #form #checkout-form.active {
+	display: block;
+} 
+
+
+#checkout #wishlist #add-to-wishlist img {
+  width: 24px;
+  float: left;
+  margin-right: .2em;
+}
+#wishlist #add-to-wishlist #text {
+  margin-top: .2em;
+  float: left;
+}
+
+
+#checkout #other-operations {
+	margin-top: 2em;
+	padding-top: 2em;
+	border-top: 2px dashed #ccc;
+}
+#checkout #other-operations #back-to-shopping {
+	font-size: large;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+
+
+#checkout #login button.make_purchase {
+  width: 99%;  
+  text-align: left;
+}
+#checkout #login #account {
+  margin: 0;
+}
+#checkout #login h4 {
+  margin-bottom: 1.25em;
+}
+
+table.wpsc_checkout_table textarea, table.wpsc_checkout_table input.text {
+  margin: 0;
+}
+table.wpsc_checkout_table textarea {
+  width: 97%;
+  height: 5em;
+}
+table.wpsc_checkout_table input.text {
+  width: 97%;
+}
+
+
+.wpsc_checkout_field2,
+.wpsc_checkout_field4,
+.wpsc_checkout_field26,
+.wpsc_checkout_field27,
+
+.wpsc_checkout_field18,
+.wpsc_checkout_field19,
+.wpsc_checkout_field20,
+.wpsc_checkout_field21,
+.wpsc_checkout_field23,
+.wpsc_checkout_field24 {
+	display: none;
+}
+
+
+#checkout-form h4 {
+	cursor: pointer;
+	color: #666;
+	border-bottom: 1px solid #ccc;
+	margin-left: .5em;
+}
+#checkout-form h4:hover {
+	color: #111;
+}
+
+#checkout #checkout-button {
+	margin-bottom: 2.5em;
+}
+#checkout #checkout-button.checkout-button-2 {
+	display: none;
+}
+
+
+#checkout input.green {
+  background: #10A26F;
+  padding: .2em 1em;
+  border: 1px outset green;
+  color: #eee;
+  font-weight: bold;
+}
+
+.login_error {
+  padding: 1em;
+  margin: 1em 0 !important;
+  background: #A53B08;
+  color: #DFDBD0;
+}
+.termeni {
+  background: #FEFAE7;
+  padding: .5em 1em;
 }
 
 
