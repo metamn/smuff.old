@@ -26,24 +26,31 @@
           <img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
         </a>
       </div>
-      <div id="single-scroll" class="scrollable">
-        <div class="items">
-        <?php $img_count = 0; ?>
-        <?php foreach ($imgs as $img) {
-          $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
-          $large = wp_get_attachment_image_src($img->ID, 'full'); ?>
-          <div class="item">
-            <img class="small-image" src="<?php echo $thumb[0]?>" rev="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
-          </div>
-        <?php 
-          $img_count = $img_count + 1;
-        } ?>          
+      <div id="thumbs" class="block">
+        <div id="items" class="block">
+					<?php $counter = 0; ?>
+					<?php foreach ($imgs as $img) {
+						$counter += 1;
+						$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+						$large = wp_get_attachment_image_src($img->ID, 'full'); ?>
+						<div class="item image-<?php echo $counter ?>">
+							<img class="small-image" src="<?php echo $thumb[0]?>" rev="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
+						</div>
+					<?php } ?>          
         </div>
-      </div>
-      <?php if ($img_count > 4) { ?>
-        <div class="clearfix"></div>
-        <div class="navi"></div>			          
-      <?php } ?>      
+				
+				<?php if ($counter > 6) { ?>
+					<div id="navi" class="block">
+						<div>
+						<?php 
+							for ($i=0; $i <= ($counter % 6); $i++) {
+								echo "<span id='navi-" . $i . "'>&nbsp;</span>"; 
+							}
+						?> 
+						</div>
+					</div>			          
+				<?php } ?>
+			</div>
     </div>
     
     <div id="post-meta" class="column span-5 prepend-1 last">
@@ -96,39 +103,13 @@
           </div>          
         </ul>               
       </div>      
-       
+      
     </div>
   </div>
  
     
 	<div class="block">
 		<div id="post-content" class="column span-18">
-			<div id="post-operations" class="block">                
-				<table>
-					<tr>          
-						<td>
-							<div class="twitter-button">
-								<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-								<div>
-									 <a href="http://twitter.com/share" class="twitter-share-button"
-											data-url="<?php the_permalink(); ?>"
-											data-via="smuff_ro"
-											data-text="<?php the_title() ?> de pe <?php bloginfo('name')?>"
-											data-related="anywhere:The Javascript API"
-											data-count="horizontal">Tweet</a>
-								</div>
-							</div>
-						</td>
-						<td>
-							<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&show_faces=true&layout=button_count&action=like&colorscheme=light&width=100&height=21" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:100px; height:21px;"></iframe>
-						</td>
-						<td><?php echo do_shortcode('[pinit]'); ?></td>
-						<td><g:plusone size="medium"></g:plusone></td>
-					</tr>
-				</table>    
-			</div>
-				
-			<?php include 'c_subscribe-to-newsletter.php' ?>
 	
 			<div id="accordion" class="accordion block">
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
@@ -138,6 +119,22 @@
 					<?php comments_template('', true); ?>
 				</div>
 			</div>
+			
+			<!--
+			<div id="social-share" class="block">
+      	<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-send="true" data-width="700" data-show-faces="true"></div>
+      </div>
+			-->
+			
+			<?php include 'c_subscribe-to-newsletter.php' ?>
 			
 			<div id="post-shopping2" class="block">
 				<div id="post-shopping" class="block">
@@ -200,9 +197,6 @@
 				   
 			</div>
 			
-			<div class="block">
-				<?php include 'c_subscribe-to-new-products.php' ?>
-			</div> 
 		</div>
 		
 		<div id="contact-info" class="column span-5 prepend-1 last">
