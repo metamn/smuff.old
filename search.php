@@ -53,7 +53,7 @@ get_header(); ?>
 
 <div id="search-results" class="block">
 
-  <div id="content" class="column span-18">
+  <div id="content" class="block">
     
     <div class="block">    
       
@@ -84,15 +84,7 @@ get_header(); ?>
             <td><span id="search-counter">...</span></td></tr>           
           </table>
         </div>
-        
-        <!--
-        <div id="announcement" class="block">
-          <h4>Am facut mici schimbari la designul siteului Smuff. 
-          <br/>
-          Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-          Va multumim.</h4> 
-        </div>
-        -->
+       
         
         <div id="search-results-items">
           <?php if ($fullsearch) {          
@@ -171,7 +163,6 @@ get_header(); ?>
      <?php } ?>
    </div>
   </div>  
-  <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
 
