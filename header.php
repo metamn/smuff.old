@@ -65,30 +65,22 @@
 		  ?>
 		</title> 
 	
-		<!-- Sudo slider -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/jquery.sudoslider.css" type="text/css" media="screen" />
-    
-	
     <!-- Blueprint -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/blueprint/print.css" type="text/css" media="print">	
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
   
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css?refresh=20121005" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css?refresh=20121005" type="text/css" media="screen" />
 		
 		
 		<!--
-		- JS cannot be put in foooter !!!!!!!!!!!!!!
-		- there must be two JQueries, one for me the other for WPEC
-		-->
+			- JS cannot be put in foooter !!!!!!!!!!!!!!
+			- there must be two JQueries, one for me the other for WPEC -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script>!window.jQuery && document.write('<script src="/wp-includes/js/jquery/jquery.js"><\/script>')</script>
     
-		<!-- S3 slider, frontpage -->
+		<!-- Sudo slider, frontpage -->
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.sudoSlider.min.js" ></script>
-    <!-- Thumb slider, product page -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.thumbslider.js" ></script>
     
 
     <!-- Init GA to be able to add custom variables -->
