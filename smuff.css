@@ -54,6 +54,7 @@ h2 {
 - orange: #F25F18
 	- blue: #4D8FCE
 	- green: 8AEA4C
+	- red(ish) / error : #F98751;
 - gray: #AAA
 	- dark gray: #4A4742
 	- light gray: #ccc;
@@ -255,11 +256,28 @@ input[type='radio']:checked:after {
 #page .post h2 {
 	border-bottom: 1px solid;
 }
-#page .subpages {
-	display: none;
-}
 #page img {
 	width: auto;
+}
+
+
+
+/* Sidebar
+*/
+
+.subpages ul {
+	margin: 2em 0;
+	list-style: none;
+	
+	background: url(img/stripe.png);
+	padding: 1em;
+}
+.subpages ul li {
+	margin-bottom: .312em;
+	padding-bottom: .312em;
+	padding: .312em;
+	border-bottom: 1px solid #ccc;
+	background: white;
 }
 
 
@@ -450,7 +468,7 @@ table.wpsc_checkout_table input.text {
 	cursor: pointer;
 	color: #666;
 	border-bottom: 1px solid #ccc;
-	margin-left: .5em;
+	margin-bottom: 2em;
 }
 #checkout-form h4:hover {
 	color: #111;
@@ -475,11 +493,10 @@ table.wpsc_checkout_table input.text {
 .login_error {
   padding: 1em;
   margin: 1em 0 !important;
-  background: #A53B08;
-  color: #DFDBD0;
+  background: #F98751;
 }
 .termeni {
-  background: #FEFAE7;
+  background: #4D8FCE;
   padding: .5em 1em;
 }
 
@@ -853,16 +870,6 @@ div.thanks-error {
 /* Startpage
 ----------------------------------------------------
 */
-
-
-/* Remove sidebar */
-.container #content {
-	width: 100%;
-}
-.container #sidebar {
-	display: none;
-}
-
 
 
 

@@ -88,15 +88,6 @@
     endwhile;
 ?>
 
-<!--
-<div id="announcement" class="block">
-  <h4>Am facut mici schimbari la designul siteului Smuff. 
-  <br/>
-  Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-  Va multumim.</h4> 
-</div>
--->
-
 <table class="productcart">
 	<tr class="firstrow">
 		<td class='firstcol'></td>
@@ -254,6 +245,7 @@
 										<?php wpsc_update_shipping_single_method(); ?>
 								<?php endif; ?>
 							</td>
+							<td class="c6"></td>
 							</tr>
 						<?php endwhile; ?>
 				<?php endwhile; ?>
@@ -281,18 +273,7 @@
 		</tr>
 	<?php endif; ?>
 	
-	<!--
-	<?php if(wpsc_uses_shipping()) : ?>
-		<tr class="total_price total_shipping">
-			<td colspan="3">
-				<?php echo __('Total Shipping', 'wpsc'); ?>
-			</td>
-			<td colspan="2">
-				<span id="checkout_shipping" class="pricedisplay checkout-shipping"><?php echo wpsc_cart_shipping(); ?></span>
-				</td>
-		</tr>
-	<?php endif; ?>
-  -->
+	
   
 	  <?php if(wpsc_uses_coupons() && (wpsc_coupon_amount(false) > 0)): ?>
 	  <tr class="discount">
@@ -323,14 +304,7 @@
 
 
   <?php do_action('wpsc_before_form_of_shopping_cart'); ?>	
-  <!--
-	<div id="announcement" class="block">
-    <h4>Am facut mici schimbari la designul siteului Smuff. 
-    <br/>
-    Va rugam apasati CTRL+R (Refresh) pentru o experienta mai placuta. 
-    Va multumim.</h4> 
-  </div>
-  -->
+  
 	   
   <div id="checkout" class="block">
   	
@@ -338,7 +312,7 @@
 					 
 			<div id="order-by-phone" class="col column span-7 append-1">
 				<h2>Comenzi prin telefon</h2>
-				<h2 id="tel">0740-456127</h2>          
+				<h2 id="tel">0740-456.127</h2>          
 			</div>
 			
 			<div id="form" class="col column span-14 last">	    
@@ -369,6 +343,10 @@
 											
 											<?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_22") { ?>			              
 												<br/><br/> 
+												<p class="termeni">
+													Prin trimiterea comenzii va exprimati acordul cu 
+													<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
+												</p>
 												<div id="checkout-button" class="checkout-button-1">
 													<?php //exit('<pre>'.print_r($wpsc_gateway->wpsc_gateways[0]['name'], true).'</pre>');
 													 if(count($wpsc_gateway->wpsc_gateways) == 1 && $wpsc_gateway->wpsc_gateways[0]['name'] == 'Noca'){}else{?>
@@ -377,11 +355,13 @@
 													<?php } ?>
 												</div>
 												
-												<h4 id="checkout-personal-data">Date personale &rarr;</h4>
-												<br/>
-												<h4 id="checkout-billing-data">Date facturare &rarr;</h4>
+												<h4 id="checkout-personal-data">Date personale si de facturare &rarr;</h4>
 											<?php } ?>
 											
+											<?php if (wpsc_checkout_form_element_id() == "wpsc_checkout_form_27") { ?>
+												<br/><br/><br/>
+												<h4>Date facturare</h4>
+											<?php } ?>
 										</td>
 										</tr>
 		
@@ -442,11 +422,6 @@
 						
 						<tr>
 							<td>
-								
-								<p class="termeni">
-									Prin trimiterea comenzii va exprimati acordul cu 
-									<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-								</p>
 								<input type='hidden' value='yes' name='agree' />	
 								
 								<div id="checkout-button" class="checkout-button-2">
@@ -521,26 +496,7 @@
 							$current_user = wp_get_current_user();
 							if ( !($current_user instanceof WP_User) ) return; 
 							
-							$checkout_klass = 'active';
-							
-							?>
-							
-							
-							<?php if (check_profile_info($current_user->ID)) { ?>
-								<!--
-								<p class="termeni">
-								Prin trimiterea comenzii va exprimati acordul cu 
-									<a class='thickbox' target='_blank' href='<?php echo site_url('?termsandconds=true&amp;width=360&amp;height=400'); ?>' class='termsandconds'>Termenii si conditiile magazinului Smuff.</a>
-								</p>
-								<p>
-									 <button type='submit' name='submit' class='make_purchase'>Datele sunt ok. <br/>Trimit comanda</button>
-								</p>
-								-->
-							<?php } else { ?>
-								<p class="termeni">
-									Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
-								</p>
-							<?php } ?>
+							$checkout_klass = 'active'; ?>
 							
 							<div id="account" class="box">
 								<ul class="info">
@@ -552,7 +508,17 @@
 									<li><a href="<?php echo wp_logout_url(get_bloginfo('url')); ?>">Iesire din cont</a></li>
 									<li><a href="<?php bloginfo('home') ?>/wp-admin/profile.php">Modificare cont utilizator</a></li>
 								</ul>
-							</div>          
+							</div>  
+							
+							
+							<?php if (check_profile_info($current_user->ID)) { ?>
+								
+							<?php } else { ?>
+								<p class="termeni">
+									Datele de livrare/facturare nu sunt complete. Trebuie sa le completati o singura data <a href="http://www.smuff.ro/cont-cumparaturi/?edit_profile=true">aici.</a> 
+								</p>
+							<?php } ?>
+							        
 						<?php } 
 					} ?>   
 	  		</div>
