@@ -3,6 +3,20 @@ $(document).ready(function() {
   var ajaxurl = $("#ajax-url").attr("data-url");
   
   
+  // Accordion 
+  $(".accordion h3").click(function() {
+  	$(this).next().slideToggle();
+  });
+  
+  // - open first accordion on product description
+  $("#single #accordion .pane").first().show();
+  
+  // Removing "Opiniile Cumparatorilor" from Product page
+  $("#accordion h3#comments").prev().prev().hide();
+  
+  
+  
+  
   // Tooltips on email subscribe
   // - on hover for smuff, straplines, main categories
   $('.campaign-box .tooltip').hover(
@@ -230,8 +244,6 @@ $(document).ready(function() {
   );
   
 
-  // Removing "Opiniile Cumparatorilor" from Product page
-  $("#accordion h3#comments").prev().prev().hide();
 
 
   // Click on side icons
@@ -307,39 +319,6 @@ $(document).ready(function() {
 
 
 
-  // Accordions  
-  // Product page 
-  
-  // - open the first pane
-  $("#accordion h3").first().addClass("current");
-  $("#accordion h3").first().next(".pane").show();
-  
-  // - add arrow to the accordion titles 
-  $("#accordion h3").each(function(){
-    var original = $(this).html();
-    var neu = original + "<span>&rsaquo;</span>";
-    $(this).html(neu);
-  });
-
-  
-  $("#accordion h3").toggle(
-    function () {
-      $(this).addClass("current");
-      $(this).next(".pane").show();
-    },
-    function () {
-      $(this).removeClass("current");
-      $(this).next(".pane").hide();
-    }
-  );
-  
-  // Info pages above footer    
-  $("#accordion-footer-info").tabs(
-    "#accordion-footer-info div.pane", {
-      tabs: 'h3', 
-      effect: 'slide', 
-      initialIndex: null
-  });  
   
   
   // Company info toggle
@@ -380,8 +359,7 @@ $(document).ready(function() {
       $('#header #main-name').removeClass('hidehide');
   });
   
-  // jQuery Tools Tooltip
-  // $("#shopping-info .shopping-info").tooltip({ effect: 'slide'});
+ 
 
   $("#tooltip-trigger").click(function() {
     $("#tooltip-content").slideToggle('slow');
@@ -391,25 +369,9 @@ $(document).ready(function() {
     $("#tooltip-content").hide('slow');
   });
   
-  // Sortable table
-  // - on View all products
-  $("#archive-all-table").tablesorter({
-    sortList: [[0,1]]    
-  }); 
-  // - on Partner list 
-  $("#partners-table").tablesorter({
-    sortList: [[1,1]]    
-  });  
-   
+  
     
-  // add opacity on twitter fb buttons on mouse hover, blog index
-  $(".post .facebook, .post .twitter, .post .google").hover(
-    function () {
-      $(this).removeClass('opacity-3');
-    }, 
-    function () {
-      $(this).addClass('opacity-3');
-  });
+  
   
 
 

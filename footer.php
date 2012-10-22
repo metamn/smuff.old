@@ -43,7 +43,7 @@
         <?php } ?>
     </div>
     
-    <div id="company">
+    <div id="company" class='accordion'>
       <?php 
         $p = get_page_by_path('despre-noi/date-firma');
         if ($p) { ?>

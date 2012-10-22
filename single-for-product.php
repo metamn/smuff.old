@@ -130,7 +130,7 @@
 				
 			<?php include 'c_subscribe-to-newsletter.php' ?>
 	
-			<div id="accordion" class="block">
+			<div id="accordion" class="accordion block">
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 					
 				<h3 id="comments">Comentarii</h3>

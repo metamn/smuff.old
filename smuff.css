@@ -581,14 +581,15 @@ img.small-image {
 #accordion img {
 	width: auto;
 }
-#accordion h3, #accordion h3.current {
-	background-color: #ccc !important;
+#accordion h3:after {
+	content: '\25bc';
+	float: right;
+	color: #ccc;
+	font-size: smaller;
 }
 #accordion .pane {
-	background: #f1f1f1 !important;
-	border-color: #ccc !important;
+	font-size: larger;
 }
-
 
 
 /* Add to cart 2
@@ -1155,10 +1156,59 @@ div.thanks-error {
 
 
 
+
+/* Footer 
+------------------------------------------------------
+*/
+
+#footer {
+  margin: 2em 0;
+}
+
+
+#footer-info .accordion .pane {
+	padding-bottom: 0;
+}
+#footer-info .accordion .pane p {
+	margin-top: 1.25em;
+}
+
+#footer-info ul {
+	list-style: none;
+	margin: 0;
+}
+#footer-info #company h3 {
+	border-bottom: none;
+	background: none;
+}
+
+
+
+
+
+
+
 /* Common elements, present on many pages
 ------------------------------------------------------
 */
 
+
+/* Accordion
+*/
+
+.accordion h3 {
+	cursor: pointer;
+	padding: .625em .312em;
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1px;
+}
+.accordion div {
+	display: none;
+	padding: 1.25em;
+	margin-bottom: 2em;
+	background: #f1f1f1;
+}
 
 
 /* Comments
@@ -1220,74 +1270,11 @@ li.comment ul.children {
 }
 
 
-/* Footer 
-*/
-
-#footer-info {
-  margin: 5em 0 0;
-  padding-top: 5em; 
-}
-#footer-info div {
-  margin-bottom: 2em; 
-}
-#footer-info h3, #footer-info h4, #footer-info h5, #footer-info h6, #footer-info p {
-  margin-bottom: .5em;
-}
-#footer-info p {
-  margin: 0 1em;
-}
-#footer-info h4 {
-  margin: .5em .8em;
-}
-#footer-info h6 {
-  font-weight: normal;
-}
-#footer-info dl dt {
-  font-weight: normal;
-}
-#footer {
-  margin: 2em 0;
-}
-#company .date-firma-info {
-  display: none;
-  background: #DFDBD0;
-  padding: 1em;
-  line-height: 1.8;
-  border: 1px solid #ddd; 
-}
-#company h3 {
-  cursor: pointer;
-}
-#footer-info #contact ul, #footer-info #company ul {
-  list-style-type: none;
-}
 
 
-#footer-subscribe #newsletter {
-  margin-top: 2em;
-}
-#footer-subscribe input.text {
-  width: 96%;
-  margin: 0;
-}
-#footer-subscribe img {
-  width: 72px;
-  height: 72px;
-}
-#footer-subscribe img.youtube {
-  width: 115px;
-  height: 72px;
-}
-#footer-subscribe #social img {
-  margin-left: .9em;
-  margin-top: .5em;
-}
 
-#footer .partners img {
-	width: auto;
-  max-height: 31px;
-  margin-left: .5em;
-}
+
+
 
 
 
