@@ -244,23 +244,23 @@ input[type='radio']:checked:after {
 	background: #4D8FCE; 
 	margin-bottom: 5em;
 }
-#search-enhanced div {
+#search-enhanced #price, #search-enhanced #delivery, #search-enhanced #meta, #search-enhanced #categories div {
 	width: 30%;
 	margin-right: 4.9%;
 	float: left;
 	padding: 2em 0;
 }
-#search-enhanced div.last {
+#search-enhanced #meta.last, #search-enhanced #categories div.last {
 	margin-right: 0;
 }
 #search-enhanced h3 {
 	margin-left: .625em;
 }
-#search-enhanced ul {
+#search-enhanced ul, #search-enhanced dl {
 	list-style: none;
 	margin: 2em 1em;
 }
-#search-enhanced ul li {
+#search-enhanced ul li, #search-enhanced dl dd {
 	border-bottom: 1px dotted;
 	padding-bottom: .312em;
 	margin-bottom: .312em;
@@ -270,6 +270,20 @@ input[type='radio']:checked:after {
 }
 #search-enhanced #submit #advanced-search {
 	font-style: italic;
+}
+#search-enhanced #searchbox {
+	margin: 2em 0 2em 1em;
+}
+#search-enhanced #searchbox input[type='text'] {
+	font-size: 2em;
+}
+#search-enhanced #searchbox input[type='submit'] {
+	font-size: 1.5em;
+	margin-top: .5em;
+}
+
+#search-enhanced #second-row {
+	display: none;
 }
 
 

@@ -70,7 +70,7 @@
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
   
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css?refresh=20121005" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css?refresh=20121023" type="text/css" media="screen" />
 		
 		
 		<!--
@@ -93,7 +93,7 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121012"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121023"></script>
 		
      
     

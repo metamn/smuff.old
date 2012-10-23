@@ -3,6 +3,14 @@ $(document).ready(function() {
   var ajaxurl = $("#ajax-url").attr("data-url");
   
   
+  
+  // Search
+  $("#search-enhanced #advanced-search").click(function() {
+  	$(this).parent().slideToggle();
+  	$("#search-enhanced #second-row").slideToggle();
+  });
+  
+  
   // Accordion 
   $(".accordion h3").click(function() {
   	$(this).next().slideToggle();
@@ -13,6 +21,13 @@ $(document).ready(function() {
   
   // Removing "Opiniile Cumparatorilor" from Product page
   $("#accordion h3#comments").prev().prev().hide();
+  
+  
+  
+  
+  
+  
+  
   
   
   
