@@ -205,7 +205,7 @@
 				<p>
 					Suport online <br/> Luni-Vineri intre 9.00-17.00    
 				</p>
-				<h2>0740-456127</h2>
+				<h2>0740-456.127</h2>
 				<!-- BEGIN Comm100 Live Chat Button Code --><div><div id="comm100_LiveChatDiv"></div><a href="http://www.comm100.com/livechat/" onclick="comm100_Chat();return false;" target="_blank" title = "Live Chat Live Help Software for Website"><img id="comm100_ButtonImage" src="http://chatserver.comm100.com/BBS.aspx?siteId=43909&planId=484" border="0px" alt="Live Chat Live Help Software for Website" /></a><script src="http://chatserver.comm100.com/js/LiveChat.js?siteId=43909&planId=484"type="text/javascript"></script><div id="comm100_track" style="z-index:99;"><span style="font-size:10px; font-family:Arial, Helvetica, sans-serif;color:#555"><a href="http://www.comm100.com/livechat/" style="text-decoration:none;color:#555" target="_blank"><b>Live Chat Software</b></a> by <a href="http://www.comm100.com/" style="text-decoration:none;color:#009999;" target="_blank">Comm100</a></span></div></div><!-- End Comm100 Live Chat Button Code -->
 			</center>
 		</div>
@@ -214,12 +214,12 @@
   
   <div id="from-category" class="bestsellers block">    
     <?php 
-      $tag = page_main_name();            
+      $tag = page_name(is_category(), is_single(), null);            
     ?>
      
     <h2>Alte produse din categoria <?php echo $tag; ?></h2>
     <?php 
-      $specials = query_posts2('posts_per_page=4&cat='.$cat);
+      $specials = query_posts2('posts_per_page=6&cat='.$cat);
       if ($specials) {
         if ($specials->have_posts()) {
           $counter = 1;
@@ -255,6 +255,16 @@
         } 
       ?>
   </div>
+  
+  
+  <div id="search" class="block">
+		<div id="search-header" class="column span-3 cursive">
+  		<h3>Cautare cadouri</h3>
+  	</div>
+  	<div class="column span-21 last">
+  		<?php include 'search-enhanced.php' ?>
+  	</div>
+	</div>
   
   
   

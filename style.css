@@ -597,7 +597,7 @@ img.small-image {
 
 .single #contact-info {
 	position: relative;
-	top: 5em;
+	top: 2em;
 	float: right;
 	width: 180px;
 }
@@ -629,7 +629,7 @@ img.small-image {
 .single #subscribe-newsletter {
 	width: 100%;
 	background: url(img/stripe.png);
-	margin: 0;
+	margin-top: 10em;
 }
 .single #subscribe-newsletter #text {
 	position: relative;
