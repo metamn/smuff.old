@@ -51,15 +51,20 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 /* Hot
 */
 
-#home-hot #thumbs #items {
+#home-hot #thumbs {
 	background: url('img/stripe.png');
-	text-align: center;
+}
+#home-hot #thumbs #items {
+	height: 560px;
+	overflow-y: scroll;
+	position: relative;
+	right: -30px;
 }
 #home-hot #thumbs .item {
-	padding: 1em;
+	padding: .5em 1em;
 }
 #home-hot #thumbs .item img {
-	width: 120px;
+	width: 100px;
 	height: auto;
 	
 	background: #fff;
@@ -67,10 +72,11 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 	border: 1px solid #ccc;
 }
 #home-hot #thumbs .tooltip-text {
-	width: 90px;
+	width: 70px;
 	height: auto;
-	min-height: 90px;
-	top: -113px;
+	min-height: 86px;
+	top: -93px;
+	padding: .625em 1.25em;
 	
 	font-size: larger;
 }

@@ -41,7 +41,7 @@
 		}
 	?>
 		
-	<div id="slider" class="column span-18">
+	<div id="slider" class="column span-18 append-1">
 		<div id="large-image">
 			<a href="" title="" alt="">
 				<img src="" title="" alt="" />
@@ -61,7 +61,7 @@
 		</div>        
 	</div>
  
-	<div id="thumbs" class="column span-5 prepend-1 last">
+	<div id="thumbs" class="column span-5 last">
 		<div id="items">
 			<?php if ($thumbs) { 
 				foreach ($thumbs as $thumb) {
