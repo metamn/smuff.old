@@ -1,136 +1,74 @@
-<div id="home-hot" class="block"> 
-
-  <div id="home-hot-content" class="block">    
-    <div id="hot-slider" class="slider column span-18">
-      <?php if ($new_products) { ?>
-        <ul>
-        <?php 
-          $thumbs = array();
-          $i = 1;
-          
-          if ($special_posts) {
-            while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
-              $imgs = post_attachements($post->ID);
-              //$random = rand(0, 2);
-              //$img = $imgs[$random];
-              $img = $imgs[0];
-              $large = wp_get_attachment_image_src($img->ID, 'large');
-              $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
-              
-              $th = '<a class="hot-slider-link tooltip" rel="'.$i.'" title="'.get_the_title().'">';
-              $th .= '<img src="'.$thumb[0].'" alt="'.get_the_title().'" />';
-              $th .= '<span class="tooltip-text">' . get_the_title() . '</span></a>';
-              $thumbs[] = $th;            
-              
-              if ($i == 1) {
-                $img_path = $large[0];
-              } else {
-                $img_path = get_bloginfo('stylesheet_directory') . "/img/home-hot-blank.jpg";
-              }
-              
-              $i += 1; ?>
-              
-              <li>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-                  <img src="<?php echo $img_path ?>" rel="<?php echo $large[0] ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"/>
-                  <div id="home-hot-title" class="block"> 
-                    <div id="text" class="column span-3 last">
-                      Nou!
-                    </div>
-                    <div id="info" class="column span-13 last">
-                      <div class="arrow-right"></div>
-                      <table>
-                        <tr>
-                        <td><h3><?php the_title(); ?></h3></td>
-                        <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                        <td class="excerpt"><br/><?php the_excerpt(); ?></td>
-                        <td>&nbsp;</td>
-                        </tr>
-                      </table>
-                    </div>  
-                  </div>               
-                </a>
-              </li>
-                              
-            <?php endwhile; 
-          }
-          
-          while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
-            $imgs = post_attachements($post->ID);
-            $img = $imgs[0];
-            $large = wp_get_attachment_image_src($img->ID, 'large');
-            $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
-                        
-            $product_id = product_id($post->ID);
-            $product_price = product_price($post->ID);
-            $product_discount = product_discount($product_id);
-            $product_sale_price = $product_price - $product_discount;
-            $product_name = product_name($product_id);
-            
-            $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
-            
-            $th = '<a class="hot-slider-link tooltip" rel="'.$i.'" title="'.$product_name.'">';
-						$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
-						$th .= '<span class="tooltip-text">' . $product_name . '</span></a>';
-            $thumbs[] = $th;            
-            
-            if ($i == 1) {
-              $img_path = $large[0];
-            } else {
-              $img_path = get_bloginfo('stylesheet_directory') . "/img/home-hot-blank.jpg";
-            }
-            
-            $i += 1;
-          ?>
-          <li>
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-              <img src="<?php echo $img_path ?>" rel="<?php echo $large[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
-              <div id="home-hot-title" class="block"> 
-                <div id="text" class="column span-3 last">
-                  Nou!
-                </div>
-                <div id="info" class="column span-13 last">
-                  <div class="arrow-right"></div>
-                  <table>
-                    <tr>
-                    <td><h3><?php echo $product_name ?></h3></td>
-                    <?php if ($product_discount > 0) { ?>
-                    <td class="small"><p class="price"><?php echo $product_sale_price; ?></p> RON</td>
-                    <?php } else { ?>
-                    <td class="small"><p class="normal-price"><?php echo $product_price; ?></p> RON</td>
-                    <?php } ?>
-                    </tr>
-                    <tr>
-                    <td class="excerpt"><?php the_excerpt(); ?></td>
-                    <?php if ($product_discount > 0) { ?>
-                    <td class="old-price small"><?php echo $product_price; ?> RON</td>
-                    <?php } else { ?>
-                    <td></td>
-                    <?php } ?>
-                    </tr>
-                  </table>
-                </div>  
-              </div>               
-            </a>
-          </li>
-        <?php 
-          endwhile; ?>          
-        </ul>
-      <?php } ?>
-    </div>
-    <div id="hot-slider-thumbs" class="column span-5 prepend-1 last">
-      <?php if ($thumbs) { ?>
-        <div class="hot-slider-thumb-menu-wrapper">
-        <div class="hot-slider-thumb-menu">
-        <?php foreach ($thumbs as $thumb) {
-          echo $thumb;
-        } ?>
-        </div></div>  
-      <?php } ?>
-    </div>   
-  </div>
-    
+<div id="home-hot" class="block">
+	<?php 
+		$thumbs = array();
+		
+		if ($special_posts) {
+			while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
+				$imgs = post_attachements($post->ID);
+				$img = $imgs[0];
+				$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+				$large = wp_get_attachment_image_src($img->ID, 'large');
+				
+				$title = get_the_title();
+				
+				$th = '<div class="item"><a class="tooltip" title="' . $title . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="" data-sale-price="" >';
+				$th .= '<img src="' . $thumb[0] . '" alt="' . $title . '" />';
+				$th .= '<span class="tooltip-text">' . $title . '</span></a></div>';
+				$thumbs[] = $th;
+			endwhile;
+		}
+		
+		
+		if ($new_products) {
+			while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts);
+				$imgs = post_attachements($post->ID);
+				$img = $imgs[0];
+				$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+										
+				$product_id = product_id($post->ID);
+				$product_price = product_price($post->ID);
+				$product_discount = product_discount($product_id);
+				$product_sale_price = $product_price - $product_discount;
+				$product_name = product_name($product_id);
+				
+				$title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+				
+				$th = '<div class="item"><a class="tooltip" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
+				$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
+				$th .= '<span class="tooltip-text">' . $product_name . '</span></a></div>';
+				$thumbs[] = $th;  
+			endwhile;
+		}
+	?>
+		
+	<div id="slider" class="column span-18">
+		<div id="large-image">
+			<a href="" title="" alt="">
+				<img src="" title="" alt="" />
+			</a>
+		</div>
+	
+		<div id="large-image-title" class="block"> 
+			<div id="text" class="column span-3 last">
+				Nou!
+			</div>
+			<div id="info" class="column span-13 last">
+				<div class="arrow-right"></div>
+				<h3 id="title">Product title</h3>
+				<p id="excerpt">Product excerpt</p>
+				<div id="price"><span class="price">123 RON</span><span class="sale-price">111</span></div>
+			</div>  
+		</div>        
+	</div>
+ 
+	<div id="thumbs" class="column span-5 prepend-1 last">
+		<div id="items">
+			<?php if ($thumbs) { 
+				foreach ($thumbs as $thumb) {
+					echo $thumb;
+				}
+			} ?>
+		</div>
+	</div>
   
 </div>

@@ -3,6 +3,46 @@ $(document).ready(function() {
   var ajaxurl = $("#ajax-url").attr("data-url");
   
   
+  // Slider
+  
+  // Frontpage / Hot
+  // - setting up the main image
+  var thumb = $('#home-hot #thumbs .item a').first();
+  var large = $('#home-hot #large-image');
+  
+  var link = thumb.attr('data-link');
+  var image = thumb.attr('data-image');
+  var title = thumb.attr('title');
+  var excerpt = thumb.attr('data-excerpt');
+  var price = thumb.attr('data-price');
+  var salePrice = thumb.attr('data-sale-price');
+  
+  large.children('a').attr('href', link);
+  large.children('a').attr('title', title);
+  large.children('a').attr('alt', title);
+  large.children('a').children('img').attr('src', image);
+  large.children('a').children('img').attr('title', title);
+  large.children('a').children('img').attr('alt', title);
+  
+  
+  
+  // Single post images
+  
+  // Single post thumb click
+  $("#single-scroll img.small-image").click(function(){
+    var newImage = $(this).attr('rev');
+    var wrap = $("#large-image");
+    var img = new Image();
+    img.onload = function() {
+      // change the image
+      wrap.find("img").attr("src", newImage);
+      wrap.find("a").attr("href", newImage);
+    };
+    img.src = newImage;
+  }).filter(":first").click();
+
+
+  
   
   // Search
   $("#search-enhanced #advanced-search").click(function() {
@@ -24,30 +64,6 @@ $(document).ready(function() {
   
   
   
-  
-  
-  
-  
-  
-  
-  /*
-  
-  // Tooltips on email subscribe
-  // - on hover for smuff, straplines, main categories
-  $('.campaign-box .tooltip').hover(
-    function () {
-      tooltip = $(this).attr('alt');
-      $('.campaign-box #tooltips').html(tooltip);
-      $('.campaign-box #main-name').addClass('hidehide');
-      $('.campaign-box #tooltips').addClass('tooltips-highlighted');      
-    }, 
-    function () {
-      $('.campaign-box #tooltips').html('');
-      $('.campaign-box #tooltips').removeClass('tooltips-highlighted');
-      $('.campaign-box #main-name').removeClass('hidehide');
-  });
-  
-  */
   
   
   
@@ -240,40 +256,6 @@ $(document).ready(function() {
     }
   });
   
-
-  
-  // Slider
-  
-  // Home page Hot / New products
-  $("#hot-slider").sudoSlider({ 
-    prevNext: false,
-    fade: true,
-    customLink: 'a.hot-slider-link',
-    updateBefore: true,
-    beforeAniFunc: function(t) { 
-      var img = $("#hot-slider ul li:nth-child(" + t + ")").find('img').attr('rel');
-      //var img2 = img.replace('localhost/smuff', 'smuff.ro');
-      $("#hot-slider ul li:nth-child(" + t + ")").find('img').attr('src', img); 
-    }
-  });
-  
-  
-  // Single post images
-  
-  // Single post thumb click
-  $("#single-scroll img.small-image").click(function(){
-    var newImage = $(this).attr('rev');
-    var wrap = $("#large-image");
-    var img = new Image();
-    img.onload = function() {
-      // change the image
-      wrap.find("img").attr("src", newImage);
-      wrap.find("a").attr("href", newImage);
-    };
-    img.src = newImage;
-  }).filter(":first").click();
-
-
 
 
   // Add Custom variables for Google Analytics
