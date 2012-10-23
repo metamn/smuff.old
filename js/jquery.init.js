@@ -30,7 +30,7 @@ $(document).ready(function() {
   
   
   
-  
+  /*
   
   // Tooltips on email subscribe
   // - on hover for smuff, straplines, main categories
@@ -46,6 +46,8 @@ $(document).ready(function() {
       $('.campaign-box #tooltips').removeClass('tooltips-highlighted');
       $('.campaign-box #main-name').removeClass('hidehide');
   });
+  
+  */
   
   
   
@@ -239,59 +241,9 @@ $(document).ready(function() {
   });
   
 
-  // Showing all new products alternative way
-  $("#new-products-link").click(function() {
-    var res = "";
-    
-    $("#hot-slider li").each(function(){
-      $(this).find('img').attr('src', $(this).find('img').attr('rel'));
-      res += '<div id="item">' + $(this).html() + '</div>';  
-    });
-    
-    $("#noutati").html(res);
-    $("#noutati").fadeIn("slow");
-  });
-  
-
-  // Adding search result count
-  $("#search-counter").html(
-    $("#search-count").html()
-  );
-  
-
-
-
-  // Click on side icons
-  $("#left-side-icons li img").click(function() {
-    var w = $('.container').css('margin-left');
-    if ((w == '0px') || (w == 'auto')) {
-      $(".container").animate({
-        "margin-left": "40%"
-      }, 800);
-    } else {
-      $(".container").animate({
-        "margin": "0 auto"
-      }, 800);
-    };
-    
-    $("#left-side-text").toggle('slow');
-  });
-  
-
-
-  // jQZoom
-  // On Product 
-  // after image change jqzoom is reloaded, see below
-  /*
-  $('.product-zoom').jqzoom({
-    zoomType: 'reverse',
-		lens: true,
-		preloadImages: false,
-		alwaysOn: false
-  });
-  */
   
   // Slider
+  
   // Home page Hot / New products
   $("#hot-slider").sudoSlider({ 
     prevNext: false,
@@ -307,7 +259,6 @@ $(document).ready(function() {
   
   
   // Single post images
-  $("#single-scroll").scrollable().navigator();
   
   // Single post thumb click
   $("#single-scroll img.small-image").click(function(){
@@ -320,74 +271,7 @@ $(document).ready(function() {
       wrap.find("a").attr("href", newImage);
     };
     img.src = newImage;
-    
-    /*
-    // jQZoom
-    $('.product-zoom').jqzoom({
-    	zoomType: 'reverse',
-			lens: true,
-			preloadImages: false,
-			alwaysOn: false
-    });
-    */
   }).filter(":first").click();
-
-
-
-  
-  
-  // Company info toggle
-  $("#company h3").click(function() {
-    $(".date-firma-info").toggle();
-  });
-  
-  
-  // Show comments on last checkout page
-  $("#page.checkout-final #feedback .pointer").click(function() {
-    $("#page.checkout-final #comments").toggle();
-  });
-
-
-  // Hover on Product thumbs
-  // - on Home Promo, Recommended items, All products, Search results ....
-  $("#recommended .item, #promo-scroll .item, #archive-all-grid #item, #search-results #item").hover(
-    function () {
-      $(this).addClass('product-thumb-highlighted');
-    }, 
-    function () {
-      $(this).removeClass('product-thumb-highlighted');
-  });
-
-
-  // Tooltips on startpage
-  // - on hover for smuff, straplines, main categories
-  $('#header .tooltip').hover(
-    function () {
-      tooltip = $(this).attr('alt');
-      $('#header #tooltips').html(tooltip);
-      $('#header #main-name').addClass('hidehide');
-      $('#header #tooltips').addClass('tooltips-highlighted');      
-    }, 
-    function () {
-      $('#header #tooltips').html('');
-      $('#header #tooltips').removeClass('tooltips-highlighted');
-      $('#header #main-name').removeClass('hidehide');
-  });
-  
- 
-
-  $("#tooltip-trigger").click(function() {
-    $("#tooltip-content").slideToggle('slow');
-  });
-  
-  $("#tooltip-close").click(function() {
-    $("#tooltip-content").hide('slow');
-  });
-  
-  
-    
-  
-  
 
 
 

@@ -16,7 +16,11 @@
               $img = $imgs[0];
               $large = wp_get_attachment_image_src($img->ID, 'large');
               $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
-              $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.get_the_title().'"><img src="'.$thumb[0].'" alt="'.get_the_title().'" /></a>';            
+              
+              $th = '<a class="hot-slider-link tooltip" rel="'.$i.'" title="'.get_the_title().'">';
+              $th .= '<img src="'.$thumb[0].'" alt="'.get_the_title().'" />';
+              $th .= '<span class="tooltip-text">' . get_the_title() . '</span></a>';
+              $thumbs[] = $th;            
               
               if ($i == 1) {
                 $img_path = $large[0];
@@ -67,7 +71,10 @@
             
             $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
             
-            $thumbs[] = '<a class="hot-slider-link" rel="'.$i.'" title="'.$product_name.'"><img src="'.$thumb[0].'" alt="'.$product_name.'" /></a>';            
+            $th = '<a class="hot-slider-link tooltip" rel="'.$i.'" title="'.$product_name.'">';
+						$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
+						$th .= '<span class="tooltip-text">' . $product_name . '</span></a>';
+            $thumbs[] = $th;            
             
             if ($i == 1) {
               $img_path = $large[0];

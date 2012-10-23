@@ -16,7 +16,7 @@
 					<input type="hidden" name="current-category" id="s" value="<?php echo page_main_name(); ?>" />
 					
 					<input class="submit" type="submit" id="searchsubmit" value="Cautare cadouri" />  
-					<a id="advanced-search" title="Cautare avansata" href="#">Cautare avansata</a>
+					<span id="advanced-search">Cautare avansata</span>
 				</p>
 			</div>
 			

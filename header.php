@@ -79,9 +79,6 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script>!window.jQuery && document.write('<script src="/wp-includes/js/jquery/jquery.js"><\/script>')</script>
     
-		<!-- Sudo slider, frontpage -->
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.sudoSlider.min.js" ></script>
-    
 
     <!-- Init GA to be able to add custom variables -->
 		<script type="text/javascript">

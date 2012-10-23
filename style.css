@@ -109,6 +109,37 @@ a, a:visited {
 
 
 
+/* Tooltips
+- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
+*/
+
+.tooltip {	
+	position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+.tooltip:hover {
+	z-index: 1001;
+}
+
+.tooltip-text {
+	display: none;
+}
+.tooltip:hover .tooltip-text {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 250px;
+	height: 100px;
+	background: #8AEA4C;
+	padding: 1.25em;
+}
+
+
+
+
 
 
 /* Forms
@@ -270,6 +301,7 @@ input[type='radio']:checked:after {
 }
 #search-enhanced #submit #advanced-search {
 	font-style: italic;
+	cursor: pointer;
 }
 #search-enhanced #searchbox {
 	margin: 2em 0 2em 1em;
@@ -955,7 +987,7 @@ div.thanks-error {
 }
 
 #home-hot-content .hot-slider-thumb-menu-wrapper {
-	width: auto;
+	width: 215px;
 	height: 512px;
 	background: url('img/stripe.png');
 }
@@ -977,13 +1009,16 @@ div.thanks-error {
   height: 32px;
   text-align: center;
 }
-#home-hot-content #hot-slider-thumbs .sc_menu_tooltip {
-	position: absolute;
+#home-hot-content #hot-slider-thumbs .tooltip-text {
 	background: #111;
 	color: white;
-	font-size: larger;
-	padding: 1.25em;
-	display: block;
+	font-size: large;
+	opacity: .9;
+	
+	top: 2em;
+	left: 75px;
+	width: auto;
+	height: auto;
 }
 
 
@@ -1407,6 +1442,12 @@ li.comment ul.children {
 	font-size: smaller;
 	text-decoration: underline;
 }
+#subscribe-newsletter #text #whatis .tooltip-text {
+	text-decoration: none;
+}
+#subscribe-newsletter #text #whatis:hover .tooltip-text {
+	left: 5em;
+}
 
 #subscribe-newsletter #facebook-connect {
 	float: left;
@@ -1453,32 +1494,6 @@ li.comment ul.children {
 
 
 
-/* Collections
-
-#collections {
-  margin: 3em 0 0;
-}
-#collections .item {
-  margin-bottom: 3em;
-}
-#collections #title {
-  padding: 1em 0 .1em;
-}
-#collections h3 {
-  margin-left: 1em;
-  font-variant: small-caps;
-}
-#collections a, #collections a:visited {
-  color: #4A4742;
-}
-#collections #image {
-  border: 1px solid #aaa;
-}
-#collections #image img {
-  width: 99.9%;
-  text-align: center;
-}
-*/
 
 
 /* Product Thumb 
@@ -1549,53 +1564,10 @@ li.comment ul.children {
 }
 
 
-
-/* Category colors
-*/
-
-/*
-
-.gadget {
-  background: #262BBF;
-  color: #ddd !important;
-}
-.gizmo {
-  background: #A54C21;
-  color: #ddd !important;
-}
-.self-care {
-  background: #18F2E0;
-}
-.doar-copii {
-  background: #666;
-  color: #ddd !important;
-}
-.spionaj {
-  background: #72442E;
-  color: #ddd !important;
-}
-.eco {
-  background: #38A711;
-  color: #ddd !important;
-}
-.lifestyle {
-  background: #F431DB;
-}
-.ceasuri {
-  background: #483559;
-  color: #ddd !important;
-}
-
-*/
-
-
-
 /* Common 
+------------------------------------------------------
 */
 
-.all-products-link {
-	display: none;
-}
 
 img {
 	width: 100%;
@@ -1611,121 +1583,4 @@ ul.inline-list li {
   display: inline;
   float: left;
 }
-
-
-
-
-
-/* Imported stylesheets
-------------------------------------------------------
-*/
-
-
-/* Sudo Slider */
-
-
-div.hot-slider-thumb-menu-wrapper {
-  position: relative;   
-  height: 415px;
-  /* Make bigger than a photo, because we need a place for a scroll-bar. */
-  width: 120px;  
-  overflow: auto;
-}
-div.hot-slider-thumb-menu {
-  padding: 0 7px 30px;
-}
-.hot-slider-thumb-menu a {
-  display: block;
-  margin-bottom: 5px;
-  width: 100px;
-  border: 2px solid #aaa;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;  
-}
-.hot-slider-thumb-menu a:hover {
-  border: 4px solid #333;  
-}
-.hot-slider-thumb-menu img {
-  display: block;
-  border: none;
-}
-.slider ul, .slider ul li, .sliderul, .sliderli{
-	margin:0;
-	padding:0;
-	list-style:none;
-	}
-.slider ul li, .sliderli{ 
-	/* 
-		define width and height of list item (slide)
-		entire slider area will adjust according to the parameters provided here
-		comment the height out, if autoheight is on. 
-	*/ 
-	width:590px;
-	overflow:hidden; 
-}	
-.slider, .slider2 {
-	width:590px;
-	position:relative; /* Fixing fade in IE6 and IE7 */
-}
-.graphic, .prevBtn, .nextBtn{
-	 margin:0;
-	 padding:0;
-	 display:block;
-	 overflow:hidden;
-	 text-indent:-8000px;
- }
- 
- .prevBtn, .nextBtn { 
-	display:block;
-	width:30px;
-	height:77px;
-	position:absolute;
-	left:-30px;
-	top:71px;
-	z-index:1000;
-	background:url(../images/btn_prev.gif) no-repeat 0 0;	
-	cursor:pointer;
-}	
-.nextBtn{ 
-	left:696px;
-}														
-.nextBtn { 
-	background:url(../images/btn_next.gif) no-repeat 0 0;	
-}	
-#wrapper .prevBtn{ 
-	left:-35px;
-}	
-		
-/* numeric controls */	
-.slider ol {
-	margin:1em 0;
-	padding:0;
-	height:28px;	
-}
-.slider ol li{
-	margin:0 10px 0 0; 
-	padding:0;
-	float:left;
-	list-style:none;
-	height:28px;
-	line-height:28px;
-}
-.slider ol li a{
-	float:left;
-	height:28px;
-	line-height:28px;
-	border:1px solid #ccc;
-	background:#DAF3F8;
-	color:#555;
-	padding:0 10px;
-	text-decoration:none;
-}
-.slider ol li.current a{
-	background:#5DC9E1;
-	color:#fff;
-}
-.slider ol li a:focus, .prevBtn a:focus, .nextBtn a:focus{outline:none;}
-
-
-
 

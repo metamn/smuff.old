@@ -79,8 +79,7 @@
       Inscrie-te la newsletter si ai o <strong>livrare gratuita!</strong>
     </h4>
     <?php include 'mailchimp.php'; ?>  
-    <div id="tooltips" class="block"></div>    
-    <a id="whatis" class="tooltip" alt="<?php echo page_excerpt('despre-noi/inscriere-la-newsletter'); ?>" href="<?php bloginfo('home'); ?>/despre-noi/inscriere-la-newsletter" title="Ce este newsletterul Smuff">Ce este?</a> 
+    <span id="whatis" class="tooltip" title="Ce este newsletterul Smuff">Ce este?<span class="tooltip-text"><?php echo page_excerpt('despre-noi/inscriere-la-newsletter'); ?></span></span> 
   </div>
   <div id="facebook-connect">  	
 		<div id="auth-loggedout">
