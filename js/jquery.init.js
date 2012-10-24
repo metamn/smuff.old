@@ -31,16 +31,26 @@ $(document).ready(function() {
 		large_info.children('a').children('#title').html(title);
 		large_info.children('a').children('#excerpt').html(excerpt);
 		
-		if (salePrice > 0) {
-			large_info.children('a').children('#price').children('.price').html(salePrice);
+		if (salePrice) {
+			large_info.children('a').children('#price').children('.price').html(salePrice + ' Lei');
 			large_info.children('a').children('#price').children('.old-price').html(price);
 			
+			large_info.children('a').children('#price').children('.price').show();
+			large_info.children('a').children('#price').children('.old-price').show();
 			large_info.children('a').children('#price').children('.normal-price').hide();
+			large_info.children('a').children('#price').children('.lei').hide();
 		} else {
 			large_info.children('a').children('#price').children('.normal-price').html(price);
+			large_info.children('a').children('#price').children('.normal-price').show();
+			large_info.children('a').children('#price').children('.lei').show();
 			
 			large_info.children('a').children('#price').children('.price').hide();
 			large_info.children('a').children('#price').children('.old-price').hide();
+		}
+		
+		if (!price) {
+			large_info.children('a').children('#price').children('.normal-price').hide();
+			large_info.children('a').children('#price').children('.lei').hide();
 		}
   }
   

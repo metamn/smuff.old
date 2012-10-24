@@ -31,6 +31,8 @@
 				$product_discount = product_discount($product_id);
 				if ($product_discount > 0) {
 					$product_sale_price = $product_price - $product_discount;
+				} else {
+					$product_sale_price = '';
 				}
 				$product_name = product_name($product_id);
 				
@@ -63,7 +65,8 @@
 					<div id="price">
 						<span class="price"></span> 
 						<span class="old-price"></span>
-						<span class="normal-price"></span> Lei
+						<span class="normal-price"></span> 
+						<span class="lei"> Lei</span>
 					</div>
 				</a>
 			</div>  

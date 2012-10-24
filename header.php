@@ -90,7 +90,7 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121023"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121024"></script>
 		
      
     

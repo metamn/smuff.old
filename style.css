@@ -532,8 +532,8 @@ div.thanks-error {
 	float: right;
 	color: #f1f1f1;
 }
-#home-hot #large-image-title #price .price {
-	background: #4D8FCE;
+#home-hot #large-image-title #price .normal-price {
+	color: #111;
 }
 
 
@@ -634,9 +634,9 @@ div.thanks-error {
   padding: 0 2em;
   width: 18.9%;
   float: left;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #f1f1f1;
 }
-#promo img {
+#promo .item img {
   width: 120px;
 	height: 120px;
 	margin: 0;
@@ -644,30 +644,23 @@ div.thanks-error {
 	border: 1px solid #ccc;		
 	cursor: pointer;
 }
-#promo  h4 {
+#promo .item h4 {
   margin: .5em 0;
 }
 #promo .item .text p {
   width: 90%;
 }
-#promo  .active {
-  border:1px solid #444;	
-}
-#promo .product-thumb-highlighted {
+#promo .item:hover {
   border-bottom: 3px solid #F25D18;
   background: url(img/stripe.png);
 }
-#promo .product-thumb-highlighted h4, #promo .product-thumb-highlighted p {
+#promo .item:hover h4, #promo .item:hover p {
   background: white;
 }
-#promo .navi {
-  padding-left: 29%;
-}
-#promo .arrow-vertical {
-  margin-top: 6.5%;
-}
+
 #promo .arrow-right {
-  width:0; height:0;
+  width:0; 
+  height:0;
   line-height:0;
   border-top:15px solid transparent;
   border-right:15px solid transparent;
@@ -680,10 +673,6 @@ div.thanks-error {
   text-align: center;
   font-size: 7em;
 }
-#promo h4.all-products-link {
-  margin-top: 2.5em;
-}
-
 
 
 
@@ -1147,6 +1136,9 @@ table.wpsc_checkout_table input.text {
 	background: white;
 	border-bottom: 1px solid #ccc;
 }
+#cart ul li#message {
+	background: #8AEA4C;
+}
 #cart #widgetshoppingcart h3 {
 	display: none;
 }
@@ -1154,7 +1146,7 @@ table.wpsc_checkout_table input.text {
 	color: #F25F18;
 }
 #cart a:hover {
-	border-bottom: 1px solid;
+	font-weight: bold;
 }
 
 

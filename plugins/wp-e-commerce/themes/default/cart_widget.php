@@ -30,7 +30,7 @@
     </li>
   <?php if(count($cart_messages) > 0) { ?>  
     <?php foreach((array)$cart_messages as $cart_message) { ?>
-      <li><?php echo $cart_message; ?></li>
+      <li id="message"><?php echo $cart_message; ?></li>
     <?php } ?>
   <?php } ?>
 		<li>0740-456.127</li>

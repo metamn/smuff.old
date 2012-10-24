@@ -40,10 +40,10 @@
   <div id="price">
   	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
 		<?php if ($product_discount > 0) { ?>
-			<span class="price"><?php echo $product_sale_price; ?> RON</span>
+			<span class="price"><?php echo $product_sale_price; ?> Lei</span>
 			<span class="old-price"><?php echo $product_price; ?></span>    
 		<?php } else { ?>
-			<span class="normal-price"><?php echo $product_price; ?></span> RON
+			<span class="normal-price"><?php echo $product_price; ?></span> Lei
 		<?php } ?>
 		</a>
 	</div>
