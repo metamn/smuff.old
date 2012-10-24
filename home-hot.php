@@ -24,11 +24,14 @@
 				$imgs = post_attachements($post->ID);
 				$img = $imgs[0];
 				$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
+				$large = wp_get_attachment_image_src($img->ID, 'large');
 										
 				$product_id = product_id($post->ID);
 				$product_price = product_price($post->ID);
 				$product_discount = product_discount($product_id);
-				$product_sale_price = $product_price - $product_discount;
+				if ($product_discount > 0) {
+					$product_sale_price = $product_price - $product_discount;
+				}
 				$product_name = product_name($product_id);
 				
 				$title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
@@ -54,9 +57,15 @@
 			</div>
 			<div id="info" class="column span-13 last">
 				<div class="arrow-right"></div>
-				<h3 id="title">Product title</h3>
-				<p id="excerpt">Product excerpt</p>
-				<div id="price"><span class="price">123 RON</span><span class="sale-price">111</span></div>
+				<a href="" title="" alt="">
+					<h3 id="title"></h3>
+					<p id="excerpt"></p>
+					<div id="price">
+						<span class="price"></span> 
+						<span class="old-price"></span>
+						<span class="normal-price"></span> Lei
+					</div>
+				</a>
 			</div>  
 		</div>        
 	</div>

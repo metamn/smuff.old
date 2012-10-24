@@ -4,29 +4,60 @@ $(document).ready(function() {
   
   
   // Startpage - Hot
-  // - setting up the main image
-  var thumb = $('#home-hot #thumbs .item a').first();
-  var large = $('#home-hot #large-image');
   
-  var link = thumb.attr('data-link');
-  var image = thumb.attr('data-image');
-  var title = thumb.attr('title');
-  var excerpt = thumb.attr('data-excerpt');
-  var price = thumb.attr('data-price');
-  var salePrice = thumb.attr('data-sale-price');
+  // - load the big image from thumb data
+  function loadImage(thumb) {
+  	var large = $('#home-hot #large-image');
+		var large_info = $('#home-hot #large-image-title #info');
+		
+		var link = thumb.attr('data-link');
+		var image = thumb.attr('data-image');
+		var title = thumb.attr('title');
+		var excerpt = thumb.attr('data-excerpt');
+		var price = thumb.attr('data-price');
+		var salePrice = thumb.attr('data-sale-price');
+		
+		large.children('a').attr('href', link);
+		large.children('a').attr('title', title);
+		large.children('a').attr('alt', title);
+		
+		large.children('a').children('img').attr('src', image);
+		large.children('a').children('img').attr('title', title);
+		large.children('a').children('img').attr('alt', title);
+		
+		large_info.children('a').attr('href', link);
+		large_info.children('a').attr('title', title);
+		large_info.children('a').attr('alt', title);
+		large_info.children('a').children('#title').html(title);
+		large_info.children('a').children('#excerpt').html(excerpt);
+		
+		if (salePrice > 0) {
+			large_info.children('a').children('#price').children('.price').html(salePrice);
+			large_info.children('a').children('#price').children('.old-price').html(price);
+			
+			large_info.children('a').children('#price').children('.normal-price').hide();
+		} else {
+			large_info.children('a').children('#price').children('.normal-price').html(price);
+			
+			large_info.children('a').children('#price').children('.price').hide();
+			large_info.children('a').children('#price').children('.old-price').hide();
+		}
+  }
   
-  large.children('a').attr('href', link);
-  large.children('a').attr('title', title);
-  large.children('a').attr('alt', title);
-  large.children('a').children('img').attr('src', image);
-  large.children('a').children('img').attr('title', title);
-  large.children('a').children('img').attr('alt', title);
+  // - load the first image
+  loadImage($('#home-hot #thumbs .item a').first());
+  
+  // - click on thumbs
+  $('#home-hot #thumbs .item a').click(function(){
+    loadImage($(this));
+  });
+
   
   
   
   // Single post images
-  // Single post thumb click
-  $("#single-scroll img.small-image").click(function(){
+  // - thumb click
+  $("#post-images #thumbs img").click(function(){
     var newImage = $(this).attr('rev');
     var wrap = $("#large-image");
     var img = new Image();

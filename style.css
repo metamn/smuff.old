@@ -516,18 +516,24 @@ div.thanks-error {
 }
 #home-hot #large-image-title h3 {
 	position: relative;
-	top: -3em;
+	top: -2.8em;
 	left: 2.5em;
+	color: #F25F18;
 }
 #home-hot #large-image-title p {
 	position: relative;
-	top: -5em;
+	top: -5.5em;
 	left: 3.8em;
+	color: #f1f1f1;
 }
 #home-hot #large-image-title #price {
 	position: relative;
-	top: -5em;
+	top: -9.5em;
 	float: right;
+	color: #f1f1f1;
+}
+#home-hot #large-image-title #price .price {
+	background: #4D8FCE;
 }
 
 
@@ -1147,7 +1153,9 @@ table.wpsc_checkout_table input.text {
 #cart strong {
 	color: #F25F18;
 }
-
+#cart a:hover {
+	border-bottom: 1px solid;
+}
 
 
 
