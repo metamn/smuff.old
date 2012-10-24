@@ -307,6 +307,10 @@ img.small-image {
 }
 
 
+#product-discontinued {
+	padding: 1.25em;
+}
+
 
 
 /* Other products
@@ -346,18 +350,20 @@ img.small-image {
 #post-shopping .wpsc_container td {
   border-bottom: 1px dotted;
 }
-#post-shopping .wpsc_container tr.transport td {
+#post-shopping .wpsc_container tr.quantity input[type='text'] {
+  width: 80%;
+  color: #111;
+  font-style: normal;
+}
+#post-shopping .wpsc_container tr.delivery td {
   border-bottom: none;
 }
 #post-shopping .wpsc_container tr.submit td {
 	border-top: 1px solid;
 	padding-top: 1.5em;
 }
-#post-shopping .wpsc_container td.right {
-  text-align: right;
-}
 #post-shopping .wpsc_container tr.animation {
-  display: none;
+  /*display: none;*/
 }
 #post-shopping .wpsc_container tr.price {
   background: none !important;
@@ -399,55 +405,35 @@ div.thanks-error {
 	padding: 0 1em;
 }
 #post-shopping .wpfp-span {
-	width: 94%;
+	width: 84%;
 	padding: .6125em .312em;
 	display: block;
 	text-align: center;
 }
-
+#post-shopping .wpfp-span a {
+	color: #f1f1f1;
+}
 
 #shopping-info {
 	background: url(img/stripe.png);
 	margin-top: 2em;
 	text-align: justify;
 }
-#shopping-info ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 2em 1em;
+#shopping-info .tooltip {
+	margin: 2em 1em;
+	background: white;
+	padding: .625em;
+	display: block;
 }
-#shopping-info ul li.shopping-info {
-  cursor: pointer;
-  background: white;
-  padding: 1em;
+#shopping-info .tooltip-text {
+	position: relative;
+	top: -10em;
 }
-#shopping-info #tooltip-content {
-	display: none;
-	background: #10A26F;
-	color: white;
-	font-size: medium;
-	padding: 2.5em 2em 0 3em;
-	
-	height: 310px;
-	width: 310px;
-	position: absolute;
-	top: 12.5em;
-	left: 35em;
+#shopping-info .tooltip-text ul {
+	list-style: none;
+	margin: 0;
 }
-#shopping-info #tooltip-content ul {
-  margin: 0;
-  margin-left: 1em;
-  list-style: square;
-}
-#shopping-info #tooltip-content ul li {
-  margin-bottom: .75em;
-}
-#shopping-info #tooltip-close {
-  margin-left: 8em;
-  font-size: smaller;
-  font-style: italic;
-  cursor: pointer;
-}
+
 
 
 
@@ -1177,6 +1163,7 @@ table.wpsc_checkout_table input.text {
 #footer-info #company h3 {
 	border-bottom: none;
 	background: none;
+	padding: 0;
 }
 
 
@@ -1202,7 +1189,7 @@ table.wpsc_checkout_table input.text {
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 1px;
 }
-.accordion div {
+.accordion .pane, .accordion .date-firma-info {
 	display: none;
 	padding: 1.25em;
 	margin-bottom: 2em;
@@ -1247,35 +1234,46 @@ table.wpsc_checkout_table input.text {
 
 /* Comments
 */
-h4.comments {
-  margin-bottom: 3em;
-}
-ol.commentlist, ol.pinglist {
+
+#comments ol {
 	list-style: none;
 }
-li.comment, li.pingback {
-  margin-bottom: 2em;
+#comments ol li {
+  margin: 2em 0 3em;
+}
+#comments ol li .comment-author, #comments ol li .comment-meta {
+	width: 40%;
+	float: left;
+}
+#comments ol li .comment-author .fn {
+	font-size: 2em;
+	position: relative;
+	top: -.5em;
+}
+#comments ol li .comment-author .says {
+	display: none;
+}
+#comments ol li .comment-author img {
+	width: 64px !important;
+}
+#comments ol li .comment-meta {
+  float: right;
+  padding: 1.25em;
+  background: #4D8FCE;
+  margin-top: 1em;
+}
+#comments ol li p {
+	clear: both;
+	padding: 1.25em;
+	margin: 1.25em 0;
+}
+#comments ol li ul.children {
+  list-style-type: none;
+  margin-top: 1em;  
 }
 li.comment br, li.pingback br {
   margin: 0 !important;
 }
-.comment-author img {
-	width: 64px !important;
-}
-.comment-body {
-  background: #f1f1f1;
-  padding: 1em;
-  max-width: 39em;
-}
-.comment-meta {
-  margin-top: .5em !important
-}
-li.comment ul.children {
-  list-style-type: none;
-  margin-top: 1em;  
-}
-
-
 
 
 

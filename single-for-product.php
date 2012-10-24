@@ -77,22 +77,19 @@
       </div>
       
       <div id="shopping-info" class="block"> 
-        <ul>                
-          <li id="tooltip-trigger" class="shopping-info">
-            Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
-          </li>
-          <div id="tooltip-content">
-            <ul>
-              <li>Preturi corecte, servicii stabile si asistenta rapida.</li>
-              <li>Shopping simplu fara procedura de inregistrare</li>
-              <li>Livrare se face acasa sau la birou</li>
-              <li>Plata se face la livrare, ramburs, sau prin OP</li>
-              <li>Satisfactie sau returnare produs in 10 zile</li>
-              <li>Garantie tehnica cel putin 1 an</li>
-            </ul>
-            <span id="tooltip-close">X inchide</span>
-          </div>          
-        </ul>               
+        <div class="tooltip">
+					Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
+					<div class="tooltip-text">
+						<ul>
+							<li>Preturi corecte, servicii stabile si asistenta rapida.</li>
+							<li>Shopping simplu fara procedura de inregistrare</li>
+							<li>Livrare se face acasa sau la birou</li>
+							<li>Plata se face la livrare, ramburs, sau prin OP</li>
+							<li>Satisfactie sau returnare produs in 10 zile</li>
+							<li>Garantie tehnica cel putin 1 an</li>
+						</ul>
+					</div>
+				</div>             
       </div>      
       
     </div>
@@ -106,7 +103,7 @@
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 					
 				<h3 id="comments">Comentarii</h3>
-				<div class="pane normal">
+				<div id="comments" class="pane normal">
 					<?php comments_template('', true); ?>
 				</div>
 			</div>
@@ -276,11 +273,6 @@
         }		      
       }      
     ?>
-    
-    <h4 class="all-products-link">
-      <a class="all-products-link" title="Vezi toate promotiile Smuff" href="<?php bloginfo('home'); ?>/category/meta/promotii/?view=3">
-      Vezi toate promotiile Smuff &rarr;</a>
-    </h4>
   </div>
   
   

@@ -23,12 +23,13 @@ get_header();
 		</div>
 		<?php endwhile; endif; ?>
 	
-   		
-		<?php 
-		  if (!(is_page(array(429, 430)))) { // no comments on the checkout page
-		    if (comments_open()) {comments_template();}  
-		  }		  
-		?>
+   	<div id="comments" class="block">
+			<?php 
+				if (!(is_page(array(429, 430)))) { // no comments on the checkout page
+					if (comments_open()) {comments_template();}  
+				}		  
+			?>
+		</div>
 	</div>    
 	
 	<?php get_sidebar(); ?>	    

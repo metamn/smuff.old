@@ -130,13 +130,15 @@
 					        <td><label>Livrare:</label></td>
 					        <td class='right'><?php  echo $delivery ?></td>
 					      </tr>
-					      					      
+					      
+					      
+					      <!--
 					      <tr class='transport'><td>
 					        <label>Transport:</label>
 					      </td><td class='right'>
 					        8.00 RON  
 					      </td></tr>
-					      
+					      -->
 					      
 					      										
 					      <!-- END OF QUANTITY OPTION -->
