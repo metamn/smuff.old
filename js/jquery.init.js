@@ -3,7 +3,7 @@ $(document).ready(function() {
   var ajaxurl = $("#ajax-url").attr("data-url");
   
   
-  
+  // Startpage - Hot
   // - setting up the main image
   var thumb = $('#home-hot #thumbs .item a').first();
   var large = $('#home-hot #large-image');
@@ -25,7 +25,6 @@ $(document).ready(function() {
   
   
   // Single post images
-  
   // Single post thumb click
   $("#single-scroll img.small-image").click(function(){
     var newImage = $(this).attr('rev');

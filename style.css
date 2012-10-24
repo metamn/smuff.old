@@ -38,6 +38,419 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 
 
 
+/* Grid
+----------------------------------------------------
+*/
+
+.container {
+  margin: 0 auto;
+  width: 950px;
+  overflow: hidden;  
+}
+.block {
+	width: 100%;
+	float: left;
+}
+
+
+body {
+	background: white url(img/dotted_bg.png);
+}
+
+
+
+
+
+/* Typography
+----------------------------------------------------
+*/
+
+body {
+	font-family: 'Coda', serif;
+}
+h1, h2 {
+	font-family: 'Oswald', sans-serif;
+}
+.cursive {
+	font-family: 'Nothing You Could Do', cursive; 
+}
+
+#header #logo h1 {
+	letter-spacing: 0 !important;
+}
+h2 {
+	font-size: 2.5em;
+}
+
+
+
+
+
+/* Links
+----------------------------------------------------
+*/
+
+a, a:visited {
+  color: #111;
+  text-decoration: none;
+}
+
+#accordion a, #accordion a:visited {
+	border-bottom: 1px dotted;
+}
+
+
+
+
+
+/* Forms
+----------------------------------------------------
+*/
+
+
+input, textarea, button {
+	border: none;
+	outline: 0;
+
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input[type='text'] {
+	border-bottom: 1px solid;
+	font-style: italic;
+	color: #ccc;
+	font-family: monospace;
+	font-size: medium;
+	padding: .312em;
+	width: 96%;
+}
+input[type='text']:focus {
+	color: black;
+	font-style: normal;
+}
+
+input[type='submit'],
+input[type='button'], 
+.wpfp-link,
+.wpfp-span, 
+button {		
+	background: #111;
+	color: #aaa;
+	padding: .625em;
+}
+input[type='submit']:hover,
+input[type='button']:hover, 
+.wpfp-link:hover,
+.wpfp-span:hover,
+button:hover {
+	cursor: pointer;
+	color: white;
+}
+
+
+input[type='checkbox']:after {
+	content: '\2610';
+	margin-right: .625em;
+}
+input[type='checkbox']:checked:after {
+	content: '\25a3';
+}
+
+
+input[type='radio']:after {
+	content: '\272A';
+	margin-right: .312em;
+
+	font-size: 200%;
+	line-height: .5;
+	vertical-align: top;
+
+	color: lightgray;
+}
+input[type='radio']:checked:after {
+	color: black;
+}
+
+
+
+
+
+/* Product page / Single
+----------------------------------------------------
+*/
+
+
+#single .post h1 {
+	font-weight: bold;
+}
+
+#single #large-image {
+  margin: 0 0 1em 0;
+}
+#single #thumbs {
+	margin-bottom: 5em;
+	
+	width: 710px;
+	height: 130px;
+}
+#single #thumbs.force-scrollbar {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+#single #thumbs img {
+  cursor: pointer;
+  width: 100px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  padding: .2em;
+  background: white;
+}
+
+
+#large-image img {
+  width: 704px;
+  height: 490px;
+}
+img.small-image {
+  width: 100px;
+  height: auto;
+}
+#large-image img, img.small-image, #recommended img {
+  border: 1px solid #ccc;
+  padding: .2em;
+}
+
+
+.single #contact-info {
+	position: relative;
+	top: 2em;
+	float: right;
+	width: 180px;
+}
+.single #contact-info img {
+	width: auto;
+}
+
+
+#accordion img {
+	width: auto;
+}
+#accordion h3:after {
+	content: '\25bc';
+	float: right;
+	color: #ccc;
+	font-size: smaller;
+}
+#accordion .pane {
+	font-size: larger;
+}
+
+
+#social-share {
+	margin: 5em 0;
+}
+
+
+
+.single #subscribe-newsletter {
+	width: 100%;
+	background: url(img/stripe.png);
+	margin-top: 10em;
+}
+.single #subscribe-newsletter #text {
+	position: relative;
+	left: -5%;
+	width: 52%;
+	margin-right: 2%;
+}
+.single #subscribe-newsletter #text h4 {
+	margin: 1em 0;
+	background: white;
+	padding: .312em;
+	border-bottom: none;
+}
+
+
+
+/* Add to cart 2
+*/
+
+#post-shopping2 {
+	margin: 5em 0;
+}
+
+#post-shopping2, #shopping-incentives  {
+  background: #8AEA4C;
+  height: 370px;
+}
+
+#post-shopping2 #post-shopping {
+  width: 28%;
+  margin-right: 10%;
+  float: left;
+  height: 370px;
+}
+#shopping-incentives {
+  width: 50%;
+  float: left;
+  padding: 1.5em 0;
+}
+#shopping-incentives h4 {
+  margin-bottom: .25em;
+  font-weight: bold;
+}
+#shopping-incentives p {
+  margin-bottom: 1.75em;
+}
+
+
+
+
+/* Other products
+*/
+
+.single .bestsellers h2 {
+	margin-top: 2em;
+	border-bottom: 1px solid;
+}
+
+
+/* Add to cart
+*/
+
+#post-shopping {
+	background: #4D8FCE;
+}
+#post-shopping img {
+	width: auto;
+}
+#post-shopping .wpsc_container {
+  padding: 1em .5em;
+}
+#post-shopping .wpsc_container .imagecol {
+  display: none;
+}
+#post-shopping .wpsc_container div.single_product_display div.textcol  {
+  margin-left: 0 !important;
+}
+#post-shopping .wpsc_container table {
+  width: 100%;
+  margin-bottom: 0;
+}
+#post-shopping .wpsc_container table label {
+  font-weight: normal;
+}
+#post-shopping .wpsc_container td {
+  border-bottom: 1px dotted;
+}
+#post-shopping .wpsc_container tr.transport td {
+  border-bottom: none;
+}
+#post-shopping .wpsc_container tr.submit td {
+	border-top: 1px solid;
+	padding-top: 1.5em;
+}
+#post-shopping .wpsc_container td.right {
+  text-align: right;
+}
+#post-shopping .wpsc_container tr.animation {
+  display: none;
+}
+#post-shopping .wpsc_container tr.price {
+  background: none !important;
+  font-size: 100%;
+}
+#post-shopping .wpsc_container span.pricedisplay {
+  float: none !important;
+  width: 99%;
+}
+input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {  
+  width: 100%;
+  font-size: small;
+}
+div.thanks-ok {
+  background: #10A26F;
+  padding: 1em;
+}
+div.thanks-error {
+  background: #A53B08;
+  padding: 1em;
+}
+#post-shopping .wpsc_cart_message {
+  text-align: center;
+}
+
+
+#post-shopping input.wpsc_buy_button {
+	background: #8AEA4C;
+	color: #333;
+	border: 1px dotted;
+}
+#post-shopping input.wpsc_buy_button:hover {
+	color: #111;
+	font-weight: bold;
+}
+
+#post-shopping #wishlist {
+	margin-bottom: 1em;
+	padding: 0 1em;
+}
+#post-shopping .wpfp-span {
+	width: 94%;
+	padding: .6125em .312em;
+	display: block;
+	text-align: center;
+}
+
+
+#shopping-info {
+	background: url(img/stripe.png);
+	margin-top: 2em;
+	text-align: justify;
+}
+#shopping-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 2em 1em;
+}
+#shopping-info ul li.shopping-info {
+  cursor: pointer;
+  background: white;
+  padding: 1em;
+}
+#shopping-info #tooltip-content {
+	display: none;
+	background: #10A26F;
+	color: white;
+	font-size: medium;
+	padding: 2.5em 2em 0 3em;
+	
+	height: 310px;
+	width: 310px;
+	position: absolute;
+	top: 12.5em;
+	left: 35em;
+}
+#shopping-info #tooltip-content ul {
+  margin: 0;
+  margin-left: 1em;
+  list-style: square;
+}
+#shopping-info #tooltip-content ul li {
+  margin-bottom: .75em;
+}
+#shopping-info #tooltip-close {
+  margin-left: 8em;
+  font-size: smaller;
+  font-style: italic;
+  cursor: pointer;
+}
+
+
+
 
 
 
@@ -270,177 +683,6 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 
 
 
-/* Grid
-----------------------------------------------------
-*/
-
-.container {
-  margin: 0 auto;
-  width: 950px;
-  overflow: hidden;  
-}
-.block {
-	width: 100%;
-	float: left;
-}
-
-
-body {
-	background: white url(img/dotted_bg.png);
-}
-
-
-
-
-
-/* Typography
-----------------------------------------------------
-*/
-
-body {
-	font-family: 'Coda', serif;
-}
-h1, h2 {
-	font-family: 'Oswald', sans-serif;
-}
-.cursive {
-	font-family: 'Nothing You Could Do', cursive; 
-}
-
-#header #logo h1 {
-	letter-spacing: 0 !important;
-}
-h2 {
-	font-size: 2.5em;
-}
-
-
-
-
-
-
-
-
-
-/* Links
-----------------------------------------------------
-*/
-
-a, a:visited {
-  color: #111;
-  text-decoration: none;
-}
-
-#accordion a, #accordion a:visited {
-	border-bottom: 1px dotted;
-}
-
-
-
-
-/* Tooltips
-- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
-*/
-
-.tooltip {	
-	position: relative;
-  z-index: 1000;
-  cursor: pointer;
-}
-.tooltip:hover {
-	z-index: 1001;
-}
-
-.tooltip-text {
-	display: none;
-}
-.tooltip:hover .tooltip-text {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	width: 250px;
-	height: 100px;
-	background: #8AEA4C;
-	padding: 1.25em;
-}
-
-
-
-
-
-
-/* Forms
-----------------------------------------------------
-*/
-
-
-input, textarea, button {
-	border: none;
-	outline: 0;
-
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-
-input[type='text'] {
-	border-bottom: 1px solid;
-	font-style: italic;
-	color: #ccc;
-	font-family: monospace;
-	font-size: medium;
-	padding: .312em;
-	width: 96%;
-}
-input[type='text']:focus {
-	color: black;
-	font-style: normal;
-}
-
-input[type='submit'],
-input[type='button'], 
-.wpfp-link,
-.wpfp-span, 
-button {		
-	background: #111;
-	color: #aaa;
-	padding: .625em;
-}
-input[type='submit']:hover,
-input[type='button']:hover, 
-.wpfp-link:hover,
-.wpfp-span:hover,
-button:hover {
-	cursor: pointer;
-	color: white;
-}
-
-
-input[type='checkbox']:after {
-	content: '\2610';
-	margin-right: .625em;
-}
-input[type='checkbox']:checked:after {
-	content: '\25a3';
-}
-
-
-input[type='radio']:after {
-	content: '\272A';
-	margin-right: .312em;
-
-	font-size: 200%;
-	line-height: .5;
-	vertical-align: top;
-
-	color: lightgray;
-}
-input[type='radio']:checked:after {
-	color: black;
-}
-
 
 
 
@@ -546,6 +788,8 @@ input[type='radio']:checked:after {
 #search-enhanced #second-row {
 	display: none;
 }
+
+
 
 
 
@@ -804,306 +1048,15 @@ table.wpsc_checkout_table input.text {
 
 
 
-
-/* Product page / Single
-----------------------------------------------------
-*/
-
-#single #post {
-	margin-right: 0;
-}
-
-#single #post-images, #single .entry, #single .post h1  {
-	margin-right: 0;
-}
-
-#single .post h1 {
-	font-weight: bold;
-}
-
-#single #large-image {
-  margin: 0 0 1em 0;
-}
-#single #thumbs {
-	margin-bottom: 5em;
-}
-#single #thumbs #items {
-	height: 106px;
-}
-#single #thumbs .item {
-  width: 15%;
-  margin-right: 2%;
-  float: left;
-}
-#single #thumbs .image-6 {
-	margin-right: 0;
-}
-#single #thumbs #navi div {
-  margin: 0 auto;
-  width: 20%;
-  text-align: center;
-  font-size: 2em;
-}
-#single #thumbs #navi div span {
-	cursor: pointer;
-}
-#single #thumbs #navi div span:after {
-  content: '\2022';
-  margin-right: .312em;
-  color: #aaa;
-}
-#single #thumbs #navi div span.active {
-	color: #111;
-}
-
-#large-image img {
-  width: 704px;
-  height: 490px;
-}
-img.small-image {
-  width: 100px;
-  height: auto;
-}
-#large-image img, img.small-image, #recommended img {
-  border: 1px solid #ccc;
-  padding: .2em;
-}
-
-
-.single #contact-info {
-	position: relative;
-	top: 2em;
-	float: right;
-	width: 180px;
-}
-.single #contact-info img {
-	width: auto;
-}
-
-
-#accordion img {
-	width: auto;
-}
-#accordion h3:after {
-	content: '\25bc';
-	float: right;
-	color: #ccc;
-	font-size: smaller;
-}
-#accordion .pane {
-	font-size: larger;
-}
-
-
-#social-share {
-	margin: 5em 0;
-}
-
-
-
-.single #subscribe-newsletter {
-	width: 100%;
-	background: url(img/stripe.png);
-	margin-top: 10em;
-}
-.single #subscribe-newsletter #text {
-	position: relative;
-	left: -5%;
-	width: 52%;
-	margin-right: 2%;
-}
-.single #subscribe-newsletter #text h4 {
-	margin: 1em 0;
-	background: white;
-	padding: .312em;
-	border-bottom: none;
-}
-
-
-
-/* Add to cart 2
-*/
-
-#post-shopping2 {
-	margin: 5em 0;
-}
-
-#post-shopping2, #shopping-incentives  {
-  background: #8AEA4C;
-  height: 370px;
-}
-
-#post-shopping2 #post-shopping {
-  width: 28%;
-  margin-right: 10%;
-  float: left;
-  height: 370px;
-}
-#shopping-incentives {
-  width: 50%;
-  float: left;
-  padding: 1.5em 0;
-}
-#shopping-incentives h4 {
-  margin-bottom: .25em;
-  font-weight: bold;
-}
-#shopping-incentives p {
-  margin-bottom: 1.75em;
-}
-
-
-
-
-/* Other products
-*/
-
-.single .bestsellers h2 {
-	margin-top: 2em;
-	border-bottom: 1px solid;
-}
-
-
-/* Add to cart
-*/
-
-#post-shopping {
-	background: #4D8FCE;
-}
-#post-shopping img {
-	width: auto;
-}
-#post-shopping .wpsc_container {
-  padding: 1em .5em;
-}
-#post-shopping .wpsc_container .imagecol {
-  display: none;
-}
-#post-shopping .wpsc_container div.single_product_display div.textcol  {
-  margin-left: 0 !important;
-}
-#post-shopping .wpsc_container table {
-  width: 100%;
-  margin-bottom: 0;
-}
-#post-shopping .wpsc_container table label {
-  font-weight: normal;
-}
-#post-shopping .wpsc_container td {
-  border-bottom: 1px dotted;
-}
-#post-shopping .wpsc_container tr.transport td {
-  border-bottom: none;
-}
-#post-shopping .wpsc_container tr.submit td {
-	border-top: 1px solid;
-	padding-top: 1.5em;
-}
-#post-shopping .wpsc_container td.right {
-  text-align: right;
-}
-#post-shopping .wpsc_container tr.animation {
-  display: none;
-}
-#post-shopping .wpsc_container tr.price {
-  background: none !important;
-  font-size: 100%;
-}
-#post-shopping .wpsc_container span.pricedisplay {
-  float: none !important;
-  width: 99%;
-}
-input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {  
-  width: 100%;
-  font-size: small;
-}
-div.thanks-ok {
-  background: #10A26F;
-  padding: 1em;
-}
-div.thanks-error {
-  background: #A53B08;
-  padding: 1em;
-}
-#post-shopping .wpsc_cart_message {
-  text-align: center;
-}
-
-
-#post-shopping input.wpsc_buy_button {
-	background: #8AEA4C;
-	color: #333;
-	border: 1px dotted;
-}
-#post-shopping input.wpsc_buy_button:hover {
-	color: #111;
-	font-weight: bold;
-}
-
-#post-shopping #wishlist {
-	margin-bottom: 1em;
-	padding: 0 1em;
-}
-#post-shopping .wpfp-span {
-	width: 94%;
-	padding: .6125em .312em;
-	display: block;
-	text-align: center;
-}
-
-
-#shopping-info {
-	background: url(img/stripe.png);
-	margin-top: 2em;
-	text-align: justify;
-}
-#shopping-info ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 2em 1em;
-}
-#shopping-info ul li.shopping-info {
-  cursor: pointer;
-  background: white;
-  padding: 1em;
-}
-#shopping-info #tooltip-content {
-	display: none;
-	background: #10A26F;
-	color: white;
-	font-size: medium;
-	padding: 2.5em 2em 0 3em;
-	
-	height: 310px;
-	width: 310px;
-	position: absolute;
-	top: 12.5em;
-	left: 35em;
-}
-#shopping-info #tooltip-content ul {
-  margin: 0;
-  margin-left: 1em;
-  list-style: square;
-}
-#shopping-info #tooltip-content ul li {
-  margin-bottom: .75em;
-}
-#shopping-info #tooltip-close {
-  margin-left: 8em;
-  font-size: smaller;
-  font-style: italic;
-  cursor: pointer;
-}
-
-
-
-
 /* Header
 ----------------------------------------------------
 */
 
 #header {
 	margin-top: 1.25em;
+	margin-bottom: 5em;
+}
+.home #header {
 	margin-bottom: 1.25em;
 }
 
@@ -1237,6 +1190,8 @@ div.thanks-error {
 */
 
 
+
+
 /* Accordion
 */
 
@@ -1253,6 +1208,41 @@ div.thanks-error {
 	margin-bottom: 2em;
 	background: #f1f1f1;
 }
+
+
+
+
+/* Tooltips
+- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
+*/
+
+.tooltip {	
+	position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+.tooltip:hover {
+	z-index: 1001;
+}
+
+.tooltip-text {
+	display: none;
+}
+.tooltip:hover .tooltip-text {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 250px;
+	height: 100px;
+	background: #8AEA4C;
+	padding: 1.25em;
+}
+
+
+
+
 
 
 /* Comments

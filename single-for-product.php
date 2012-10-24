@@ -26,30 +26,21 @@
           <img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
         </a>
       </div>
-      <div id="thumbs" class="block">
-        <div id="items" class="block">
-					<?php $counter = 0; ?>
-					<?php foreach ($imgs as $img) {
-						$counter += 1;
-						$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
-						$large = wp_get_attachment_image_src($img->ID, 'full'); ?>
-						<div class="item image-<?php echo $counter ?>">
-							<img class="small-image" src="<?php echo $thumb[0]?>" rev="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
-						</div>
-					<?php } ?>          
-        </div>
-				
-				<?php if ($counter > 6) { ?>
-					<div id="navi" class="block">
-						<div>
-						<?php 
-							for ($i=0; $i <= ($counter % 6); $i++) {
-								echo "<span id='navi-" . $i . "'>&nbsp;</span>"; 
-							}
-						?> 
-						</div>
-					</div>			          
-				<?php } ?>
+      
+      <?php
+      	if (count($imgs) > 6) {
+      		$klass = "force-scrollbar";
+      	} else {
+      		$klass = '';
+      	}
+      ?>
+      
+      <div id="thumbs" class="block <?php echo $klass ?>">
+				<?php foreach ($imgs as $img) {
+					$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+					$large = wp_get_attachment_image_src($img->ID, 'full'); ?>
+					<img src="<?php echo $thumb[0]?>" rev="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
+				<?php } ?> 
 			</div>
     </div>
     
