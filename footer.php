@@ -70,6 +70,16 @@
   </div> 
 </div>
 
+
+
+<div id="footer" class="block">  
+  <span>    
+    &copy; 2006-2012 Smuff.ro. <a href="<?php bloginfo('home')?>/despre-noi/termeni-si-conditii">Toate drepturile rezervate</a>.
+  </span>	
+</div>
+
+
+
 <div id="footer-subscribe" class="block">
   <div id="newsletter" class="column span-12">
     <div class="column span-10 last">
@@ -84,43 +94,26 @@
   ?>
   
   <div id="social" class="column span-12 last">
-    Ne puteti urmari si prin
-    <br/>
-   
-    <a href="http://www.facebook.com/smuffgadget" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
-      <img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
-    <!--
-    <a href="http://gadgetoman.smuff.ro/" title="<?php echo $title ?> Tumblr" alt="<?php echo $title ?> Tumblr">
-      <img title="<?php echo $title ?> Tumblr" alt="<?php echo $title ?> Tumblr" src="<?php bloginfo('stylesheet_directory'); ?>/img/tumblr.png"></a>
-    -->
-    <a href="http://twitter.com/smuff_ro" title="<?php echo $title ?> Twitter" alt="<?php echo $title ?> Twitter">
-      <img title="<?php echo $title ?> Twitter" alt="<?php echo $title ?> Twitter" src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter_t_logo.png"></a>
-    <!--
-    <a target="_blank" href="http://www.youtube.com/user/smuffro" title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube">
-      <img title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube" class="youtube" src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.png" /></a>
-    -->
-    <!--
-    <a href="http://pinterest.com/baloghami/smuff-ro/" title="<?php echo $title ?> Pinterest" alt="<?php echo $title ?> Pinterest">
-      <img title="<?php echo $title ?> Pinterest" alt="<?php echo $title ?> Pinterest" src="<?php bloginfo('stylesheet_directory'); ?>/img/pinterest.png"></a>
-    -->
-    <a href="http://feeds.feedburner.com/smuff" title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS">
-      <img title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS" src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
+  	<ul class="inline-list">
+			<li>
+			<a href="http://www.facebook.com/smuffgadget" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
+				<img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
+			</li>
+    	<li>
+    	<a href="http://feeds.feedburner.com/smuff" title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS">
+      	<img title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS" src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
+  		</li>
+  		<li class="partners">
+			<?php 
+				$p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
+				if ($p) { echo $p->post_content; }
+			?>
+			</li>
   </div>
 </div>  
 
 
-<div class='spacer'>&nbsp;</div>
-<div id="footer" class="block">  
-  <p>    
-    &copy; 2006-2012 Smuff.ro. <a href="<?php bloginfo('home')?>/despre-noi/termeni-si-conditii">Toate drepturile rezervate</a>.
-  </p>	
-  <p class="partners">
-  <?php 
-    $p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
-    if ($p) { echo $p->post_content; }
-  ?>
-  </p>
-</div>
+
 
 
   

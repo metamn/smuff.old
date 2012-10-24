@@ -1176,10 +1176,6 @@ table.wpsc_checkout_table input.text {
 ------------------------------------------------------
 */
 
-#footer {
-  margin: 2em 0;
-}
-
 
 #footer-info .accordion .pane {
 	padding-bottom: 0;
@@ -1198,18 +1194,27 @@ table.wpsc_checkout_table input.text {
 	padding: 0;
 }
 
+
+#footer {
+  margin: 5em 0 0;
+  padding: 1em .312em 0;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
 #footer-subscribe {
-	margin: 2em 0;
+	margin: 1em 0;
+}
+#footer-subscribe li {
+	margin-right: 1em;
 }
 #footer-subscribe #social img {
 	width: 50px;
-	margin-right: 1em;
 }
-#footer .partners img {
+#footer-subscribe #social .partners img {
 	width: 100px;
-	margin-right: 1em;
+	margin-top: 1.5em;
 }
-
 
 
 
