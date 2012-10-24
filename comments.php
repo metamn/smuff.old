@@ -23,8 +23,8 @@
 		<!-- styled in functions.php -->
 	</ol>
 	
-	<h4 class="comments">Alte reactii la acest articol</h4>
-		<ol class="pinglist">
+	
+	<ol class="pinglist">
 		<?php wp_list_comments('type=pings'); ?>
 		<!-- styled in functions.php -->
 	</ol>

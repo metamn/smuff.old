@@ -175,6 +175,35 @@ input[type='radio']:checked:after {
 
 
 
+/* Wishlist
+----------------------------------------------------
+*/
+
+#wishlist table th {
+	background: none;
+	border-bottom: 1px solid #ccc;
+	padding-top: 3em;
+}
+#wishlist table td {
+	border-bottom: 1px solid #ccc;
+	padding: 2em 0;
+}
+#wishlist table td img {
+	border: 1px solid #ccc;
+	padding: .2em;
+	width: 120px;
+}
+#wishlist .remove-all {
+	margin: 2em 0 5em;
+	float: right;
+}
+#wishlist .box {
+	background: #4D8FCE;
+}
+#wishlist .box table td {
+	border-bottom: none;
+}
+
 
 
 /* Product page / Single
@@ -246,6 +275,7 @@ img.small-image {
 }
 #accordion .pane {
 	font-size: larger;
+	background: white;
 }
 
 
@@ -351,7 +381,7 @@ img.small-image {
   border-bottom: 1px dotted;
 }
 #post-shopping .wpsc_container tr.quantity input[type='text'] {
-  width: 80%;
+  width: 90%;
   color: #111;
   font-style: normal;
 }
@@ -785,7 +815,9 @@ div.thanks-error {
 #page img {
 	width: auto;
 }
-
+#page #comments {
+	background: white;
+}
 
 
 /* Sidebar
@@ -1166,8 +1198,17 @@ table.wpsc_checkout_table input.text {
 	padding: 0;
 }
 
-
-
+#footer-subscribe {
+	margin: 2em 0;
+}
+#footer-subscribe #social img {
+	width: 50px;
+	margin-right: 1em;
+}
+#footer .partners img {
+	width: 100px;
+	margin-right: 1em;
+}
 
 
 
@@ -1240,6 +1281,8 @@ table.wpsc_checkout_table input.text {
 }
 #comments ol li {
   margin: 2em 0 3em;
+  padding-bottom: 3em;
+  border-bottom: 1px solid #eee;
 }
 #comments ol li .comment-author, #comments ol li .comment-meta {
 	width: 40%;
@@ -1270,10 +1313,22 @@ table.wpsc_checkout_table input.text {
 #comments ol li ul.children {
   list-style-type: none;
   margin-top: 1em;  
+  border-left: 1px solid #ccc;
+  padding-left: 1em;
+}
+#comments ol li ul.children li {
+	border-bottom: none;
 }
 li.comment br, li.pingback br {
   margin: 0 !important;
 }
+
+#comments #respond {
+	background: url(img/stripe.png);
+	padding: 2em 0 2em 1em;
+}
+
+
 
 
 

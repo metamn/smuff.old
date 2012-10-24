@@ -71,7 +71,7 @@
 </div>
 
 <div id="footer-subscribe" class="block">
-  <div id="newsletter" class="column span-12 block">
+  <div id="newsletter" class="column span-12">
     <div class="column span-10 last">
       <?php include 'mailchimp.php'; ?>
 	  </div>
@@ -99,8 +99,10 @@
     <a target="_blank" href="http://www.youtube.com/user/smuffro" title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube">
       <img title="<?php echo $title ?> Youtube" alt="<?php echo $title ?> Youtube" class="youtube" src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.png" /></a>
     -->
+    <!--
     <a href="http://pinterest.com/baloghami/smuff-ro/" title="<?php echo $title ?> Pinterest" alt="<?php echo $title ?> Pinterest">
       <img title="<?php echo $title ?> Pinterest" alt="<?php echo $title ?> Pinterest" src="<?php bloginfo('stylesheet_directory'); ?>/img/pinterest.png"></a>
+    -->
     <a href="http://feeds.feedburner.com/smuff" title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS">
       <img title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS" src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
   </div>
