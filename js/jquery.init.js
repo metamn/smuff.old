@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   var ajaxurl = $("#ajax-url").attr("data-url");
   
-  
   // Startpage - Hot
   
   // - load the big image from thumb data
@@ -93,14 +92,40 @@ $(document).ready(function() {
   $(".accordion h3").click(function() {
   	$(this).next().slideToggle();
   });
-  
   // - open first accordion on product description
   $("#single #accordion .pane").first().show();
-  
   // Removing "Opiniile Cumparatorilor" from Product page
   $("#accordion h3#comments").prev().prev().hide();
   
   
+  // Checkout
+  // Show checkout form details
+   $("#checkout #checkout-personal-data").click(function() {
+    $("#checkout .wpsc_checkout_field2, #checkout .wpsc_checkout_field4, #checkout .wpsc_checkout_field26, #checkout .wpsc_checkout_field27").slideToggle();
+  	$("#checkout .wpsc_checkout_field19, #checkout .wpsc_checkout_field20, #checkout .wpsc_checkout_field21, #checkout .wpsc_checkout_field23, #checkout .wpsc_checkout_field24").slideToggle();
+  	$("#checkout .checkout-button-2").slideToggle();
+  });
+   
+
+
+  // Add Cart contents to Wishlist
+  // -- the ajax call works only if before there is an alert ...
+  $("#wishlist #add-to-wishlist a").live('click', function() {
+    var posts = $(this).attr('rel').split(',');
+    var titles = $(this).attr('rev').split('|');
+    var size = posts.length - 2;
+    
+    posts.map( function(item, index) {
+     if (item != '') {      
+      var title = titles[index];
+      if (index < size) {
+        title += " este adaugat la wishlist";
+      }
+      alert(title);
+      $.get(item);
+     }
+    });    
+  });
   
   
   
@@ -247,54 +272,7 @@ $(document).ready(function() {
   
   
   
-  // Show checkout form details
-   $("#checkout #checkout-personal-data").click(function() {
-    $("#checkout .wpsc_checkout_field2, #checkout .wpsc_checkout_field4, #checkout .wpsc_checkout_field26, #checkout .wpsc_checkout_field27").slideToggle();
-  	$("#checkout .wpsc_checkout_field19, #checkout .wpsc_checkout_field20, #checkout .wpsc_checkout_field21, #checkout .wpsc_checkout_field23, #checkout .wpsc_checkout_field24").slideToggle();
-  	$("#checkout .checkout-button-2").slideToggle();
-  });
-   
-
-
-  // Add Cart contents to Wishlist
-  // -- the ajax call works only if before there is an alert ...
-  $("#wishlist #add-to-wishlist a").live('click', function() {
-    var posts = $(this).attr('rel').split(',');
-    var titles = $(this).attr('rev').split('|');
-    var size = posts.length - 2;
-    
-    posts.map( function(item, index) {
-     if (item != '') {      
-      var title = titles[index];
-      if (index < size) {
-        title += " este adaugat la wishlist";
-      }
-      alert(title);
-      $.get(item);
-     }
-    });    
-  });
   
-  
-  // Show Pricing policy on Chekout page
-  $("#pricing-policy").click(function() {
-    $("#pricing-policy-details").slideToggle();
-  });
-  $("#pricing-policy-details #close").click(function() {
-    $("#pricing-policy-details").slideUp();
-  });
-  
-
-  // Show shopping info on Product page on click, not just on hover
-  $("#shopping-info .shopping-info").click(function() {
-    if ($(this).next().is(":visible")) {
-      $(this).next().show('slow');
-    } else {
-      $(this).next().hide('slow');
-    }
-  });
-  
-
 
   // Add Custom variables for Google Analytics
   // ... and Mixpanel

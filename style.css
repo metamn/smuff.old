@@ -12,7 +12,6 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 @import url(css/blueprint/src/reset.css);
 @import url(css/blueprint/src/liquid.css);
 @import url(css/blueprint/src/typography.css);
-@import url(css/blueprint/src/forms.css);
 
 /* Default theme styles */
 @import url(css/blueprint/screen.css );
@@ -33,6 +32,31 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 	- light gray: #ccc;
 	- very light gray: #f1f1f1
 */
+
+
+
+/* Tooltips
+----------------------------------------------------
+- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
+-source: http://forums.phpfreaks.com/topic/185624-make-a-div-bigger-than-its-container/
+*/
+
+.tooltip {	
+  cursor: pointer;
+  margin: 0 auto;
+  width: 1em; /* this must be overwritten on parent every time */
+}
+.tooltip-text {
+	display: none;
+	
+	background: #8AEA4C;
+	padding: 1.25em;
+}
+.tooltip:hover .tooltip-text {
+  display: block;
+  margin: 0 -1px;
+  /* position: absolute; or relative to be decided in the overwrites */
+}
 
 
 
@@ -117,16 +141,15 @@ input, textarea, button {
 	-moz-appearance: none;
 }
 
-input[type='text'] {
+input[type='text'], input[type='email'] {
+	border: none;
 	border-bottom: 1px solid;
-	font-style: italic;
-	color: #ccc;
-	font-family: monospace;
-	font-size: medium;
+	color: #aaa;
+	font-size: 1em;
 	padding: .312em;
 	width: 96%;
 }
-input[type='text']:focus {
+input[type='text']:focus, input[type='email']:focus {
 	color: black;
 	font-style: normal;
 }
@@ -463,18 +486,16 @@ div.thanks-error {
 	text-align: justify;
 }
 #shopping-info .tooltip {
-	margin: 2em 1em;
+	margin: 2em auto;
+	width: 13em;
 	background: white;
 	padding: .625em;
 	display: block;
 }
-#shopping-info .tooltip-text {
-	position: relative;
-	top: -10em;
-}
-#shopping-info .tooltip-text ul {
-	list-style: none;
-	margin: 0;
+#shopping-info .tooltip:hover .tooltip-text {
+	position: absolute;
+	top: 600px;
+	left: 600px;
 }
 
 
@@ -1263,39 +1284,6 @@ table.wpsc_checkout_table input.text {
 
 
 
-/* Tooltips
-- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
-*/
-
-.tooltip {	
-	position: relative;
-  z-index: 1000;
-  cursor: pointer;
-}
-.tooltip:hover {
-	z-index: 1001;
-}
-
-.tooltip-text {
-	display: none;
-}
-.tooltip:hover .tooltip-text {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	width: 250px;
-	height: 100px;
-	background: #8AEA4C;
-	padding: 1.25em;
-}
-
-
-
-
-
-
 /* Comments
 */
 
@@ -1461,7 +1449,7 @@ li.comment br, li.pingback br {
 	width: 20%;
 }
 #subscribe-newsletter #facebook-connect .fb-login-button {
-	margin-top: .5em;
+	margin-top: 1em;
 }
 #subscribe-newsletter #facebook-connect #auth-loggedin {
 	padding: 1.5em 1em;
