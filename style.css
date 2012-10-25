@@ -474,6 +474,24 @@ div.thanks-error {
 	color: #f1f1f1;
 }
 
+#shopping-info {
+	background: url(img/stripe.png);
+	margin-top: 2em;
+	text-align: justify;
+}
+#shopping-info .tooltip {
+	margin: 2em 1em;
+	background: white;
+	padding: .625em;
+	display: block;
+}
+#shopping-info .tooltip-text ul {
+	list-style: none;
+	margin: 0;
+}
+
+
+
 
 
 
@@ -525,6 +543,8 @@ div.thanks-error {
 	position: relative;
   z-index: 1000;
   cursor: pointer;
+  
+  
 }
 #home-hot #thumbs .tooltip2:hover {
 	z-index: 1001;

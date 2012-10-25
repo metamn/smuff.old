@@ -84,8 +84,7 @@ $(document).ready(function() {
   // Startpage - Hot
   
   // - load the big image from thumb data
-  function loadImage(thumb) {
-  	var large = $('#home-hot #large-image');
+  function loadImage(thumb, large) {
 		var large_info = $('#home-hot #large-image-title #info');
 		
 		var link = thumb.attr('data-link');
@@ -133,11 +132,11 @@ $(document).ready(function() {
   }
   
   // - load the first image
-  loadImage($('#home-hot #thumbs .item a').first());
+  loadImage($('#home-hot #thumbs .item a').first(), $('#home-hot #large-image'));
   
   // - click on thumbs
   $('#home-hot #thumbs .item a').click(function(){
-    loadImage($(this));
+    loadImage($(this), $('#home-hot #large-image'));
   });
 
   
@@ -146,16 +145,8 @@ $(document).ready(function() {
   // Single post images
   // - thumb click
   $("#post-images #thumbs img").click(function(){
-    var newImage = $(this).attr('rev');
-    var wrap = $("#large-image");
-    var img = new Image();
-    img.onload = function() {
-      // change the image
-      wrap.find("img").attr("src", newImage);
-      wrap.find("a").attr("href", newImage);
-    };
-    img.src = newImage;
-  }).filter(":first").click();
+    loadImage($(this), $('#large-image'));
+  })
 
 
   
