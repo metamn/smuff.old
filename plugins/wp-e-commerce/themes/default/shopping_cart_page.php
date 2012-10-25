@@ -481,8 +481,10 @@
 										?>	        
 										<div id="add-to-wishlist" class="block">          
 											<a rev="<?php echo $post_titles ?>" rel="<?php echo $post_ids ?>" href="<?php bloginfo('home')?>/wishlist">
-												<img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
-												<span id="text">Adaugare produse la Wishlist</span>
+												<div class="block">
+													<img src="<?php bloginfo('stylesheet_directory'); ?>/img/heart.png" />
+													<span id="text">Adaugare produse la Wishlist</span>
+												</div>
 											</a>
 										</div>
 									</div>								

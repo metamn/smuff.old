@@ -94,22 +94,24 @@
   ?>
   
   <div id="social" class="column span-12 last">
-  	<ul class="inline-list">
-			<li>
-			<a href="http://www.facebook.com/smuffgadget" title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook">
-				<img title="<?php echo $title ?> Facebook" alt="<?php echo $title ?> Facebook" src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.jpg"></a>
-			</li>
-    	<li>
-    	<a href="http://feeds.feedburner.com/smuff" title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS">
-      	<img title="<?php echo $title ?> RSS" alt="<?php echo $title ?> RSS" src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png" /></a>    
-  		</li>
-  		<li class="partners">
-			<?php 
-				$p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
-				if ($p) { echo $p->post_content; }
-			?>
-			</li>
+  	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+  	<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
   </div>
+  
+  <div class="partners">
+  <?php 
+    $p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
+    if ($p) { echo $p->post_content; }
+  ?>
+  </div>
+  
 </div>  
 
 

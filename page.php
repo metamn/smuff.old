@@ -29,7 +29,9 @@ get_header();
 				<?php if (comments_open()) { comments_template(); } ?>
 			</div>
 		<?php } ?>
-	</div>    
+		
+		<?php include 'c_subscribe-to-newsletter.php' ?>
+	</div>   
 	
 	<?php get_sidebar(); ?>	    
 </div>	

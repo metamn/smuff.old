@@ -206,6 +206,20 @@ input[type='radio']:checked:after {
 
 
 
+/* Not Found
+----------------------------------------------------
+*/
+
+.error404 #content ol {
+	margin: 4em;
+}
+.error404 #content li {
+	margin: .5em 0 1em;
+	font-size: large;
+}
+
+
+
 /* Product page / Single
 ----------------------------------------------------
 */
@@ -275,7 +289,6 @@ img.small-image {
 }
 #accordion .pane {
 	font-size: larger;
-	background: white;
 }
 
 
@@ -682,6 +695,9 @@ div.thanks-error {
   border-right:15px solid transparent;
   border-bottom:15px solid transparent;
   border-left:15px solid #F25F18;
+  
+  position: relative;
+  top: 3em;
 }
 #percent {
   background: #F25F18;
@@ -907,7 +923,7 @@ table.total td.c1 {
   width: 12.5em;
 }
 table.total td.c2 {
-  width: 46em;
+  width: 48em;
 }
 
 
@@ -958,7 +974,9 @@ table.total td.c2 {
 	display: block;
 } 
 
-
+#checkout #login ul li#wishlist {
+	min-height: 1.5em;
+}
 #checkout #wishlist #add-to-wishlist img {
   width: 24px;
   float: left;
@@ -1211,7 +1229,7 @@ table.wpsc_checkout_table input.text {
 #footer-subscribe #social img {
 	width: 50px;
 }
-#footer-subscribe #social .partners img {
+#footer-subscribe .partners img {
 	width: 100px;
 	margin-top: 1.5em;
 }
@@ -1239,7 +1257,7 @@ table.wpsc_checkout_table input.text {
 	display: none;
 	padding: 1.25em;
 	margin-bottom: 2em;
-	background: #f1f1f1;
+	background: #fff;
 }
 
 
