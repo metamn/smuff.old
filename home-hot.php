@@ -11,7 +11,7 @@
 				
 				$title = get_the_title();
 				
-				$th = '<div class="item"><a class="tooltip" title="' . $title . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="" data-sale-price="" >';
+				$th = '<div class="item"><a class="tooltip2" title="' . $title . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="" data-sale-price="" >';
 				$th .= '<img src="' . $thumb[0] . '" alt="' . $title . '" />';
 				$th .= '<span class="tooltip-text">' . $title . '</span></a></div>';
 				$thumbs[] = $th;
@@ -38,7 +38,7 @@
 				
 				$title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 				
-				$th = '<div class="item"><a class="tooltip" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
+				$th = '<div class="item"><a class="tooltip2" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
 				$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
 				$th .= '<span class="tooltip-text">' . $product_name . '</span></a></div>';
 				$thumbs[] = $th;  

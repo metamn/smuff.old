@@ -38,24 +38,18 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 /* Tooltips
 ----------------------------------------------------
 - syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
--source: http://forums.phpfreaks.com/topic/185624-make-a-div-bigger-than-its-container/
 */
 
 .tooltip {	
   cursor: pointer;
-  margin: 0 auto;
-  width: 1em; /* this must be overwritten on parent every time */
 }
 .tooltip-text {
 	display: none;
-	
+}
+#tooltip {
 	background: #8AEA4C;
 	padding: 1.25em;
-}
-.tooltip:hover .tooltip-text {
-  display: block;
-  margin: 0 -1px;
-  /* position: absolute; or relative to be decided in the overwrites */
+	position: absolute;
 }
 
 
@@ -480,27 +474,6 @@ div.thanks-error {
 	color: #f1f1f1;
 }
 
-#shopping-info {
-	background: url(img/stripe.png);
-	margin-top: 2em;
-	text-align: justify;
-}
-#shopping-info .tooltip {
-	margin: 2em auto;
-	width: 13em;
-	background: white;
-	padding: .625em;
-	display: block;
-}
-#shopping-info .tooltip:hover .tooltip-text {
-	position: absolute;
-	top: 600px;
-	left: 600px;
-}
-
-
-
-
 
 
 
@@ -534,15 +507,34 @@ div.thanks-error {
 	padding: .2em;
 	border: 1px solid #ccc;
 }
+
 #home-hot #thumbs .tooltip-text {
 	width: 70px;
 	height: auto;
 	min-height: 86px;
 	top: -93px;
-	padding: .625em 1.25em;
+	position: absolute;
 	
 	font-size: larger;
+	background: #8AEA4C;
+	padding: .625em 1.25em;
+	
+	display: none;
 }
+#home-hot #thumbs .tooltip2 {	
+	position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+#home-hot #thumbs .tooltip2:hover {
+	z-index: 1001;
+}
+#home-hot #thumbs .tooltip2:hover .tooltip-text {
+	display: block;
+	left: 0;
+}
+
+
 
 #home-hot #large-image-title {
 	background: #111;
