@@ -1,5 +1,7 @@
 <div id="search-enhanced" class="block">
 	<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
+	
+		<input type="hidden" name="s" id="s" value=" "/>
 		
 		<div id="first-row" class="block">
 			<div id="price">
@@ -32,9 +34,9 @@
 			<div id="meta" class="last">
 				<h3>Categorii</h3>
 				<ul>
-					<li><input id="search-meta" type="checkbox" name="meta" value="new"/>Cadouri noi</li>
-					<li><input id="search-meta" type="checkbox" name="meta" value="bestsellers"/>Cele mai vandute</li>
-					<li><input id="search-meta" type="checkbox" name="meta" value="promo"/>Cu pret redus</li>
+					<li><input id="search-meta" type="checkbox" name="meta" value="10"/>Cadouri noi</li>
+					<li><input id="search-meta" type="checkbox" name="meta" value="14"/>Cele mai vandute</li>
+					<li><input id="search-meta" type="checkbox" name="meta" value="15"/>Cu pret redus</li>
 				</ul>
 			</div>
 		</div>
@@ -56,7 +58,7 @@
 						<div class="<?php echo $klass ?>">
 							<h3><?php echo $c->name ?></h3>
 							<dl>
-								<?php echo create_check_box_for_category($c->cat_ID, $cat->slug) ?> 
+								<?php echo create_check_box_for_category($c->cat_ID, "category[]") ?> 
 							</dl>
 						</div>
 				<?php } ?>
@@ -72,7 +74,7 @@
 			
 			<div class="block">
 				<div id="searchbox">
-					<input type="text" name="s" id="s" placeholder="Tastati aici expresia cautata"/>
+					<input type="text" name="s2" id="s2" placeholder="Tastati aici expresia cautata"/>
 					<br/>
 					<input class="submit" type="submit" id="searchsubmit" value="Cautare cadouri" /> 
 				</div>

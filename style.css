@@ -27,6 +27,7 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 	- blue: #4D8FCE
 	- green: 8AEA4C
 	- red(ish) / error : #F98751;
+	- yellow / notice : F9B451
 - gray: #AAA
 	- dark gray: #4A4742
 	- light gray: #ccc;
@@ -34,6 +35,25 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 */
 
 
+
+/* Messages
+----------------------------------------------------
+*/
+
+.notice, .error, .success {
+	border: none;
+	margin: 0;
+	padding: 1.25em;
+}
+.notice {
+	background: #F9B451;
+}
+.error {
+	background: #F98751;
+}
+.success {
+	background: #8AEA4C;
+}
 
 /* Tooltips
 ----------------------------------------------------
@@ -220,7 +240,9 @@ input[type='radio']:checked:after {
 #wishlist .box table td {
 	border-bottom: none;
 }
-
+#wishlist input[type='email'] {
+	width: 30%;
+}
 
 
 /* Not Found

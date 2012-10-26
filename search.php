@@ -14,157 +14,47 @@ get_header(); ?>
     $params = str_replace("%5B%5D", "", $_SERVER['QUERY_STRING']);	
     $subs = explode("&", $params);
     
-    print_r($subs);
+   
+    $price = array();
+    $delivery = array();
+    $meta = array();
+    $categories = array();
+    $text = '';
     
-    echo strpos($subs[0], 'page');
-    
-    // Eliminate pagination on nginx
-    $index = 0;
-    if (!(strpos($subs[0], 'page') === false)) {
-      $index +=1 ;
+    foreach ($subs as $k => $v) {
+    	$item = explode("=", $v);
+    	$key = sanitize_text_field($item[0]);
+    	$value = sanitize_text_field($item[1]);
+    	
+    	switch ($key) {
+    		case 'price':
+    			$price[] = $value;
+    			break;
+    		case 'delivery':
+    			$delivery[] = $value;
+    			break;
+    		case 'meta':
+    			$meta[] = $value;
+    			break;
+    		case 'category':
+    			$categories[] = $value;
+    			break;
+    		case 's2':
+    			$text = $value;
+    			break;
+    	}
     }
     
-    $tmp = explode("=", $subs[$index]);
-    $text = $tmp[1];
-    $index +=1;
-    
-    $tmp = explode("=", $subs[$index]);
-    $price = $tmp[1];
-    $index +=1;
-    
-    $tmp = explode("=", $subs[$index]);
-    $is_search = $tmp[1];
-    
-    $cats = "";
-    $i = 0;
-    foreach ($subs as $sub) {
-      if ($i > 2) {
-        $tmp = explode("=", $sub);
-        $cats .= $tmp[1] . ",";
-      }
-      $i = $i + 1;
-    }
   } catch (Exception $e) {
     $error = true;
-  }	 
-   		
-  $fullsearch = true; 				  
+  }	  	
+
+	if ($error) {      
+		include "404.php";      
+	} else { 
+    include "archive-grid.php";	
+	} 
 ?>
-
-<div id="search-results" class="block">
-
-  <div id="content" class="block">
-    
-    <div class="block">    
-      
-      <?php if ($error) {      
-        include "404.php";      
-       } else { ?>
-      
-        <div id="search-results-header">
-          <h1>Rezultate cautare</h1>
-          <table>
-            <tr><td>Expresia cautata:</td><td>
-              <?php if ($text == '+') {
-                echo "Toate produsele";
-              } else { 
-                echo $text; 
-                $fullsearch = false;
-              } ?>
-            </td></tr>
-            <tr><td>Cautare dupa pret:</td><td> 
-              <?php if ($price == "0-100000") {
-                echo "Cautare fara pret";
-              } else { 
-                echo $price; 
-                $fullsearch = false;
-              } ?>
-            </td></tr> 
-            <tr><td>Numar rezultate:</td>
-            <td><span id="search-counter">...</span></td></tr>           
-          </table>
-        </div>
-       
-        
-        <div id="search-results-items">
-          <?php if ($fullsearch) {          
-            if (have_posts()) { ?>  
-              <div id="navigation" class="block">
-                <?php if(function_exists('wp_paginate')) {
-                  wp_paginate();
-                } ?>  
-              </div>
-            
-              <div id="search-results" class="bestsellers">    
-                <?php 
-                  $counter = $wp_query->found_posts;
-                  $i = 1;
-                  while (have_posts()) : the_post();
-                    if (advanced_search($post, $price, $categories)) { 
-                      $medium = true;
-                      $show_category = true;
-                      include "product-thumb.php";    
-                      
-                      if ($i == 10) {                      
-                        // deal of the week  
-                        //$dow_posts = query_posts2('posts_per_page=1&cat=2135');     
-                        //include 'c_summer-2012.php';
-                      }
-                      $i++;
-                    }
-                  endwhile;                   
-                  ?>
-              </div>              
-              <div class="clear"></div>
-            
-              <div id="navigation" class="block">
-	              <?php if(function_exists('wp_paginate')) {
-                  wp_paginate();
-                } ?>
-              </div>              
-            <?php break; } else {
-              echo "<h4>Nu am gasit nici un rezultat. Va rugam incercati din nou.</h4>";
-            } 
-           
-           } else { 
-            
-            $allsearch = &new WP_Query("s=$s&showposts=-1");
-            if ($allsearch->have_posts()) { ?> 
-            
-              <div id="search-results" class="bestsellers">
-                <?php
-                $counter = 0;
-                while ($allsearch->have_posts()) : $allsearch->the_post(); update_post_caches($posts);
-                  if (advanced_search($post, $price, $categories)) {
-                    $medium = true;
-                    $show_category = true;
-                    include "product-thumb.php";
-                    $counter += 1;
-                    
-                    if ($counter == 10) {                      
-                      // deal of the week  
-                      // $dow_posts = query_posts2('posts_per_page=1&cat=2135');     
-                      // include 'c_summer-2012.php';
-                    }
-                    
-                  }
-                endwhile;
-                ?>
-              </div>
-              <div class="clear"></div>	  
-              <h4 class="all-products-link">
-                <a class="all-products-link" title="Inapoi la inceputul paginii" href="#header">
-                Inapoi la inceputul paginii &uarr;</a>
-              </h4>            
-           	<?php }
-           } ?>
-        <span id="search-count" class="hidden"><?php echo $counter; ?></span>           
-        </div>      
-     <?php } ?>
-   </div>
-  </div>  
-</div>
-<?php get_footer(); ?>
 
 
 	
