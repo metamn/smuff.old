@@ -14,10 +14,16 @@
 	
 	echo '<br/>';
 	print_r($text);
+	
+	$args = array();
+	
+	// Pagination
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	$args['paged'] = $paged;
+	$args['posts_per_page'] = '30';
 
   $cat = category_id(true, false, null); 
   if ($cat == 10) {
-  	$args = array();
   	$meta_names = '';
   	$category_names = '';
   	$query_text = '';
@@ -67,11 +73,7 @@
 			$args['s'] = $text;
 			$query_text = ' "' . $text . '" ';
 		}
-  	
-  	// Pagination
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $args['paged'] = $paged;
-    $args['posts_per_page'] = '30';
+  
     
     print_r($args);
     
@@ -79,8 +81,9 @@
     $cat_name = $query_text . $meta_names . $category_names;
   } else {
   	// Single category or tag
-    $wp_query = new WP_Query('posts_per_page=-1&cat='.$cat);  
-    $cat_name = ' din '. get_cat_name($cat);
+  	$args['cat'] = $cat;
+    $wp_query = new WP_Query($args);  
+    $cat_name = ' in '. get_cat_name($cat);
   }
   
   
