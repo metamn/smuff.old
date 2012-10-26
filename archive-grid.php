@@ -20,6 +20,7 @@
   	$args = array();
   	$meta_names = '';
   	$category_names = '';
+  	$query_text = '';
   	
   	// Handle the search query
   	// - meta
@@ -60,6 +61,12 @@
 			// - this will make "Toate cadourile" work
 			$args['cat'] = 10;
 		}
+		
+		// - search text
+		if (!empty($text)) {
+			$args['s'] = $text;
+			$query_text = ' "' . $text . '" ';
+		}
   	
   	// Pagination
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -69,7 +76,7 @@
     print_r($args);
     
     $wp_query = new WP_Query($args);
-    $cat_name = $meta_names . $category_names;
+    $cat_name = $query_text . $meta_names . $category_names;
   } else {
   	// Single category or tag
     $wp_query = new WP_Query('posts_per_page=-1&cat='.$cat);  
@@ -96,10 +103,7 @@
 		
 		<?php 
   		$ok = $wp_query->have_posts();
-  		if ($ok) { 
-  		
-  			include 'search-enhanced.php' ?>
-				
+  		if ($ok) { ?>
 				<div id="archive-all-grid" class="bestsellers block">
 				<?php
 						$counter = 1;
@@ -123,7 +127,7 @@
 	  
 				<div id="archive-header" class="block">
 					<h1>
-						Toate cadourile<?php echo $cat_name; ?>
+						<?php echo $wp_query->found_posts; ?> cadouri <?php echo $cat_name; ?>
 					</h1>
 							
 					<div id="navigation" class="block">
@@ -138,8 +142,9 @@
 				<h3>Nu am gasit nici un cadou.</h3>
 				<p>Va rugam folositi motorul de cautare de mai jos.
 				<br/>Cu cat alegeti mai multe criterii de cautare rezultatele vor fi mai putine.</p>
-			</div>			
-			<?php include 'search-enhanced.php' ?>
+			</div>	
+			
+			<?php include 'search-enhanced.php'; ?>
 		<?php } ?>
 		
   </div>
