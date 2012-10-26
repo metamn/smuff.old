@@ -10,6 +10,22 @@ global $wplogger;
 
 
 
+// Custom search: for price and delivery
+// -------------------------------------------------------------------------------------------------
+
+function custom_search($where) {
+	global $wpdb;
+	$where .= $wpdb->prepare( ' AND ' . $wpdb->postmeta . '.meta_value '.
+        'IN ( '.
+            'SELECT id '.
+            'FROM wp_cp53mf_wpsc_product_list '.
+            'WHERE price <= %s'.
+        ' ) ', '300' );
+  print_r($where);
+  return $where;
+}
+
+
 // Subscribe to Mailchimp / Newsletter
 // -------------------------------------------------------------------------------------------------
 

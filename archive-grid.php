@@ -73,11 +73,25 @@
 			$args['s'] = $text;
 			$query_text = ' "' . $text . '" ';
 		}
+		
+		// - price and delivery
+		if ( !empty($price) || !empty($delivery)) {
+			$args['meta_key'] = 'product_id';
+			add_filter( 'posts_where', 'custom_search' );
+		}
   
     
     print_r($args);
     
     $wp_query = new WP_Query($args);
+    
+    //print_r($wp_query);
+    
+    // - price and delivery
+		if ( !empty($price) || !empty($delivery)) {
+			remove_filter( 'posts_where', 'custom_search' );
+		}
+		
     $cat_name = $query_text . $meta_names . $category_names;
   } else {
   	// Single category or tag
