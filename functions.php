@@ -17,13 +17,26 @@ function custom_search($where) {
 	global $wpdb;
 	global $price;
 	global $delivery;
+	
+	// Parse price
+	$price_lower = '';
+	$price_higher = '';
+	foreach ($price as $p) {
+		$split = explode('-', $p);
+		if ($price_lower == '') {
+			$price_lower = $split[0];
+		}
+		$price_higher = $split[1];
+	}
+	
+	echo "Prices: $price_lower - $price_higher";
 
 	$where .= $wpdb->prepare( ' AND ' . $wpdb->postmeta . '.meta_value '.
         'IN ( '.
             'SELECT id '.
             'FROM wp_cp53mf_wpsc_product_list '.
-            'WHERE price <= %s'.
-        ' ) ', '300' );
+            'WHERE price BETWEEN %s and %s'.
+        ' ) ', $price_lower, $price_higher );
   return $where;
 }
 
