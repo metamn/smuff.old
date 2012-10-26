@@ -55,21 +55,24 @@
   			$category_names .= ' ' . get_cat_name($c) . ',';
   		}
   		$category_names = rtrim($category_names, ',');
-  	}
-  	
-  	// - add "Produse" as a default category
-  	// - this will make "Toate cadourile" work
-  	$args['cat'] = 10; 
+  	} else {  	
+			// - add "Produse" as a default category
+			// - this will make "Toate cadourile" work
+			$args['cat'] = 10;
+		}
   	
   	// Pagination
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args['paged'] = $paged;
+    $args['posts_per_page'] = '30';
     
-    $all_posts = new WP_Query($args);
+    print_r($args);
+    
+    $wp_query = new WP_Query($args);
     $cat_name = $meta_names . $category_names;
   } else {
   	// Single category or tag
-    $all_posts = new WP_Query('posts_per_page=10&cat='.$cat);  
+    $wp_query = new WP_Query('posts_per_page=-1&cat='.$cat);  
     $cat_name = ' din '. get_cat_name($cat);
   }
   
@@ -92,7 +95,7 @@
 		</div>
 		
 		<?php 
-  		$ok = $all_posts->have_posts();
+  		$ok = $wp_query->have_posts();
   		if ($ok) { 
   		
   			include 'search-enhanced.php' ?>
@@ -100,7 +103,7 @@
 				<div id="archive-all-grid" class="bestsellers block">
 				<?php
 						$counter = 1;
-						while ($all_posts->have_posts()) : $all_posts->the_post(); update_post_caches($posts); 
+						while ($wp_query->have_posts()) : $wp_query->the_post(); update_post_caches($posts); 
 							$medium = true;        
 							if (in_category(10)) { 
 								if ($cat == 0 || $cat == 10) {

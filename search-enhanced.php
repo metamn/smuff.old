@@ -7,7 +7,6 @@
 			<div id="price">
 				<h3>Preturi</h3>
 				<ul id="search-price-list">
-					<li><input id="search-price" type="checkbox" name="price" value="0-100000" checked/>Toate preturile</li>
 					<li><input id="search-price" type="checkbox" name="price" value="0-100"/>< 100 Lei</li>
 					<li><input id="search-price" type="checkbox" name="price" value="100-250" />100 - 250 Lei</li>
 					<li><input id="search-price" type="checkbox" name="price" value="250-350" />250 - 350 Lei</li>
