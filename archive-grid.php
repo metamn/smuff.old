@@ -84,7 +84,7 @@
   	
 		<div id="archive-header" class="block">
 			<h1>
-				Toate cadourile<?php echo $cat_name; ?>
+				<?php echo $wp_query->found_posts; ?> cadouri <?php echo $cat_name; ?>
 			</h1>
 					
 			<div id="navigation" class="block">
