@@ -1,19 +1,4 @@
 <?php  
-
-	echo '<br/>';
-	print_r($price);
-	
-	echo '<br/>';
-	print_r($delivery);
-	
-	echo '<br/>';
-	print_r($meta);
-	
-	echo '<br/>';
-	print_r($categories);
-	
-	echo '<br/>';
-	print_r($text);
 	
 	$args = array();
 	
@@ -76,18 +61,13 @@
 		
 		// - price and delivery
 		if ( !empty($price) || !empty($delivery)) {
-			$args['meta_key'] = 'product_id';
-			add_filter( 'posts_where', 'custom_search' );
+			$args['meta_key'] = 'product_id'; // for getting the product ids
+			global $price; // to pass variables
+			global $delivery;
+			add_filter('posts_where', 'custom_search');
 		}
-  
-    
-    print_r($args);
     
     $wp_query = new WP_Query($args);
-    
-    //print_r($wp_query);
-    
-    // - price and delivery
 		if ( !empty($price) || !empty($delivery)) {
 			remove_filter( 'posts_where', 'custom_search' );
 		}
