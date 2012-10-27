@@ -118,7 +118,15 @@
   	
 		<div id="archive-header" class="block">
 			<h1>
-				<?php echo $wp_query->found_posts; ?> cadouri <?php echo $cat_name; ?>
+				<?php 
+					$found_posts = $wp_query->found_posts;
+					if ($found_posts == 1) {
+						$cadouri = ' cadou ';
+					} else {
+						$cadouri = ' cadouri ';
+					}
+				?>
+				<?php echo $found_posts . $cadouri . $cat_name; ?>
 			</h1>
 					
 			<div id="navigation" class="block">
@@ -154,7 +162,7 @@
 	  
 				<div id="archive-header" class="block">
 					<h1>
-						<?php echo $wp_query->found_posts; ?> cadouri <?php echo $cat_name; ?>
+						<?php echo $found_posts . $cadouri . $cat_name; ?>
 					</h1>
 							
 					<div id="navigation" class="block">

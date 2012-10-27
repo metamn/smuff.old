@@ -75,8 +75,8 @@ function custom_search($where) {
 }
 
 
-// Search SQL filter for matching against post title only.
-function __search_by_title_only( $search, &$wp_query )
+// Search SQL filter for matching against post title and excerpt only.
+function search_by_title_and_excerpt( $search, &$wp_query )
 {
     global $wpdb;
 
@@ -91,7 +91,7 @@ function __search_by_title_only( $search, &$wp_query )
 
     foreach ( (array) $q['search_terms'] as $term ) {
         $term = esc_sql( like_escape( $term ) );
-        $search .= "{$searchand}($wpdb->posts.post_title LIKE '{$n}{$term}{$n}')";
+        $search .= "{$searchand}($wpdb->posts.post_title LIKE '{$n}{$term}{$n}' OR $wpdb->posts.post_excerpt LIKE '{$n}{$term}{$n}')";
         $searchand = ' AND ';
     }
 
@@ -103,7 +103,10 @@ function __search_by_title_only( $search, &$wp_query )
 
     return $search;
 }
-add_filter( 'posts_search', '__search_by_title_only', 500, 2 );
+add_filter( 'posts_search', 'search_by_title_and_excerpt', 500, 2 );
+
+
+
 
 
 // Subscribe to Mailchimp / Newsletter
