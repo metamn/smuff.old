@@ -55,6 +55,8 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 	background: #8AEA4C;
 }
 
+
+
 /* Tooltips
 ----------------------------------------------------
 - syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
@@ -120,7 +122,9 @@ h2 {
 	font-size: 2.5em;
 }
 
-
+#content h1 {
+	line-height: 1.3;
+}
 
 
 

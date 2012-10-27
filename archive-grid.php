@@ -64,15 +64,45 @@
 			$args['meta_key'] = 'product_id'; // for getting the product ids
 			global $price; // to pass variables
 			global $delivery;
-			add_filter('posts_where', 'custom_search');
+			add_filter('posts_where', 'custom_search'); // see in functions.php
 		}
+		
+		// - price text 
+		if (!empty($price)) {
+			$price_text = ' cu pretul intre ';
+			foreach ($price as $p ) {
+				$price_text .= $p . ' lei';
+				$price_text .= ' si ';
+			}
+		}
+		$price_text = rtrim($price_text, ' si ');
+		
+		// - delivery text
+		if (!empty($delivery)) {
+			$delivery_text = ' cu livrare in  ';
+			foreach ($delivery as $d ) {
+				switch ($d) {
+					case '1':
+						$delivery_text .= '1-2 zile';
+						break;
+					case '2':
+						$delivery_text .= '2-4 zile';
+						break;	
+					case 'not-set':
+						$delivery_text .= '5-7 zile';
+						break;
+				}
+				$delivery_text .= ' si ';
+			}
+		}
+    $delivery_text = rtrim($delivery_text, ' si ');
     
     $wp_query = new WP_Query($args);
 		if ( !empty($price) || !empty($delivery)) {
 			remove_filter( 'posts_where', 'custom_search' );
 		}
 		
-    $cat_name = $query_text . $meta_names . $category_names;
+    $cat_name = $query_text . $meta_names . $price_text . $delivery_text . $category_names;
   } else {
   	// Single category or tag
   	$args['cat'] = $cat;
