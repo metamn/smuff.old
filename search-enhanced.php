@@ -10,7 +10,7 @@
 					<li><input id="search-price" type="checkbox" name="price" value="0-100"/>< 100 Lei</li>
 					<li><input id="search-price" type="checkbox" name="price" value="100-250" />100 - 250 Lei</li>
 					<li><input id="search-price" type="checkbox" name="price" value="250-350" />250 - 350 Lei</li>
-					<li><input id="search-price" type="checkbox" name="price" value="350" />Banii nu conteaza!</li>  
+					<li><input id="search-price" type="checkbox" name="price" value="350-10000000" />Banii nu conteaza!</li>  
 				</ul>
 				
 				<p id="submit">
@@ -24,9 +24,9 @@
 			<div id="delivery">
 				<h3>Timp livrare</h3>
 				<ul>
-					<li><input id="search-delivery" type="checkbox" name="delivery" value="1-2"/>1-2 zile</li>
-					<li><input id="search-delivery" type="checkbox" name="delivery" value="2-4"/>2-4 zile</li>
-					<li><input id="search-delivery" type="checkbox" name="delivery" value="5-7"/>5-7 zile</li>
+					<li><input id="search-delivery" type="checkbox" name="delivery" value="1"/>1-2 zile</li>
+					<li><input id="search-delivery" type="checkbox" name="delivery" value="2"/>2-4 zile</li>
+					<li><input id="search-delivery" type="checkbox" name="delivery" value="not-set"/>5-7 zile</li>
 				</ul>
 			</div>
 			

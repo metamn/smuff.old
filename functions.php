@@ -19,24 +19,56 @@ function custom_search($where) {
 	global $delivery;
 	
 	// Parse price
-	$price_lower = '';
-	$price_higher = '';
+	$price_lower = '-1';
+	$price_higher = '1000000';
 	foreach ($price as $p) {
 		$split = explode('-', $p);
-		if ($price_lower == '') {
+		if ($price_lower == '-1') {
 			$price_lower = $split[0];
 		}
 		$price_higher = $split[1];
 	}
 	
-	echo "Prices: $price_lower - $price_higher";
-
+	
+	// Parse delivery
+	$delivery_query = '';
+	foreach ($delivery as $d) {
+		switch ($d) {
+			case '1':
+				$delivery_query .= ' wp_cp53mf_wpsc_productmeta.meta_value = "1" ';
+				break;
+			case '2':
+				$delivery_query .= ' wp_cp53mf_wpsc_productmeta.meta_value = "2" ';
+				break;
+			case 'not-set':
+				$delivery_query .= ' wp_cp53mf_wpsc_productmeta.meta_value = "" OR wp_cp53mf_wpsc_productmeta.meta_value = "100" ';
+				break;
+		}
+		
+		$delivery_query .= ' OR ';
+	}
+	$delivery_query = rtrim($delivery_query, ' OR ');
+	
+	
+	// The Query
 	$where .= $wpdb->prepare( ' AND ' . $wpdb->postmeta . '.meta_value '.
         'IN ( '.
-            'SELECT id '.
+            'SELECT wp_cp53mf_wpsc_product_list.id '.
             'FROM wp_cp53mf_wpsc_product_list '.
-            'WHERE price BETWEEN %s and %s'.
-        ' ) ', $price_lower, $price_higher );
+            'WHERE wp_cp53mf_wpsc_product_list.price BETWEEN %s and %s '.
+            'AND wp_cp53mf_wpsc_product_list.id ' .
+            	'IN ( ' .
+            		'SELECT wp_cp53mf_wpsc_productmeta.product_id '.
+								'FROM wp_cp53mf_wpsc_productmeta '.
+								'WHERE wp_cp53mf_wpsc_productmeta.product_id = wp_cp53mf_wpsc_product_list.id '.
+								'AND wp_cp53mf_wpsc_productmeta.meta_key = "sku" ' .
+								'AND ( ' . 
+									$delivery_query . 
+								' ) ' .
+            	' ) ' .
+        ' ) ', $price_lower, $price_higher);
+
+  
   return $where;
 }
 
