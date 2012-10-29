@@ -1605,6 +1605,8 @@ li.comment br, li.pingback br {
 img {
 	width: 100%;
 	height: auto;
+	
+	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 
 ul.inline-list {

@@ -8,6 +8,8 @@
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		
+		
+		
 		<?php if (is_single()) { 
 			$imgs = post_attachements($post->ID);
 			if ($imgs) {
@@ -41,8 +43,9 @@
 			<meta property="og:url" content="<?php bloginfo('home') ?>" />
 			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
 		
-		
 		<?php } ?>
+		
+		
 		
 		<meta name="google-site-verification" content="3NvL8OPM6rq9nvaT31vA5p2qAjbmwaMGFxQaVv9w0PQ" />
 		<META name="y_key" content="694535270b47ea68">
@@ -90,7 +93,7 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121025a"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121028d"></script>
 		
      
     
@@ -109,7 +112,7 @@
 	 <body <?php body_class(); ?>> 
 	  <div id="background-image-container"></div>		
 	  
-	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-loading="<?php bloginfo('stylesheet_directory')?>/assets/ajax-loader.gif" class="hidden"></div>	  	
+	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-theme-url="<?php bloginfo('stylesheet_directory')?>" class="hidden"></div>	  	
 	  
 	  <div class="container"><!-- closed in the footer -->
 	    <div class="block">	      

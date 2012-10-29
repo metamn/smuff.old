@@ -1,7 +1,85 @@
+
 $(document).ready(function() { 
 
   var ajaxurl = $("#ajax-url").attr("data-url");
+  var themeurl = $("#ajax-url").attr("data-theme-url");
   
+  
+  // Startpage - Hot
+  
+  // - load the big image from thumb data
+  function loadImage(thumb, large) {
+  
+  	// Show the spinner
+    large.children('a').children('img').attr('src', themeurl + '/img/ajax-loader-invisible.gif');  
+  
+		var large_info = $('#home-hot #large-image-title #info');
+		
+		var link = thumb.attr('data-link');
+		var image = thumb.attr('data-image');
+		var title = thumb.attr('title');
+		var excerpt = thumb.attr('data-excerpt');
+		var price = thumb.attr('data-price');
+		var salePrice = thumb.attr('data-sale-price');
+		
+		large.children('a').attr('href', link);
+		large.children('a').attr('title', title);
+		large.children('a').attr('alt', title);
+		
+		var img = new Image();
+    img.onload = function() {
+      // change the image
+      large.children('a').children('img').attr('src', image);
+			large.children('a').children('img').attr('title', title);
+			large.children('a').children('img').attr('alt', title);
+    };
+    img.src = image;
+		
+		
+		large_info.children('a').attr('href', link);
+		large_info.children('a').attr('title', title);
+		large_info.children('a').attr('alt', title);
+		large_info.children('a').children('#title').html(title);
+		large_info.children('a').children('#excerpt').html(excerpt);
+		
+		if (salePrice) {
+			large_info.children('a').children('#price').children('.price').html(salePrice + ' Lei');
+			large_info.children('a').children('#price').children('.old-price').html(price);
+			
+			large_info.children('a').children('#price').children('.price').show();
+			large_info.children('a').children('#price').children('.old-price').show();
+			large_info.children('a').children('#price').children('.normal-price').hide();
+			large_info.children('a').children('#price').children('.lei').hide();
+		} else {
+			large_info.children('a').children('#price').children('.normal-price').html(price);
+			large_info.children('a').children('#price').children('.normal-price').show();
+			large_info.children('a').children('#price').children('.lei').show();
+			
+			large_info.children('a').children('#price').children('.price').hide();
+			large_info.children('a').children('#price').children('.old-price').hide();
+		}
+		
+		if (!price) {
+			large_info.children('a').children('#price').children('.normal-price').hide();
+			large_info.children('a').children('#price').children('.lei').hide();
+		}
+  }
+  
+  // - load the first image
+  loadImage($('#home-hot #thumbs .item a').first(), $('#home-hot #large-image'));
+  
+  // - click on thumbs
+  $('#home-hot #thumbs .item a').live('click', function () {
+    loadImage($(this), $('#home-hot #large-image'));
+  });
+
+  
+  // Single post images
+  // - thumb click
+  $("#post-images #thumbs a").live('click', function () {
+    loadImage($(this).children('img'), $('#large-image'));
+  })
+
   
   
   // Tooltip
@@ -80,74 +158,6 @@ $(document).ready(function() {
   
   
   
-  
-  // Startpage - Hot
-  
-  // - load the big image from thumb data
-  function loadImage(thumb, large) {
-		var large_info = $('#home-hot #large-image-title #info');
-		
-		var link = thumb.attr('data-link');
-		var image = thumb.attr('data-image');
-		var title = thumb.attr('title');
-		var excerpt = thumb.attr('data-excerpt');
-		var price = thumb.attr('data-price');
-		var salePrice = thumb.attr('data-sale-price');
-		
-		large.children('a').attr('href', link);
-		large.children('a').attr('title', title);
-		large.children('a').attr('alt', title);
-		
-		large.children('a').children('img').attr('src', image);
-		large.children('a').children('img').attr('title', title);
-		large.children('a').children('img').attr('alt', title);
-		
-		large_info.children('a').attr('href', link);
-		large_info.children('a').attr('title', title);
-		large_info.children('a').attr('alt', title);
-		large_info.children('a').children('#title').html(title);
-		large_info.children('a').children('#excerpt').html(excerpt);
-		
-		if (salePrice) {
-			large_info.children('a').children('#price').children('.price').html(salePrice + ' Lei');
-			large_info.children('a').children('#price').children('.old-price').html(price);
-			
-			large_info.children('a').children('#price').children('.price').show();
-			large_info.children('a').children('#price').children('.old-price').show();
-			large_info.children('a').children('#price').children('.normal-price').hide();
-			large_info.children('a').children('#price').children('.lei').hide();
-		} else {
-			large_info.children('a').children('#price').children('.normal-price').html(price);
-			large_info.children('a').children('#price').children('.normal-price').show();
-			large_info.children('a').children('#price').children('.lei').show();
-			
-			large_info.children('a').children('#price').children('.price').hide();
-			large_info.children('a').children('#price').children('.old-price').hide();
-		}
-		
-		if (!price) {
-			large_info.children('a').children('#price').children('.normal-price').hide();
-			large_info.children('a').children('#price').children('.lei').hide();
-		}
-  }
-  
-  // - load the first image
-  loadImage($('#home-hot #thumbs .item a').first(), $('#home-hot #large-image'));
-  
-  // - click on thumbs
-  $('#home-hot #thumbs .item a').click(function(){
-    loadImage($(this), $('#home-hot #large-image'));
-  });
-
-  
-  
-  
-  // Single post images
-  // - thumb click
-  $("#post-images #thumbs img").click(function(){
-    loadImage($(this), $('#large-image'));
-  })
-
 
   
   
