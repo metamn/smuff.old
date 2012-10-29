@@ -94,6 +94,13 @@
   ?>
   
   <div id="social" class="column span-12 last">
+		<div class="partners block">
+		<?php 
+			$p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
+			if ($p) { echo $p->post_content; }
+		?>
+		</div>
+  	
   	<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -102,14 +109,7 @@
 			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-  	<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
-  </div>
-  
-  <div class="partners">
-  <?php 
-    $p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
-    if ($p) { echo $p->post_content; }
-  ?>
+  	<div class="fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
   </div>
   
 </div>  

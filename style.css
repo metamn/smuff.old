@@ -1309,12 +1309,9 @@ table.wpsc_checkout_table input.text {
 #footer-subscribe li {
 	margin-right: 1em;
 }
-#footer-subscribe #social img {
-	width: 50px;
-}
-#footer-subscribe .partners img {
+#footer-subscribe #social .partners img {
 	width: 100px;
-	margin-top: 1.5em;
+	margin: .5em 1em 1.5em 0;
 }
 
 
@@ -1625,6 +1622,9 @@ li.comment br, li.pingback br {
 ------------------------------------------------------
 */
 
+.fb-like {
+	min-height: 300px;
+} 
 
 img {
 	width: 100%;
