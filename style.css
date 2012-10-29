@@ -449,7 +449,7 @@ img.small-image {
 	padding-top: 1.5em;
 }
 #post-shopping .wpsc_container tr.animation {
-  /*display: none;*/
+  display: none;
 }
 #post-shopping .wpsc_container tr.price {
   background: none !important;
@@ -515,7 +515,11 @@ div.thanks-error {
 	list-style: none;
 	margin: 0;
 }
-
+#shopping-info .tooltip-text ul li {
+	padding: .312em 0;
+	margin: .312em 0;
+	border-bottom: 1px dotted;
+}
 
 
 

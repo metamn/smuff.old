@@ -112,14 +112,16 @@ jQuery(document).ready(function () {
 			form_values = jQuery(this).serialize();
 			// Sometimes jQuery returns an object instead of null, using length tells us how many elements are in the object, which is more reliable than comparing the object to null
 			if(jQuery('#fancy_notification').length == 0) {
-				jQuery('div.wpsc_loading_animation',this).css('visibility', 'visible');
+				jQuery('.wpsc_container tr.animation').show();
+				jQuery('.wpsc_container tr.animation div.wpsc_loading_animation').show();
+				jQuery('div.wpsc_cart_message').html('');
 			}
 			
 			// by cs
-      // for APACHE:   jQuery.post( 'index.php?ajax=true', form_values, function(returned_data) {
+      //jQuery.post( 'index.php?ajax=true', form_values, function(returned_data) { // for Apache
       jQuery.post( '?ajax=true', form_values, function(returned_data) {			
 				eval(returned_data);
-				jQuery('div.wpsc_loading_animation').css('visibility', 'hidden');
+				jQuery('.wpsc_container tr.animation div.wpsc_loading_animation').hide();
 				jQuery('div.wpsc_cart_message').html('Success!');
 				
 				if(jQuery('#fancy_notification') != null) {
