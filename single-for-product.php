@@ -80,14 +80,14 @@
         <div class="tooltip">
 					Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
 					<div class="tooltip-text">
-						<ul>
+						<ol>
 							<li>Preturi corecte, servicii stabile si asistenta rapida.</li>
 							<li>Shopping simplu fara procedura de inregistrare</li>
 							<li>Livrare se face acasa sau la birou</li>
 							<li>Plata se face la livrare, ramburs, sau prin OP</li>
 							<li>Satisfactie sau returnare produs in 10 zile</li>
 							<li>Garantie tehnica cel putin 1 an</li>
-						</ul>
+						</ol>
 					</div>
 				</div>             
       </div>      

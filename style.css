@@ -60,6 +60,7 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 /* Tooltips
 ----------------------------------------------------
 - syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
+- styling tooltips is done inside #tooltip not .tooltip-text
 */
 
 .tooltip {	
@@ -73,6 +74,15 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 	padding: 1.25em;
 	position: absolute;
 }
+#tooltip ul {
+	list-style: none;
+}
+#tooltip ul li, #tooltip ol li {
+	padding: .312em;
+	margin: .312em;
+	border-bottom: 1px dotted;
+}
+
 
 
 
@@ -521,15 +531,7 @@ div.thanks-error {
 	padding: .625em;
 	display: block;
 }
-#shopping-info .tooltip-text ul {
-	list-style: none;
-	margin: 0;
-}
-#shopping-info .tooltip-text ul li {
-	padding: .312em 0;
-	margin: .312em 0;
-	border-bottom: 1px dotted;
-}
+
 
 
 
