@@ -31,10 +31,12 @@ function custom_search($where) {
 		$price_higher = $split[1];
 	}
 	
+	// echo "price: $price_lower - $price_higher";
 	
 	// Parse delivery
 	$delivery_query = '';
 	foreach ($delivery as $d) {
+		$delivery_query .= 'AND ( ';
 		switch ($d) {
 			case '1':
 				$delivery_query .= ' wp_cp53mf_wpsc_productmeta.meta_value = "1" ';
@@ -46,11 +48,12 @@ function custom_search($where) {
 				$delivery_query .= ' wp_cp53mf_wpsc_productmeta.meta_value = "" OR wp_cp53mf_wpsc_productmeta.meta_value = "100" ';
 				break;
 		}
-		
 		$delivery_query .= ' OR ';
 	}
-	$delivery_query = rtrim($delivery_query, ' OR ');
-	
+	if ($delivery_query != '') {
+		$delivery_query = rtrim($delivery_query, ' OR ');
+		$delivery_query .= ' ) ';
+	}
 	
 	// The Query
 	$where .= $wpdb->prepare( ' AND ' . $wpdb->postmeta . '.meta_value '.
@@ -64,13 +67,12 @@ function custom_search($where) {
 								'FROM wp_cp53mf_wpsc_productmeta '.
 								'WHERE wp_cp53mf_wpsc_productmeta.product_id = wp_cp53mf_wpsc_product_list.id '.
 								'AND wp_cp53mf_wpsc_productmeta.meta_key = "sku" ' .
-								'AND ( ' . 
-									$delivery_query . 
-								' ) ' .
+								$delivery_query . 
             	' ) ' .
         ' ) ', $price_lower, $price_higher);
 
-  
+	// echo $where;
+	
   return $where;
 }
 

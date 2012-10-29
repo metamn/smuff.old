@@ -1508,7 +1508,7 @@ li.comment br, li.pingback br {
 	width: 20%;
 }
 #subscribe-newsletter #facebook-connect .fb-login-button {
-	margin-top: 1em;
+	margin-top: .7em;
 }
 #subscribe-newsletter #facebook-connect #auth-loggedin {
 	padding: 1.5em 1em;

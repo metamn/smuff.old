@@ -68,14 +68,18 @@
 		}
 		
 		// - price text 
+		$price_text = '';
 		if (!empty($price)) {
 			$price_text = ' cu pretul intre ';
 			foreach ($price as $p ) {
-				$price_text .= $p . ' lei';
+				$price_text .= $p;
 				$price_text .= ' si ';
 			}
+			$price_text = rtrim($price_text, ' si ');
+			$price_text .= ' lei ';
 		}
-		$price_text = rtrim($price_text, ' si ');
+		
+		
 		
 		// - delivery text
 		if (!empty($delivery)) {
