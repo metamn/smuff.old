@@ -249,6 +249,8 @@ input[type='radio']:checked:after {
 }
 
 
+
+
 /* Not Found
 ----------------------------------------------------
 */
@@ -260,6 +262,8 @@ input[type='radio']:checked:after {
 	margin: .5em 0 1em;
 	font-size: large;
 }
+
+
 
 
 
@@ -299,10 +303,12 @@ input[type='radio']:checked:after {
 #large-image img {
   width: 704px;
   height: 490px;
+	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 img.small-image {
   width: 100px;
   height: auto;
+	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 #large-image img, img.small-image, #recommended img {
   border: 1px solid #ccc;
@@ -401,6 +407,10 @@ img.small-image {
 
 /* Other products
 */
+
+.single .bestsellers img {
+	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+}
 
 .single .bestsellers h2 {
 	margin-top: 2em;
@@ -551,7 +561,7 @@ div.thanks-error {
 	width: 100px;
 	height: auto;
 	
-	background: #fff;
+	background: white url(img/ajax-loader.gif) no-repeat 50% 50%;
 	padding: .2em;
 	border: 1px solid #ccc;
 }
@@ -585,6 +595,9 @@ div.thanks-error {
 }
 
 
+#home-hot #large-image img {
+	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+}
 
 #home-hot #large-image-title {
 	background: #111;
@@ -627,6 +640,7 @@ div.thanks-error {
 #home-hot #large-image-title #price .normal-price {
 	color: #111;
 }
+
 
 
 
@@ -682,6 +696,7 @@ div.thanks-error {
   height: auto;
   cursor: pointer;
   padding: .2em;
+  background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 .bestsellers #info p {
   padding: 1em;
@@ -721,7 +736,7 @@ div.thanks-error {
 	top: 3em;
 }
 #promo .item {
-  height: 28em;
+  height: 30em;
   margin-bottom: 2em;
   padding: 0 2em;
   width: 18.9%;
@@ -735,6 +750,7 @@ div.thanks-error {
 	padding: .2em;
 	border: 1px solid #ccc;		
 	cursor: pointer;
+	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 #promo .item h4 {
   margin: .5em 0;
@@ -1609,8 +1625,6 @@ li.comment br, li.pingback br {
 img {
 	width: 100%;
 	height: auto;
-	
-	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 
 ul.inline-list {
