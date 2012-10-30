@@ -294,7 +294,7 @@ input[type='radio']:checked:after {
 	margin-left: -20px;
 }
 .single-post .navigation.right {
-	margin-left: 712px;
+	margin-left: 680px;
 }
 
 
@@ -561,16 +561,16 @@ div.thanks-error {
 	text-align: center;
 	width: 50px;
 	height: 50px;
-	
+	border-radius: 30px;
 	cursor: pointer;
 	
 	display: none;
 }
 .navigation.left {
-	background: url(img/left-arrow-black.png) no-repeat;
+	background: #fff url(img/left-arrow-black.png) no-repeat 50%;
 }
 .navigation.right {
-	background: url(img/right-arrow-black.png) no-repeat;
+	background: #fff url(img/right-arrow-black.png) no-repeat 50%;
 }
 
 
@@ -587,7 +587,7 @@ div.thanks-error {
 	margin-left: -20px;
 }
 .home .navigation.right {
-	margin-left: 712px;
+	margin-left: 680px;
 }
 
 
