@@ -39,7 +39,7 @@
 				<?php foreach ($imgs as $img) {
 					$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
 					$large = wp_get_attachment_image_src($img->ID, 'full'); ?>
-					<a><img src="<?php echo $thumb[0]?>" data-image="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/></a>
+					<a data-image="<?php echo $large[0]?>"><img src="<?php echo $thumb[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/></a>
 				<?php } ?> 
 			</div>
     </div>

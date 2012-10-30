@@ -6,27 +6,45 @@ $(document).ready(function() {
   
   
   // Startpage - Hot
-  
-  // - navigate left and right
   $('.home .navigation').click(function (){
-  	var image = $('#home-hot #large-image img').attr('src');
-  	var current = $('#home-hot #thumbs #items').find('a[data-image=' + image + ']');
+  	var image = $('#large-image img').attr('src');
+  	var current = $('#thumbs #items').find('a[data-image=' + image + ']');
   	
   	if ($(this).hasClass('right')) {
   		var change = current.parent().next();
   		if (!change.length) {
-  			change = $('#home-hot #thumbs #items .item').first();
+  			change = $('#thumbs #items .item').first();
   		}
   	} else {
   		var change = current.parent().prev();
   		if (!change.length) {
-  			change = $('#home-hot #thumbs #items .item').last();
+  			change = $('#thumbs #items .item').last();
   		}
   	}
   	
-  	loadImage(change.find('a'), $('#home-hot #large-image'));
-  	
+  	loadImage(change.find('a'), $('#large-image'));  	
   });
+  
+  // Single product
+  $('.single-post .navigation').click(function (){
+  	var image = $('#large-image img').attr('src');
+  	var current = $('#thumbs').find('a[data-image=' + image + ']');
+  	
+  	if ($(this).hasClass('right')) {
+  		var change = current.next();
+  		if (!change.length) {
+  			change = $('#thumbs a').first();
+  		}
+  	} else {
+  		var change = current.prev();
+  		if (!change.length) {
+  			change = $('#thumbs a').last();
+  		}
+  	}
+  	
+  	loadImage(change, $('#large-image'));  	
+  });
+  
   
   // - load the big image from thumb data
   function loadImage(thumb, large) {

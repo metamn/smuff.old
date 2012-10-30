@@ -286,6 +286,18 @@ input[type='radio']:checked:after {
 	font-weight: bold;
 }
 
+.single-post .navigation {
+	display: block;
+	top: 500px;
+}
+.single-post .navigation.left {
+	margin-left: -20px;
+}
+.single-post .navigation.right {
+	margin-left: 712px;
+}
+
+
 #single #large-image {
   margin: 0 0 1em 0;
 }
