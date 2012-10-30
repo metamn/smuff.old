@@ -7,6 +7,27 @@ $(document).ready(function() {
   
   // Startpage - Hot
   
+  // - navigate left and right
+  $('.home .navigation').click(function (){
+  	var image = $('#home-hot #large-image img').attr('src');
+  	var current = $('#home-hot #thumbs #items').find('a[data-image=' + image + ']');
+  	
+  	if ($(this).hasClass('right')) {
+  		var change = current.parent().next();
+  		if (!change.length) {
+  			change = $('#home-hot #thumbs #items .item').first();
+  		}
+  	} else {
+  		var change = current.parent().prev();
+  		if (!change.length) {
+  			change = $('#home-hot #thumbs #items .item').last();
+  		}
+  	}
+  	
+  	loadImage(change.find('a'), $('#home-hot #large-image'));
+  	
+  });
+  
   // - load the big image from thumb data
   function loadImage(thumb, large) {
   
@@ -73,12 +94,20 @@ $(document).ready(function() {
     loadImage($(this), $('#home-hot #large-image'));
   });
 
+
+
   
   // Single post images
+
+
   // - thumb click
   $("#post-images #thumbs a").live('click', function () {
     loadImage($(this).children('img'), $('#large-image'));
   })
+
+
+
+
 
   
   
