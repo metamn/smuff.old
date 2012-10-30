@@ -542,10 +542,43 @@ div.thanks-error {
 ----------------------------------------------------
 */
 
+.navigation {
+	position: absolute;
+	
+	font-size: 4em;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	
+	cursor: pointer;
+	
+	display: none;
+}
+.navigation.left {
+	background: url(img/left-arrow-black.png) no-repeat;
+}
+.navigation.right {
+	background: url(img/right-arrow-black.png) no-repeat;
+}
+
 
 
 /* Hot
 */
+
+
+.home .navigation {
+	display: block;
+	top: 400px;
+}
+.home .navigation.left {
+	margin-left: -20px;
+}
+.home .navigation.right {
+	margin-left: 712px;
+}
+
+
 
 #home-hot #thumbs {
 	background: url('img/stripe.png');

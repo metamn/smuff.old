@@ -45,7 +45,7 @@
 			endwhile;
 		}
 	?>
-		
+	
 	<div id="slider" class="column span-18 append-1">
 		<div id="large-image">
 			<a href="" title="" alt="">
@@ -82,5 +82,5 @@
 			} ?>
 		</div>
 	</div>
-  
 </div>
+

@@ -114,7 +114,11 @@
 	  
 	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-theme-url="<?php bloginfo('stylesheet_directory')?>" class="hidden"></div>	  	
 	  
+	  
 	  <div class="container"><!-- closed in the footer -->
+	    <div class="navigation left"></div>
+			<div class="navigation right"></div>
+	    
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 
 	        <div id="tooltips" class="block">
