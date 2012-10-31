@@ -116,8 +116,8 @@
 	  
 	  
 	  <div class="container"><!-- closed in the footer -->
-	    <div class="navigation left"></div>
-			<div class="navigation right"></div>
+	    <div class="image-navigation left"></div>
+			<div class="image-navigation right"></div>
 	    
 	    <div class="block">	      
 	      <div id="header" class="column span-18"> 

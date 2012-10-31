@@ -19,7 +19,7 @@ $(document).ready(function() {
   
   
   // Startpage - Hot
-  $('.home .navigation').click(function (){
+  $('.home .image-navigation').click(function (){
   	var image = $('#large-image img').attr('src');
   	var current = $('#thumbs #items').find('a[data-image=' + image + ']');
   	
@@ -39,7 +39,7 @@ $(document).ready(function() {
   });
   
   // Single product
-  $('.single-post .navigation').click(function (){
+  $('.single-post .image-navigation').click(function (){
   	var image = $('#large-image img').attr('src');
   	var current = $('#thumbs').find('a[data-image=' + image + ']');
   	
