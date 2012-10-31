@@ -937,7 +937,7 @@ div.thanks-error {
 }
 #search-enhanced {
 	background: #4D8FCE; 
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 }
 #search-enhanced #price, #search-enhanced #delivery, #search-enhanced #meta, #search-enhanced #categories div {
 	width: 30%;
@@ -983,6 +983,30 @@ div.thanks-error {
 }
 
 
+#trending {
+	margin-bottom: 5em;
+}
+#trending h2 {
+	width: 30%;
+	float: left;
+	margin-right: 3%;
+	padding: 1em 3% 1em 0;
+	border-right: 1px dotted;
+}
+#trending #items {
+	width: 55%;
+	margin-left: 3%;
+	float: left;
+}
+#trending #items .trend {
+	font-size: large;
+	font-style: italic;
+	float: left;
+	margin: .5em;
+}
+#trending #items a:hover {
+	border-bottom: 1px dotted;
+}
 
 
 
