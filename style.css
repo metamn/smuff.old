@@ -891,6 +891,10 @@ div.thanks-error {
 .container #archive-all #content {
 	width: 100%;
 }
+#archive-header {
+	border-bottom: 1px solid;
+	margin-bottom: 2em;
+}
 #archive-header h1 {
 	width: 60%;
 	float: left;
