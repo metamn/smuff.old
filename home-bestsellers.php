@@ -117,7 +117,7 @@
 
 
 	<div class="block">
-		<div id="search-header" class="column span-3 cursive">
+		<div id="search-header" class="column span-3">
   		<h3>Cautare cadouri</h3>
   	</div>
   	<div class="column span-21 last">

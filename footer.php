@@ -1,4 +1,5 @@
 <div id="home-tag-icons" class="block">
+	<h3>Top categorii noi pe Smuff</h3>
   <ul class="inline-list">
     <li>
       <a title="Cadouri pentru smarthpone" href="<?php bloginfo('home')?>/tag/magazin-accesorii-apple">

@@ -19,6 +19,8 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 
 
 
+
+
 /* Colors
 ----------------------------------------------------
 
@@ -121,7 +123,7 @@ body {
 h1, h2 {
 	font-family: 'Oswald', sans-serif;
 }
-.cursive {
+#search-header, #click-more {
 	font-family: 'Nothing You Could Do', cursive; 
 }
 
@@ -1514,6 +1516,11 @@ li.comment br, li.pingback br {
 
 #home-tag-icons {
   margin: 10em 0 5em;
+  background: #eee;
+  padding: 4.5em 0 0;
+}
+#home-tag-icons h3 {
+	margin-left: 1.2em;
 }
 #home-tag-icons ul {
   list-style: none;
@@ -1521,11 +1528,17 @@ li.comment br, li.pingback br {
 }
 #home-tag-icons ul li {
   width: 20%;
-  margin-right: 5%;
+  margin: 0 2.5%;
+  border: 1px dotted white;
+  background: white;
+  padding-top: 1em;
   margin-bottom: 5em;
 }
 #home-tag-icons ul li.last {
   margin-right: 0;
+}
+#home-tag-icons ul li:hover {
+	border: 1px dotted;
 }
 #home-tag-icons ul li img {
   margin-bottom: 1em;

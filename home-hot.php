@@ -70,7 +70,7 @@
 					</div>
 				</a>
 			</div>  
-		</div>        
+		</div>   
 	</div>
  
 	<div id="thumbs" class="column span-5 last">
@@ -82,5 +82,6 @@
 			} ?>
 		</div>
 	</div>
+	
 </div>
 
