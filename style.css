@@ -712,6 +712,43 @@ div.thanks-error {
   padding-bottom: 1em;
 }
 
+#bestsellers #filters {
+	margin-bottom: 3em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid;
+}
+#bestsellers #filters .col {
+	width: 30%;
+	margin-right: 5%;
+	float: left;
+	background: #111;
+}
+#bestsellers #filters .col.last {
+	margin-right: 0;
+}
+#bestsellers #filters h4 {
+	color: #aaa;
+	margin: 0;
+	text-align: center;
+	padding: .625em 0;
+	
+	cursor: pointer;
+}
+#bestsellers #filters h4.active, #bestsellers #filters h4:hover {
+	color: #fff;
+}
+#bestsellers #filters h4.active:before {
+	content: '\2713';
+	margin-right: .5em;
+}
+
+#bestsellers #items .item-list.active {
+	display: block;
+}
+#bestsellers #items .item-list {
+	display: none;
+}
+
 .bestsellers .item {
   margin-bottom: 6em;
   height: 36em;

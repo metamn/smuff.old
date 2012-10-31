@@ -12,7 +12,7 @@ License: none
 
 // Admin menu
 function smuff_analytics_admin_menu() {  
-  add_menu_page('Dashboard', 'Analytics', 'delete_others_posts', 'smuff_analytics-menu', 'smuff_analytics_main_page' );
+  add_menu_page('Dashboard', 'Analytics & Tools', 'delete_others_posts', 'smuff_analytics-menu', 'smuff_analytics_main_page' );
   add_submenu_page("smuff_analytics-menu", "Overview", "Overview", 'delete_others_posts', "smuff_analytics-menu", "smuff_analytics_main_page");
   add_submenu_page("smuff_analytics-menu", "Bestsellers", "Bestsellers", 'delete_others_posts', "smuff_analytics-bestsellers", "smuff_analytics_bestsellers_page");  
 } 
@@ -52,7 +52,7 @@ function smuff_analytics_bestsellers_page() {
 			$t = get_term_by('slug', 'produse-populare', 'category');
 			$new_categories[] = $t->term_id;
 
-			switch ($_POST['bestsellers']) {
+			switch (sanitize_text_field($_POST['bestsellers'])) {
 				case 'week':
 					$start = strtotime('-1 week');
 					$t = get_term_by('slug', 'cele-mai-vandute-saptamana-trecuta', 'category');

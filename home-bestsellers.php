@@ -20,23 +20,79 @@
   
   
   <div class="column span-21 prepend-1 last">
-    <div class="items">	
-        <?php
-          if ($top_sales->have_posts()) {
-            $counter = 1;
-            while ($top_sales->have_posts()) : $top_sales->the_post(); update_post_caches($posts); 
-							$medium = true;    
-							if ($cat == 0 || $cat == 10) {
-								$show_category = true;         
-							} else {
-								$show_category = false;         
+  	<div id="filters">
+  		<div id="last-week" class="col">
+  			<h4 class='active'>Saptamana curenta</h4>
+  		</div>
+  		<div id="last-month" class="col">
+  			<h4>Luna curenta</h4>
+  		</div>
+  		<div id="last-three-months" class="col last">
+  			<h4>Ultimele trei luni</h4>
+  		</div>
+  	</div>
+    
+    <div id="items">
+    	<div id="last-week" class="item-list active">
+				<div class="items">	
+						<?php
+							if ($top_sales_last_week->have_posts()) {
+								$counter = 1;
+								while ($top_sales_last_week->have_posts()) : $top_sales_last_week->the_post(); update_post_caches($posts); 
+									$medium = true;    
+									if ($cat == 0 || $cat == 10) {
+										$show_category = true;         
+									} else {
+										$show_category = false;         
+									}
+									include "product-thumb.php";              
+									$counter += 1;
+								endwhile; 
 							}
-							include "product-thumb.php";              
-              $counter += 1;
-            endwhile; 
-          }
-        ?>       		        
-	  </div>
+						?>       		        
+				</div>
+			</div>
+			
+			<div id="last-month" class="item-list">
+				<div class="items">	
+						<?php
+							if ($top_sales_last_month->have_posts()) {
+								$counter = 1;
+								while ($top_sales_last_month->have_posts()) : $top_sales_last_month->the_post(); update_post_caches($posts); 
+									$medium = true;    
+									if ($cat == 0 || $cat == 10) {
+										$show_category = true;         
+									} else {
+										$show_category = false;         
+									}
+									include "product-thumb.php";              
+									$counter += 1;
+								endwhile; 
+							}
+						?>       		        
+				</div>
+			</div>
+			
+			<div id="last-three-months" class="item-list">
+				<div class="items">	
+						<?php
+							if ($top_sales_last_three_months->have_posts()) {
+								$counter = 1;
+								while ($top_sales_last_three_months->have_posts()) : $top_sales_last_three_months->the_post(); update_post_caches($posts); 
+									$medium = true;    
+									if ($cat == 0 || $cat == 10) {
+										$show_category = true;         
+									} else {
+										$show_category = false;         
+									}
+									include "product-thumb.php";              
+									$counter += 1;
+								endwhile; 
+							}
+						?>       		        
+				</div>
+			</div>
+		</div>
   </div>
 
 

@@ -5,6 +5,19 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  
+  // Startpage Bestsellers
+  $('#bestsellers #filters h4').click(function() {
+  	$('#bestsellers #filters h4').removeClass('active');
+  	$(this).addClass('active');
+  	
+  	$('#bestsellers #items .item-list').removeClass('active');
+  	$('#bestsellers #items #' + $(this).parent().attr('id') ).addClass('active');
+  });
+  
+  
+  
+  
   // Startpage - Hot
   $('.home .navigation').click(function (){
   	var image = $('#large-image img').attr('src');
