@@ -562,6 +562,7 @@ div.thanks-error {
 	width: 50px;
 	height: 50px;
 	border-radius: 30px;
+	border: 1px solid #ccc;
 	cursor: pointer;
 	
 	display: none;
