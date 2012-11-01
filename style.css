@@ -805,8 +805,15 @@ div.thanks-error {
 	padding: .7em;
 }
 
-
-
+#bestsellers #more {
+	position: relative;
+	top: -8em;
+	left: 70%;
+	width: 30%;
+}
+#bestsellers #more a:hover {
+	font-style: italic;
+}
 
 
 /* Promo 
@@ -874,7 +881,15 @@ div.thanks-error {
   font-size: 7em;
 }
 
-
+#promo #more {
+	position: relative;
+	top: -2em;
+	left: 78%;
+	width: 20%;
+}
+#promo #more a:hover {
+	font-style: italic;
+}
 
 
 

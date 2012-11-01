@@ -113,6 +113,10 @@
 				</div>
 			</div>
 		<?php } ?>
+		
+		<div id="more" class="block">
+			<a href="<?php echo bloginfo('home') ?>/?s=+&meta=14" title="Toate cadourile populare">Vezi toate cadourile populare &rarr;</a>
+		</div>
   </div>
 
 

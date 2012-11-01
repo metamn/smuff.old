@@ -24,7 +24,11 @@
           }
         ?>               		        
       </div>        
-	  </div> 
+	  </div>
+	  
+	<div id="more" class="block">
+		<a href="<?php echo bloginfo('home') ?>/?s=+&meta=15" title="Toate cadourile cu pret redus">Vezi toate cadourile cu pret redus &rarr;</a>
+	</div>
   </div>   
 </div>
 
