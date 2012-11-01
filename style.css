@@ -97,7 +97,6 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 .container {
   margin: 0 auto;
   width: 950px;
-  overflow: hidden;  
 }
 .block {
 	width: 100%;
