@@ -1406,6 +1406,10 @@ table.wpsc_checkout_table input.text {
 */
 
 
+#footer #facebook-like-box {
+	margin-top: 5em;
+}
+
 #footer-info .accordion .pane {
 	padding-bottom: 0;
 }
