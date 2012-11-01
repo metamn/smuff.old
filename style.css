@@ -10,7 +10,7 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 
 /* Blueprint */
 @import url(css/blueprint/src/reset.css);
-@import url(css/blueprint/src/liquid.css);
+/* @import url(css/blueprint/src/liquid.css); */
 @import url(css/blueprint/src/typography.css);
 
 /* Default theme styles */
@@ -365,8 +365,8 @@ img.small-image {
 }
 
 
-#social-share {
-	margin: 5em 0;
+#accordion #facebook-like {
+	margin: 2em 0 0;
 }
 
 
@@ -374,7 +374,7 @@ img.small-image {
 .single #subscribe-newsletter {
 	width: 100%;
 	background: url(img/stripe.png);
-	margin-top: 10em;
+	margin-top: 1em;
 }
 .single #subscribe-newsletter #text {
 	position: relative;
@@ -1406,7 +1406,7 @@ table.wpsc_checkout_table input.text {
 */
 
 
-#footer #facebook-like-box {
+#facebook-like-box {
 	margin-top: 5em;
 }
 
@@ -1765,9 +1765,6 @@ li.comment br, li.pingback br {
 ------------------------------------------------------
 */
 
-.fb-like {
-	min-height: 300px;
-} 
 
 img {
 	width: 100%;
@@ -1783,4 +1780,3 @@ ul.inline-list li {
   display: inline;
   float: left;
 }
-

@@ -99,12 +99,24 @@
 	<div class="block">
 		<div id="post-content" class="column span-18">
 	
-			<div id="accordion" class="accordion block">
+			<div id="accordion" class="accordion block"> 
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 					
 				<h3 id="comments">Comentarii</h3>
 				<div id="comments" class="pane normal">
 					<?php comments_template('', true); ?>
+				</div>
+				
+				<div id="facebook-like" class="block"> 
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					<div class="fb-like" data-send="true" data-width="700" data-show-faces="true"></div>
 				</div>
 			</div>
 			
