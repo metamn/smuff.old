@@ -373,7 +373,7 @@ img.small-image {
 .single #subscribe-newsletter {
 	width: 100%;
 	background: url(img/stripe.png);
-	margin-top: 1em;
+	margin: 10em 0 0;
 }
 .single #subscribe-newsletter #text {
 	position: relative;
@@ -394,7 +394,8 @@ img.small-image {
 */
 
 #post-shopping2 {
-	margin: 5em 0;
+	margin: 2.5em 0 10em;
+	overflow: hidden;
 }
 
 #post-shopping2, #shopping-incentives  {
@@ -596,6 +597,7 @@ div.thanks-error {
 
 #home-hot #thumbs {
 	background: url('img/stripe.png');
+	overflow: hidden;
 }
 #home-hot #thumbs #items {
 	height: 560px;

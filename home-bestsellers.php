@@ -39,7 +39,7 @@
 					?>       		        
 			</div>
   	<?php } else { ?>
-			<div id="filters">
+			<div id="filters" class="block">
 				<div id="last-week" class="col">
 					<h4 class='active'>Saptamana curenta</h4>
 				</div>
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			
-			<div id="items">
+			<div id="items" class="block">
 				<div id="last-week" class="item-list active">
 					<div class="items">	
 							<?php
