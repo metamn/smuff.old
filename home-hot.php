@@ -27,21 +27,31 @@
 				$large = wp_get_attachment_image_src($img->ID, 'large');
 										
 				$product_id = product_id($post->ID);
-				$product_price = product_price($post->ID);
-				$product_discount = product_discount($product_id);
-				if ($product_discount > 0) {
-					$product_sale_price = $product_price - $product_discount;
+				if ($product_id) {
+					// It is a product
+					$product_price = product_price($post->ID);
+					$product_discount = product_discount($product_id);
+					if ($product_discount > 0) {
+						$product_sale_price = $product_price - $product_discount;
+					} else {
+						$product_sale_price = '';
+					}
+					$product_name = product_name($product_id);
+					$title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 				} else {
+					// It is not a product
+					$product_name = get_the_title();
+					$product_price = '';
 					$product_sale_price = '';
-				}
-				$product_name = product_name($product_id);
-				
-				$title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
-				
-				$th = '<div class="item"><a class="tooltip2" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
-				$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
-				$th .= '<span class="tooltip-text">' . $product_name . '</span></a></div>';
-				$thumbs[] = $th;  
+					$large = array();
+					$large[] = get_bloginfo('stylesheet_directory') . '/img/dotted_bg.png';
+					$thumb = array();
+					$thumb[] = get_bloginfo('stylesheet_directory') . '/img/dotted_bg.png';
+				}	
+					$th = '<div class="item"><a class="tooltip2" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
+					$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
+					$th .= '<span class="tooltip-text">' . $product_name . '</span></a></div>';
+					$thumbs[] = $th;  
 			endwhile;
 		}
 	?>

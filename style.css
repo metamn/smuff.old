@@ -19,6 +19,28 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 
 
 
+/* Campaigns
+----------------------------------------------------
+*/
+
+#campaign-details {
+	padding: 2em 1em;
+	background: #4D8FCE;
+}
+#campaign-details .description {
+	background: white;
+	padding: 1em;
+}
+#campaign-details dd {
+	margin-bottom: .625em;
+}
+#campaign-details a {
+	border-bottom: 1px dotted;
+}
+
+
+
+
 
 
 /* Colors
