@@ -1544,7 +1544,14 @@ li.comment br, li.pingback br {
   padding: 4.5em 0 0;
 }
 #home-tag-icons h3 {
-	margin-left: 1.2em;
+	margin-left: -.5em;
+}
+#home-tag-icons h3:before {
+	content: '\272a';
+	position: relative;
+	left: -.2em;
+	top: .2em;
+	font-size: 2em;
 }
 #home-tag-icons ul {
   list-style: none;
