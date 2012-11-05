@@ -1,5 +1,0 @@
-# m h  dom mon dow   command
-0 3 * * * (/usr/sbin/chkrootkit | mail -s "chkrootkit scan" cs@localhost)
-10 3 * * * (/usr/bin/rkhunter -c --cronjob | mail -s "rkhunter scan" cs@localho$
-40 2 * * * (cd /home/cs/backup && /home/cs/scripts/backup.sh | mail -s "smuff d$
-
