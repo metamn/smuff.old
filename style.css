@@ -26,6 +26,58 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 */
 
 
+
+/* New category / tag icons 
+*/
+
+#home-tag-icons {
+  margin: 10em 0 5em;
+  padding: 4.5em 0 0;
+}
+#home-tag-icons h3 {
+	margin-left: -.5em;
+	border-bottom: 1px solid;
+	padding-bottom: .5em;
+	margin-bottom: 2em;
+}
+#home-tag-icons h3:before {
+	content: '\272a';
+	position: relative;
+	left: -.2em;
+	top: .2em;
+	font-size: 2em;
+}
+#home-tag-icons ul {
+  list-style: none;
+  text-align: center;
+}
+#home-tag-icons ul li {
+  width: 21%;
+  height: 14em;
+  border-radius: 8em; /* or box-shadow: 3-x 1-x #111 */
+  padding-top: 2.5em;
+  margin: 0 2%;
+  
+  border: 1px solid #4D8FCE;
+  background: #4D8FCE;
+  margin-bottom: 5em;
+}
+#home-tag-icons ul li.last {
+  margin-right: 0;
+}
+#home-tag-icons ul li:hover {
+	border: 1px solid #111;
+}
+#home-tag-icons ul li img {
+  margin-bottom: 1em;
+  width: auto;
+  height: 100px;
+}
+
+
+
+
+
 /* Facebook like box
 */
 
@@ -376,8 +428,8 @@ input[type='radio']:checked:after {
 
 
 #large-image img {
-  width: 704px;
-  height: 490px;
+  max-width: 704px;
+  max-height: 490px;
 	background: url(img/ajax-loader.gif) no-repeat 50% 50%;
 }
 img.small-image {
@@ -630,21 +682,82 @@ div.thanks-error {
 
 
 
+/* Special promo posts
+*/
+
+#home-special {
+	height: 500px;
+	margin: 2em 0;
+}
+#home-special img {
+	max-height: 500px;
+	border: 1px solid #ccc;
+}
+
+
+
 /* Hot
 */
 
 
-.home .image-navigation {
-	display: block;
-	top: 400px;
+
+
+/* Hot - smaller version
+*/
+
+#home-hot.half-size {
+	margin: 5em 0;
 }
-.home .image-navigation.left {
-	margin-left: -20px;
+#home-hot.half-size #slider {
+	width: 50%;
+	margin-right: 5%;
+	padding: 0;
+	float: left;
 }
-.home .image-navigation.right {
-	margin-left: 680px;
+#home-hot.half-size #thumbs {
+	width: 45%;
+	float: left;
+}
+#home-hot.half-size #thumbs #items {
+	height: 400px;
+}
+#home-hot.half-size #thumbs .item {
+	width: 100px;
+	float: left;
+	margin: 1em;
+	margin-left: 0;
+	padding-left: 0;
+}
+#home-hot.half-size #large-image-title {
+	font-size: smaller;
+	width: 479px;
+	height: 6em;
+}
+#home-hot.half-size #large-image-title #text {
+	padding-top: .3em;
+	height: 1.55em;
+}
+#home-hot.half-size #large-image-title h3 {
+	top: -3.3em;
+}
+#home-hot.half-size #large-image-title p {
+	top: -6em;
+}
+#home-hot.half-size #large-image-title #info {
+	width: 360px;
 }
 
+.home .image-navigation.half-size {
+	top: 950px;
+}
+.home .image-navigation.right.half-size {
+	margin-left: 450px;
+}
+
+
+
+/* Hot - large version
+*/
 
 
 #home-hot #thumbs {
@@ -652,6 +765,7 @@ div.thanks-error {
 	overflow: hidden;
 }
 #home-hot #thumbs #items {
+	/* the scrollbar trick */
 	height: 560px;
 	overflow-y: scroll;
 	position: relative;
@@ -746,6 +860,22 @@ div.thanks-error {
 
 
 
+.home .image-navigation {
+	display: block;
+	top: 400px;
+}
+.home .image-navigation.left {
+	margin-left: -20px;
+}
+.home .image-navigation.right {
+	margin-left: 680px;
+}
+
+
+
+
+
+
 
 /* Bestsellers
 */
@@ -797,6 +927,15 @@ div.thanks-error {
 	content: '\2713';
 	margin-right: .5em;
 }
+
+#bestsellers.half-size #filters .col {
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+}
+#bestsellers.half-size #filters h4, #bestsellers.half-size #filters h4.active, #bestsellers.half-size #filters h4:hover {
+	color: #111;
+}
+
 
 #bestsellers #items .item-list.active {
 	display: block;
@@ -1593,58 +1732,6 @@ li.comment br, li.pingback br {
 
 
 
-/* New category / tag icons 
-*/
-
-#home-tag-icons {
-  margin: 10em 0 5em;
-  padding: 4.5em 0 0;
-}
-#home-tag-icons h3 {
-	margin-left: -.5em;
-	border-bottom: 1px solid;
-	padding-bottom: .5em;
-	margin-bottom: 2em;
-}
-#home-tag-icons h3:before {
-	content: '\272a';
-	position: relative;
-	left: -.2em;
-	top: .2em;
-	font-size: 2em;
-}
-#home-tag-icons ul {
-  list-style: none;
-  text-align: center;
-}
-#home-tag-icons ul li {
-  width: 21%;
-  height: 14em;
-  border-radius: 8em;
-  padding-top: 2.5em;
-  margin: 0 2%;
-  
-  border: 1px solid #4D8FCE;
-  background: #4D8FCE;
-  margin-bottom: 5em;
-}
-#home-tag-icons ul li.last {
-  margin-right: 0;
-}
-#home-tag-icons ul li:hover {
-	border: 1px solid #111;
-}
-#home-tag-icons ul li img {
-  margin-bottom: 1em;
-  width: auto;
-  height: 100px;
-}
-
-
-
-
-
-
 
 
 
@@ -1830,6 +1917,7 @@ li.comment br, li.pingback br {
 .normal-price {
   background: #4D8FCE;    
 }
+
 
 
 /* Common 

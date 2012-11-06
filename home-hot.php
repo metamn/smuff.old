@@ -1,23 +1,6 @@
-<div id="home-hot" class="block">
+<div id="home-hot" class="block <?php echo $home_hot_klass ?>">
 	<?php 
 		$thumbs = array();
-		
-		if ($special_posts) {
-			while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
-				$imgs = post_attachements($post->ID);
-				$img = $imgs[0];
-				$thumb = wp_get_attachment_image_src($img->ID, 'thumbnail');
-				$large = wp_get_attachment_image_src($img->ID, 'large');
-				
-				$title = get_the_title();
-				
-				$th = '<div class="item"><a class="tooltip2" title="' . $title . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="" data-sale-price="" >';
-				$th .= '<img src="' . $thumb[0] . '" alt="' . $title . '" />';
-				$th .= '<span class="tooltip-text">' . $title . '</span></a></div>';
-				$thumbs[] = $th;
-			endwhile;
-		}
-		
 		
 		if ($new_products) {
 			while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts);
