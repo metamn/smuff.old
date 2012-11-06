@@ -83,16 +83,4 @@
 	</form>
 </div>
 
-<div id="trending" class="block">
-	<h2>Trending pe Smuff</h2>
-	<div id="items">
-		<?php 
-			$keywords = array('cana', 'ochelari', 'sosete', 'foto', 'ceas', 'incarcator', 'manusi', 'tricou');
-			$trending = '';
-			foreach ($keywords as $k) {
-				$trending .= '<div class="trend"><a href="' . get_bloginfo('home') . '/?s=+&s2=' . $k . '" title="' . $k . ' pe Smuff">' . $k . '</a></div>'; 
-			}
-			echo $trending;
-		?>
-	</div>
-</div>
+<?php include 'c_trending-search-keywords.php' ?>

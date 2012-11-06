@@ -565,15 +565,23 @@ function page_excerpt($page) {
     return $p->post_excerpt;
 }
 
+/**
+* Retrieve a post given its title.
+*
+* @uses $wpdb
+*
+* @param string $post_title Page title
+* @param string $post_type post type ('post','page','any custom type')
+* @param string $output Optional. Output type. OBJECT, ARRAY_N, or ARRAY_A.
+* @return mixed
+*/
+function get_post_by_title($page_title, $post_type ='post' , $output = OBJECT) {
+    global $wpdb;
+        $post = $wpdb->get_var( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type= %s", $page_title, $post_type));
+        if ( $post )
+            return get_post($post, $output);
 
-function is_blog() {
-  $non_shop_categories = array(22, 40, 96, 97, 98, 99, 39, 26, 18);
-  $ret = (is_home() || is_author() || is_tag() || in_category($non_shop_categories) || is_category($non_shop_categories));
-  if (is_page() || is_search()) { 
-    return false;
-  } else {
-    return $ret;
-  }
+    return null;
 }
 
 
@@ -584,6 +592,10 @@ function query_posts2($query_string) {
   $q = new WP_Query($query_string);
   return $q;
 }
+
+
+
+
 
 
 
