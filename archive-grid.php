@@ -177,10 +177,12 @@
 				</div>
 			
 		<?php } else { ?>
-			<div id="no-search-results" class="notice block">
-				<h3>Nu am gasit nici un cadou.</h3>
-				<p>Va rugam folositi motorul de cautare de mai jos.
-				<br/>Cu cat alegeti mai multe criterii de cautare rezultatele vor fi mai putine.</p>
+			<div id="no-search-results" class="block">
+				<div class="notice">
+					<h3>Nu am gasit nici un cadou.</h3>
+					<p>Va rugam folositi motorul de cautare de mai jos.
+					<br/>Cu cat alegeti mai multe criterii de cautare rezultatele vor fi mai putine.</p>
+				</div>
 			</div>	
 			
 			<?php include 'search-enhanced.php'; ?>

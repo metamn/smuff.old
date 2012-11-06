@@ -1,5 +1,9 @@
+<?php 
 
+	include 'c_facebook-like-box.php';
+	include 'c_top-new-categories.php';
 
+?>
 
 <div id="footer-info" class="block">
   <div class="column span-10">

@@ -19,8 +19,38 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 
 
 
+
+
 /* Campaigns
 ----------------------------------------------------
+*/
+
+
+/* Facebook like box
+*/
+
+#facebook-like-box {
+	background: url(img/ajax-loader.gif) no-repeat 25% 50%;
+}
+
+#facebook-like-box #campaign-message {
+	width: 300px;
+	margin: 10em auto;
+	background: #4D8FCE;
+	float: right;
+}
+#facebook-like-box #campaign-message h2, #facebook-like-box #campaign-message p {
+	color: #ccc;
+	padding: 1em;
+}
+#facebook-like-box #campaign-message p {
+	padding: 2.5em;
+}
+
+
+
+
+/* The campaign post
 */
 
 #campaign-details {
@@ -291,7 +321,7 @@ input[type='radio']:checked:after {
 .error404 #content ol {
 	margin: 4em;
 }
-.error404 #content li {
+.error404 #content ol li {
 	margin: .5em 0 1em;
 	font-size: large;
 }
@@ -1059,8 +1089,14 @@ div.thanks-error {
 */
 
 
-#page .post h2 {
+#page .post h1, .error404 #content h1 {
 	border-bottom: 1px solid;
+}
+#page .post .entry {
+	padding: 2em 1em;
+}
+#page .post .entry a {
+	borde-bottom: 1px dotted;
 }
 #page img {
 	width: auto;
@@ -1562,11 +1598,13 @@ li.comment br, li.pingback br {
 
 #home-tag-icons {
   margin: 10em 0 5em;
-  background: #eee;
   padding: 4.5em 0 0;
 }
 #home-tag-icons h3 {
 	margin-left: -.5em;
+	border-bottom: 1px solid;
+	padding-bottom: .5em;
+	margin-bottom: 2em;
 }
 #home-tag-icons h3:before {
 	content: '\272a';
@@ -1580,18 +1618,21 @@ li.comment br, li.pingback br {
   text-align: center;
 }
 #home-tag-icons ul li {
-  width: 20%;
-  margin: 0 2.5%;
-  border: 1px dotted white;
-  background: white;
-  padding-top: 1em;
+  width: 21%;
+  height: 14em;
+  border-radius: 8em;
+  padding-top: 2.5em;
+  margin: 0 2%;
+  
+  border: 1px solid #4D8FCE;
+  background: #4D8FCE;
   margin-bottom: 5em;
 }
 #home-tag-icons ul li.last {
   margin-right: 0;
 }
 #home-tag-icons ul li:hover {
-	border: 1px dotted;
+	border: 1px solid #111;
 }
 #home-tag-icons ul li img {
   margin-bottom: 1em;

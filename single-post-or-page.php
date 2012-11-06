@@ -1,8 +1,10 @@
 <div class="post" id="post-<?php the_ID(); ?>">
-	<h2><?php the_title(); ?></h2>  
+	<h1><?php the_title(); ?></h1>  
 	
-	<div class="entry block">
-		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>							
+	<div class="block">
+		<div class="entry">
+			<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>							
+		</div>
 	</div>
 	
 	<div class='accordion'>

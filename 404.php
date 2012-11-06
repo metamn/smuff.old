@@ -9,12 +9,12 @@ get_header();
 
 <div id="page" class="block">
   <div id="content" class="column span-18">
-	  <h2 class="center"><?php _e('Error 404 - Not Found', 'kubrick'); ?></h2>
-	  <h4>Va cerem scuze, articolul cautat nu exista, sau a fost mutat la o alta adresa.
-	    <br/>
-	    Pentru a-l gasi puteti folosi motorul de cautare in partea dreapta, sau sa consultati 
-	    <a href="<?php bloginfo('home'); ?>/arhiva">Arhiva Smuff</a>.  
-	  </h4>
+	  <h1>Pagina nu a fost gasita</h1>
+	  <div class="notice">
+	  	<p>Va cerem scuze, articolul cautat nu exista, sau a fost mutat la o alta adresa.</p>
+	  </div>
+	  
+	  <?php include 'search-enhanced.php' ?>
 	  
 	  <h3>In continuare va prezentam toate articolele de pe Smuff</h3>
 	  <ol>
