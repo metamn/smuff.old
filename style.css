@@ -54,19 +54,22 @@ Tags: buddypress, three-columns, flexible-width, grid, ajax, blueprint
 #home-tag-icons ul li {
   width: 21%;
   height: 14em;
-  border-radius: 8em; /* or box-shadow: 3-x 1-x #111 */
+  border-radius: 8em; 
   padding-top: 2.5em;
   margin: 0 2%;
   
   border: 1px solid #4D8FCE;
   background: #4D8FCE;
   margin-bottom: 5em;
+  
+  box-shadow: 2px 1px 1px #444;
 }
 #home-tag-icons ul li.last {
   margin-right: 0;
 }
 #home-tag-icons ul li:hover {
 	border: 1px solid #111;
+	box-shadow: 2px 1px 1px #111;
 }
 #home-tag-icons ul li img {
   margin-bottom: 1em;
@@ -1233,6 +1236,7 @@ div.thanks-error {
 }
 #page .post .entry {
 	padding: 2em 1em;
+	font-size: larger;
 }
 #page .post .entry a {
 	borde-bottom: 1px dotted;
