@@ -685,19 +685,6 @@ div.thanks-error {
 
 
 
-/* Special promo posts
-*/
-
-#home-special {
-	height: 500px;
-	margin: 2em 0;
-}
-#home-special img {
-	max-height: 500px;
-	border: 1px solid #ccc;
-}
-
-
 
 /* Hot
 */
@@ -816,6 +803,51 @@ div.thanks-error {
 
 
 
+#home-hot #more {
+	margin-top: 2em;
+	margin-left: 140px;
+	font-weight: normal;
+	cursor: pointer;
+}
+#home-hot #more span:hover {
+	font-style: normal;
+	font-weight: bold;
+}
+#home-hot #noutati {
+	display: none;
+	margin: 5em 0;
+}
+#home-hot #noutati .item {
+	width: 45%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	float: left;
+}
+#home-hot #noutati .item.last {
+	margin-right: 0;
+}
+#home-hot #noutati #large-image-title {
+	font-size: smaller;
+	width: 433px;
+	height: 6em;
+}
+#home-hot #noutati #large-image-title #text {
+	padding-top: .2em;
+	height: 1.65em;
+	width: 80px;
+}
+#home-hot #noutati #large-image-title h3 {
+	top: -3.3em;
+}
+#home-hot #noutati #large-image-title p {
+	top: -6em;
+}
+#home-hot #noutati #large-image-title #info {
+	width: 350px;
+}
+#home-hot #noutati #large-image-title #info #price {
+	top: -9em;
+}
 
 
 
@@ -1754,6 +1786,10 @@ li.comment br, li.pingback br {
 	font-size: small;
 }
 
+
+#subscribe-newsletter.bigger-margin-bottom {
+	margin-bottom: 10em;
+}
 
 
 #subscribe-new-products {

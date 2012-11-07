@@ -2,6 +2,8 @@
 	<?php 
 		$thumbs = array();
 		
+		$thumbs_special = array();
+		$thumbs_new = array();
 		
 		if ($special_posts) {
 			while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
@@ -15,7 +17,7 @@
 				$th = '<div class="item"><a class="tooltip2" title="' . $title . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="" data-sale-price="" >';
 				$th .= '<img src="' . $thumb[0] . '" alt="' . $title . '" />';
 				$th .= '<span class="tooltip-text">' . $title . '</span></a></div>';
-				$thumbs[] = $th;
+				$thumbs_special[] = $th;
 			endwhile;
 		}
 		
@@ -52,7 +54,7 @@
 					$th = '<div class="item"><a class="tooltip2" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
 					$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
 					$th .= '<span class="tooltip-text">' . $product_name . '</span></a></div>';
-					$thumbs[] = $th;  
+					$thumbs_new[] = $th;  
 			endwhile;
 		}
 	?>
@@ -86,11 +88,66 @@
  
 	<div id="thumbs" class="column span-5 last">
 		<div id="items">
-			<?php if ($thumbs) { 
-				foreach ($thumbs as $thumb) {
-					echo $thumb;
+			<?php 
+				$thumbs = array_merge($thumbs_special, $thumbs_new);
+			
+				if ($thumbs) { 
+					foreach ($thumbs as $thumb) { 
+						echo $thumb;
+					} 
+				} ?>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div id="more">
+		<span>Vezi toate noutatiile Smuff &darr;</span>
+	</div>
+	
+	<div id="noutati" class="block">
+		<div id="items">
+			<?php 
+				if ($thumbs) {
+					$counter = 0;
+					foreach ($thumbs as $thumb) { 
+						if ($counter % 2 == 0 ) {
+							$klass = ''; 
+						} else {
+							$klass = 'last';
+						} ?>
+						<div class="item item-<?php echo $counter ?> <?php echo $klass ?>"> 
+							<div id="large-image">
+								<a href="" title="" alt="">
+									<img src="" title="" alt="" />
+								</a>
+							</div>
+						
+							<div id="large-image-title" class="block"> 
+								<div id="text" class="column span-3 last">
+									Nou!
+								</div>
+								<div id="info" class="column span-13 last">
+									<div class="arrow-right"></div>
+									<a href="" title="" alt="">
+										<h3 id="title"></h3>
+										<p id="excerpt"></p>
+										<div id="price">
+											<span class="price"></span> 
+											<span class="old-price"></span>
+											<span class="normal-price"></span> 
+											<span class="lei"> Lei</span>
+										</div>
+									</a>
+								</div>  
+							</div>
+							
+						</div>
+					<?php 
+						$counter += 1;
+					}
 				}
-			} ?>
+			?>
 		</div>
 	</div>
 	

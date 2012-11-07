@@ -18,6 +18,19 @@ $(document).ready(function() {
   
   
   
+  // Startpage - Hot - List view
+  $('#home-hot #more span').click(function() {
+  	$('#home-hot #noutati').show();
+  	
+  	$('#home-hot #thumbs #items .item a').each(function(index) {
+  		loadImage($(this), $("#home-hot #noutati .item-" + index + " #large-image"));
+  	});
+  	
+  	$('.home #subscribe-newsletter').addClass('bigger-margin-bottom');
+  });
+  
+  
+  
   // Startpage - Hot
   $('.home .image-navigation').click(function (){
   	var image = $('#large-image img').attr('src');
@@ -38,25 +51,6 @@ $(document).ready(function() {
   	loadImage(change.find('a'), $('#large-image'));  	
   });
   
-  // Single product
-  $('.single-post .image-navigation').click(function (){
-  	var image = $('#large-image img').attr('src');
-  	var current = $('#thumbs').find('a[data-image=' + image + ']');
-  	
-  	if ($(this).hasClass('right')) {
-  		var change = current.next();
-  		if (!change.length) {
-  			change = $('#thumbs a').first();
-  		}
-  	} else {
-  		var change = current.prev();
-  		if (!change.length) {
-  			change = $('#thumbs a').last();
-  		}
-  	}
-  	
-  	loadImage(change, $('#large-image'));  	
-  });
   
   
   // - load the big image from thumb data
@@ -65,7 +59,7 @@ $(document).ready(function() {
   	// Show the spinner
     large.children('a').children('img').attr('src', themeurl + '/img/ajax-loader-invisible.gif');  
   
-		var large_info = $('#home-hot #large-image-title #info');
+		var large_info = large.next().children('#info');
 		
 		var link = thumb.attr('data-link');
 		var image = thumb.attr('data-image');
@@ -118,7 +112,7 @@ $(document).ready(function() {
   }
   
   // - load the first image
-  loadImage($('#home-hot #thumbs .item a').first(), $('#home-hot #large-image'));
+  loadImage($('#home-hot #thumbs .item a').first(), $('#home-hot #large-image').first());
   
   // - click on thumbs
   $('#home-hot #thumbs .item a').live('click', function () {
@@ -130,14 +124,31 @@ $(document).ready(function() {
   
   // Single post images
 
-
   // - thumb click
   $("#post-images #thumbs a").live('click', function () {
     loadImage($(this).children('img'), $('#large-image'));
   })
 
 
-
+	// - left righ navigation
+  $('.single-post .image-navigation').click(function (){
+  	var image = $('#large-image img').attr('src');
+  	var current = $('#thumbs').find('a[data-image=' + image + ']');
+  	
+  	if ($(this).hasClass('right')) {
+  		var change = current.next();
+  		if (!change.length) {
+  			change = $('#thumbs a').first();
+  		}
+  	} else {
+  		var change = current.prev();
+  		if (!change.length) {
+  			change = $('#thumbs a').last();
+  		}
+  	}
+  	
+  	loadImage(change, $('#large-image'));  	
+  });
 
 
   
