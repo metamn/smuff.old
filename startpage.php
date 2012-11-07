@@ -44,9 +44,6 @@
 
 <div id="home" class="block">
 	<div id="content" class="block">  
-	
-		<?php if ($special_posts->have_posts()) { include "home-special.php"; }  ?>
-		
 		<?php if ($new_products->have_posts()) {
 				include "home-hot.php";
 			} else {

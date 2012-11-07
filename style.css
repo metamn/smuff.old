@@ -703,66 +703,6 @@ div.thanks-error {
 */
 
 
-
-
-/* Hot - smaller version
-*/
-
-#home-hot.half-size {
-	margin: 5em 0;
-}
-#home-hot.half-size #slider {
-	width: 50%;
-	margin-right: 5%;
-	padding: 0;
-	float: left;
-}
-#home-hot.half-size #thumbs {
-	width: 45%;
-	float: left;
-}
-#home-hot.half-size #thumbs #items {
-	height: 400px;
-}
-#home-hot.half-size #thumbs .item {
-	width: 100px;
-	float: left;
-	margin: 1em;
-	margin-left: 0;
-	padding-left: 0;
-}
-#home-hot.half-size #large-image-title {
-	font-size: smaller;
-	width: 479px;
-	height: 6em;
-}
-#home-hot.half-size #large-image-title #text {
-	padding-top: .3em;
-	height: 1.55em;
-}
-#home-hot.half-size #large-image-title h3 {
-	top: -3.3em;
-}
-#home-hot.half-size #large-image-title p {
-	top: -6em;
-}
-#home-hot.half-size #large-image-title #info {
-	width: 360px;
-}
-
-.home .image-navigation.half-size {
-	top: 950px;
-}
-.home .image-navigation.right.half-size {
-	margin-left: 450px;
-}
-
-
-
-/* Hot - large version
-*/
-
-
 #home-hot #thumbs {
 	background: url('img/stripe.png');
 	overflow: hidden;
@@ -931,13 +871,6 @@ div.thanks-error {
 	margin-right: .5em;
 }
 
-#bestsellers.half-size #filters .col {
-	background: #eee;
-	border-bottom: 1px solid #ccc;
-}
-#bestsellers.half-size #filters h4, #bestsellers.half-size #filters h4.active, #bestsellers.half-size #filters h4:hover {
-	color: #111;
-}
 
 
 #bestsellers #items .item-list.active {
@@ -1001,12 +934,16 @@ div.thanks-error {
 }
 
 #bestsellers #more {
-	position: relative;
-	top: -8em;
+	top: -5em;
 	left: 70%;
 	width: 30%;
 }
-#bestsellers #more a:hover {
+#more {
+	position: relative;
+	font-weight: bold;
+	font-size: large;
+}
+#more a:hover {
 	font-style: italic;
 }
 
@@ -1077,14 +1014,11 @@ div.thanks-error {
 }
 
 #promo #more {
-	position: relative;
 	top: -2em;
 	left: 78%;
 	width: 20%;
 }
-#promo #more a:hover {
-	font-style: italic;
-}
+
 
 
 

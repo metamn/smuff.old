@@ -1,13 +1,8 @@
-<?php 
-	global $home_hot_klass; 
+
+<?php include 'c_subscribe-to-newsletter.php' ?>
 	
-	if ($home_hot_klass == '') { ?>
-		<div class='block'>
-			<?php include 'c_subscribe-to-newsletter.php' ?>
-		</div>
-<?php } ?>
   
-<div id="bestsellers" class="bestsellers block <?php echo $home_hot_klass ?>"> 
+<div id="bestsellers" class="bestsellers block"> 
     
   <div id="col-0" class="column span-2 last">    
     <h3 class='first'>B</h3>

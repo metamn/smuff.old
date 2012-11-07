@@ -88,9 +88,8 @@
 </div>  
 
 
-<?php global $home_hot_klass ?>
-<div class="image-navigation left <?php echo $home_hot_klass ?>"></div>
-<div class="image-navigation right <?php echo $home_hot_klass ?>"></div>
+<div class="image-navigation left "></div>
+<div class="image-navigation right "></div>
 
 
   
