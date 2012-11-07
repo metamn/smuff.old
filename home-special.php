@@ -14,7 +14,7 @@
 				echo $th;
 			endwhile;
 			
-			$home_hot_klass = 'half-size';
+			$home_hot_klass = '';
 		} else {
 			$home_hot_klass = '';
 		}
