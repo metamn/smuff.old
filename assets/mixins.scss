@@ -1,0 +1,133 @@
+/* Site specific mixins
+*/
+
+
+
+
+/* General mixins
+*/
+
+
+/* set z-index
+
+- parent must have set 'position'
+- this element must have set weight
+- http://www.tjkdesign.com/articles/z-index/teach_yourself_how_elements_stack.asp
+
+*/
+@mixin z-index($level, $height) {
+  position: relative;
+  z-index: $level;
+  height: $height;
+}
+
+
+/* rotate
+*/
+@mixin rotate($deg, $value) {
+  -moz-transform: rotate($deg);  
+  -webkit-transform: rotate($deg); 
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+}
+
+/* underline a text with padding and margin
+*/
+@mixin text-underlined {
+  margin-bottom: $pad2;
+  padding-bottom: $pad2;
+  border-bottom: 1px solid;
+}
+
+
+/* make cursor to be pointer
+*/
+@mixin pointer {
+  cursor: pointer;
+}
+
+
+
+/* list, inline 
+*/
+@mixin list-inline {
+  display: block;
+  margin: 0;
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 0;
+  }
+}
+
+
+/* table, simple
+*/
+@mixin table-simple {
+  width: 100%;
+
+  thead {
+    td, th {
+      border-bottom: 1px solid;
+    }
+  }
+  
+  tbody {
+    td.first {
+      text-align: left;
+    }    
+  }
+  td, th {
+    padding: $pad/2;
+    text-align: center;
+  }
+  
+  tfoot {
+    td {
+      border-top: 1px solid;
+    }
+  }
+}
+
+
+/* make a column 
+*/
+@mixin col($width, $margin_left, $margin_right) {
+  width: $width;
+  margin: 0 $margin_right 0 $margin_left;
+  float: left;
+}
+
+
+/* box-shadow
+*/
+
+@mixin box-shadow {
+  background: $color-background;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* make image fit within container
+*/
+@mixin image-full-width {
+  max-width: 100%;
+  height: auto;
+}
+
+/* hide an element 
+*/
+@mixin hidden {
+  display: none;
+}
+
+
+/* block element -- expand something full size inside a container
+*/
+@mixin block {
+  width: 100%;
+  float: left;
+}

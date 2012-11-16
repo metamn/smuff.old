@@ -1,0 +1,259 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, typography.scss */
+body {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 100%;
+  line-height: 1.25;
+}
+/* line 14, typography.scss */
+body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 28, typography.scss */
+body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
+  font-size: 2em;
+  padding: 1.25em 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 36, typography.scss */
+body .container h4, body .container h5, body .container h6 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+/* line 43, typography.scss */
+body .container h1, body .container h4 {
+  font-weight: bold;
+}
+/* line 47, typography.scss */
+body .container h2 {
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 52, typography.scss */
+body .container h6 {
+  text-transform: none;
+  font-variant: small-caps;
+}
+/* line 64, typography.scss */
+body .container p + p {
+  margin-top: 1.25em;
+}
+/* line 69, typography.scss */
+body .container q, body .container blockquote {
+  margin: 1.25em;
+  border-left: 1px dotted;
+  padding-left: 1.25em;
+  font-style: italic;
+  font-size: larger;
+}
+/* line 80, typography.scss */
+body .container address {
+  font-variant: small-caps;
+}
+/* line 88, typography.scss */
+body .container ul, body .container menu, body .container dir, body .container ol {
+  margin: 1.25em;
+  list-style-type: square;
+}
+/* line 93, typography.scss */
+body .container ol {
+  list-style-type: decimal;
+}
+/* line 97, typography.scss */
+body .container dl {
+  margin: 1.25em 0;
+}
+/* line 100, typography.scss */
+body .container dl dt {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 104, typography.scss */
+body .container dl dd {
+  margin: 0.625em 1.25em 1.875em;
+}
+/* line 114, typography.scss */
+body .container table {
+  margin: 1.25em 0;
+}
+/* line 119, typography.scss */
+body .container table thead tr td {
+  font-weight: bold;
+}
+/* line 125, typography.scss */
+body .container table tbody {
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+}
+/* line 130, typography.scss */
+body .container table td, body .container table th, body .container table tr {
+  text-align: left;
+  vertical-align: top;
+}
+/* line 135, typography.scss */
+body .container table td {
+  padding: 1.25em;
+}
+/* line 145, typography.scss */
+body .container em {
+  font-style: italic;
+}
+/* line 149, typography.scss */
+body .container strong {
+  font-weight: bold;
+}
+/* line 161, typography.scss */
+body .container input, body .container textarea {
+  border: none;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: medium;
+  font-family: monospace;
+}
+/* line 174, typography.scss */
+body .container input[type='text'], body .container input[type='password'] {
+  border-bottom: 1px solid;
+  font-style: italic;
+  color: gray;
+}
+/* line 179, typography.scss */
+body .container input[type='text']:focus, body .container input[type='password']:focus {
+  color: black;
+  font-style: normal;
+}
+/* line 185, typography.scss */
+body .container input[type='submit'] {
+  background: black;
+  color: lightgray;
+  padding: 0.625em;
+}
+/* line 190, typography.scss */
+body .container input[type='submit']:hover {
+  cursor: pointer;
+  color: white;
+}
+/* line 197, typography.scss */
+body .container input[type='radio']:after {
+  content: '\2610';
+  margin-right: 0.625em;
+}
+/* line 201, typography.scss */
+body .container input[type='radio']:checked:after {
+  content: '\25a3';
+}
+/* line 206, typography.scss */
+body .container input[type='checkbox']:after {
+  content: '\272A';
+  margin-right: 0.15625em;
+  font-size: 200%;
+  line-height: .5;
+  vertical-align: top;
+  color: lightgray;
+}
+/* line 217, typography.scss */
+body .container input[type='checkbox']:checked:after {
+  color: black;
+}
+
+/* Site specific mixins
+*/
+/* General mixins
+*/
+/* set z-index
+
+- parent must have set 'position'
+- this element must have set weight
+- http://www.tjkdesign.com/articles/z-index/teach_yourself_how_elements_stack.asp
+
+*/
+/* rotate
+*/
+/* underline a text with padding and margin
+*/
+/* make cursor to be pointer
+*/
+/* list, inline 
+*/
+/* table, simple
+*/
+/* make a column 
+*/
+/* box-shadow
+*/
+/* make image fit within container
+*/
+/* hide an element 
+*/
+/* block element -- expand something full size inside a container
+*/

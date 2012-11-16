@@ -1,0 +1,222 @@
+
+body {
+	// Use Serif for long text
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	
+	// Set vertical rhythm
+	// - from http://lamb.cc/typograph/ 
+	font-size: 100%;
+	line-height: 1.25;
+	
+	.container {
+	
+		// Use Sans serif for non-long text
+		h1, h2, h3, h4, h5, h6 {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		
+		
+		
+		
+		// Headings
+		// -----------------------------------------------
+		
+		
+		// Headings dont differ by size but by decoration
+		// - vertical rhythm is maintained by padding
+		
+		h1, h2, h3, h4, h5, h6 {
+			font-size: 2em;
+			padding: $pad 0;
+			
+			margin-top: 0; 
+			margin-bottom: 0;
+		}
+		// Lower headings are like body text but upper cased
+		h4, h5, h6 {
+			font-size: 1em;
+			// small caps is not enough to distinguish header from body text
+			// font-variant: small-caps;
+			text-transform: uppercase;
+		}
+		
+		h1, h4 {
+			font-weight: bold;
+		}
+		
+		h2 {
+			font-weight: bold;
+			font-style: italic;
+		}
+		
+		h6 {
+			text-transform: none;
+			font-variant: small-caps;
+		}
+		
+		
+		
+		// Block level elements
+		// -----------------------------------------------
+		
+		
+		// the second <p> has a top margin
+		p + p {
+			margin-top: $pad;
+		}
+		
+		// blockquote is simply indented, enlarged
+		q, blockquote {
+			margin: $pad;
+			
+			border-left: 1px dotted;
+			padding-left: $pad;
+			
+			font-style: italic;
+			font-size: larger;
+		}
+		
+		// address is small caps
+		address {
+			font-variant: small-caps;
+		}
+		
+		
+		// Lists
+		// -----------------------------------------------
+		
+		ul, menu, dir, ol {
+			margin: $pad;
+			list-style-type: square;
+		}
+		
+		ol {
+			list-style-type: decimal;
+		}
+		
+		dl {
+			margin: $pad 0;
+			
+			dt {
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			dd {
+				margin: $pad2 $pad ($pad + $pad2);
+			}
+		}
+		
+		
+		
+		// Tables
+		// -----------------------------------------------
+		
+		table {
+			margin: $pad 0;
+			
+			thead {
+				tr {
+					td {
+						font-weight: bold;
+					}
+				}
+			}
+			
+			tbody {
+				border-top: 1px dotted;
+				border-bottom: 1px dotted;
+			}
+			
+			td, th, tr {
+  			text-align: left;
+  			vertical-align: top;
+			}
+			
+			td {
+				padding: $pad;
+			}
+		}
+		
+		
+		
+		// Text styles
+		// -----------------------------------------------
+	
+		em {
+			font-style: italic;
+		}
+		
+		strong {
+			font-weight: bold;
+		}
+		
+		
+		
+		
+		// Forms
+		// -----------------------------------------------
+		
+		
+		// Reset browser defaults
+		input, textarea {
+			border: none;
+			outline: 0;
+			
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			
+			font-size: medium;
+			font-family: monospace;
+		}
+		
+		// Text
+		input[type='text'], input[type='password'] {
+			border-bottom: 1px solid;
+			font-style: italic;
+			color: gray;
+		}
+		input[type='text']:focus, input[type='password']:focus {
+			color: black;
+			font-style: normal;
+		}
+		
+		// Button
+		input[type='submit'] {		
+			background: black;
+			color: lightgray;
+			padding: $pad/2;
+		}
+		input[type='submit']:hover {
+			cursor: pointer;
+			color: white;
+		}
+		
+		
+		// Radio
+		input[type='radio']:after {
+			content: '\2610';
+			margin-right: $pad/2;
+		}
+		input[type='radio']:checked:after {
+			content: '\25a3';
+		}
+		
+		// Checkbox 
+		input[type='checkbox']:after {
+			content: '\272A';
+			margin-right: $pad/8;
+			
+			// This glyph is too small, so grow it
+			font-size: 200%;
+			line-height: .5;
+			vertical-align: top;
+			
+			color: lightgray;
+		}
+		input[type='checkbox']:checked:after {
+			color: black;
+		}
+	
+	}
+}

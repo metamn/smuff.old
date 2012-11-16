@@ -1,0 +1,31 @@
+/* Site specific mixins
+*/
+/* General mixins
+*/
+/* set z-index
+
+- parent must have set 'position'
+- this element must have set weight
+- http://www.tjkdesign.com/articles/z-index/teach_yourself_how_elements_stack.asp
+
+*/
+/* rotate
+*/
+/* underline a text with padding and margin
+*/
+/* make cursor to be pointer
+*/
+/* list, inline 
+*/
+/* table, simple
+*/
+/* make a column 
+*/
+/* box-shadow
+*/
+/* make image fit within container
+*/
+/* hide an element 
+*/
+/* block element -- expand something full size inside a container
+*/

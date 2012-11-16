@@ -68,12 +68,11 @@
 		  ?>
 		</title> 
 	
-    <!-- Blueprint -->
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/blueprint/print.css" type="text/css" media="print">	
-    <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-    <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
-  
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css?refresh=20121106" type="text/css" media="screen" />
+    <link href="<?php bloginfo('stylesheet_directory'); ?>/assets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+				<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
 		
 		
 		<!--
@@ -93,9 +92,8 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121106"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/jquery.init.js?refresh=20121106"></script>
 		
-     
     
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts RSS Feed', 'buddypress' ) ?>" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
