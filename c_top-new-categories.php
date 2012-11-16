@@ -1,6 +1,6 @@
-<div id="home-tag-icons" class="block">
+<section id="top-new-categories">
 	<h3>Top categorii noi pe Smuff</h3>
-  <ul class="inline-list">
+  <ul>
     <li>
       <a title="Cadouri pentru smarthpone" href="<?php bloginfo('home')?>/tag/magazin-accesorii-apple">
         <img title="Cadouri pentru smarthpone" src="<?php bloginfo('stylesheet_directory')?>/img/icon-smartphone.png" />
@@ -29,4 +29,4 @@
       </a>      
     </li>
   </ul>
-</div>
+</section>

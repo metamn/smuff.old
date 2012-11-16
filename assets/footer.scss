@@ -1,0 +1,61 @@
+body {
+	.container {
+		
+		#facebook-like-box {
+			@include block;
+			
+			#campaign-message {
+				@include col(45%, 5%, 0);
+				float: right;
+			}
+			
+			#body {
+				@include col(50%, 0, 0);
+				float: left;
+			}
+		}
+		
+		#top-new-categories {
+			@include block;
+			
+			ul {
+				@include list-inline;
+			}
+		}
+		
+		#info {
+			#col-1 {
+				@include col(45%, 0, 10%);
+			}
+			
+			#col-2 {
+				@include col(45%, 0, 0);
+			}
+		}
+		
+		#footer {
+			@include block;
+		}
+		
+		#footer-subscribe {
+			@include block;
+			
+			#newsletter {
+				@include col(45%, 0, 10%);
+			}
+			
+			#social {
+				@include col(45%, 0, 0);
+				
+				#partners {
+					display: block;
+				}
+				
+				#fb-like {
+					display: block;
+				}
+			}
+		}
+	
+	}
+}

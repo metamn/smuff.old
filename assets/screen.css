@@ -440,3 +440,81 @@ body.home .container #promo #body #items .item.c4, body.home .container #promo #
 body.home .container #promo #body #more {
   float: right;
 }
+
+/* line 4, footer.scss */
+body .container #facebook-like-box {
+  width: 100%;
+  float: left;
+}
+/* line 7, footer.scss */
+body .container #facebook-like-box #campaign-message {
+  width: 45%;
+  margin: 0 0 0 5%;
+  float: left;
+  float: right;
+}
+/* line 12, footer.scss */
+body .container #facebook-like-box #body {
+  width: 50%;
+  margin: 0 0 0 0;
+  float: left;
+  float: left;
+}
+/* line 18, footer.scss */
+body .container #top-new-categories {
+  width: 100%;
+  float: left;
+}
+/* line 21, footer.scss */
+body .container #top-new-categories ul {
+  display: block;
+  margin: 0;
+}
+/* line 58, mixins.scss */
+body .container #top-new-categories ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 27, footer.scss */
+body .container #info #col-1 {
+  width: 45%;
+  margin: 0 10% 0 0;
+  float: left;
+}
+/* line 31, footer.scss */
+body .container #info #col-2 {
+  width: 45%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 36, footer.scss */
+body .container #footer {
+  width: 100%;
+  float: left;
+}
+/* line 40, footer.scss */
+body .container #footer-subscribe {
+  width: 100%;
+  float: left;
+}
+/* line 43, footer.scss */
+body .container #footer-subscribe #newsletter {
+  width: 45%;
+  margin: 0 10% 0 0;
+  float: left;
+}
+/* line 47, footer.scss */
+body .container #footer-subscribe #social {
+  width: 45%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 50, footer.scss */
+body .container #footer-subscribe #social #partners {
+  display: block;
+}
+/* line 54, footer.scss */
+body .container #footer-subscribe #social #fb-like {
+  display: block;
+}

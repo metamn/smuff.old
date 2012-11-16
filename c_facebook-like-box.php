@@ -1,4 +1,4 @@
-<div id="facebook-like-box" class="block">
+<section id="facebook-like-box" class="block">
 	<div id="campaign-message">
 		<h2>Campaign Title Goes Here</h2>
 		<p>A short description of how this campaign works goes here</p>
@@ -13,5 +13,5 @@
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-	<div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="550" data-height="550" data-show-faces="true" data-border-color="#cccccc" data-stream="false" data-header="false"></div>
-</div>
+	<div id="body" data-href="http://www.facebook.com/smuffgadget" data-width="550" data-height="550" data-show-faces="true" data-border-color="#cccccc" data-stream="false" data-header="false"></div>
+</section>

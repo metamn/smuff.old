@@ -5,8 +5,8 @@
 
 ?>
 
-<div id="footer-info" class="block">
-  <div class="column span-10">
+<section id="info">
+  <div id="col-1">
     <div id="contact">
       <?php 
         $p = get_page_by_path('despre-noi/contact');
@@ -25,7 +25,7 @@
     </div>
   </div>
   
-  <div class="column span-12 prepend-2 last">
+  <div id="col-2">
     <div id="accordion-footer-info" class="accordion">
       <?php 
         $pages = array('despre-noi/cum-cumpar', 'despre-noi/business-2-business', 'despre-noi/afiliere', 'despre-noi/ajutor', 'despre-noi/protectia-consumatorilor', 'despre-noi');
@@ -41,33 +41,25 @@
         }?>      
     </div>    
   </div> 
-</div>
+</section>
 
 
 
-<div id="footer" class="block">  
+<section id="footer">  
   <span>    
     &copy; 2006-2012 Smuff.ro. <a href="<?php bloginfo('home')?>/despre-noi/termeni-si-conditii">Toate drepturile rezervate</a>.
   </span>	
-</div>
+</section>
 
 
 
-<div id="footer-subscribe" class="block">
-  <div id="newsletter" class="column span-12">
-    <div class="column span-10 last">
-      <?php include 'mailchimp.php'; ?>
-	  </div>
-	  <div class="column span-2 last">	
-    </div>
+<section id="footer-subscribe">
+  <div id="newsletter">
+    <?php include 'mailchimp.php'; ?>
   </div>
   
-  <?php 
-    $title = get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description') . ' pe ';
-  ?>
-  
-  <div id="social" class="column span-12 last">
-		<div class="partners block">
+  <div id="social">
+		<div id="partners">
 		<?php 
 			$p = get_page_by_path('despre-noi/parteneri/parteneri-online-mall-uri');
 			if ($p) { echo $p->post_content; }
@@ -82,7 +74,7 @@
 			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-  	<div class="fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
+  	<div id="fb-like" data-send="true" data-width="500" data-show-faces="true"></div>
   </div>
   
 </div>  
