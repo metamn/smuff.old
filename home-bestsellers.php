@@ -17,7 +17,7 @@
   <div id="body">
   	<?php if ($top_sales) { // Preserving the old version, for categories ?>
   		<div id="products">	
-  			<div id="items">
+  			<div id="items" class="bestseller">
 					<?php
 						if ($top_sales->have_posts()) {
 							$counter = 1;
@@ -50,7 +50,7 @@
 			
 			<div id="products">
 				<div id="last-week" class="item-list active">
-					<div id="items">	
+					<div id="items" class="bestseller">	
 							<?php
 								if ($top_sales_last_week->have_posts()) {
 									$counter = 1;
@@ -70,7 +70,7 @@
 				</div>
 				
 				<div id="last-month" class="item-list">
-					<div id="items">	
+					<div id="items" class="bestseller">	
 							<?php
 								if ($top_sales_last_month->have_posts()) {
 									$counter = 1;
@@ -90,7 +90,7 @@
 				</div>
 				
 				<div id="last-three-months" class="item-list">
-					<div id="items">	
+					<div id="items" class="bestseller">	
 							<?php
 								if ($top_sales_last_three_months->have_posts()) {
 									$counter = 1;

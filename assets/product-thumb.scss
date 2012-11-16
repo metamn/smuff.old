@@ -1,0 +1,158 @@
+// General
+#items {
+	.item {
+		
+		
+		img {
+			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+		}
+		
+		#text {
+			
+  		
+  		h4 {
+  			
+  		}
+  		
+  		p {
+  			
+  		}
+		}
+		
+		#price {
+			
+		}
+	}
+}
+
+
+// Promo
+.promo {
+	.item {
+		
+		
+		img {
+			
+		}
+		
+		#text {
+			
+  		
+  		h4 {
+  			
+  		}
+  		
+  		p {
+  			
+  		}
+		}
+		
+		#price {
+			
+		}
+	}
+}
+
+// Bestseller
+.bestseller {
+	.item {
+		height: $pad*29;
+		margin-bottom: $pad*4;
+		
+		img {
+			width: 98%;
+			height: auto;
+			padding: 1%;
+			cursor: pointer;
+			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+		}
+		
+		#text {
+			margin: 0;
+  		padding: $pad $pad*2;
+  		height: $pad*12; 
+  		
+  		h4 {
+  			padding: $pad/2;
+  			margin-bottom: $pad/2;
+  			font-size: large;
+  			font-weight: bold;
+  		}
+  		
+  		p {
+  			padding: $pad/4;
+  			margin: 0;
+  			margin-bottom: $pad*2;
+  		}
+		}
+		
+		#price {
+			@include col(50%, 0, 0);
+			margin-left: $pad;
+			
+			position: relative;
+			top: -$pad*2;
+		}
+		
+		#category {
+			@include col(30%, 0, 0);
+			margin-right: $pad;
+			float: right;
+			text-align: right;
+			
+			position: relative;
+			top: -$pad*2;
+		}
+		
+	}
+}
+
+
+// Hot
+.hot {
+	#large-image {
+		img {
+			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+		}
+	}
+	
+	#large-image-title {
+		height: 5em;
+		
+		#text {
+			font-size: larger;
+			text-align: center;
+		}
+		
+		h3 {
+			position: relative;
+			top: -2.8em;
+			left: 2.5em;
+		}
+		
+		p {
+			position: relative;
+			top: -5.5em;
+			left: 3.8em;
+		}
+		
+		#price {
+			position: relative;
+			top: -9.5em;
+			float: right;
+		}
+	}
+	
+}
+
+
+
+// Just a simple thumb image, no title or other info, maybe on hover
+.thumb {
+	.item {
+		img {
+			width: $image-thumb;
+			height: auto;
+		}
+	}
+}

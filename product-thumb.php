@@ -25,12 +25,12 @@
   }
 ?>
 
-<div class="item product-thumb <?php echo $kounter ?>">    
+<div class="item <?php echo $kounter ?>">    
   <?php if ($product_id) { ?>
   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"> 
     <img src="<?php echo $thumb[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>  
   </a>
-  <div class="text">
+  <div id="text">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
       <h4><?php echo $product_name; ?></h4>
       <?php the_excerpt(); ?>  
@@ -56,7 +56,7 @@
   <?php } ?>
   
   <?php } else { ?>
-    <div class="text">
+    <div id="text">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
       <h4><?php the_title(); ?></h4>
       <?php the_excerpt(); ?>            

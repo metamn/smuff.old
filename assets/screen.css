@@ -518,3 +518,114 @@ body .container #footer-subscribe #social #partners {
 body .container #footer-subscribe #social #fb-like {
   display: block;
 }
+
+/* line 2, search.scss */
+#search-enhanced div {
+  width: 30%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 5, search.scss */
+#search-enhanced #categories {
+  width: 100%;
+}
+/* line 8, search.scss */
+#search-enhanced #searchbox {
+  width: 100%;
+}
+
+/* line 6, product-thumb.scss */
+#items .item img {
+  background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+}
+
+/* line 58, product-thumb.scss */
+.bestseller .item {
+  height: 36.25em;
+  margin-bottom: 5em;
+}
+/* line 62, product-thumb.scss */
+.bestseller .item img {
+  width: 98%;
+  height: auto;
+  padding: 1%;
+  cursor: pointer;
+  background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 70, product-thumb.scss */
+.bestseller .item #text {
+  margin: 0;
+  padding: 1.25em 2.5em;
+  height: 15em;
+}
+/* line 75, product-thumb.scss */
+.bestseller .item #text h4 {
+  padding: 0.625em;
+  margin-bottom: 0.625em;
+  font-size: large;
+  font-weight: bold;
+}
+/* line 82, product-thumb.scss */
+.bestseller .item #text p {
+  padding: 0.3125em;
+  margin: 0;
+  margin-bottom: 2.5em;
+}
+/* line 89, product-thumb.scss */
+.bestseller .item #price {
+  width: 50%;
+  margin: 0 0 0 0;
+  float: left;
+  margin-left: 1.25em;
+  position: relative;
+  top: -2.5em;
+}
+/* line 97, product-thumb.scss */
+.bestseller .item #category {
+  width: 30%;
+  margin: 0 0 0 0;
+  float: left;
+  margin-right: 1.25em;
+  float: right;
+  text-align: right;
+  position: relative;
+  top: -2.5em;
+}
+
+/* line 114, product-thumb.scss */
+.hot #large-image img {
+  background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 119, product-thumb.scss */
+.hot #large-image-title {
+  height: 5em;
+}
+/* line 122, product-thumb.scss */
+.hot #large-image-title #text {
+  font-size: larger;
+  text-align: center;
+}
+/* line 127, product-thumb.scss */
+.hot #large-image-title h3 {
+  position: relative;
+  top: -2.8em;
+  left: 2.5em;
+}
+/* line 133, product-thumb.scss */
+.hot #large-image-title p {
+  position: relative;
+  top: -5.5em;
+  left: 3.8em;
+}
+/* line 139, product-thumb.scss */
+.hot #large-image-title #price {
+  position: relative;
+  top: -9.5em;
+  float: right;
+}
+
+/* line 153, product-thumb.scss */
+.thumb .item img {
+  width: 100px;
+  height: auto;
+}

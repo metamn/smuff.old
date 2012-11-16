@@ -12,7 +12,7 @@
 	</div>
 	
   <div id="body">        
-		<div id="items">	
+		<div id="items" class="promo">	
 			<?php
 				if ($promo_posts->have_posts()) {
 					$counter = 1;

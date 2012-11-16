@@ -59,7 +59,7 @@
 		}
 	?>
 	
-	<div id="slider">
+	<div id="slider" clas="hot">
 		<div id="large-image">
 			<a href="" title="" alt="">
 				<img src="" title="" alt="" />
@@ -87,7 +87,7 @@
 	</div>
  
 	<div id="thumbs">
-		<div id="items">
+		<div id="items" class="thumb">
 			<?php 
 				$thumbs = array_merge($thumbs_special, $thumbs_new);
 			
@@ -105,7 +105,7 @@
 	</div>
 	
 	<div id="noutati">
-		<div id="items">
+		<div id="items" class="hot">
 			<?php 
 				if ($thumbs) {
 					$counter = 1;
