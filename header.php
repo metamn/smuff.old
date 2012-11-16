@@ -1,54 +1,12 @@
-<?php if (is_page('facebook')) {
-  include "facebook-header.php";
-} else { ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?> >
-	<head profile="http://gmpg.org/xfn/11">
+<html>
+	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		
-		
-		
-		<?php if (is_single()) { 
-			$imgs = post_attachements($post->ID);
-			if ($imgs) {
-				$img = $imgs[0];  
-				$medium = wp_get_attachment_image_src($img->ID, 'medium');  
-			}  
-		?>  
-			<meta property="og:title" content="<?php the_title(); ?>" />
-			<!-- All in One Seo pack takes post excerpt as content, this is a hack-->
-			<meta name="description" content="<?php the_title(); ?>" />
-			<meta property="og:type" content="product" />
-			<?php if ($medium) { ?>
-				<meta property="og:image" content="<?php echo $medium[0] ?>" />
-			<?php } else { ?>
-				<meta property="og:image" content="<?php bloginfo('home') ?>/wp-content/down/id/smuff-icon-2.png" />  
-			<?php } ?>
-			<meta property="og:url" content="<?php the_permalink(); ?>" />
-			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
-		
-		<?php } elseif (is_home()) { ?>
-			<meta property="og:title" content="<?php bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>" />
-			<meta property="og:type" content="blog" />
-			<meta property="og:image" content="<?php bloginfo('home') ?>/wp-content/down/id/smuff-icon-2.png" />
-			<meta property="og:url" content="<?php bloginfo('home') ?>" />
-			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
-		
-		<?php } elseif (is_front_page()) { ?>
-			<meta property="og:title" content="<?php bloginfo('name') ?> &mdash; <?php bloginfo('description') ?>" />
-			<meta property="og:type" content="website" />
-			<meta property="og:image" content="<?php bloginfo('home') ?>/wp-content/down/id/smuff-icon-2.png" />
-			<meta property="og:url" content="<?php bloginfo('home') ?>" />
-			<meta property="og:site_name" content="<?php bloginfo('name') ?>" />
-		
-		<?php } ?>
-		
-		
-		
 		<meta name="google-site-verification" content="3NvL8OPM6rq9nvaT31vA5p2qAjbmwaMGFxQaVv9w0PQ" />
 		<META name="y_key" content="694535270b47ea68">
+		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts RSS Feed', 'buddypress' ) ?>" href="<?php bloginfo('rss2_url'); ?>" />
+		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
+		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+		
 		
 		<title>		  		  
 		  <?php 
@@ -93,13 +51,6 @@
 
     <!-- init all jquery functions -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/jquery.init.js?refresh=20121106"></script>
-		
-    
-		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts RSS Feed', 'buddypress' ) ?>" href="<?php bloginfo('rss2_url'); ?>" />
-		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		
-		
 		<link href='http://fonts.googleapis.com/css?family=Coda|Oxygen|Oswald:400,700|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
 		
 		<?php wp_head(); ?>
@@ -115,54 +66,43 @@
 	  
 	  <div class="container"><!-- closed in the footer -->
 	    
-	    
-	    <div class="block">	      
-	      <div id="header" class="column span-18"> 
-	        <div id="tooltips" class="block">
-	          <!--
-	          <a href="http://smuff.ro/2010/08/05/test-2/">
-	          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
-	          </a>
-	          -->
-	        </div>                
-          <div id="headlines" class="block">	          
-	          <div id="logo" class="column span-10 last">
-	            <h1>
-	              <a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
-	              <span class="strapline">	                
-	                <a class="<?php echo $shop?>" alt="<?php echo page_excerpt('despre-noi/magazinul-smuff'); ?>" href="<?php bloginfo('home'); ?>" title="Smuff -- cadouri premium">inseamna cadouri</a>	                
-	              </span>			      
-	           </h1>			      
-			      </div>
-			      
-			      
-			      <div id="main-name" class="column span-8 last">			        
-			        <h1><?php echo page_main_name(); ?></h1>
-			      </div>
-			    </div>
-			    
-			    <div id="menu" class="block">
-			      <ul class="inline-list">
-		          <?php 
-		            $cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
-		            foreach ($cats as $cat) { 
-		              $c = get_category_by_slug($cat);
-		            ?>
-		              <li>
-		                <a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
-		              </li>
-		            <?php } ?>
-		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=grid">Toate cadourile &rarr;</a></li>
-		        </ul>
-			    </div>		
-		    </div>		    
-		    
-		    
-				<div id="cart" class="column span-5 prepend-1 last">
+	    <header id="header">
+	    	<div id="cart">
 					<?php dynamic_shopping_cart(); ?>          
 				</div>
-	    </div>  	
-	    
-<?php } //facebook header ?> 		
+				
+	    	<hgroup>
+	    		<div id="logo">
+						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
+							<h1><?php bloginfo('name'); ?></h1>
+						</a>
+					</div>
+					
+					<div id="strapline">
+						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
+							<h2><?php bloginfo('description'); ?></h2>
+						</a>
+					</div>
+					
+	    		<div id="page-name">			        
+						<h1><?php echo page_main_name(); ?></h1>
+					</div>
+	    	</hgroup>
+	    	
+	    	<nav>
+					<ul>
+						<?php 
+							$cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
+							foreach ($cats as $cat) { 
+								$c = get_category_by_slug($cat);
+							?>
+								<li>
+									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
+								</li>
+							<?php } ?>
+							<li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=grid">Toate cadourile &rarr;</a></li>
+					</ul>
+			  </nav>		
+	    </header>
 	  		
 			

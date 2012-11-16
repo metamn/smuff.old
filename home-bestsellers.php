@@ -1,10 +1,5 @@
-
-<?php include 'c_subscribe-to-newsletter.php' ?>
-	
-  
-<div id="bestsellers" class="bestsellers block"> 
-    
-  <div id="col-0" class="column span-2 last">    
+<section id="bestsellers">    
+  <div id="title">    
     <h3 class='first'>B</h3>
     <h3>e</h3>
     <h3>s</h3>
@@ -19,9 +14,10 @@
   </div>
   
   
-  <div class="column span-21 prepend-1 last">
+  <div id="body">
   	<?php if ($top_sales) { // Preserving the old version, for categories ?>
-  		<div class="items">	
+  		<div id="products">	
+  			<div id="items">
 					<?php
 						if ($top_sales->have_posts()) {
 							$counter = 1;
@@ -36,24 +32,25 @@
 								$counter += 1;
 							endwhile; 
 						}
-					?>       		        
+					?>    
+				</div>
 			</div>
   	<?php } else { ?>
-			<div id="filters" class="block">
-				<div id="last-week" class="col">
+			<div id="filters">
+				<div id="last-week">
 					<h4 class='active'>Saptamana curenta</h4>
 				</div>
-				<div id="last-month" class="col">
+				<div id="last-month">
 					<h4>Luna curenta</h4>
 				</div>
-				<div id="last-three-months" class="col last">
+				<div id="last-three-months">
 					<h4>Ultimele trei luni</h4>
 				</div>
 			</div>
 			
-			<div id="items" class="block">
+			<div id="products">
 				<div id="last-week" class="item-list active">
-					<div class="items">	
+					<div id="items">	
 							<?php
 								if ($top_sales_last_week->have_posts()) {
 									$counter = 1;
@@ -73,7 +70,7 @@
 				</div>
 				
 				<div id="last-month" class="item-list">
-					<div class="items">	
+					<div id="items">	
 							<?php
 								if ($top_sales_last_month->have_posts()) {
 									$counter = 1;
@@ -93,7 +90,7 @@
 				</div>
 				
 				<div id="last-three-months" class="item-list">
-					<div class="items">	
+					<div id="items">	
 							<?php
 								if ($top_sales_last_three_months->have_posts()) {
 									$counter = 1;
@@ -114,18 +111,9 @@
 			</div>
 		<?php } ?>
 		
-		<div id="more" class="block">
+		<div id="more">
 			<a href="<?php echo bloginfo('home') ?>/?s=+&meta=14" title="Toate cadourile populare">Vezi toate cadourile populare &rarr;</a>
 		</div>
+		
   </div>
-
-
-	<div class="block">
-		<div id="search-header" class="column span-3">
-  		<h3>Cautare cadouri</h3>
-  	</div>
-  	<div class="column span-21 last">
-  		<?php include 'search-enhanced.php' ?>
-  	</div>
-	</div>
-</div>
+</section>

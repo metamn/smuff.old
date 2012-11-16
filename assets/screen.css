@@ -257,3 +257,186 @@ body .container input[type='checkbox']:checked:after {
 */
 /* block element -- expand something full size inside a container
 */
+/* line 2, header.scss */
+body .container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 6, header.scss */
+body .container #header {
+  width: 100%;
+  float: left;
+}
+/* line 9, header.scss */
+body .container #header #cart {
+  width: 20%;
+  margin-left: 5%;
+  float: right;
+}
+/* line 14, header.scss */
+body .container #header #cart h3 {
+  display: none;
+}
+/* line 19, header.scss */
+body .container #header hgroup {
+  width: 75%;
+  float: left;
+}
+/* line 23, header.scss */
+body .container #header hgroup #logo {
+  width: 20%;
+  float: left;
+}
+/* line 27, header.scss */
+body .container #header hgroup #strapline {
+  width: 40%;
+  float: left;
+}
+/* line 31, header.scss */
+body .container #header hgroup #page-name {
+  width: 40%;
+  float: left;
+}
+/* line 37, header.scss */
+body .container #header nav {
+  width: 75%;
+  float: left;
+}
+/* line 41, header.scss */
+body .container #header nav ul {
+  display: block;
+  margin: 0;
+}
+/* line 58, mixins.scss */
+body .container #header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* line 3, startpage.scss */
+body.home .container #hot {
+  width: 100%;
+  float: left;
+}
+/* line 6, startpage.scss */
+body.home .container #hot #slider {
+  width: 75%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 11, startpage.scss */
+body.home .container #hot #thumbs {
+  width: 20%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 15, startpage.scss */
+body.home .container #hot #more {
+  width: 100%;
+  float: left;
+}
+/* line 19, startpage.scss */
+body.home .container #hot #noutati {
+  width: 100%;
+  float: left;
+}
+/* line 23, startpage.scss */
+body.home .container #hot #noutati #items .item {
+  width: 45%;
+  margin: 0 10% 0 0;
+  float: left;
+}
+/* line 26, startpage.scss */
+body.home .container #hot #noutati #items .item.c2, body.home .container #hot #noutati #items .item.c4, body.home .container #hot #noutati #items .item.c6, body.home .container #hot #noutati #items .item.c8, body.home .container #hot #noutati #items .item.c9, body.home .container #hot #noutati #items .item.c10, body.home .container #hot #noutati #items .item.c12, body.home .container #hot #noutati #items .item.c14, body.home .container #hot #noutati #items .item.c16, body.home .container #hot #noutati #items .item.c18, body.home .container #hot #noutati #items .item.c20 {
+  margin-right: 0;
+}
+/* line 33, startpage.scss */
+body.home .container #subscribe-newsletter {
+  width: 100%;
+  float: left;
+}
+/* line 37, startpage.scss */
+body.home .container #bestsellers {
+  width: 100%;
+  float: left;
+}
+/* line 40, startpage.scss */
+body.home .container #bestsellers #title {
+  width: 10%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 44, startpage.scss */
+body.home .container #bestsellers #body {
+  width: 90%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 48, startpage.scss */
+body.home .container #bestsellers #body #filters div {
+  width: 30%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 51, startpage.scss */
+body.home .container #bestsellers #body #filters div#last-three-months {
+  margin-right: 0;
+}
+/* line 58, startpage.scss */
+body.home .container #bestsellers #body #products #items .item {
+  width: 30%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 61, startpage.scss */
+body.home .container #bestsellers #body #products #items .item.c3, body.home .container #bestsellers #body #products #items .item.c6, body.home .container #bestsellers #body #products #items .item.c9 {
+  margin-right: 0;
+}
+/* line 67, startpage.scss */
+body.home .container #bestsellers #body #more {
+  float: right;
+}
+/* line 73, startpage.scss */
+body.home .container #search {
+  width: 100%;
+  float: left;
+}
+/* line 76, startpage.scss */
+body.home .container #search #title {
+  width: 10%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 81, startpage.scss */
+body.home .container #search #body {
+  width: 90%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 87, startpage.scss */
+body.home .container #promo #title {
+  width: 10%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 92, startpage.scss */
+body.home .container #promo #body {
+  width: 90%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 96, startpage.scss */
+body.home .container #promo #body #items .item {
+  width: 22%;
+  margin: 0 4% 0 0;
+  float: left;
+}
+/* line 99, startpage.scss */
+body.home .container #promo #body #items .item.c4, body.home .container #promo #body #items .item.c8, body.home .container #promo #body #items .item.c12 {
+  margin-right: 0;
+}
+/* line 104, startpage.scss */
+body.home .container #promo #body #more {
+  float: right;
+}

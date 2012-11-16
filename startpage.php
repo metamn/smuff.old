@@ -42,17 +42,33 @@
  ?>
 
 
-<div id="home" class="block">
-	<div id="content" class="block">  
-		<?php if ($new_products->have_posts()) {
-				include "home-hot.php";
-			} else {
-				echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in magazin.</h2>';
-			}?>        
-			
-		<?php include "home-bestsellers.php";  ?> 
-		<?php if ($promo_posts->have_posts()) { include "home-promo.php"; }  ?>
-	</div>    
-</div>
+
+<?php 
+	if ($new_products->have_posts()) {
+		include "home-hot.php";
+	} else {
+		echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in magazin.</h2>';
+	}
+	
+	include 'c_subscribe-to-newsletter.php';
+	
+	include "home-bestsellers.php"; ?>
+	
+	
+	<section id="search">
+		<div id="title">
+  		<h3>Cautare cadouri</h3>
+  	</div>
+  	<div id="body">
+  		<?php include 'search-enhanced.php' ?>
+  	</div>
+	</section>
+	
+	
+	<?php if ($promo_posts->have_posts()) { 
+		include "home-promo.php"; 
+	}  
+?>
+
 
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-<div id="home-hot" class="block">
+<section id="hot">
 	<?php 
 		$thumbs = array();
 		
@@ -59,18 +59,18 @@
 		}
 	?>
 	
-	<div id="slider" class="column span-18 append-1">
+	<div id="slider">
 		<div id="large-image">
 			<a href="" title="" alt="">
 				<img src="" title="" alt="" />
 			</a>
 		</div>
 	
-		<div id="large-image-title" class="block"> 
-			<div id="text" class="column span-3 last">
+		<div id="large-image-title"> 
+			<div id="text">
 				Nou!
 			</div>
-			<div id="info" class="column span-13 last">
+			<div id="info">
 				<div class="arrow-right"></div>
 				<a href="" title="" alt="">
 					<h3 id="title"></h3>
@@ -86,7 +86,7 @@
 		</div>   
 	</div>
  
-	<div id="thumbs" class="column span-5 last">
+	<div id="thumbs">
 		<div id="items">
 			<?php 
 				$thumbs = array_merge($thumbs_special, $thumbs_new);
@@ -99,35 +99,29 @@
 		</div>
 	</div>
 	
-	<div class="clear"></div>
 	
 	<div id="more">
 		<span>Vezi toate noutatiile Smuff &darr;</span>
 	</div>
 	
-	<div id="noutati" class="block">
+	<div id="noutati">
 		<div id="items">
 			<?php 
 				if ($thumbs) {
-					$counter = 0;
-					foreach ($thumbs as $thumb) { 
-						if ($counter % 2 == 0 ) {
-							$klass = ''; 
-						} else {
-							$klass = 'last';
-						} ?>
-						<div class="item item-<?php echo $counter ?> <?php echo $klass ?>"> 
+					$counter = 1;
+					foreach ($thumbs as $thumb) { ?>
+						<div class="item c<?php echo $counter ?>"> 
 							<div id="large-image">
 								<a href="" title="" alt="">
 									<img src="" title="" alt="" />
 								</a>
 							</div>
 						
-							<div id="large-image-title" class="block"> 
-								<div id="text" class="column span-3 last">
+							<div id="large-image-title"> 
+								<div id="text">
 									Nou!
 								</div>
-								<div id="info" class="column span-13 last">
+								<div id="info">
 									<div class="arrow-right"></div>
 									<a href="" title="" alt="">
 										<h3 id="title"></h3>
@@ -151,5 +145,5 @@
 		</div>
 	</div>
 	
-</div>
+</section>
 

@@ -1,0 +1,47 @@
+body {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		
+		#header {
+			@include block;
+			
+			#cart {
+				width: $minor;
+				margin-left: $margin;
+				float: right;
+				
+				h3 {
+					@include hidden;
+				}
+			}
+			
+			hgroup {
+				width: $major;
+				float: left;
+				
+				#logo {
+					width: 20%;
+					float: left;
+				}
+				#strapline {
+					width: 40%;
+					float: left;
+				}
+				#page-name {
+					width: 40%;
+					float: left;
+				}
+			}
+			
+			nav {
+				width: $major;
+				float: left;
+				
+				ul {
+					@include list-inline;
+				}
+			} 
+		}
+	}
+}

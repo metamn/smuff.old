@@ -1,0 +1,111 @@
+body.home {
+	.container {		
+		#hot {
+			@include block;
+			
+			#slider {
+				@include col($major, 0, $margin);
+				
+			}
+			
+			#thumbs {
+				@include col($minor, 0, 0);
+			}
+			
+			#more {
+				@include block;
+			}
+			
+			#noutati {
+				@include block;
+				
+				#items {
+					.item {
+						@include col(45%, 0, 10%);
+					}
+					.item.c2, .item.c4, .item.c6, .item.c8, .item.c9, .item.c10, .item.c12, .item.c14, .item.c16, .item.c18, .item.c20 {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		
+		#subscribe-newsletter {
+			@include block;
+		}
+		
+		#bestsellers {
+			@include block;
+			
+			#title {
+				@include col($minor2, 0, 0);
+			}
+			
+			#body {
+				@include col($major2, 0, 0);
+				
+				#filters {
+					div {
+						@include col(30%, 0, 5%);
+					}
+					div#last-three-months {
+						margin-right: 0;
+					}
+				}
+				
+				#products {
+					#items {
+						.item {
+							@include col(30%, 0, 5%);
+						}
+						.item.c3, .item.c6, .item.c9 {
+							margin-right: 0;
+						}
+					}
+				}
+				
+				#more {
+					float: right;
+				}
+			}
+		}
+		
+		#search {
+			@include block;
+			
+			#title {
+				@include col($minor2, 0, 0);
+				
+			} 
+			
+			#body {
+				@include col($major2, 0, 0);
+			}
+		}
+		
+		#promo {
+			#title {
+				@include col($minor2, 0, 0);
+				
+			} 
+			
+			#body {
+				@include col($major2, 0, 0);
+				
+				#items {
+					.item {
+						@include col(22%, 0, 4%);
+					}
+					.item.c4, .item.c8, .item.c12 {
+						margin-right: 0;
+					}
+				}
+				
+				#more {
+					float: right;
+				}
+			}
+		
+		}
+	}
+}
