@@ -7,6 +7,7 @@
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<title>		  		  
 		  <?php 
@@ -67,8 +68,14 @@
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <header id="header">
-	    	<div id="cart">
+	    	<div id="cart" class="desktop">
 					<?php dynamic_shopping_cart(); ?>          
+				</div>
+				<div id="cart" class="mobile">
+					<ul>
+						<li>Cos</li>
+						<li>Info</li>
+					</ul>
 				</div>
 				
 	    	<hgroup>

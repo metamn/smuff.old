@@ -23,20 +23,44 @@ body {
 				#logo {
 					width: 20%;
 					float: left;
+					
+					@include respond-to(mobile) {
+						width: 100%;
+						
+						h1 {
+							padding: $pad/2 0 0;
+						}
+					}
 				}
 				#strapline {
 					width: 40%;
 					float: left;
+					
+					@include respond-to(mobile) {
+						width: 100%;
+						
+						h2 {
+							padding: 0;
+						}
+					}
 				}
 				#page-name {
 					width: 40%;
 					float: left;
+					
+					@include respond-to(mobile) {
+						width: 0;
+					}
 				}
 			}
 			
 			nav {
 				width: $major;
 				float: left;
+				
+				@include respond-to(mobile) {
+					width: 100%;
+				}
 				
 				ul {
 					@include list-inline;

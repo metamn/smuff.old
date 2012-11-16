@@ -4,6 +4,67 @@ $pad: 1.25em;
 $pad2: .625em;
 $pad4: .312em;
 
+
+// Responisive, fluid Images and Grid
+// - http://thesassway.com/intermediate/responsive-web-design-part-1
+
+img {
+	max-width: 100%;
+}
+
+
+$mobile: 320px;
+$mobile-landscape: 480px;
+$tablet: 1024px;
+$desktop: 1440px;
+
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) { @content; }
+  }
+  @else if $media == mobile-landscape {
+    @media only screen and (min-width: $mobile + 1) and (max-width: $mobile-landscape) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $mobile-landscape + 1) and (max-width: $tablet) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $tablet + 1) and (max-width: $desktop) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $desktop + 1) { @content; }
+  }
+}
+@media only screen and (max-width: $mobile-landscape) { 
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+}
+@media only screen and (min-width: $mobile-landscape + 1) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+}
+
+
+$image-thumb-width: 150px;
+$image-thumb-height: 150px;
+
+$image-medium-width: 300px;
+$image-thumb-height: 211px;
+
+$image-large-width: 950px;
+$image-large-height: 670px;
+
+
+
 // The grid
 
 $minor: 20%;
@@ -12,9 +73,3 @@ $margin: 5%;
 
 $minor2: 10%;
 $major2: 90%;
-
-
-// Images
-
-$image-thumb: 100px;
-

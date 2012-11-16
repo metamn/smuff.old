@@ -26,90 +26,22 @@
 }
 
 
-// Promo
-.promo {
+
+// Just a simple thumb image, no title or other info, maybe on hover
+#items.thumb {
 	.item {
-		
-		
 		img {
-			
-		}
-		
-		#text {
-			
-  		
-  		h4 {
-  			
-  		}
-  		
-  		p {
-  			
-  		}
-		}
-		
-		#price {
-			
+			width: $image-thumb-width;
+			height: auto;
 		}
 	}
 }
 
-// Bestseller
-.bestseller {
-	.item {
-		height: $pad*29;
-		margin-bottom: $pad*4;
-		
-		img {
-			width: 98%;
-			height: auto;
-			padding: 1%;
-			cursor: pointer;
-			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
-		}
-		
-		#text {
-			margin: 0;
-  		padding: $pad $pad*2;
-  		height: $pad*12; 
-  		
-  		h4 {
-  			padding: $pad/2;
-  			margin-bottom: $pad/2;
-  			font-size: large;
-  			font-weight: bold;
-  		}
-  		
-  		p {
-  			padding: $pad/4;
-  			margin: 0;
-  			margin-bottom: $pad*2;
-  		}
-		}
-		
-		#price {
-			@include col(50%, 0, 0);
-			margin-left: $pad;
-			
-			position: relative;
-			top: -$pad*2;
-		}
-		
-		#category {
-			@include col(30%, 0, 0);
-			margin-right: $pad;
-			float: right;
-			text-align: right;
-			
-			position: relative;
-			top: -$pad*2;
-		}
-		
-	}
-}
+
 
 
 // Hot
-.hot {
+#items.hot {
 	#large-image {
 		img {
 			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
@@ -147,12 +79,3 @@
 
 
 
-// Just a simple thumb image, no title or other info, maybe on hover
-.thumb {
-	.item {
-		img {
-			width: $image-thumb;
-			height: auto;
-		}
-	}
-}
