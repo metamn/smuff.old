@@ -19,11 +19,11 @@ $(document).ready(function() {
   
   
   // Startpage - Hot - List view
-  $('#home-hot #more span').click(function() {
-  	$('#home-hot #noutati').show();
+  $('#hot #more span').click(function() {
+  	$('#hot #noutati').show();
   	
-  	$('#home-hot #thumbs #items .item a').each(function(index) {
-  		loadImage($(this), $("#home-hot #noutati .item-" + index + " #large-image"));
+  	$('#hot #thumbs #items .item a').each(function(index) {
+  		loadImage($(this), $("#hot #noutati .item-" + index + " #large-image"));
   	});
   	
   	$('.home #subscribe-newsletter').addClass('bigger-margin-bottom');
@@ -112,11 +112,11 @@ $(document).ready(function() {
   }
   
   // - load the first image
-  loadImage($('#home-hot #thumbs .item a').first(), $('#home-hot #large-image').first());
+  loadImage($('#hot #thumbs .item a').first(), $('#hot #large-image').first());
   
   // - click on thumbs
-  $('#home-hot #thumbs .item a').live('click', function () {
-    loadImage($(this), $('#home-hot #large-image'));
+  $('#hot #thumbs .item a').live('click', function () {
+    loadImage($(this), $('#hot #large-image'));
   });
 
 

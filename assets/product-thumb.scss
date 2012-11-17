@@ -4,7 +4,7 @@
 		
 		
 		img {
-			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
+			background: url(ajax-loader.gif) no-repeat 50% 50%;
 		}
 		
 		#text {
@@ -39,43 +39,6 @@
 
 
 
-
-// Hot
-#items.hot {
-	#large-image {
-		img {
-			background: url(img/ajax-loader.gif) no-repeat 50% 50%;
-		}
-	}
-	
-	#large-image-title {
-		height: 5em;
-		
-		#text {
-			font-size: larger;
-			text-align: center;
-		}
-		
-		h3 {
-			position: relative;
-			top: -2.8em;
-			left: 2.5em;
-		}
-		
-		p {
-			position: relative;
-			top: -5.5em;
-			left: 3.8em;
-		}
-		
-		#price {
-			position: relative;
-			top: -9.5em;
-			float: right;
-		}
-	}
-	
-}
 
 
 
