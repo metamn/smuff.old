@@ -309,6 +309,99 @@ body .container input[type='checkbox']:checked:after {
 */
 /* block element -- expand something full size inside a container
 */
+/* line 37, theme.scss */
+body {
+  background: white url(dotted_bg.png);
+}
+/* line 40, theme.scss */
+body .container {
+  font-family: 'Coda', serif;
+}
+/* line 45, theme.scss */
+body .container h1, body .container h2 {
+  font-family: 'Oswald', sans-serif;
+}
+/* line 48, theme.scss */
+body .container #search-header, body .container #click-more {
+  font-family: 'Nothing You Could Do', cursive;
+}
+/* line 54, theme.scss */
+body .container a, body .container a:visited {
+  color: #111111;
+  text-decoration: none;
+}
+/* line 58, theme.scss */
+body .container #accordion a, body .container #accordion a:visited {
+  border-bottom: 1px dotted;
+}
+/* line 65, theme.scss */
+body .container #header #cart.desktop #widgetshoppingcart {
+  background: url(stripe.png);
+  padding: 1.25em;
+  font-size: small;
+}
+/* line 70, theme.scss */
+body .container #header #cart.desktop #widgetshoppingcart ul {
+  list-style: none;
+  margin: 0;
+}
+/* line 28, theme.scss */
+body .container #header #cart.desktop #widgetshoppingcart ul li {
+  margin-bottom: 0.3125em;
+  padding: 0.3125em;
+  background: white;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 73, theme.scss */
+body .container #header #cart.desktop #widgetshoppingcart ul li#message {
+  background: #8aea4c;
+}
+/* line 77, theme.scss */
+body .container #header #cart.desktop #widgetshoppingcart ul li a:hover {
+  font-weight: bold;
+}
+/* line 80, theme.scss */
+body .container #header #cart.desktop #widgetshoppingcart ul li strong {
+  color: #f25f18;
+}
+/* line 90, theme.scss */
+body .container #header hgroup #logo h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  padding: 0.3125em 0 0;
+}
+/* line 98, theme.scss */
+body .container #header hgroup #strapline h2 {
+  color: #f25f18;
+  padding: 1.25em 0 0;
+}
+/* line 105, theme.scss */
+body .container #header hgroup #page-name h1 {
+  color: #aaaaaa;
+  padding: 1.25em 0 0;
+  text-align: right;
+}
+/* line 113, theme.scss */
+body .container #header nav {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.625em 0;
+  margin: 1.25em 0;
+}
+/* line 121, theme.scss */
+body .container #header nav ul li {
+  margin-right: 1.25em;
+}
+/* line 124, theme.scss */
+body .container #header nav ul li a:hover {
+  border-bottom: 1px solid;
+}
+/* line 128, theme.scss */
+body .container #header nav ul li.all-products-link {
+  margin-right: 0;
+  float: right;
+}
+
 /* line 2, header.scss */
 body .container {
   width: 90%;

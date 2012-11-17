@@ -1,0 +1,139 @@
+// Colors
+
+$color: #111;
+$background: #fff;
+$sale: #F25F18;
+$cart: #8AEA4C;
+
+$orange: #F25F18;
+$blue: #4D8FCE;
+$green: #8AEA4C;
+$red: #F98751;
+$error: #F98751;
+$yellow: F9B451;
+$notice: F9B451;
+
+$gray: #AAA;
+$dark-gray: #4A4742;
+$light-gray: #ccc;
+$very-light-gray: #f1f1f1;
+
+
+// Theme mixins
+
+@mixin list-cart {
+	list-style: none;
+	margin: 0;
+	
+	li {
+		margin-bottom: $pad/4;
+		padding: $pad/4;
+		background: $background;
+		border-bottom: 1px solid $light-gray;
+	}
+}
+
+
+body {
+	background: $background url(dotted_bg.png);
+	
+	.container {
+	
+		
+		// Fonts
+		font-family: 'Coda', serif;
+		h1, h2 {
+			font-family: 'Oswald', sans-serif;
+		}
+		#search-header, #click-more {
+			font-family: 'Nothing You Could Do', cursive; 
+		}
+		
+		
+		// Links
+		a, a:visited {
+			color: $color;
+			text-decoration: none;
+		}
+		#accordion a, #accordion a:visited {
+			border-bottom: 1px dotted;
+		}
+		
+		
+		#header {
+			#cart.desktop {
+				#widgetshoppingcart {
+					background: url(stripe.png);
+					padding: $pad;
+					font-size: small;
+					
+					ul {
+						@include list-cart;
+						
+						li#message {
+							background: $cart;
+						}
+						li {
+							a:hover {
+								font-weight: bold;
+							}
+							strong {
+								color: $sale;
+							}
+						}
+					}
+				}
+			}
+			
+			hgroup {
+				#logo {
+					h1 {
+						font-size: 3.5em;
+						font-weight: bold;
+						padding: $pad/4 0 0;
+					}
+				}
+				
+				#strapline {
+					h2 {
+						color: $sale;
+						padding: $pad 0 0;
+					}
+				}
+				
+				#page-name {
+					h1 {
+						color: $gray;
+						padding: $pad 0 0;
+						text-align: right;
+					}
+				}
+			}
+			
+			nav {
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+				padding: $pad/2 0;
+				margin: $pad 0;
+				
+				ul {
+					
+					li {
+						margin-right: $pad;
+						
+						a:hover {
+							border-bottom: 1px solid;
+						}
+					}
+					li.all-products-link {
+						margin-right: 0;
+						float: right;
+					}
+				}
+			}
+			
+		}
+	}
+	
+	
+}
