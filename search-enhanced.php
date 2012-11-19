@@ -29,7 +29,7 @@
 			</ul>
 		</div>
 		
-		<div>
+		<div class="last">
 			<h3>Categorii</h3>
 			<ul>
 				<li><input id="search-meta" type="checkbox" name="meta" value="10"/>Cadouri noi</li>

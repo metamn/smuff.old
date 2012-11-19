@@ -1,11 +1,15 @@
 #search-enhanced {
-	div {
-		@include col(30%, 0, 5%);
+	form {
+		div {
+			@include col(30%, 0, 5%);
+		}
+		div.last {
+			margin-right: 0;
+		}
+		#categories, #searchbox {
+			width: 100%;
+			@include hidden;
+		}
 	}
-	#categories {
-		width: 100%;
-	}
-	#searchbox {
-		width: 100%;
-	}
+	
 }

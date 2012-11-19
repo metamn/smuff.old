@@ -48,22 +48,25 @@ $very-light-gray: #f1f1f1;
 	}
 
 	#text {
-		width: 53%;
-		margin-right: 4%;
+		width: 58%;
+		margin-right: 5%;
 		float: left;
+		position: relative;
+		margin-left: -5%;
 		
 		form {
 			padding: 0;
 			
 			input.text {
-  			width: 98%;
+  			width: 100%;
   		}
   	}
   	
 		#whatis {
 			position: relative;
 			top: -1.5em;
-			left: 90%;
+			float: right;
+			
 			font-size: smaller;
 			text-decoration: underline;
 			
@@ -78,14 +81,11 @@ $very-light-gray: #f1f1f1;
 
 	#facebook-connect {
 		float: left;
-		width: 20%;
+		width: 25%;
 		
-		.fb-login-button {
-			margin-top: .7em;
-		}
 		
 		#auth-loggedin {
-			padding: 1.5em 1em;
+			padding: $pad;
 			font-size: small;
 		}
 	}
@@ -179,7 +179,7 @@ $very-light-gray: #f1f1f1;
 	
 	#price {
 		position: relative;
-		top: $pad*4;
+		top: $pad*3;
 		width: 50%;
 		float: left;
 		margin-left: $pad;
@@ -187,16 +187,20 @@ $very-light-gray: #f1f1f1;
 	
 	#category {
 		position: relative;
-		top: $pad*4;
+		top: $pad*3;
 		width: 30%;
 		float: right;
 		text-align: right;
 		margin-right: $pad;
 		
 		a {
-			background: $gray;
+			background: $light-gray;
 			padding: $pad/4;
 			color: $background;
+			
+			&:hover {
+				background: gray;
+			}
 		}
 	}
 	
@@ -305,9 +309,7 @@ body {
 		h1, h2 {
 			font-family: 'Oswald', sans-serif;
 		}
-		#search-header, #click-more {
-			font-family: 'Nothing You Could Do', cursive; 
-		}
+		
 		
 		
 		
@@ -371,6 +373,7 @@ body {
 		}
 
 		
+		
 		/* Tooltips
 		----------------------------------------------------
 		- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
@@ -396,7 +399,72 @@ body {
 			margin: $pad/4;
 			border-bottom: 1px dotted;
 		}
-
+		
+		
+		
+		/* Search
+		---------------------------------------------------
+		*/
+		#search-enhanced {
+			@include block;
+			background: $blue;
+			
+			h3 {
+				margin-left: $pad/2;
+			}
+			
+			ul {
+				@include list-cart;
+				margin: 0 $pad;
+				
+				li {
+					background: $blue;
+					border-bottom: 1px dotted $color;
+					
+					input[type="checkbox"]:after {
+						content: "\2610";
+					}
+					input[type="checkbox"]:checked:after {
+						content: "\25a3";
+					}
+				}
+			}
+			
+			#submit {
+				margin: $pad*2 0 $pad $pad;
+				
+				#advanced-search {
+					font-size: small;
+				}
+			}
+		}
+		
+		#trending {
+			@include block;
+			margin: $pad*4 0;
+			
+			h2 {
+				width: 30%;
+				float: left;
+				margin-right: 3%;
+				padding-right: 3%;
+				border-right: 1px dotted;
+			}
+			
+			#items {
+				width: 55%;
+				margin-left: 3%;
+				float: left;
+				
+				.trend {
+					font-style: italic;
+					font-size: large;
+					float: left;
+					margin: $pad/2;
+				}
+			}
+		}
+		
 		
 		
 		/* Header
@@ -590,6 +658,8 @@ body {
 						
 						h4 {
 							@include pointer;
+							padding: $pad/4 0;
+							font-size: 1em;
 							
 							color: $gray;
 							margin: $pad/2 0;
@@ -613,6 +683,24 @@ body {
 				}
 			}
 		}
+		
+		
+		
+		/* Search
+		---------------------------------------------------
+		*/
+		#search {
+			#title {
+				background: url(arrow-black-top-right.png) no-repeat 1em 5em;
+				height: 20em;
+				
+				h3 {
+					font-family: 'Nothing You Could Do', cursive; 
+				}
+			}
+		}
+		
+		
 
 		/* Promo
 		---------------------------------------------------

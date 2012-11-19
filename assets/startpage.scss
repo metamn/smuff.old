@@ -16,6 +16,9 @@ body.home {
 			#more {
 				@include block;
 				cursor: pointer;
+				
+				margin-left: $minor2;
+				width: 100%-$minor2;
 			}
 			
 			#noutati {

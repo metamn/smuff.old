@@ -44,6 +44,15 @@ body {
 				padding: 1.51786em 0;
 			}
 		}
+		h4 { 
+			font-size: 1.33333em; 
+			padding: 1.25em 0;
+			
+			@include respond-to(mobile) {
+				font-size: 1em; 
+				padding: 1.51786em 0;
+			}
+		}
 		
 		h1, h2, h3, h4, h5, h6 {
 			margin-top: 0; 
@@ -51,7 +60,7 @@ body {
 		}
 	
 		// Lower headings are like body text but upper cased
-		h4, h5, h6 {
+		h5, h6 {
 			font-size: 1em;
 			// small caps is not enough to distinguish header from body text
 			// font-variant: small-caps;
@@ -219,11 +228,11 @@ body {
 			margin-right: $pad/8;
 			
 			// This glyph is too small, so grow it
-			font-size: 200%;
-			line-height: .5;
-			vertical-align: top;
+			//font-size: 200%;
+			//line-height: .5;
+			//vertical-align: top;
 			
-			color: lightgray;
+			//color: lightgray;
 		}
 		input[type='checkbox']:checked:after {
 			color: black;

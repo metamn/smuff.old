@@ -1,14 +1,25 @@
 /*
 Syntax error: Undefined mixin 'col'.
-        on line 3 of /Users/cs/work/smuff/assets/search.scss, in `col'
-        from line 3 of /Users/cs/work/smuff/assets/search.scss
+        on line 4 of /Users/cs/work/smuff/assets/search.scss, in `col'
+        from line 4 of /Users/cs/work/smuff/assets/search.scss
 
 1: /Users/cs/work/smuff/assets/search.scss
 
 Backtrace:
-/Users/cs/work/smuff/assets/search.scss:3:in `col'
-/Users/cs/work/smuff/assets/search.scss:3
+/Users/cs/work/smuff/assets/search.scss:4:in `col'
+/Users/cs/work/smuff/assets/search.scss:4
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
@@ -92,4 +103,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'col'.\A         on line 3 of /Users/cs/work/smuff/assets/search.scss, in `col'\A         from line 3 of /Users/cs/work/smuff/assets/search.scss\A \A 1: /Users/cs/work/smuff/assets/search.scss"; }
+  content: "Syntax error: Undefined mixin 'col'.\A         on line 4 of /Users/cs/work/smuff/assets/search.scss, in `col'\A         from line 4 of /Users/cs/work/smuff/assets/search.scss\A \A 1: /Users/cs/work/smuff/assets/search.scss"; }
