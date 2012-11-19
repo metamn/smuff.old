@@ -18,12 +18,30 @@ $notice: F9B451;
 $gray: #AAA;
 $dark-gray: #4A4742;
 $light-gray: #ccc;
+$light-gray-2: #eee;
 $very-light-gray: #f1f1f1;
+
+
 
 
 /* Theme mixins
 ---------------------------------------------------
 */
+
+
+// Accordion
+@mixin accordion {
+	h3 {
+		cursor: pointer;
+		padding: $pad/2 $pad/4;
+		background: $light-gray-2;
+		border-bottom: 1px $light-gray;
+		margin-bottom: 1px;
+	}
+	div {
+		display: none;
+	}
+}
 
 
 // Subscribe to newsletter
@@ -288,7 +306,23 @@ $very-light-gray: #f1f1f1;
 }
 
 
-
+@mixin image-rounded {
+	text-align: center;
+	
+	li {
+		height: 12em;
+		border-radius: 8em;
+		padding-top: 2.5em;
+		background: $blue;
+		box-shadow: 2px 1px 1px $gray;
+		border: 1px solid $blue;
+		
+		&:hover {
+			box-shadow: 2px 1px 1px $color;
+			border: 1px solid $color;
+		}
+	}
+}
 
 
 
@@ -745,7 +779,37 @@ body {
 				}
 			}
 		}
-
+	
+	
+		/* Footer
+		---------------------------------------------------
+		*/
+		
+		#top-new-categories {
+			ul {
+				@include list-inline;
+				@include image-rounded;
+			}
+		}
+		
+		#info {
+			#contact {
+				ul {
+					list-style: none;
+					margin: 0;
+				}
+			}
+			
+			#company {
+				@include accordion;
+			}
+			
+			#pages {
+				@include accordion;
+			}
+		}
+		
+		
 	}	
 }
 

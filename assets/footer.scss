@@ -20,6 +20,11 @@ body {
 			
 			ul {
 				@include list-inline;
+				
+				li {
+					width: 21%;
+					margin: 0 2%;
+				}
 			}
 		}
 		
