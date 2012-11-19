@@ -22,7 +22,7 @@ $(document).ready(function() {
   $('#hot #more span').click(function() {
   	$('#hot #noutati').show();
   	
-  	$('#hot #thumbs #items .item a').each(function(index) {
+  	$('#hot #thumbs .item a').each(function(index) {
   		loadImage($(this), $("#hot #noutati .item-" + index + " #large-image"));
   	});
   	
@@ -57,7 +57,7 @@ $(document).ready(function() {
   function loadImage(thumb, large) {
   
   	// Show the spinner
-    large.children('a').children('img').attr('src', themeurl + '/img/ajax-loader-invisible.gif');  
+    large.children('a').children('img').attr('src', themeurl + '/assets/ajax-loader-invisible.gif');  
   
 		var large_info = large.next().children('#info');
 		
@@ -112,11 +112,11 @@ $(document).ready(function() {
   }
   
   // - load the first image
-  loadImage($('#hot #thumbs .item a').first(), $('#hot #large-image').first());
+  loadImage($('#hot #thumbs .item a').first(), $('#hot #slider #large-image').first());
   
   // - click on thumbs
   $('#hot #thumbs .item a').live('click', function () {
-    loadImage($(this), $('#hot #large-image'));
+    loadImage($(this), $('#hot #slider #large-image'));
   });
 
 

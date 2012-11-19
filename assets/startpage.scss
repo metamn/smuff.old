@@ -1,5 +1,6 @@
 body.home {
 	.container {		
+	
 		#hot {
 			@include block;
 			
@@ -14,10 +15,12 @@ body.home {
 			
 			#more {
 				@include block;
+				cursor: pointer;
 			}
 			
 			#noutati {
 				@include block;
+				@include hidden;
 				
 				#items {
 					.item {
@@ -32,13 +35,21 @@ body.home {
 		
 		#subscribe-newsletter {
 			@include block;
+			@include subscribe-to-newsletter;
+			
+			margin: $pad*2 0;
 		}
+		#subscribe-newsletter.bigger-margin-bottom {
+			margin-bottom: $pad*8;
+		}
+
 		
 		#bestsellers {
 			@include block;
 			
 			#title {
-				@include col($minor2, 0, 0);
+				/* @include col($minor2, 0, 0); */
+				@include col(7.5%, 0, 2.5%);
 			}
 			
 			#body {
@@ -57,6 +68,7 @@ body.home {
 					#items {
 						.item {
 							@include col(30%, 0, 5%);
+							margin-bottom: $pad*4;
 						}
 						.item.c3, .item.c6, .item.c9 {
 							margin-right: 0;

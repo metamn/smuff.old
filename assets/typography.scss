@@ -189,12 +189,14 @@ body {
 		}
 		
 		// Text
-		input[type='text'], input[type='password'] {
+		input[type='text'], input[type='password'], input[type='email'] {
 			border-bottom: 1px solid;
 			font-style: italic;
 			color: gray;
+			
+			padding: $pad/2;
 		}
-		input[type='text']:focus, input[type='password']:focus {
+		input[type='text']:focus, input[type='password']:focus, input[type='email']:focus {
 			color: black;
 			font-style: normal;
 		}

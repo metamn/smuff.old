@@ -1,13 +1,13 @@
 /*
 Syntax error: Undefined mixin 'block'.
-        on line 4 of /Users/cs/work/smuff/assets/startpage.scss, in `block'
-        from line 4 of /Users/cs/work/smuff/assets/startpage.scss
+        on line 5 of /Users/cs/work/smuff/assets/startpage.scss, in `block'
+        from line 5 of /Users/cs/work/smuff/assets/startpage.scss
 
 1: /Users/cs/work/smuff/assets/startpage.scss
 
 Backtrace:
-/Users/cs/work/smuff/assets/startpage.scss:4:in `block'
-/Users/cs/work/smuff/assets/startpage.scss:4
+/Users/cs/work/smuff/assets/startpage.scss:5:in `block'
+/Users/cs/work/smuff/assets/startpage.scss:5
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
@@ -103,4 +103,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'block'.\A         on line 4 of /Users/cs/work/smuff/assets/startpage.scss, in `block'\A         from line 4 of /Users/cs/work/smuff/assets/startpage.scss\A \A 1: /Users/cs/work/smuff/assets/startpage.scss"; }
+  content: "Syntax error: Undefined mixin 'block'.\A         on line 5 of /Users/cs/work/smuff/assets/startpage.scss, in `block'\A         from line 5 of /Users/cs/work/smuff/assets/startpage.scss\A \A 1: /Users/cs/work/smuff/assets/startpage.scss"; }

@@ -21,11 +21,76 @@ $light-gray: #ccc;
 $very-light-gray: #f1f1f1;
 
 
-
-
 /* Theme mixins
 ---------------------------------------------------
 */
+
+
+// Subscribe to newsletter
+@mixin subscribe-to-newsletter {
+	background: #4D8FCE;
+	
+	.arrow-right {
+		width: 0; 
+		height: 0;
+		line-height: 0;
+		border-top: $pad*4 solid transparent;
+		border-right: $pad*4 solid transparent;
+		border-bottom: $pad*4 solid transparent;
+		border-left: $pad*4 solid $color;
+		
+		float: left;
+	}
+	
+	
+	h4 {
+		padding: $pad 0;
+	}
+
+	#text {
+		width: 53%;
+		margin-right: 4%;
+		float: left;
+		
+		form {
+			padding: 0;
+			
+			input.text {
+  			width: 98%;
+  		}
+  	}
+  	
+		#whatis {
+			position: relative;
+			top: -1.5em;
+			left: 90%;
+			font-size: smaller;
+			text-decoration: underline;
+			
+			.tooltip-text {
+				text-decoration: none;
+			}
+		}
+		#whatis:hover .tooltip-text {
+			left: 5em;
+		}
+	}
+
+	#facebook-connect {
+		float: left;
+		width: 20%;
+		
+		.fb-login-button {
+			margin-top: .7em;
+		}
+		
+		#auth-loggedin {
+			padding: 1.5em 1em;
+			font-size: small;
+		}
+	}
+}
+
 
 // A list like used in the header to display cart
 @mixin list-cart {
@@ -41,10 +106,63 @@ $very-light-gray: #f1f1f1;
 }
 
 
+// Bestseller 
+@mixin image-bestseller {
+	height: $pad*24;
+	background: $background url(stripe.png);
+	
+	img {
+		@include image-bordered;
+	}
+	
+	#text {
+		h4, p {
+			background: $background;
+			margin: $pad/2;
+			padding: $pad/2;
+			min-height: $pad*2;
+		}
+		
+		h4 {
+			font-weight: bold;
+		}
+		p {
+			padding: $pad/2;
+		}
+	}
+	
+	#price {
+		position: relative;
+		top: $pad*4;
+		width: 50%;
+		float: left;
+		margin-left: $pad;
+	}
+	
+	#category {
+		position: relative;
+		top: $pad*4;
+		width: 30%;
+		float: right;
+		text-align: right;
+		margin-right: $pad;
+		
+		a {
+			background: $gray;
+			padding: $pad/4;
+			color: $background;
+		}
+	}
+	
+}
+
+
 // Hot
 @mixin image-hot {
 	#large-image {
 		img {
+			@include image-bordered;
+			
 			background: url(ajax-loader.gif) no-repeat 50% 50%;
 		}
 	}
@@ -99,16 +217,29 @@ $very-light-gray: #f1f1f1;
 			#price {
 				color: $very-light-gray;
 				position: relative;
-				top: $pad*4 - $pad/4;
+				top: -$pad*4;
 				float: right;
 				margin-right: 1%;
+				
+				.normal-price {
+					color: $color;
+				}
 			}
 		}
-		
-		
 	}
-	
 }
+
+
+@mixin image-bordered {
+	width: 98%;
+	padding: 1%;
+	border: 1px solid $light-gray;
+	background: $background url(ajax-loader.gif) no-repeat 50% 50%;
+}
+
+
+
+
 
 
 
@@ -123,6 +254,7 @@ body {
 		/* Fonts
 		---------------------------------------------------
 		*/
+		
 		font-family: 'Coda', serif;
 		h1, h2 {
 			font-family: 'Oswald', sans-serif;
@@ -146,12 +278,79 @@ body {
 		}
 		
 		
-		/* 
+		
+		/* Price
 		---------------------------------------------------
 		*/
 		
+		.price, .normal-price {
+			border: $light-gray;
+			padding: $pad/4;
+			-moz-border-radius: 10%;
+			-webkit-border-radius: 10%;    
+		}
+		.price {
+			background: $sale;
+		}
+		.old-price, .oldprice {
+			text-decoration: line-through;
+		}
+		.normal-price {
+			background: $blue;    
+		}
+
 		
+		/* Navigation arrows
+		---------------------------------------------------
+		*/
 		
+		.image-navigation {
+			position: absolute;
+			
+			font-size: 4em;
+			text-align: center;
+			width: 50px;
+			height: 50px;
+			border-radius: 30px;
+			border: 1px solid $light-gray;
+			cursor: pointer;
+			
+			display: none;
+		}
+		.image-navigation.left {
+			background: $background url(left-arrow-black.png) no-repeat 50%;
+		}
+		.image-navigation.right {
+			background: $background url(right-arrow-black.png) no-repeat 50%;
+		}
+
+		
+		/* Tooltips
+		----------------------------------------------------
+		- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
+		- styling tooltips is done inside #tooltip not .tooltip-text
+		*/
+		
+		.tooltip {	
+			cursor: pointer;
+		}
+		.tooltip-text {
+			display: none;
+		}
+		#tooltip {
+			background: $blue;
+			padding: $pad;
+			position: absolute;
+		}
+		#tooltip ul {
+			list-style: none;
+		}
+		#tooltip ul li, #tooltip ol li {
+			padding: $pad/4;
+			margin: $pad/4;
+			border-bottom: 1px dotted;
+		}
+
 		
 		
 		/* Header
@@ -237,17 +436,138 @@ body {
 		---------------------------------------------------
 		*/
 			
-		/* hot
+		/* Hot
 		*/
+		
+		.home .image-navigation {
+			display: block;
+			top: 400px;
+		}
+		.home .image-navigation.left {
+			margin-left: -20px;
+		}
+		.home .image-navigation.right {
+			margin-left: 680px;
+		}
+
 		
 		#hot {
 			#slider {
 				@include image-hot;
 			}
+			
+			#thumbs {
+				background: $background url(stripe.png);
+				overflow: hidden;
+				
+				#items {
+					height: 560px;
+					overflow-y: scroll;
+					position: relative;
+					right: -30px;
+					
+					.item {
+						padding: $pad/2 $pad;
+						
+						img {
+							@include image-bordered;
+							
+							width: 100px;
+						}
+						
+						.tooltip2 {
+							position: relative;
+							z-index: 1000;
+							cursor: pointer;
+							
+							.tooltip-text {
+								width: 86px;
+								height: auto;
+								min-height: 86px;
+								top: -90px;
+								position: absolute;
+								
+								background: $cart;
+								padding: $pad/2;
+								
+								display: none;
+							}
+						}
+						.tooltip2:hover {
+							z-index: 1001;
+							
+							.tooltip-text {
+								display: block;
+								left: 0;
+							}
+						}
+						
+					}
+				}
+			}
 		}
 		
 		
-	}
-	
-	
+		// Bestsellers
+		#bestsellers {
+			#title {
+				h3 {
+					background: $color;
+					color: $sale;
+					padding: 0 $pad;
+					margin: 0;
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+				h3.first {
+					padding-top: $pad;
+				}
+				h3.last {
+					padding-bottom: $pad;
+				}
+			}
+			
+			#body {
+				#filters {
+					@include block;
+					
+					margin-bottom: $pad*3;
+					padding-bottom: $pad;
+					border-bottom: 1px solid;
+					
+					div {
+						background: $color;
+						
+						h4 {
+							@include pointer;
+							
+							color: $gray;
+							margin: $pad/2 0;
+							text-align: center;
+						}
+						h4.active, h4:hover {
+							color: $background;
+						}
+						h4.active:before {
+							content: '\2713';
+							margin-right: $pad/2;
+						}
+
+					}
+				}
+				
+				#items {
+					.item {
+						@include image-bestseller;
+					}
+				}
+			}
+		}
+
+
+	}	
 }
+
+
+
+
