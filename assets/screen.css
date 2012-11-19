@@ -96,70 +96,65 @@ img {
 }
 /* line 2, typography.scss */
 body {
-  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-size: 100%;
   line-height: 1.25;
 }
-/* line 13, typography.scss */
-body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-/* line 29, typography.scss */
+/* line 20, typography.scss */
 body .container h1 {
   font-size: 2em;
   padding: 1.25em 0;
 }
 @media only screen and (max-width: 320px) {
-  /* line 29, typography.scss */
+  /* line 20, typography.scss */
   body .container h1 {
     font-size: 1.5em;
     padding: 1.45833em 0;
   }
 }
-/* line 38, typography.scss */
+/* line 29, typography.scss */
 body .container h2 {
   font-size: 1.75em;
   padding: 1.51786em 0;
 }
 @media only screen and (max-width: 320px) {
-  /* line 38, typography.scss */
+  /* line 29, typography.scss */
   body .container h2 {
     font-size: 1.33333em;
     padding: 1.25em 0;
   }
 }
-/* line 47, typography.scss */
+/* line 38, typography.scss */
 body .container h3 {
   font-size: 1.5em;
   padding: 1.45833em 0;
 }
 @media only screen and (max-width: 320px) {
-  /* line 47, typography.scss */
+  /* line 38, typography.scss */
   body .container h3 {
     font-size: 1.16667em;
     padding: 1.51786em 0;
   }
 }
-/* line 57, typography.scss */
+/* line 48, typography.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 63, typography.scss */
+/* line 54, typography.scss */
 body .container h4, body .container h5, body .container h6 {
   font-size: 1em;
   text-transform: uppercase;
 }
-/* line 69, typography.scss */
+/* line 60, typography.scss */
 body .container h6 {
   text-transform: none;
   font-variant: small-caps;
 }
-/* line 82, typography.scss */
+/* line 73, typography.scss */
 body .container p + p {
   margin-top: 1.25em;
 }
-/* line 87, typography.scss */
+/* line 78, typography.scss */
 body .container q, body .container blockquote {
   margin: 1.25em;
   border-left: 1px dotted;
@@ -167,63 +162,63 @@ body .container q, body .container blockquote {
   font-style: italic;
   font-size: larger;
 }
-/* line 98, typography.scss */
+/* line 89, typography.scss */
 body .container address {
   font-variant: small-caps;
 }
-/* line 106, typography.scss */
+/* line 97, typography.scss */
 body .container ul, body .container menu, body .container dir, body .container ol {
   margin: 1.25em;
   list-style-type: square;
 }
-/* line 111, typography.scss */
+/* line 102, typography.scss */
 body .container ol {
   list-style-type: decimal;
 }
-/* line 115, typography.scss */
+/* line 106, typography.scss */
 body .container dl {
   margin: 1.25em 0;
 }
-/* line 118, typography.scss */
+/* line 109, typography.scss */
 body .container dl dt {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 122, typography.scss */
+/* line 113, typography.scss */
 body .container dl dd {
   margin: 0.625em 1.25em 1.875em;
 }
-/* line 132, typography.scss */
+/* line 123, typography.scss */
 body .container table {
   margin: 1.25em 0;
 }
-/* line 137, typography.scss */
+/* line 128, typography.scss */
 body .container table thead tr td {
   font-weight: bold;
 }
-/* line 143, typography.scss */
+/* line 134, typography.scss */
 body .container table tbody {
   border-top: 1px dotted;
   border-bottom: 1px dotted;
 }
-/* line 148, typography.scss */
+/* line 139, typography.scss */
 body .container table td, body .container table th, body .container table tr {
   text-align: left;
   vertical-align: top;
 }
-/* line 153, typography.scss */
+/* line 144, typography.scss */
 body .container table td {
   padding: 1.25em;
 }
-/* line 163, typography.scss */
+/* line 154, typography.scss */
 body .container em {
   font-style: italic;
 }
-/* line 167, typography.scss */
+/* line 158, typography.scss */
 body .container strong {
   font-weight: bold;
 }
-/* line 179, typography.scss */
+/* line 170, typography.scss */
 body .container input, body .container textarea {
   border: none;
   outline: 0;
@@ -233,39 +228,39 @@ body .container input, body .container textarea {
   font-size: medium;
   font-family: monospace;
 }
-/* line 192, typography.scss */
+/* line 183, typography.scss */
 body .container input[type='text'], body .container input[type='password'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
   padding: 0.625em;
 }
-/* line 199, typography.scss */
+/* line 190, typography.scss */
 body .container input[type='text']:focus, body .container input[type='password']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 205, typography.scss */
+/* line 196, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 210, typography.scss */
+/* line 201, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 217, typography.scss */
+/* line 208, typography.scss */
 body .container input[type='radio']:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 221, typography.scss */
+/* line 212, typography.scss */
 body .container input[type='radio']:checked:after {
   content: '\25a3';
 }
-/* line 226, typography.scss */
+/* line 217, typography.scss */
 body .container input[type='checkbox']:after {
   content: '\272A';
   margin-right: 0.15625em;
@@ -274,7 +269,7 @@ body .container input[type='checkbox']:after {
   vertical-align: top;
   color: lightgray;
 }
-/* line 237, typography.scss */
+/* line 228, typography.scss */
 body .container input[type='checkbox']:checked:after {
   color: black;
 }
@@ -316,11 +311,11 @@ body .container input[type='checkbox']:checked:after {
 /* Theme mixins
 ---------------------------------------------------
 */
-/* line 248, theme.scss */
+/* line 294, theme.scss */
 body {
   background: white url(dotted_bg.png);
 }
-/* line 251, theme.scss */
+/* line 297, theme.scss */
 body .container {
   /* Fonts
   ---------------------------------------------------
@@ -347,45 +342,52 @@ body .container {
   ---------------------------------------------------
   */
   /* Hot
+  ---------------------------------------------------
+  */
+  /* Bestsellers
+  ---------------------------------------------------
+  */
+  /* Promo
+  ---------------------------------------------------
   */
 }
-/* line 259, theme.scss */
+/* line 305, theme.scss */
 body .container h1, body .container h2 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 262, theme.scss */
+/* line 308, theme.scss */
 body .container #search-header, body .container #click-more {
   font-family: 'Nothing You Could Do', cursive;
 }
-/* line 272, theme.scss */
+/* line 318, theme.scss */
 body .container a, body .container a:visited {
   color: #111111;
   text-decoration: none;
 }
-/* line 276, theme.scss */
+/* line 322, theme.scss */
 body .container #accordion a, body .container #accordion a:visited {
   border-bottom: 1px dotted;
 }
-/* line 286, theme.scss */
+/* line 332, theme.scss */
 body .container .price, body .container .normal-price {
   border: #cccccc;
   padding: 0.3125em;
   -moz-border-radius: 10%;
   -webkit-border-radius: 10%;
 }
-/* line 292, theme.scss */
+/* line 338, theme.scss */
 body .container .price {
   background: #f25f18;
 }
-/* line 295, theme.scss */
+/* line 341, theme.scss */
 body .container .old-price, body .container .oldprice {
   text-decoration: line-through;
 }
-/* line 298, theme.scss */
+/* line 344, theme.scss */
 body .container .normal-price {
   background: #4d8fce;
 }
-/* line 307, theme.scss */
+/* line 353, theme.scss */
 body .container .image-navigation {
   position: absolute;
   font-size: 4em;
@@ -397,45 +399,45 @@ body .container .image-navigation {
   cursor: pointer;
   display: none;
 }
-/* line 320, theme.scss */
+/* line 366, theme.scss */
 body .container .image-navigation.left {
   background: white url(left-arrow-black.png) no-repeat 50%;
 }
-/* line 323, theme.scss */
+/* line 369, theme.scss */
 body .container .image-navigation.right {
   background: white url(right-arrow-black.png) no-repeat 50%;
 }
-/* line 334, theme.scss */
+/* line 380, theme.scss */
 body .container .tooltip {
   cursor: pointer;
 }
-/* line 337, theme.scss */
+/* line 383, theme.scss */
 body .container .tooltip-text {
   display: none;
 }
-/* line 340, theme.scss */
+/* line 386, theme.scss */
 body .container #tooltip {
   background: #4d8fce;
   padding: 1.25em;
   position: absolute;
 }
-/* line 345, theme.scss */
+/* line 391, theme.scss */
 body .container #tooltip ul {
   list-style: none;
 }
-/* line 348, theme.scss */
+/* line 394, theme.scss */
 body .container #tooltip ul li, body .container #tooltip ol li {
   padding: 0.3125em;
   margin: 0.3125em;
   border-bottom: 1px dotted;
 }
-/* line 362, theme.scss */
+/* line 408, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart {
   background: url(stripe.png);
   padding: 1.25em;
   font-size: small;
 }
-/* line 367, theme.scss */
+/* line 413, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul {
   list-style: none;
   margin: 0;
@@ -447,69 +449,69 @@ body .container #header #cart.desktop #widgetshoppingcart ul li {
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 370, theme.scss */
+/* line 416, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li#message {
   background: #8aea4c;
 }
-/* line 374, theme.scss */
+/* line 420, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li a:hover {
   font-weight: bold;
 }
-/* line 377, theme.scss */
+/* line 423, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li strong {
   color: #f25f18;
 }
-/* line 387, theme.scss */
+/* line 433, theme.scss */
 body .container #header hgroup #logo h1 {
   font-size: 3.5em;
   font-weight: bold;
   padding: 0.3125em 0 0;
 }
-/* line 395, theme.scss */
+/* line 441, theme.scss */
 body .container #header hgroup #strapline h2 {
   color: #f25f18;
   padding: 1.25em 0 0;
 }
-/* line 402, theme.scss */
+/* line 448, theme.scss */
 body .container #header hgroup #page-name h1 {
   color: #aaaaaa;
   padding: 1.25em 0 0;
   text-align: right;
 }
-/* line 410, theme.scss */
+/* line 456, theme.scss */
 body .container #header nav {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin: 1.25em 0;
 }
-/* line 418, theme.scss */
+/* line 464, theme.scss */
 body .container #header nav ul li {
   margin-right: 1.25em;
 }
-/* line 421, theme.scss */
+/* line 467, theme.scss */
 body .container #header nav ul li a:hover {
   border-bottom: 1px solid;
 }
-/* line 425, theme.scss */
+/* line 471, theme.scss */
 body .container #header nav ul li.all-products-link {
   margin-right: 0;
   float: right;
 }
-/* line 442, theme.scss */
+/* line 489, theme.scss */
 body .container .home .image-navigation {
   display: block;
   top: 400px;
 }
-/* line 446, theme.scss */
+/* line 493, theme.scss */
 body .container .home .image-navigation.left {
   margin-left: -20px;
 }
-/* line 449, theme.scss */
+/* line 496, theme.scss */
 body .container .home .image-navigation.right {
   margin-left: 680px;
 }
-/* line 163, theme.scss */
+/* line 209, theme.scss */
 body .container #hot #slider #large-image img {
   width: 98%;
   padding: 1%;
@@ -517,13 +519,13 @@ body .container #hot #slider #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 170, theme.scss */
+/* line 216, theme.scss */
 body .container #hot #slider #large-image-title {
   background: #111111;
   color: #f1f1f1;
   height: 3.75em;
 }
-/* line 175, theme.scss */
+/* line 221, theme.scss */
 body .container #hot #slider #large-image-title #text {
   background: #f25f18;
   color: #f1f1f1;
@@ -532,12 +534,12 @@ body .container #hot #slider #large-image-title #text {
   width: 20%;
   float: left;
 }
-/* line 185, theme.scss */
+/* line 231, theme.scss */
 body .container #hot #slider #large-image-title #info {
   width: 80%;
   float: right;
 }
-/* line 189, theme.scss */
+/* line 235, theme.scss */
 body .container #hot #slider #large-image-title #info .arrow-right {
   width: 0;
   height: 0;
@@ -548,7 +550,7 @@ body .container #hot #slider #large-image-title #info .arrow-right {
   border-left: 30px solid #f25f18;
   margin-left: -1px;
 }
-/* line 201, theme.scss */
+/* line 247, theme.scss */
 body .container #hot #slider #large-image-title #info h3 {
   color: #f25f18;
   position: relative;
@@ -556,14 +558,14 @@ body .container #hot #slider #large-image-title #info h3 {
   top: -2.5em;
   left: 1.875em;
 }
-/* line 209, theme.scss */
+/* line 255, theme.scss */
 body .container #hot #slider #large-image-title #info p {
   color: #f1f1f1;
   position: relative;
   top: -3.75em;
   left: 2.8125em;
 }
-/* line 217, theme.scss */
+/* line 263, theme.scss */
 body .container #hot #slider #large-image-title #info #price {
   color: #f1f1f1;
   position: relative;
@@ -571,27 +573,27 @@ body .container #hot #slider #large-image-title #info #price {
   float: right;
   margin-right: 1%;
 }
-/* line 224, theme.scss */
+/* line 270, theme.scss */
 body .container #hot #slider #large-image-title #info #price .normal-price {
   color: #111111;
 }
-/* line 459, theme.scss */
+/* line 506, theme.scss */
 body .container #hot #thumbs {
   background: white url(stripe.png);
   overflow: hidden;
 }
-/* line 463, theme.scss */
+/* line 510, theme.scss */
 body .container #hot #thumbs #items {
   height: 560px;
   overflow-y: scroll;
   position: relative;
   right: -30px;
 }
-/* line 469, theme.scss */
+/* line 516, theme.scss */
 body .container #hot #thumbs #items .item {
   padding: 0.625em 1.25em;
 }
-/* line 472, theme.scss */
+/* line 519, theme.scss */
 body .container #hot #thumbs #items .item img {
   width: 98%;
   padding: 1%;
@@ -599,13 +601,13 @@ body .container #hot #thumbs #items .item img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   width: 100px;
 }
-/* line 478, theme.scss */
+/* line 525, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 {
   position: relative;
   z-index: 1000;
   cursor: pointer;
 }
-/* line 483, theme.scss */
+/* line 530, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   width: 86px;
   height: auto;
@@ -616,16 +618,16 @@ body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   padding: 0.625em;
   display: none;
 }
-/* line 496, theme.scss */
+/* line 543, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover {
   z-index: 1001;
 }
-/* line 499, theme.scss */
+/* line 546, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover .tooltip-text {
   display: block;
   left: 0;
 }
-/* line 514, theme.scss */
+/* line 563, theme.scss */
 body .container #bestsellers #title h3 {
   background: #111111;
   color: #f25f18;
@@ -634,15 +636,15 @@ body .container #bestsellers #title h3 {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 522, theme.scss */
+/* line 571, theme.scss */
 body .container #bestsellers #title h3.first {
   padding-top: 1.25em;
 }
-/* line 525, theme.scss */
+/* line 574, theme.scss */
 body .container #bestsellers #title h3.last {
   padding-bottom: 1.25em;
 }
-/* line 531, theme.scss */
+/* line 580, theme.scss */
 body .container #bestsellers #body #filters {
   width: 100%;
   float: left;
@@ -650,54 +652,54 @@ body .container #bestsellers #body #filters {
   padding-bottom: 1.25em;
   border-bottom: 1px solid;
 }
-/* line 538, theme.scss */
+/* line 587, theme.scss */
 body .container #bestsellers #body #filters div {
   background: #111111;
 }
-/* line 541, theme.scss */
+/* line 590, theme.scss */
 body .container #bestsellers #body #filters div h4 {
   cursor: pointer;
   color: #aaaaaa;
   margin: 0.625em 0;
   text-align: center;
 }
-/* line 548, theme.scss */
+/* line 597, theme.scss */
 body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
   color: white;
 }
-/* line 551, theme.scss */
+/* line 600, theme.scss */
 body .container #bestsellers #body #filters div h4.active:before {
   content: '\2713';
   margin-right: 0.625em;
 }
-/* line 560, theme.scss */
+/* line 609, theme.scss */
 body .container #bestsellers #body #items .item {
   height: 30em;
   background: white url(stripe.png);
 }
-/* line 114, theme.scss */
+/* line 160, theme.scss */
 body .container #bestsellers #body #items .item img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 119, theme.scss */
+/* line 165, theme.scss */
 body .container #bestsellers #body #items .item #text h4, body .container #bestsellers #body #items .item #text p {
   background: white;
   margin: 0.625em;
   padding: 0.625em;
   min-height: 2.5em;
 }
-/* line 126, theme.scss */
+/* line 172, theme.scss */
 body .container #bestsellers #body #items .item #text h4 {
   font-weight: bold;
 }
-/* line 129, theme.scss */
+/* line 175, theme.scss */
 body .container #bestsellers #body #items .item #text p {
   padding: 0.625em;
 }
-/* line 134, theme.scss */
+/* line 180, theme.scss */
 body .container #bestsellers #body #items .item #price {
   position: relative;
   top: 5em;
@@ -705,7 +707,7 @@ body .container #bestsellers #body #items .item #price {
   float: left;
   margin-left: 1.25em;
 }
-/* line 142, theme.scss */
+/* line 188, theme.scss */
 body .container #bestsellers #body #items .item #category {
   position: relative;
   top: 5em;
@@ -714,11 +716,87 @@ body .container #bestsellers #body #items .item #category {
   text-align: right;
   margin-right: 1.25em;
 }
-/* line 150, theme.scss */
+/* line 196, theme.scss */
 body .container #bestsellers #body #items .item #category a {
   background: #aaaaaa;
   padding: 0.3125em;
   color: white;
+}
+/* line 620, theme.scss */
+body .container #promo #title {
+  color: white;
+}
+/* line 623, theme.scss */
+body .container #promo #title #percent {
+  width: 70%;
+  float: left;
+  background: #f25f18;
+  text-align: center;
+  font-size: 3em;
+  padding: 0.3125em 0;
+}
+/* line 632, theme.scss */
+body .container #promo #title #arrow {
+  width: 30%;
+  float: right;
+}
+/* line 636, theme.scss */
+body .container #promo #title #arrow .arrow-right {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 1.25em solid transparent;
+  border-right: 1.25em solid transparent;
+  border-bottom: 1.25em solid transparent;
+  border-left: 1.25em solid #f25f18;
+  position: relative;
+  top: 1.5625em;
+  margin-left: -1px;
+}
+/* line 653, theme.scss */
+body .container #promo #body #items .item {
+  height: 30em;
+  border-bottom: 3px solid #f1f1f1;
+}
+/* line 114, theme.scss */
+body .container #promo #body #items .item img {
+  width: 98%;
+  padding: 1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+  width: 150px;
+  margin-left: 0.625em;
+}
+/* line 121, theme.scss */
+body .container #promo #body #items .item #text h4, body .container #promo #body #items .item #text p {
+  background: #f1f1f1;
+  margin: 0.625em;
+  padding: 0.625em;
+  min-height: 2.5em;
+}
+/* line 128, theme.scss */
+body .container #promo #body #items .item #text h4 {
+  font-weight: bold;
+}
+/* line 131, theme.scss */
+body .container #promo #body #items .item #text p {
+  padding: 0.625em;
+}
+/* line 136, theme.scss */
+body .container #promo #body #items .item #price {
+  position: relative;
+  top: 5em;
+  float: left;
+  margin-left: 1.25em;
+}
+/* line 143, theme.scss */
+body .container #promo #body #items .item:hover {
+  border-bottom: 3px solid #f25f18;
+  background: white url(stripe.png);
+}
+/* line 148, theme.scss */
+body .container #promo #body #items .item:hover #text h4, body .container #promo #body #items .item:hover #text p {
+  background: white;
 }
 
 /* line 2, header.scss */
@@ -996,12 +1074,13 @@ body.home .container #promo #body #items .item {
   width: 22%;
   margin: 0 4% 0 0;
   float: left;
+  margin-bottom: 5em;
 }
-/* line 111, startpage.scss */
+/* line 112, startpage.scss */
 body.home .container #promo #body #items .item.c4, body.home .container #promo #body #items .item.c8, body.home .container #promo #body #items .item.c12 {
   margin-right: 0;
 }
-/* line 116, startpage.scss */
+/* line 117, startpage.scss */
 body.home .container #promo #body #more {
   float: right;
 }

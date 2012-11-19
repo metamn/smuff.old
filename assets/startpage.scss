@@ -107,6 +107,7 @@ body.home {
 				#items {
 					.item {
 						@include col(22%, 0, 4%);
+						margin-bottom: $pad*4;
 					}
 					.item.c4, .item.c8, .item.c12 {
 						margin-right: 0;

@@ -106,8 +106,54 @@ $very-light-gray: #f1f1f1;
 }
 
 
+// Promo 
+@mixin promo {
+	height: $pad*24;
+	border-bottom: 3px solid $very-light-gray;
+	
+	img {
+		@include image-bordered;
+		width: $image-thumb-width;
+		margin-left: $pad/2;
+	}
+	
+	#text {
+		h4, p {
+			background: $very-light-gray;
+			margin: $pad/2;
+			padding: $pad/2;
+			min-height: $pad*2;
+		}
+		
+		h4 {
+			font-weight: bold;
+		}
+		p {
+			padding: $pad/2;
+		}
+	}
+	
+	#price {
+		position: relative;
+		top: $pad*4;
+		float: left;
+		margin-left: $pad;
+	}
+	
+	&:hover {
+		border-bottom: 3px solid $sale;
+		background: $background url(stripe.png);
+		
+		#text {
+			h4, p {
+				background: $background;
+			}
+		}
+	}
+}
+
 // Bestseller 
-@mixin image-bestseller {
+@mixin bestseller {
 	height: $pad*24;
 	background: $background url(stripe.png);
 	
@@ -395,6 +441,7 @@ body {
 					h2 {
 						color: $sale;
 						padding: $pad 0 0;
+						font-weight: bold;
 					}
 				}
 				
@@ -437,6 +484,7 @@ body {
 		*/
 			
 		/* Hot
+		---------------------------------------------------
 		*/
 		
 		.home .image-navigation {
@@ -508,7 +556,9 @@ body {
 		}
 		
 		
-		// Bestsellers
+		/* Bestsellers
+		---------------------------------------------------
+		*/
 		#bestsellers {
 			#title {
 				h3 {
@@ -558,12 +608,55 @@ body {
 				
 				#items {
 					.item {
-						@include image-bestseller;
+						@include bestseller;
 					}
 				}
 			}
 		}
 
+		/* Promo
+		---------------------------------------------------
+		*/
+		#promo {
+			#title {
+				color: $background;
+				
+				#percent {
+					width: 70%;
+					float: left;
+					background: $sale;
+					
+					text-align: center;
+					font-size: 3em;
+					padding: $pad/4 0;
+				}
+				#arrow {
+					width: 30%;
+					float: right;
+					
+					.arrow-right {
+						width: 0;
+						height: 0;
+						line-height: 0;
+						border-top: $pad solid transparent;
+						border-right: $pad solid transparent;
+						border-bottom: $pad solid transparent;
+						border-left: $pad solid $sale;
+						position: relative;
+						top: $pad + $pad/4;
+						margin-left: -1px;
+					}
+				}
+			}
+			
+			#body {
+				#items {
+					.item {
+						@include promo;
+					}
+				}
+			}
+		}
 
 	}	
 }

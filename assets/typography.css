@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'respond-to'.
-        on line 33 of /Users/cs/work/smuff/assets/typography.scss, in `respond-to'
-        from line 33 of /Users/cs/work/smuff/assets/typography.scss
+        on line 24 of /Users/cs/work/smuff/assets/typography.scss, in `respond-to'
+        from line 24 of /Users/cs/work/smuff/assets/typography.scss
 
 Backtrace:
-/Users/cs/work/smuff/assets/typography.scss:33:in `respond-to'
-/Users/cs/work/smuff/assets/typography.scss:33
+/Users/cs/work/smuff/assets/typography.scss:24:in `respond-to'
+/Users/cs/work/smuff/assets/typography.scss:24
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
@@ -101,4 +101,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'respond-to'.\A         on line 33 of /Users/cs/work/smuff/assets/typography.scss, in `respond-to'\A         from line 33 of /Users/cs/work/smuff/assets/typography.scss"; }
+  content: "Syntax error: Undefined mixin 'respond-to'.\A         on line 24 of /Users/cs/work/smuff/assets/typography.scss, in `respond-to'\A         from line 24 of /Users/cs/work/smuff/assets/typography.scss"; }

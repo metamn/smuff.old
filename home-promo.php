@@ -6,7 +6,7 @@
 				%
 			</span>
 		</div>
-		<div class="column span-1 last arrow-vertical">
+		<div id="arrow">
 			<div class="arrow-right"></div>
 		</div>
 	</div>
