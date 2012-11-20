@@ -5,7 +5,7 @@
 
 ?>
 
-<section id="info">
+<section id="footer-info">
   <div id="col-1">
     <div id="contact">
       <?php 

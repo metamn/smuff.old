@@ -812,7 +812,7 @@ body {
 			}
 		}
 		
-		#info {
+		#footer-info {
 			#contact {
 				ul {
 					list-style: none;
@@ -822,10 +822,30 @@ body {
 			
 			#company {
 				@include accordion;
+				
+				h3 {
+					background: transparent;
+					border: none;
+					padding: $pad 0;
+				}
 			}
 			
 			#pages {
 				@include accordion;
+			}
+		}
+		
+		#footer {
+			background: $light-gray-2;
+			border-bottom: 1px solid $light-gray;
+			padding: $pad/2;
+		}
+		
+		#footer-subscribe {
+			#newsletter {
+				input[type="email"] {
+					width: 100%;
+				}
 			}
 		}
 		

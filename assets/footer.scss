@@ -30,7 +30,7 @@ body {
 			}
 		}
 		
-		#info {
+		#footer-info {
 			@include block;
 			margin: $margin 0;
 			
@@ -45,12 +45,12 @@ body {
 		
 		#footer {
 			@include block;
-			margin: $margin 0;
+			margin: $margin 0 0;
 		}
 		
 		#footer-subscribe {
 			@include block;
-			margin: $margin 0;
+			margin: $pad 0 $margin;
 			
 			#newsletter {
 				@include col(45%, 0, 10%);

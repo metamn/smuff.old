@@ -917,12 +917,12 @@ body .container #top-new-categories ul li:hover {
   border: 1px solid #111111;
 }
 /* line 817, theme.scss */
-body .container #info #contact ul {
+body .container #footer-info #contact ul {
   list-style: none;
   margin: 0;
 }
 /* line 34, theme.scss */
-body .container #info #company h3 {
+body .container #footer-info #company h3 {
   cursor: pointer;
   padding: 0.625em 0.3125em;
   background: #eeeeee;
@@ -930,11 +930,17 @@ body .container #info #company h3 {
   margin-bottom: 1px;
 }
 /* line 41, theme.scss */
-body .container #info #company div {
+body .container #footer-info #company div {
   display: none;
+}
+/* line 826, theme.scss */
+body .container #footer-info #company h3 {
+  background: transparent;
+  border: none;
+  padding: 1.25em 0;
 }
 /* line 34, theme.scss */
-body .container #info #pages h3 {
+body .container #footer-info #pages h3 {
   cursor: pointer;
   padding: 0.625em 0.3125em;
   background: #eeeeee;
@@ -942,8 +948,18 @@ body .container #info #pages h3 {
   margin-bottom: 1px;
 }
 /* line 41, theme.scss */
-body .container #info #pages div {
+body .container #footer-info #pages div {
   display: none;
+}
+/* line 838, theme.scss */
+body .container #footer {
+  background: #eeeeee;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.625em;
+}
+/* line 846, theme.scss */
+body .container #footer-subscribe #newsletter input[type="email"] {
+  width: 100%;
 }
 
 /* line 2, header.scss */
@@ -1276,19 +1292,19 @@ body .container #top-new-categories ul li {
   margin: 0 2.5%;
 }
 /* line 33, footer.scss */
-body .container #info {
+body .container #footer-info {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
 /* line 37, footer.scss */
-body .container #info #col-1 {
+body .container #footer-info #col-1 {
   width: 45%;
   margin: 0 10% 0 0;
   float: left;
 }
 /* line 41, footer.scss */
-body .container #info #col-2 {
+body .container #footer-info #col-2 {
   width: 45%;
   margin: 0 0 0 0;
   float: left;
@@ -1297,13 +1313,13 @@ body .container #info #col-2 {
 body .container #footer {
   width: 100%;
   float: left;
-  margin: 5% 0;
+  margin: 5% 0 0;
 }
 /* line 51, footer.scss */
 body .container #footer-subscribe {
   width: 100%;
   float: left;
-  margin: 5% 0;
+  margin: 1.25em 0 5%;
 }
 /* line 55, footer.scss */
 body .container #footer-subscribe #newsletter {
