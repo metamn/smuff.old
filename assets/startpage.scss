@@ -14,7 +14,6 @@ body.home {
 			}
 			
 			
-			
 			#noutati {
 				@include block;
 				@include hidden;
@@ -33,8 +32,7 @@ body.home {
 		#subscribe-newsletter {
 			@include block;
 			@include subscribe-to-newsletter;
-			
-			margin: $pad*2 0;
+			margin: $margin 0;
 		}
 		#subscribe-newsletter.bigger-margin-bottom {
 			margin-bottom: $pad*8;
@@ -43,6 +41,7 @@ body.home {
 		
 		#bestsellers {
 			@include block;
+			margin: $margin 0;
 			
 			#title {
 				/* @include col($minor2, 0, 0); */
@@ -81,6 +80,7 @@ body.home {
 		
 		#search {
 			@include block;
+			margin: $margin 0;
 			
 			#title {
 				@include col($minor2, 0, 0);
@@ -93,6 +93,9 @@ body.home {
 		}
 		
 		#promo {
+			@include block;
+			margin: $margin 0;
+			
 			#title {
 				@include col($minor2, 0, 0);
 				

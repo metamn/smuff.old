@@ -3,6 +3,7 @@ body {
 		
 		#facebook-like-box {
 			@include block;
+			margin: $margin 0;
 			
 			#campaign-message {
 				@include col(45%, 5%, 0);
@@ -17,18 +18,22 @@ body {
 		
 		#top-new-categories {
 			@include block;
+			margin: $margin 0;
 			
 			ul {
 				@include list-inline;
 				
 				li {
-					width: 21%;
-					margin: 0 2%;
+					width: 19%;
+					margin: 0 2.5%;
 				}
 			}
 		}
 		
 		#info {
+			@include block;
+			margin: $margin 0;
+			
 			#col-1 {
 				@include col(45%, 0, 10%);
 			}
@@ -40,10 +45,12 @@ body {
 		
 		#footer {
 			@include block;
+			margin: $margin 0;
 		}
 		
 		#footer-subscribe {
 			@include block;
+			margin: $margin 0;
 			
 			#newsletter {
 				@include col(45%, 0, 10%);

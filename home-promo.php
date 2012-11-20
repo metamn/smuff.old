@@ -2,9 +2,9 @@
 <section id="promo">
 	<div id="title">
 		<div id="percent">
-			<span class="value">
+			<h3 class="value">
 				%
-			</span>
+			</h3>
 		</div>
 		<div id="arrow">
 			<div class="arrow-right"></div>

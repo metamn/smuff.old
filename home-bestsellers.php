@@ -1,16 +1,6 @@
 <section id="bestsellers">    
   <div id="title">    
-    <h2 class='first'>B</h2>
-    <h2>e</h2>
-    <h2>s</h2>
-    <h2>t</h2>
-    <h2>s</h2>
-    <h2>e</h2>
-    <h2>l</h2>
-    <h2>l</h2>
-    <h2>e</h2>
-    <h2>r</h2>
-    <h2 class='last'>s</h2>        
+    <h2>Bestsellers</h2>        
   </div>
   
   
