@@ -129,7 +129,7 @@ $very-light-gray: #f1f1f1;
 	border-bottom: 3px solid $very-light-gray;
 	
 	img {
-		@include image-bordered;
+		@include image-bordered(1%);
 		width: $image-thumb-width;
 		margin-left: $pad/2;
 	}
@@ -175,7 +175,7 @@ $very-light-gray: #f1f1f1;
 	background: $background url(stripe.png);
 	
 	img {
-		@include image-bordered;
+		@include image-bordered(1%);
 	}
 	
 	#text {
@@ -228,7 +228,7 @@ $very-light-gray: #f1f1f1;
 @mixin image-hot {
 	#large-image {
 		img {
-			@include image-bordered;
+			@include image-bordered(.1%);
 			background: url(ajax-loader.gif) no-repeat 50% 50%;
 		}
 	}
@@ -237,6 +237,8 @@ $very-light-gray: #f1f1f1;
 		background: $color;
 		color: $very-light-gray;
 		height: 5.3em;
+		position: relative;
+		top: -$pad/4;
 		
 		#text {
 			background: $sale;
@@ -300,9 +302,9 @@ $very-light-gray: #f1f1f1;
 }
 
 
-@mixin image-bordered {
-	width: 98%;
-	padding: 1%;
+@mixin image-bordered($padding) {
+	width: 100%-($padding*2);
+	padding: $padding;
 	border: 1px solid $light-gray;
 	background: $background url(ajax-loader.gif) no-repeat 50% 50%;
 }
@@ -620,7 +622,7 @@ body {
 						padding: $pad/2 $pad;
 						
 						img {
-							@include image-bordered;
+							@include image-bordered(1%);
 							
 							width: 100px;
 						}
@@ -653,6 +655,18 @@ body {
 						}
 						
 					}
+				}
+			}
+			
+			#more {
+				background: url(arrow-black-bottom-right.png) no-repeat 15em -4em;
+				height: 10em;
+				width: 40em;
+				float: right;
+				
+				h4 {
+					font-family: 'Nothing You Could Do', cursive; 
+					margin-top: 2em;
 				}
 			}
 		}

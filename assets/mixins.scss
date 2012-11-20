@@ -23,6 +23,8 @@
 
 
 /* rotate
+
+- example rotate(180deg, 1.5)
 */
 @mixin rotate($deg, $value) {
   -moz-transform: rotate($deg);  

@@ -13,13 +13,7 @@ body.home {
 				@include col($minor, 0, 0);
 			}
 			
-			#more {
-				@include block;
-				cursor: pointer;
-				
-				margin-left: $minor2;
-				width: 100%-$minor2;
-			}
+			
 			
 			#noutati {
 				@include block;
