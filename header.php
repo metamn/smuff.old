@@ -92,7 +92,7 @@
 					</div>
 					
 	    		<div id="page-name">			        
-						<h1><?php echo page_main_name(); ?></h1>
+						<h2><?php echo page_main_name(); ?></h2>
 					</div>
 	    	</hgroup>
 	    	

@@ -96,77 +96,41 @@ img {
 }
 /* line 2, typography.scss */
 body {
-  font-size: 100%;
+  font-size: 75%;
   line-height: 1.25;
 }
-/* line 20, typography.scss */
+/* line 19, typography.scss */
 body .container h1 {
-  font-size: 2em;
-  padding: 1.25em 0;
+  font-size: 4.23077em;
+  padding: 1.2955em 0;
 }
-@media only screen and (max-width: 320px) {
-  /* line 20, typography.scss */
-  body .container h1 {
-    font-size: 1.5em;
-    padding: 1.45833em 0;
-  }
-}
-/* line 29, typography.scss */
+/* line 20, typography.scss */
 body .container h2 {
-  font-size: 1.75em;
-  padding: 1.51786em 0;
+  font-size: 2.61538em;
+  padding: 1.2868em 0;
 }
-@media only screen and (max-width: 320px) {
-  /* line 29, typography.scss */
-  body .container h2 {
-    font-size: 1.33333em;
-    padding: 1.25em 0;
-  }
-}
-/* line 38, typography.scss */
+/* line 21, typography.scss */
 body .container h3 {
-  font-size: 1.5em;
-  padding: 1.45833em 0;
+  font-size: 1.61538em;
+  padding: 1.30958em 0;
 }
-@media only screen and (max-width: 320px) {
-  /* line 38, typography.scss */
-  body .container h3 {
-    font-size: 1.16667em;
-    padding: 1.51786em 0;
-  }
-}
-/* line 47, typography.scss */
+/* line 22, typography.scss */
 body .container h4 {
-  font-size: 1.33333em;
-  padding: 1.25em 0;
+  font-size: large;
 }
-@media only screen and (max-width: 320px) {
-  /* line 47, typography.scss */
-  body .container h4 {
-    font-size: 1em;
-    padding: 1.51786em 0;
-  }
-}
-/* line 57, typography.scss */
-body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-/* line 63, typography.scss */
-body .container h5, body .container h6 {
-  font-size: 1em;
+/* line 23, typography.scss */
+body .container h5 {
   text-transform: uppercase;
 }
-/* line 69, typography.scss */
+/* line 24, typography.scss */
 body .container h6 {
-  text-transform: none;
-  font-variant: small-caps;
+  font-vriant: small-caps;
 }
-/* line 82, typography.scss */
+/* line 33, typography.scss */
 body .container p + p {
   margin-top: 1.25em;
 }
-/* line 87, typography.scss */
+/* line 38, typography.scss */
 body .container q, body .container blockquote {
   margin: 1.25em;
   border-left: 1px dotted;
@@ -174,63 +138,63 @@ body .container q, body .container blockquote {
   font-style: italic;
   font-size: larger;
 }
-/* line 98, typography.scss */
+/* line 49, typography.scss */
 body .container address {
   font-variant: small-caps;
 }
-/* line 106, typography.scss */
+/* line 57, typography.scss */
 body .container ul, body .container menu, body .container dir, body .container ol {
   margin: 1.25em;
   list-style-type: square;
 }
-/* line 111, typography.scss */
+/* line 62, typography.scss */
 body .container ol {
   list-style-type: decimal;
 }
-/* line 115, typography.scss */
+/* line 66, typography.scss */
 body .container dl {
   margin: 1.25em 0;
 }
-/* line 118, typography.scss */
+/* line 69, typography.scss */
 body .container dl dt {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 122, typography.scss */
+/* line 73, typography.scss */
 body .container dl dd {
   margin: 0.625em 1.25em 1.875em;
 }
-/* line 132, typography.scss */
+/* line 83, typography.scss */
 body .container table {
   margin: 1.25em 0;
 }
-/* line 137, typography.scss */
+/* line 88, typography.scss */
 body .container table thead tr td {
   font-weight: bold;
 }
-/* line 143, typography.scss */
+/* line 94, typography.scss */
 body .container table tbody {
   border-top: 1px dotted;
   border-bottom: 1px dotted;
 }
-/* line 148, typography.scss */
+/* line 99, typography.scss */
 body .container table td, body .container table th, body .container table tr {
   text-align: left;
   vertical-align: top;
 }
-/* line 153, typography.scss */
+/* line 104, typography.scss */
 body .container table td {
   padding: 1.25em;
 }
-/* line 163, typography.scss */
+/* line 114, typography.scss */
 body .container em {
   font-style: italic;
 }
-/* line 167, typography.scss */
+/* line 118, typography.scss */
 body .container strong {
   font-weight: bold;
 }
-/* line 179, typography.scss */
+/* line 130, typography.scss */
 body .container input, body .container textarea {
   border: none;
   outline: 0;
@@ -240,44 +204,44 @@ body .container input, body .container textarea {
   font-size: medium;
   font-family: monospace;
 }
-/* line 192, typography.scss */
+/* line 143, typography.scss */
 body .container input[type='text'], body .container input[type='password'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
   padding: 0.625em;
 }
-/* line 199, typography.scss */
+/* line 150, typography.scss */
 body .container input[type='text']:focus, body .container input[type='password']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 205, typography.scss */
+/* line 156, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 210, typography.scss */
+/* line 161, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 217, typography.scss */
+/* line 168, typography.scss */
 body .container input[type='radio']:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 221, typography.scss */
+/* line 172, typography.scss */
 body .container input[type='radio']:checked:after {
   content: '\25a3';
 }
-/* line 226, typography.scss */
+/* line 177, typography.scss */
 body .container input[type='checkbox']:after {
   content: '\272A';
   margin-right: 0.15625em;
 }
-/* line 237, typography.scss */
+/* line 188, typography.scss */
 body .container input[type='checkbox']:checked:after {
   color: black;
 }
@@ -319,11 +283,11 @@ body .container input[type='checkbox']:checked:after {
 /* Theme mixins
 ---------------------------------------------------
 */
-/* line 332, theme.scss */
+/* line 334, theme.scss */
 body {
   background: white url(dotted_bg.png);
 }
-/* line 335, theme.scss */
+/* line 337, theme.scss */
 body .container {
   /* Fonts
   ---------------------------------------------------
@@ -368,39 +332,39 @@ body .container {
   ---------------------------------------------------
   */
 }
-/* line 343, theme.scss */
+/* line 345, theme.scss */
 body .container h1, body .container h2 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 354, theme.scss */
+/* line 356, theme.scss */
 body .container a, body .container a:visited {
   color: #111111;
   text-decoration: none;
 }
-/* line 358, theme.scss */
+/* line 360, theme.scss */
 body .container #accordion a, body .container #accordion a:visited {
   border-bottom: 1px dotted;
 }
-/* line 368, theme.scss */
+/* line 370, theme.scss */
 body .container .price, body .container .normal-price {
   border: #cccccc;
   padding: 0.3125em;
   -moz-border-radius: 10%;
   -webkit-border-radius: 10%;
 }
-/* line 374, theme.scss */
+/* line 376, theme.scss */
 body .container .price {
   background: #f25f18;
 }
-/* line 377, theme.scss */
+/* line 379, theme.scss */
 body .container .old-price, body .container .oldprice {
   text-decoration: line-through;
 }
-/* line 380, theme.scss */
+/* line 382, theme.scss */
 body .container .normal-price {
   background: #4d8fce;
 }
-/* line 389, theme.scss */
+/* line 391, theme.scss */
 body .container .image-navigation {
   position: absolute;
   font-size: 4em;
@@ -412,89 +376,89 @@ body .container .image-navigation {
   cursor: pointer;
   display: none;
 }
-/* line 402, theme.scss */
+/* line 404, theme.scss */
 body .container .image-navigation.left {
   background: white url(left-arrow-black.png) no-repeat 50%;
 }
-/* line 405, theme.scss */
+/* line 407, theme.scss */
 body .container .image-navigation.right {
   background: white url(right-arrow-black.png) no-repeat 50%;
 }
-/* line 417, theme.scss */
+/* line 419, theme.scss */
 body .container .tooltip {
   cursor: pointer;
 }
-/* line 420, theme.scss */
+/* line 422, theme.scss */
 body .container .tooltip-text {
   display: none;
 }
-/* line 423, theme.scss */
+/* line 425, theme.scss */
 body .container #tooltip {
   background: #4d8fce;
   padding: 1.25em;
   position: absolute;
 }
-/* line 428, theme.scss */
+/* line 430, theme.scss */
 body .container #tooltip ul {
   list-style: none;
 }
-/* line 431, theme.scss */
+/* line 433, theme.scss */
 body .container #tooltip ul li, body .container #tooltip ol li {
   padding: 0.3125em;
   margin: 0.3125em;
   border-bottom: 1px dotted;
 }
-/* line 442, theme.scss */
+/* line 444, theme.scss */
 body .container #search-enhanced {
   width: 100%;
   float: left;
   background: #4d8fce;
 }
-/* line 446, theme.scss */
+/* line 448, theme.scss */
 body .container #search-enhanced h3 {
   margin-left: 0.625em;
 }
-/* line 450, theme.scss */
+/* line 452, theme.scss */
 body .container #search-enhanced ul {
   list-style: none;
   margin: 0;
   margin: 0 1.25em;
 }
-/* line 118, theme.scss */
+/* line 117, theme.scss */
 body .container #search-enhanced ul li {
   margin-bottom: 0.3125em;
   padding: 0.3125em;
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 454, theme.scss */
+/* line 456, theme.scss */
 body .container #search-enhanced ul li {
   background: #4d8fce;
   border-bottom: 1px dotted #111111;
 }
-/* line 458, theme.scss */
+/* line 460, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:after {
   content: "\2610";
 }
-/* line 461, theme.scss */
+/* line 463, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:checked:after {
   content: "\25a3";
 }
-/* line 467, theme.scss */
+/* line 469, theme.scss */
 body .container #search-enhanced #submit {
   margin: 2.5em 0 1.25em 1.25em;
 }
-/* line 470, theme.scss */
+/* line 472, theme.scss */
 body .container #search-enhanced #submit #advanced-search {
   font-size: small;
 }
-/* line 476, theme.scss */
+/* line 478, theme.scss */
 body .container #trending {
   width: 100%;
   float: left;
   margin: 5em 0;
 }
-/* line 480, theme.scss */
+/* line 482, theme.scss */
 body .container #trending h2 {
   width: 30%;
   float: left;
@@ -502,65 +466,63 @@ body .container #trending h2 {
   padding-right: 3%;
   border-right: 1px dotted;
 }
-/* line 488, theme.scss */
+/* line 490, theme.scss */
 body .container #trending #items {
   width: 55%;
   margin-left: 3%;
   float: left;
 }
-/* line 493, theme.scss */
+/* line 495, theme.scss */
 body .container #trending #items .trend {
   font-style: italic;
   font-size: large;
   float: left;
   margin: 0.625em;
 }
-/* line 510, theme.scss */
+/* line 512, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart {
   background: url(stripe.png);
   padding: 1.25em;
-  font-size: small;
 }
-/* line 515, theme.scss */
+/* line 516, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul {
   list-style: none;
   margin: 0;
 }
-/* line 118, theme.scss */
+/* line 117, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li {
   margin-bottom: 0.3125em;
   padding: 0.3125em;
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 518, theme.scss */
+/* line 519, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li#message {
   background: #8aea4c;
 }
-/* line 522, theme.scss */
+/* line 523, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li a:hover {
   font-weight: bold;
 }
-/* line 525, theme.scss */
+/* line 526, theme.scss */
 body .container #header #cart.desktop #widgetshoppingcart ul li strong {
   color: #f25f18;
 }
-/* line 535, theme.scss */
+/* line 536, theme.scss */
 body .container #header hgroup #logo h1 {
-  font-size: 3.5em;
   font-weight: bold;
   padding: 0.3125em 0 0;
 }
 /* line 543, theme.scss */
 body .container #header hgroup #strapline h2 {
   color: #f25f18;
-  padding: 1.25em 0 0;
+  padding: 0.9375em 0 0;
   font-weight: bold;
 }
 /* line 551, theme.scss */
-body .container #header hgroup #page-name h1 {
+body .container #header hgroup #page-name h2 {
   color: #aaaaaa;
-  padding: 1.25em 0 0;
+  padding: 0.9375em 0 0;
   text-align: right;
 }
 /* line 559, theme.scss */
@@ -569,6 +531,7 @@ body .container #header nav {
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin: 1.25em 0;
+  font-size: larger;
 }
 /* line 567, theme.scss */
 body .container #header nav ul li {
@@ -596,7 +559,7 @@ body .container .home .image-navigation.left {
 body .container .home .image-navigation.right {
   margin-left: 680px;
 }
-/* line 231, theme.scss */
+/* line 230, theme.scss */
 body .container #hot #slider #large-image img {
   width: 98%;
   padding: 1%;
@@ -604,61 +567,65 @@ body .container #hot #slider #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 238, theme.scss */
+/* line 236, theme.scss */
 body .container #hot #slider #large-image-title {
   background: #111111;
   color: #f1f1f1;
-  height: 3.75em;
+  height: 5.3em;
 }
-/* line 243, theme.scss */
+/* line 241, theme.scss */
 body .container #hot #slider #large-image-title #text {
   background: #f25f18;
   color: #f1f1f1;
   text-align: center;
-  font-size: 3em;
   width: 20%;
   float: left;
 }
-/* line 253, theme.scss */
+/* line 249, theme.scss */
+body .container #hot #slider #large-image-title #text h1 {
+  padding: 0;
+}
+/* line 254, theme.scss */
 body .container #hot #slider #large-image-title #info {
   width: 80%;
   float: right;
 }
-/* line 257, theme.scss */
+/* line 258, theme.scss */
 body .container #hot #slider #large-image-title #info .arrow-right {
   width: 0;
   height: 0;
   line-height: 0;
-  border-top: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid #f25f18;
+  border-top: 2.6em solid transparent;
+  border-right: 2.6em solid transparent;
+  border-bottom: 2.6em solid transparent;
+  border-left: 2.6em solid #f25f18;
   margin-left: -1px;
 }
-/* line 269, theme.scss */
+/* line 270, theme.scss */
 body .container #hot #slider #large-image-title #info h3 {
   color: #f25f18;
   position: relative;
   padding: 0;
-  top: -2.5em;
+  top: -3em;
   left: 1.875em;
 }
-/* line 277, theme.scss */
+/* line 278, theme.scss */
 body .container #hot #slider #large-image-title #info p {
   color: #f1f1f1;
+  font-size: larger;
   position: relative;
-  top: -3.75em;
-  left: 2.8125em;
+  top: -4em;
+  left: 2.5em;
 }
-/* line 285, theme.scss */
+/* line 287, theme.scss */
 body .container #hot #slider #large-image-title #info #price {
   color: #f1f1f1;
   position: relative;
-  top: -5em;
+  top: -6em;
   float: right;
   margin-right: 1%;
 }
-/* line 292, theme.scss */
+/* line 294, theme.scss */
 body .container #hot #slider #large-image-title #info #price .normal-price {
   color: #111111;
 }
@@ -697,7 +664,7 @@ body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   width: 86px;
   height: auto;
   min-height: 86px;
-  top: -90px;
+  top: -91px;
   position: absolute;
   background: #8aea4c;
   padding: 0.625em;
@@ -713,7 +680,7 @@ body .container #hot #thumbs #items .item .tooltip2:hover .tooltip-text {
   left: 0;
 }
 /* line 666, theme.scss */
-body .container #bestsellers #title h3 {
+body .container #bestsellers #title h2 {
   background: #111111;
   color: #f25f18;
   padding: 0 1.25em;
@@ -722,11 +689,11 @@ body .container #bestsellers #title h3 {
   font-weight: bold;
 }
 /* line 674, theme.scss */
-body .container #bestsellers #title h3.first {
+body .container #bestsellers #title h2.first {
   padding-top: 1.25em;
 }
 /* line 677, theme.scss */
-body .container #bestsellers #title h3.last {
+body .container #bestsellers #title h2.last {
   padding-bottom: 1.25em;
 }
 /* line 683, theme.scss */
@@ -745,48 +712,47 @@ body .container #bestsellers #body #filters div {
 body .container #bestsellers #body #filters div h4 {
   cursor: pointer;
   padding: 0.3125em 0;
-  font-size: 1em;
   color: #aaaaaa;
   margin: 0.625em 0;
   text-align: center;
 }
-/* line 702, theme.scss */
+/* line 701, theme.scss */
 body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
   color: white;
 }
-/* line 705, theme.scss */
+/* line 704, theme.scss */
 body .container #bestsellers #body #filters div h4.active:before {
   content: '\2713';
   margin-right: 0.625em;
 }
-/* line 714, theme.scss */
+/* line 713, theme.scss */
 body .container #bestsellers #body #items .item {
   height: 30em;
   background: white url(stripe.png);
 }
-/* line 178, theme.scss */
+/* line 177, theme.scss */
 body .container #bestsellers #body #items .item img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 183, theme.scss */
+/* line 182, theme.scss */
 body .container #bestsellers #body #items .item #text h4, body .container #bestsellers #body #items .item #text p {
   background: white;
   margin: 0.625em;
   padding: 0.625em;
   min-height: 2.5em;
 }
-/* line 190, theme.scss */
+/* line 189, theme.scss */
 body .container #bestsellers #body #items .item #text h4 {
   font-weight: bold;
 }
-/* line 193, theme.scss */
+/* line 192, theme.scss */
 body .container #bestsellers #body #items .item #text p {
   padding: 0.625em;
 }
-/* line 198, theme.scss */
+/* line 197, theme.scss */
 body .container #bestsellers #body #items .item #price {
   position: relative;
   top: 3.75em;
@@ -794,7 +760,7 @@ body .container #bestsellers #body #items .item #price {
   float: left;
   margin-left: 1.25em;
 }
-/* line 206, theme.scss */
+/* line 205, theme.scss */
 body .container #bestsellers #body #items .item #category {
   position: relative;
   top: 3.75em;
@@ -803,30 +769,30 @@ body .container #bestsellers #body #items .item #category {
   text-align: right;
   margin-right: 1.25em;
 }
-/* line 214, theme.scss */
+/* line 213, theme.scss */
 body .container #bestsellers #body #items .item #category a {
   background: #cccccc;
   padding: 0.3125em;
   color: white;
 }
-/* line 219, theme.scss */
+/* line 218, theme.scss */
 body .container #bestsellers #body #items .item #category a:hover {
   background: gray;
 }
-/* line 727, theme.scss */
+/* line 726, theme.scss */
 body .container #search #title {
   background: url(arrow-black-top-right.png) no-repeat 1em 5em;
   height: 20em;
 }
-/* line 731, theme.scss */
+/* line 730, theme.scss */
 body .container #search #title h3 {
   font-family: 'Nothing You Could Do', cursive;
 }
-/* line 743, theme.scss */
+/* line 742, theme.scss */
 body .container #promo #title {
   color: white;
 }
-/* line 746, theme.scss */
+/* line 745, theme.scss */
 body .container #promo #title #percent {
   width: 70%;
   float: left;
@@ -835,12 +801,12 @@ body .container #promo #title #percent {
   font-size: 3em;
   padding: 0.3125em 0;
 }
-/* line 755, theme.scss */
+/* line 754, theme.scss */
 body .container #promo #title #arrow {
   width: 30%;
   float: right;
 }
-/* line 759, theme.scss */
+/* line 758, theme.scss */
 body .container #promo #title #arrow .arrow-right {
   width: 0;
   height: 0;
@@ -853,12 +819,12 @@ body .container #promo #title #arrow .arrow-right {
   top: 1.5625em;
   margin-left: -1px;
 }
-/* line 776, theme.scss */
+/* line 775, theme.scss */
 body .container #promo #body #items .item {
   height: 30em;
   border-bottom: 3px solid #f1f1f1;
 }
-/* line 132, theme.scss */
+/* line 131, theme.scss */
 body .container #promo #body #items .item img {
   width: 98%;
   padding: 1%;
@@ -867,38 +833,38 @@ body .container #promo #body #items .item img {
   width: 150px;
   margin-left: 0.625em;
 }
-/* line 139, theme.scss */
+/* line 138, theme.scss */
 body .container #promo #body #items .item #text h4, body .container #promo #body #items .item #text p {
   background: #f1f1f1;
   margin: 0.625em;
   padding: 0.625em;
   min-height: 2.5em;
 }
-/* line 146, theme.scss */
+/* line 145, theme.scss */
 body .container #promo #body #items .item #text h4 {
   font-weight: bold;
 }
-/* line 149, theme.scss */
+/* line 148, theme.scss */
 body .container #promo #body #items .item #text p {
   padding: 0.625em;
 }
-/* line 154, theme.scss */
+/* line 153, theme.scss */
 body .container #promo #body #items .item #price {
   position: relative;
   top: 5em;
   float: left;
   margin-left: 1.25em;
 }
-/* line 161, theme.scss */
+/* line 160, theme.scss */
 body .container #promo #body #items .item:hover {
   border-bottom: 3px solid #f25f18;
   background: white url(stripe.png);
 }
-/* line 166, theme.scss */
+/* line 165, theme.scss */
 body .container #promo #body #items .item:hover #text h4, body .container #promo #body #items .item:hover #text p {
   background: white;
 }
-/* line 789, theme.scss */
+/* line 788, theme.scss */
 body .container #top-new-categories ul {
   display: block;
   margin: 0;
@@ -911,7 +877,7 @@ body .container #top-new-categories ul li {
   margin-left: 0;
   float: left;
 }
-/* line 312, theme.scss */
+/* line 314, theme.scss */
 body .container #top-new-categories ul li {
   height: 12em;
   border-radius: 8em;
@@ -920,12 +886,12 @@ body .container #top-new-categories ul li {
   box-shadow: 2px 1px 1px #aaaaaa;
   border: 1px solid #4d8fce;
 }
-/* line 320, theme.scss */
+/* line 322, theme.scss */
 body .container #top-new-categories ul li:hover {
   box-shadow: 2px 1px 1px #111111;
   border: 1px solid #111111;
 }
-/* line 797, theme.scss */
+/* line 796, theme.scss */
 body .container #info #contact ul {
   list-style: none;
   margin: 0;
@@ -1098,15 +1064,15 @@ body.home .container #subscribe-newsletter .arrow-right {
   width: 0;
   height: 0;
   line-height: 0;
-  border-top: 5em solid transparent;
-  border-right: 5em solid transparent;
-  border-bottom: 5em solid transparent;
-  border-left: 5em solid #111111;
+  border-top: 6em solid transparent;
+  border-right: 6em solid transparent;
+  border-bottom: 6em solid transparent;
+  border-left: 6em solid #111111;
   float: left;
 }
 /* line 64, theme.scss */
 body.home .container #subscribe-newsletter h4 {
-  padding: 1.25em 0;
+  padding: 0.625em 0;
 }
 /* line 68, theme.scss */
 body.home .container #subscribe-newsletter #text {
@@ -1114,7 +1080,7 @@ body.home .container #subscribe-newsletter #text {
   margin-right: 5%;
   float: left;
   position: relative;
-  margin-left: -5%;
+  margin-left: -3.4%;
 }
 /* line 75, theme.scss */
 body.home .container #subscribe-newsletter #text form {
@@ -1129,23 +1095,22 @@ body.home .container #subscribe-newsletter #text #whatis {
   position: relative;
   top: -1.5em;
   float: right;
-  font-size: smaller;
   text-decoration: underline;
 }
-/* line 91, theme.scss */
+/* line 90, theme.scss */
 body.home .container #subscribe-newsletter #text #whatis .tooltip-text {
   text-decoration: none;
 }
-/* line 95, theme.scss */
+/* line 94, theme.scss */
 body.home .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
   left: 5em;
 }
-/* line 100, theme.scss */
+/* line 99, theme.scss */
 body.home .container #subscribe-newsletter #facebook-connect {
   float: left;
   width: 25%;
 }
-/* line 105, theme.scss */
+/* line 104, theme.scss */
 body.home .container #subscribe-newsletter #facebook-connect #auth-loggedin {
   padding: 1.25em;
   font-size: small;

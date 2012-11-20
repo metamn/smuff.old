@@ -1,16 +1,16 @@
 <section id="bestsellers">    
   <div id="title">    
-    <h3 class='first'>B</h3>
-    <h3>e</h3>
-    <h3>s</h3>
-    <h3>t</h3>
-    <h3>s</h3>
-    <h3>e</h3>
-    <h3>l</h3>
-    <h3>l</h3>
-    <h3>e</h3>
-    <h3>r</h3>
-    <h3 class='last'>s</h3>        
+    <h2 class='first'>B</h2>
+    <h2>e</h2>
+    <h2>s</h2>
+    <h2>t</h2>
+    <h2>s</h2>
+    <h2>e</h2>
+    <h2>l</h2>
+    <h2>l</h2>
+    <h2>e</h2>
+    <h2>r</h2>
+    <h2 class='last'>s</h2>        
   </div>
   
   

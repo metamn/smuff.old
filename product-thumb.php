@@ -32,7 +32,7 @@
   </a>
   <div id="text">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-      <h4><?php echo $product_name; ?></h4>
+      <h3><?php echo $product_name; ?></h3>
       <?php the_excerpt(); ?>  
     </a>
   </div>

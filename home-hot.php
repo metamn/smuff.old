@@ -16,7 +16,7 @@
 
 				$th = '<div class="item"><a class="tooltip2" title="' . $title . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="" data-sale-price="" >';
 				$th .= '<img src="' . $thumb[0] . '" alt="' . $title . '" />';
-				$th .= '<span class="tooltip-text">' . $title . '</span></a></div>';
+				$th .= '<h4 class="tooltip-text">' . $title . '</h4></a></div>';
 				$thumbs_special[] = $th;
 			endwhile;
 		}
@@ -53,7 +53,7 @@
 				}	
 					$th = '<div class="item"><a class="tooltip2" title="' . $product_name . '" data-link="' . get_permalink() . '" data-image="' . $large[0] . '" data-excerpt="' . get_the_excerpt() . '" data-price="' . $product_price . '" data-sale-price="' . $product_sale_price . '" >';
 					$th .= '<img src="'.$thumb[0].'" alt="'.$product_name.'" />';
-					$th .= '<span class="tooltip-text">' . $product_name . '</span></a></div>';
+					$th .= '<h4 class="tooltip-text">' . $product_name . '</h4></a></div>';
 					$thumbs_new[] = $th;  
 			endwhile;
 		}
@@ -68,7 +68,7 @@
 	
 		<div id="large-image-title"> 
 			<div id="text">
-				Nou!
+				<h1>Nou!</h1>
 			</div>
 			<div id="info">
 				<div class="arrow-right"></div>
@@ -101,7 +101,7 @@
 	
 	
 	<div id="more">
-		<span>Vezi toate noutatiile Smuff &darr;</span>
+		<h4>Vezi toate noutatiile Smuff &darr;</h4>
 	</div>
 	
 	<div id="noutati">
@@ -119,7 +119,7 @@
 						
 							<div id="large-image-title"> 
 								<div id="text">
-									Nou!
+									<h1>Nou!</h1>
 								</div>
 								<div id="info">
 									<div class="arrow-right"></div>

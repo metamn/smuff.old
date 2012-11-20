@@ -2,7 +2,7 @@
 body {
 	
 	// Set vertical rhythm
-	font-size: 100%;
+	font-size: 75%;
 	line-height: 1.25;
 	
 	.container {
@@ -14,63 +14,14 @@ body {
 		
 		// Vertical rhythm
 		// - from http://lamb.cc/typograph/ 
-		// - mobile: traditional, em, 
-		// - desktop: traditional, em h1=2
+		// - desktop: Fibonacci, em h1=4.23
 		
-		h1 { 
-			font-size: 2em; 
-			padding: 1.25em 0; 
-			
-			@include respond-to(mobile) {
-				font-size: 1.5em; 
-				padding: 1.45833em 0;
-			}
-		}
-		h2 { 
-			font-size: 1.75em; 
-			padding: 1.51786em 0; 
-			
-			@include respond-to(mobile) {
-				font-size: 1.33333em; 
-				padding: 1.25em 0;
-			}
-		}
-		h3 { 
-			font-size: 1.5em; 
-			padding:1.45833em 0; 
-			
-			@include respond-to(mobile) {
-				font-size: 1.16667em; 
-				padding: 1.51786em 0;
-			}
-		}
-		h4 { 
-			font-size: 1.33333em; 
-			padding: 1.25em 0;
-			
-			@include respond-to(mobile) {
-				font-size: 1em; 
-				padding: 1.51786em 0;
-			}
-		}
-		
-		h1, h2, h3, h4, h5, h6 {
-			margin-top: 0; 
-			margin-bottom: 0;
-		}
-	
-		// Lower headings are like body text but upper cased
-		h5, h6 {
-			font-size: 1em;
-			// small caps is not enough to distinguish header from body text
-			// font-variant: small-caps;
-			text-transform: uppercase;
-		}
-		h6 {
-			text-transform: none;
-			font-variant: small-caps;
-		}
-		
+		h1 { font-size:4.23077em; padding:1.2955em 0; }
+		h2 { font-size:2.61538em; padding:1.2868em 0; }
+		h3 { font-size:1.61538em; padding:1.30958em 0; }
+		h4 { font-size:large; }
+		h5 { text-transform: uppercase; }
+		h6 { font-vriant: small-caps; }
 		
 		
 		
