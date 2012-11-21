@@ -53,17 +53,17 @@
 					?>
 					<div class="<?php echo $klass ?>">
 						<h3><?php echo $c->name ?></h3>
-						<dl>
+						<ul>
 							<?php echo create_check_box_for_category($c->cat_ID, "category[]") ?> 
-						</dl>
+						</ul>
 					</div>
 			<?php } ?>
 			
 			<div>
 				<h3>Categorii principale</h3>
-				<dl>
+				<ul>
 					<?php echo create_check_box_for_category(10, "category[]")?>
-				</dl>
+				</ul>
 			</div>
 		</div>	
 			

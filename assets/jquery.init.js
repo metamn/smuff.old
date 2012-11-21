@@ -11,19 +11,19 @@ $(document).ready(function() {
   	$('#bestsellers #filters h4').removeClass('active');
   	$(this).addClass('active');
   	
-  	$('#bestsellers #items .item-list').removeClass('active');
-  	$('#bestsellers #items #' + $(this).parent().attr('id') ).addClass('active');
+  	$('#bestsellers #products div').removeClass('active');
+  	$('#bestsellers #products #' + $(this).parent().attr('id') ).addClass('active');
   });
   
   
   
   
   // Startpage - Hot - List view
-  $('#hot #more span').click(function() {
+  $('#hot #more').click(function() {
   	$('#hot #noutati').show();
   	
   	$('#hot #thumbs .item a').each(function(index) {
-  		loadImage($(this), $("#hot #noutati .item-" + index + " #large-image"));
+  		loadImage($(this), $("#hot #noutati .c" + index + " #large-image"));
   	});
   	
   	$('.home #subscribe-newsletter').addClass('bigger-margin-bottom');
@@ -130,7 +130,7 @@ $(document).ready(function() {
   })
 
 
-	// - left righ navigation
+	// - left right navigation
   $('.single-post .image-navigation').click(function (){
   	var image = $('#large-image img').attr('src');
   	var current = $('#thumbs').find('a[data-image=' + image + ']');
@@ -234,8 +234,9 @@ $(document).ready(function() {
   
   // Search
   $("#search-enhanced #advanced-search").click(function() {
-  	$(this).parent().slideToggle();
-  	$("#search-enhanced #second-row").slideToggle();
+  	$(this).slideToggle();
+  	$("#search-enhanced #categories").slideToggle();
+  	$("#search-enhanced #searchbox").slideToggle();
   });
   
   

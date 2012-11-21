@@ -1,4 +1,34 @@
 body.home {
+	
+	
+	/* Navigation arrows
+	---------------------------------------------------
+	*/
+	
+	.image-navigation {
+		position: absolute;
+		
+		font-size: 4em;
+		text-align: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 30px;
+		border: 1px solid $light-gray;
+		cursor: pointer;
+		
+		top: 8em;
+	}
+	.image-navigation.left {
+		background: $background url(left-arrow-black.png) no-repeat 50%;
+		margin-left: $pad/2; 
+	}
+	.image-navigation.right {
+		background: $background url(right-arrow-black.png) no-repeat 50%;
+		margin-left: 17em;
+	}
+
+		
+	
 	.container {		
 	
 		#hot {
@@ -21,8 +51,9 @@ body.home {
 				#items {
 					.item {
 						@include col(45%, 0, 10%);
+						margin-bottom: $margin;
 					}
-					.item.c2, .item.c4, .item.c6, .item.c8, .item.c9, .item.c10, .item.c12, .item.c14, .item.c16, .item.c18, .item.c20 {
+					.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12, .item.c14, .item.c16, .item.c18, .item.c20 {
 						margin-right: 0;
 					}
 				}
@@ -61,6 +92,13 @@ body.home {
 				}
 				
 				#products {
+					#last-week, #last-month, #last-three-months {
+						@include hidden;
+					}
+					#last-week.active, #last-month.active, #last-three-months.active {
+						display: block;
+					}
+					
 					#items {
 						.item {
 							@include col(30%, 0, 5%);
@@ -84,7 +122,6 @@ body.home {
 			
 			#title {
 				@include col($minor2, 0, 0);
-				
 			} 
 			
 			#body {

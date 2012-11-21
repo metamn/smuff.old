@@ -10,6 +10,21 @@
 			width: 100%;
 			@include hidden;
 		}
+		
+		#submit {
+			#advanced-search {
+				cursor: pointer;
+			}
+		}
+		
+		#searchbox {
+			@include block;
+			padding: $pad*2 $pad;
+			
+			input[type="text"] {
+				width: 62%;
+			}
+		}
 	}
 	
 }

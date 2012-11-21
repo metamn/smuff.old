@@ -35,11 +35,14 @@ $very-light-gray: #f1f1f1;
 		cursor: pointer;
 		padding: $pad/2 $pad/4;
 		background: $light-gray-2;
-		border-bottom: 1px $light-gray;
+		border-bottom: 1px solid $light-gray;
 		margin-bottom: 1px;
 	}
 	div {
 		display: none;
+		background: $background;
+		padding: $pad;
+		margin-bottom: $pad*2;
 	}
 }
 
@@ -158,6 +161,7 @@ $very-light-gray: #f1f1f1;
 		top: $pad*4;
 		float: left;
 		margin-left: $pad;
+		font-size: larger;
 	}
 	
 	&:hover {
@@ -205,11 +209,12 @@ $very-light-gray: #f1f1f1;
 		width: 50%;
 		float: left;
 		margin-left: $pad;
+		font-size: larger;
 	}
 	
 	#category {
 		position: relative;
-		top: $pad*3;
+		top: 4.5em;
 		width: 30%;
 		float: right;
 		text-align: right;
@@ -388,31 +393,6 @@ body {
 		}
 		.normal-price {
 			background: $blue;    
-		}
-
-		
-		/* Navigation arrows
-		---------------------------------------------------
-		*/
-		
-		.image-navigation {
-			position: absolute;
-			
-			font-size: 4em;
-			text-align: center;
-			width: 50px;
-			height: 50px;
-			border-radius: 30px;
-			border: 1px solid $light-gray;
-			cursor: pointer;
-			
-			display: none;
-		}
-		.image-navigation.left {
-			background: $background url(left-arrow-black.png) no-repeat 50%;
-		}
-		.image-navigation.right {
-			background: $background url(right-arrow-black.png) no-repeat 50%;
 		}
 
 		
@@ -672,6 +652,18 @@ body {
 				h4 {
 					font-family: 'Nothing You Could Do', cursive; 
 					margin-top: 2em;
+					cursor: pointer;
+				}
+			}
+			
+			#noutati {
+				.item {
+					@include image-hot;
+					font-size: smaller;
+					
+					#large-image-title {
+						height: 5.2em;
+					}
 				}
 			}
 		}
@@ -832,6 +824,10 @@ body {
 			
 			#pages {
 				@include accordion;
+				
+				p {
+					margin-top: $pad;
+				}
 			}
 		}
 		

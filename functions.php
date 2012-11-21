@@ -767,9 +767,9 @@ function create_radio_button_for_category($cat_id, $name) {
   $ret = "";
   $cats = get_categories('child_of='.$cat_id);
   foreach ($cats as $cat) {
-    $ret .= '<dd><input type="radio" name="' . $name . '" value="' . $cat->cat_ID . '"/>';
+    $ret .= '<li><input type="radio" name="' . $name . '" value="' . $cat->cat_ID . '"/>';
     $ret .= $cat->name;
-    $ret .= '</dd>';
+    $ret .= '</li>';
   }
   return $ret;
 }
@@ -777,9 +777,9 @@ function create_check_box_for_category($cat_id, $name) {
   $ret = "";
   $cats = get_categories('child_of='.$cat_id);
   foreach ($cats as $cat) {
-    $ret .= '<dd><input type="checkbox" name="' . $name . '" value="' . $cat->cat_ID . '"/>';
+    $ret .= '<li><input type="checkbox" name="' . $name . '" value="' . $cat->cat_ID . '"/>';
     $ret .= $cat->name;
-    $ret .= '</dd>';
+    $ret .= '</li>';
   }
   return $ret;
 }

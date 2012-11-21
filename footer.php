@@ -16,7 +16,7 @@
         <?php } ?>
     </div>
     
-    <div id="company">
+    <div id="company" class="accordion">
       <?php 
         $p = get_page_by_path('despre-noi/date-firma');
         if ($p) { ?>
@@ -26,7 +26,7 @@
   </div>
   
   <div id="col-2">
-    <div id="pages">
+    <div id="pages" class="accordion">
       <?php 
         $pages = array('despre-noi/cum-cumpar', 'despre-noi/business-2-business', 'despre-noi/afiliere', 'despre-noi/ajutor', 'despre-noi/protectia-consumatorilor', 'despre-noi');
         foreach ($pages as $page) {
