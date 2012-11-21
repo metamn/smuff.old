@@ -4,8 +4,6 @@ $pad: 1.25em;
 $pad2: .625em;
 $pad4: .312em;
 
-$margin: $pad*4;
-
 
 // Responisive, fluid Images and Grid
 // - http://thesassway.com/intermediate/responsive-web-design-part-1
@@ -68,6 +66,8 @@ $image-large-height: 670px;
 
 
 // The grid
+
+$container: 90%;
 
 $minor: 20%;
 $major: 75%;

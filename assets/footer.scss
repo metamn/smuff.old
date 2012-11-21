@@ -24,8 +24,11 @@ body {
 				@include list-inline;
 				
 				li {
-					width: 19%;
-					margin: 0 2.5%;
+					width: 22%;
+					margin-right: 3%;
+				}
+				li.last {
+					margin-right: 0;
 				}
 			}
 		}

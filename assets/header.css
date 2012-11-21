@@ -1,23 +1,14 @@
 /*
-Syntax error: Undefined mixin 'block'.
-        on line 7 of /Users/cs/work/smuff/assets/header.scss, in `block'
-        from line 7 of /Users/cs/work/smuff/assets/header.scss
+Syntax error: Undefined variable: "$container".
+        on line 3 of /Users/cs/work/smuff/assets/header.scss
+
+1: /Users/cs/work/smuff/assets/header.scss
 
 Backtrace:
-/Users/cs/work/smuff/assets/header.scss:7:in `block'
-/Users/cs/work/smuff/assets/header.scss:7
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
+/Users/cs/work/smuff/assets/header.scss:3
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/script/variable.rb:49:in `_perform'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/script/node.rb:40:in `perform'
+/Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:294:in `visit_prop'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
 /Users/cs/.rvm/gems/ruby-1.8.7-p370/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
@@ -101,4 +92,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'block'.\A         on line 7 of /Users/cs/work/smuff/assets/header.scss, in `block'\A         from line 7 of /Users/cs/work/smuff/assets/header.scss"; }
+  content: "Syntax error: Undefined variable: \"$container\".\A         on line 3 of /Users/cs/work/smuff/assets/header.scss\A \A 1: /Users/cs/work/smuff/assets/header.scss"; }

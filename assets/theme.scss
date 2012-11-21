@@ -73,7 +73,7 @@ $very-light-gray: #f1f1f1;
 		margin-right: 5%;
 		float: left;
 		position: relative;
-		margin-left: -3.4%;
+		
 		
 		form {
 			padding: 0;
@@ -143,12 +143,14 @@ $very-light-gray: #f1f1f1;
 		h3, p {
 			background: $very-light-gray;
 			padding: $pad/2;
-			min-height: $pad*2;
 		}
 		
 		h3 {
 			font-weight: bold;
 			margin: $pad/2 0;
+			
+			min-height: $pad*3;
+			@include respond-to(desktop) { min-height: $pad*2; }
 		}
 		
 		p {
@@ -178,8 +180,10 @@ $very-light-gray: #f1f1f1;
 
 // Bestseller 
 @mixin bestseller {
-	height: 37.5em;
 	background: $background url(stripe.png);
+	
+	min-height: 37.5em;
+	@include respond-to(desktop) { min-height: 42.5em; }
 	
 	img {
 		@include image-bordered(1%);
@@ -327,6 +331,14 @@ $very-light-gray: #f1f1f1;
 		height: 14em;
 		border-radius: 8em;
 		padding-top: 2.5em;
+		
+		@include respond-to(desktop) {
+			height: 16em;
+			border-radius: 16em;
+			padding-top: 5em;
+		}
+		
+		
 		background: $blue;
 		box-shadow: 2px 1px 1px $gray;
 		border: 1px solid $blue;
@@ -598,7 +610,6 @@ body {
 				overflow: hidden;
 				
 				#items {
-					height: 560px;
 					overflow-y: scroll;
 					position: relative;
 					right: -30px;
@@ -799,7 +810,6 @@ body {
 		
 		#top-new-categories {
 			ul {
-				@include list-inline;
 				@include image-rounded;
 			}
 		}

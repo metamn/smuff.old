@@ -20,11 +20,11 @@ body.home {
 	}
 	.image-navigation.left {
 		background: $background url(left-arrow-black.png) no-repeat 50%;
-		margin-left: $pad/2; 
+		margin-left: (100% - $container)/2/2; 
 	}
 	.image-navigation.right {
 		background: $background url(right-arrow-black.png) no-repeat 50%;
-		margin-left: 17em;
+		margin-left: $major - (100% - $container)/2;
 	}
 
 		
@@ -41,6 +41,11 @@ body.home {
 			
 			#thumbs {
 				@include col($minor, 0, 0);
+				
+				#items {
+					height: 45em;
+					@include respond-to(desktop) { height: 55em; }
+				}
 			}
 			
 			
@@ -64,6 +69,12 @@ body.home {
 			@include block;
 			@include subscribe-to-newsletter;
 			margin: $margin 0;
+			
+			#text {
+				margin-left: -4.5em;
+				@include respond-to(desktop) { margin-left: -2.8em; }
+			}
+			
 		}
 		#subscribe-newsletter.bigger-margin-bottom {
 			margin-bottom: $pad*8;
