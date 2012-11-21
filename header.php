@@ -72,10 +72,12 @@
 					<?php dynamic_shopping_cart(); ?>          
 				</div>
 				<div id="cart" class="mobile">
-					<ul>
-						<li>Cos</li>
-						<li>Info</li>
-					</ul>
+					<div id="widgetshoppingcart">
+						<ul>
+							<li><a href="">Cos</a></li>
+							<li><a href="">Info</a></li>
+						</ul>
+					</div>
 				</div>
 				
 	    	<hgroup>

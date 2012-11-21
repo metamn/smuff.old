@@ -3,6 +3,10 @@ body {
 		width: $container;
 		margin: 0 auto;
 		
+		@include respond-to(mobile) {
+			width: 98%;
+		}
+		
 		#header {
 			@include block;
 			
@@ -15,6 +19,7 @@ body {
 					@include hidden;
 				}
 			}
+			
 			
 			hgroup {
 				width: $major;

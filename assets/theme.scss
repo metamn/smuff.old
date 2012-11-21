@@ -265,11 +265,20 @@ $very-light-gray: #f1f1f1;
 			h1 {
 				padding: 0;
 			}
+			
+			@include respond-to(mobile) {
+				display: none;
+			}
 		}
 		
 		#info {
 			width: 80%;
 			float: right;
+			
+			@include respond-to(mobile) {
+				width: 100%;
+				float: left;
+			}
 			
 			.arrow-right {
 				width: 0; 
@@ -281,6 +290,10 @@ $very-light-gray: #f1f1f1;
 				border-left: 2.6em solid $sale;
 				
 				margin-left: -1px;
+				
+				@include respond-to(mobile) {
+					display: none;
+				}
 			}
 			
 			h3 {
@@ -289,6 +302,12 @@ $very-light-gray: #f1f1f1;
 				padding: 0;
 				top: -3em;
 				left: $pad + $pad/2;
+				
+				@include respond-to(mobile) {
+					top: 0;
+					left: 0;
+					padding: $pad/4;
+				}
 			}
 			
 			p {
@@ -298,6 +317,12 @@ $very-light-gray: #f1f1f1;
 				position: relative;
 				top: -4em;
 				left: 2.5em;
+				
+				@include respond-to(mobile) {
+					top: 0;
+					left: 0;
+					padding: $pad/4;
+				}
 			}
 			
 			#price {
@@ -306,6 +331,12 @@ $very-light-gray: #f1f1f1;
 				top: -6em;
 				float: right;
 				margin-right: 1%;
+				
+				@include respond-to(mobile) {
+					top: -$pad*3;
+					left: 0;
+					padding: $pad/4;
+				}
 				
 				.normal-price {
 					color: $color;
@@ -507,10 +538,15 @@ body {
 		*/
 		
 		#header {
-			#cart.desktop {
+			#cart {
 				#widgetshoppingcart {
 					background: url(stripe.png);
 					padding: $pad;
+					
+					@include respond-to(mobile) {
+						padding: $pad $pad/2;
+						font-size: smaller;
+					}
 					
 					ul {
 						@include list-cart;
@@ -573,6 +609,34 @@ body {
 					li.all-products-link {
 						margin-right: 0;
 						float: right;
+					}
+				}
+				
+				@include respond-to(mobile) {
+					border-top: none;
+					border-bottom: none;
+					padding: 0;
+					font-size: smaller;
+					
+					ul {
+						li {
+							background: $light-gray-2;
+							padding: $pad/4;
+							margin-right: 0;
+							
+							&:after {
+								content: '\2606';
+								margin-left: $pad/4;
+								color: $dark-gray;
+							}
+						}
+						li.all-products-link {
+							float: left;
+							
+							&:after {
+								content: '';
+							}
+						}
 					}
 				}
 			}	

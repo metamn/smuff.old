@@ -29,6 +29,13 @@ $(document).ready(function() {
   	$('.home #subscribe-newsletter').addClass('bigger-margin-bottom');
   });
   
+  // Display items when Noutati is visible, ie when mobile
+  if ($("#hot #noutati").is(':visible')) {
+  	$('#hot #thumbs .item a').each(function(index) {
+  		loadImage($(this), $("#hot #noutati .c" + index + " #large-image"));
+  	});
+  } 
+  
   
   
   // Startpage - Hot

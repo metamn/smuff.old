@@ -17,6 +17,10 @@ body.home {
 		cursor: pointer;
 		
 		top: 8em;
+		
+		@include respond-to(mobile) {
+			display: none;
+		}
 	}
 	.image-navigation.left {
 		background: $background url(left-arrow-black.png) no-repeat 50%;
@@ -37,10 +41,17 @@ body.home {
 			#slider {
 				@include col($major, 0, $margin);
 				
+				@include respond-to(mobile) {
+					display: none;
+				}
 			}
 			
 			#thumbs {
 				@include col($minor, 0, 0);
+				
+				@include respond-to(mobile) {
+					display: none;
+				}
 				
 				#items {
 					height: 45em;
@@ -49,14 +60,32 @@ body.home {
 			}
 			
 			
+			
+			#more {
+				@include respond-to(mobile) {
+					display: none;
+				}
+			}
+			
+			
 			#noutati {
 				@include block;
 				@include hidden;
+				
+				@include respond-to(mobile) {
+					display: block;
+				}
 				
 				#items {
 					.item {
 						@include col(45%, 0, 10%);
 						margin-bottom: $margin;
+						
+											
+						@include respond-to(mobile) {
+							width: 100%;
+							margin: 0 0 $margin 0;
+						}
 					}
 					.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12, .item.c14, .item.c16, .item.c18, .item.c20 {
 						margin-right: 0;
