@@ -72,6 +72,9 @@ $container: 90%;
 $minor: 20%;
 $major: 75%;
 $margin: 5%;
+@include respond-to(mobile) {
+	$margin: 5em;		
+}
 
 $minor2: 10%;
 $major2: 90%;

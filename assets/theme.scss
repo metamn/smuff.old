@@ -51,6 +51,11 @@ $very-light-gray: #f1f1f1;
 @mixin subscribe-to-newsletter {
 	background: #4D8FCE;
 	
+	@include respond-to(mobile) {
+		width: 90%;
+		padding: 5%;
+	}
+	
 	.arrow-right {
 		width: 0; 
 		height: 0;
@@ -61,6 +66,10 @@ $very-light-gray: #f1f1f1;
 		border-left: 6em solid $color;
 		
 		float: left;
+		
+		@include respond-to(mobile) {
+			display: none;
+		}
 	}
 	
 	
@@ -74,12 +83,21 @@ $very-light-gray: #f1f1f1;
 		float: left;
 		position: relative;
 		
+		@include respond-to(mobile) {
+			width: 100%;
+			margin: 0;
+		}
+		
 		
 		form {
 			padding: 0;
 			
 			input.text {
   			width: 100%;
+  			
+  			@include respond-to(mobile) {
+					width: 75%;
+				}
   		}
   	}
   	
@@ -103,6 +121,10 @@ $very-light-gray: #f1f1f1;
 		float: left;
 		width: 25%;
 		
+		@include respond-to(mobile) {
+			width: 100%;
+			margin: 0;
+		}
 		
 		#auth-loggedin {
 			padding: $pad;
@@ -185,12 +207,16 @@ $very-light-gray: #f1f1f1;
 	min-height: 37.5em;
 	@include respond-to(desktop) { min-height: 42.5em; }
 	
+	
 	img {
 		@include image-bordered(1%);
 	}
 	
 	#text {
 		margin: 0 $pad;
+		@include respond-to(mobile) {
+			margin: 0 $pad/2;
+		}
 		
 		h3, p {
 			background: $background;
@@ -515,6 +541,13 @@ body {
 				margin-right: 3%;
 				padding-right: 3%;
 				border-right: 1px dotted;
+				
+				@include respond-to(mobile) {
+					width: 100%;
+					margin-right: 0;
+					padding-right: 0;
+					border-right: 0;
+				}
 			}
 			
 			#items {
@@ -522,11 +555,19 @@ body {
 				margin-left: 3%;
 				float: left;
 				
+				@include respond-to(mobile) {
+					width: auto;
+				}
+				
 				.trend {
 					font-style: italic;
 					font-size: large;
 					float: left;
 					margin: $pad/2;
+					
+					@include respond-to(mobile) {
+						font-size: medium;
+					}
 				}
 			}
 		}
@@ -759,6 +800,10 @@ body {
 					word-wrap: break-word;
 					letter-spacing: 2em;
 					padding: $pad/2;
+					
+					@include respond-to(mobile) {
+						letter-spacing: 2px;
+					}
 				}
 			}
 			
@@ -780,13 +825,24 @@ body {
 							color: $gray;
 							margin: $pad/2 0;
 							text-align: center;
+							
+							@include respond-to(mobile) {
+								@include col(100%, 0, 0);
+								padding: $pad/4 $pad/2;
+								margin: 0;
+								text-align: left;
+							}
+						}
+						h4:before {
+							content: '\2713';
+							margin-right: $pad/2;
+							color: $color;
 						}
 						h4.active, h4:hover {
 							color: $background;
 						}
 						h4.active:before {
-							content: '\2713';
-							margin-right: $pad/2;
+							color: $background;
 						}
 
 					}

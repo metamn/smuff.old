@@ -43,7 +43,13 @@ body {
 				padding: 1.40615em 0;
 			}
 		}
-		h4 { font-size:large; }
+		h4 { 
+			font-size: large; 
+		
+			@include respond-to(mobile) {
+				font-size: larger;
+			}
+		}
 		h5 { text-transform: uppercase; }
 		h6 { font-vriant: small-caps; }
 		

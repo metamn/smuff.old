@@ -102,6 +102,7 @@ body.home {
 			#text {
 				margin-left: -4.5em;
 				@include respond-to(desktop) { margin-left: -2.8em; }
+				@include respond-to(mobile) { margin-left: 0; }
 			}
 			
 		}
@@ -117,14 +118,26 @@ body.home {
 			#title {
 				/* @include col($minor2, 0, 0); */
 				@include col(7.5%, 0, 2.5%);
+				
+				@include respond-to(mobile) {
+					@include col(100%, 0, 0);
+				}
 			}
 			
 			#body {
 				@include col($major2, 0, 0);
 				
+				@include respond-to(mobile) {
+					@include col(100%, 0, 0);
+				}
+				
 				#filters {
 					div {
 						@include col(30%, 0, 5%);
+						
+						@include respond-to(mobile) {
+							@include col(100%, 0, 0);
+						}
 					}
 					div#last-three-months {
 						margin-right: 0;
@@ -143,6 +156,11 @@ body.home {
 						.item {
 							@include col(30%, 0, 5%);
 							margin-bottom: $pad*4;
+							
+							@include respond-to(mobile) {
+								@include col(100%, 0, 0);
+								margin-bottom: $margin;
+							}
 						}
 						.item.c3, .item.c6, .item.c9 {
 							margin-right: 0;
@@ -162,10 +180,19 @@ body.home {
 			
 			#title {
 				@include col($minor2, 0, 0);
+				
+				@include respond-to(mobile) {
+					display: none;
+					@include col(100%, 0, 0);
+				}
 			} 
 			
 			#body {
 				@include col($major2, 0, 0);
+				
+				@include respond-to(mobile) {
+					@include col(100%, 0, 0);
+				}
 			}
 		}
 		
@@ -176,15 +203,26 @@ body.home {
 			#title {
 				@include col($minor2, 0, 0);
 				
+				@include respond-to(mobile) {
+					@include col(100%, 0, 0);
+				}
 			} 
 			
 			#body {
 				@include col($major2, 0, 0);
 				
+				@include respond-to(mobile) {
+					@include col(100%, 0, 0);
+				}
+				
 				#items {
 					.item {
 						@include col(22%, 0, 4%);
 						margin-bottom: $pad*4;
+						
+						@include respond-to(mobile) {
+							@include col(100%, 0, 0);
+						}
 					}
 					.item.c4, .item.c8, .item.c12 {
 						margin-right: 0;
