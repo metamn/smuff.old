@@ -3,9 +3,10 @@ body {
 		width: 90%;
 		margin: 0 auto;
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			width: 96%;
 		}
+		
 		
 		
 		#header {
@@ -47,6 +48,12 @@ body {
 						
 						h2 {
 							padding: 0;
+						}
+					}
+					
+					@include respond-to(mobile-landscape) {
+						h2 {
+							padding: .5em 0;
 						}
 					}
 				}

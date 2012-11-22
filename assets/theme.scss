@@ -51,7 +51,7 @@ $very-light-gray: #f1f1f1;
 @mixin subscribe-to-newsletter {
 	background: #4D8FCE;
 	
-	@include respond-to(mobile) {
+	@include respond-to(all-mobile) {
 		width: 90%;
 		padding: 5%;
 	}
@@ -67,7 +67,7 @@ $very-light-gray: #f1f1f1;
 		
 		float: left;
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			display: none;
 		}
 	}
@@ -83,7 +83,7 @@ $very-light-gray: #f1f1f1;
 		float: left;
 		position: relative;
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			width: 100%;
 			margin: 0;
 		}
@@ -95,7 +95,7 @@ $very-light-gray: #f1f1f1;
 			input.text {
   			width: 100%;
   			
-  			@include respond-to(mobile) {
+  			@include respond-to(all-mobile) {
 					width: 75%;
 				}
   		}
@@ -121,7 +121,7 @@ $very-light-gray: #f1f1f1;
 		float: left;
 		width: 25%;
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			width: 100%;
 			margin: 0;
 		}
@@ -153,14 +153,19 @@ $very-light-gray: #f1f1f1;
 	height: 36em;
 	border-bottom: 3px solid $very-light-gray;
 	
-	@include respond-to(mobile) {
+	@include respond-to(all-mobile) {
 		height: 25em;
 	}
+	
 	
 	img {
 		@include image-bordered(1%);
 		width: $image-thumb-width;
 		margin-left: $pad;
+		
+		@include respond-to(mobile-landscape) {
+			margin-left: 0;
+		}
 	}
 	
 	#text {
@@ -183,13 +188,20 @@ $very-light-gray: #f1f1f1;
 			padding: $pad/2;
 		}
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			margin: 0 0 0 $pad;
 			
 			h3, p {
 				background: transparent;
 				padding: 0;
 				min-height: $pad;
+			}
+		}
+		
+		@include respond-to(mobile-landscape) {
+			margin: 0;
+			p {
+				display: none;
 			}
 		}
 	}
@@ -201,9 +213,12 @@ $very-light-gray: #f1f1f1;
 		margin-left: $pad;
 		font-size: larger;
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			top: $pad;
 			margin-left: 1em;
+		}
+		@include respond-to(mobile-landscape) {
+			margin-left: 0;
 		}
 	}
 	
@@ -225,7 +240,7 @@ $very-light-gray: #f1f1f1;
 	
 	min-height: 37.5em;
 	@include respond-to(desktop) { min-height: 42.5em; }
-	@include respond-to(mobile) { 
+	@include respond-to(all-mobile) { 
 		min-height: 32.5em; 
 	}
 	
@@ -236,7 +251,7 @@ $very-light-gray: #f1f1f1;
 	
 	#text {
 		margin: 0 $pad;
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			margin: 0 $pad/2;
 		}
 		
@@ -245,7 +260,7 @@ $very-light-gray: #f1f1f1;
 			padding: $pad/2;
 			min-height: $pad*2;
 			
-			@include respond-to(mobile) {
+			@include respond-to(all-mobile) {
 				min-height: $pad;
 			}
 		}
@@ -267,7 +282,7 @@ $very-light-gray: #f1f1f1;
 		margin-left: $pad;
 		font-size: larger;
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			margin-left: $pad/2;
 			top: $pad;
 		}
@@ -282,7 +297,7 @@ $very-light-gray: #f1f1f1;
 		margin-right: $pad;
 		
 		
-		@include respond-to(mobile) {
+		@include respond-to(all-mobile) {
 			margin-right: $pad/2;
 			top: $pad+ $pad/2;
 		}
@@ -323,6 +338,11 @@ $very-light-gray: #f1f1f1;
 			top: 0;
 		}
 		
+		@include respond-to(mobile-landscape) {
+			top: -5.3em;
+			opacity: .9;
+		}
+		
 		#text {
 			background: $sale;
 			color: $very-light-gray;
@@ -333,6 +353,10 @@ $very-light-gray: #f1f1f1;
 			
 			h1 {
 				padding: 0;
+				
+				@include respond-to(mobile-landscape) {
+					padding: .71em 0;
+				}
 			}
 			
 			@include respond-to(mobile) {
@@ -379,6 +403,11 @@ $very-light-gray: #f1f1f1;
 					font-weight: bold;
 					color: $color;
 				}
+				
+				@include respond-to(mobile-landscape) {
+					top: -4em;
+					left: $pad*2;
+				}
 			}
 			
 			p {
@@ -411,6 +440,10 @@ $very-light-gray: #f1f1f1;
 					float: left;
 					padding: $pad/4;
 					color: $color;
+				}
+				
+				@include respond-to(mobile-landscape) {
+					top: -7.5em;
 				}
 				
 				.normal-price {
@@ -702,7 +735,7 @@ body {
 					}
 				}
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					border-top: none;
 					border-bottom: none;
 					padding: 0;
@@ -855,7 +888,7 @@ body {
 					letter-spacing: 2em;
 					padding: $pad/2;
 					
-					@include respond-to(mobile) {
+					@include respond-to(all-mobile) {
 						letter-spacing: 2px;
 					}
 				}
@@ -872,7 +905,7 @@ body {
 					div {
 						background: $color;
 						
-						@include respond-to(mobile) {
+						@include respond-to(all-mobile) {
 							background: $very-light-gray;
 						}
 						
@@ -884,7 +917,7 @@ body {
 							margin: $pad/2 0;
 							text-align: center;
 							
-							@include respond-to(mobile) {
+							@include respond-to(all-mobile) {
 								@include col(100%, 0, 0);
 								padding: $pad/4 $pad/2;
 								margin: 0;
@@ -898,7 +931,7 @@ body {
 							color: $color;
 							
 							
-							@include respond-to(mobile) {
+							@include respond-to(all-mobile) {
 								color: $gray;
 							}
 						}

@@ -21,14 +21,25 @@ body.home {
 		@include respond-to(mobile) {
 			display: none;
 		}
+		@include respond-to(mobile-landscape) {
+			top: 5em;
+		}
 	}
 	.image-navigation.left {
 		background: $background url(left-arrow-black.png) no-repeat 50%;
 		margin-left: 2.5%; 
+		
+		@include respond-to(mobile-landscape) {
+			margin-left: 0;
+		}
 	}
 	.image-navigation.right {
 		background: $background url(right-arrow-black.png) no-repeat 50%;
 		margin-left: $major - 5%;
+		
+		@include respond-to(mobile-landscape) {
+			margin-left: 89%;
+		}
 	}
 
 		
@@ -44,12 +55,15 @@ body.home {
 				@include respond-to(mobile) {
 					display: none;
 				}
+				@include respond-to(mobile-landscape) {
+					@include col(100%, 0, 0);
+				}
 			}
 			
 			#thumbs {
 				@include col($minor, 0, 0);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					display: none;
 				}
 				
@@ -61,7 +75,7 @@ body.home {
 			
 			
 			#more {
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					display: none;
 				}
 			}
@@ -101,7 +115,7 @@ body.home {
 			#text {
 				margin-left: -4.5em;
 				@include respond-to(desktop) { margin-left: -2.8em; }
-				@include respond-to(mobile) { margin-left: 0; }
+				@include respond-to(all-mobile) { margin-left: 0; }
 			}
 			
 		}
@@ -118,7 +132,7 @@ body.home {
 				/* @include col($minor2, 0, 0); */
 				@include col(7.5%, 0, 2.5%);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include col(100%, 0, 0);
 				}
 			}
@@ -126,7 +140,7 @@ body.home {
 			#body {
 				@include col($major2, 0, 0);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include col(100%, 0, 0);
 				}
 				
@@ -134,7 +148,7 @@ body.home {
 					div {
 						@include col(30%, 0, 5%);
 						
-						@include respond-to(mobile) {
+						@include respond-to(all-mobile) {
 							@include col(100%, 0, 0);
 						}
 					}
@@ -160,10 +174,22 @@ body.home {
 								@include col(100%, 0, 0);
 								margin-bottom: $margin;
 							}
+							
+							@include respond-to(mobile-landscape) {
+								@include col(47.5%, 0, 5%);
+							}
+							
 						}
 						.item.c3, .item.c6, .item.c9 {
 							margin-right: 0;
 						}
+						
+						@include respond-to(mobile-landscape) {
+							.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12 {
+								margin-right: 0 !important;
+							}
+						}
+						
 					}
 				}
 				
@@ -180,7 +206,7 @@ body.home {
 			#title {
 				@include col($minor2, 0, 0);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					display: none;
 					@include col(100%, 0, 0);
 				}
@@ -189,11 +215,13 @@ body.home {
 			#body {
 				@include col($major2, 0, 0);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include col(100%, 0, 0);
 				}
 			}
 		}
+		
+		
 		
 		#promo {
 			@include block;
@@ -205,6 +233,10 @@ body.home {
 				@include respond-to(mobile) {
 					@include col(100%, 0, 0);
 				}
+				
+				@include respond-to(mobile-landscape) {
+					@include col(33%, 0, 0);
+				}
 			} 
 			
 			#body {
@@ -212,6 +244,10 @@ body.home {
 				
 				@include respond-to(mobile) {
 					@include col(100%, 0, 0);
+				}
+				
+				@include respond-to(mobile-landscape) {
+					@include col(66%, 0, 0);
 				}
 				
 				#items {
@@ -223,9 +259,17 @@ body.home {
 							@include col(100%, 0, 0);
 							margin: $pad*2 0 0;
 						}
+						@include respond-to(mobile-landscape) {
+							@include col(45%, 0, 10%);
+						}
 					}
 					.item.c4, .item.c8, .item.c12 {
 						margin-right: 0;
+					}
+					@include respond-to(mobile-landscape) {
+						.item.c2, .item.c6, .item.c10 {
+							margin-right: 0;
+						}
 					}
 				}
 				

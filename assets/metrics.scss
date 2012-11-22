@@ -32,6 +32,9 @@ $desktop: 1440px;
   @if $media == mobile {
     @media only screen and (max-width: $mobile) { @content; }
   }
+  @if $media == all-mobile {
+    @media only screen and (max-width: $mobile-landscape) { @content; }
+  }
   @else if $media == mobile-landscape {
     @media only screen and (min-width: $mobile + 1) and (max-width: $mobile-landscape) { @content; }
   }
