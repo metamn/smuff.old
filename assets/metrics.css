@@ -1,27 +1,26 @@
-/* line 11, metrics.scss */
-img {
-  max-width: 100%;
-}
-
 @media only screen and (max-width: 480px) {
-  /* line 40, metrics.scss */
+  /* line 50, metrics.scss */
   .mobile {
     display: block;
   }
 
-  /* line 43, metrics.scss */
+  /* line 53, metrics.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 481px) {
-  /* line 48, metrics.scss */
+  /* line 58, metrics.scss */
   .mobile {
     display: none;
   }
 
-  /* line 51, metrics.scss */
+  /* line 61, metrics.scss */
   .desktop {
     display: block;
   }
+}
+/* line 70, metrics.scss */
+img {
+  max-width: 100%;
 }

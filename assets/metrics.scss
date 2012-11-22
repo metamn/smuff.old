@@ -1,16 +1,25 @@
 // Vertical rhythm
 
 $pad: 1.25em;
-$pad2: .625em;
-$pad4: .312em;
 
 
-// Responisive, fluid Images and Grid
+// The grid
+// - it would be nice to redeclare these variables inside media queries, but it is not possible
+// - http://stackoverflow.com/questions/9122195/using-sass-variables-with-css3-media-queries
+
+$minor: 20%;
+$major: 75%;
+$margin: 5%;
+
+$minor2: 10%;
+$major2: 90%;
+
+
+
+
+
+// The Responsive Mixin
 // - http://thesassway.com/intermediate/responsive-web-design-part-1
-
-img {
-	max-width: 100%;
-}
 
 
 $mobile: 320px;
@@ -36,6 +45,7 @@ $desktop: 1440px;
     @media only screen and (min-width: $desktop + 1) { @content; }
   }
 }
+
 @media only screen and (max-width: $mobile-landscape) { 
 	.mobile {
 		display: block;
@@ -54,6 +64,15 @@ $desktop: 1440px;
 }
 
 
+
+// Responisive, fluid Images
+
+img {
+	max-width: 100%;
+}
+
+
+
 $image-thumb-width: 150px;
 $image-thumb-height: 150px;
 
@@ -65,16 +84,3 @@ $image-large-height: 670px;
 
 
 
-// The grid
-
-$container: 90%;
-
-$minor: 20%;
-$major: 75%;
-$margin: 5%;
-@include respond-to(mobile) {
-	$margin: 5em;		
-}
-
-$minor2: 10%;
-$major2: 90%;

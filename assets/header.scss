@@ -1,11 +1,12 @@
 body {
 	.container {
-		width: $container;
+		width: 90%;
 		margin: 0 auto;
 		
 		@include respond-to(mobile) {
-			width: 98%;
+			width: 96%;
 		}
+		
 		
 		#header {
 			@include block;
@@ -26,7 +27,7 @@ body {
 				float: left;
 				
 				#logo {
-					width: 20%;
+					width: $minor;
 					float: left;
 					
 					@include respond-to(mobile) {
@@ -38,7 +39,7 @@ body {
 					}
 				}
 				#strapline {
-					width: 40%;
+					width: $minor*2;
 					float: left;
 					
 					@include respond-to(mobile) {
@@ -50,7 +51,7 @@ body {
 					}
 				}
 				#page-name {
-					width: 40%;
+					width: $minor*2;
 					float: left;
 					
 					@include respond-to(mobile) {
