@@ -82,7 +82,7 @@ body.home {
 			
 			
 			#more {
-				@include respond-to(all-mobile) {
+				@include respond-to(mobile) {
 					display: none;
 				}
 			}
@@ -106,7 +106,7 @@ body.home {
 							width: 100%;
 							margin-bottom: $margin*4;
 						}
-						@include respond-to(tablet) {
+						@include respond-to(all-tablet) {
 							@include col(100%, 0, 0);
 						}
 					}

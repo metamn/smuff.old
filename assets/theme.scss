@@ -885,6 +885,13 @@ body {
 					margin-top: 2em;
 					cursor: pointer;
 				}
+				
+				@include respond-to(mobile-landscape) {
+					width: 90%;
+					height: auto;
+					position: relative;
+					top: -$pad*2;
+				}
 			}
 			
 			#noutati {
@@ -892,12 +899,23 @@ body {
 					@include image-hot;
 					font-size: smaller;
 					
-					@include respond-to(mobile) {
+					@include respond-to(all-mobile) {
 						font-size: 100%;
 					}
 					
 					#large-image-title {
 						height: 5.2em;
+						
+						@include respond-to(mobile-landscape) {
+							#info {
+								#price {
+									top: -7.5em;
+									right: 0;
+									color: $background;
+								}
+							}
+						}
+						
 					}
 				}
 			}
@@ -971,11 +989,20 @@ body {
 						}
 						h4.active, h4:hover {
 							color: $background;
+							
+							@include respond-to(all-mobile) {
+								color: $color;
+							}
 						}
 						h4.active:before {
 							color: $background;
+							
+							@include respond-to(all-mobile) {
+								color: $color;
+							}
 						}
-
+						
+						
 					}
 				}
 				
