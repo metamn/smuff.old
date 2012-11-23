@@ -70,6 +70,9 @@ $very-light-gray: #f1f1f1;
 		@include respond-to(all-mobile) {
 			display: none;
 		}
+		@include respond-to(tablet) {
+			display: none;
+		}
 	}
 	
 	
@@ -124,6 +127,11 @@ $very-light-gray: #f1f1f1;
 		@include respond-to(all-mobile) {
 			width: 100%;
 			margin: 0;
+		}
+		@include respond-to(tablet) {
+			h4 {
+				margin-bottom: $pad;
+			}
 		}
 		
 		#auth-loggedin {
@@ -204,6 +212,15 @@ $very-light-gray: #f1f1f1;
 				display: none;
 			}
 		}
+		
+		@include respond-to(tablet) {
+			h3, p {
+				padding: 0;
+			}
+			p {
+				min-height: $pad*2;
+			}
+		}
 	}
 	
 	#price {
@@ -219,6 +236,10 @@ $very-light-gray: #f1f1f1;
 		}
 		@include respond-to(mobile-landscape) {
 			margin-left: 0;
+		}
+		@include respond-to(tablet) {
+			top: $pad;
+			margin-left: 1em;
 		}
 	}
 	
@@ -935,22 +956,24 @@ body {
 								text-align: left;
 								color: $gray;
 							}
+							
+							@include respond-to(tablet) {
+								text-align: left;
+								font-size: 100%;
+								margin: $pad/2;
+							}
+							
 						}
 						h4:before {
 							content: '\2713';
 							margin-right: $pad/2;
-							color: $color;
-							
-							
-							@include respond-to(all-mobile) {
-								color: $gray;
-							}
+							color: $gray;
 						}
 						h4.active, h4:hover {
-							color: $color;
+							color: $background;
 						}
 						h4.active:before {
-							color: $color;
+							color: $background;
 						}
 
 					}

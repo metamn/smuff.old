@@ -38,8 +38,8 @@ body.home {
 		background: $background url(right-arrow-black.png) no-repeat 50%;
 		margin-left: $major - 5%;
 		
-		@include respond-to(mobile-landscape) {
-			
+		@include respond-to(tablet) {
+			margin-left: 90%;
 		}
 	}
 
@@ -59,12 +59,18 @@ body.home {
 				@include respond-to(mobile-landscape) {
 					@include col($major + $margin, 0, 0);
 				}
+				@include respond-to(tablet) {
+					@include col(100%, 0, 0);
+				}
 			}
 			
 			#thumbs {
 				@include col($minor, 0, 0);
 				
 				@include respond-to(all-mobile) {
+					display: none;
+				}
+				@include respond-to(tablet) {
 					display: none;
 				}
 				
@@ -100,6 +106,9 @@ body.home {
 							width: 100%;
 							margin-bottom: $margin*4;
 						}
+						@include respond-to(tablet) {
+							@include col(100%, 0, 0);
+						}
 					}
 					.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12, .item.c14, .item.c16, .item.c18, .item.c20 {
 						margin-right: 0;
@@ -117,6 +126,7 @@ body.home {
 				margin-left: -4.5em;
 				@include respond-to(desktop) { margin-left: -2.8em; }
 				@include respond-to(all-mobile) { margin-left: 0; }
+				@include respond-to(tablet) { margin-left: $pad; }
 			}
 			
 		}
@@ -135,6 +145,11 @@ body.home {
 				
 				@include respond-to(all-mobile) {
 					@include col(100%, 0, 0);
+				}
+				@include respond-to(tablet) {
+					h2 {
+						padding: $pad/4;
+					}
 				}
 			}
 			
@@ -175,17 +190,16 @@ body.home {
 								@include col(100%, 0, 0);
 								margin-bottom: $margin;
 							}
-							
-							@include respond-to(mobile-landscape) {
+							@include respond-to(all-tablet) {
 								@include col(47.5%, 0, 5%);
+								margin-bottom: $margin;
 							}
-							
 						}
 						.item.c3, .item.c6, .item.c9 {
 							margin-right: 0;
 						}
 						
-						@include respond-to(mobile-landscape) {
+						@include respond-to(all-tablet) {
 							.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12 {
 								margin-right: 0 !important;
 							}
@@ -209,7 +223,9 @@ body.home {
 				
 				@include respond-to(all-mobile) {
 					display: none;
-					@include col(100%, 0, 0);
+				}
+				@include respond-to(tablet) {
+					display: none;
 				}
 			} 
 			
@@ -217,6 +233,9 @@ body.home {
 				@include col($major2, 0, 0);
 				
 				@include respond-to(all-mobile) {
+					@include col(100%, 0, 0);
+				}
+				@include respond-to(tablet) {
 					@include col(100%, 0, 0);
 				}
 			}
@@ -234,9 +253,11 @@ body.home {
 				@include respond-to(mobile) {
 					@include col(100%, 0, 0);
 				}
-				
 				@include respond-to(mobile-landscape) {
 					@include col(33%, 0, 0);
+				}
+				@include respond-to(tablet) {
+					@include col(20%, 0, 0);
 				}
 			} 
 			
@@ -250,6 +271,9 @@ body.home {
 				@include respond-to(mobile-landscape) {
 					@include col(66%, 0, 0);
 				}
+				@include respond-to(tablet) {
+					@include col(80%, 0, 0);
+				}
 				
 				#items {
 					.item {
@@ -260,14 +284,14 @@ body.home {
 							@include col(100%, 0, 0);
 							margin: $pad*2 0 0;
 						}
-						@include respond-to(mobile-landscape) {
+						@include respond-to(all-tablet) {
 							@include col(45%, 0, 10%);
 						}
 					}
 					.item.c4, .item.c8, .item.c12 {
 						margin-right: 0;
 					}
-					@include respond-to(mobile-landscape) {
+					@include respond-to(all-tablet) {
 						.item.c2, .item.c6, .item.c10 {
 							margin-right: 0;
 						}

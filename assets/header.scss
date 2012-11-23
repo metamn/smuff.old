@@ -38,6 +38,9 @@ body {
 							padding: $pad/2 0 0;
 						}
 					}
+					@include respond-to(tablet) {
+						width: $minor*2;
+					}
 				}
 				#strapline {
 					width: $minor*2;
@@ -50,11 +53,13 @@ body {
 							padding: 0;
 						}
 					}
-					
 					@include respond-to(mobile-landscape) {
 						h2 {
 							padding: .5em 0;
 						}
+					}
+					@include respond-to(tablet) {
+						width: $minor*3;
 					}
 				}
 				#page-name {
@@ -62,6 +67,9 @@ body {
 					float: left;
 					
 					@include respond-to(mobile) {
+						width: 0;
+					}
+					@include respond-to(tablet) {
 						width: 0;
 					}
 				}
@@ -77,6 +85,15 @@ body {
 				
 				ul {
 					@include list-inline;
+					
+					@include respond-to(tablet) {
+						li {
+							margin-bottom: $pad/4;
+						}
+						li.all-products-link {
+							float: left;
+						}
+					}
 				}
 			} 
 		}
