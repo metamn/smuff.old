@@ -1,26 +1,26 @@
 @media only screen and (max-width: 600px) {
-  /* line 56, metrics.scss */
+  /* line 71, metrics.scss */
   .mobile {
     display: block;
   }
 
-  /* line 59, metrics.scss */
+  /* line 74, metrics.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 64, metrics.scss */
+  /* line 79, metrics.scss */
   .mobile {
     display: none;
   }
 
-  /* line 67, metrics.scss */
+  /* line 82, metrics.scss */
   .desktop {
     display: block;
   }
 }
-/* line 76, metrics.scss */
+/* line 91, metrics.scss */
 img {
   max-width: 100%;
 }

@@ -29,28 +29,43 @@ $desktop: 1440px;
 
 
 @mixin respond-to($media) {
+	
+	/* handhelds to iPhone 3,4*/
   @if $media == mobile {
     @media only screen and (max-width: $mobile) { @content; }
   }
-  @if $media == all-mobile {
-    @media only screen and (max-width: $mobile-landscape) { @content; }
-  }
+  
+  /* smartphones and iPhone landscape mode, up to Kindle or maybe iPad Mini */
   @else if $media == mobile-landscape {
     @media only screen and (min-width: $mobile + 1) and (max-width: $mobile-landscape) { @content; }
   }
+  
+  /* a collector mode, combining all above */
+  @if $media == all-mobile {
+    @media only screen and (max-width: $mobile-landscape) { @content; }
+  }
+  
+  /* something between 601px and 1023px, usually a tablet in portrait mode */
   @else if $media == tablet {
     @media only screen and (min-width: $mobile-landscape + 1) and (max-width: $tablet - 1) { @content; }
   }
+  
+  /* a collector mode, combining smartphones in landscape mode & tablets */
   @if $media == all-tablet {
     @media only screen and (min-width: $mobile + 1) and (max-width: $tablet - 1) { @content; }
   }
+  
+  /* 1024 - 1440, or tablet in landscape mode */
   @else if $media == desktop {
     @media only screen and (min-width: $tablet) and (max-width: $desktop) { @content; }
   }
+  
+  /* 1440 + */
   @else if $media == large {
     @media only screen and (min-width: $desktop + 1) { @content; }
   }
 }
+
 
 @media only screen and (max-width: $mobile-landscape) { 
 	.mobile {
