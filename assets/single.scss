@@ -42,6 +42,16 @@ body {
 		#promo,
 		#random {
 			@include block;
+			
+			.item {
+				@include col(30%, 0, 5%);
+				margin-bottom: $margin;
+			}
+			
+			.item.c1, .item.c3, .item.c6, .item.c9, .item.c12, .item.c15, .item.c18, .item.c21, .item.c24,
+			.item.c27, .item.c30 {
+				margin-right: 0;
+			}
 		}
 	
 	}

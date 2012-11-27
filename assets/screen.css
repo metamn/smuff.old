@@ -114,8 +114,9 @@ body .container h1 {
     padding: 1.25em 0;
   }
 }
-/* line 28, typography.scss */
-body .container h2 {
+/* line 30, typography.scss */
+body .container h2,
+body .container article h1 {
   font-size: 2.61538em;
   padding: 1.2868em 0;
   /* handhelds to iPhone 3,4*/
@@ -123,13 +124,14 @@ body .container h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 28, typography.scss */
-  body .container h2 {
+  /* line 30, typography.scss */
+  body .container h2,
+  body .container article h1 {
     font-size: 1.61538em;
     padding: 1.30958em 0;
   }
 }
-/* line 37, typography.scss */
+/* line 40, typography.scss */
 body .container h3 {
   font-size: 1.61538em;
   padding: 1.30958em 0;
@@ -138,13 +140,13 @@ body .container h3 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 37, typography.scss */
+  /* line 40, typography.scss */
   body .container h3 {
     font-size: 1.23077em;
     padding: 1.40615em 0;
   }
 }
-/* line 46, typography.scss */
+/* line 50, typography.scss */
 body .container h4 {
   font-size: large;
   /* handhelds to iPhone 3,4*/
@@ -152,24 +154,24 @@ body .container h4 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 46, typography.scss */
+  /* line 50, typography.scss */
   body .container h4 {
     font-size: larger;
   }
 }
-/* line 53, typography.scss */
+/* line 57, typography.scss */
 body .container h5 {
   text-transform: uppercase;
 }
-/* line 54, typography.scss */
+/* line 58, typography.scss */
 body .container h6 {
   font-vriant: small-caps;
 }
-/* line 64, typography.scss */
+/* line 68, typography.scss */
 body .container p + p {
   margin-top: 1.25em;
 }
-/* line 69, typography.scss */
+/* line 73, typography.scss */
 body .container q, body .container blockquote {
   margin: 1.25em;
   border-left: 1px dotted;
@@ -177,63 +179,63 @@ body .container q, body .container blockquote {
   font-style: italic;
   font-size: larger;
 }
-/* line 80, typography.scss */
+/* line 84, typography.scss */
 body .container address {
   font-variant: small-caps;
 }
-/* line 88, typography.scss */
+/* line 92, typography.scss */
 body .container ul, body .container menu, body .container dir, body .container ol {
   margin: 1.25em;
   list-style-type: square;
 }
-/* line 93, typography.scss */
+/* line 97, typography.scss */
 body .container ol {
   list-style-type: decimal;
 }
-/* line 97, typography.scss */
+/* line 101, typography.scss */
 body .container dl {
   margin: 1.25em 0;
 }
-/* line 100, typography.scss */
+/* line 104, typography.scss */
 body .container dl dt {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 104, typography.scss */
+/* line 108, typography.scss */
 body .container dl dd {
   margin: 0.625em 1.25em 1.875em;
 }
-/* line 114, typography.scss */
+/* line 118, typography.scss */
 body .container table {
   margin: 1.25em 0;
 }
-/* line 119, typography.scss */
+/* line 123, typography.scss */
 body .container table thead tr td {
   font-weight: bold;
 }
-/* line 125, typography.scss */
+/* line 129, typography.scss */
 body .container table tbody {
   border-top: 1px dotted;
   border-bottom: 1px dotted;
 }
-/* line 130, typography.scss */
+/* line 134, typography.scss */
 body .container table td, body .container table th, body .container table tr {
   text-align: left;
   vertical-align: top;
 }
-/* line 135, typography.scss */
+/* line 139, typography.scss */
 body .container table td {
   padding: 1.25em;
 }
-/* line 145, typography.scss */
+/* line 149, typography.scss */
 body .container em {
   font-style: italic;
 }
-/* line 149, typography.scss */
+/* line 153, typography.scss */
 body .container strong {
   font-weight: bold;
 }
-/* line 161, typography.scss */
+/* line 165, typography.scss */
 body .container input, body .container textarea {
   border: none;
   outline: 0;
@@ -243,44 +245,44 @@ body .container input, body .container textarea {
   font-size: medium;
   font-family: monospace;
 }
-/* line 174, typography.scss */
+/* line 178, typography.scss */
 body .container input[type='text'], body .container input[type='password'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
   padding: 0.625em;
 }
-/* line 181, typography.scss */
+/* line 185, typography.scss */
 body .container input[type='text']:focus, body .container input[type='password']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 187, typography.scss */
+/* line 191, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 192, typography.scss */
+/* line 196, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 199, typography.scss */
+/* line 203, typography.scss */
 body .container input[type='radio']:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 203, typography.scss */
+/* line 207, typography.scss */
 body .container input[type='radio']:checked:after {
   content: '\25a3';
 }
-/* line 208, typography.scss */
+/* line 212, typography.scss */
 body .container input[type='checkbox']:after {
   content: '\272A';
   margin-right: 0.15625em;
 }
-/* line 219, typography.scss */
+/* line 223, typography.scss */
 body .container input[type='checkbox']:checked:after {
   color: black;
 }
@@ -2750,4 +2752,64 @@ body .container #promo,
 body .container #random {
   width: 100%;
   float: left;
+}
+/* line 46, single.scss */
+body .container #from-category .item,
+body .container #recommended .item,
+body .container #search .item,
+body .container #promo .item,
+body .container #random .item {
+  width: 30%;
+  margin: 0 5% 0 0;
+  float: left;
+  margin-bottom: 5%;
+}
+/* line 52, single.scss */
+body .container #from-category .item.c1, body .container #from-category .item.c3, body .container #from-category .item.c6, body .container #from-category .item.c9, body .container #from-category .item.c12, body .container #from-category .item.c15, body .container #from-category .item.c18, body .container #from-category .item.c21, body .container #from-category .item.c24,
+body .container #from-category .item.c27, body .container #from-category .item.c30,
+body .container #recommended .item.c1,
+body .container #recommended .item.c3,
+body .container #recommended .item.c6,
+body .container #recommended .item.c9,
+body .container #recommended .item.c12,
+body .container #recommended .item.c15,
+body .container #recommended .item.c18,
+body .container #recommended .item.c21,
+body .container #recommended .item.c24,
+body .container #recommended .item.c27,
+body .container #recommended .item.c30,
+body .container #search .item.c1,
+body .container #search .item.c3,
+body .container #search .item.c6,
+body .container #search .item.c9,
+body .container #search .item.c12,
+body .container #search .item.c15,
+body .container #search .item.c18,
+body .container #search .item.c21,
+body .container #search .item.c24,
+body .container #search .item.c27,
+body .container #search .item.c30,
+body .container #promo .item.c1,
+body .container #promo .item.c3,
+body .container #promo .item.c6,
+body .container #promo .item.c9,
+body .container #promo .item.c12,
+body .container #promo .item.c15,
+body .container #promo .item.c18,
+body .container #promo .item.c21,
+body .container #promo .item.c24,
+body .container #promo .item.c27,
+body .container #promo .item.c30,
+body .container #random .item.c1,
+body .container #random .item.c3,
+body .container #random .item.c6,
+body .container #random .item.c9,
+body .container #random .item.c12,
+body .container #random .item.c15,
+body .container #random .item.c18,
+body .container #random .item.c21,
+body .container #random .item.c24,
+body .container #random .item.c27,
+body .container #random .item.c30 {
+  margin-right: 0;
 }
