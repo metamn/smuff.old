@@ -114,9 +114,8 @@ body .container h1 {
     padding: 1.25em 0;
   }
 }
-/* line 30, typography.scss */
-body .container h2,
-body .container article h1 {
+/* line 29, typography.scss */
+body .container h2 {
   font-size: 2.61538em;
   padding: 1.2868em 0;
   /* handhelds to iPhone 3,4*/
@@ -124,14 +123,13 @@ body .container article h1 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 30, typography.scss */
-  body .container h2,
-  body .container article h1 {
+  /* line 29, typography.scss */
+  body .container h2 {
     font-size: 1.61538em;
     padding: 1.30958em 0;
   }
 }
-/* line 40, typography.scss */
+/* line 39, typography.scss */
 body .container h3 {
   font-size: 1.61538em;
   padding: 1.30958em 0;
@@ -140,13 +138,13 @@ body .container h3 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 40, typography.scss */
+  /* line 39, typography.scss */
   body .container h3 {
     font-size: 1.23077em;
     padding: 1.40615em 0;
   }
 }
-/* line 50, typography.scss */
+/* line 49, typography.scss */
 body .container h4 {
   font-size: large;
   /* handhelds to iPhone 3,4*/
@@ -154,24 +152,24 @@ body .container h4 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 50, typography.scss */
+  /* line 49, typography.scss */
   body .container h4 {
     font-size: larger;
   }
 }
-/* line 57, typography.scss */
+/* line 56, typography.scss */
 body .container h5 {
   text-transform: uppercase;
 }
-/* line 58, typography.scss */
+/* line 57, typography.scss */
 body .container h6 {
   font-vriant: small-caps;
 }
-/* line 68, typography.scss */
+/* line 67, typography.scss */
 body .container p + p {
   margin-top: 1.25em;
 }
-/* line 73, typography.scss */
+/* line 72, typography.scss */
 body .container q, body .container blockquote {
   margin: 1.25em;
   border-left: 1px dotted;
@@ -179,63 +177,63 @@ body .container q, body .container blockquote {
   font-style: italic;
   font-size: larger;
 }
-/* line 84, typography.scss */
+/* line 83, typography.scss */
 body .container address {
   font-variant: small-caps;
 }
-/* line 92, typography.scss */
+/* line 91, typography.scss */
 body .container ul, body .container menu, body .container dir, body .container ol {
   margin: 1.25em;
   list-style-type: square;
 }
-/* line 97, typography.scss */
+/* line 96, typography.scss */
 body .container ol {
   list-style-type: decimal;
 }
-/* line 101, typography.scss */
+/* line 100, typography.scss */
 body .container dl {
   margin: 1.25em 0;
 }
-/* line 104, typography.scss */
+/* line 103, typography.scss */
 body .container dl dt {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 108, typography.scss */
+/* line 107, typography.scss */
 body .container dl dd {
   margin: 0.625em 1.25em 1.875em;
 }
-/* line 118, typography.scss */
+/* line 117, typography.scss */
 body .container table {
   margin: 1.25em 0;
 }
-/* line 123, typography.scss */
+/* line 122, typography.scss */
 body .container table thead tr td {
   font-weight: bold;
 }
-/* line 129, typography.scss */
+/* line 128, typography.scss */
 body .container table tbody {
   border-top: 1px dotted;
   border-bottom: 1px dotted;
 }
-/* line 134, typography.scss */
+/* line 133, typography.scss */
 body .container table td, body .container table th, body .container table tr {
   text-align: left;
   vertical-align: top;
 }
-/* line 139, typography.scss */
+/* line 138, typography.scss */
 body .container table td {
   padding: 1.25em;
 }
-/* line 149, typography.scss */
+/* line 148, typography.scss */
 body .container em {
   font-style: italic;
 }
-/* line 153, typography.scss */
+/* line 152, typography.scss */
 body .container strong {
   font-weight: bold;
 }
-/* line 165, typography.scss */
+/* line 164, typography.scss */
 body .container input, body .container textarea {
   border: none;
   outline: 0;
@@ -245,44 +243,44 @@ body .container input, body .container textarea {
   font-size: medium;
   font-family: monospace;
 }
-/* line 178, typography.scss */
+/* line 177, typography.scss */
 body .container input[type='text'], body .container input[type='password'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
   padding: 0.625em;
 }
-/* line 185, typography.scss */
+/* line 184, typography.scss */
 body .container input[type='text']:focus, body .container input[type='password']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 191, typography.scss */
+/* line 190, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 196, typography.scss */
+/* line 195, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 203, typography.scss */
+/* line 202, typography.scss */
 body .container input[type='radio']:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 207, typography.scss */
+/* line 206, typography.scss */
 body .container input[type='radio']:checked:after {
   content: '\25a3';
 }
-/* line 212, typography.scss */
+/* line 211, typography.scss */
 body .container input[type='checkbox']:after {
   content: '\272A';
   margin-right: 0.15625em;
 }
-/* line 223, typography.scss */
+/* line 222, typography.scss */
 body .container input[type='checkbox']:checked:after {
   color: black;
 }
@@ -326,11 +324,327 @@ body .container input[type='checkbox']:checked:after {
 /* Theme mixins
 ---------------------------------------------------
 */
-/* line 529, theme.scss */
+/* Single, for Product
+---------------------------------------------------
+*/
+/* line 539, theme.scss */
+body.single .container article.product #large-image img {
+  width: 99.8%;
+  padding: 0.1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+  background: url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 545, theme.scss */
+body.single .container article.product #thumbs {
+  margin: 1.25em 0 5%;
+}
+/* line 548, theme.scss */
+body.single .container article.product #thumbs img {
+  width: 98%;
+  padding: 1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+  margin-right: 1.25em;
+  width: 150px;
+}
+/* line 34, theme.scss */
+body.single .container article.product #post-content h3 {
+  cursor: pointer;
+  padding: 0.625em 0.3125em;
+  background: #eeeeee;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 1px;
+}
+/* line 41, theme.scss */
+body.single .container article.product #post-content div {
+  display: none;
+  background: white;
+  padding: 1.25em;
+  margin-bottom: 2.5em;
+}
+/* line 558, theme.scss */
+body.single .container article.product #post-content div {
+  font-size: larger;
+}
+/* line 564, theme.scss */
+body.single .container #subscribe-newsletter {
+  background: #4D8FCE;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 564, theme.scss */
+  body.single .container #subscribe-newsletter {
+    width: 90%;
+    padding: 5%;
+  }
+}
+/* line 59, theme.scss */
+body.single .container #subscribe-newsletter .arrow-right {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-top: 6em solid transparent;
+  border-right: 6em solid transparent;
+  border-bottom: 6em solid transparent;
+  border-left: 6em solid #111111;
+  float: left;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 59, theme.scss */
+  body.single .container #subscribe-newsletter .arrow-right {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 59, theme.scss */
+  body.single .container #subscribe-newsletter .arrow-right {
+    display: none;
+  }
+}
+/* line 79, theme.scss */
+body.single .container #subscribe-newsletter h4 {
+  padding: 0.625em 0;
+}
+/* line 83, theme.scss */
+body.single .container #subscribe-newsletter #text {
+  width: 58%;
+  margin-right: 5%;
+  float: left;
+  position: relative;
+  margin-left: -4.5em;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 83, theme.scss */
+  body.single .container #subscribe-newsletter #text {
+    margin-left: -2.8em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 83, theme.scss */
+  body.single .container #subscribe-newsletter #text {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 83, theme.scss */
+  body.single .container #subscribe-newsletter #text {
+    margin-left: 1.25em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 83, theme.scss */
+  body.single .container #subscribe-newsletter #text {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* line 100, theme.scss */
+body.single .container #subscribe-newsletter #text form {
+  padding: 0;
+}
+/* line 103, theme.scss */
+body.single .container #subscribe-newsletter #text form input.text {
+  width: 100%;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 103, theme.scss */
+  body.single .container #subscribe-newsletter #text form input.text {
+    width: 75%;
+  }
+}
+/* line 112, theme.scss */
+body.single .container #subscribe-newsletter #text #whatis {
+  position: relative;
+  top: -1.5em;
+  float: right;
+  text-decoration: underline;
+}
+/* line 119, theme.scss */
+body.single .container #subscribe-newsletter #text #whatis .tooltip-text {
+  text-decoration: none;
+}
+/* line 123, theme.scss */
+body.single .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
+  left: 5em;
+}
+/* line 128, theme.scss */
+body.single .container #subscribe-newsletter #facebook-connect {
+  float: left;
+  width: 25%;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 128, theme.scss */
+  body.single .container #subscribe-newsletter #facebook-connect {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 137, theme.scss */
+  body.single .container #subscribe-newsletter #facebook-connect h4 {
+    margin-bottom: 1.25em;
+  }
+}
+/* line 142, theme.scss */
+body.single .container #subscribe-newsletter #facebook-connect #auth-loggedin {
+  padding: 1.25em;
+  font-size: small;
+}
+/* line 567, theme.scss */
+body.single .container #subscribe-newsletter #text {
+  margin-left: -4.5em;
+}
+/* line 573, theme.scss */
+body.single .container .product-list .item {
+  background: white url(stripe.png);
+  min-height: 37.5em;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 573, theme.scss */
+  body.single .container .product-list .item {
+    min-height: 42.5em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 573, theme.scss */
+  body.single .container .product-list .item {
+    min-height: 32.5em;
+  }
+}
+/* line 274, theme.scss */
+body.single .container .product-list .item img {
+  width: 98%;
+  padding: 1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 278, theme.scss */
+body.single .container .product-list .item #text {
+  margin: 0 1.25em;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 278, theme.scss */
+  body.single .container .product-list .item #text {
+    margin: 0 0.625em;
+  }
+}
+/* line 284, theme.scss */
+body.single .container .product-list .item #text h3, body.single .container .product-list .item #text p {
+  background: white;
+  padding: 0.625em;
+  min-height: 2.5em;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 284, theme.scss */
+  body.single .container .product-list .item #text h3, body.single .container .product-list .item #text p {
+    min-height: 1.25em;
+  }
+}
+/* line 294, theme.scss */
+body.single .container .product-list .item #text h3 {
+  font-weight: bold;
+  margin: 1.25em 0;
+}
+/* line 298, theme.scss */
+body.single .container .product-list .item #text p {
+  padding: 0.625em;
+}
+/* line 303, theme.scss */
+body.single .container .product-list .item #price {
+  position: relative;
+  top: 3.75em;
+  width: 50%;
+  float: left;
+  margin-left: 1.25em;
+  font-size: larger;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 303, theme.scss */
+  body.single .container .product-list .item #price {
+    margin-left: 0.625em;
+    top: 1.25em;
+  }
+}
+/* line 317, theme.scss */
+body.single .container .product-list .item #category {
+  position: relative;
+  top: 4.5em;
+  width: 30%;
+  float: right;
+  text-align: right;
+  margin-right: 1.25em;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 317, theme.scss */
+  body.single .container .product-list .item #category {
+    margin-right: 0.625em;
+    top: 1.875em;
+  }
+}
+/* line 331, theme.scss */
+body.single .container .product-list .item #category a {
+  background: #cccccc;
+  padding: 0.3125em;
+  color: white;
+}
+/* line 336, theme.scss */
+body.single .container .product-list .item #category a:hover {
+  background: gray;
+}
+
+/* line 582, theme.scss */
 body {
   background: white url(dotted_bg.png);
 }
-/* line 532, theme.scss */
+/* line 585, theme.scss */
 body .container {
   /* Fonts
   ---------------------------------------------------
@@ -372,113 +686,113 @@ body .container {
   ---------------------------------------------------
   */
 }
-/* line 540, theme.scss */
+/* line 594, theme.scss */
 body .container h1, body .container h2 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 551, theme.scss */
+/* line 603, theme.scss */
 body .container a, body .container a:visited {
   color: #111111;
   text-decoration: none;
 }
-/* line 555, theme.scss */
+/* line 607, theme.scss */
 body .container #accordion a, body .container #accordion a:visited {
   border-bottom: 1px dotted;
 }
-/* line 565, theme.scss */
+/* line 617, theme.scss */
 body .container .price, body .container .normal-price {
   border: #cccccc;
   padding: 0.3125em;
   -moz-border-radius: 10%;
   -webkit-border-radius: 10%;
 }
-/* line 571, theme.scss */
+/* line 623, theme.scss */
 body .container .price {
   background: #f25f18;
 }
-/* line 574, theme.scss */
+/* line 626, theme.scss */
 body .container .old-price, body .container .oldprice {
   text-decoration: line-through;
 }
-/* line 577, theme.scss */
+/* line 629, theme.scss */
 body .container .normal-price {
   background: #4d8fce;
 }
-/* line 589, theme.scss */
+/* line 641, theme.scss */
 body .container .tooltip {
   cursor: pointer;
 }
-/* line 592, theme.scss */
+/* line 644, theme.scss */
 body .container .tooltip-text {
   display: none;
 }
-/* line 595, theme.scss */
+/* line 647, theme.scss */
 body .container #tooltip {
   background: #4d8fce;
   padding: 1.25em;
   position: absolute;
 }
-/* line 600, theme.scss */
+/* line 652, theme.scss */
 body .container #tooltip ul {
   list-style: none;
 }
-/* line 603, theme.scss */
+/* line 655, theme.scss */
 body .container #tooltip ul li, body .container #tooltip ol li {
   padding: 0.3125em;
   margin: 0.3125em;
   border-bottom: 1px dotted;
 }
-/* line 614, theme.scss */
+/* line 666, theme.scss */
 body .container #search-enhanced {
   width: 100%;
   float: left;
   background: #4d8fce;
 }
-/* line 618, theme.scss */
+/* line 670, theme.scss */
 body .container #search-enhanced h3 {
   margin-left: 0.625em;
 }
-/* line 622, theme.scss */
+/* line 674, theme.scss */
 body .container #search-enhanced ul {
   list-style: none;
   margin: 0;
   margin: 0 1.25em;
 }
-/* line 150, theme.scss */
+/* line 155, theme.scss */
 body .container #search-enhanced ul li {
   margin-bottom: 0.3125em;
   padding: 0.3125em;
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 626, theme.scss */
+/* line 678, theme.scss */
 body .container #search-enhanced ul li {
   background: #4d8fce;
   border-bottom: 1px dotted #111111;
 }
-/* line 630, theme.scss */
+/* line 682, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:after {
   content: "\2610";
 }
-/* line 633, theme.scss */
+/* line 685, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:checked:after {
   content: "\25a3";
 }
-/* line 639, theme.scss */
+/* line 691, theme.scss */
 body .container #search-enhanced #submit {
   margin: 2.5em 0 1.25em 1.25em;
 }
-/* line 642, theme.scss */
+/* line 694, theme.scss */
 body .container #search-enhanced #submit #advanced-search {
   font-size: small;
 }
-/* line 648, theme.scss */
+/* line 700, theme.scss */
 body .container #trending {
   width: 100%;
   float: left;
   margin: 5em 0;
 }
-/* line 652, theme.scss */
+/* line 704, theme.scss */
 body .container #trending h2 {
   width: 30%;
   float: left;
@@ -490,7 +804,7 @@ body .container #trending h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 652, theme.scss */
+  /* line 704, theme.scss */
   body .container #trending h2 {
     width: 100%;
     margin-right: 0;
@@ -498,7 +812,7 @@ body .container #trending h2 {
     border-right: 0;
   }
 }
-/* line 667, theme.scss */
+/* line 719, theme.scss */
 body .container #trending #items {
   width: 55%;
   margin-left: 3%;
@@ -508,12 +822,12 @@ body .container #trending #items {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 667, theme.scss */
+  /* line 719, theme.scss */
   body .container #trending #items {
     width: auto;
   }
 }
-/* line 676, theme.scss */
+/* line 728, theme.scss */
 body .container #trending #items .trend {
   font-style: italic;
   font-size: large;
@@ -524,12 +838,12 @@ body .container #trending #items .trend {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 676, theme.scss */
+  /* line 728, theme.scss */
   body .container #trending #items .trend {
     font-size: medium;
   }
 }
-/* line 697, theme.scss */
+/* line 749, theme.scss */
 body .container #header #cart #widgetshoppingcart {
   background: url(stripe.png);
   padding: 1.25em;
@@ -538,54 +852,54 @@ body .container #header #cart #widgetshoppingcart {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 697, theme.scss */
+  /* line 749, theme.scss */
   body .container #header #cart #widgetshoppingcart {
     padding: 1.25em 0.625em;
     font-size: smaller;
   }
 }
-/* line 706, theme.scss */
+/* line 758, theme.scss */
 body .container #header #cart #widgetshoppingcart ul {
   list-style: none;
   margin: 0;
 }
-/* line 150, theme.scss */
+/* line 155, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li {
   margin-bottom: 0.3125em;
   padding: 0.3125em;
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 709, theme.scss */
+/* line 761, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li#message {
   background: #8aea4c;
 }
-/* line 713, theme.scss */
+/* line 765, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li a:hover {
   font-weight: bold;
 }
-/* line 716, theme.scss */
+/* line 768, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li strong {
   color: #f25f18;
 }
-/* line 726, theme.scss */
+/* line 778, theme.scss */
 body .container #header hgroup #logo h1 {
   font-weight: bold;
   padding: 0.3125em 0 0;
 }
-/* line 733, theme.scss */
+/* line 785, theme.scss */
 body .container #header hgroup #strapline h2 {
   color: #f25f18;
   padding: 0.9375em 0 0;
   font-weight: bold;
 }
-/* line 741, theme.scss */
+/* line 793, theme.scss */
 body .container #header hgroup #page-name h2 {
   color: #aaaaaa;
   padding: 0.9375em 0 0;
   text-align: right;
 }
-/* line 749, theme.scss */
+/* line 801, theme.scss */
 body .container #header nav {
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -596,65 +910,65 @@ body .container #header nav {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 757, theme.scss */
+/* line 809, theme.scss */
 body .container #header nav ul li {
   margin-right: 1.25em;
 }
-/* line 760, theme.scss */
+/* line 812, theme.scss */
 body .container #header nav ul li a:hover {
   border-bottom: 1px solid;
 }
-/* line 764, theme.scss */
+/* line 816, theme.scss */
 body .container #header nav ul li.all-products-link {
   margin-right: 0;
   float: right;
 }
 @media only screen and (max-width: 600px) {
-  /* line 749, theme.scss */
+  /* line 801, theme.scss */
   body .container #header nav {
     border-top: none;
     border-bottom: none;
     padding: 0;
     font-size: 100%;
   }
-  /* line 776, theme.scss */
+  /* line 828, theme.scss */
   body .container #header nav ul {
     background: #eeeeee;
   }
-  /* line 779, theme.scss */
+  /* line 831, theme.scss */
   body .container #header nav ul li {
     padding: 0.3125em;
     margin-right: 0;
   }
-  /* line 783, theme.scss */
+  /* line 835, theme.scss */
   body .container #header nav ul li:after {
     content: '\2606';
     margin-left: 0.3125em;
     color: #4a4742;
   }
-  /* line 789, theme.scss */
+  /* line 841, theme.scss */
   body .container #header nav ul li.all-products-link {
     float: left;
   }
-  /* line 792, theme.scss */
+  /* line 844, theme.scss */
   body .container #header nav ul li.all-products-link:after {
     content: '';
   }
 }
-/* line 811, theme.scss */
+/* line 863, theme.scss */
 body .container .home .image-navigation {
   display: block;
   top: 400px;
 }
-/* line 815, theme.scss */
+/* line 867, theme.scss */
 body .container .home .image-navigation.left {
   margin-left: -20px;
 }
-/* line 818, theme.scss */
+/* line 870, theme.scss */
 body .container .home .image-navigation.right {
   margin-left: 680px;
 }
-/* line 343, theme.scss */
+/* line 348, theme.scss */
 body .container #hot #slider #large-image img {
   width: 99.8%;
   padding: 0.1%;
@@ -662,7 +976,7 @@ body .container #hot #slider #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 349, theme.scss */
+/* line 354, theme.scss */
 body .container #hot #slider #large-image-title {
   background: #111111;
   color: #f1f1f1;
@@ -677,7 +991,7 @@ body .container #hot #slider #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 349, theme.scss */
+  /* line 354, theme.scss */
   body .container #hot #slider #large-image-title {
     background: #f1f1f1;
     color: #111111;
@@ -685,7 +999,7 @@ body .container #hot #slider #large-image-title {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 349, theme.scss */
+  /* line 354, theme.scss */
   body .container #hot #slider #large-image-title {
     top: -5.3em;
     opacity: .9;
@@ -693,7 +1007,7 @@ body .container #hot #slider #large-image-title {
     z-index: 1;
   }
 }
-/* line 369, theme.scss */
+/* line 374, theme.scss */
 body .container #hot #slider #large-image-title #text {
   background: #f25f18;
   color: #f1f1f1;
@@ -704,7 +1018,7 @@ body .container #hot #slider #large-image-title #text {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 377, theme.scss */
+/* line 382, theme.scss */
 body .container #hot #slider #large-image-title #text h1 {
   padding: 0;
   /* handhelds to iPhone 3,4*/
@@ -712,18 +1026,18 @@ body .container #hot #slider #large-image-title #text h1 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 377, theme.scss */
+  /* line 382, theme.scss */
   body .container #hot #slider #large-image-title #text h1 {
     padding: .71em 0;
   }
 }
 @media only screen and (max-width: 380px) {
-  /* line 369, theme.scss */
+  /* line 374, theme.scss */
   body .container #hot #slider #large-image-title #text {
     display: none;
   }
 }
-/* line 390, theme.scss */
+/* line 395, theme.scss */
 body .container #hot #slider #large-image-title #info {
   width: 80%;
   float: right;
@@ -732,13 +1046,13 @@ body .container #hot #slider #large-image-title #info {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 390, theme.scss */
+  /* line 395, theme.scss */
   body .container #hot #slider #large-image-title #info {
     width: 100%;
     float: left;
   }
 }
-/* line 399, theme.scss */
+/* line 404, theme.scss */
 body .container #hot #slider #large-image-title #info .arrow-right {
   width: 0;
   height: 0;
@@ -753,12 +1067,12 @@ body .container #hot #slider #large-image-title #info .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 399, theme.scss */
+  /* line 404, theme.scss */
   body .container #hot #slider #large-image-title #info .arrow-right {
     display: none;
   }
 }
-/* line 415, theme.scss */
+/* line 420, theme.scss */
 body .container #hot #slider #large-image-title #info h3 {
   color: #f25f18;
   position: relative;
@@ -773,7 +1087,7 @@ body .container #hot #slider #large-image-title #info h3 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 415, theme.scss */
+  /* line 420, theme.scss */
   body .container #hot #slider #large-image-title #info h3 {
     top: 0;
     left: 0;
@@ -783,14 +1097,14 @@ body .container #hot #slider #large-image-title #info h3 {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 415, theme.scss */
+  /* line 420, theme.scss */
   body .container #hot #slider #large-image-title #info h3 {
     top: -3.5em;
     left: 2.5em;
     width: 85%;
   }
 }
-/* line 437, theme.scss */
+/* line 442, theme.scss */
 body .container #hot #slider #large-image-title #info p {
   color: #f1f1f1;
   font-size: larger;
@@ -805,7 +1119,7 @@ body .container #hot #slider #large-image-title #info p {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 437, theme.scss */
+  /* line 442, theme.scss */
   body .container #hot #slider #large-image-title #info p {
     top: 0;
     left: 0;
@@ -815,13 +1129,13 @@ body .container #hot #slider #large-image-title #info p {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 437, theme.scss */
+  /* line 442, theme.scss */
   body .container #hot #slider #large-image-title #info p {
     top: -3.5em;
     width: 85%;
   }
 }
-/* line 459, theme.scss */
+/* line 464, theme.scss */
 body .container #hot #slider #large-image-title #info #price {
   color: #f1f1f1;
   position: relative;
@@ -836,7 +1150,7 @@ body .container #hot #slider #large-image-title #info #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 459, theme.scss */
+  /* line 464, theme.scss */
   body .container #hot #slider #large-image-title #info #price {
     top: 0;
     left: 0;
@@ -846,7 +1160,7 @@ body .container #hot #slider #large-image-title #info #price {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 459, theme.scss */
+  /* line 464, theme.scss */
   body .container #hot #slider #large-image-title #info #price {
     top: -7em;
     z-index: 2;
@@ -854,26 +1168,26 @@ body .container #hot #slider #large-image-title #info #price {
     color: #111111;
   }
 }
-/* line 481, theme.scss */
+/* line 486, theme.scss */
 body .container #hot #slider #large-image-title #info #price .normal-price {
   color: #111111;
 }
-/* line 828, theme.scss */
+/* line 880, theme.scss */
 body .container #hot #thumbs {
   background: white url(stripe.png);
   overflow: hidden;
 }
-/* line 832, theme.scss */
+/* line 884, theme.scss */
 body .container #hot #thumbs #items {
   overflow-y: scroll;
   position: relative;
   right: -30px;
 }
-/* line 837, theme.scss */
+/* line 889, theme.scss */
 body .container #hot #thumbs #items .item {
   padding: 0.625em 1.25em;
 }
-/* line 840, theme.scss */
+/* line 892, theme.scss */
 body .container #hot #thumbs #items .item img {
   width: 98%;
   padding: 1%;
@@ -881,13 +1195,13 @@ body .container #hot #thumbs #items .item img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   width: 100px;
 }
-/* line 846, theme.scss */
+/* line 898, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 {
   position: relative;
   z-index: 1000;
   cursor: pointer;
 }
-/* line 851, theme.scss */
+/* line 903, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   width: 86px;
   height: auto;
@@ -898,16 +1212,16 @@ body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   padding: 0.625em;
   display: none;
 }
-/* line 864, theme.scss */
+/* line 916, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover {
   z-index: 1001;
 }
-/* line 867, theme.scss */
+/* line 919, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover .tooltip-text {
   display: block;
   left: 0;
 }
-/* line 877, theme.scss */
+/* line 929, theme.scss */
 body .container #hot #more {
   background: url(arrow-black-bottom-right.png) no-repeat 15em -4em;
   height: 10em;
@@ -917,14 +1231,14 @@ body .container #hot #more {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 883, theme.scss */
+/* line 935, theme.scss */
 body .container #hot #more h4 {
   font-family: 'Nothing You Could Do', cursive;
   margin-top: 2em;
   cursor: pointer;
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 877, theme.scss */
+  /* line 929, theme.scss */
   body .container #hot #more {
     width: 90%;
     height: auto;
@@ -932,14 +1246,14 @@ body .container #hot #more h4 {
     top: -2.5em;
   }
 }
-/* line 898, theme.scss */
+/* line 950, theme.scss */
 body .container #hot #noutati .item {
   font-size: smaller;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 343, theme.scss */
+/* line 348, theme.scss */
 body .container #hot #noutati .item #large-image img {
   width: 99.8%;
   padding: 0.1%;
@@ -947,7 +1261,7 @@ body .container #hot #noutati .item #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 349, theme.scss */
+/* line 354, theme.scss */
 body .container #hot #noutati .item #large-image-title {
   background: #111111;
   color: #f1f1f1;
@@ -962,7 +1276,7 @@ body .container #hot #noutati .item #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 349, theme.scss */
+  /* line 354, theme.scss */
   body .container #hot #noutati .item #large-image-title {
     background: #f1f1f1;
     color: #111111;
@@ -970,7 +1284,7 @@ body .container #hot #noutati .item #large-image-title {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 349, theme.scss */
+  /* line 354, theme.scss */
   body .container #hot #noutati .item #large-image-title {
     top: -5.3em;
     opacity: .9;
@@ -978,7 +1292,7 @@ body .container #hot #noutati .item #large-image-title {
     z-index: 1;
   }
 }
-/* line 369, theme.scss */
+/* line 374, theme.scss */
 body .container #hot #noutati .item #large-image-title #text {
   background: #f25f18;
   color: #f1f1f1;
@@ -989,7 +1303,7 @@ body .container #hot #noutati .item #large-image-title #text {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 377, theme.scss */
+/* line 382, theme.scss */
 body .container #hot #noutati .item #large-image-title #text h1 {
   padding: 0;
   /* handhelds to iPhone 3,4*/
@@ -997,18 +1311,18 @@ body .container #hot #noutati .item #large-image-title #text h1 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 377, theme.scss */
+  /* line 382, theme.scss */
   body .container #hot #noutati .item #large-image-title #text h1 {
     padding: .71em 0;
   }
 }
 @media only screen and (max-width: 380px) {
-  /* line 369, theme.scss */
+  /* line 374, theme.scss */
   body .container #hot #noutati .item #large-image-title #text {
     display: none;
   }
 }
-/* line 390, theme.scss */
+/* line 395, theme.scss */
 body .container #hot #noutati .item #large-image-title #info {
   width: 80%;
   float: right;
@@ -1017,13 +1331,13 @@ body .container #hot #noutati .item #large-image-title #info {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 390, theme.scss */
+  /* line 395, theme.scss */
   body .container #hot #noutati .item #large-image-title #info {
     width: 100%;
     float: left;
   }
 }
-/* line 399, theme.scss */
+/* line 404, theme.scss */
 body .container #hot #noutati .item #large-image-title #info .arrow-right {
   width: 0;
   height: 0;
@@ -1038,12 +1352,12 @@ body .container #hot #noutati .item #large-image-title #info .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 399, theme.scss */
+  /* line 404, theme.scss */
   body .container #hot #noutati .item #large-image-title #info .arrow-right {
     display: none;
   }
 }
-/* line 415, theme.scss */
+/* line 420, theme.scss */
 body .container #hot #noutati .item #large-image-title #info h3 {
   color: #f25f18;
   position: relative;
@@ -1058,7 +1372,7 @@ body .container #hot #noutati .item #large-image-title #info h3 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 415, theme.scss */
+  /* line 420, theme.scss */
   body .container #hot #noutati .item #large-image-title #info h3 {
     top: 0;
     left: 0;
@@ -1068,14 +1382,14 @@ body .container #hot #noutati .item #large-image-title #info h3 {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 415, theme.scss */
+  /* line 420, theme.scss */
   body .container #hot #noutati .item #large-image-title #info h3 {
     top: -3.5em;
     left: 2.5em;
     width: 85%;
   }
 }
-/* line 437, theme.scss */
+/* line 442, theme.scss */
 body .container #hot #noutati .item #large-image-title #info p {
   color: #f1f1f1;
   font-size: larger;
@@ -1090,7 +1404,7 @@ body .container #hot #noutati .item #large-image-title #info p {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 437, theme.scss */
+  /* line 442, theme.scss */
   body .container #hot #noutati .item #large-image-title #info p {
     top: 0;
     left: 0;
@@ -1100,13 +1414,13 @@ body .container #hot #noutati .item #large-image-title #info p {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 437, theme.scss */
+  /* line 442, theme.scss */
   body .container #hot #noutati .item #large-image-title #info p {
     top: -3.5em;
     width: 85%;
   }
 }
-/* line 459, theme.scss */
+/* line 464, theme.scss */
 body .container #hot #noutati .item #large-image-title #info #price {
   color: #f1f1f1;
   position: relative;
@@ -1121,7 +1435,7 @@ body .container #hot #noutati .item #large-image-title #info #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 459, theme.scss */
+  /* line 464, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: 0;
     left: 0;
@@ -1131,7 +1445,7 @@ body .container #hot #noutati .item #large-image-title #info #price {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 459, theme.scss */
+  /* line 464, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: -7em;
     z-index: 2;
@@ -1139,17 +1453,17 @@ body .container #hot #noutati .item #large-image-title #info #price {
     color: #111111;
   }
 }
-/* line 481, theme.scss */
+/* line 486, theme.scss */
 body .container #hot #noutati .item #large-image-title #info #price .normal-price {
   color: #111111;
 }
 @media only screen and (max-width: 600px) {
-  /* line 898, theme.scss */
+  /* line 950, theme.scss */
   body .container #hot #noutati .item {
     font-size: 100%;
   }
 }
-/* line 906, theme.scss */
+/* line 958, theme.scss */
 body .container #hot #noutati .item #large-image-title {
   height: 5.2em;
   /* handhelds to iPhone 3,4*/
@@ -1157,14 +1471,14 @@ body .container #hot #noutati .item #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 911, theme.scss */
+  /* line 963, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: -7.5em;
     right: 0;
     color: white;
   }
 }
-/* line 930, theme.scss */
+/* line 982, theme.scss */
 body .container #bestsellers #title h2 {
   background: #111111;
   color: #f25f18;
@@ -1178,12 +1492,12 @@ body .container #bestsellers #title h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 930, theme.scss */
+  /* line 982, theme.scss */
   body .container #bestsellers #title h2 {
     letter-spacing: 2px;
   }
 }
-/* line 948, theme.scss */
+/* line 1000, theme.scss */
 body .container #bestsellers #body #filters {
   width: 100%;
   float: left;
@@ -1191,7 +1505,7 @@ body .container #bestsellers #body #filters {
   padding-bottom: 1.25em;
   border-bottom: 1px solid;
 }
-/* line 955, theme.scss */
+/* line 1007, theme.scss */
 body .container #bestsellers #body #filters div {
   background: #111111;
   /* handhelds to iPhone 3,4*/
@@ -1199,12 +1513,12 @@ body .container #bestsellers #body #filters div {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 955, theme.scss */
+  /* line 1007, theme.scss */
   body .container #bestsellers #body #filters div {
     background: #f1f1f1;
   }
 }
-/* line 962, theme.scss */
+/* line 1014, theme.scss */
 body .container #bestsellers #body #filters div h4 {
   cursor: pointer;
   padding: 0.3125em 0;
@@ -1219,7 +1533,7 @@ body .container #bestsellers #body #filters div h4 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 962, theme.scss */
+  /* line 1014, theme.scss */
   body .container #bestsellers #body #filters div h4 {
     width: 100%;
     margin: 0 0 0 0;
@@ -1231,20 +1545,20 @@ body .container #bestsellers #body #filters div h4 {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 962, theme.scss */
+  /* line 1014, theme.scss */
   body .container #bestsellers #body #filters div h4 {
     text-align: left;
     font-size: 100%;
     margin: 0.625em;
   }
 }
-/* line 985, theme.scss */
+/* line 1037, theme.scss */
 body .container #bestsellers #body #filters div h4:before {
   content: '\2713';
   margin-right: 0.625em;
   color: #aaaaaa;
 }
-/* line 990, theme.scss */
+/* line 1042, theme.scss */
 body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
   color: white;
   /* handhelds to iPhone 3,4*/
@@ -1252,12 +1566,12 @@ body .container #bestsellers #body #filters div h4.active, body .container #best
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 990, theme.scss */
+  /* line 1042, theme.scss */
   body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
     color: #111111;
   }
 }
-/* line 997, theme.scss */
+/* line 1049, theme.scss */
 body .container #bestsellers #body #filters div h4.active:before {
   color: white;
   /* handhelds to iPhone 3,4*/
@@ -1265,12 +1579,12 @@ body .container #bestsellers #body #filters div h4.active:before {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 997, theme.scss */
+  /* line 1049, theme.scss */
   body .container #bestsellers #body #filters div h4.active:before {
     color: #111111;
   }
 }
-/* line 1010, theme.scss */
+/* line 1062, theme.scss */
 body .container #bestsellers #body #items .item {
   background: white url(stripe.png);
   min-height: 37.5em;
@@ -1282,25 +1596,25 @@ body .container #bestsellers #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 1010, theme.scss */
+  /* line 1062, theme.scss */
   body .container #bestsellers #body #items .item {
     min-height: 42.5em;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 1010, theme.scss */
+  /* line 1062, theme.scss */
   body .container #bestsellers #body #items .item {
     min-height: 32.5em;
   }
 }
-/* line 269, theme.scss */
+/* line 274, theme.scss */
 body .container #bestsellers #body #items .item img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 273, theme.scss */
+/* line 278, theme.scss */
 body .container #bestsellers #body #items .item #text {
   margin: 0 1.25em;
   /* handhelds to iPhone 3,4*/
@@ -1308,12 +1622,12 @@ body .container #bestsellers #body #items .item #text {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 273, theme.scss */
+  /* line 278, theme.scss */
   body .container #bestsellers #body #items .item #text {
     margin: 0 0.625em;
   }
 }
-/* line 279, theme.scss */
+/* line 284, theme.scss */
 body .container #bestsellers #body #items .item #text h3, body .container #bestsellers #body #items .item #text p {
   background: white;
   padding: 0.625em;
@@ -1323,21 +1637,21 @@ body .container #bestsellers #body #items .item #text h3, body .container #bests
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 279, theme.scss */
+  /* line 284, theme.scss */
   body .container #bestsellers #body #items .item #text h3, body .container #bestsellers #body #items .item #text p {
     min-height: 1.25em;
   }
 }
-/* line 289, theme.scss */
+/* line 294, theme.scss */
 body .container #bestsellers #body #items .item #text h3 {
   font-weight: bold;
   margin: 1.25em 0;
 }
-/* line 293, theme.scss */
+/* line 298, theme.scss */
 body .container #bestsellers #body #items .item #text p {
   padding: 0.625em;
 }
-/* line 298, theme.scss */
+/* line 303, theme.scss */
 body .container #bestsellers #body #items .item #price {
   position: relative;
   top: 3.75em;
@@ -1350,13 +1664,13 @@ body .container #bestsellers #body #items .item #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 298, theme.scss */
+  /* line 303, theme.scss */
   body .container #bestsellers #body #items .item #price {
     margin-left: 0.625em;
     top: 1.25em;
   }
 }
-/* line 312, theme.scss */
+/* line 317, theme.scss */
 body .container #bestsellers #body #items .item #category {
   position: relative;
   top: 4.5em;
@@ -1369,40 +1683,40 @@ body .container #bestsellers #body #items .item #category {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 312, theme.scss */
+  /* line 317, theme.scss */
   body .container #bestsellers #body #items .item #category {
     margin-right: 0.625em;
     top: 1.875em;
   }
 }
-/* line 326, theme.scss */
+/* line 331, theme.scss */
 body .container #bestsellers #body #items .item #category a {
   background: #cccccc;
   padding: 0.3125em;
   color: white;
 }
-/* line 331, theme.scss */
+/* line 336, theme.scss */
 body .container #bestsellers #body #items .item #category a:hover {
   background: gray;
 }
-/* line 1023, theme.scss */
+/* line 1075, theme.scss */
 body .container #search #title {
   background: url(arrow-black-top-right.png) no-repeat 1em 5em;
   height: 20em;
 }
-/* line 1027, theme.scss */
+/* line 1079, theme.scss */
 body .container #search #title h3 {
   font-family: 'Nothing You Could Do', cursive;
 }
-/* line 1038, theme.scss */
+/* line 1090, theme.scss */
 body .container #promo {
   margin: 5% 0;
 }
-/* line 1041, theme.scss */
+/* line 1093, theme.scss */
 body .container #promo #title {
   color: white;
 }
-/* line 1044, theme.scss */
+/* line 1096, theme.scss */
 body .container #promo #title #percent {
   width: 70%;
   float: left;
@@ -1413,18 +1727,18 @@ body .container #promo #title #percent {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 1051, theme.scss */
+/* line 1103, theme.scss */
 body .container #promo #title #percent h3 {
   padding: 0.3125em 0;
   font-size: 5em;
 }
 @media only screen and (max-width: 380px) {
-  /* line 1044, theme.scss */
+  /* line 1096, theme.scss */
   body .container #promo #title #percent {
     width: 100%;
   }
 }
-/* line 1061, theme.scss */
+/* line 1113, theme.scss */
 body .container #promo #title #arrow {
   width: 30%;
   float: right;
@@ -1433,12 +1747,12 @@ body .container #promo #title #arrow {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1061, theme.scss */
+  /* line 1113, theme.scss */
   body .container #promo #title #arrow {
     display: none;
   }
 }
-/* line 1069, theme.scss */
+/* line 1121, theme.scss */
 body .container #promo #title #arrow .arrow-right {
   width: 0;
   height: 0;
@@ -1455,12 +1769,12 @@ body .container #promo #title #arrow .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1069, theme.scss */
+  /* line 1121, theme.scss */
   body .container #promo #title #arrow .arrow-right {
     display: none;
   }
 }
-/* line 1090, theme.scss */
+/* line 1142, theme.scss */
 body .container #promo #body #items .item {
   height: 36em;
   border-bottom: 3px solid #f1f1f1;
@@ -1469,12 +1783,12 @@ body .container #promo #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1090, theme.scss */
+  /* line 1142, theme.scss */
   body .container #promo #body #items .item {
     height: 25em;
   }
 }
-/* line 169, theme.scss */
+/* line 174, theme.scss */
 body .container #promo #body #items .item img {
   width: 98%;
   padding: 1%;
@@ -1487,12 +1801,12 @@ body .container #promo #body #items .item img {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 169, theme.scss */
+  /* line 174, theme.scss */
   body .container #promo #body #items .item img {
     margin-left: 0;
   }
 }
-/* line 179, theme.scss */
+/* line 184, theme.scss */
 body .container #promo #body #items .item #text {
   margin: 0 1.25em;
   /* handhelds to iPhone 3,4*/
@@ -1505,12 +1819,12 @@ body .container #promo #body #items .item #text {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 182, theme.scss */
+/* line 187, theme.scss */
 body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
   background: #f1f1f1;
   padding: 0.625em;
 }
-/* line 187, theme.scss */
+/* line 192, theme.scss */
 body .container #promo #body #items .item #text h3 {
   font-weight: bold;
   margin: 0.625em 0;
@@ -1520,21 +1834,21 @@ body .container #promo #body #items .item #text h3 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 187, theme.scss */
+  /* line 192, theme.scss */
   body .container #promo #body #items .item #text h3 {
     min-height: 2.5em;
   }
 }
-/* line 195, theme.scss */
+/* line 200, theme.scss */
 body .container #promo #body #items .item #text p {
   padding: 0.625em;
 }
 @media only screen and (max-width: 600px) {
-  /* line 179, theme.scss */
+  /* line 184, theme.scss */
   body .container #promo #body #items .item #text {
     margin: 0 0 0 1.25em;
   }
-  /* line 202, theme.scss */
+  /* line 207, theme.scss */
   body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
     background: transparent;
     padding: 0;
@@ -1542,26 +1856,26 @@ body .container #promo #body #items .item #text p {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 179, theme.scss */
+  /* line 184, theme.scss */
   body .container #promo #body #items .item #text {
     margin: 0;
   }
-  /* line 211, theme.scss */
+  /* line 216, theme.scss */
   body .container #promo #body #items .item #text p {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 217, theme.scss */
+  /* line 222, theme.scss */
   body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
     padding: 0;
   }
-  /* line 220, theme.scss */
+  /* line 225, theme.scss */
   body .container #promo #body #items .item #text p {
     min-height: 2.5em;
   }
 }
-/* line 226, theme.scss */
+/* line 231, theme.scss */
 body .container #promo #body #items .item #price {
   position: relative;
   top: 5em;
@@ -1579,39 +1893,39 @@ body .container #promo #body #items .item #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 226, theme.scss */
+  /* line 231, theme.scss */
   body .container #promo #body #items .item #price {
     top: 1.25em;
     margin-left: 1em;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 226, theme.scss */
+  /* line 231, theme.scss */
   body .container #promo #body #items .item #price {
     margin-left: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 226, theme.scss */
+  /* line 231, theme.scss */
   body .container #promo #body #items .item #price {
     top: 1.25em;
     margin-left: 1em;
   }
 }
-/* line 246, theme.scss */
+/* line 251, theme.scss */
 body .container #promo #body #items .item:hover {
   border-bottom: 3px solid #f25f18;
   background: white url(stripe.png);
 }
-/* line 251, theme.scss */
+/* line 256, theme.scss */
 body .container #promo #body #items .item:hover #text h3, body .container #promo #body #items .item:hover #text p {
   background: white;
 }
-/* line 1103, theme.scss */
+/* line 1155, theme.scss */
 body .container #top-new-categories ul {
   text-align: center;
 }
-/* line 501, theme.scss */
+/* line 506, theme.scss */
 body .container #top-new-categories ul li {
   height: 14em;
   border-radius: 8em;
@@ -1624,19 +1938,19 @@ body .container #top-new-categories ul li {
   border: 1px solid #4d8fce;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 501, theme.scss */
+  /* line 506, theme.scss */
   body .container #top-new-categories ul li {
     height: 16em;
     border-radius: 16em;
     padding-top: 5em;
   }
 }
-/* line 517, theme.scss */
+/* line 522, theme.scss */
 body .container #top-new-categories ul li:hover {
   box-shadow: 2px 1px 1px #111111;
   border: 1px solid #111111;
 }
-/* line 1110, theme.scss */
+/* line 1162, theme.scss */
 body .container #footer-info #contact ul {
   list-style: none;
   margin: 0;
@@ -1656,7 +1970,7 @@ body .container #footer-info #company div {
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 1119, theme.scss */
+/* line 1171, theme.scss */
 body .container #footer-info #company h3 {
   background: transparent;
   border: none;
@@ -1677,17 +1991,17 @@ body .container #footer-info #pages div {
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 1129, theme.scss */
+/* line 1181, theme.scss */
 body .container #footer-info #pages p {
   margin-top: 1.25em;
 }
-/* line 1135, theme.scss */
+/* line 1187, theme.scss */
 body .container #footer {
   background: #eeeeee;
   border-bottom: 1px solid #cccccc;
   padding: 0.625em;
 }
-/* line 1143, theme.scss */
+/* line 1195, theme.scss */
 body .container #footer-subscribe #newsletter input[type="email"] {
   width: 100%;
 }
@@ -1917,13 +2231,14 @@ body.home .image-navigation.right {
     margin-left: 90%;
   }
 }
-/* line 50, startpage.scss */
-body.home .container #hot {
+
+/* line 52, startpage.scss */
+body .container #hot {
   width: 100%;
   float: left;
 }
-/* line 53, startpage.scss */
-body.home .container #hot #slider {
+/* line 55, startpage.scss */
+body .container #hot #slider {
   width: 75%;
   margin: 0 5% 0 0;
   float: left;
@@ -1938,29 +2253,29 @@ body.home .container #hot #slider {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 53, startpage.scss */
-  body.home .container #hot #slider {
+  /* line 55, startpage.scss */
+  body .container #hot #slider {
     display: none;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 53, startpage.scss */
-  body.home .container #hot #slider {
+  /* line 55, startpage.scss */
+  body .container #hot #slider {
     width: 80%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 53, startpage.scss */
-  body.home .container #hot #slider {
+  /* line 55, startpage.scss */
+  body .container #hot #slider {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 67, startpage.scss */
-body.home .container #hot #thumbs {
+/* line 69, startpage.scss */
+body .container #hot #thumbs {
   width: 20%;
   margin: 0 0 0 0;
   float: left;
@@ -1972,44 +2287,44 @@ body.home .container #hot #thumbs {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 67, startpage.scss */
-  body.home .container #hot #thumbs {
+  /* line 69, startpage.scss */
+  body .container #hot #thumbs {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 67, startpage.scss */
-  body.home .container #hot #thumbs {
+  /* line 69, startpage.scss */
+  body .container #hot #thumbs {
     display: none;
   }
 }
-/* line 77, startpage.scss */
-body.home .container #hot #thumbs #items {
+/* line 79, startpage.scss */
+body .container #hot #thumbs #items {
   height: 45em;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 77, startpage.scss */
-  body.home .container #hot #thumbs #items {
+  /* line 79, startpage.scss */
+  body .container #hot #thumbs #items {
     height: 55em;
   }
 }
-/* line 84, startpage.scss */
-body.home .container #hot #more {
+/* line 86, startpage.scss */
+body .container #hot #more {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 84, startpage.scss */
-  body.home .container #hot #more {
+  /* line 86, startpage.scss */
+  body .container #hot #more {
     display: none;
   }
 }
-/* line 91, startpage.scss */
-body.home .container #hot #noutati {
+/* line 93, startpage.scss */
+body .container #hot #noutati {
   width: 100%;
   float: left;
   display: none;
@@ -2018,13 +2333,13 @@ body.home .container #hot #noutati {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 91, startpage.scss */
-  body.home .container #hot #noutati {
+  /* line 93, startpage.scss */
+  body .container #hot #noutati {
     display: block;
   }
 }
-/* line 100, startpage.scss */
-body.home .container #hot #noutati #items .item {
+/* line 102, startpage.scss */
+body .container #hot #noutati #items .item {
   width: 45%;
   margin: 0 10% 0 0;
   float: left;
@@ -2037,26 +2352,26 @@ body.home .container #hot #noutati #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 100, startpage.scss */
-  body.home .container #hot #noutati #items .item {
+  /* line 102, startpage.scss */
+  body .container #hot #noutati #items .item {
     width: 100%;
     margin-bottom: 20%;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 1023px) {
-  /* line 100, startpage.scss */
-  body.home .container #hot #noutati #items .item {
+  /* line 102, startpage.scss */
+  body .container #hot #noutati #items .item {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 113, startpage.scss */
-body.home .container #hot #noutati #items .item.c2, body.home .container #hot #noutati #items .item.c4, body.home .container #hot #noutati #items .item.c6, body.home .container #hot #noutati #items .item.c8, body.home .container #hot #noutati #items .item.c10, body.home .container #hot #noutati #items .item.c12, body.home .container #hot #noutati #items .item.c14, body.home .container #hot #noutati #items .item.c16, body.home .container #hot #noutati #items .item.c18, body.home .container #hot #noutati #items .item.c20 {
+/* line 115, startpage.scss */
+body .container #hot #noutati #items .item.c2, body .container #hot #noutati #items .item.c4, body .container #hot #noutati #items .item.c6, body .container #hot #noutati #items .item.c8, body .container #hot #noutati #items .item.c10, body .container #hot #noutati #items .item.c12, body .container #hot #noutati #items .item.c14, body .container #hot #noutati #items .item.c16, body .container #hot #noutati #items .item.c18, body .container #hot #noutati #items .item.c20 {
   margin-right: 0;
 }
-/* line 120, startpage.scss */
-body.home .container #subscribe-newsletter {
+/* line 122, startpage.scss */
+body .container #subscribe-newsletter {
   width: 100%;
   float: left;
   background: #4D8FCE;
@@ -2066,14 +2381,14 @@ body.home .container #subscribe-newsletter {
   margin: 5% 0;
 }
 @media only screen and (max-width: 600px) {
-  /* line 120, startpage.scss */
-  body.home .container #subscribe-newsletter {
+  /* line 122, startpage.scss */
+  body .container #subscribe-newsletter {
     width: 90%;
     padding: 5%;
   }
 }
 /* line 59, theme.scss */
-body.home .container #subscribe-newsletter .arrow-right {
+body .container #subscribe-newsletter .arrow-right {
   width: 0;
   height: 0;
   line-height: 0;
@@ -2091,101 +2406,30 @@ body.home .container #subscribe-newsletter .arrow-right {
 }
 @media only screen and (max-width: 600px) {
   /* line 59, theme.scss */
-  body.home .container #subscribe-newsletter .arrow-right {
+  body .container #subscribe-newsletter .arrow-right {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   /* line 59, theme.scss */
-  body.home .container #subscribe-newsletter .arrow-right {
+  body .container #subscribe-newsletter .arrow-right {
     display: none;
   }
 }
 /* line 79, theme.scss */
-body.home .container #subscribe-newsletter h4 {
+body .container #subscribe-newsletter h4 {
   padding: 0.625em 0;
 }
 /* line 83, theme.scss */
-body.home .container #subscribe-newsletter #text {
+body .container #subscribe-newsletter #text {
   width: 58%;
   margin-right: 5%;
   float: left;
   position: relative;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 83, theme.scss */
-  body.home .container #subscribe-newsletter #text {
-    width: 100%;
-    margin: 0;
-  }
-}
-/* line 95, theme.scss */
-body.home .container #subscribe-newsletter #text form {
-  padding: 0;
-}
-/* line 98, theme.scss */
-body.home .container #subscribe-newsletter #text form input.text {
-  width: 100%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 98, theme.scss */
-  body.home .container #subscribe-newsletter #text form input.text {
-    width: 75%;
-  }
-}
-/* line 107, theme.scss */
-body.home .container #subscribe-newsletter #text #whatis {
-  position: relative;
-  top: -1.5em;
-  float: right;
-  text-decoration: underline;
-}
-/* line 114, theme.scss */
-body.home .container #subscribe-newsletter #text #whatis .tooltip-text {
-  text-decoration: none;
-}
-/* line 118, theme.scss */
-body.home .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
-  left: 5em;
-}
-/* line 123, theme.scss */
-body.home .container #subscribe-newsletter #facebook-connect {
-  float: left;
-  width: 25%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 123, theme.scss */
-  body.home .container #subscribe-newsletter #facebook-connect {
-    width: 100%;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 132, theme.scss */
-  body.home .container #subscribe-newsletter #facebook-connect h4 {
-    margin-bottom: 1.25em;
-  }
-}
-/* line 137, theme.scss */
-body.home .container #subscribe-newsletter #facebook-connect #auth-loggedin {
-  padding: 1.25em;
-  font-size: small;
-}
-/* line 125, startpage.scss */
-body.home .container #subscribe-newsletter #text {
   margin-left: -4.5em;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
@@ -2197,35 +2441,103 @@ body.home .container #subscribe-newsletter #text {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 125, startpage.scss */
-  body.home .container #subscribe-newsletter #text {
+  /* line 83, theme.scss */
+  body .container #subscribe-newsletter #text {
     margin-left: -2.8em;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 125, startpage.scss */
-  body.home .container #subscribe-newsletter #text {
+  /* line 83, theme.scss */
+  body .container #subscribe-newsletter #text {
     margin-left: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 125, startpage.scss */
-  body.home .container #subscribe-newsletter #text {
+  /* line 83, theme.scss */
+  body .container #subscribe-newsletter #text {
     margin-left: 1.25em;
   }
 }
-/* line 133, startpage.scss */
-body.home .container #subscribe-newsletter.bigger-margin-bottom {
+@media only screen and (max-width: 600px) {
+  /* line 83, theme.scss */
+  body .container #subscribe-newsletter #text {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* line 100, theme.scss */
+body .container #subscribe-newsletter #text form {
+  padding: 0;
+}
+/* line 103, theme.scss */
+body .container #subscribe-newsletter #text form input.text {
+  width: 100%;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 103, theme.scss */
+  body .container #subscribe-newsletter #text form input.text {
+    width: 75%;
+  }
+}
+/* line 112, theme.scss */
+body .container #subscribe-newsletter #text #whatis {
+  position: relative;
+  top: -1.5em;
+  float: right;
+  text-decoration: underline;
+}
+/* line 119, theme.scss */
+body .container #subscribe-newsletter #text #whatis .tooltip-text {
+  text-decoration: none;
+}
+/* line 123, theme.scss */
+body .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
+  left: 5em;
+}
+/* line 128, theme.scss */
+body .container #subscribe-newsletter #facebook-connect {
+  float: left;
+  width: 25%;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (max-width: 600px) {
+  /* line 128, theme.scss */
+  body .container #subscribe-newsletter #facebook-connect {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 137, theme.scss */
+  body .container #subscribe-newsletter #facebook-connect h4 {
+    margin-bottom: 1.25em;
+  }
+}
+/* line 142, theme.scss */
+body .container #subscribe-newsletter #facebook-connect #auth-loggedin {
+  padding: 1.25em;
+  font-size: small;
+}
+/* line 127, startpage.scss */
+body .container #subscribe-newsletter.bigger-margin-bottom {
   margin-bottom: 10em;
 }
-/* line 138, startpage.scss */
-body.home .container #bestsellers {
+/* line 132, startpage.scss */
+body .container #bestsellers {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 142, startpage.scss */
-body.home .container #bestsellers #title {
+/* line 136, startpage.scss */
+body .container #bestsellers #title {
   /* @include col($minor2, 0, 0); */
   width: 7.5%;
   margin: 0 2.5% 0 0;
@@ -2238,21 +2550,21 @@ body.home .container #bestsellers #title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 142, startpage.scss */
-  body.home .container #bestsellers #title {
+  /* line 136, startpage.scss */
+  body .container #bestsellers #title {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 150, startpage.scss */
-  body.home .container #bestsellers #title h2 {
+  /* line 144, startpage.scss */
+  body .container #bestsellers #title h2 {
     padding: 0.3125em;
   }
 }
-/* line 156, startpage.scss */
-body.home .container #bestsellers #body {
+/* line 150, startpage.scss */
+body .container #bestsellers #body {
   width: 90%;
   margin: 0 0 0 0;
   float: left;
@@ -2261,15 +2573,15 @@ body.home .container #bestsellers #body {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 156, startpage.scss */
-  body.home .container #bestsellers #body {
+  /* line 150, startpage.scss */
+  body .container #bestsellers #body {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 164, startpage.scss */
-body.home .container #bestsellers #body #filters div {
+/* line 158, startpage.scss */
+body .container #bestsellers #body #filters div {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
@@ -2278,33 +2590,33 @@ body.home .container #bestsellers #body #filters div {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 164, startpage.scss */
-  body.home .container #bestsellers #body #filters div {
+  /* line 158, startpage.scss */
+  body .container #bestsellers #body #filters div {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 171, startpage.scss */
-body.home .container #bestsellers #body #filters div#last-three-months {
+/* line 165, startpage.scss */
+body .container #bestsellers #body #filters div#last-three-months {
   margin-right: 0;
 }
-/* line 177, startpage.scss */
-body.home .container #bestsellers #body #products #last-week, body.home .container #bestsellers #body #products #last-month, body.home .container #bestsellers #body #products #last-three-months {
+/* line 171, startpage.scss */
+body .container #bestsellers #body #products #last-week, body .container #bestsellers #body #products #last-month, body .container #bestsellers #body #products #last-three-months {
   display: none;
 }
-/* line 180, startpage.scss */
-body.home .container #bestsellers #body #products #last-week.active, body.home .container #bestsellers #body #products #last-month.active, body.home .container #bestsellers #body #products #last-three-months.active {
+/* line 174, startpage.scss */
+body .container #bestsellers #body #products #last-week.active, body .container #bestsellers #body #products #last-month.active, body .container #bestsellers #body #products #last-three-months.active {
   display: block;
 }
-/* line 184, startpage.scss */
-body.home .container #bestsellers #body #products #items {
+/* line 178, startpage.scss */
+body .container #bestsellers #body #products #items {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 185, startpage.scss */
-body.home .container #bestsellers #body #products #items .item {
+/* line 179, startpage.scss */
+body .container #bestsellers #body #products #items .item {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
@@ -2317,8 +2629,8 @@ body.home .container #bestsellers #body #products #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 185, startpage.scss */
-  body.home .container #bestsellers #body #products #items .item {
+  /* line 179, startpage.scss */
+  body .container #bestsellers #body #products #items .item {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
@@ -2326,36 +2638,36 @@ body.home .container #bestsellers #body #products #items .item {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 1023px) {
-  /* line 185, startpage.scss */
-  body.home .container #bestsellers #body #products #items .item {
+  /* line 179, startpage.scss */
+  body .container #bestsellers #body #products #items .item {
     width: 47.5%;
     margin: 0 5% 0 0;
     float: left;
     margin-bottom: 5%;
   }
 }
-/* line 198, startpage.scss */
-body.home .container #bestsellers #body #products #items .item.c3, body.home .container #bestsellers #body #products #items .item.c6, body.home .container #bestsellers #body #products #items .item.c9 {
+/* line 192, startpage.scss */
+body .container #bestsellers #body #products #items .item.c3, body .container #bestsellers #body #products #items .item.c6, body .container #bestsellers #body #products #items .item.c9 {
   margin-right: 0;
 }
 @media only screen and (min-width: 381px) and (max-width: 1023px) {
-  /* line 203, startpage.scss */
-  body.home .container #bestsellers #body #products #items .item.c2, body.home .container #bestsellers #body #products #items .item.c4, body.home .container #bestsellers #body #products #items .item.c6, body.home .container #bestsellers #body #products #items .item.c8, body.home .container #bestsellers #body #products #items .item.c10, body.home .container #bestsellers #body #products #items .item.c12 {
+  /* line 197, startpage.scss */
+  body .container #bestsellers #body #products #items .item.c2, body .container #bestsellers #body #products #items .item.c4, body .container #bestsellers #body #products #items .item.c6, body .container #bestsellers #body #products #items .item.c8, body .container #bestsellers #body #products #items .item.c10, body .container #bestsellers #body #products #items .item.c12 {
     margin-right: 0 !important;
   }
 }
-/* line 211, startpage.scss */
-body.home .container #bestsellers #body #more {
+/* line 205, startpage.scss */
+body .container #bestsellers #body #more {
   float: right;
 }
-/* line 217, startpage.scss */
-body.home .container #search {
+/* line 211, startpage.scss */
+body .container #search {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 221, startpage.scss */
-body.home .container #search #title {
+/* line 215, startpage.scss */
+body .container #search #title {
   width: 10%;
   margin: 0 0 0 0;
   float: left;
@@ -2367,19 +2679,19 @@ body.home .container #search #title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 221, startpage.scss */
-  body.home .container #search #title {
+  /* line 215, startpage.scss */
+  body .container #search #title {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 221, startpage.scss */
-  body.home .container #search #title {
+  /* line 215, startpage.scss */
+  body .container #search #title {
     display: none;
   }
 }
-/* line 232, startpage.scss */
-body.home .container #search #body {
+/* line 226, startpage.scss */
+body .container #search #body {
   width: 90%;
   margin: 0 0 0 0;
   float: left;
@@ -2391,29 +2703,29 @@ body.home .container #search #body {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 232, startpage.scss */
-  body.home .container #search #body {
+  /* line 226, startpage.scss */
+  body .container #search #body {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 232, startpage.scss */
-  body.home .container #search #body {
+  /* line 226, startpage.scss */
+  body .container #search #body {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 246, startpage.scss */
-body.home .container #promo {
+/* line 240, startpage.scss */
+body .container #promo {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 250, startpage.scss */
-body.home .container #promo #title {
+/* line 244, startpage.scss */
+body .container #promo #title {
   width: 10%;
   margin: 0 0 0 0;
   float: left;
@@ -2428,31 +2740,31 @@ body.home .container #promo #title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 250, startpage.scss */
-  body.home .container #promo #title {
+  /* line 244, startpage.scss */
+  body .container #promo #title {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 250, startpage.scss */
-  body.home .container #promo #title {
+  /* line 244, startpage.scss */
+  body .container #promo #title {
     width: 33%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 250, startpage.scss */
-  body.home .container #promo #title {
+  /* line 244, startpage.scss */
+  body .container #promo #title {
     width: 20%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 264, startpage.scss */
-body.home .container #promo #body {
+/* line 258, startpage.scss */
+body .container #promo #body {
   width: 90%;
   margin: 0 0 0 0;
   float: left;
@@ -2467,37 +2779,37 @@ body.home .container #promo #body {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 264, startpage.scss */
-  body.home .container #promo #body {
+  /* line 258, startpage.scss */
+  body .container #promo #body {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 264, startpage.scss */
-  body.home .container #promo #body {
+  /* line 258, startpage.scss */
+  body .container #promo #body {
     width: 66%;
     margin: 0 0 0 0;
     float: left;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 264, startpage.scss */
-  body.home .container #promo #body {
+  /* line 258, startpage.scss */
+  body .container #promo #body {
     width: 80%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 278, startpage.scss */
-body.home .container #promo #body #items {
+/* line 272, startpage.scss */
+body .container #promo #body #items {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 279, startpage.scss */
-body.home .container #promo #body #items .item {
+/* line 273, startpage.scss */
+body .container #promo #body #items .item {
   width: 22%;
   margin: 0 4% 0 0;
   float: left;
@@ -2510,8 +2822,8 @@ body.home .container #promo #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 279, startpage.scss */
-  body.home .container #promo #body #items .item {
+  /* line 273, startpage.scss */
+  body .container #promo #body #items .item {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
@@ -2519,25 +2831,25 @@ body.home .container #promo #body #items .item {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 1023px) {
-  /* line 279, startpage.scss */
-  body.home .container #promo #body #items .item {
+  /* line 273, startpage.scss */
+  body .container #promo #body #items .item {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
   }
 }
-/* line 291, startpage.scss */
-body.home .container #promo #body #items .item.c4, body.home .container #promo #body #items .item.c8, body.home .container #promo #body #items .item.c12 {
+/* line 285, startpage.scss */
+body .container #promo #body #items .item.c4, body .container #promo #body #items .item.c8, body .container #promo #body #items .item.c12 {
   margin-right: 0;
 }
 @media only screen and (min-width: 381px) and (max-width: 1023px) {
-  /* line 295, startpage.scss */
-  body.home .container #promo #body #items .item.c2, body.home .container #promo #body #items .item.c6, body.home .container #promo #body #items .item.c10 {
+  /* line 289, startpage.scss */
+  body .container #promo #body #items .item.c2, body .container #promo #body #items .item.c6, body .container #promo #body #items .item.c10 {
     margin-right: 0;
   }
 }
-/* line 301, startpage.scss */
-body.home .container #promo #body #more {
+/* line 295, startpage.scss */
+body .container #promo #body #more {
   float: right;
 }
 
@@ -2721,95 +3033,45 @@ body .container article #contact-info {
   float: left;
 }
 /* line 23, single.scss */
-body .container #subscribe-to-newsletter {
+body .container #subscribe-newsletter {
+  width: 100%;
+  float: left;
   width: 75%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 27, single.scss */
+/* line 28, single.scss */
 body .container #post-shopping-2 {
   width: 75%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 30, single.scss */
+/* line 31, single.scss */
 body .container #post-shopping-2 #shopping {
   width: 25%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 34, single.scss */
+/* line 35, single.scss */
 body .container #post-shopping-2 #shopping-incentives {
   width: 75%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 43, single.scss */
-body .container #from-category,
-body .container #recommended,
-body .container #search,
-body .container #promo,
-body .container #random {
+/* line 40, single.scss */
+body .container .product-list {
   width: 100%;
   float: left;
 }
-/* line 46, single.scss */
-body .container #from-category .item,
-body .container #recommended .item,
-body .container #search .item,
-body .container #promo .item,
-body .container #random .item {
+/* line 43, single.scss */
+body .container .product-list .item {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
   margin-bottom: 5%;
 }
-/* line 52, single.scss */
-body .container #from-category .item.c1, body .container #from-category .item.c3, body .container #from-category .item.c6, body .container #from-category .item.c9, body .container #from-category .item.c12, body .container #from-category .item.c15, body .container #from-category .item.c18, body .container #from-category .item.c21, body .container #from-category .item.c24,
-body .container #from-category .item.c27, body .container #from-category .item.c30,
-body .container #recommended .item.c1,
-body .container #recommended .item.c3,
-body .container #recommended .item.c6,
-body .container #recommended .item.c9,
-body .container #recommended .item.c12,
-body .container #recommended .item.c15,
-body .container #recommended .item.c18,
-body .container #recommended .item.c21,
-body .container #recommended .item.c24,
-body .container #recommended .item.c27,
-body .container #recommended .item.c30,
-body .container #search .item.c1,
-body .container #search .item.c3,
-body .container #search .item.c6,
-body .container #search .item.c9,
-body .container #search .item.c12,
-body .container #search .item.c15,
-body .container #search .item.c18,
-body .container #search .item.c21,
-body .container #search .item.c24,
-body .container #search .item.c27,
-body .container #search .item.c30,
-body .container #promo .item.c1,
-body .container #promo .item.c3,
-body .container #promo .item.c6,
-body .container #promo .item.c9,
-body .container #promo .item.c12,
-body .container #promo .item.c15,
-body .container #promo .item.c18,
-body .container #promo .item.c21,
-body .container #promo .item.c24,
-body .container #promo .item.c27,
-body .container #promo .item.c30,
-body .container #random .item.c1,
-body .container #random .item.c3,
-body .container #random .item.c6,
-body .container #random .item.c9,
-body .container #random .item.c12,
-body .container #random .item.c15,
-body .container #random .item.c18,
-body .container #random .item.c21,
-body .container #random .item.c24,
-body .container #random .item.c27,
-body .container #random .item.c30 {
+/* line 49, single.scss */
+body .container .product-list .item.c3, body .container .product-list .item.c6, body .container .product-list .item.c9, body .container .product-list .item.c12, body .container .product-list .item.c15, body .container .product-list .item.c18, body .container .product-list .item.c21, body .container .product-list .item.c24,
+body .container .product-list .item.c27, body .container .product-list .item.c30 {
   margin-right: 0;
 }

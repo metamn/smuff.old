@@ -11,7 +11,7 @@
   $cat = category_id(false, true, $postid); 
 ?>
 
-<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
 	<h1>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	</h1>			    		      
@@ -200,7 +200,7 @@
   
   
   
-<section id="from-category">    
+<section id="from-category" class="product-list">    
 	<?php 
 		$tag = page_name(is_category(), is_single(), null);            
 	?>
@@ -226,7 +226,7 @@
   
 
     
-<section id="recommended">    
+<section id="recommended" class="product-list">    
  <?php
 		$show_category = true;
 		
@@ -256,7 +256,7 @@
   
   
   
-<section id="promo">    
+<section id="promo" class="product-list">    
 	<h2>Promotii si oferte</h2>
 	<?php       
 		$specials = query_posts2('posts_per_page=4&cat=15&orderby=rand');
@@ -276,7 +276,7 @@
 </section>
   
   
-<section id="random">    
+<section id="random" class="product-list">    
 	<h2>Din mixerul Smuff</h2>
 	<?php       
 		$specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');

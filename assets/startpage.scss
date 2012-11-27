@@ -42,9 +42,11 @@ body.home {
 			margin-left: 90%;
 		}
 	}
+}
+
 
 		
-	
+body {	
 	.container {		
 	
 		#hot {
@@ -121,14 +123,6 @@ body.home {
 			@include block;
 			@include subscribe-to-newsletter;
 			margin: $margin 0;
-			
-			#text {
-				margin-left: -4.5em;
-				@include respond-to(desktop) { margin-left: -2.8em; }
-				@include respond-to(all-mobile) { margin-left: 0; }
-				@include respond-to(tablet) { margin-left: $pad; }
-			}
-			
 		}
 		#subscribe-newsletter.bigger-margin-bottom {
 			margin-bottom: $pad*8;
