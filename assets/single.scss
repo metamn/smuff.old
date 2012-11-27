@@ -1,0 +1,48 @@
+body {
+	.container {
+		article {
+			@include block;
+			
+			#col-1 {
+				@include col($major, 0, $margin);
+			}
+			
+			#col-2 {
+				@include col($minor, 0, 0);
+			}
+			
+			#post-content {
+				@include col($major, 0, $margin);
+			}
+			
+			#contact-info {
+				@include col($minor, 0, 0);
+			}
+		}
+	
+		#subscribe-to-newsletter {
+			@include col($major, 0, $margin);
+		}
+		
+		#post-shopping-2 {
+			@include col($major, 0, $margin);
+			
+			#shopping {
+				@include col($minor + $margin, 0, 0);
+			}
+			
+			#shopping-incentives {
+				@include col($major, 0, 0);
+			}
+		}
+	
+		#from-category,
+		#recommended, 
+		#search,
+		#promo,
+		#random {
+			@include block;
+		}
+	
+	}
+}

@@ -2688,3 +2688,66 @@ body .container #footer-subscribe #social #fb-like {
   width: 150px;
   height: auto;
 }
+
+/* line 3, single.scss */
+body .container article {
+  width: 100%;
+  float: left;
+}
+/* line 6, single.scss */
+body .container article #col-1 {
+  width: 75%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 10, single.scss */
+body .container article #col-2 {
+  width: 20%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 14, single.scss */
+body .container article #post-content {
+  width: 75%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 18, single.scss */
+body .container article #contact-info {
+  width: 20%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 23, single.scss */
+body .container #subscribe-to-newsletter {
+  width: 75%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 27, single.scss */
+body .container #post-shopping-2 {
+  width: 75%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 30, single.scss */
+body .container #post-shopping-2 #shopping {
+  width: 25%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 34, single.scss */
+body .container #post-shopping-2 #shopping-incentives {
+  width: 75%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 43, single.scss */
+body .container #from-category,
+body .container #recommended,
+body .container #search,
+body .container #promo,
+body .container #random {
+  width: 100%;
+  float: left;
+}
