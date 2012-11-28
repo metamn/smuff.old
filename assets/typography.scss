@@ -168,9 +168,6 @@ body {
 			appearance: none;
 			-webkit-appearance: none;
 			-moz-appearance: none;
-			
-			font-size: medium;
-			font-family: monospace;
 		}
 		
 		// Text
@@ -187,12 +184,12 @@ body {
 		}
 		
 		// Button
-		input[type='submit'] {		
+		input[type='submit'], input[type='button'] {		
 			background: black;
 			color: lightgray;
 			padding: $pad/2;
 		}
-		input[type='submit']:hover {
+		input[type='submit']:hover, input[type='button']:hover {
 			cursor: pointer;
 			color: white;
 		}

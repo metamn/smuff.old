@@ -240,47 +240,45 @@ body .container input, body .container textarea {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  font-size: medium;
-  font-family: monospace;
 }
-/* line 177, typography.scss */
+/* line 174, typography.scss */
 body .container input[type='text'], body .container input[type='password'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
   padding: 0.625em;
 }
-/* line 184, typography.scss */
+/* line 181, typography.scss */
 body .container input[type='text']:focus, body .container input[type='password']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 190, typography.scss */
-body .container input[type='submit'] {
+/* line 187, typography.scss */
+body .container input[type='submit'], body .container input[type='button'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 195, typography.scss */
-body .container input[type='submit']:hover {
+/* line 192, typography.scss */
+body .container input[type='submit']:hover, body .container input[type='button']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 202, typography.scss */
+/* line 199, typography.scss */
 body .container input[type='radio']:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 206, typography.scss */
+/* line 203, typography.scss */
 body .container input[type='radio']:checked:after {
   content: '\25a3';
 }
-/* line 211, typography.scss */
+/* line 208, typography.scss */
 body .container input[type='checkbox']:after {
   content: '\272A';
   margin-right: 0.15625em;
 }
-/* line 222, typography.scss */
+/* line 219, typography.scss */
 body .container input[type='checkbox']:checked:after {
   color: black;
 }
@@ -327,7 +325,7 @@ body .container input[type='checkbox']:checked:after {
 /* Single, for Product
 ---------------------------------------------------
 */
-/* line 539, theme.scss */
+/* line 666, theme.scss */
 body.single .container article.product #large-image img {
   width: 99.8%;
   padding: 0.1%;
@@ -335,11 +333,11 @@ body.single .container article.product #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 545, theme.scss */
+/* line 672, theme.scss */
 body.single .container article.product #thumbs {
   margin: 1.25em 0 5%;
 }
-/* line 548, theme.scss */
+/* line 675, theme.scss */
 body.single .container article.product #thumbs img {
   width: 98%;
   padding: 1%;
@@ -347,6 +345,135 @@ body.single .container article.product #thumbs img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   margin-right: 1.25em;
   width: 150px;
+}
+/* line 682, theme.scss */
+body.single .container article.product #shopping {
+  width: 100%;
+  float: left;
+  background: #4d8fce;
+}
+/* line 536, theme.scss */
+body.single .container article.product #shopping .wpsc_container {
+  padding: 1.25em 0.625em;
+}
+/* line 539, theme.scss */
+body.single .container article.product #shopping .wpsc_container .imagecol {
+  display: none;
+}
+/* line 544, theme.scss */
+body.single .container article.product #shopping .wpsc_container .single_product_display .textcol {
+  margin-left: 0 !important;
+}
+/* line 549, theme.scss */
+body.single .container article.product #shopping .wpsc_container table {
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 553, theme.scss */
+body.single .container article.product #shopping .wpsc_container table label {
+  font-weight: normal;
+}
+/* line 557, theme.scss */
+body.single .container article.product #shopping .wpsc_container table td {
+  border-bottom: 1px dotted;
+  padding: 0.625em;
+}
+/* line 563, theme.scss */
+body.single .container article.product #shopping .wpsc_container table tr.quantity input[type='text'] {
+  width: 90%;
+  color: #111111;
+  font-style: normal;
+}
+/* line 571, theme.scss */
+body.single .container article.product #shopping .wpsc_container table tr.delivery td {
+  border-bottom: none;
+}
+/* line 577, theme.scss */
+body.single .container article.product #shopping .wpsc_container table tr.submit td {
+  border-top: 1px solid;
+  padding-top: 1.25em;
+}
+/* line 583, theme.scss */
+body.single .container article.product #shopping .wpsc_container table tr.animation {
+  display: none;
+}
+/* line 587, theme.scss */
+body.single .container article.product #shopping .wpsc_container table tr.price {
+  background: none !important;
+  font-size: 100%;
+}
+/* line 591, theme.scss */
+body.single .container article.product #shopping .wpsc_container table tr.price .pricedisplay {
+  float: none !important;
+  width: 99%;
+}
+/* line 597, theme.scss */
+body.single .container article.product #shopping .wpsc_container table input.wpsc_buy_button, body.single .container article.product #shopping .wpsc_container table input.checkout-button, body.single .container article.product #shopping .wpsc_container table select.wpsc_select_variation {
+  width: 100%;
+  font-size: small;
+}
+/* line 601, theme.scss */
+body.single .container article.product #shopping .wpsc_container table input.wpsc_buy_button {
+  background: #8aea4c;
+  color: #111111;
+  border: 1px dotted;
+}
+/* line 606, theme.scss */
+body.single .container article.product #shopping .wpsc_container table input.wpsc_buy_button:hover {
+  font-weight: bold;
+}
+/* line 610, theme.scss */
+body.single .container article.product #shopping .wpsc_container table div.thanks-ok {
+  background: #10A26F;
+  padding: 1em;
+}
+/* line 615, theme.scss */
+body.single .container article.product #shopping .wpsc_container table div.thanks-error {
+  background: #A53B08;
+  padding: 1em;
+}
+/* line 620, theme.scss */
+body.single .container article.product #shopping .wpsc_container table .wpsc_cart_message {
+  text-align: center;
+}
+/* line 626, theme.scss */
+body.single .container article.product #shopping #wishlist {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.25em;
+  padding: 0 1.25em;
+}
+/* line 632, theme.scss */
+body.single .container article.product #shopping #wishlist .wpfp-span {
+  width: 80%;
+  float: left;
+  padding: 0.625em 0.3125em;
+  text-align: center;
+  background: #111111;
+  color: #f1f1f1;
+  padding: 0.625em;
+}
+/* line 642, theme.scss */
+body.single .container article.product #shopping #wishlist .wpfp-span:hover {
+  cursor: pointer;
+  color: white;
+}
+/* line 647, theme.scss */
+body.single .container article.product #shopping #wishlist .wpfp-span a {
+  color: #f1f1f1;
+}
+/* line 687, theme.scss */
+body.single .container article.product #shopping-info {
+  width: 100%;
+  float: left;
+  margin: 2.5em 0;
+  background: url(stripe.png);
+}
+/* line 692, theme.scss */
+body.single .container article.product #shopping-info .tooltip {
+  background: white;
+  margin: 2.5em 1.25em;
+  padding: 1.25em 0.625em;
 }
 /* line 34, theme.scss */
 body.single .container article.product #post-content h3 {
@@ -363,19 +490,20 @@ body.single .container article.product #post-content div {
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 558, theme.scss */
+/* line 702, theme.scss */
 body.single .container article.product #post-content div {
   font-size: larger;
 }
-/* line 564, theme.scss */
+/* line 708, theme.scss */
 body.single .container #subscribe-newsletter {
   background: #4D8FCE;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  background: url(stripe.png);
 }
 @media only screen and (max-width: 600px) {
-  /* line 564, theme.scss */
+  /* line 708, theme.scss */
   body.single .container #subscribe-newsletter {
     width: 90%;
     padding: 5%;
@@ -520,11 +648,160 @@ body.single .container #subscribe-newsletter #facebook-connect #auth-loggedin {
   padding: 1.25em;
   font-size: small;
 }
-/* line 567, theme.scss */
+/* line 712, theme.scss */
+body.single .container #subscribe-newsletter h4 {
+  margin: 0.625em 0;
+  padding: 0.3125em;
+}
+/* line 717, theme.scss */
 body.single .container #subscribe-newsletter #text {
   margin-left: -4.5em;
 }
-/* line 573, theme.scss */
+/* line 720, theme.scss */
+body.single .container #subscribe-newsletter #text h4 {
+  background: white;
+}
+/* line 726, theme.scss */
+body.single .container #subscribe-newsletter #facebook-connect .fb-login-button {
+  margin-top: 0.3125em;
+}
+/* line 732, theme.scss */
+body.single .container #post-shopping-2 {
+  margin: 5% 0;
+}
+/* line 735, theme.scss */
+body.single .container #post-shopping-2 #shopping {
+  background: #4d8fce;
+}
+/* line 536, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container {
+  padding: 1.25em 0.625em;
+}
+/* line 539, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container .imagecol {
+  display: none;
+}
+/* line 544, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container .single_product_display .textcol {
+  margin-left: 0 !important;
+}
+/* line 549, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table {
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 553, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table label {
+  font-weight: normal;
+}
+/* line 557, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table td {
+  border-bottom: 1px dotted;
+  padding: 0.625em;
+}
+/* line 563, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table tr.quantity input[type='text'] {
+  width: 90%;
+  color: #111111;
+  font-style: normal;
+}
+/* line 571, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table tr.delivery td {
+  border-bottom: none;
+}
+/* line 577, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table tr.submit td {
+  border-top: 1px solid;
+  padding-top: 1.25em;
+}
+/* line 583, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table tr.animation {
+  display: none;
+}
+/* line 587, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table tr.price {
+  background: none !important;
+  font-size: 100%;
+}
+/* line 591, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table tr.price .pricedisplay {
+  float: none !important;
+  width: 99%;
+}
+/* line 597, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table input.wpsc_buy_button, body.single .container #post-shopping-2 #shopping .wpsc_container table input.checkout-button, body.single .container #post-shopping-2 #shopping .wpsc_container table select.wpsc_select_variation {
+  width: 100%;
+  font-size: small;
+}
+/* line 601, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table input.wpsc_buy_button {
+  background: #8aea4c;
+  color: #111111;
+  border: 1px dotted;
+}
+/* line 606, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table input.wpsc_buy_button:hover {
+  font-weight: bold;
+}
+/* line 610, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table div.thanks-ok {
+  background: #10A26F;
+  padding: 1em;
+}
+/* line 615, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table div.thanks-error {
+  background: #A53B08;
+  padding: 1em;
+}
+/* line 620, theme.scss */
+body.single .container #post-shopping-2 #shopping .wpsc_container table .wpsc_cart_message {
+  text-align: center;
+}
+/* line 626, theme.scss */
+body.single .container #post-shopping-2 #shopping #wishlist {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.25em;
+  padding: 0 1.25em;
+}
+/* line 632, theme.scss */
+body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span {
+  width: 80%;
+  float: left;
+  padding: 0.625em 0.3125em;
+  text-align: center;
+  background: #111111;
+  color: #f1f1f1;
+  padding: 0.625em;
+}
+/* line 642, theme.scss */
+body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span:hover {
+  cursor: pointer;
+  color: white;
+}
+/* line 647, theme.scss */
+body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span a {
+  color: #f1f1f1;
+}
+/* line 739, theme.scss */
+body.single .container #post-shopping-2 #shopping-incentives {
+  background: #8aea4c;
+}
+/* line 742, theme.scss */
+body.single .container #post-shopping-2 #shopping-incentives .inner {
+  margin: 2.5em 1.25em;
+}
+/* line 745, theme.scss */
+body.single .container #post-shopping-2 #shopping-incentives .inner p {
+  margin: 0.625em 0 1.875em;
+}
+/* line 753, theme.scss */
+body.single .container .product-list h2 {
+  border-bottom: 1px solid;
+  padding-bottom: .28em;
+  margin-bottom: 1em;
+}
+/* line 758, theme.scss */
 body.single .container .product-list .item {
   background: white url(stripe.png);
   min-height: 37.5em;
@@ -536,13 +813,13 @@ body.single .container .product-list .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 573, theme.scss */
+  /* line 758, theme.scss */
   body.single .container .product-list .item {
     min-height: 42.5em;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 573, theme.scss */
+  /* line 758, theme.scss */
   body.single .container .product-list .item {
     min-height: 32.5em;
   }
@@ -640,11 +917,11 @@ body.single .container .product-list .item #category a:hover {
   background: gray;
 }
 
-/* line 582, theme.scss */
+/* line 767, theme.scss */
 body {
   background: white url(dotted_bg.png);
 }
-/* line 585, theme.scss */
+/* line 770, theme.scss */
 body .container {
   /* Fonts
   ---------------------------------------------------
@@ -686,73 +963,73 @@ body .container {
   ---------------------------------------------------
   */
 }
-/* line 594, theme.scss */
+/* line 779, theme.scss */
 body .container h1, body .container h2 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 603, theme.scss */
+/* line 788, theme.scss */
 body .container a, body .container a:visited {
   color: #111111;
   text-decoration: none;
 }
-/* line 607, theme.scss */
+/* line 792, theme.scss */
 body .container #accordion a, body .container #accordion a:visited {
   border-bottom: 1px dotted;
 }
-/* line 617, theme.scss */
+/* line 802, theme.scss */
 body .container .price, body .container .normal-price {
   border: #cccccc;
   padding: 0.3125em;
   -moz-border-radius: 10%;
   -webkit-border-radius: 10%;
 }
-/* line 623, theme.scss */
+/* line 808, theme.scss */
 body .container .price {
   background: #f25f18;
 }
-/* line 626, theme.scss */
+/* line 811, theme.scss */
 body .container .old-price, body .container .oldprice {
   text-decoration: line-through;
 }
-/* line 629, theme.scss */
+/* line 814, theme.scss */
 body .container .normal-price {
   background: #4d8fce;
 }
-/* line 641, theme.scss */
+/* line 826, theme.scss */
 body .container .tooltip {
   cursor: pointer;
 }
-/* line 644, theme.scss */
+/* line 829, theme.scss */
 body .container .tooltip-text {
   display: none;
 }
-/* line 647, theme.scss */
+/* line 832, theme.scss */
 body .container #tooltip {
   background: #4d8fce;
   padding: 1.25em;
   position: absolute;
 }
-/* line 652, theme.scss */
+/* line 837, theme.scss */
 body .container #tooltip ul {
   list-style: none;
 }
-/* line 655, theme.scss */
+/* line 840, theme.scss */
 body .container #tooltip ul li, body .container #tooltip ol li {
   padding: 0.3125em;
   margin: 0.3125em;
   border-bottom: 1px dotted;
 }
-/* line 666, theme.scss */
+/* line 851, theme.scss */
 body .container #search-enhanced {
   width: 100%;
   float: left;
   background: #4d8fce;
 }
-/* line 670, theme.scss */
+/* line 855, theme.scss */
 body .container #search-enhanced h3 {
   margin-left: 0.625em;
 }
-/* line 674, theme.scss */
+/* line 859, theme.scss */
 body .container #search-enhanced ul {
   list-style: none;
   margin: 0;
@@ -765,34 +1042,34 @@ body .container #search-enhanced ul li {
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 678, theme.scss */
+/* line 863, theme.scss */
 body .container #search-enhanced ul li {
   background: #4d8fce;
   border-bottom: 1px dotted #111111;
 }
-/* line 682, theme.scss */
+/* line 867, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:after {
   content: "\2610";
 }
-/* line 685, theme.scss */
+/* line 870, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:checked:after {
   content: "\25a3";
 }
-/* line 691, theme.scss */
+/* line 876, theme.scss */
 body .container #search-enhanced #submit {
   margin: 2.5em 0 1.25em 1.25em;
 }
-/* line 694, theme.scss */
+/* line 879, theme.scss */
 body .container #search-enhanced #submit #advanced-search {
   font-size: small;
 }
-/* line 700, theme.scss */
+/* line 885, theme.scss */
 body .container #trending {
   width: 100%;
   float: left;
   margin: 5em 0;
 }
-/* line 704, theme.scss */
+/* line 889, theme.scss */
 body .container #trending h2 {
   width: 30%;
   float: left;
@@ -804,7 +1081,7 @@ body .container #trending h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 704, theme.scss */
+  /* line 889, theme.scss */
   body .container #trending h2 {
     width: 100%;
     margin-right: 0;
@@ -812,7 +1089,7 @@ body .container #trending h2 {
     border-right: 0;
   }
 }
-/* line 719, theme.scss */
+/* line 904, theme.scss */
 body .container #trending #items {
   width: 55%;
   margin-left: 3%;
@@ -822,12 +1099,12 @@ body .container #trending #items {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 719, theme.scss */
+  /* line 904, theme.scss */
   body .container #trending #items {
     width: auto;
   }
 }
-/* line 728, theme.scss */
+/* line 913, theme.scss */
 body .container #trending #items .trend {
   font-style: italic;
   font-size: large;
@@ -838,12 +1115,12 @@ body .container #trending #items .trend {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 728, theme.scss */
+  /* line 913, theme.scss */
   body .container #trending #items .trend {
     font-size: medium;
   }
 }
-/* line 749, theme.scss */
+/* line 934, theme.scss */
 body .container #header #cart #widgetshoppingcart {
   background: url(stripe.png);
   padding: 1.25em;
@@ -852,13 +1129,13 @@ body .container #header #cart #widgetshoppingcart {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 749, theme.scss */
+  /* line 934, theme.scss */
   body .container #header #cart #widgetshoppingcart {
     padding: 1.25em 0.625em;
     font-size: smaller;
   }
 }
-/* line 758, theme.scss */
+/* line 943, theme.scss */
 body .container #header #cart #widgetshoppingcart ul {
   list-style: none;
   margin: 0;
@@ -870,36 +1147,36 @@ body .container #header #cart #widgetshoppingcart ul li {
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 761, theme.scss */
+/* line 946, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li#message {
   background: #8aea4c;
 }
-/* line 765, theme.scss */
+/* line 950, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li a:hover {
   font-weight: bold;
 }
-/* line 768, theme.scss */
+/* line 953, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li strong {
   color: #f25f18;
 }
-/* line 778, theme.scss */
+/* line 963, theme.scss */
 body .container #header hgroup #logo h1 {
   font-weight: bold;
   padding: 0.3125em 0 0;
 }
-/* line 785, theme.scss */
+/* line 970, theme.scss */
 body .container #header hgroup #strapline h2 {
   color: #f25f18;
   padding: 0.9375em 0 0;
   font-weight: bold;
 }
-/* line 793, theme.scss */
+/* line 978, theme.scss */
 body .container #header hgroup #page-name h2 {
   color: #aaaaaa;
   padding: 0.9375em 0 0;
   text-align: right;
 }
-/* line 801, theme.scss */
+/* line 986, theme.scss */
 body .container #header nav {
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -910,61 +1187,61 @@ body .container #header nav {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 809, theme.scss */
+/* line 994, theme.scss */
 body .container #header nav ul li {
   margin-right: 1.25em;
 }
-/* line 812, theme.scss */
+/* line 997, theme.scss */
 body .container #header nav ul li a:hover {
   border-bottom: 1px solid;
 }
-/* line 816, theme.scss */
+/* line 1001, theme.scss */
 body .container #header nav ul li.all-products-link {
   margin-right: 0;
   float: right;
 }
 @media only screen and (max-width: 600px) {
-  /* line 801, theme.scss */
+  /* line 986, theme.scss */
   body .container #header nav {
     border-top: none;
     border-bottom: none;
     padding: 0;
     font-size: 100%;
   }
-  /* line 828, theme.scss */
+  /* line 1013, theme.scss */
   body .container #header nav ul {
     background: #eeeeee;
   }
-  /* line 831, theme.scss */
+  /* line 1016, theme.scss */
   body .container #header nav ul li {
     padding: 0.3125em;
     margin-right: 0;
   }
-  /* line 835, theme.scss */
+  /* line 1020, theme.scss */
   body .container #header nav ul li:after {
     content: '\2606';
     margin-left: 0.3125em;
     color: #4a4742;
   }
-  /* line 841, theme.scss */
+  /* line 1026, theme.scss */
   body .container #header nav ul li.all-products-link {
     float: left;
   }
-  /* line 844, theme.scss */
+  /* line 1029, theme.scss */
   body .container #header nav ul li.all-products-link:after {
     content: '';
   }
 }
-/* line 863, theme.scss */
+/* line 1048, theme.scss */
 body .container .home .image-navigation {
   display: block;
   top: 400px;
 }
-/* line 867, theme.scss */
+/* line 1052, theme.scss */
 body .container .home .image-navigation.left {
   margin-left: -20px;
 }
-/* line 870, theme.scss */
+/* line 1055, theme.scss */
 body .container .home .image-navigation.right {
   margin-left: 680px;
 }
@@ -1172,22 +1449,22 @@ body .container #hot #slider #large-image-title #info #price {
 body .container #hot #slider #large-image-title #info #price .normal-price {
   color: #111111;
 }
-/* line 880, theme.scss */
+/* line 1065, theme.scss */
 body .container #hot #thumbs {
   background: white url(stripe.png);
   overflow: hidden;
 }
-/* line 884, theme.scss */
+/* line 1069, theme.scss */
 body .container #hot #thumbs #items {
   overflow-y: scroll;
   position: relative;
   right: -30px;
 }
-/* line 889, theme.scss */
+/* line 1074, theme.scss */
 body .container #hot #thumbs #items .item {
   padding: 0.625em 1.25em;
 }
-/* line 892, theme.scss */
+/* line 1077, theme.scss */
 body .container #hot #thumbs #items .item img {
   width: 98%;
   padding: 1%;
@@ -1195,13 +1472,13 @@ body .container #hot #thumbs #items .item img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   width: 100px;
 }
-/* line 898, theme.scss */
+/* line 1083, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 {
   position: relative;
   z-index: 1000;
   cursor: pointer;
 }
-/* line 903, theme.scss */
+/* line 1088, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   width: 86px;
   height: auto;
@@ -1212,16 +1489,16 @@ body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   padding: 0.625em;
   display: none;
 }
-/* line 916, theme.scss */
+/* line 1101, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover {
   z-index: 1001;
 }
-/* line 919, theme.scss */
+/* line 1104, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover .tooltip-text {
   display: block;
   left: 0;
 }
-/* line 929, theme.scss */
+/* line 1114, theme.scss */
 body .container #hot #more {
   background: url(arrow-black-bottom-right.png) no-repeat 15em -4em;
   height: 10em;
@@ -1231,14 +1508,14 @@ body .container #hot #more {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 935, theme.scss */
+/* line 1120, theme.scss */
 body .container #hot #more h4 {
   font-family: 'Nothing You Could Do', cursive;
   margin-top: 2em;
   cursor: pointer;
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 929, theme.scss */
+  /* line 1114, theme.scss */
   body .container #hot #more {
     width: 90%;
     height: auto;
@@ -1246,7 +1523,7 @@ body .container #hot #more h4 {
     top: -2.5em;
   }
 }
-/* line 950, theme.scss */
+/* line 1135, theme.scss */
 body .container #hot #noutati .item {
   font-size: smaller;
   /* handhelds to iPhone 3,4*/
@@ -1458,12 +1735,12 @@ body .container #hot #noutati .item #large-image-title #info #price .normal-pric
   color: #111111;
 }
 @media only screen and (max-width: 600px) {
-  /* line 950, theme.scss */
+  /* line 1135, theme.scss */
   body .container #hot #noutati .item {
     font-size: 100%;
   }
 }
-/* line 958, theme.scss */
+/* line 1143, theme.scss */
 body .container #hot #noutati .item #large-image-title {
   height: 5.2em;
   /* handhelds to iPhone 3,4*/
@@ -1471,14 +1748,14 @@ body .container #hot #noutati .item #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 963, theme.scss */
+  /* line 1148, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: -7.5em;
     right: 0;
     color: white;
   }
 }
-/* line 982, theme.scss */
+/* line 1167, theme.scss */
 body .container #bestsellers #title h2 {
   background: #111111;
   color: #f25f18;
@@ -1492,12 +1769,12 @@ body .container #bestsellers #title h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 982, theme.scss */
+  /* line 1167, theme.scss */
   body .container #bestsellers #title h2 {
     letter-spacing: 2px;
   }
 }
-/* line 1000, theme.scss */
+/* line 1185, theme.scss */
 body .container #bestsellers #body #filters {
   width: 100%;
   float: left;
@@ -1505,7 +1782,7 @@ body .container #bestsellers #body #filters {
   padding-bottom: 1.25em;
   border-bottom: 1px solid;
 }
-/* line 1007, theme.scss */
+/* line 1192, theme.scss */
 body .container #bestsellers #body #filters div {
   background: #111111;
   /* handhelds to iPhone 3,4*/
@@ -1513,12 +1790,12 @@ body .container #bestsellers #body #filters div {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1007, theme.scss */
+  /* line 1192, theme.scss */
   body .container #bestsellers #body #filters div {
     background: #f1f1f1;
   }
 }
-/* line 1014, theme.scss */
+/* line 1199, theme.scss */
 body .container #bestsellers #body #filters div h4 {
   cursor: pointer;
   padding: 0.3125em 0;
@@ -1533,7 +1810,7 @@ body .container #bestsellers #body #filters div h4 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1014, theme.scss */
+  /* line 1199, theme.scss */
   body .container #bestsellers #body #filters div h4 {
     width: 100%;
     margin: 0 0 0 0;
@@ -1545,20 +1822,20 @@ body .container #bestsellers #body #filters div h4 {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 1014, theme.scss */
+  /* line 1199, theme.scss */
   body .container #bestsellers #body #filters div h4 {
     text-align: left;
     font-size: 100%;
     margin: 0.625em;
   }
 }
-/* line 1037, theme.scss */
+/* line 1222, theme.scss */
 body .container #bestsellers #body #filters div h4:before {
   content: '\2713';
   margin-right: 0.625em;
   color: #aaaaaa;
 }
-/* line 1042, theme.scss */
+/* line 1227, theme.scss */
 body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
   color: white;
   /* handhelds to iPhone 3,4*/
@@ -1566,12 +1843,12 @@ body .container #bestsellers #body #filters div h4.active, body .container #best
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1042, theme.scss */
+  /* line 1227, theme.scss */
   body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
     color: #111111;
   }
 }
-/* line 1049, theme.scss */
+/* line 1234, theme.scss */
 body .container #bestsellers #body #filters div h4.active:before {
   color: white;
   /* handhelds to iPhone 3,4*/
@@ -1579,12 +1856,12 @@ body .container #bestsellers #body #filters div h4.active:before {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1049, theme.scss */
+  /* line 1234, theme.scss */
   body .container #bestsellers #body #filters div h4.active:before {
     color: #111111;
   }
 }
-/* line 1062, theme.scss */
+/* line 1247, theme.scss */
 body .container #bestsellers #body #items .item {
   background: white url(stripe.png);
   min-height: 37.5em;
@@ -1596,13 +1873,13 @@ body .container #bestsellers #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 1062, theme.scss */
+  /* line 1247, theme.scss */
   body .container #bestsellers #body #items .item {
     min-height: 42.5em;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 1062, theme.scss */
+  /* line 1247, theme.scss */
   body .container #bestsellers #body #items .item {
     min-height: 32.5em;
   }
@@ -1699,24 +1976,24 @@ body .container #bestsellers #body #items .item #category a {
 body .container #bestsellers #body #items .item #category a:hover {
   background: gray;
 }
-/* line 1075, theme.scss */
+/* line 1260, theme.scss */
 body .container #search #title {
   background: url(arrow-black-top-right.png) no-repeat 1em 5em;
   height: 20em;
 }
-/* line 1079, theme.scss */
+/* line 1264, theme.scss */
 body .container #search #title h3 {
   font-family: 'Nothing You Could Do', cursive;
 }
-/* line 1090, theme.scss */
+/* line 1275, theme.scss */
 body .container #promo {
   margin: 5% 0;
 }
-/* line 1093, theme.scss */
+/* line 1278, theme.scss */
 body .container #promo #title {
   color: white;
 }
-/* line 1096, theme.scss */
+/* line 1281, theme.scss */
 body .container #promo #title #percent {
   width: 70%;
   float: left;
@@ -1727,18 +2004,18 @@ body .container #promo #title #percent {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 1103, theme.scss */
+/* line 1288, theme.scss */
 body .container #promo #title #percent h3 {
   padding: 0.3125em 0;
   font-size: 5em;
 }
 @media only screen and (max-width: 380px) {
-  /* line 1096, theme.scss */
+  /* line 1281, theme.scss */
   body .container #promo #title #percent {
     width: 100%;
   }
 }
-/* line 1113, theme.scss */
+/* line 1298, theme.scss */
 body .container #promo #title #arrow {
   width: 30%;
   float: right;
@@ -1747,12 +2024,12 @@ body .container #promo #title #arrow {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1113, theme.scss */
+  /* line 1298, theme.scss */
   body .container #promo #title #arrow {
     display: none;
   }
 }
-/* line 1121, theme.scss */
+/* line 1306, theme.scss */
 body .container #promo #title #arrow .arrow-right {
   width: 0;
   height: 0;
@@ -1769,12 +2046,12 @@ body .container #promo #title #arrow .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1121, theme.scss */
+  /* line 1306, theme.scss */
   body .container #promo #title #arrow .arrow-right {
     display: none;
   }
 }
-/* line 1142, theme.scss */
+/* line 1327, theme.scss */
 body .container #promo #body #items .item {
   height: 36em;
   border-bottom: 3px solid #f1f1f1;
@@ -1783,7 +2060,7 @@ body .container #promo #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1142, theme.scss */
+  /* line 1327, theme.scss */
   body .container #promo #body #items .item {
     height: 25em;
   }
@@ -1921,11 +2198,11 @@ body .container #promo #body #items .item:hover {
 body .container #promo #body #items .item:hover #text h3, body .container #promo #body #items .item:hover #text p {
   background: white;
 }
-/* line 1155, theme.scss */
+/* line 1340, theme.scss */
 body .container #top-new-categories ul {
   text-align: center;
 }
-/* line 506, theme.scss */
+/* line 508, theme.scss */
 body .container #top-new-categories ul li {
   height: 14em;
   border-radius: 8em;
@@ -1938,19 +2215,19 @@ body .container #top-new-categories ul li {
   border: 1px solid #4d8fce;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 506, theme.scss */
+  /* line 508, theme.scss */
   body .container #top-new-categories ul li {
     height: 16em;
     border-radius: 16em;
     padding-top: 5em;
   }
 }
-/* line 522, theme.scss */
+/* line 524, theme.scss */
 body .container #top-new-categories ul li:hover {
   box-shadow: 2px 1px 1px #111111;
   border: 1px solid #111111;
 }
-/* line 1162, theme.scss */
+/* line 1347, theme.scss */
 body .container #footer-info #contact ul {
   list-style: none;
   margin: 0;
@@ -1970,7 +2247,7 @@ body .container #footer-info #company div {
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 1171, theme.scss */
+/* line 1356, theme.scss */
 body .container #footer-info #company h3 {
   background: transparent;
   border: none;
@@ -1991,17 +2268,17 @@ body .container #footer-info #pages div {
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 1181, theme.scss */
+/* line 1366, theme.scss */
 body .container #footer-info #pages p {
   margin-top: 1.25em;
 }
-/* line 1187, theme.scss */
+/* line 1372, theme.scss */
 body .container #footer {
   background: #eeeeee;
   border-bottom: 1px solid #cccccc;
   padding: 0.625em;
 }
-/* line 1195, theme.scss */
+/* line 1380, theme.scss */
 body .container #footer-subscribe #newsletter input[type="email"] {
   width: 100%;
 }
