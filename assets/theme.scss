@@ -28,15 +28,25 @@ $very-light-gray: #f1f1f1;
 ---------------------------------------------------
 */
 
+@mixin arrow-to-reveal-content {
+	content: '\25bc';
+	float: right;
+	color: $light-gray;
+}
+
 
 // Accordion
 @mixin accordion {
-	h3 {
+	h2, h3 {
 		cursor: pointer;
 		padding: $pad/2 $pad/4;
 		background: $light-gray-2;
 		border-bottom: 1px solid $light-gray;
 		margin-bottom: 1px;
+		
+		&:after {
+			@include arrow-to-reveal-content;
+		}
 	}
 	div {
 		display: none;
@@ -537,7 +547,7 @@ $very-light-gray: #f1f1f1;
 		padding: $pad $pad/2;
 		
 		.imagecol {
-			display: none;
+			display: none !important;
 		}
 		
 		.single_product_display {
@@ -707,9 +717,37 @@ body.single {
 			#post-content {
 				@include accordion;
 				
-				div {
-					font-size: larger;
+				@include respond-to(mobile) {
+					// add to cart is embedded into an accordion div, here we overwrite the accordion settings
+					.mobile {
+						h3 {
+							color: $green;
+						}
+						div {
+							padding: 0;
+							margin-bottom: 0;
+							background: $blue;
+						}
+						
+						#shopping-incentives {
+							background: $green;
+							
+							.inner {
+								margin: $pad*2 $pad;
+								padding: $pad*2 0;
+								background: $green;
+								
+								h4 {
+									font-weight: bold;
+								}
+								p {
+									margin: $pad/2 0 $pad + $pad/2;
+								}
+							}
+						}
+					}
 				}
+				
 			}
 		}
 	
@@ -766,7 +804,25 @@ body.single {
 			.item {
 				@include bestseller;
 			}
+			
+			@include respond-to(mobile) {
+				@include accordion;
+			}
 		}
+		
+		#search {
+			@include respond-to(mobile) {
+				@include accordion;
+			}
+		}
+		
+		#promo {
+			@include respond-to(mobile) {
+				margin: 0;
+			}
+		}
+		
+		
 	}
 }
 

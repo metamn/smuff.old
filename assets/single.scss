@@ -5,28 +5,57 @@ body {
 			
 			#col-1 {
 				@include col($major, 0, $margin);
+				
+				@include respond-to(mobile) {
+					@include block;
+					
+					#large-image {
+						display: none;
+					}
+				}
 			}
 			
 			#col-2 {
 				@include col($minor, 0, 0);
+				
+				
+				@include respond-to(mobile) {
+					@include hidden;
+				}
 			}
 			
 			#post-content {
 				@include col($major, 0, $margin);
+				
+				@include respond-to(mobile) {
+					@include block;
+				}
 			}
 			
 			#contact-info {
 				@include col($minor, 0, 0);
+				
+				@include respond-to(mobile) {
+					@include block;
+				}
 			}
 		}
 	
 		#subscribe-newsletter {
 			@include block;
-			@include col($major, 0, $margin);
+			@include col($major, 0, $margin);	
+			
+			@include respond-to(mobile) {
+				@include block;
+			}
 		}
 		
 		#post-shopping-2 {
 			@include col($major, 0, $margin);
+						
+			@include respond-to(mobile) {
+				@include hidden;
+			}
 			
 			#shopping {
 				@include col($minor + $margin, 0, 0);
@@ -43,6 +72,10 @@ body {
 			.item {
 				@include col(30%, 0, 5%);
 				margin-bottom: $margin;
+				
+				@include respond-to(mobile) {
+					@include block;
+				}
 			}
 			
 			.item.c3, .item.c6, .item.c9, .item.c12, .item.c15, .item.c18, .item.c21, .item.c24,

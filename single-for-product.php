@@ -46,36 +46,7 @@
 	</div>    
   
   <div id="col-2">
-		<div id="shopping">
-			<?php 
-				if (in_category(10)) {
-					// $product_id = get_post_meta($post->ID, 'product_id', single);
-					if ($product_id) {
-						if ($product_stock != '-1') {
-							echo wpsc_display_products_page('product_id='.$product_id); ?>
-							
-							<div id="wishlist" class="block">
-								<?php 
-								if (function_exists('wpfp_link')) { wpfp_link(); } ?>
-							</div> <?php
-						} else { ?>
-							<div id="product-discontinued">
-								<h3>Acest produs momentan<br/>nu este pe stoc.</h3>
-								<p>Anunta-ma cand va fi disponibil.</p>
-								<?php 
-									$mailchimp_button = 'Anunta-ma';
-									$mailchimp_param = $product_name;
-									include 'mailchimp-direct.php'; 
-								?>
-							</div> <?php
-						}
-					}
-				} else { ?>
-					<div id="product-discontinued">
-						<h3>Acest produs este discontinuat.</h3>
-					</div> <?php
-				} ?>
-		</div>
+		<?php include 'single-for-product__shopping.php' ?>
 				
 		<div id="shopping-info"> 
 			<div class="tooltip">
@@ -97,11 +68,19 @@
 	
 	<div id="post-content" class="accordion"> 
 		<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
-			
+		
 		<h3 id="comments">Comentarii</h3>
 		<div id="comments" class="pane normal">
 			<?php comments_template('', true); ?>
 		</div>
+		
+		<span class="mobile">
+			<h3 id="add-to-cart">Adauga la cos</h3>
+			<div class="pane">
+				<?php include 'single-for-product__shopping.php' ?>
+				<?php include 'single-for-product__shopping-incentives.php' ?>
+			</div>
+		</span>
 		
 		<div id="facebook-like" class="block"> 
 			<div id="fb-root"></div>
@@ -138,165 +117,117 @@
 
 
 <section id="post-shopping-2">			
-	<div id="shopping">
-		<?php 
-			if (in_category(10)) {
-				// $product_id = get_post_meta($post->ID, 'product_id', single);
-				if ($product_id) {
-					if ($product_stock != '-1') {
-						echo wpsc_display_products_page('product_id='.$product_id); ?>
-						
-						<div id="wishlist" class="block">
-							<?php 
-							if (function_exists('wpfp_link')) { wpfp_link(); } ?>
-						</div> <?php
-					} else { ?>
-						<div id="product-discontinued">
-							<h3>Acest produs momentan<br/>nu este pe stoc.</h3>
-							<p>Anunta-ma cand va fi disponibil.</p>
-							<?php 
-								$mailchimp_button = 'Anunta-ma';
-								include 'mailchimp-direct.php'; 
-							?>
-						</div> <?php
-					}
-				}
-			} else { ?>
-				<div id="product-discontinued">
-					<h3>Acest produs este discontinuat.</h3>
-				</div> <?php
-			} 
-		?>
-	</div>
-				
-	<div id="shopping-incentives">
-		<div class="inner">
-			<h4>Preturi accesibile</h4>
-			<p>
-				La Smuff toate preturile sunt corecte.  
-			</p>
-			
-			<h4>Shopping rapid</h4>
-			<p>
-				Fara procedura de inregistrare, numai cu un singur click.            
-			</p>
-			
-			<h4>Plata la livrare</h4>
-			<p>
-				Plata ramburs cand aveti deja produsul in mana.
-			</p>
-			
-			<h4>10 zile drept de retur</h4>
-			<p>
-				Fara intrebari din partea noastra.
-			</p>
-			
-			<h4>Garantie minim 1 an</h4>
-			<p>
-				Service Express sau schimb cu un produs NOU.
-			</p>
-		</div>
-	</div>
+	<?php include 'single-for-product__shopping.php' ?>
+	
+	<?php include 'single-for-product__shopping-incentives.php' ?>
 </section>
  
   
-  
-  
-<section id="from-category" class="product-list">    
-	<?php 
-		$tag = page_name(is_category(), is_single(), null);            
-	?>
-	 
-	<h2>Alte produse din categoria <?php echo $tag; ?></h2>
-	<?php 
-		$specials = query_posts2('posts_per_page=6&cat='.$cat);
-		if ($specials) {
-			if ($specials->have_posts()) {
-				$counter = 1;
-				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
-					if (in_category(10)) {
-						$medium = true;
-						include "product-thumb.php";
-					 
-						$counter += 1;
-					}                    
-				endwhile; 
-			}		      
-		}
-	?>
-</section>
+<div id="other-products" class="accordion">  
+	<section id="from-category" class="product-list">    
+		<?php 
+			$tag = page_name(is_category(), is_single(), null);            
+		?>
+		 
+		<h2>Alte produse din categoria <?php echo $tag; ?></h2>
+		<div class="pane">
+		<?php 
+			$specials = query_posts2('posts_per_page=6&cat='.$cat);
+			if ($specials) {
+				if ($specials->have_posts()) {
+					$counter = 1;
+					while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+						if (in_category(10)) {
+							$medium = true;
+							include "product-thumb.php";
+						 
+							$counter += 1;
+						}                    
+					endwhile; 
+				}		      
+			}
+		?>
+		</div>
+	</section>
   
 
     
-<section id="recommended" class="product-list">    
- <?php
-		$show_category = true;
+	<section id="recommended" class="product-list">    
+	 <?php
+			$show_category = true;
+			
+			$related_posts = MRP_get_related_posts($postid, true);
+			if ($related_posts) { 
+				$counter = 1; ?>        
+				<h2>Produse similare</h2>
+				<div class="pane">
+				<?php foreach ($related_posts as $post) {
+					setup_postdata($post);
+					$medium = true;
+					include "product-thumb.php";
+					$counter += 1;
+				} ?>
+				</div>
+			<?php } 
+		?>
+	</section>
+
+
+	<section id="search">
+		<div id="title" class="desktop">
+			<h3>Cautare cadouri</h3>
+		</div>
+		<h2 class="mobile">Cautare cadouri</h2>
+		<div id="body">
+			<?php include 'search-enhanced.php' ?>
+		</div>
+	</section>  
+  
+  
 		
-		$related_posts = MRP_get_related_posts($postid, true);
-		if ($related_posts) { 
-			$counter = 1; ?>        
-			<h2>Produse similare</h2>
-			<?php foreach ($related_posts as $post) {
-				setup_postdata($post);
-				$medium = true;
-				include "product-thumb.php";
-				$counter += 1;
-			}
-		} 
-	?>
-</section>
-
-
-<section id="search">
-	<div id="title">
-		<h3>Cautare cadouri</h3>
-	</div>
-	<div id="body">
-		<?php include 'search-enhanced.php' ?>
-	</div>
-</section>  
+	<section id="promo" class="product-list">    
+		<h2>Promotii si oferte</h2>
+		<div class="pane">
+		<?php       
+			$specials = query_posts2('posts_per_page=4&cat=15&orderby=rand');
+			if ($specials) {
+				if ($specials->have_posts()) {
+					$counter = 1;
+					while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+						if (in_category(10)) {
+							$medium = true;
+							include "product-thumb.php";
+							$counter += 1;
+						}                    
+					endwhile; 
+				}		      
+			}      
+		?>
+		</div>
+	</section>
   
   
-  
-<section id="promo" class="product-list">    
-	<h2>Promotii si oferte</h2>
-	<?php       
-		$specials = query_posts2('posts_per_page=4&cat=15&orderby=rand');
-		if ($specials) {
-			if ($specials->have_posts()) {
-				$counter = 1;
-				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
-					if (in_category(10)) {
-						$medium = true;
-						include "product-thumb.php";
-						$counter += 1;
-					}                    
-				endwhile; 
-			}		      
-		}      
-	?>
-</section>
-  
-  
-<section id="random" class="product-list">    
-	<h2>Din mixerul Smuff</h2>
-	<?php       
-		$specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');
-		if ($specials) {
-			if ($specials->have_posts()) {
-				$counter = 1;
-				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
-					if (in_category(10)) {
-						$medium = true;
-						include "product-thumb.php";
-						$counter += 1;
-					}                    
-				endwhile; 
-			}		      
-		}      
-	?>
-</section>  
-
+	<section id="random" class="product-list">    
+		<h2>Din mixerul Smuff</h2>
+		<div class="pane">
+		<?php       
+			$specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');
+			if ($specials) {
+				if ($specials->have_posts()) {
+					$counter = 1;
+					while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+						if (in_category(10)) {
+							$medium = true;
+							include "product-thumb.php";
+							$counter += 1;
+						}                    
+					endwhile; 
+				}		      
+			}      
+		?>
+		</div>
+	</section>  
+</div>
   
 
 
