@@ -35,6 +35,7 @@ $very-light-gray: #f1f1f1;
 }
 
 
+
 // Accordion
 @mixin accordion {
 	h2, h3 {
@@ -48,7 +49,7 @@ $very-light-gray: #f1f1f1;
 			@include arrow-to-reveal-content;
 		}
 	}
-	div {
+	.pane {
 		display: none;
 		background: $background;
 		padding: $pad;
@@ -721,15 +722,20 @@ body.single {
 					// add to cart is embedded into an accordion div, here we overwrite the accordion settings
 					.mobile {
 						h3 {
-							color: $green;
+							color: $blue;
 						}
 						div {
 							padding: 0;
 							margin-bottom: 0;
+						}
+						
+						#shopping {
+							@include block;
 							background: $blue;
 						}
 						
 						#shopping-incentives {
+							@include block;
 							background: $green;
 							
 							.inner {

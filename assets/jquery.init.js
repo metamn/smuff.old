@@ -247,10 +247,12 @@ $(document).ready(function() {
   });
   
   
+  
+  
   // Accordion 
   $(".accordion h3, .accordion h2").click(function() {
   	$(this).next().slideToggle();
-  	$(this).next().find('div').slideToggle();
+  	// $(this).next().find('div').slideToggle();
   });
   // - open first accordion on product description
   $(".single .accordion .pane").first().show();

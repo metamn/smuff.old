@@ -51,7 +51,7 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/jquery.init.js?refresh=20121128b"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/jquery.init.js?refresh=20121129"></script>
 		<link href='http://fonts.googleapis.com/css?family=Coda|Oxygen|Oswald:400,700|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
 		
 		<?php wp_head(); ?>

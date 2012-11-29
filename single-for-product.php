@@ -178,7 +178,7 @@
 			<h3>Cautare cadouri</h3>
 		</div>
 		<h2 class="mobile">Cautare cadouri</h2>
-		<div id="body">
+		<div id="body" class="pane">
 			<?php include 'search-enhanced.php' ?>
 		</div>
 	</section>  
