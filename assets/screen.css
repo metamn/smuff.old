@@ -3436,6 +3436,9 @@ body .container article #col-1 {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
   /* line 6, single.scss */
@@ -3448,7 +3451,14 @@ body .container article #col-1 {
     display: none;
   }
 }
-/* line 18, single.scss */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 6, single.scss */
+  body .container article #col-1 {
+    width: 100%;
+    float: left;
+  }
+}
+/* line 22, single.scss */
 body .container article #col-2 {
   width: 20%;
   margin: 0 0 0 0;
@@ -3457,13 +3467,13 @@ body .container article #col-2 {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 18, single.scss */
+@media only screen and (min-width: 381px) and (max-width: 1023px) {
+  /* line 22, single.scss */
   body .container article #col-2 {
     display: none;
   }
 }
-/* line 27, single.scss */
+/* line 31, single.scss */
 body .container article #post-content {
   width: 75%;
   margin: 0 5% 0 0;
@@ -3473,13 +3483,13 @@ body .container article #post-content {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 27, single.scss */
+  /* line 31, single.scss */
   body .container article #post-content {
     width: 100%;
     float: left;
   }
 }
-/* line 35, single.scss */
+/* line 39, single.scss */
 body .container article #contact-info {
   width: 20%;
   margin: 0 0 0 0;
@@ -3489,13 +3499,13 @@ body .container article #contact-info {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 35, single.scss */
+  /* line 39, single.scss */
   body .container article #contact-info {
     width: 100%;
     float: left;
   }
 }
-/* line 44, single.scss */
+/* line 48, single.scss */
 body .container #subscribe-newsletter {
   width: 100%;
   float: left;
@@ -3506,14 +3516,14 @@ body .container #subscribe-newsletter {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 44, single.scss */
+@media only screen and (min-width: 381px) and (max-width: 1023px) {
+  /* line 48, single.scss */
   body .container #subscribe-newsletter {
     width: 100%;
     float: left;
   }
 }
-/* line 53, single.scss */
+/* line 57, single.scss */
 body .container #post-shopping-2 {
   width: 75%;
   margin: 0 5% 0 0;
@@ -3521,31 +3531,44 @@ body .container #post-shopping-2 {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 53, single.scss */
+  /* line 57, single.scss */
   body .container #post-shopping-2 {
     display: none;
   }
 }
-/* line 60, single.scss */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 57, single.scss */
+  body .container #post-shopping-2 {
+    width: 100%;
+    float: left;
+  }
+}
+/* line 67, single.scss */
 body .container #post-shopping-2 #shopping {
   width: 25%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 64, single.scss */
+/* line 71, single.scss */
 body .container #post-shopping-2 #shopping-incentives {
   width: 75%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 69, single.scss */
+/* line 76, single.scss */
 body .container .product-list {
   width: 100%;
   float: left;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 72, single.scss */
+/* line 79, single.scss */
 body .container .product-list .item {
   width: 30%;
   margin: 0 5% 0 0;
@@ -3554,16 +3577,34 @@ body .container .product-list .item {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 72, single.scss */
+  /* line 79, single.scss */
   body .container .product-list .item {
     width: 100%;
     float: left;
   }
 }
-/* line 82, single.scss */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 79, single.scss */
+  body .container .product-list .item {
+    width: 45%;
+    margin: 0 5% 0 0;
+    float: left;
+  }
+}
+/* line 93, single.scss */
 body .container .product-list .item.c3, body .container .product-list .item.c6, body .container .product-list .item.c9, body .container .product-list .item.c12, body .container .product-list .item.c15, body .container .product-list .item.c18, body .container .product-list .item.c21, body .container .product-list .item.c24,
 body .container .product-list .item.c27, body .container .product-list .item.c30 {
   margin-right: 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 99, single.scss */
+  body .container .product-list .item.c2, body .container .product-list .item.c4, body .container .product-list .item.c6, body .container .product-list .item.c8, body .container .product-list .item.c10, body .container .product-list .item.c12, body .container .product-list .item.c14, body .container .product-list .item.c16,
+  body .container .product-list .item.c18, body .container .product-list .item.c20 {
+    margin-right: 0;
+  }
 }

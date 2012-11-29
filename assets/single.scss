@@ -13,13 +13,17 @@ body {
 						display: none;
 					}
 				}
+				
+				@include respond-to(tablet) {
+					@include block;
+				}
 			}
 			
 			#col-2 {
 				@include col($minor, 0, 0);
 				
 				
-				@include respond-to(all-mobile) {
+				@include respond-to(all-tablet) {
 					@include hidden;
 				}
 			}
@@ -45,7 +49,7 @@ body {
 			@include block;
 			@include col($major, 0, $margin);	
 			
-			@include respond-to(all-mobile) {
+			@include respond-to(all-tablet) {
 				@include block;
 			}
 		}
@@ -55,6 +59,9 @@ body {
 						
 			@include respond-to(all-mobile) {
 				@include hidden;
+			}
+			@include respond-to(tablet) {
+				@include block;
 			}
 			
 			#shopping {
@@ -76,11 +83,22 @@ body {
 				@include respond-to(all-mobile) {
 					@include block;
 				}
+				
+				@include respond-to(tablet) {
+					@include col(45%, 0, 5%);
+				}
 			}
 			
 			.item.c3, .item.c6, .item.c9, .item.c12, .item.c15, .item.c18, .item.c21, .item.c24,
 			.item.c27, .item.c30 {
 				margin-right: 0;
+			}
+			
+			@include respond-to(tablet) {
+				.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12, .item.c14, .item.c16,
+				.item.c18, .item.c20 {
+					margin-right: 0;
+				}
 			}
 		}
 	
