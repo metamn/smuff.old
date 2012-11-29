@@ -718,7 +718,7 @@ body.single {
 			#post-content {
 				@include accordion;
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					// add to cart is embedded into an accordion div, here we overwrite the accordion settings
 					.mobile {
 						h3 {
@@ -811,19 +811,19 @@ body.single {
 				@include bestseller;
 			}
 			
-			@include respond-to(mobile) {
+			@include respond-to(all-mobile) {
 				@include accordion;
 			}
 		}
 		
 		#search {
-			@include respond-to(mobile) {
+			@include respond-to(all-mobile) {
 				@include accordion;
 			}
 		}
 		
 		#promo {
-			@include respond-to(mobile) {
+			@include respond-to(all-mobile) {
 				margin: 0;
 			}
 		}

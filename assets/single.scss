@@ -6,7 +6,7 @@ body {
 			#col-1 {
 				@include col($major, 0, $margin);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include block;
 					
 					#large-image {
@@ -19,7 +19,7 @@ body {
 				@include col($minor, 0, 0);
 				
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include hidden;
 				}
 			}
@@ -27,7 +27,7 @@ body {
 			#post-content {
 				@include col($major, 0, $margin);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include block;
 				}
 			}
@@ -35,7 +35,7 @@ body {
 			#contact-info {
 				@include col($minor, 0, 0);
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include block;
 				}
 			}
@@ -45,7 +45,7 @@ body {
 			@include block;
 			@include col($major, 0, $margin);	
 			
-			@include respond-to(mobile) {
+			@include respond-to(all-mobile) {
 				@include block;
 			}
 		}
@@ -53,7 +53,7 @@ body {
 		#post-shopping-2 {
 			@include col($major, 0, $margin);
 						
-			@include respond-to(mobile) {
+			@include respond-to(all-mobile) {
 				@include hidden;
 			}
 			
@@ -73,7 +73,7 @@ body {
 				@include col(30%, 0, 5%);
 				margin-bottom: $margin;
 				
-				@include respond-to(mobile) {
+				@include respond-to(all-mobile) {
 					@include block;
 				}
 			}

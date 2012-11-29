@@ -510,7 +510,7 @@ body.single .container article.product #post-content .pane {
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 724, theme.scss */
   body.single .container article.product #post-content .mobile h3 {
     color: #4d8fce;
@@ -983,7 +983,7 @@ body.single .container .product-list .item #category a {
 body.single .container .product-list .item #category a:hover {
   background: gray;
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 41, theme.scss */
   body.single .container .product-list h2, body.single .container .product-list h3 {
     cursor: pointer;
@@ -1012,7 +1012,7 @@ body.single .container #search {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 41, theme.scss */
   body.single .container #search h2, body.single .container #search h3 {
     cursor: pointer;
@@ -1041,7 +1041,7 @@ body.single .container #promo {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 825, theme.scss */
   body.single .container #promo {
     margin: 0;
@@ -3437,7 +3437,7 @@ body .container article #col-1 {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 6, single.scss */
   body .container article #col-1 {
     width: 100%;
@@ -3457,7 +3457,7 @@ body .container article #col-2 {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 18, single.scss */
   body .container article #col-2 {
     display: none;
@@ -3472,7 +3472,7 @@ body .container article #post-content {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 27, single.scss */
   body .container article #post-content {
     width: 100%;
@@ -3488,7 +3488,7 @@ body .container article #contact-info {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 35, single.scss */
   body .container article #contact-info {
     width: 100%;
@@ -3506,7 +3506,7 @@ body .container #subscribe-newsletter {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 44, single.scss */
   body .container #subscribe-newsletter {
     width: 100%;
@@ -3522,7 +3522,7 @@ body .container #post-shopping-2 {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 53, single.scss */
   body .container #post-shopping-2 {
     display: none;
@@ -3555,7 +3555,7 @@ body .container .product-list .item {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 600px) {
   /* line 72, single.scss */
   body .container .product-list .item {
     width: 100%;
