@@ -41,8 +41,9 @@ echo '<?xml version="1.0"?>';
     $product_id = product_id($post->ID);
     $product_price = product_price($post->ID);
     
-    $body = '<h3 style="border-bottom:1px solid;padding-bottom:1em">' . $product_price . ' Lei</h3>';
-    $body .= '<p>' . $post->post_excerpt . '</p>';
+    
+    $body = '<p>' . $post->post_excerpt . '</p>';   
+    $body = '<h3>' . $product_price . ' Lei</h3>';
   }   
 ?>
   <item>

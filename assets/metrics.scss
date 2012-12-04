@@ -52,7 +52,7 @@ $desktop: 1440px;
   
   /* a collector mode, combining smartphones in landscape mode & tablets */
   @if $media == all-tablet {
-    @media only screen and (min-width: $mobile + 1) and (max-width: $tablet - 1) { @content; }
+    @media only screen and (max-width: $tablet - 1) { @content; }
   }
   
   /* 1024 - 1440, or tablet in landscape mode */

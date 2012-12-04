@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Smuff newsletter</title>
+
+
+
+	
+<style type="text/css">
+
+/* ------------------------------------- 
+
+SOURCE: http://www.zurb.com/playground/responsive-email-templates
+GLOBAL 
+------------------------------------- */
+
+
+* { 
+	margin:0;
+	padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img { 
+	max-width: 98%; 
+	border: 1px solid #DFDBD0;
+	padding: 1%;
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { color: #48C0D9;}
+h1 a { color: #111; }
+
+.btn {
+	text-decoration:none;
+	color: #fff;
+	background-color: #10A26F;
+	padding:10px 16px;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+}
+
+p.callout {
+	padding:15px;
+	background-color:#E5ECF9;
+	margin-bottom: 15px;
+}
+.callout a {
+	font-weight:bold;
+	color: #2BA6CB;
+}
+
+
+.promo img {
+	border: none;
+}
+
+table.social {
+/* 	padding:15px; */
+	background-color: #DFDBD0;
+	
+}
+.social .soc-btn {
+	padding: 3px 7px;
+	font-size:12px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF;font-weight:bold;
+	display:block;
+	text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+a.ms { background-color: #000!important; }
+
+.sidebar .soc-btn { 
+	display:block;
+	width:100%;
+}
+
+
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+.head-wrap h1 small {
+	background: #F25F18;
+	color: #DFDBD0;
+	letter-spacing: 0px;
+	font-size: 50%;
+	margin-left: 15px;
+	vertical-align: top;
+	display: inline-block;
+	height: 15px;
+	padding-top: 15px;
+}
+
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+line-height: 1.1; 
+margin-bottom:15px; 
+color:#000;
+font-weight:900;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
+	font-size: 80%; 
+	font-weight: 200;
+	background: #48C0D9; 
+	padding: 4px;
+	line-height: 0; 
+	text-transform: none; 
+}
+
+h1 { font-size: 44px; letter-spacing: -4px;}
+h2 { font-size: 37px; letter-spacing: -4px;}
+h3 { font-size: 27px;}
+h4 { font-size: 23px;}
+h5 { font-size: 17px;}
+h6 { font-size: 14px; text-transform: uppercase; color:#444;}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+
+/* ------------------------------------- 
+		SIDEBAR 
+------------------------------------- */
+ul.sidebar {
+	background:#ebebeb;
+	display:block;
+	list-style-type: none;
+}
+ul.sidebar li { display: block; margin:0;}
+ul.sidebar li a {
+	text-decoration:none;
+	color: #666;
+	padding:10px 16px;
+/* 	font-weight:bold; */
+	margin-right:10px;
+/* 	text-align:center; */
+	cursor:pointer;
+	border-bottom: 1px solid #777777;
+	border-top: 1px solid #FFFFFF;
+	display:block;
+	margin:0;
+}
+ul.sidebar li a.last { border-bottom-width:0px;}
+ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+	padding:0!important; 
+	margin:0 auto; 
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+	
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+
+}
+</style>
+</head>
+
+
+
+
+ 
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#E6E2D9">
+	<tr>
+		<td></td>
+		<td class="header container" align="">
+			
+			<!-- /content -->
+			<div class="content">
+				<table bgcolor="#E6E2D9" >
+					<tr>
+						<td><h1>Smuff <small>inseamna cadouri</small></h1></td>
+						<td align="right"><h6 class="collapse">Newsletter<br/>*|DATE:d M Y|*</h6></td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+<!-- BODY -->
+<table class="body-wrap" bgcolor="">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#FFFFFF">
+			
+			<!-- content -->
+			<div class="content">
+				*|RSSITEMS:|*
+				<table>
+					<tr>
+						<td>
+							<h1><a href="*|RSSITEM:URL|*">*|RSSITEM:TITLE|*</a></h1>
+							
+							<!-- A Real Hero (and a real human being) -->
+							<p><a href="*|RSSITEM:URL|*">*|RSSITEM:IMAGE|*</a></p><!-- /hero -->
+							<p>*|RSSITEM:CONTENT_TEXT_FULL|*</p>
+						</td>
+					</tr>
+				</table>
+				*|END:RSSITEMS|*
+			</div><!-- /content -->
+			
+			<!-- content -->
+			<div class="content">
+				
+				<table bgcolor="">
+					<tr>
+						<td class="small" width="30%" style="vertical-align: top; padding-right:10px;"><img src="http://www.smuff.ro/wp-content/uploads/2010/11/inima_calda_valentine_s_day_ziuaindragostitilor-150x150.jpg" /></td>
+						<td>
+							<h4>Pernita Calda pentru Maini — tineti caldura in palme <small>48 Lei</small></h4>
+							<p class="">Pernite calduroase cu jeleu pentru zile reci.</p>
+							<a href="http://www.smuff.ro/2010/11/05/pernita-calda-pentru-maini-tineti-caldura-in-palme/" class="btn">Adauga la cos &raquo;</a>
+						</td>
+					</tr>
+				</table>
+			
+			</div><!-- /content -->
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;"><img src="http://www.smuff.ro/wp-content/uploads/2011/11/manusi-touchscreen-gloves-isotoner-smuff-ladies-150x150.jpg" /></td>
+					<td>
+						<h4>Manusi Touchscreen Ladies — cu dungi sau fara, pe gri, negru sau cu model <small>96 Lei</small></h4>
+						<p class="">Colectia manusilor touchscreen</p>
+						<a class="btn">Adauga la cos &raquo;</a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td>
+						
+						<!-- Callout Panel -->
+						<p class="callout">
+							Ez itt egy elvalaszto panel, lehet folotte bestseller termekek alatta pedig a promo termekek
+						</p><!-- /callout panel -->
+						
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="http://placehold.it/75x75" /></td>
+					<td>
+						<h4>Title Ipsum <small>This is a note.</small></h4>
+						<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<a class="btn">Clickity Click &raquo;</a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="http://placehold.it/75x75" /></td>
+					<td>
+						<h4>Title Ipsum <small>This is a note.</small></h4>
+						<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						<a class="btn">Clickity Click &raquo;</a>
+				
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+			<!-- content -->
+			<div class="content">
+				<table class="promo">
+					<tr>
+						<td>
+							<img src="http://dl.dropbox.com/u/3644199/smuff.ro/promo.png">
+						</td>
+						<td>
+							<h3>Promotii si oferte</h3>
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+			
+			
+			<!-- content -->
+			<div class="content">
+				<table bgcolor="">
+					<tr>
+						<td>
+							
+							<!-- social & contact -->
+							<table bgcolor="" class="social" width="100%">
+								<tr>
+									<td>
+										
+										<!--- column 1 -->
+										<div class="column">
+											<table bgcolor="" cellpadding="" align="left">
+										<tr>
+											<td>				
+												
+												<h5 class="">Ultimele stiri si noutati gasiti pe:</h5>
+												<p class="">
+													<a href="http://www.facebook.com/smuffgadget" class="soc-btn fb">Facebook</a> 
+													<a href="http://twitter.com/smuff_ro" class="soc-btn tw">Twitter</a> 
+												</p>
+						
+												
+											</td>
+										</tr>
+									</table><!-- /column 1 -->
+										</div>
+										
+										<!--- column 2 -->
+										<div class="column">
+											<table bgcolor="" cellpadding="" align="left">
+										<tr>
+											<td>				
+																			
+												<h5 class="">Contact Info:</h5>												
+												<p>
+													Tel: <strong>0740-456.127</strong><br/>
+                					Email: <strong><a href="emailto:shop@smuff.ro">shop@smuff.ro</a></strong>
+                				</p>
+                
+											</td>
+										</tr>
+									</table><!-- /column 2 -->	
+										</div>
+										
+										<div class="clear"></div>
+	
+									</td>
+								</tr>
+							</table><!-- /social & contact -->
+							
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				<!-- content -->
+				<div class="content">
+					<table>
+						<tr>
+							<td align="center">
+								<p>
+									<a href="#">Terms</a> |
+									<a href="#">Privacy</a> |
+									<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div><!-- /content -->
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>
