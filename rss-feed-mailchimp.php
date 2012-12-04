@@ -42,8 +42,8 @@ echo '<?xml version="1.0"?>';
     $product_price = product_price($post->ID);
     
     
-    $body = '<p>' . $post->post_excerpt . '</p>';   
-    $body = '<h3>' . $product_price . ' Lei</h3>';
+    $body = '<p class="excerpt">' . $post->post_excerpt . '</p>';   
+    $body .= '<p><span class="price">' . $product_price . ' Lei</span><span class="btn">Adauga la cos &raquo;</span></p>';
   }   
 ?>
   <item>

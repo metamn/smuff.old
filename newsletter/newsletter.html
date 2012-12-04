@@ -46,10 +46,27 @@ body {
 /* ------------------------------------- 
 		ELEMENTS 
 ------------------------------------- */
-a { color: #48C0D9;}
-h1 a { color: #111; }
+a { 
+	color: #111;
+	text-decoration: none;
+}
 
-.btn {
+.info a {
+	color: #48C0D9;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
+	font-size: 80%; 
+	font-weight: 200;
+	background: #48C0D9; 
+	padding: 4px;
+	line-height: 0; 
+	text-transform: none; 
+	margin-left: 15px;
+}
+
+
+.btn, .price {
 	text-decoration:none;
 	color: #fff;
 	background-color: #10A26F;
@@ -59,6 +76,14 @@ h1 a { color: #111; }
 	cursor:pointer;
 	display: inline-block;
 }
+
+.price {
+	background: #48C0D9; 
+}
+.promo .price {
+	background: #F25F18;
+}
+
 
 p.callout {
 	padding:15px;
@@ -70,29 +95,6 @@ p.callout {
 	color: #2BA6CB;
 }
 
-
-.promo img {
-	border: none;
-}
-
-table.social {
-/* 	padding:15px; */
-	background-color: #DFDBD0;
-	
-}
-.social .soc-btn {
-	padding: 3px 7px;
-	font-size:12px;
-	margin-bottom:10px;
-	text-decoration:none;
-	color: #FFF;font-weight:bold;
-	display:block;
-	text-align:center;
-}
-a.fb { background-color: #3B5998!important; }
-a.tw { background-color: #1daced!important; }
-a.gp { background-color: #DB4A39!important; }
-a.ms { background-color: #000!important; }
 
 .sidebar .soc-btn { 
 	display:block;
@@ -109,7 +111,7 @@ table.head-wrap { width: 100%;}
 .header.container table td.logo { padding: 15px; }
 .header.container table td.label { padding: 15px; padding-left:0px;}
 
-.head-wrap h1 small {
+.head-wrap h1 span {
 	background: #F25F18;
 	color: #DFDBD0;
 	letter-spacing: 0px;
@@ -117,8 +119,7 @@ table.head-wrap { width: 100%;}
 	margin-left: 15px;
 	vertical-align: top;
 	display: inline-block;
-	height: 15px;
-	padding-top: 15px;
+	padding: 4px;
 }
 
 
@@ -127,6 +128,13 @@ table.head-wrap { width: 100%;}
 		BODY 
 ------------------------------------- */
 table.body-wrap { width: 100%;}
+
+.body-wrap .content {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
 
 
 /* ------------------------------------- 
@@ -152,14 +160,7 @@ margin-bottom:15px;
 color:#000;
 font-weight:900;
 }
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
-	font-size: 80%; 
-	font-weight: 200;
-	background: #48C0D9; 
-	padding: 4px;
-	line-height: 0; 
-	text-transform: none; 
-}
+
 
 h1 { font-size: 44px; letter-spacing: -4px;}
 h2 { font-size: 37px; letter-spacing: -4px;}
@@ -264,6 +265,18 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 		For clients that support media queries.
 		Nothing fancy. 
 -------------------------------------------- */
+@media only screen and (max-width: 320px) {
+	.head-wrap h1 span {
+		margin-left: 0;
+	}
+	
+	.content td.small {
+		width: 40% !important;
+		padding-right: 20px !important;
+	}
+
+}
+
 @media only screen and (max-width: 600px) {
 	
 	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
@@ -273,7 +286,6 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 	table.social div[class="column"] {
 		width:auto!important;
 	}
-
 }
 </style>
 </head>
@@ -294,8 +306,20 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 			<div class="content">
 				<table bgcolor="#E6E2D9" >
 					<tr>
-						<td><h1>Smuff <small>inseamna cadouri</small></h1></td>
-						<td align="right"><h6 class="collapse">Newsletter<br/>*|DATE:d M Y|*</h6></td>
+						<td>
+							<a href="http://www.smuff.ro">
+								<h1>Smuff <span>inseamna cadouri</span></h1>
+							</a>
+						</td>
+						<td align="right">
+							<center>
+								<h6 class="collapse">
+									Newsletter
+									<br/>
+									*|DATE:d M Y|*
+								</h6>
+							</center>
+						</td>
 					</tr>
 				</table>
 			</div><!-- /content -->
@@ -321,7 +345,7 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 							
 							<!-- A Real Hero (and a real human being) -->
 							<p><a href="*|RSSITEM:URL|*">*|RSSITEM:IMAGE|*</a></p><!-- /hero -->
-							<p>*|RSSITEM:CONTENT_TEXT_FULL|*</p>
+							<p><a href="*|RSSITEM:URL|*">*|RSSITEM:CONTENT_FULL|*</a></p>
 						</td>
 					</tr>
 				</table>
@@ -333,11 +357,17 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 				
 				<table bgcolor="">
 					<tr>
-						<td class="small" width="30%" style="vertical-align: top; padding-right:10px;"><img src="http://www.smuff.ro/wp-content/uploads/2010/11/inima_calda_valentine_s_day_ziuaindragostitilor-150x150.jpg" /></td>
+						<td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+							<a href="http://www.smuff.ro/2010/11/05/pernita-calda-pentru-maini-tineti-caldura-in-palme/">
+								<img src="http://www.smuff.ro/wp-content/uploads/2010/11/inima_calda_valentine_s_day_ziuaindragostitilor-150x150.jpg" /></td>
+							</a>
 						<td>
-							<h4>Pernita Calda pentru Maini — tineti caldura in palme <small>48 Lei</small></h4>
-							<p class="">Pernite calduroase cu jeleu pentru zile reci.</p>
-							<a href="http://www.smuff.ro/2010/11/05/pernita-calda-pentru-maini-tineti-caldura-in-palme/" class="btn">Adauga la cos &raquo;</a>
+							<a href="http://www.smuff.ro/2010/11/05/pernita-calda-pentru-maini-tineti-caldura-in-palme/">
+								<h4>Pernita Calda pentru Maini — tineti caldura in palme</h4>
+								<p class="">Pernite calduroase cu jeleu pentru zile reci.</p>
+								<span class="price">48 Lei</span>
+								<span class="btn">Adauga la cos &raquo;</span>
+							</a>
 						</td>
 					</tr>
 				</table>
@@ -347,127 +377,122 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 			<!-- content -->
 			<div class="content"><table bgcolor="">
 				<tr>
-					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;"><img src="http://www.smuff.ro/wp-content/uploads/2011/11/manusi-touchscreen-gloves-isotoner-smuff-ladies-150x150.jpg" /></td>
+					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+						<a href="http://www.smuff.ro/2011/11/08/manusi-touchscreen-ladies-—-cu-dungi-sau-fara-pe-gri-negru-sau-cu-model/">
+							<img src="http://www.smuff.ro/wp-content/uploads/2011/11/manusi-touchscreen-gloves-isotoner-smuff-ladies-150x150.jpg" /></td>
+						</a>
 					<td>
-						<h4>Manusi Touchscreen Ladies — cu dungi sau fara, pe gri, negru sau cu model <small>96 Lei</small></h4>
-						<p class="">Colectia manusilor touchscreen</p>
-						<a class="btn">Adauga la cos &raquo;</a>
+						<a href="http://www.smuff.ro/2011/11/08/manusi-touchscreen-ladies-—-cu-dungi-sau-fara-pe-gri-negru-sau-cu-model/">
+							<h4>Manusi Touchscreen Ladies — cu dungi sau fara, pe gri, negru sau cu model</h4>
+							<p class="">Colectia manusilor touchscreen</p>
+							<span class="price">96 Lei</span>
+							<span class="btn">Adauga la cos &raquo;</span>
+						</a>
 					</td>
 				</tr>
 			</table></div><!-- /content -->
 			
 			<!-- content -->
 			<div class="content"><table bgcolor="">
+				<tr>
+					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+						<a href="http://www.smuff.ro/2011/12/12/manusi-incalzite-pana-la-33-grade-celsius/">
+							<img src="http://www.smuff.ro/wp-content/uploads/2011/12/manusi-incalzite-heated-gloves-150x150.jpg" /></td>
+						</a>
+					<td>
+						<a href="http://www.smuff.ro/2011/12/12/manusi-incalzite-pana-la-33-grade-celsius/">
+							<h4>Manusi incalzite — pana la 33 grade celsius</h4>
+							<p class="">Pentru vremea rece la munca sau la ski.</p>
+							<span class="price">235 Lei</span>
+							<span class="btn">Adauga la cos &raquo;</span>
+						</a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+						<a href="http://www.smuff.ro/2012/11/27/sagaform-set-vin-fiert-cu-incalzire-magia-momentelor-de-iarna/">
+							<img src="http://www.smuff.ro/wp-content/uploads/2012/11/sagaform-mulled-wine-warmer-set-vin-fiert-cadouri-de-craciun-150x150.jpg" /></td>
+						</a>
+					<td>
+						<a href="http://www.smuff.ro/2012/11/27/sagaform-set-vin-fiert-cu-incalzire-magia-momentelor-de-iarna/">
+							<h4>Sagaform Set vin fiert cu incalzire — magia momentelor de iarna</h4>
+							<p class="">Carafa, suport si 4 pahare de sarbatori.</p>
+							<span class="price">359 Lei</span>
+							<span class="btn">Adauga la cos &raquo;</span>
+						</a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<tr>
+					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+						<a href="http://www.smuff.ro/2012/10/15/cizme-fierbinti-—-cat-confort…-cata-placere…-—-modele-noi/">
+							<img src="http://www.smuff.ro/wp-content/uploads/2012/10/hot-boots-cizme-fierbinti-cadouri-craciun-150x150.jpg" /></td>
+						</a>
+					<td>
+						<a href="http://www.smuff.ro/2012/10/15/cizme-fierbinti-—-cat-confort…-cata-placere…-—-modele-noi/">
+							<h4>Cizme fierbinti — cat confort!… cata placere!… — MODELE NOI</h4>
+							<p class="">Papuci de casa HOT!</p>
+							<span class="price">129 Lei</span>
+							<span class="btn">Adauga la cos &raquo;</span>
+						</a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+			<!-- content -->
+			<div class="content"><table bgcolor="">
+				<table class="promo">
+				<tr>
+					<td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+						<a href="http://www.smuff.ro/2012/08/29/costumul-lazygrow-pentru-oameni-dintr-o-bucata/">
+							<img src="http://www.smuff.ro/wp-content/uploads/2012/08/lazy-grow-suit-costum-sport-overall-rochii-haine-online1-150x150.jpg" /></td>
+						</a>
+					<td>
+						<a href="http://www.smuff.ro/2012/08/29/costumul-lazygrow-pentru-oameni-dintr-o-bucata/">
+							<h4>Costumul LazyGrow — Pentru oameni… dintr-o bucata!</h4>
+							<p class="">Concurenta tuturor existente!</p>
+							<span class="price">460 Lei</span>
+							<span class="btn">Adauga la cos &raquo;</span>
+						</a>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+			<!-- content -->
+			<div class="content">
+			`<table class="promo" bgcolor="">
 				<tr>
 					<td>
 						
 						<!-- Callout Panel -->
+						<center>
 						<p class="callout">
-							Ez itt egy elvalaszto panel, lehet folotte bestseller termekek alatta pedig a promo termekek
-						</p><!-- /callout panel -->
-						
-					</td>
-				</tr>
-			</table></div><!-- /content -->
-			
-			<!-- content -->
-			<div class="content"><table bgcolor="">
-				<tr>
-					<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="http://placehold.it/75x75" /></td>
-					<td>
-						<h4>Title Ipsum <small>This is a note.</small></h4>
-						<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-						<a class="btn">Clickity Click &raquo;</a>
-					</td>
-				</tr>
-			</table></div><!-- /content -->
-			
-			<!-- content -->
-			<div class="content"><table bgcolor="">
-				<tr>
-					<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="http://placehold.it/75x75" /></td>
-					<td>
-						<h4>Title Ipsum <small>This is a note.</small></h4>
-						<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-						<a class="btn">Clickity Click &raquo;</a>
+							
+							<strong>Faceti achizitii pentru companie, aveti nevoie de promotionale sau multe cadouri?</strong> 
+							<br/><br/>
+							Contactati-ne si va surprindem cu oferte ingenioase!
+							<br/>
+							Avem produse exclusiv pentru linia Trade.
+							<br/>
+							<u>ami@smuff.ro</u> sau <u>0740-456.127</u>.
 				
+						</p><!-- /callout panel -->
+						</center>
 					</td>
 				</tr>
 			</table></div><!-- /content -->
 			
-			
-			<!-- content -->
-			<div class="content">
-				<table class="promo">
-					<tr>
-						<td>
-							<img src="http://dl.dropbox.com/u/3644199/smuff.ro/promo.png">
-						</td>
-						<td>
-							<h3>Promotii si oferte</h3>
-						</td>
-					</tr>
-				</table>
-			</div><!-- /content -->
-			
-			
-			
-			<!-- content -->
-			<div class="content">
-				<table bgcolor="">
-					<tr>
-						<td>
-							
-							<!-- social & contact -->
-							<table bgcolor="" class="social" width="100%">
-								<tr>
-									<td>
-										
-										<!--- column 1 -->
-										<div class="column">
-											<table bgcolor="" cellpadding="" align="left">
-										<tr>
-											<td>				
-												
-												<h5 class="">Ultimele stiri si noutati gasiti pe:</h5>
-												<p class="">
-													<a href="http://www.facebook.com/smuffgadget" class="soc-btn fb">Facebook</a> 
-													<a href="http://twitter.com/smuff_ro" class="soc-btn tw">Twitter</a> 
-												</p>
-						
-												
-											</td>
-										</tr>
-									</table><!-- /column 1 -->
-										</div>
-										
-										<!--- column 2 -->
-										<div class="column">
-											<table bgcolor="" cellpadding="" align="left">
-										<tr>
-											<td>				
-																			
-												<h5 class="">Contact Info:</h5>												
-												<p>
-													Tel: <strong>0740-456.127</strong><br/>
-                					Email: <strong><a href="emailto:shop@smuff.ro">shop@smuff.ro</a></strong>
-                				</p>
-                
-											</td>
-										</tr>
-									</table><!-- /column 2 -->	
-										</div>
-										
-										<div class="clear"></div>
-	
-									</td>
-								</tr>
-							</table><!-- /social & contact -->
-							
-						</td>
-					</tr>
-				</table>
-			</div><!-- /content -->
 			
 
 		</td>
@@ -483,18 +508,78 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 			
 				<!-- content -->
 				<div class="content">
-					<table>
+				`<table  bgcolor="">
+					<tr>
+						<td>
+							<center>
+							<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/divider.jpg" style="border: none;outline: none;text-decoration: none;">
+							</center>
+						</td>
+					</tr>
+				</table></div><!-- /content -->
+			
+			
+				<!-- content -->
+				<div class="content">
+					<table class="info">
 						<tr>
 							<td align="center">
 								<p>
-									<a href="#">Terms</a> |
-									<a href="#">Privacy</a> |
-									<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+									Copyright © *|CURRENT_YEAR|* *|LIST:COMPANY|* Toate drepturile rezervate.
+									*|LIST:DESCRIPTION|*
+									<a href="*|UNSUB|*">Dezabonare newsletter</a> • 
+									*|LIST:ADDRESS|* 
 								</p>
 							</td>
 						</tr>
 					</table>
 				</div><!-- /content -->
+				
+				
+				<div class="content">
+					<table border="0" cellpadding="0" cellspacing="0" width="360" id="social">
+						<tbody><tr>
+								<td align="center" width="120">
+									<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_forward.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_twitter.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_facebook.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+						</tr>
+						<tr>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_one" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_one"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_one"><a href="*|FORWARD|*" target="_blank">Trimite acest email<br>unui prieten</a><br>
+	</span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_two" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_two"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_two"><a href="*|TWITTER:PROFILEURL|*" target="_blank">Noutati prin<br>
+	Twitter</a> </span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_three" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_three"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_three"><a href="*|FACEBOOK:PROFILEURL|*" target="_blank">Pagina noastra<br>
+	pe Facebook</a> </span></div></div>
+								</td>
+						</tr>
+				</tbody>
+				</table>
+    	</div><!-- /content -->
+    	
+    	<!-- content -->
+				<div class="content">
+				`<table class="promo" bgcolor="">
+					<tr>
+						<td>
+							<center>
+							Comenzi telefonice la
+							<h3>0740-456.127</h3>
+							</center>
+						</td>
+					</tr>
+				</table></div><!-- /content -->
+				
 				
 		</td>
 		<td></td>
