@@ -72,7 +72,7 @@
 						}
 					} else { ?>
 						<div id="product-discontinued">
-							<h3>Acest produs este discontinuat.</h3>
+							<h3>Acest produs nu este pe stoc.</h3>
 						</div> <?php
         	} ?>
       </div>
@@ -201,7 +201,7 @@
 						}
 					} else { ?>
 						<div id="product-discontinued">
-							<h3>Acest produs este discontinuat.</h3>
+							<h3>Acest produs nu este pe stoc.</h3>
 						</div> <?php
         	} 
         ?>
