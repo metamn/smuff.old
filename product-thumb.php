@@ -38,7 +38,7 @@
     </a>
   </div>
   
-  <?php if ($show_category) { ?>
+  <?php if ( ($show_category) && isset($main_cat) && isset($category) ) { ?>
     <div id="category">
       <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
       <?php echo $category ?></a>
