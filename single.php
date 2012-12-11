@@ -17,6 +17,8 @@ get_header();
 
 	<div id="single" class="block">
 	  <div id="content" class="column span-18">
+	  	<?php include "c_second-menu.php" ?>
+	  	
 	    <?php if (is_blog()) { ?>
 	      <div id="blog-intro" class="block">
           <?php include "blog-intro.php" ?>

@@ -43,7 +43,8 @@
 
 <div id="home" class="block">
   <div class="block">
-    <div id="content" class="column span-18">         	                      
+    <div id="content" class="column span-18">   
+    	
       <?php if ($new_products->have_posts()) {
           include "home-hot.php";
         } else {

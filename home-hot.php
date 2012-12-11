@@ -1,4 +1,5 @@
 <div id="home-hot" class="block"> 
+	<?php include "c_second-menu.php" ?>
 
   <div id="home-hot-content" class="block">    
     <div id="hot-slider" class="slider column span-15 last">
