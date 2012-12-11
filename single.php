@@ -29,8 +29,12 @@ get_header();
 	          if ((in_category(10)) || (in_category(2237))) { //2221
 	            include "single-for-product.php";
 	          } else {
-	            include "single-for-post.php";
-	            include "navigation.php";
+	          	if (in_category('colectii')) {
+	          		include "single-for-groups.php";
+	          	} else {
+								include "single-for-post.php";
+								include "navigation.php";
+							}
 	          }
 	        ?>      
 	        	

@@ -33,7 +33,7 @@ a, a:visited {
 
 
 body {
- background: #e6e2d9;
+ background: #e6e2d9 url(img/smuff-karacsony-2010-background.jpg) no-repeat center top;
 }
 
 /*
@@ -59,7 +59,7 @@ body {
 */
 
 #header {
-  background: #e6e2d9;
+  background: transparent;
 }
 
 #header #tooltips {
@@ -851,8 +851,10 @@ table.wpsc_checkout_table input.text {
   background: #FEFAE7;
 }
 
+/*
 .wpsc_checkout_field2,
 .wpsc_checkout_field4,
+*/
 .wpsc_checkout_field26,
 .wpsc_checkout_field27,
 

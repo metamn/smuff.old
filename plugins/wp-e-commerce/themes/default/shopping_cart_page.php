@@ -182,7 +182,7 @@
 		<tr class="coupon">
 			<td>&nbsp;</td>
 			<td>
-				<p>Daca aveti cod reducere, introduceti aici.</p>
+				<p>Daca aveti un cod promotional introduceti aici:</p>
 			</td>
 			<td  align='left'>
 				<form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">				
