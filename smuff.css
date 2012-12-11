@@ -2008,7 +2008,8 @@ input.search {
   padding: 0;
 }
 #sidebar #contact-info {
-  margin: 18em 0;
+  /* margin: 18em 0; if the support picture is here */
+  margin: 29em 0 18em; /* without the support girl / picture */
 }
 #sidebar #no-shoutbox {
   margin: 0;
