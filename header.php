@@ -71,7 +71,7 @@
     </script>
 
     <!-- init all jquery functions -->
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121005"></script>
+    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.init.js?refresh=20121213"></script>
 		
 		
 		

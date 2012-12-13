@@ -9,6 +9,7 @@
           $thumbs = array();
           $i = 1;
           
+          /*
           if ($special_posts) {
             while ($special_posts->have_posts()) : $special_posts->the_post(); update_post_caches($posts);
               $imgs = post_attachements($post->ID);
@@ -53,6 +54,7 @@
                               
             <?php endwhile; 
           }
+          */
           
           while ($new_products->have_posts()) : $new_products->the_post(); update_post_caches($posts); 
             $imgs = post_attachements($post->ID);

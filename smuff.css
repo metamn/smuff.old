@@ -167,12 +167,9 @@ body {
 
 
 #menu-2 {
-	background: #FDF3C6;
+	background: #FDF3C6 url(img/yellow-stripe.png);
 	margin: 1.5em 0;
-	padding: 1.5em 0;
-}
-#menu-2 li {
-	background: #FDF3C6;
+	padding: 1.5em .625em;
 }
 #menu-2 #text {
 	opacity: .5;
@@ -193,7 +190,10 @@ body {
 	width: 30%;
 }
 #menu-2 #content li.search {
-	width: 34%;
+	width: 36%;
+}
+#menu-2 #content a {
+	border-bottom: 1px dashed;
 }
 
 
@@ -1145,31 +1145,26 @@ div.hot-slider-thumb-menu-wrapper {
 */
 
 #collections {
-  margin: 3em 0 0;
+  width: 710px;
+  position: relative;
 }
-#collections .item {
-  margin-bottom: 3em;
+#collections img {
+	border: none;
 }
-#collections #title {
-  background: #DFDBD0;
-  padding: 1em 0 .1em;
+#collections ul, #collections li {
+	position:relative;
+	margin:0;
+	padding:0;
+	list-style:none;
+	display:block;
 }
-#collections h3 {
-  margin-left: 1em;
-  font-variant: small-caps;
-}
-#collections a, #collections a:visited {
-  color: #4A4742;
+#collections li { 
+	width: 710px;
+	overflow: hidden; 
 }
 
 
-#collections #image {
-  border: 1px solid #DFDBD0;
-}
-#collections #image img {
-  width: 99.9%;
-  text-align: center;
-}
+
 
 
 

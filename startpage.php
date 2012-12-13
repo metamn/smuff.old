@@ -44,14 +44,15 @@
 <div id="home" class="block">
   <div class="block">
     <div id="content" class="column span-18">   
+    
+    	<?php if ($collections->have_posts()) { include "home-collections.php"; } ?>
     	
       <?php if ($new_products->have_posts()) {
           include "home-hot.php";
         } else {
           echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in magazin.</h2>';
         }?>        
-        
-      <?php if ($collections->have_posts()) { include "home-collections.php"; } ?>   
+   
       <?php if ($top_sales->have_posts()) { include "home-bestsellers.php"; } ?> 
       <?php if ($promo_posts->have_posts()) { include "home-promo.php"; }  ?>
 

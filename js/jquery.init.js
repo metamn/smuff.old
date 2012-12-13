@@ -3,6 +3,13 @@ $(document).ready(function() {
   var ajaxurl = $("#ajax-url").attr("data-url");
   
   
+  // Christmas scroller
+	var sudoSlider = $("#collections").sudoSlider({ 
+		 fade: true,
+		 auto:true,
+		 resumePause: 10000
+	});
+  
   // Tooltips on email subscribe
   // - on hover for smuff, straplines, main categories
   $('.campaign-box .tooltip').hover(
