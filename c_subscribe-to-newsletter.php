@@ -48,7 +48,9 @@
 								}, 
 								function(response) {        
 									if (response.success) { 
-										alert(response.message);  
+										if (response.success.indexOf("este deja abonat") !== -1) {
+											alert(response.message);
+										}
 									}
 								}
 							);
