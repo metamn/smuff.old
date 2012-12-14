@@ -15,6 +15,8 @@
  $page_name = str_replace($to_replace, '', $page_name);
  $page_name = 'page-' . strtolower($page_name);
  
+ $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) ); 
+ 
 
 get_header(); ?>
 
@@ -30,6 +32,13 @@ get_header(); ?>
 			<div class="entry block">
 				<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>							
 			</div>
+			
+			<?php
+			// collections     
+			$collection_banner_size = 0;
+			if ($collections->have_posts()) { include "home-collections.php"; }
+			?>
+			
 			
 			<?php if (!(is_page(array(429, 430, 2819)))) { //No additional info on the last shopping pages ?>
 			
@@ -54,6 +63,10 @@ get_header(); ?>
 			  <?php } ?>
 			
 			<?php } ?>
+			
+			
+			
+			
 		</div>
 		<?php endwhile; endif; ?>
 		

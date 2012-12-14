@@ -67,9 +67,10 @@
 		      } 
 		      
 		      if ($counter == 10) {                      
-            // deal of the week  
-            //$dow_posts = query_posts2('posts_per_page=1&cat=2135');     
-            //include 'c_summer-2012.php';
+            // collections  
+						$collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );    
+						$collection_banner_size = 0;
+						if ($collections->have_posts()) { include "home-collections.php"; }
           }
 		    endwhile; 
 		  ?>		  

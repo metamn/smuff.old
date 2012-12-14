@@ -1,4 +1,4 @@
-<div  class="block">
+<div id="collections-container" class="block">
 	<div id="collections">
 		<ul>
 			<?php
@@ -11,3 +11,4 @@
 		</ul>
 	</div>
 </div>
+<div class="clear"></div>

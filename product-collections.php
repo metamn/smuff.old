@@ -12,7 +12,13 @@
     
     // Get the collection image
     $imgs = post_attachements($post->ID);
-    $img = $imgs[0];
+    
+    // There are different image sizes
+    if (!(isset($collection_banner_size))) {
+    	$collection_banner_size = 0;
+    }
+    
+    $img = $imgs[$collection_banner_size];
     $large = wp_get_attachment_image_src($img->ID, 'large');
   ?>
   

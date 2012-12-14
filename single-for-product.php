@@ -244,6 +244,7 @@
   
   <?php 
     $collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) );
+    $collection_banner_size = 1;
     if ($collections->have_posts()) { include "home-collections.php"; }
   ?>
   

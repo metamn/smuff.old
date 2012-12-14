@@ -45,7 +45,10 @@
   <div class="block">
     <div id="content" class="column span-18">   
     
-    	<?php if ($collections->have_posts()) { include "home-collections.php"; } ?>
+    
+    	<?php 
+    		$collection_banner_size = 0;
+    		if ($collections->have_posts()) { include "home-collections.php"; } ?>
     	
       <?php if ($new_products->have_posts()) {
           include "home-hot.php";

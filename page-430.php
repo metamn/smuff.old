@@ -5,7 +5,12 @@
  * @subpackage Default_Theme
  */
 
-get_header(); ?>
+get_header(); 
+
+
+$collections = query_posts2( array( 'category__and' => array( 22, 1695 ) ) ); 
+
+?>
 
 <div id="page" class="block page-coscumparaturi">
   <div id="content" class="column span-24 last">
@@ -56,6 +61,14 @@ get_header(); ?>
 			  </div>
 		  </div>
 		<?php endwhile; endif; ?>
+		
+		
+		<?php
+			// collections     
+			$collection_banner_size = 0;
+			if ($collections->have_posts()) { include "home-collections.php"; }
+			?>
+		
 	</div>    
 </div>	
   
