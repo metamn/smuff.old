@@ -168,7 +168,7 @@ body {
 
 #menu-2 {
 	background: #FDF3C6 url(img/yellow-stripe.png);
-	margin: 1.5em 0;
+	margin: 0 0 2.5em;
 	padding: 1.5em .625em;
 }
 #menu-2 #text {
@@ -196,7 +196,9 @@ body {
 	border-bottom: 1px dashed;
 }
 
-
+.single #menu-2 {
+	margin-bottom: 1.5em;
+}
 
 
 
