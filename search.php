@@ -60,7 +60,6 @@ get_header(); ?>
 
   <div id="content" class="column span-18">
   
-  	<?php include "c_second-menu.php" ?>
     
     <div class="block">    
       

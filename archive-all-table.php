@@ -12,7 +12,7 @@
 
 <div id="archive-all" class="block">  
   <div id="content" class="column span-18 content">
-  	<?php include "c_second-menu.php" ?>
+  	
   	
     <div id='title' class='block'>
       <div id="left" class="column span-14 last">

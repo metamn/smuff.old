@@ -7,7 +7,8 @@ $(document).ready(function() {
 	var sudoSlider = $("#collections").sudoSlider({ 
 		 auto: true,
 		 prevNext: false,
-		 numeric: true
+		 numeric: true,
+		 speed: 2000
 	});
 	
   

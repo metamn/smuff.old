@@ -94,6 +94,8 @@
       <?php 
         include "home-tags.php";
       ?>
+      
+      <?php include "c_second-menu.php" ?>
     
     <?php } ?>
         

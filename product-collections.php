@@ -4,7 +4,9 @@
     $category = get_categories('child_of=1695');
     foreach ($category as $c) {
       $category_slug = $c->slug;
-      break;
+      if (in_category($c->term_id)) {
+      	break;
+      }
     }
     
     // Construct the link

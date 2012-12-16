@@ -168,7 +168,7 @@ body {
 
 #menu-2 {
 	background: #FDF3C6 url(img/yellow-stripe.png);
-	margin: 0 0 2.5em;
+	margin: 9em 0 2.5em;
 	padding: 1.5em .625em;
 }
 #menu-2 #text {
@@ -178,7 +178,7 @@ body {
 	width: 61.5%;
 }
 #menu-2 #text li.col-2 {
-	width: 32%;
+	
 }
 
 #menu-2 #content {
@@ -187,7 +187,7 @@ body {
 	font-family: Didot, "Didot LT STD", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 #menu-2 #content li {
-	width: 30%;
+	margin: 1em 0 0;
 }
 #menu-2 #content li.search {
 	width: 36%;

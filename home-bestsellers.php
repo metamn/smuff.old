@@ -108,5 +108,6 @@
     include 'home-all-products-link.php'; 
     echo '</h4>';    
   ?>
+
 </div>
 
