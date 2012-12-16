@@ -33,18 +33,21 @@ echo '<?xml version="1.0"?>';
   <lastBuildDate><?php yoast_rss_date( strtotime($ps[$lastpost]->post_date_gmt) ); ?></lastBuildDate>
   <managingEditor>cs@smuff.ro</managingEditor>
 <?php foreach ($posts as $post) {   
-  if (in_category(10)) {
+  /*if (in_category(10)) { */
     $imgs = post_attachements($post->ID);
     $img = $imgs[0]; 
     $thumb = wp_get_attachment_image_src($img->ID, 'large');
     
     $product_id = product_id($post->ID);
-    $product_price = product_price($post->ID);
-    
+    if ($product_id) {
+    	$product_price = product_price($post->ID);
+    }
     
     $body = '<p class="excerpt">' . $post->post_excerpt . '</p>';   
-    $body .= '<p><span class="price">' . $product_price . ' Lei</span><span class="btn">Adauga la cos &raquo;</span></p>';
-  }   
+    if ($product_id) {
+    	$body .= '<p><span class="price">' . $product_price . ' Lei</span><span class="btn">Adauga la cos &raquo;</span></p>';
+    }
+  /*} */  
 ?>
   <item>
     <title><?php echo get_the_title($post->ID); ?></title>
