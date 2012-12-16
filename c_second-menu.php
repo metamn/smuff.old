@@ -1,7 +1,7 @@
 <div id="menu-2" class="block">
 	<ul id="text" class="inline-list">
 		<li class="col-1">Categorii noi</li>
-		<li class="col-2">Selectie dupa pret</li>
+		<li class="col-2">&nbsp;</li>
 	</ul>
 	<ul id="content" class="inline-list">
 		<?php 
@@ -14,6 +14,7 @@
 				</li>
 		<?php } ?>
 		
+		<!--
 		<li class="search">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
 				<input type="hidden" value=" " name="s" id="s" /> 
@@ -27,6 +28,7 @@
 				<input class="submit" type="submit" id="searchsubmit" value="Cautare cadouri" />  
 			</form>
 		</li>
+		-->
 	</ul>
 </div>
 	

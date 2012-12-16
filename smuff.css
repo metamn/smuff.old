@@ -1201,7 +1201,7 @@ div.hot-slider-thumb-menu-wrapper {
 	width: 710px;
 }
 
-.search #collections-container, .page #collections-container {
+.search #collections-container, .page #collections-container, .archive #collections-container {
 	width: 100%;
 	float: left;
 }
