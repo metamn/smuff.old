@@ -23,7 +23,11 @@
   
   // gift of the week  
   //$gow_posts = query_posts2('posts_per_page=1&cat=2163');
+  
+  
 ?>
+
+
 
 <div id="home" class="block">  
   <div id="content" class="column span-18">   

@@ -9,6 +9,19 @@
     $all_posts = new WP_Query('posts_per_page=-1&cat='.$cat);  
     $cat_name = ' din '. get_cat_name($cat);
   }
+  
+  // If description is an image show it
+  $category_image = '';
+  $category = get_category($cat);
+  if ($category) {
+  	$desc = $category->description;
+  	if (strpos($desc, 'http://') === false) {
+  		$category_image = '';
+  	} else {
+  		$category_image = '<img src="' . $desc . '"/>';
+  	}
+  }
+  
 ?>
 
 <div id="archive-all" class="block">  
@@ -17,10 +30,14 @@
     <div id='title' class='block'>
       <div id="left" class="column span-14 last">
         <h2>
-          Toate cadourile<?php echo $cat_name; ?>
-          <?php if (!($cat == 10)) { ?>
-             (<span id="search-counter">...</span>)
-          <?php } ?>
+        	<?php if ($category_image == '') { ?>
+						Toate cadourile<?php echo $cat_name; ?>
+						<?php if (!($cat == 10)) { ?>
+							 (<span id="search-counter">...</span>)
+						<?php } ?>
+					<?php } else { 
+						echo $category_image;
+					} ?>
         </h2>
       </div>
       <div id="right" class="column span-4 last">
