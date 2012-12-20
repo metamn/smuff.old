@@ -36,7 +36,7 @@
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css?refresh=20121216b" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css?refresh=20121220" type="text/css" media="screen" />
 		
 		<!--
 		- JS cannot be put in foooter !!!!!!!!!!!!!!
@@ -110,15 +110,15 @@
 	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-loading="<?php bloginfo('stylesheet_directory')?>/assets/ajax-loader.gif" class="hidden"></div>	  	
 	  
 	  <div class="container"><!-- closed in the footer -->
-	    <div class="block">	      
-	      <div id="header" class="column span-18"> 
-	        <div id="tooltips" class="block">
-	          <!--
-	          <a href="http://smuff.ro/2010/08/05/test-2/">
-	          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
-	          </a>
-	          -->
-	        </div>                
+	    <div class="block">	  
+	      <div id="announcement" class="column span-18">
+          
+          <a href="http://smuff.ro/2010/08/05/test-2/">
+          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
+          </a>
+          
+        </div>     
+	      <div id="header" class="column span-18">                
           <div id="headlines" class="block">	          
 	          <div id="logo" class="column span-10 last">
 	            <h1>

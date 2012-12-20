@@ -86,8 +86,7 @@ body {
 }
 
 #announcement {
-  margin: 2em 0;
-  padding: 1em 0 0;
+  padding: 1em;
   text-align: center;
   background: #FDF3C6;
 }
