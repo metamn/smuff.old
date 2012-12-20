@@ -113,8 +113,8 @@
 	    <div class="block">	  
 	      <div id="announcement" class="column span-18">
           
-          <a href="http://smuff.ro/2010/08/05/test-2/">
-          Bine ati ajuns la noul Smuff! Va rugam consultati mica introducere despre schimbarile facute.
+          <a href="http://www.smuff.ro/?p=5022">
+          Da! Inca livram pana in CRACIUN! Programul special de Sarbatori 2012.
           </a>
           
         </div>     

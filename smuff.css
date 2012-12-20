@@ -86,9 +86,10 @@ body {
 }
 
 #announcement {
-  padding: 1em;
+  padding: .5em 0;
   text-align: center;
   background: #FDF3C6;
+  font-weight: bold;
 }
 
 #navigation {
