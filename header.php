@@ -111,15 +111,15 @@
 	  
 	  <div class="container"><!-- closed in the footer -->
 	    <div class="block">	  
+	    <!--
 	      <div id="announcement" class="column span-18">
           
-          <!--
           <a href="http://www.smuff.ro/?p=5025">
           Programul special de Sarbatori 2012 - 2013
           </a>
-          -->
           
-        </div>     
+        </div>  
+        -->   
 	      <div id="header" class="column span-18">                
           <div id="headlines" class="block">	          
 	          <div id="logo" class="column span-10 last">
