@@ -33,6 +33,10 @@ body.home {
 		@include respond-to(mobile-landscape) {
 			top: 5.5em;
 		}
+		
+		@include respond-to(desktop) {
+		  margin-left: 3.5em;
+		}
 	}
 	.image-navigation.right {
 		background: $background url(right-arrow-black.png) no-repeat 50%;
@@ -40,6 +44,10 @@ body.home {
 		
 		@include respond-to(tablet) {
 			margin-left: 90%;
+		}
+		
+		@include respond-to(desktop) {
+		  margin-left: 18.5em;
 		}
 	}
 }
@@ -78,7 +86,10 @@ body {
 				
 				#items {
 					height: 45em;
-					@include respond-to(desktop) { height: 55em; }
+					
+					@include respond-to(desktop) { 
+					  height: 47.5em; 
+					}
 				}
 			}
 			
@@ -111,6 +122,10 @@ body {
 						@include respond-to(all-tablet) {
 							@include col(100%, 0, 0);
 						}
+						@include respond-to(desktop) {
+							@include col(47.5%, 0, 5%);
+						}
+						
 					}
 					.item.c2, .item.c4, .item.c6, .item.c8, .item.c10, .item.c12, .item.c14, .item.c16, .item.c18, .item.c20 {
 						margin-right: 0;
@@ -125,7 +140,7 @@ body {
 			margin: $margin 0;
 		}
 		#subscribe-newsletter.bigger-margin-bottom {
-			margin-bottom: $pad*8;
+			margin: $pad*8 0;
 		}
 
 		

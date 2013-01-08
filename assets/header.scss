@@ -7,6 +7,10 @@ body {
 			width: 96%;
 		}
 		
+		@include respond-to(desktop) {
+		  max-width: 960px;
+		}
+		
 		
 		
 		#header {

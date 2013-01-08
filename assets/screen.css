@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../.rvm/gems/ruby-1.8.7-p370/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -322,10 +322,30 @@ body .container input[type='checkbox']:checked:after {
 /* Theme mixins
 ---------------------------------------------------
 */
+/* Arrow
+*/
+/* Accordion
+*/
+/* Subscribe to newsletter
+*/
+/* A list like used in the header to display cart
+*/
+/* Product view -- Promo  
+*/
+/* Product view -- Bestseller
+*/
+/* Product view -- Hot
+*/
+/* Image bordered
+*/
+/* Image rounded
+*/
+/* Add to cart
+*/
 /* Single, for Product
 ---------------------------------------------------
 */
-/* line 685, theme.scss */
+/* line 728, theme.scss */
 body.single .container article.product #large-image img {
   width: 99.8%;
   padding: 0.1%;
@@ -333,11 +353,11 @@ body.single .container article.product #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 691, theme.scss */
+/* line 734, theme.scss */
 body.single .container article.product #thumbs {
   margin: 1.25em 0 5%;
 }
-/* line 694, theme.scss */
+/* line 737, theme.scss */
 body.single .container article.product #thumbs img {
   width: 98%;
   padding: 1%;
@@ -346,104 +366,104 @@ body.single .container article.product #thumbs img {
   margin-right: 1.25em;
   width: 150px;
 }
-/* line 701, theme.scss */
+/* line 744, theme.scss */
 body.single .container article.product #shopping {
   width: 100%;
   float: left;
   background: #4d8fce;
 }
-/* line 547, theme.scss */
+/* line 590, theme.scss */
 body.single .container article.product #shopping .wpsc_container {
   padding: 1.25em 0.625em;
 }
-/* line 550, theme.scss */
+/* line 593, theme.scss */
 body.single .container article.product #shopping .wpsc_container .imagecol {
   display: none !important;
 }
-/* line 555, theme.scss */
+/* line 598, theme.scss */
 body.single .container article.product #shopping .wpsc_container .single_product_display .textcol {
   margin-left: 0 !important;
 }
-/* line 560, theme.scss */
+/* line 603, theme.scss */
 body.single .container article.product #shopping .wpsc_container table {
   width: 100%;
   margin-bottom: 0;
 }
-/* line 564, theme.scss */
+/* line 607, theme.scss */
 body.single .container article.product #shopping .wpsc_container table label {
   font-weight: normal;
 }
-/* line 568, theme.scss */
+/* line 611, theme.scss */
 body.single .container article.product #shopping .wpsc_container table td {
   border-bottom: 1px dotted;
   padding: 0.625em;
 }
-/* line 574, theme.scss */
+/* line 617, theme.scss */
 body.single .container article.product #shopping .wpsc_container table tr.quantity input[type='text'] {
   width: 90%;
   color: #111111;
   font-style: normal;
 }
-/* line 582, theme.scss */
+/* line 625, theme.scss */
 body.single .container article.product #shopping .wpsc_container table tr.delivery td {
   border-bottom: none;
 }
-/* line 588, theme.scss */
+/* line 631, theme.scss */
 body.single .container article.product #shopping .wpsc_container table tr.submit td {
   border-top: 1px solid;
   padding-top: 1.25em;
 }
-/* line 594, theme.scss */
+/* line 637, theme.scss */
 body.single .container article.product #shopping .wpsc_container table tr.animation {
   display: none;
 }
-/* line 598, theme.scss */
+/* line 641, theme.scss */
 body.single .container article.product #shopping .wpsc_container table tr.price {
   background: none !important;
   font-size: 100%;
 }
-/* line 602, theme.scss */
+/* line 645, theme.scss */
 body.single .container article.product #shopping .wpsc_container table tr.price .pricedisplay {
   float: none !important;
   width: 99%;
 }
-/* line 608, theme.scss */
+/* line 651, theme.scss */
 body.single .container article.product #shopping .wpsc_container table input.wpsc_buy_button, body.single .container article.product #shopping .wpsc_container table input.checkout-button, body.single .container article.product #shopping .wpsc_container table select.wpsc_select_variation {
   width: 100%;
   font-size: small;
 }
-/* line 612, theme.scss */
+/* line 655, theme.scss */
 body.single .container article.product #shopping .wpsc_container table input.wpsc_buy_button {
   background: #8aea4c;
   color: #111111;
   border: 1px dotted;
 }
-/* line 617, theme.scss */
+/* line 660, theme.scss */
 body.single .container article.product #shopping .wpsc_container table input.wpsc_buy_button:hover {
   font-weight: bold;
 }
-/* line 621, theme.scss */
+/* line 664, theme.scss */
 body.single .container article.product #shopping .wpsc_container table div.thanks-ok {
   background: #10A26F;
   padding: 1em;
 }
-/* line 626, theme.scss */
+/* line 669, theme.scss */
 body.single .container article.product #shopping .wpsc_container table div.thanks-error {
   background: #A53B08;
   padding: 1em;
 }
-/* line 631, theme.scss */
+/* line 674, theme.scss */
 body.single .container article.product #shopping .wpsc_container table .wpsc_cart_message {
   text-align: center;
 }
-/* line 637, theme.scss */
+/* line 680, theme.scss */
 body.single .container article.product #shopping #wishlist {
   width: 100%;
   float: left;
   margin-bottom: 1.25em;
   padding: 0 1.25em;
 }
-/* line 643, theme.scss */
+/* line 686, theme.scss */
 body.single .container article.product #shopping #wishlist .wpfp-span {
   width: 80%;
   float: left;
@@ -453,43 +473,43 @@ body.single .container article.product #shopping #wishlist .wpfp-span {
   color: #f1f1f1;
   padding: 0.625em;
 }
-/* line 653, theme.scss */
+/* line 696, theme.scss */
 body.single .container article.product #shopping #wishlist .wpfp-span:hover {
   cursor: pointer;
   color: white;
 }
-/* line 658, theme.scss */
+/* line 701, theme.scss */
 body.single .container article.product #shopping #wishlist .wpfp-span a {
   color: #f1f1f1;
 }
-/* line 664, theme.scss */
+/* line 707, theme.scss */
 body.single .container article.product #shopping #product-discontinued {
   margin: 1.25em;
 }
-/* line 667, theme.scss */
+/* line 710, theme.scss */
 body.single .container article.product #shopping #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 706, theme.scss */
+/* line 749, theme.scss */
 body.single .container article.product #shopping-info {
   width: 100%;
   float: left;
   margin: 2.5em 0;
   background: url(stripe.png);
 }
-/* line 711, theme.scss */
+/* line 754, theme.scss */
 body.single .container article.product #shopping-info .tooltip {
   background: white;
   margin: 2.5em 1.25em;
   padding: 1.25em 0.625em;
 }
-/* line 718, theme.scss */
+/* line 761, theme.scss */
 body.single .container article.product #post-content {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 41, theme.scss */
+/* line 45, theme.scss */
 body.single .container article.product #post-content h2, body.single .container article.product #post-content h3 {
   cursor: pointer;
   padding: 0.625em 0.3125em;
@@ -497,13 +517,13 @@ body.single .container article.product #post-content h2, body.single .container 
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1px;
 }
-/* line 48, theme.scss */
+/* line 52, theme.scss */
 body.single .container article.product #post-content h2:after, body.single .container article.product #post-content h3:after {
   content: '\25bc';
   float: right;
   color: #cccccc;
 }
-/* line 52, theme.scss */
+/* line 56, theme.scss */
 body.single .container article.product #post-content .pane {
   display: none;
   background: white;
@@ -511,43 +531,43 @@ body.single .container article.product #post-content .pane {
   margin-bottom: 2.5em;
 }
 @media only screen and (max-width: 600px) {
-  /* line 724, theme.scss */
+  /* line 767, theme.scss */
   body.single .container article.product #post-content .mobile h3 {
     color: #4d8fce;
   }
-  /* line 727, theme.scss */
+  /* line 770, theme.scss */
   body.single .container article.product #post-content .mobile div {
     padding: 0;
     margin-bottom: 0;
   }
-  /* line 732, theme.scss */
+  /* line 775, theme.scss */
   body.single .container article.product #post-content .mobile #shopping {
     width: 100%;
     float: left;
     background: #4d8fce;
   }
-  /* line 737, theme.scss */
+  /* line 780, theme.scss */
   body.single .container article.product #post-content .mobile #shopping-incentives {
     width: 100%;
     float: left;
     background: #8aea4c;
   }
-  /* line 741, theme.scss */
+  /* line 784, theme.scss */
   body.single .container article.product #post-content .mobile #shopping-incentives .inner {
     margin: 2.5em 1.25em;
     padding: 2.5em 0;
     background: #8aea4c;
   }
-  /* line 746, theme.scss */
+  /* line 789, theme.scss */
   body.single .container article.product #post-content .mobile #shopping-incentives .inner h4 {
     font-weight: bold;
   }
-  /* line 749, theme.scss */
+  /* line 792, theme.scss */
   body.single .container article.product #post-content .mobile #shopping-incentives .inner p {
     margin: 0.625em 0 1.875em;
   }
 }
-/* line 760, theme.scss */
+/* line 803, theme.scss */
 body.single .container #subscribe-newsletter {
   background: #4D8FCE;
   /* handhelds to iPhone 3,4*/
@@ -556,13 +576,13 @@ body.single .container #subscribe-newsletter {
   background: url(stripe.png);
 }
 @media only screen and (max-width: 600px) {
-  /* line 760, theme.scss */
+  /* line 803, theme.scss */
   body.single .container #subscribe-newsletter {
     width: 90%;
     padding: 5%;
   }
 }
-/* line 70, theme.scss */
+/* line 75, theme.scss */
 body.single .container #subscribe-newsletter .arrow-right {
   width: 0;
   height: 0;
@@ -580,71 +600,56 @@ body.single .container #subscribe-newsletter .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 70, theme.scss */
+  /* line 75, theme.scss */
   body.single .container #subscribe-newsletter .arrow-right {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 70, theme.scss */
+  /* line 75, theme.scss */
   body.single .container #subscribe-newsletter .arrow-right {
     display: none;
   }
 }
-/* line 90, theme.scss */
+/* line 95, theme.scss */
 body.single .container #subscribe-newsletter h4 {
   padding: 0.625em 0;
 }
-/* line 94, theme.scss */
+/* line 99, theme.scss */
 body.single .container #subscribe-newsletter #text {
   width: 58%;
   margin-right: 5%;
   float: left;
   position: relative;
-  margin-left: -4.5em;
+  margin-left: -4.8em;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 94, theme.scss */
-  body.single .container #subscribe-newsletter #text {
-    margin-left: -2.8em;
-  }
 }
 @media only screen and (max-width: 600px) {
-  /* line 94, theme.scss */
-  body.single .container #subscribe-newsletter #text {
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 94, theme.scss */
-  body.single .container #subscribe-newsletter #text {
-    margin-left: 1.25em;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 94, theme.scss */
+  /* line 99, theme.scss */
   body.single .container #subscribe-newsletter #text {
     width: 100%;
     margin: 0;
   }
 }
-/* line 111, theme.scss */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 99, theme.scss */
+  body.single .container #subscribe-newsletter #text {
+    margin-left: 1.25em;
+  }
+}
+/* line 116, theme.scss */
 body.single .container #subscribe-newsletter #text form {
   padding: 0;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 114, theme.scss */
+/* line 119, theme.scss */
 body.single .container #subscribe-newsletter #text form input.text {
   width: 100%;
   /* handhelds to iPhone 3,4*/
@@ -652,27 +657,33 @@ body.single .container #subscribe-newsletter #text form input.text {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 114, theme.scss */
+  /* line 119, theme.scss */
   body.single .container #subscribe-newsletter #text form input.text {
     width: 75%;
   }
 }
-/* line 123, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 128, theme.scss */
+  body.single .container #subscribe-newsletter #text form input {
+    font-size: small;
+  }
+}
+/* line 134, theme.scss */
 body.single .container #subscribe-newsletter #text #whatis {
   position: relative;
   top: -1.5em;
   float: right;
   text-decoration: underline;
 }
-/* line 130, theme.scss */
+/* line 141, theme.scss */
 body.single .container #subscribe-newsletter #text #whatis .tooltip-text {
   text-decoration: none;
 }
-/* line 134, theme.scss */
+/* line 145, theme.scss */
 body.single .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
   left: 5em;
 }
-/* line 139, theme.scss */
+/* line 150, theme.scss */
 body.single .container #subscribe-newsletter #facebook-connect {
   float: left;
   width: 25%;
@@ -684,140 +695,140 @@ body.single .container #subscribe-newsletter #facebook-connect {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 139, theme.scss */
+  /* line 150, theme.scss */
   body.single .container #subscribe-newsletter #facebook-connect {
     width: 100%;
     margin: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 148, theme.scss */
+  /* line 159, theme.scss */
   body.single .container #subscribe-newsletter #facebook-connect h4 {
     margin-bottom: 1.25em;
   }
 }
-/* line 153, theme.scss */
+/* line 164, theme.scss */
 body.single .container #subscribe-newsletter #facebook-connect #auth-loggedin {
   padding: 1.25em;
   font-size: small;
 }
-/* line 764, theme.scss */
+/* line 807, theme.scss */
 body.single .container #subscribe-newsletter h4 {
   margin: 0.625em 0;
   padding: 0.3125em;
 }
-/* line 769, theme.scss */
+/* line 812, theme.scss */
 body.single .container #subscribe-newsletter #text {
   margin-left: -4.5em;
 }
-/* line 772, theme.scss */
+/* line 815, theme.scss */
 body.single .container #subscribe-newsletter #text h4 {
   background: white;
 }
-/* line 778, theme.scss */
+/* line 821, theme.scss */
 body.single .container #subscribe-newsletter #facebook-connect .fb-login-button {
   margin-top: 0.3125em;
 }
-/* line 784, theme.scss */
+/* line 827, theme.scss */
 body.single .container #post-shopping-2 {
   margin: 5% 0;
 }
-/* line 787, theme.scss */
+/* line 830, theme.scss */
 body.single .container #post-shopping-2 #shopping {
   background: #4d8fce;
 }
-/* line 547, theme.scss */
+/* line 590, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container {
   padding: 1.25em 0.625em;
 }
-/* line 550, theme.scss */
+/* line 593, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container .imagecol {
   display: none !important;
 }
-/* line 555, theme.scss */
+/* line 598, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container .single_product_display .textcol {
   margin-left: 0 !important;
 }
-/* line 560, theme.scss */
+/* line 603, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table {
   width: 100%;
   margin-bottom: 0;
 }
-/* line 564, theme.scss */
+/* line 607, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table label {
   font-weight: normal;
 }
-/* line 568, theme.scss */
+/* line 611, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table td {
   border-bottom: 1px dotted;
   padding: 0.625em;
 }
-/* line 574, theme.scss */
+/* line 617, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table tr.quantity input[type='text'] {
   width: 90%;
   color: #111111;
   font-style: normal;
 }
-/* line 582, theme.scss */
+/* line 625, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table tr.delivery td {
   border-bottom: none;
 }
-/* line 588, theme.scss */
+/* line 631, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table tr.submit td {
   border-top: 1px solid;
   padding-top: 1.25em;
 }
-/* line 594, theme.scss */
+/* line 637, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table tr.animation {
   display: none;
 }
-/* line 598, theme.scss */
+/* line 641, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table tr.price {
   background: none !important;
   font-size: 100%;
 }
-/* line 602, theme.scss */
+/* line 645, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table tr.price .pricedisplay {
   float: none !important;
   width: 99%;
 }
-/* line 608, theme.scss */
+/* line 651, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table input.wpsc_buy_button, body.single .container #post-shopping-2 #shopping .wpsc_container table input.checkout-button, body.single .container #post-shopping-2 #shopping .wpsc_container table select.wpsc_select_variation {
   width: 100%;
   font-size: small;
 }
-/* line 612, theme.scss */
+/* line 655, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table input.wpsc_buy_button {
   background: #8aea4c;
   color: #111111;
   border: 1px dotted;
 }
-/* line 617, theme.scss */
+/* line 660, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table input.wpsc_buy_button:hover {
   font-weight: bold;
 }
-/* line 621, theme.scss */
+/* line 664, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table div.thanks-ok {
   background: #10A26F;
   padding: 1em;
 }
-/* line 626, theme.scss */
+/* line 669, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table div.thanks-error {
   background: #A53B08;
   padding: 1em;
 }
-/* line 631, theme.scss */
+/* line 674, theme.scss */
 body.single .container #post-shopping-2 #shopping .wpsc_container table .wpsc_cart_message {
   text-align: center;
 }
-/* line 637, theme.scss */
+/* line 680, theme.scss */
 body.single .container #post-shopping-2 #shopping #wishlist {
   width: 100%;
   float: left;
   margin-bottom: 1.25em;
   padding: 0 1.25em;
 }
-/* line 643, theme.scss */
+/* line 686, theme.scss */
 body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span {
   width: 80%;
   float: left;
@@ -827,48 +838,48 @@ body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span {
   color: #f1f1f1;
   padding: 0.625em;
 }
-/* line 653, theme.scss */
+/* line 696, theme.scss */
 body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span:hover {
   cursor: pointer;
   color: white;
 }
-/* line 658, theme.scss */
+/* line 701, theme.scss */
 body.single .container #post-shopping-2 #shopping #wishlist .wpfp-span a {
   color: #f1f1f1;
 }
-/* line 664, theme.scss */
+/* line 707, theme.scss */
 body.single .container #post-shopping-2 #shopping #product-discontinued {
   margin: 1.25em;
 }
-/* line 667, theme.scss */
+/* line 710, theme.scss */
 body.single .container #post-shopping-2 #shopping #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 791, theme.scss */
+/* line 834, theme.scss */
 body.single .container #post-shopping-2 #shopping-incentives {
   background: #8aea4c;
 }
-/* line 794, theme.scss */
+/* line 837, theme.scss */
 body.single .container #post-shopping-2 #shopping-incentives .inner {
   margin: 2.5em 1.25em;
 }
-/* line 797, theme.scss */
+/* line 840, theme.scss */
 body.single .container #post-shopping-2 #shopping-incentives .inner p {
   margin: 0.625em 0 1.875em;
 }
-/* line 804, theme.scss */
+/* line 847, theme.scss */
 body.single .container .product-list {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 805, theme.scss */
+/* line 848, theme.scss */
 body.single .container .product-list h2 {
   border-bottom: 1px solid;
   padding-bottom: .28em;
   margin-bottom: 1em;
 }
-/* line 810, theme.scss */
+/* line 853, theme.scss */
 body.single .container .product-list .item {
   background: white url(stripe.png);
   min-height: 37.5em;
@@ -879,26 +890,26 @@ body.single .container .product-list .item {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 810, theme.scss */
-  body.single .container .product-list .item {
-    min-height: 42.5em;
-  }
-}
 @media only screen and (max-width: 600px) {
-  /* line 810, theme.scss */
+  /* line 853, theme.scss */
   body.single .container .product-list .item {
     min-height: 32.5em;
   }
 }
-/* line 285, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 853, theme.scss */
+  body.single .container .product-list .item {
+    min-height: 42.5em;
+  }
+}
+/* line 310, theme.scss */
 body.single .container .product-list .item img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 289, theme.scss */
+/* line 314, theme.scss */
 body.single .container .product-list .item #text {
   margin: 0 1.25em;
   /* handhelds to iPhone 3,4*/
@@ -906,12 +917,12 @@ body.single .container .product-list .item #text {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 289, theme.scss */
+  /* line 314, theme.scss */
   body.single .container .product-list .item #text {
     margin: 0 0.625em;
   }
 }
-/* line 295, theme.scss */
+/* line 320, theme.scss */
 body.single .container .product-list .item #text h3, body.single .container .product-list .item #text p {
   background: white;
   padding: 0.625em;
@@ -921,21 +932,21 @@ body.single .container .product-list .item #text h3, body.single .container .pro
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 295, theme.scss */
+  /* line 320, theme.scss */
   body.single .container .product-list .item #text h3, body.single .container .product-list .item #text p {
     min-height: 1.25em;
   }
 }
-/* line 305, theme.scss */
+/* line 330, theme.scss */
 body.single .container .product-list .item #text h3 {
   font-weight: bold;
   margin: 1.25em 0;
 }
-/* line 309, theme.scss */
+/* line 334, theme.scss */
 body.single .container .product-list .item #text p {
   padding: 0.625em;
 }
-/* line 314, theme.scss */
+/* line 339, theme.scss */
 body.single .container .product-list .item #price {
   position: relative;
   top: 3.75em;
@@ -948,13 +959,13 @@ body.single .container .product-list .item #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 314, theme.scss */
+  /* line 339, theme.scss */
   body.single .container .product-list .item #price {
     margin-left: 0.625em;
     top: 1.25em;
   }
 }
-/* line 328, theme.scss */
+/* line 353, theme.scss */
 body.single .container .product-list .item #category {
   position: relative;
   top: 4.5em;
@@ -967,24 +978,24 @@ body.single .container .product-list .item #category {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 328, theme.scss */
+  /* line 353, theme.scss */
   body.single .container .product-list .item #category {
     margin-right: 0.625em;
     top: 1.875em;
   }
 }
-/* line 342, theme.scss */
+/* line 367, theme.scss */
 body.single .container .product-list .item #category a {
   background: #cccccc;
   padding: 0.3125em;
   color: white;
 }
-/* line 347, theme.scss */
+/* line 372, theme.scss */
 body.single .container .product-list .item #category a:hover {
   background: gray;
 }
 @media only screen and (max-width: 600px) {
-  /* line 41, theme.scss */
+  /* line 45, theme.scss */
   body.single .container .product-list h2, body.single .container .product-list h3 {
     cursor: pointer;
     padding: 0.625em 0.3125em;
@@ -992,13 +1003,13 @@ body.single .container .product-list .item #category a:hover {
     border-bottom: 1px solid #cccccc;
     margin-bottom: 1px;
   }
-  /* line 48, theme.scss */
+  /* line 52, theme.scss */
   body.single .container .product-list h2:after, body.single .container .product-list h3:after {
     content: '\25bc';
     float: right;
     color: #cccccc;
   }
-  /* line 52, theme.scss */
+  /* line 56, theme.scss */
   body.single .container .product-list .pane {
     display: none;
     background: white;
@@ -1006,14 +1017,14 @@ body.single .container .product-list .item #category a:hover {
     margin-bottom: 2.5em;
   }
 }
-/* line 819, theme.scss */
+/* line 862, theme.scss */
 body.single .container #search {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 41, theme.scss */
+  /* line 45, theme.scss */
   body.single .container #search h2, body.single .container #search h3 {
     cursor: pointer;
     padding: 0.625em 0.3125em;
@@ -1021,13 +1032,13 @@ body.single .container #search {
     border-bottom: 1px solid #cccccc;
     margin-bottom: 1px;
   }
-  /* line 48, theme.scss */
+  /* line 52, theme.scss */
   body.single .container #search h2:after, body.single .container #search h3:after {
     content: '\25bc';
     float: right;
     color: #cccccc;
   }
-  /* line 52, theme.scss */
+  /* line 56, theme.scss */
   body.single .container #search .pane {
     display: none;
     background: white;
@@ -1035,24 +1046,24 @@ body.single .container #search {
     margin-bottom: 2.5em;
   }
 }
-/* line 825, theme.scss */
+/* line 868, theme.scss */
 body.single .container #promo {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 825, theme.scss */
+  /* line 868, theme.scss */
   body.single .container #promo {
     margin: 0;
   }
 }
 
-/* line 837, theme.scss */
+/* line 880, theme.scss */
 body {
   background: white url(dotted_bg.png);
 }
-/* line 840, theme.scss */
+/* line 883, theme.scss */
 body .container {
   /* Fonts
   ---------------------------------------------------
@@ -1094,113 +1105,123 @@ body .container {
   ---------------------------------------------------
   */
 }
-/* line 849, theme.scss */
+/* line 892, theme.scss */
 body .container h1, body .container h2 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 858, theme.scss */
+/* line 901, theme.scss */
 body .container a, body .container a:visited {
   color: #111111;
   text-decoration: none;
 }
-/* line 862, theme.scss */
+/* line 905, theme.scss */
 body .container #accordion a, body .container #accordion a:visited {
   border-bottom: 1px dotted;
 }
-/* line 872, theme.scss */
+/* line 915, theme.scss */
 body .container .price, body .container .normal-price {
   border: #cccccc;
   padding: 0.3125em;
-  -moz-border-radius: 10%;
-  -webkit-border-radius: 10%;
+  -webkit-border-radius: 10% 10%;
+  -moz-border-radius: 10% / 10%;
+  border-radius: 10% / 10%;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 878, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 915, theme.scss */
+  body .container .price, body .container .normal-price {
+    padding: 0.625em;
+  }
+}
+/* line 924, theme.scss */
 body .container .price {
   background: #f25f18;
 }
-/* line 881, theme.scss */
+/* line 927, theme.scss */
 body .container .old-price, body .container .oldprice {
   text-decoration: line-through;
 }
-/* line 884, theme.scss */
+/* line 930, theme.scss */
 body .container .normal-price {
   background: #4d8fce;
 }
-/* line 896, theme.scss */
+/* line 942, theme.scss */
 body .container .tooltip {
   cursor: pointer;
 }
-/* line 899, theme.scss */
+/* line 945, theme.scss */
 body .container .tooltip-text {
   display: none;
 }
-/* line 902, theme.scss */
+/* line 948, theme.scss */
 body .container #tooltip {
   background: #4d8fce;
   padding: 1.25em;
   position: absolute;
 }
-/* line 907, theme.scss */
+/* line 953, theme.scss */
 body .container #tooltip ul {
   list-style: none;
 }
-/* line 910, theme.scss */
+/* line 956, theme.scss */
 body .container #tooltip ul li, body .container #tooltip ol li {
   padding: 0.3125em;
   margin: 0.3125em;
   border-bottom: 1px dotted;
 }
-/* line 921, theme.scss */
+/* line 967, theme.scss */
 body .container #search-enhanced {
   width: 100%;
   float: left;
   background: #4d8fce;
 }
-/* line 925, theme.scss */
+/* line 971, theme.scss */
 body .container #search-enhanced h3 {
   margin-left: 0.625em;
 }
-/* line 929, theme.scss */
+/* line 975, theme.scss */
 body .container #search-enhanced ul {
   list-style: none;
   margin: 0;
   margin: 0 1.25em;
 }
-/* line 166, theme.scss */
+/* line 178, theme.scss */
 body .container #search-enhanced ul li {
   margin-bottom: 0.3125em;
   padding: 0.3125em;
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 933, theme.scss */
+/* line 979, theme.scss */
 body .container #search-enhanced ul li {
   background: #4d8fce;
   border-bottom: 1px dotted #111111;
 }
-/* line 937, theme.scss */
+/* line 983, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:after {
   content: "\2610";
 }
-/* line 940, theme.scss */
+/* line 986, theme.scss */
 body .container #search-enhanced ul li input[type="checkbox"]:checked:after {
   content: "\25a3";
 }
-/* line 946, theme.scss */
+/* line 992, theme.scss */
 body .container #search-enhanced #submit {
   margin: 2.5em 0 1.25em 1.25em;
 }
-/* line 949, theme.scss */
+/* line 995, theme.scss */
 body .container #search-enhanced #submit #advanced-search {
   font-size: small;
 }
-/* line 955, theme.scss */
+/* line 1001, theme.scss */
 body .container #trending {
   width: 100%;
   float: left;
   margin: 5em 0;
 }
-/* line 959, theme.scss */
+/* line 1005, theme.scss */
 body .container #trending h2 {
   width: 30%;
   float: left;
@@ -1212,7 +1233,7 @@ body .container #trending h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 959, theme.scss */
+  /* line 1005, theme.scss */
   body .container #trending h2 {
     width: 100%;
     margin-right: 0;
@@ -1220,7 +1241,7 @@ body .container #trending h2 {
     border-right: 0;
   }
 }
-/* line 974, theme.scss */
+/* line 1020, theme.scss */
 body .container #trending #items {
   width: 55%;
   margin-left: 3%;
@@ -1230,12 +1251,12 @@ body .container #trending #items {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 974, theme.scss */
+  /* line 1020, theme.scss */
   body .container #trending #items {
     width: auto;
   }
 }
-/* line 983, theme.scss */
+/* line 1029, theme.scss */
 body .container #trending #items .trend {
   font-style: italic;
   font-size: large;
@@ -1246,12 +1267,12 @@ body .container #trending #items .trend {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 983, theme.scss */
+  /* line 1029, theme.scss */
   body .container #trending #items .trend {
     font-size: medium;
   }
 }
-/* line 1004, theme.scss */
+/* line 1050, theme.scss */
 body .container #header #cart #widgetshoppingcart {
   background: url(stripe.png);
   padding: 1.25em;
@@ -1260,54 +1281,54 @@ body .container #header #cart #widgetshoppingcart {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1004, theme.scss */
+  /* line 1050, theme.scss */
   body .container #header #cart #widgetshoppingcart {
     padding: 1.25em 0.625em;
     font-size: smaller;
   }
 }
-/* line 1013, theme.scss */
+/* line 1059, theme.scss */
 body .container #header #cart #widgetshoppingcart ul {
   list-style: none;
   margin: 0;
 }
-/* line 166, theme.scss */
+/* line 178, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li {
   margin-bottom: 0.3125em;
   padding: 0.3125em;
   background: white;
   border-bottom: 1px solid #cccccc;
 }
-/* line 1016, theme.scss */
+/* line 1062, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li#message {
   background: #8aea4c;
 }
-/* line 1020, theme.scss */
+/* line 1066, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li a:hover {
   font-weight: bold;
 }
-/* line 1023, theme.scss */
+/* line 1069, theme.scss */
 body .container #header #cart #widgetshoppingcart ul li strong {
   color: #f25f18;
 }
-/* line 1033, theme.scss */
+/* line 1079, theme.scss */
 body .container #header hgroup #logo h1 {
   font-weight: bold;
   padding: 0.3125em 0 0;
 }
-/* line 1040, theme.scss */
+/* line 1086, theme.scss */
 body .container #header hgroup #strapline h2 {
   color: #f25f18;
   padding: 0.9375em 0 0;
   font-weight: bold;
 }
-/* line 1048, theme.scss */
+/* line 1094, theme.scss */
 body .container #header hgroup #page-name h2 {
   color: #aaaaaa;
   padding: 0.9375em 0 0;
   text-align: right;
 }
-/* line 1056, theme.scss */
+/* line 1102, theme.scss */
 body .container #header nav {
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -1318,65 +1339,65 @@ body .container #header nav {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 1064, theme.scss */
+/* line 1110, theme.scss */
 body .container #header nav ul li {
   margin-right: 1.25em;
 }
-/* line 1067, theme.scss */
+/* line 1113, theme.scss */
 body .container #header nav ul li a:hover {
   border-bottom: 1px solid;
 }
-/* line 1071, theme.scss */
+/* line 1117, theme.scss */
 body .container #header nav ul li.all-products-link {
   margin-right: 0;
   float: right;
 }
 @media only screen and (max-width: 600px) {
-  /* line 1056, theme.scss */
+  /* line 1102, theme.scss */
   body .container #header nav {
     border-top: none;
     border-bottom: none;
     padding: 0;
     font-size: 100%;
   }
-  /* line 1083, theme.scss */
+  /* line 1129, theme.scss */
   body .container #header nav ul {
     background: #eeeeee;
   }
-  /* line 1086, theme.scss */
+  /* line 1132, theme.scss */
   body .container #header nav ul li {
     padding: 0.3125em;
     margin-right: 0;
   }
-  /* line 1090, theme.scss */
+  /* line 1136, theme.scss */
   body .container #header nav ul li:after {
     content: '\2606';
     margin-left: 0.3125em;
     color: #4a4742;
   }
-  /* line 1096, theme.scss */
+  /* line 1142, theme.scss */
   body .container #header nav ul li.all-products-link {
     float: left;
   }
-  /* line 1099, theme.scss */
+  /* line 1145, theme.scss */
   body .container #header nav ul li.all-products-link:after {
     content: '';
   }
 }
-/* line 1118, theme.scss */
+/* line 1164, theme.scss */
 body .container .home .image-navigation {
   display: block;
   top: 400px;
 }
-/* line 1122, theme.scss */
+/* line 1168, theme.scss */
 body .container .home .image-navigation.left {
   margin-left: -20px;
 }
-/* line 1125, theme.scss */
+/* line 1171, theme.scss */
 body .container .home .image-navigation.right {
   margin-left: 680px;
 }
-/* line 359, theme.scss */
+/* line 385, theme.scss */
 body .container #hot #slider #large-image img {
   width: 99.8%;
   padding: 0.1%;
@@ -1384,7 +1405,7 @@ body .container #hot #slider #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 365, theme.scss */
+/* line 391, theme.scss */
 body .container #hot #slider #large-image-title {
   background: #111111;
   color: #f1f1f1;
@@ -1399,7 +1420,7 @@ body .container #hot #slider #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 365, theme.scss */
+  /* line 391, theme.scss */
   body .container #hot #slider #large-image-title {
     background: #f1f1f1;
     color: #111111;
@@ -1407,7 +1428,7 @@ body .container #hot #slider #large-image-title {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 365, theme.scss */
+  /* line 391, theme.scss */
   body .container #hot #slider #large-image-title {
     top: -5.3em;
     opacity: .9;
@@ -1415,7 +1436,7 @@ body .container #hot #slider #large-image-title {
     z-index: 1;
   }
 }
-/* line 385, theme.scss */
+/* line 411, theme.scss */
 body .container #hot #slider #large-image-title #text {
   background: #f25f18;
   color: #f1f1f1;
@@ -1426,7 +1447,7 @@ body .container #hot #slider #large-image-title #text {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 393, theme.scss */
+/* line 419, theme.scss */
 body .container #hot #slider #large-image-title #text h1 {
   padding: 0;
   /* handhelds to iPhone 3,4*/
@@ -1434,18 +1455,18 @@ body .container #hot #slider #large-image-title #text h1 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 393, theme.scss */
+  /* line 419, theme.scss */
   body .container #hot #slider #large-image-title #text h1 {
     padding: .71em 0;
   }
 }
 @media only screen and (max-width: 380px) {
-  /* line 385, theme.scss */
+  /* line 411, theme.scss */
   body .container #hot #slider #large-image-title #text {
     display: none;
   }
 }
-/* line 406, theme.scss */
+/* line 432, theme.scss */
 body .container #hot #slider #large-image-title #info {
   width: 80%;
   float: right;
@@ -1454,13 +1475,13 @@ body .container #hot #slider #large-image-title #info {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 406, theme.scss */
+  /* line 432, theme.scss */
   body .container #hot #slider #large-image-title #info {
     width: 100%;
     float: left;
   }
 }
-/* line 415, theme.scss */
+/* line 441, theme.scss */
 body .container #hot #slider #large-image-title #info .arrow-right {
   width: 0;
   height: 0;
@@ -1475,12 +1496,12 @@ body .container #hot #slider #large-image-title #info .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 415, theme.scss */
+  /* line 441, theme.scss */
   body .container #hot #slider #large-image-title #info .arrow-right {
     display: none;
   }
 }
-/* line 431, theme.scss */
+/* line 457, theme.scss */
 body .container #hot #slider #large-image-title #info h3 {
   color: #f25f18;
   position: relative;
@@ -1493,9 +1514,12 @@ body .container #hot #slider #large-image-title #info h3 {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 431, theme.scss */
+  /* line 457, theme.scss */
   body .container #hot #slider #large-image-title #info h3 {
     top: 0;
     left: 0;
@@ -1505,14 +1529,20 @@ body .container #hot #slider #large-image-title #info h3 {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 431, theme.scss */
+  /* line 457, theme.scss */
   body .container #hot #slider #large-image-title #info h3 {
     top: -3.5em;
     left: 2.5em;
     width: 85%;
   }
 }
-/* line 453, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 457, theme.scss */
+  body .container #hot #slider #large-image-title #info h3 {
+    top: -2.7em;
+  }
+}
+/* line 483, theme.scss */
 body .container #hot #slider #large-image-title #info p {
   color: #f1f1f1;
   font-size: larger;
@@ -1525,9 +1555,12 @@ body .container #hot #slider #large-image-title #info p {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 453, theme.scss */
+  /* line 483, theme.scss */
   body .container #hot #slider #large-image-title #info p {
     top: 0;
     left: 0;
@@ -1537,13 +1570,19 @@ body .container #hot #slider #large-image-title #info p {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 453, theme.scss */
+  /* line 483, theme.scss */
   body .container #hot #slider #large-image-title #info p {
     top: -3.5em;
     width: 85%;
   }
 }
-/* line 475, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 483, theme.scss */
+  body .container #hot #slider #large-image-title #info p {
+    top: -3.7em;
+  }
+}
+/* line 509, theme.scss */
 body .container #hot #slider #large-image-title #info #price {
   color: #f1f1f1;
   position: relative;
@@ -1556,9 +1595,12 @@ body .container #hot #slider #large-image-title #info #price {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 475, theme.scss */
+  /* line 509, theme.scss */
   body .container #hot #slider #large-image-title #info #price {
     top: 0;
     left: 0;
@@ -1568,7 +1610,7 @@ body .container #hot #slider #large-image-title #info #price {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 475, theme.scss */
+  /* line 509, theme.scss */
   body .container #hot #slider #large-image-title #info #price {
     top: -7em;
     z-index: 2;
@@ -1576,26 +1618,33 @@ body .container #hot #slider #large-image-title #info #price {
     color: #111111;
   }
 }
-/* line 497, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 509, theme.scss */
+  body .container #hot #slider #large-image-title #info #price {
+    top: -5.5em;
+    font-size: larger;
+  }
+}
+/* line 536, theme.scss */
 body .container #hot #slider #large-image-title #info #price .normal-price {
   color: #111111;
 }
-/* line 1135, theme.scss */
+/* line 1181, theme.scss */
 body .container #hot #thumbs {
   background: white url(stripe.png);
   overflow: hidden;
 }
-/* line 1139, theme.scss */
+/* line 1185, theme.scss */
 body .container #hot #thumbs #items {
   overflow-y: scroll;
   position: relative;
   right: -30px;
 }
-/* line 1144, theme.scss */
+/* line 1190, theme.scss */
 body .container #hot #thumbs #items .item {
   padding: 0.625em 1.25em;
 }
-/* line 1147, theme.scss */
+/* line 1193, theme.scss */
 body .container #hot #thumbs #items .item img {
   width: 98%;
   padding: 1%;
@@ -1603,13 +1652,13 @@ body .container #hot #thumbs #items .item img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   width: 100px;
 }
-/* line 1153, theme.scss */
+/* line 1199, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 {
   position: relative;
   z-index: 1000;
   cursor: pointer;
 }
-/* line 1158, theme.scss */
+/* line 1204, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   width: 86px;
   height: auto;
@@ -1620,16 +1669,16 @@ body .container #hot #thumbs #items .item .tooltip2 .tooltip-text {
   padding: 0.625em;
   display: none;
 }
-/* line 1171, theme.scss */
+/* line 1217, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover {
   z-index: 1001;
 }
-/* line 1174, theme.scss */
+/* line 1220, theme.scss */
 body .container #hot #thumbs #items .item .tooltip2:hover .tooltip-text {
   display: block;
   left: 0;
 }
-/* line 1184, theme.scss */
+/* line 1230, theme.scss */
 body .container #hot #more {
   background: url(arrow-black-bottom-right.png) no-repeat 15em -4em;
   height: 10em;
@@ -1639,14 +1688,14 @@ body .container #hot #more {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 1190, theme.scss */
+/* line 1236, theme.scss */
 body .container #hot #more h4 {
   font-family: 'Nothing You Could Do', cursive;
   margin-top: 2em;
   cursor: pointer;
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 1184, theme.scss */
+  /* line 1230, theme.scss */
   body .container #hot #more {
     width: 90%;
     height: auto;
@@ -1654,14 +1703,14 @@ body .container #hot #more h4 {
     top: -2.5em;
   }
 }
-/* line 1205, theme.scss */
+/* line 1251, theme.scss */
 body .container #hot #noutati .item {
   font-size: smaller;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 359, theme.scss */
+/* line 385, theme.scss */
 body .container #hot #noutati .item #large-image img {
   width: 99.8%;
   padding: 0.1%;
@@ -1669,7 +1718,7 @@ body .container #hot #noutati .item #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   background: url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 365, theme.scss */
+/* line 391, theme.scss */
 body .container #hot #noutati .item #large-image-title {
   background: #111111;
   color: #f1f1f1;
@@ -1684,7 +1733,7 @@ body .container #hot #noutati .item #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 365, theme.scss */
+  /* line 391, theme.scss */
   body .container #hot #noutati .item #large-image-title {
     background: #f1f1f1;
     color: #111111;
@@ -1692,7 +1741,7 @@ body .container #hot #noutati .item #large-image-title {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 365, theme.scss */
+  /* line 391, theme.scss */
   body .container #hot #noutati .item #large-image-title {
     top: -5.3em;
     opacity: .9;
@@ -1700,7 +1749,7 @@ body .container #hot #noutati .item #large-image-title {
     z-index: 1;
   }
 }
-/* line 385, theme.scss */
+/* line 411, theme.scss */
 body .container #hot #noutati .item #large-image-title #text {
   background: #f25f18;
   color: #f1f1f1;
@@ -1711,7 +1760,7 @@ body .container #hot #noutati .item #large-image-title #text {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 393, theme.scss */
+/* line 419, theme.scss */
 body .container #hot #noutati .item #large-image-title #text h1 {
   padding: 0;
   /* handhelds to iPhone 3,4*/
@@ -1719,18 +1768,18 @@ body .container #hot #noutati .item #large-image-title #text h1 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 393, theme.scss */
+  /* line 419, theme.scss */
   body .container #hot #noutati .item #large-image-title #text h1 {
     padding: .71em 0;
   }
 }
 @media only screen and (max-width: 380px) {
-  /* line 385, theme.scss */
+  /* line 411, theme.scss */
   body .container #hot #noutati .item #large-image-title #text {
     display: none;
   }
 }
-/* line 406, theme.scss */
+/* line 432, theme.scss */
 body .container #hot #noutati .item #large-image-title #info {
   width: 80%;
   float: right;
@@ -1739,13 +1788,13 @@ body .container #hot #noutati .item #large-image-title #info {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 406, theme.scss */
+  /* line 432, theme.scss */
   body .container #hot #noutati .item #large-image-title #info {
     width: 100%;
     float: left;
   }
 }
-/* line 415, theme.scss */
+/* line 441, theme.scss */
 body .container #hot #noutati .item #large-image-title #info .arrow-right {
   width: 0;
   height: 0;
@@ -1760,12 +1809,12 @@ body .container #hot #noutati .item #large-image-title #info .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 415, theme.scss */
+  /* line 441, theme.scss */
   body .container #hot #noutati .item #large-image-title #info .arrow-right {
     display: none;
   }
 }
-/* line 431, theme.scss */
+/* line 457, theme.scss */
 body .container #hot #noutati .item #large-image-title #info h3 {
   color: #f25f18;
   position: relative;
@@ -1778,9 +1827,12 @@ body .container #hot #noutati .item #large-image-title #info h3 {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 431, theme.scss */
+  /* line 457, theme.scss */
   body .container #hot #noutati .item #large-image-title #info h3 {
     top: 0;
     left: 0;
@@ -1790,14 +1842,20 @@ body .container #hot #noutati .item #large-image-title #info h3 {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 431, theme.scss */
+  /* line 457, theme.scss */
   body .container #hot #noutati .item #large-image-title #info h3 {
     top: -3.5em;
     left: 2.5em;
     width: 85%;
   }
 }
-/* line 453, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 457, theme.scss */
+  body .container #hot #noutati .item #large-image-title #info h3 {
+    top: -2.7em;
+  }
+}
+/* line 483, theme.scss */
 body .container #hot #noutati .item #large-image-title #info p {
   color: #f1f1f1;
   font-size: larger;
@@ -1810,9 +1868,12 @@ body .container #hot #noutati .item #large-image-title #info p {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 453, theme.scss */
+  /* line 483, theme.scss */
   body .container #hot #noutati .item #large-image-title #info p {
     top: 0;
     left: 0;
@@ -1822,13 +1883,19 @@ body .container #hot #noutati .item #large-image-title #info p {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 453, theme.scss */
+  /* line 483, theme.scss */
   body .container #hot #noutati .item #large-image-title #info p {
     top: -3.5em;
     width: 85%;
   }
 }
-/* line 475, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 483, theme.scss */
+  body .container #hot #noutati .item #large-image-title #info p {
+    top: -3.7em;
+  }
+}
+/* line 509, theme.scss */
 body .container #hot #noutati .item #large-image-title #info #price {
   color: #f1f1f1;
   position: relative;
@@ -1841,9 +1908,12 @@ body .container #hot #noutati .item #large-image-title #info #price {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 475, theme.scss */
+  /* line 509, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: 0;
     left: 0;
@@ -1853,7 +1923,7 @@ body .container #hot #noutati .item #large-image-title #info #price {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 475, theme.scss */
+  /* line 509, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: -7em;
     z-index: 2;
@@ -1861,17 +1931,24 @@ body .container #hot #noutati .item #large-image-title #info #price {
     color: #111111;
   }
 }
-/* line 497, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 509, theme.scss */
+  body .container #hot #noutati .item #large-image-title #info #price {
+    top: -5.5em;
+    font-size: larger;
+  }
+}
+/* line 536, theme.scss */
 body .container #hot #noutati .item #large-image-title #info #price .normal-price {
   color: #111111;
 }
 @media only screen and (max-width: 600px) {
-  /* line 1205, theme.scss */
+  /* line 1251, theme.scss */
   body .container #hot #noutati .item {
     font-size: 100%;
   }
 }
-/* line 1213, theme.scss */
+/* line 1259, theme.scss */
 body .container #hot #noutati .item #large-image-title {
   height: 5.2em;
   /* handhelds to iPhone 3,4*/
@@ -1879,14 +1956,14 @@ body .container #hot #noutati .item #large-image-title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 1218, theme.scss */
+  /* line 1264, theme.scss */
   body .container #hot #noutati .item #large-image-title #info #price {
     top: -7.5em;
     right: 0;
     color: white;
   }
 }
-/* line 1237, theme.scss */
+/* line 1283, theme.scss */
 body .container #bestsellers #title h2 {
   background: #111111;
   color: #f25f18;
@@ -1900,12 +1977,12 @@ body .container #bestsellers #title h2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1237, theme.scss */
+  /* line 1283, theme.scss */
   body .container #bestsellers #title h2 {
     letter-spacing: 2px;
   }
 }
-/* line 1255, theme.scss */
+/* line 1301, theme.scss */
 body .container #bestsellers #body #filters {
   width: 100%;
   float: left;
@@ -1913,7 +1990,7 @@ body .container #bestsellers #body #filters {
   padding-bottom: 1.25em;
   border-bottom: 1px solid;
 }
-/* line 1262, theme.scss */
+/* line 1308, theme.scss */
 body .container #bestsellers #body #filters div {
   background: #111111;
   /* handhelds to iPhone 3,4*/
@@ -1921,12 +1998,12 @@ body .container #bestsellers #body #filters div {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1262, theme.scss */
+  /* line 1308, theme.scss */
   body .container #bestsellers #body #filters div {
     background: #f1f1f1;
   }
 }
-/* line 1269, theme.scss */
+/* line 1315, theme.scss */
 body .container #bestsellers #body #filters div h4 {
   cursor: pointer;
   padding: 0.3125em 0;
@@ -1941,7 +2018,7 @@ body .container #bestsellers #body #filters div h4 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1269, theme.scss */
+  /* line 1315, theme.scss */
   body .container #bestsellers #body #filters div h4 {
     width: 100%;
     margin: 0 0 0 0;
@@ -1953,20 +2030,20 @@ body .container #bestsellers #body #filters div h4 {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 1269, theme.scss */
+  /* line 1315, theme.scss */
   body .container #bestsellers #body #filters div h4 {
     text-align: left;
     font-size: 100%;
     margin: 0.625em;
   }
 }
-/* line 1292, theme.scss */
+/* line 1338, theme.scss */
 body .container #bestsellers #body #filters div h4:before {
   content: '\2713';
   margin-right: 0.625em;
   color: #aaaaaa;
 }
-/* line 1297, theme.scss */
+/* line 1343, theme.scss */
 body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
   color: white;
   /* handhelds to iPhone 3,4*/
@@ -1974,12 +2051,12 @@ body .container #bestsellers #body #filters div h4.active, body .container #best
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1297, theme.scss */
+  /* line 1343, theme.scss */
   body .container #bestsellers #body #filters div h4.active, body .container #bestsellers #body #filters div h4:hover {
     color: #111111;
   }
 }
-/* line 1304, theme.scss */
+/* line 1350, theme.scss */
 body .container #bestsellers #body #filters div h4.active:before {
   color: white;
   /* handhelds to iPhone 3,4*/
@@ -1987,12 +2064,12 @@ body .container #bestsellers #body #filters div h4.active:before {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1304, theme.scss */
+  /* line 1350, theme.scss */
   body .container #bestsellers #body #filters div h4.active:before {
     color: #111111;
   }
 }
-/* line 1317, theme.scss */
+/* line 1363, theme.scss */
 body .container #bestsellers #body #items .item {
   background: white url(stripe.png);
   min-height: 37.5em;
@@ -2003,26 +2080,26 @@ body .container #bestsellers #body #items .item {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 1317, theme.scss */
-  body .container #bestsellers #body #items .item {
-    min-height: 42.5em;
-  }
-}
 @media only screen and (max-width: 600px) {
-  /* line 1317, theme.scss */
+  /* line 1363, theme.scss */
   body .container #bestsellers #body #items .item {
     min-height: 32.5em;
   }
 }
-/* line 285, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 1363, theme.scss */
+  body .container #bestsellers #body #items .item {
+    min-height: 42.5em;
+  }
+}
+/* line 310, theme.scss */
 body .container #bestsellers #body #items .item img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 289, theme.scss */
+/* line 314, theme.scss */
 body .container #bestsellers #body #items .item #text {
   margin: 0 1.25em;
   /* handhelds to iPhone 3,4*/
@@ -2030,12 +2107,12 @@ body .container #bestsellers #body #items .item #text {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 289, theme.scss */
+  /* line 314, theme.scss */
   body .container #bestsellers #body #items .item #text {
     margin: 0 0.625em;
   }
 }
-/* line 295, theme.scss */
+/* line 320, theme.scss */
 body .container #bestsellers #body #items .item #text h3, body .container #bestsellers #body #items .item #text p {
   background: white;
   padding: 0.625em;
@@ -2045,21 +2122,21 @@ body .container #bestsellers #body #items .item #text h3, body .container #bests
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 295, theme.scss */
+  /* line 320, theme.scss */
   body .container #bestsellers #body #items .item #text h3, body .container #bestsellers #body #items .item #text p {
     min-height: 1.25em;
   }
 }
-/* line 305, theme.scss */
+/* line 330, theme.scss */
 body .container #bestsellers #body #items .item #text h3 {
   font-weight: bold;
   margin: 1.25em 0;
 }
-/* line 309, theme.scss */
+/* line 334, theme.scss */
 body .container #bestsellers #body #items .item #text p {
   padding: 0.625em;
 }
-/* line 314, theme.scss */
+/* line 339, theme.scss */
 body .container #bestsellers #body #items .item #price {
   position: relative;
   top: 3.75em;
@@ -2072,13 +2149,13 @@ body .container #bestsellers #body #items .item #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 314, theme.scss */
+  /* line 339, theme.scss */
   body .container #bestsellers #body #items .item #price {
     margin-left: 0.625em;
     top: 1.25em;
   }
 }
-/* line 328, theme.scss */
+/* line 353, theme.scss */
 body .container #bestsellers #body #items .item #category {
   position: relative;
   top: 4.5em;
@@ -2091,40 +2168,40 @@ body .container #bestsellers #body #items .item #category {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 328, theme.scss */
+  /* line 353, theme.scss */
   body .container #bestsellers #body #items .item #category {
     margin-right: 0.625em;
     top: 1.875em;
   }
 }
-/* line 342, theme.scss */
+/* line 367, theme.scss */
 body .container #bestsellers #body #items .item #category a {
   background: #cccccc;
   padding: 0.3125em;
   color: white;
 }
-/* line 347, theme.scss */
+/* line 372, theme.scss */
 body .container #bestsellers #body #items .item #category a:hover {
   background: gray;
 }
-/* line 1330, theme.scss */
+/* line 1376, theme.scss */
 body .container #search #title {
   background: url(arrow-black-top-right.png) no-repeat 1em 5em;
   height: 20em;
 }
-/* line 1334, theme.scss */
+/* line 1380, theme.scss */
 body .container #search #title h3 {
   font-family: 'Nothing You Could Do', cursive;
 }
-/* line 1345, theme.scss */
+/* line 1391, theme.scss */
 body .container #promo {
   margin: 5% 0;
 }
-/* line 1348, theme.scss */
+/* line 1394, theme.scss */
 body .container #promo #title {
   color: white;
 }
-/* line 1351, theme.scss */
+/* line 1397, theme.scss */
 body .container #promo #title #percent {
   width: 70%;
   float: left;
@@ -2135,18 +2212,18 @@ body .container #promo #title #percent {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 1358, theme.scss */
+/* line 1404, theme.scss */
 body .container #promo #title #percent h3 {
   padding: 0.3125em 0;
   font-size: 5em;
 }
 @media only screen and (max-width: 380px) {
-  /* line 1351, theme.scss */
+  /* line 1397, theme.scss */
   body .container #promo #title #percent {
     width: 100%;
   }
 }
-/* line 1368, theme.scss */
+/* line 1414, theme.scss */
 body .container #promo #title #arrow {
   width: 30%;
   float: right;
@@ -2155,12 +2232,12 @@ body .container #promo #title #arrow {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1368, theme.scss */
+  /* line 1414, theme.scss */
   body .container #promo #title #arrow {
     display: none;
   }
 }
-/* line 1376, theme.scss */
+/* line 1422, theme.scss */
 body .container #promo #title #arrow .arrow-right {
   width: 0;
   height: 0;
@@ -2177,12 +2254,12 @@ body .container #promo #title #arrow .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 1376, theme.scss */
+  /* line 1422, theme.scss */
   body .container #promo #title #arrow .arrow-right {
     display: none;
   }
 }
-/* line 1397, theme.scss */
+/* line 1443, theme.scss */
 body .container #promo #body #items .item {
   height: 36em;
   border-bottom: 3px solid #f1f1f1;
@@ -2191,12 +2268,12 @@ body .container #promo #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 1397, theme.scss */
+  /* line 1443, theme.scss */
   body .container #promo #body #items .item {
     height: 25em;
   }
 }
-/* line 185, theme.scss */
+/* line 198, theme.scss */
 body .container #promo #body #items .item img {
   width: 98%;
   padding: 1%;
@@ -2209,12 +2286,12 @@ body .container #promo #body #items .item img {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 185, theme.scss */
+  /* line 198, theme.scss */
   body .container #promo #body #items .item img {
     margin-left: 0;
   }
 }
-/* line 195, theme.scss */
+/* line 208, theme.scss */
 body .container #promo #body #items .item #text {
   margin: 0 1.25em;
   /* handhelds to iPhone 3,4*/
@@ -2227,12 +2304,12 @@ body .container #promo #body #items .item #text {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 198, theme.scss */
+/* line 211, theme.scss */
 body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
   background: #f1f1f1;
   padding: 0.625em;
 }
-/* line 203, theme.scss */
+/* line 216, theme.scss */
 body .container #promo #body #items .item #text h3 {
   font-weight: bold;
   margin: 0.625em 0;
@@ -2242,21 +2319,21 @@ body .container #promo #body #items .item #text h3 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 203, theme.scss */
+  /* line 216, theme.scss */
   body .container #promo #body #items .item #text h3 {
     min-height: 2.5em;
   }
 }
-/* line 211, theme.scss */
+/* line 227, theme.scss */
 body .container #promo #body #items .item #text p {
   padding: 0.625em;
 }
 @media only screen and (max-width: 600px) {
-  /* line 195, theme.scss */
+  /* line 208, theme.scss */
   body .container #promo #body #items .item #text {
     margin: 0 0 0 1.25em;
   }
-  /* line 218, theme.scss */
+  /* line 234, theme.scss */
   body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
     background: transparent;
     padding: 0;
@@ -2264,26 +2341,26 @@ body .container #promo #body #items .item #text p {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 195, theme.scss */
+  /* line 208, theme.scss */
   body .container #promo #body #items .item #text {
     margin: 0;
   }
-  /* line 227, theme.scss */
+  /* line 243, theme.scss */
   body .container #promo #body #items .item #text p {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 233, theme.scss */
+  /* line 249, theme.scss */
   body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
     padding: 0;
   }
-  /* line 236, theme.scss */
+  /* line 252, theme.scss */
   body .container #promo #body #items .item #text p {
     min-height: 2.5em;
   }
 }
-/* line 242, theme.scss */
+/* line 259, theme.scss */
 body .container #promo #body #items .item #price {
   position: relative;
   top: 5em;
@@ -2301,39 +2378,39 @@ body .container #promo #body #items .item #price {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 242, theme.scss */
+  /* line 259, theme.scss */
   body .container #promo #body #items .item #price {
     top: 1.25em;
     margin-left: 1em;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 242, theme.scss */
+  /* line 259, theme.scss */
   body .container #promo #body #items .item #price {
     margin-left: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 242, theme.scss */
+  /* line 259, theme.scss */
   body .container #promo #body #items .item #price {
     top: 1.25em;
     margin-left: 1em;
   }
 }
-/* line 262, theme.scss */
+/* line 279, theme.scss */
 body .container #promo #body #items .item:hover {
   border-bottom: 3px solid #f25f18;
   background: white url(stripe.png);
 }
-/* line 267, theme.scss */
+/* line 284, theme.scss */
 body .container #promo #body #items .item:hover #text h3, body .container #promo #body #items .item:hover #text p {
   background: white;
 }
-/* line 1410, theme.scss */
+/* line 1456, theme.scss */
 body .container #top-new-categories ul {
   text-align: center;
 }
-/* line 519, theme.scss */
+/* line 561, theme.scss */
 body .container #top-new-categories ul li {
   height: 14em;
   border-radius: 8em;
@@ -2346,24 +2423,24 @@ body .container #top-new-categories ul li {
   border: 1px solid #4d8fce;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 519, theme.scss */
+  /* line 561, theme.scss */
   body .container #top-new-categories ul li {
     height: 16em;
     border-radius: 16em;
     padding-top: 5em;
   }
 }
-/* line 535, theme.scss */
+/* line 577, theme.scss */
 body .container #top-new-categories ul li:hover {
   box-shadow: 2px 1px 1px #111111;
   border: 1px solid #111111;
 }
-/* line 1417, theme.scss */
+/* line 1463, theme.scss */
 body .container #footer-info #contact ul {
   list-style: none;
   margin: 0;
 }
-/* line 41, theme.scss */
+/* line 45, theme.scss */
 body .container #footer-info #company h2, body .container #footer-info #company h3 {
   cursor: pointer;
   padding: 0.625em 0.3125em;
@@ -2371,26 +2448,26 @@ body .container #footer-info #company h2, body .container #footer-info #company 
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1px;
 }
-/* line 48, theme.scss */
+/* line 52, theme.scss */
 body .container #footer-info #company h2:after, body .container #footer-info #company h3:after {
   content: '\25bc';
   float: right;
   color: #cccccc;
 }
-/* line 52, theme.scss */
+/* line 56, theme.scss */
 body .container #footer-info #company .pane {
   display: none;
   background: white;
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 1426, theme.scss */
+/* line 1472, theme.scss */
 body .container #footer-info #company h3 {
   background: transparent;
   border: none;
   padding: 1.25em 0;
 }
-/* line 41, theme.scss */
+/* line 45, theme.scss */
 body .container #footer-info #pages h2, body .container #footer-info #pages h3 {
   cursor: pointer;
   padding: 0.625em 0.3125em;
@@ -2398,30 +2475,30 @@ body .container #footer-info #pages h2, body .container #footer-info #pages h3 {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1px;
 }
-/* line 48, theme.scss */
+/* line 52, theme.scss */
 body .container #footer-info #pages h2:after, body .container #footer-info #pages h3:after {
   content: '\25bc';
   float: right;
   color: #cccccc;
 }
-/* line 52, theme.scss */
+/* line 56, theme.scss */
 body .container #footer-info #pages .pane {
   display: none;
   background: white;
   padding: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 1436, theme.scss */
+/* line 1482, theme.scss */
 body .container #footer-info #pages p {
   margin-top: 1.25em;
 }
-/* line 1442, theme.scss */
+/* line 1488, theme.scss */
 body .container #footer {
   background: #eeeeee;
   border-bottom: 1px solid #cccccc;
   padding: 0.625em;
 }
-/* line 1450, theme.scss */
+/* line 1496, theme.scss */
 body .container #footer-subscribe #newsletter input[type="email"] {
   width: 100%;
 }
@@ -2433,6 +2510,9 @@ body .container {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
   /* line 2, header.scss */
@@ -2440,27 +2520,33 @@ body .container {
     width: 96%;
   }
 }
-/* line 12, header.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 2, header.scss */
+  body .container {
+    max-width: 960px;
+  }
+}
+/* line 16, header.scss */
 body .container #header {
   width: 100%;
   float: left;
 }
-/* line 15, header.scss */
+/* line 19, header.scss */
 body .container #header #cart {
   width: 20%;
   margin-left: 5%;
   float: right;
 }
-/* line 20, header.scss */
+/* line 24, header.scss */
 body .container #header #cart h3 {
   display: none;
 }
-/* line 26, header.scss */
+/* line 30, header.scss */
 body .container #header hgroup {
   width: 75%;
   float: left;
 }
-/* line 30, header.scss */
+/* line 34, header.scss */
 body .container #header hgroup #logo {
   width: 20%;
   float: left;
@@ -2472,22 +2558,22 @@ body .container #header hgroup #logo {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 30, header.scss */
+  /* line 34, header.scss */
   body .container #header hgroup #logo {
     width: 100%;
   }
-  /* line 37, header.scss */
+  /* line 41, header.scss */
   body .container #header hgroup #logo h1 {
     padding: 0.625em 0 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 30, header.scss */
+  /* line 34, header.scss */
   body .container #header hgroup #logo {
     width: 40%;
   }
 }
-/* line 45, header.scss */
+/* line 49, header.scss */
 body .container #header hgroup #strapline {
   width: 40%;
   float: left;
@@ -2502,28 +2588,28 @@ body .container #header hgroup #strapline {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 45, header.scss */
+  /* line 49, header.scss */
   body .container #header hgroup #strapline {
     width: 100%;
   }
-  /* line 52, header.scss */
+  /* line 56, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: 0;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 57, header.scss */
+  /* line 61, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: .5em 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 45, header.scss */
+  /* line 49, header.scss */
   body .container #header hgroup #strapline {
     width: 60%;
   }
 }
-/* line 65, header.scss */
+/* line 69, header.scss */
 body .container #header hgroup #page-name {
   width: 40%;
   float: left;
@@ -2535,18 +2621,18 @@ body .container #header hgroup #page-name {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 65, header.scss */
+  /* line 69, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 65, header.scss */
+  /* line 69, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
-/* line 78, header.scss */
+/* line 82, header.scss */
 body .container #header nav {
   width: 75%;
   float: left;
@@ -2555,12 +2641,12 @@ body .container #header nav {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 78, header.scss */
+  /* line 82, header.scss */
   body .container #header nav {
     width: 100%;
   }
 }
-/* line 86, header.scss */
+/* line 90, header.scss */
 body .container #header nav ul {
   display: block;
   margin: 0;
@@ -2576,11 +2662,11 @@ body .container #header nav ul li {
   float: left;
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 90, header.scss */
+  /* line 94, header.scss */
   body .container #header nav ul li {
     margin-bottom: 0.3125em;
   }
-  /* line 93, header.scss */
+  /* line 97, header.scss */
   body .container #header nav ul li.all-products-link {
     float: left;
   }
@@ -2630,6 +2716,9 @@ body.home .image-navigation.left {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
   /* line 29, startpage.scss */
@@ -2637,27 +2726,42 @@ body.home .image-navigation.left {
     top: 5.5em;
   }
 }
-/* line 37, startpage.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 29, startpage.scss */
+  body.home .image-navigation.left {
+    margin-left: 3.5em;
+  }
+}
+/* line 41, startpage.scss */
 body.home .image-navigation.right {
   background: white url(right-arrow-black.png) no-repeat 50%;
   margin-left: 70%;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 37, startpage.scss */
+  /* line 41, startpage.scss */
   body.home .image-navigation.right {
     margin-left: 90%;
   }
 }
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 41, startpage.scss */
+  body.home .image-navigation.right {
+    margin-left: 18.5em;
+  }
+}
 
-/* line 52, startpage.scss */
+/* line 60, startpage.scss */
 body .container #hot {
   width: 100%;
   float: left;
 }
-/* line 55, startpage.scss */
+/* line 63, startpage.scss */
 body .container #hot #slider {
   width: 75%;
   margin: 0 5% 0 0;
@@ -2673,13 +2777,13 @@ body .container #hot #slider {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 55, startpage.scss */
+  /* line 63, startpage.scss */
   body .container #hot #slider {
     display: none;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 55, startpage.scss */
+  /* line 63, startpage.scss */
   body .container #hot #slider {
     width: 80%;
     margin: 0 0 0 0;
@@ -2687,14 +2791,14 @@ body .container #hot #slider {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 55, startpage.scss */
+  /* line 63, startpage.scss */
   body .container #hot #slider {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 69, startpage.scss */
+/* line 77, startpage.scss */
 body .container #hot #thumbs {
   width: 20%;
   margin: 0 0 0 0;
@@ -2707,18 +2811,18 @@ body .container #hot #thumbs {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 69, startpage.scss */
+  /* line 77, startpage.scss */
   body .container #hot #thumbs {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 69, startpage.scss */
+  /* line 77, startpage.scss */
   body .container #hot #thumbs {
     display: none;
   }
 }
-/* line 79, startpage.scss */
+/* line 87, startpage.scss */
 body .container #hot #thumbs #items {
   height: 45em;
   /* handhelds to iPhone 3,4*/
@@ -2726,24 +2830,24 @@ body .container #hot #thumbs #items {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 79, startpage.scss */
+  /* line 87, startpage.scss */
   body .container #hot #thumbs #items {
-    height: 55em;
+    height: 47.5em;
   }
 }
-/* line 86, startpage.scss */
+/* line 97, startpage.scss */
 body .container #hot #more {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 86, startpage.scss */
+  /* line 97, startpage.scss */
   body .container #hot #more {
     display: none;
   }
 }
-/* line 93, startpage.scss */
+/* line 104, startpage.scss */
 body .container #hot #noutati {
   width: 100%;
   float: left;
@@ -2753,12 +2857,12 @@ body .container #hot #noutati {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 93, startpage.scss */
+  /* line 104, startpage.scss */
   body .container #hot #noutati {
     display: block;
   }
 }
-/* line 102, startpage.scss */
+/* line 113, startpage.scss */
 body .container #hot #noutati #items .item {
   width: 45%;
   margin: 0 10% 0 0;
@@ -2770,27 +2874,38 @@ body .container #hot #noutati #items .item {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 102, startpage.scss */
+  /* line 113, startpage.scss */
   body .container #hot #noutati #items .item {
     width: 100%;
     margin-bottom: 20%;
   }
 }
 @media only screen and (max-width: 1023px) {
-  /* line 102, startpage.scss */
+  /* line 113, startpage.scss */
   body .container #hot #noutati #items .item {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 115, startpage.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 113, startpage.scss */
+  body .container #hot #noutati #items .item {
+    width: 47.5%;
+    margin: 0 5% 0 0;
+    float: left;
+  }
+}
+/* line 130, startpage.scss */
 body .container #hot #noutati #items .item.c2, body .container #hot #noutati #items .item.c4, body .container #hot #noutati #items .item.c6, body .container #hot #noutati #items .item.c8, body .container #hot #noutati #items .item.c10, body .container #hot #noutati #items .item.c12, body .container #hot #noutati #items .item.c14, body .container #hot #noutati #items .item.c16, body .container #hot #noutati #items .item.c18, body .container #hot #noutati #items .item.c20 {
   margin-right: 0;
 }
-/* line 122, startpage.scss */
+/* line 137, startpage.scss */
 body .container #subscribe-newsletter {
   width: 100%;
   float: left;
@@ -2801,13 +2916,13 @@ body .container #subscribe-newsletter {
   margin: 5% 0;
 }
 @media only screen and (max-width: 600px) {
-  /* line 122, startpage.scss */
+  /* line 137, startpage.scss */
   body .container #subscribe-newsletter {
     width: 90%;
     padding: 5%;
   }
 }
-/* line 70, theme.scss */
+/* line 75, theme.scss */
 body .container #subscribe-newsletter .arrow-right {
   width: 0;
   height: 0;
@@ -2825,71 +2940,56 @@ body .container #subscribe-newsletter .arrow-right {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 70, theme.scss */
+  /* line 75, theme.scss */
   body .container #subscribe-newsletter .arrow-right {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 70, theme.scss */
+  /* line 75, theme.scss */
   body .container #subscribe-newsletter .arrow-right {
     display: none;
   }
 }
-/* line 90, theme.scss */
+/* line 95, theme.scss */
 body .container #subscribe-newsletter h4 {
   padding: 0.625em 0;
 }
-/* line 94, theme.scss */
+/* line 99, theme.scss */
 body .container #subscribe-newsletter #text {
   width: 58%;
   margin-right: 5%;
   float: left;
   position: relative;
-  margin-left: -4.5em;
+  margin-left: -4.8em;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 94, theme.scss */
-  body .container #subscribe-newsletter #text {
-    margin-left: -2.8em;
-  }
 }
 @media only screen and (max-width: 600px) {
-  /* line 94, theme.scss */
-  body .container #subscribe-newsletter #text {
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 94, theme.scss */
-  body .container #subscribe-newsletter #text {
-    margin-left: 1.25em;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 94, theme.scss */
+  /* line 99, theme.scss */
   body .container #subscribe-newsletter #text {
     width: 100%;
     margin: 0;
   }
 }
-/* line 111, theme.scss */
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+  /* line 99, theme.scss */
+  body .container #subscribe-newsletter #text {
+    margin-left: 1.25em;
+  }
+}
+/* line 116, theme.scss */
 body .container #subscribe-newsletter #text form {
   padding: 0;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 114, theme.scss */
+/* line 119, theme.scss */
 body .container #subscribe-newsletter #text form input.text {
   width: 100%;
   /* handhelds to iPhone 3,4*/
@@ -2897,27 +2997,33 @@ body .container #subscribe-newsletter #text form input.text {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 114, theme.scss */
+  /* line 119, theme.scss */
   body .container #subscribe-newsletter #text form input.text {
     width: 75%;
   }
 }
-/* line 123, theme.scss */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 128, theme.scss */
+  body .container #subscribe-newsletter #text form input {
+    font-size: small;
+  }
+}
+/* line 134, theme.scss */
 body .container #subscribe-newsletter #text #whatis {
   position: relative;
   top: -1.5em;
   float: right;
   text-decoration: underline;
 }
-/* line 130, theme.scss */
+/* line 141, theme.scss */
 body .container #subscribe-newsletter #text #whatis .tooltip-text {
   text-decoration: none;
 }
-/* line 134, theme.scss */
+/* line 145, theme.scss */
 body .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
   left: 5em;
 }
-/* line 139, theme.scss */
+/* line 150, theme.scss */
 body .container #subscribe-newsletter #facebook-connect {
   float: left;
   width: 25%;
@@ -2929,34 +3035,34 @@ body .container #subscribe-newsletter #facebook-connect {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 139, theme.scss */
+  /* line 150, theme.scss */
   body .container #subscribe-newsletter #facebook-connect {
     width: 100%;
     margin: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 148, theme.scss */
+  /* line 159, theme.scss */
   body .container #subscribe-newsletter #facebook-connect h4 {
     margin-bottom: 1.25em;
   }
 }
-/* line 153, theme.scss */
+/* line 164, theme.scss */
 body .container #subscribe-newsletter #facebook-connect #auth-loggedin {
   padding: 1.25em;
   font-size: small;
 }
-/* line 127, startpage.scss */
+/* line 142, startpage.scss */
 body .container #subscribe-newsletter.bigger-margin-bottom {
-  margin-bottom: 10em;
+  margin: 10em 0;
 }
-/* line 132, startpage.scss */
+/* line 147, startpage.scss */
 body .container #bestsellers {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 136, startpage.scss */
+/* line 151, startpage.scss */
 body .container #bestsellers #title {
   /* @include col($minor2, 0, 0); */
   width: 7.5%;
@@ -2970,7 +3076,7 @@ body .container #bestsellers #title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 136, startpage.scss */
+  /* line 151, startpage.scss */
   body .container #bestsellers #title {
     width: 100%;
     margin: 0 0 0 0;
@@ -2978,12 +3084,12 @@ body .container #bestsellers #title {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 144, startpage.scss */
+  /* line 159, startpage.scss */
   body .container #bestsellers #title h2 {
     padding: 0.3125em;
   }
 }
-/* line 150, startpage.scss */
+/* line 165, startpage.scss */
 body .container #bestsellers #body {
   width: 90%;
   margin: 0 0 0 0;
@@ -2993,14 +3099,14 @@ body .container #bestsellers #body {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 150, startpage.scss */
+  /* line 165, startpage.scss */
   body .container #bestsellers #body {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 158, startpage.scss */
+/* line 173, startpage.scss */
 body .container #bestsellers #body #filters div {
   width: 30%;
   margin: 0 5% 0 0;
@@ -3010,32 +3116,32 @@ body .container #bestsellers #body #filters div {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 158, startpage.scss */
+  /* line 173, startpage.scss */
   body .container #bestsellers #body #filters div {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 165, startpage.scss */
+/* line 180, startpage.scss */
 body .container #bestsellers #body #filters div#last-three-months {
   margin-right: 0;
 }
-/* line 171, startpage.scss */
+/* line 186, startpage.scss */
 body .container #bestsellers #body #products #last-week, body .container #bestsellers #body #products #last-month, body .container #bestsellers #body #products #last-three-months {
   display: none;
 }
-/* line 174, startpage.scss */
+/* line 189, startpage.scss */
 body .container #bestsellers #body #products #last-week.active, body .container #bestsellers #body #products #last-month.active, body .container #bestsellers #body #products #last-three-months.active {
   display: block;
 }
-/* line 178, startpage.scss */
+/* line 193, startpage.scss */
 body .container #bestsellers #body #products #items {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 179, startpage.scss */
+/* line 194, startpage.scss */
 body .container #bestsellers #body #products #items .item {
   width: 30%;
   margin: 0 5% 0 0;
@@ -3049,7 +3155,7 @@ body .container #bestsellers #body #products #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 179, startpage.scss */
+  /* line 194, startpage.scss */
   body .container #bestsellers #body #products #items .item {
     width: 100%;
     margin: 0 0 0 0;
@@ -3058,7 +3164,7 @@ body .container #bestsellers #body #products #items .item {
   }
 }
 @media only screen and (max-width: 1023px) {
-  /* line 179, startpage.scss */
+  /* line 194, startpage.scss */
   body .container #bestsellers #body #products #items .item {
     width: 47.5%;
     margin: 0 5% 0 0;
@@ -3066,27 +3172,27 @@ body .container #bestsellers #body #products #items .item {
     margin-bottom: 5%;
   }
 }
-/* line 192, startpage.scss */
+/* line 207, startpage.scss */
 body .container #bestsellers #body #products #items .item.c3, body .container #bestsellers #body #products #items .item.c6, body .container #bestsellers #body #products #items .item.c9 {
   margin-right: 0;
 }
 @media only screen and (max-width: 1023px) {
-  /* line 197, startpage.scss */
+  /* line 212, startpage.scss */
   body .container #bestsellers #body #products #items .item.c2, body .container #bestsellers #body #products #items .item.c4, body .container #bestsellers #body #products #items .item.c6, body .container #bestsellers #body #products #items .item.c8, body .container #bestsellers #body #products #items .item.c10, body .container #bestsellers #body #products #items .item.c12 {
     margin-right: 0 !important;
   }
 }
-/* line 205, startpage.scss */
+/* line 220, startpage.scss */
 body .container #bestsellers #body #more {
   float: right;
 }
-/* line 211, startpage.scss */
+/* line 226, startpage.scss */
 body .container #search {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 215, startpage.scss */
+/* line 230, startpage.scss */
 body .container #search #title {
   width: 10%;
   margin: 0 0 0 0;
@@ -3099,18 +3205,18 @@ body .container #search #title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 215, startpage.scss */
+  /* line 230, startpage.scss */
   body .container #search #title {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 215, startpage.scss */
+  /* line 230, startpage.scss */
   body .container #search #title {
     display: none;
   }
 }
-/* line 226, startpage.scss */
+/* line 241, startpage.scss */
 body .container #search #body {
   width: 90%;
   margin: 0 0 0 0;
@@ -3123,7 +3229,7 @@ body .container #search #body {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 226, startpage.scss */
+  /* line 241, startpage.scss */
   body .container #search #body {
     width: 100%;
     margin: 0 0 0 0;
@@ -3131,20 +3237,20 @@ body .container #search #body {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 226, startpage.scss */
+  /* line 241, startpage.scss */
   body .container #search #body {
     width: 100%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 240, startpage.scss */
+/* line 255, startpage.scss */
 body .container #promo {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 244, startpage.scss */
+/* line 259, startpage.scss */
 body .container #promo #title {
   width: 10%;
   margin: 0 0 0 0;
@@ -3160,7 +3266,7 @@ body .container #promo #title {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 244, startpage.scss */
+  /* line 259, startpage.scss */
   body .container #promo #title {
     width: 100%;
     margin: 0 0 0 0;
@@ -3168,7 +3274,7 @@ body .container #promo #title {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 244, startpage.scss */
+  /* line 259, startpage.scss */
   body .container #promo #title {
     width: 33%;
     margin: 0 0 0 0;
@@ -3176,14 +3282,14 @@ body .container #promo #title {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 244, startpage.scss */
+  /* line 259, startpage.scss */
   body .container #promo #title {
     width: 20%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 258, startpage.scss */
+/* line 273, startpage.scss */
 body .container #promo #body {
   width: 90%;
   margin: 0 0 0 0;
@@ -3199,7 +3305,7 @@ body .container #promo #body {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 258, startpage.scss */
+  /* line 273, startpage.scss */
   body .container #promo #body {
     width: 100%;
     margin: 0 0 0 0;
@@ -3207,7 +3313,7 @@ body .container #promo #body {
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 258, startpage.scss */
+  /* line 273, startpage.scss */
   body .container #promo #body {
     width: 66%;
     margin: 0 0 0 0;
@@ -3215,20 +3321,20 @@ body .container #promo #body {
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 258, startpage.scss */
+  /* line 273, startpage.scss */
   body .container #promo #body {
     width: 80%;
     margin: 0 0 0 0;
     float: left;
   }
 }
-/* line 272, startpage.scss */
+/* line 287, startpage.scss */
 body .container #promo #body #items {
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 273, startpage.scss */
+/* line 288, startpage.scss */
 body .container #promo #body #items .item {
   width: 22%;
   margin: 0 4% 0 0;
@@ -3242,7 +3348,7 @@ body .container #promo #body #items .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 273, startpage.scss */
+  /* line 288, startpage.scss */
   body .container #promo #body #items .item {
     width: 100%;
     margin: 0 0 0 0;
@@ -3251,24 +3357,24 @@ body .container #promo #body #items .item {
   }
 }
 @media only screen and (max-width: 1023px) {
-  /* line 273, startpage.scss */
+  /* line 288, startpage.scss */
   body .container #promo #body #items .item {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
   }
 }
-/* line 285, startpage.scss */
+/* line 300, startpage.scss */
 body .container #promo #body #items .item.c4, body .container #promo #body #items .item.c8, body .container #promo #body #items .item.c12 {
   margin-right: 0;
 }
 @media only screen and (max-width: 1023px) {
-  /* line 289, startpage.scss */
+  /* line 304, startpage.scss */
   body .container #promo #body #items .item.c2, body .container #promo #body #items .item.c6, body .container #promo #body #items .item.c10 {
     margin-right: 0;
   }
 }
-/* line 295, startpage.scss */
+/* line 310, startpage.scss */
 body .container #promo #body #more {
   float: right;
 }
