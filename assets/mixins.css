@@ -1,5 +1,58 @@
-/* Site specific mixins
+/* Theme mixins
 */
+/* Arrow
+*/
+/* Accordion
+*/
+/* Subscribe to newsletter
+*/
+/* A list like used in the header to display cart
+*/
+/* Product view -- Promo  
+*/
+/* Product view -- Bestseller
+*/
+/* Product view -- Hot
+*/
+/* Image bordered
+*/
+/* Image rounded
+*/
+/* Add to cart
+*/
+/* Responsive mixins
+ - http://thesassway.com/intermediate/responsive-web-design-part-1
+ - screen sizes: http://www.responsinator.com/
+*/
+@media only screen and (max-width: 600px) {
+  /* line 746, mixins.scss */
+  .mobile {
+    display: block;
+  }
+
+  /* line 749, mixins.scss */
+  .desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  /* line 754, mixins.scss */
+  .mobile {
+    display: none;
+  }
+
+  /* line 757, mixins.scss */
+  .desktop {
+    display: block;
+  }
+}
+/* Responisive, fluid Images
+*/
+/* line 766, mixins.scss */
+img {
+  max-width: 100%;
+}
+
 /* General mixins
 */
 /* set z-index

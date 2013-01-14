@@ -1,26 +1,6 @@
-@media only screen and (max-width: 600px) {
-  /* line 71, metrics.scss */
-  .mobile {
-    display: block;
-  }
-
-  /* line 74, metrics.scss */
-  .desktop {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) {
-  /* line 79, metrics.scss */
-  .mobile {
-    display: none;
-  }
-
-  /* line 82, metrics.scss */
-  .desktop {
-    display: block;
-  }
-}
-/* line 91, metrics.scss */
-img {
-  max-width: 100%;
-}
+/* Vertical rhythm
+*/
+/* The grid
+ - it would be nice to redeclare these variables inside media queries, but it is not possible
+ - http://stackoverflow.com/questions/9122195/using-sass-variables-with-css3-media-queries
+*/
