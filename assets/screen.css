@@ -370,46 +370,26 @@ img {
 body .container {
   width: 90%;
   margin: 0 auto;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 2, header.scss */
-  body .container {
-    width: 96%;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 2, header.scss */
-  body .container {
-    max-width: 960px;
-  }
-}
-/* line 16, header.scss */
+/* line 7, header.scss */
 body .container #header {
   width: 100%;
   float: left;
 }
-/* line 19, header.scss */
+/* line 10, header.scss */
 body .container #header #cart {
   width: 20%;
-  margin-left: 5%;
+  margin: 0 0 0 0;
+  float: left;
   float: right;
 }
-/* line 24, header.scss */
-body .container #header #cart h3 {
-  display: none;
-}
-/* line 30, header.scss */
+/* line 16, header.scss */
 body .container #header hgroup {
   width: 75%;
+  margin: 0 5% 0 0;
   float: left;
 }
-/* line 34, header.scss */
+/* line 19, header.scss */
 body .container #header hgroup #logo {
   width: 20%;
   float: left;
@@ -421,22 +401,22 @@ body .container #header hgroup #logo {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 34, header.scss */
+  /* line 19, header.scss */
   body .container #header hgroup #logo {
     width: 100%;
   }
-  /* line 41, header.scss */
+  /* line 26, header.scss */
   body .container #header hgroup #logo h1 {
     padding: 0.625em 0 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 34, header.scss */
+  /* line 19, header.scss */
   body .container #header hgroup #logo {
     width: 40%;
   }
 }
-/* line 49, header.scss */
+/* line 34, header.scss */
 body .container #header hgroup #strapline {
   width: 40%;
   float: left;
@@ -451,28 +431,28 @@ body .container #header hgroup #strapline {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 49, header.scss */
+  /* line 34, header.scss */
   body .container #header hgroup #strapline {
     width: 100%;
   }
-  /* line 56, header.scss */
+  /* line 41, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: 0;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 61, header.scss */
+  /* line 46, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: .5em 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 49, header.scss */
+  /* line 34, header.scss */
   body .container #header hgroup #strapline {
     width: 60%;
   }
 }
-/* line 69, header.scss */
+/* line 54, header.scss */
 body .container #header hgroup #page-name {
   width: 40%;
   float: left;
@@ -484,18 +464,18 @@ body .container #header hgroup #page-name {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 69, header.scss */
+  /* line 54, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 69, header.scss */
+  /* line 54, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
-/* line 82, header.scss */
+/* line 67, header.scss */
 body .container #header nav {
   width: 75%;
   float: left;
@@ -504,12 +484,12 @@ body .container #header nav {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 82, header.scss */
+  /* line 67, header.scss */
   body .container #header nav {
     width: 100%;
   }
 }
-/* line 90, header.scss */
+/* line 75, header.scss */
 body .container #header nav ul {
   display: block;
   margin: 0;
@@ -525,11 +505,11 @@ body .container #header nav ul li {
   float: left;
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 94, header.scss */
+  /* line 79, header.scss */
   body .container #header nav ul li {
     margin-bottom: 0.3125em;
   }
-  /* line 97, header.scss */
+  /* line 82, header.scss */
   body .container #header nav ul li.all-products-link {
     float: left;
   }

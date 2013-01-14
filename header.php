@@ -68,16 +68,12 @@
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <header id="header">
-	    	<div id="cart" class="desktop">
-					<?php dynamic_shopping_cart(); ?>          
-				</div>
-				<div id="cart" class="mobile">
-					<div id="widgetshoppingcart">
-						<ul>
-							<li><a href="">Cos</a></li>
-							<li><a href="">Info</a></li>
-						</ul>
-					</div>
+				<div id="cart">
+					<ul>
+						<li><a href="">Cosul meu (0)</a></li>
+						<li><a href="">Contul meu</a></li>
+						<li><a href="">Informatii</a></li>
+					</ul>
 				</div>
 				
 	    	<hgroup>

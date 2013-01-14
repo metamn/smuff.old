@@ -3,33 +3,18 @@ body {
 		width: 90%;
 		margin: 0 auto;
 		
-		@include respond-to(all-mobile) {
-			width: 96%;
-		}
-		
-		@include respond-to(desktop) {
-		  max-width: 960px;
-		}
-		
-		
 		
 		#header {
 			@include block;
 			
 			#cart {
-				width: $minor;
-				margin-left: $margin;
+				@include col($minor, 0, 0);
 				float: right;
-				
-				h3 {
-					@include hidden;
-				}
 			}
 			
 			
 			hgroup {
-				width: $major;
-				float: left;
+				@include col($major, 0, $margin);
 				
 				#logo {
 					width: $minor;

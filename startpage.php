@@ -9,17 +9,15 @@
 ?>
 
 <?php 
-  // Multiple loops 
-  // - only for content
-  // - sidebar posts are queryied in sidebar
   
-  // products filed under 'Nou-2' are excluded!
+  // New
   $new_products = query_posts2( array(
     'posts_per_page' => 15,
-    'cat' => 10,
-    'category__not_in' => array(1694)
+    'cat' => 10
   ));
   
+  
+  // Bestsellers
   $args = array();
   $args['posts_per_page'] = '6';
   
@@ -35,39 +33,56 @@
   $args['category__and'] = array(14, $t->term_id);
   $top_sales_last_three_months = query_posts2($args);
   
+  
+  // Promo
   $promo_posts = query_posts2('posts_per_page=8&cat=15');
   
-  // - Special posts are put first on HOT
-  $special_posts = query_posts2('posts_per_page=1&cat=1317');
+  
+  // Anouncements
+  $anouncements = query_posts2('posts_per_page=1&cat=1317');
  ?>
 
 
 
 <?php 
-	if ($new_products->have_posts()) {
-		include "home-hot.php";
-	} else {
-		echo '<h2>&nbsp;</h2><h2>Inca nu sunt produse in magazin.</h2>';
-	}
-	
-	include 'c_subscribe-to-newsletter.php';
-	
-	include "home-bestsellers.php"; ?>
-	
-	
-	<section id="search">
-		<div id="title">
-  		<h3>Cautare cadouri</h3>
-  	</div>
-  	<div id="body">
-  		<?php include 'search-enhanced.php' ?>
-  	</div>
-	</section>
-	
-	
-	<?php if ($promo_posts->have_posts()) { 
-		include "home-promo.php"; 
-	}  
+
+  // Banners, news, campaigns
+  $product_list = $anouncements;
+  $product_list_title = '';
+  $product_list_id = 'anouncements';
+  include 'product-list.php';
+  
+  // New products
+  $product_list = $new_products;
+  $product_list_title = 'Noutati';
+  $product_list_id = 'new-products';
+  include 'product-list.php';
+  
+  
+  // Bestsellers
+  echo "<section id='bestsellers'>";
+    $product_list = $top_sales_last_week;
+    $product_list_title = 'Ultima saptamana';
+    $product_list_id = 'bestsellers-last-week';
+    include 'product-list.php';
+    
+    $product_list = $top_sales_last_month;
+    $product_list_title = 'Ultima luna';
+    $product_list_id = 'bestsellers-last-month';
+    include 'product-list.php';
+    
+    $product_list = $top_sales_last_three_months;
+    $product_list_title = 'Ultimele trei luni';
+    $product_list_id = 'bestsellers-last-three-months';
+    include 'product-list.php';
+  echo "</section>";
+  
+  
+  // Sales
+  $product_list = $promo_posts;
+  $product_list_title = 'Reduceri';
+  $product_list_id = 'sales';
+  include 'product-list.php';
 ?>
 
 
