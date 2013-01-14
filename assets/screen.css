@@ -2261,7 +2261,7 @@ body .container #promo #title #arrow .arrow-right {
 }
 /* line 1443, theme.scss */
 body .container #promo #body #items .item {
-  height: 36em;
+  height: 40em;
   border-bottom: 3px solid #f1f1f1;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -2313,27 +2313,19 @@ body .container #promo #body #items .item #text h3, body .container #promo #body
 body .container #promo #body #items .item #text h3 {
   font-weight: bold;
   margin: 0.625em 0;
-  min-height: 3.75em;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
+  min-height: 5em;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 216, theme.scss */
-  body .container #promo #body #items .item #text h3 {
-    min-height: 2.5em;
-  }
-}
-/* line 227, theme.scss */
+/* line 222, theme.scss */
 body .container #promo #body #items .item #text p {
   padding: 0.625em;
+  min-height: 2.5em;
 }
 @media only screen and (max-width: 600px) {
   /* line 208, theme.scss */
   body .container #promo #body #items .item #text {
     margin: 0 0 0 1.25em;
   }
-  /* line 234, theme.scss */
+  /* line 230, theme.scss */
   body .container #promo #body #items .item #text h3, body .container #promo #body #items .item #text p {
     background: transparent;
     padding: 0;
@@ -2344,6 +2336,10 @@ body .container #promo #body #items .item #text p {
   /* line 208, theme.scss */
   body .container #promo #body #items .item #text {
     margin: 0;
+  }
+  /* line 240, theme.scss */
+  body .container #promo #body #items .item #text h3 {
+    min-height: 3.75em;
   }
   /* line 243, theme.scss */
   body .container #promo #body #items .item #text p {
@@ -2356,14 +2352,14 @@ body .container #promo #body #items .item #text p {
     padding: 0;
   }
   /* line 252, theme.scss */
-  body .container #promo #body #items .item #text p {
-    min-height: 2.5em;
+  body .container #promo #body #items .item #text h3 {
+    min-height: 3.75em;
   }
 }
 /* line 259, theme.scss */
 body .container #promo #body #items .item #price {
   position: relative;
-  top: 5em;
+  top: 2.5em;
   float: left;
   margin-left: 1.25em;
   font-size: larger;

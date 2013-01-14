@@ -187,7 +187,7 @@ $very-light-gray: #f1f1f1;
 /* Product view -- Promo  
 */
 @mixin promo {
-	height: 36em;
+	height: 40em;
 	border-bottom: 3px solid $very-light-gray;
 	
 	@include respond-to(all-mobile) {
@@ -216,16 +216,12 @@ $very-light-gray: #f1f1f1;
 		h3 {
 			font-weight: bold;
 			margin: $pad/2 0;
-			
-			min-height: $pad*3;
-			
-			@include respond-to(desktop) { 
-			  min-height: $pad*2; 
-			}
+			min-height: $pad*4;
 		}
 		
 		p {
 			padding: $pad/2;
+			min-height: $pad*2;
 		}
 		
 		@include respond-to(all-mobile) {
@@ -240,6 +236,10 @@ $very-light-gray: #f1f1f1;
 		
 		@include respond-to(mobile-landscape) {
 			margin: 0;
+			
+			h3 {
+			  min-height: $pad*3;
+			}
 			p {
 				display: none;
 			}
@@ -249,8 +249,8 @@ $very-light-gray: #f1f1f1;
 			h3, p {
 				padding: 0;
 			}
-			p {
-				min-height: $pad*2;
+			h3 {
+				min-height: $pad*3;
 			}
 		}
 		
@@ -258,7 +258,7 @@ $very-light-gray: #f1f1f1;
 	
 	#price {
 		position: relative;
-		top: $pad*4;
+		top: $pad*2;
 		float: left;
 		margin-left: $pad;
 		font-size: larger;

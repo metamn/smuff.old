@@ -102,7 +102,7 @@
 	
 	<div id="more">
 		<h4>
-			Vezi toate noutatiile Smuff
+			Scroll pt. toate noutatiile Smuff
 			<br/>
 			(sau click aici)
 		</h4>
