@@ -1,5 +1,12 @@
 <?php
 
+  // Parameters
+  // - product_list: a list of products to show
+  // - product_list_id: the css id of the section
+  // - product_list_title : the visible title of the section. If empty the title won't be shown
+  
+  // - and all parameters from product_thumb.php;
+
   if ($product_list) {
     if ($product_list->have_posts()) {
       
@@ -21,7 +28,7 @@
               $counter = 1;
               while ($product_list->have_posts()) : $product_list->the_post(); update_post_caches($posts); 
                 include "product-thumb.php";
-                $counter++;
+                $counter += 1;
               endwhile; 
             ?>
           </div>

@@ -50,12 +50,15 @@
   $product_list = $anouncements;
   $product_list_title = '';
   $product_list_id = 'anouncements';
+  $image_size = 'large';
   include 'product-list.php';
+
   
   // New products
   $product_list = $new_products;
   $product_list_title = 'Noutati';
   $product_list_id = 'new-products';
+  $image_size = 'medium';
   include 'product-list.php';
   
   
@@ -82,6 +85,7 @@
   $product_list = $promo_posts;
   $product_list_title = 'Reduceri';
   $product_list_id = 'sales';
+  $image_size = 'thumbnail';
   include 'product-list.php';
 ?>
 
