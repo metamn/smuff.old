@@ -17,7 +17,8 @@ body {
 				@include col($major, 0, $margin);
 				
 				#logo {
-					width: $minor;
+					max-width: $minor;
+					margin-right: $margin;
 					float: left;
 					
 					@include respond-to(mobile) {
@@ -32,7 +33,7 @@ body {
 					}
 				}
 				#strapline {
-					width: $minor*2;
+					max-width: $minor*2;
 					float: left;
 					
 					@include respond-to(mobile) {
@@ -64,9 +65,8 @@ body {
 				}
 			}
 			
-			nav {
-				width: $major;
-				float: left;
+			#menu {
+				@include block;
 				
 				@include respond-to(mobile) {
 					width: 100%;
@@ -85,6 +85,8 @@ body {
 					}
 				}
 			} 
+			
+			
 		}
 	}
 }

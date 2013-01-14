@@ -68,13 +68,13 @@
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <header id="header">
-				<div id="cart">
+				<nav id="cart">
 					<ul>
 						<li><a href="">Cosul meu (0)</a></li>
 						<li><a href="">Contul meu</a></li>
 						<li><a href="">Informatii</a></li>
 					</ul>
-				</div>
+				</nav>
 				
 	    	<hgroup>
 	    		<div id="logo">
@@ -94,10 +94,11 @@
 					</div>
 	    	</hgroup>
 	    	
-	    	<nav>
+	    	<nav id="menu">
 					<ul>
 						<?php 
-							$cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
+							//$cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
+							$cats = array('pentru-el', 'pentru-ea', 'pentru-copii');
 							foreach ($cats as $cat) { 
 								$c = get_category_by_slug($cat);
 							?>
@@ -105,9 +106,18 @@
 									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 								</li>
 							<?php } ?>
-							<li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=grid">Toate cadourile &rarr;</a></li>
+							
+							
+							<li><a href="">Toate cadourile</a></li>
+							<li class="last">
+							  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
+			            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri"/>
+			            <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
+			          </form>
+							</li>
 					</ul>
-			  </nav>		
+			  </nav>	
+			 
 	    </header>
 	  		
 			

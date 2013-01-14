@@ -1,76 +1,23 @@
 body {
 	.container {
 		
-		#facebook-like-box {
-			@include block;
-			margin: $margin 0;
-			
-			#campaign-message {
-				@include col(45%, 5%, 0);
-				float: right;
-			}
-			
-			#body {
-				@include col(50%, 0, 0);
-				float: left;
-			}
-		}
-		
-		#top-new-categories {
-			@include block;
-			margin: $margin 0;
-			
-			ul {
-				@include list-inline;
-				
-				li {
-					width: 22%;
-					margin-right: 3%;
-				}
-				li.last {
-					margin-right: 0;
-				}
-			}
-		}
-		
-		#footer-info {
-			@include block;
-			margin: $margin 0;
-			
-			#col-1 {
-				@include col(45%, 0, 10%);
-			}
-			
-			#col-2 {
-				@include col(45%, 0, 0);
-			}
-		}
 		
 		#footer {
 			@include block;
-			margin: $margin 0 0;
+			margin: $margin 0;
+			
+			#info {
+			  @include block;
+			  
+			  ul {
+			    @include list-inline;
+			  }
+			}
+			
+			#company {
+			  @include block;
+			}
 		}
 		
-		#footer-subscribe {
-			@include block;
-			margin: $pad 0 $margin;
-			
-			#newsletter {
-				@include col(45%, 0, 10%);
-			}
-			
-			#social {
-				@include col(45%, 0, 0);
-				
-				#partners {
-					display: block;
-				}
-				
-				#fb-like {
-					display: block;
-				}
-			}
-		}
-	
 	}
 }

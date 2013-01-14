@@ -391,7 +391,8 @@ body .container #header hgroup {
 }
 /* line 19, header.scss */
 body .container #header hgroup #logo {
-  width: 20%;
+  max-width: 20%;
+  margin-right: 5%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -405,7 +406,7 @@ body .container #header hgroup #logo {
   body .container #header hgroup #logo {
     width: 100%;
   }
-  /* line 26, header.scss */
+  /* line 27, header.scss */
   body .container #header hgroup #logo h1 {
     padding: 0.625em 0 0;
   }
@@ -416,9 +417,9 @@ body .container #header hgroup #logo {
     width: 40%;
   }
 }
-/* line 34, header.scss */
+/* line 35, header.scss */
 body .container #header hgroup #strapline {
-  width: 40%;
+  max-width: 40%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -431,28 +432,28 @@ body .container #header hgroup #strapline {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 34, header.scss */
+  /* line 35, header.scss */
   body .container #header hgroup #strapline {
     width: 100%;
   }
-  /* line 41, header.scss */
+  /* line 42, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: 0;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 46, header.scss */
+  /* line 47, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: .5em 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 34, header.scss */
+  /* line 35, header.scss */
   body .container #header hgroup #strapline {
     width: 60%;
   }
 }
-/* line 54, header.scss */
+/* line 55, header.scss */
 body .container #header hgroup #page-name {
   width: 40%;
   float: left;
@@ -464,33 +465,33 @@ body .container #header hgroup #page-name {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 54, header.scss */
+  /* line 55, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 54, header.scss */
+  /* line 55, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
-/* line 67, header.scss */
-body .container #header nav {
-  width: 75%;
+/* line 68, header.scss */
+body .container #header #menu {
+  width: 100%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 67, header.scss */
-  body .container #header nav {
+  /* line 68, header.scss */
+  body .container #header #menu {
     width: 100%;
   }
 }
 /* line 75, header.scss */
-body .container #header nav ul {
+body .container #header #menu ul {
   display: block;
   margin: 0;
   /* handhelds to iPhone 3,4*/
@@ -498,742 +499,78 @@ body .container #header nav ul {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 /* line 825, mixins.scss */
-body .container #header nav ul li {
+body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
   margin-left: 0;
   float: left;
+  margin-right: 2.5%;
+}
+/* line 832, mixins.scss */
+body .container #header #menu ul li.last {
+  margin-right: 0;
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   /* line 79, header.scss */
-  body .container #header nav ul li {
+  body .container #header #menu ul li {
     margin-bottom: 0.3125em;
   }
   /* line 82, header.scss */
-  body .container #header nav ul li.all-products-link {
+  body .container #header #menu ul li.all-products-link {
     float: left;
   }
 }
 
 /* line 4, startpage.scss */
-body.home .container #hot {
+body.home .container section {
   width: 100%;
   float: left;
 }
-/* line 7, startpage.scss */
-body.home .container #hot #slider {
-  width: 75%;
+/* line 9, startpage.scss */
+body.home .container section #body #items #item {
+  width: 30%;
   margin: 0 5% 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 7, startpage.scss */
-  body.home .container #hot #slider {
-    display: none;
-  }
-}
-@media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 7, startpage.scss */
-  body.home .container #hot #slider {
-    width: 80%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 7, startpage.scss */
-  body.home .container #hot #slider {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 21, startpage.scss */
-body.home .container #hot #thumbs {
-  width: 20%;
-  margin: 0 0 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 21, startpage.scss */
-  body.home .container #hot #thumbs {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 21, startpage.scss */
-  body.home .container #hot #thumbs {
-    display: none;
-  }
-}
-/* line 31, startpage.scss */
-body.home .container #hot #thumbs #items {
-  height: 45em;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 31, startpage.scss */
-  body.home .container #hot #thumbs #items {
-    height: 47.5em;
-  }
-}
-/* line 41, startpage.scss */
-body.home .container #hot #more {
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 41, startpage.scss */
-  body.home .container #hot #more {
-    display: none;
-  }
-}
-/* line 48, startpage.scss */
-body.home .container #hot #noutati {
-  width: 100%;
-  float: left;
-  display: none;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 48, startpage.scss */
-  body.home .container #hot #noutati {
-    display: block;
-  }
-}
-/* line 57, startpage.scss */
-body.home .container #hot #noutati #items .item {
-  width: 45%;
-  margin: 0 10% 0 0;
-  float: left;
+  height: 30em;
   margin-bottom: 5%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
-  /* line 57, startpage.scss */
-  body.home .container #hot #noutati #items .item {
-    width: 100%;
-    margin-bottom: 20%;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  /* line 57, startpage.scss */
-  body.home .container #hot #noutati #items .item {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 57, startpage.scss */
-  body.home .container #hot #noutati #items .item {
-    width: 47.5%;
-    margin: 0 5% 0 0;
-    float: left;
-  }
-}
-/* line 74, startpage.scss */
-body.home .container #hot #noutati #items .item.c2, body.home .container #hot #noutati #items .item.c4, body.home .container #hot #noutati #items .item.c6, body.home .container #hot #noutati #items .item.c8, body.home .container #hot #noutati #items .item.c10, body.home .container #hot #noutati #items .item.c12, body.home .container #hot #noutati #items .item.c14, body.home .container #hot #noutati #items .item.c16, body.home .container #hot #noutati #items .item.c18, body.home .container #hot #noutati #items .item.c20 {
+/* line 15, startpage.scss */
+body.home .container section #body #items #item.c3, body.home .container section #body #items #item.c6, body.home .container section #body #items #item.c9 {
   margin-right: 0;
-}
-/* line 81, startpage.scss */
-body.home .container #subscribe-newsletter {
-  width: 100%;
-  float: left;
-  background: #4D8FCE;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  margin: 5% 0;
-}
-@media only screen and (max-width: 600px) {
-  /* line 81, startpage.scss */
-  body.home .container #subscribe-newsletter {
-    width: 90%;
-    padding: 5%;
-  }
-}
-/* line 48, mixins.scss */
-body.home .container #subscribe-newsletter .arrow-right {
-  width: 0;
-  height: 0;
-  line-height: 0;
-  border-top: 6em solid transparent;
-  border-right: 6em solid transparent;
-  border-bottom: 6em solid transparent;
-  border-left: 6em solid #111111;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 48, mixins.scss */
-  body.home .container #subscribe-newsletter .arrow-right {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 48, mixins.scss */
-  body.home .container #subscribe-newsletter .arrow-right {
-    display: none;
-  }
-}
-/* line 68, mixins.scss */
-body.home .container #subscribe-newsletter h4 {
-  padding: 0.625em 0;
-}
-/* line 72, mixins.scss */
-body.home .container #subscribe-newsletter #text {
-  width: 58%;
-  margin-right: 5%;
-  float: left;
-  position: relative;
-  margin-left: -4.8em;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 72, mixins.scss */
-  body.home .container #subscribe-newsletter #text {
-    width: 100%;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 72, mixins.scss */
-  body.home .container #subscribe-newsletter #text {
-    margin-left: 1.25em;
-  }
-}
-/* line 89, mixins.scss */
-body.home .container #subscribe-newsletter #text form {
-  padding: 0;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-/* line 92, mixins.scss */
-body.home .container #subscribe-newsletter #text form input.text {
-  width: 100%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 92, mixins.scss */
-  body.home .container #subscribe-newsletter #text form input.text {
-    width: 75%;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 101, mixins.scss */
-  body.home .container #subscribe-newsletter #text form input {
-    font-size: small;
-  }
-}
-/* line 107, mixins.scss */
-body.home .container #subscribe-newsletter #text #whatis {
-  position: relative;
-  top: -1.5em;
-  float: right;
-  text-decoration: underline;
-}
-/* line 114, mixins.scss */
-body.home .container #subscribe-newsletter #text #whatis .tooltip-text {
-  text-decoration: none;
-}
-/* line 118, mixins.scss */
-body.home .container #subscribe-newsletter #text #whatis:hover .tooltip-text {
-  left: 5em;
-}
-/* line 123, mixins.scss */
-body.home .container #subscribe-newsletter #facebook-connect {
-  float: left;
-  width: 25%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 123, mixins.scss */
-  body.home .container #subscribe-newsletter #facebook-connect {
-    width: 100%;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 132, mixins.scss */
-  body.home .container #subscribe-newsletter #facebook-connect h4 {
-    margin-bottom: 1.25em;
-  }
-}
-/* line 137, mixins.scss */
-body.home .container #subscribe-newsletter #facebook-connect #auth-loggedin {
-  padding: 1.25em;
-  font-size: small;
-}
-/* line 86, startpage.scss */
-body.home .container #subscribe-newsletter.bigger-margin-bottom {
-  margin: 10em 0;
-}
-/* line 91, startpage.scss */
-body.home .container #bestsellers {
-  width: 100%;
-  float: left;
-  margin: 5% 0;
-}
-/* line 95, startpage.scss */
-body.home .container #bestsellers #title {
-  /* @include col($minor2, 0, 0); */
-  width: 7.5%;
-  margin: 0 2.5% 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 95, startpage.scss */
-  body.home .container #bestsellers #title {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 103, startpage.scss */
-  body.home .container #bestsellers #title h2 {
-    padding: 0.3125em;
-  }
-}
-/* line 109, startpage.scss */
-body.home .container #bestsellers #body {
-  width: 75%;
-  margin: 0 0 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 109, startpage.scss */
-  body.home .container #bestsellers #body {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 117, startpage.scss */
-body.home .container #bestsellers #body #filters div {
-  width: 30%;
-  margin: 0 5% 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 117, startpage.scss */
-  body.home .container #bestsellers #body #filters div {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 124, startpage.scss */
-body.home .container #bestsellers #body #filters div#last-three-months {
-  margin-right: 0;
-}
-/* line 130, startpage.scss */
-body.home .container #bestsellers #body #products #last-week, body.home .container #bestsellers #body #products #last-month, body.home .container #bestsellers #body #products #last-three-months {
-  display: none;
-}
-/* line 133, startpage.scss */
-body.home .container #bestsellers #body #products #last-week.active, body.home .container #bestsellers #body #products #last-month.active, body.home .container #bestsellers #body #products #last-three-months.active {
-  display: block;
-}
-/* line 137, startpage.scss */
-body.home .container #bestsellers #body #products #items {
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-/* line 138, startpage.scss */
-body.home .container #bestsellers #body #products #items .item {
-  width: 30%;
-  margin: 0 5% 0 0;
-  float: left;
-  margin-bottom: 5em;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 138, startpage.scss */
-  body.home .container #bestsellers #body #products #items .item {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-    margin-bottom: 5%;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  /* line 138, startpage.scss */
-  body.home .container #bestsellers #body #products #items .item {
-    width: 47.5%;
-    margin: 0 5% 0 0;
-    float: left;
-    margin-bottom: 5%;
-  }
-}
-/* line 151, startpage.scss */
-body.home .container #bestsellers #body #products #items .item.c3, body.home .container #bestsellers #body #products #items .item.c6, body.home .container #bestsellers #body #products #items .item.c9 {
-  margin-right: 0;
-}
-@media only screen and (max-width: 1023px) {
-  /* line 156, startpage.scss */
-  body.home .container #bestsellers #body #products #items .item.c2, body.home .container #bestsellers #body #products #items .item.c4, body.home .container #bestsellers #body #products #items .item.c6, body.home .container #bestsellers #body #products #items .item.c8, body.home .container #bestsellers #body #products #items .item.c10, body.home .container #bestsellers #body #products #items .item.c12 {
-    margin-right: 0 !important;
-  }
-}
-/* line 164, startpage.scss */
-body.home .container #bestsellers #body #more {
-  float: right;
-}
-/* line 170, startpage.scss */
-body.home .container #search {
-  width: 100%;
-  float: left;
-  margin: 5% 0;
-}
-/* line 174, startpage.scss */
-body.home .container #search #title {
-  width: 20%;
-  margin: 0 0 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 174, startpage.scss */
-  body.home .container #search #title {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 174, startpage.scss */
-  body.home .container #search #title {
-    display: none;
-  }
-}
-/* line 185, startpage.scss */
-body.home .container #search #body {
-  width: 75%;
-  margin: 0 0 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 600px) {
-  /* line 185, startpage.scss */
-  body.home .container #search #body {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 185, startpage.scss */
-  body.home .container #search #body {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 199, startpage.scss */
-body.home .container #promo {
-  width: 100%;
-  float: left;
-  margin: 5% 0;
-}
-/* line 203, startpage.scss */
-body.home .container #promo #title {
-  width: 20%;
-  margin: 0 0 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 203, startpage.scss */
-  body.home .container #promo #title {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 203, startpage.scss */
-  body.home .container #promo #title {
-    width: 33%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 203, startpage.scss */
-  body.home .container #promo #title {
-    width: 20%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 217, startpage.scss */
-body.home .container #promo #body {
-  width: 75%;
-  margin: 0 0 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 217, startpage.scss */
-  body.home .container #promo #body {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 217, startpage.scss */
-  body.home .container #promo #body {
-    width: 66%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 217, startpage.scss */
-  body.home .container #promo #body {
-    width: 80%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 231, startpage.scss */
-body.home .container #promo #body #items {
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-/* line 232, startpage.scss */
-body.home .container #promo #body #items .item {
-  width: 22%;
-  margin: 0 4% 0 0;
-  float: left;
-  margin-bottom: 5em;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 380px) {
-  /* line 232, startpage.scss */
-  body.home .container #promo #body #items .item {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-    margin: 2.5em 0 0;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  /* line 232, startpage.scss */
-  body.home .container #promo #body #items .item {
-    width: 45%;
-    margin: 0 10% 0 0;
-    float: left;
-  }
-}
-/* line 244, startpage.scss */
-body.home .container #promo #body #items .item.c4, body.home .container #promo #body #items .item.c8, body.home .container #promo #body #items .item.c12 {
-  margin-right: 0;
-}
-@media only screen and (max-width: 1023px) {
-  /* line 248, startpage.scss */
-  body.home .container #promo #body #items .item.c2, body.home .container #promo #body #items .item.c6, body.home .container #promo #body #items .item.c10 {
-    margin-right: 0;
-  }
-}
-/* line 254, startpage.scss */
-body.home .container #promo #body #more {
-  float: right;
 }
 
-/* line 4, footer.scss */
-body .container #facebook-like-box {
+/* line 5, footer.scss */
+body .container #footer {
   width: 100%;
   float: left;
   margin: 5% 0;
 }
-/* line 8, footer.scss */
-body .container #facebook-like-box #campaign-message {
-  width: 45%;
-  margin: 0 0 0 5%;
-  float: left;
-  float: right;
-}
-/* line 13, footer.scss */
-body .container #facebook-like-box #body {
-  width: 50%;
-  margin: 0 0 0 0;
-  float: left;
-  float: left;
-}
-/* line 19, footer.scss */
-body .container #top-new-categories {
+/* line 9, footer.scss */
+body .container #footer #info {
   width: 100%;
   float: left;
-  margin: 5% 0;
 }
-/* line 23, footer.scss */
-body .container #top-new-categories ul {
+/* line 12, footer.scss */
+body .container #footer #info ul {
   display: block;
   margin: 0;
 }
 /* line 825, mixins.scss */
-body .container #top-new-categories ul li {
+body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
   margin-left: 0;
   float: left;
+  margin-right: 2.5%;
 }
-/* line 26, footer.scss */
-body .container #top-new-categories ul li {
-  width: 22%;
-  margin-right: 3%;
-}
-/* line 30, footer.scss */
-body .container #top-new-categories ul li.last {
+/* line 832, mixins.scss */
+body .container #footer #info ul li.last {
   margin-right: 0;
 }
-/* line 36, footer.scss */
-body .container #footer-info {
+/* line 17, footer.scss */
+body .container #footer #company {
   width: 100%;
   float: left;
-  margin: 5% 0;
-}
-/* line 40, footer.scss */
-body .container #footer-info #col-1 {
-  width: 45%;
-  margin: 0 10% 0 0;
-  float: left;
-}
-/* line 44, footer.scss */
-body .container #footer-info #col-2 {
-  width: 45%;
-  margin: 0 0 0 0;
-  float: left;
-}
-/* line 49, footer.scss */
-body .container #footer {
-  width: 100%;
-  float: left;
-  margin: 5% 0 0;
-}
-/* line 54, footer.scss */
-body .container #footer-subscribe {
-  width: 100%;
-  float: left;
-  margin: 1.25em 0 5%;
-}
-/* line 58, footer.scss */
-body .container #footer-subscribe #newsletter {
-  width: 45%;
-  margin: 0 10% 0 0;
-  float: left;
-}
-/* line 62, footer.scss */
-body .container #footer-subscribe #social {
-  width: 45%;
-  margin: 0 0 0 0;
-  float: left;
-}
-/* line 65, footer.scss */
-body .container #footer-subscribe #social #partners {
-  display: block;
-}
-/* line 69, footer.scss */
-body .container #footer-subscribe #social #fb-like {
-  display: block;
 }
 
 /* line 3, search.scss */

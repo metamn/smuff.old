@@ -12,7 +12,7 @@
   
   // New
   $new_products = query_posts2( array(
-    'posts_per_page' => 15,
+    'posts_per_page' => 10,
     'cat' => 10
   ));
   
@@ -35,7 +35,7 @@
   
   
   // Promo
-  $promo_posts = query_posts2('posts_per_page=8&cat=15');
+  $promo_posts = query_posts2('posts_per_page=10&cat=15');
   
   
   // Anouncements
@@ -46,13 +46,15 @@
 
 <?php 
 
+  /*
   // Banners, news, campaigns
   $product_list = $anouncements;
   $product_list_title = '';
   $product_list_id = 'anouncements';
   $image_size = 'large';
   include 'product-list.php';
-
+  */
+  
   
   // New products
   $product_list = $new_products;
@@ -85,7 +87,6 @@
   $product_list = $promo_posts;
   $product_list_title = 'Reduceri';
   $product_list_id = 'sales';
-  $image_size = 'thumbnail';
   include 'product-list.php';
 ?>
 
