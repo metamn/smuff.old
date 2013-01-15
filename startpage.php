@@ -12,7 +12,7 @@
   
   // New
   $new_products = query_posts2( array(
-    'posts_per_page' => 10,
+    'posts_per_page' => 7,
     'cat' => 10
   ));
   
@@ -35,7 +35,7 @@
   
   
   // Promo
-  $promo_posts = query_posts2('posts_per_page=10&cat=15');
+  $promo_posts = query_posts2('posts_per_page=7&cat=15');
   
   
   // Anouncements
