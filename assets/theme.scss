@@ -11,8 +11,8 @@ $blue: #4D8FCE;
 $green: #8AEA4C;
 $red: #F98751;
 $error: #F98751;
-$yellow: F9B451;
-$notice: F9B451;
+$yellow: #F9B451;
+$notice: #F9B451;
 
 $gray: #AAA;
 $dark-gray: #4A4742;
@@ -30,6 +30,8 @@ a, a:active, a:visited, a:hover {
   color: $color;
   text-decoration: none;
 }
+
+
 
 /* Price
 ---------------------------------------------------
@@ -60,8 +62,20 @@ a, a:active, a:visited, a:hover {
 /* Mixins
 */
 
+
+@mixin arrow-to-reveal-content {
+	content: '\003E';
+	float: right;
+	margin-left: $pad/4;
+	color: $sale;
+	
+	@include rotate(90deg, .75);
+}
+
+
 @mixin product-thumb {
   background: $background url(stripe.png);
+  height: 32em !important;
   
   img {
 		@include image-bordered(1%);
@@ -71,31 +85,34 @@ a, a:active, a:visited, a:hover {
 	  margin: $pad/2 $pad;
 	  padding: $pad/2 $pad;
 	  background: $background;
-	  min-height: 3em;
+	  min-height: 4.5em;
 	}
 	
 	#title {
 	  h3 {
 	    padding: 0;
-	    font-size: 1em;
+	    font-size: 1.5em;
 	    font-weight: bold;
 	  }
 	}
 	
 	#excerpt {
-	  color: $dark-gray;
+	  a {
+	    color: $dark-gray;
+	  }
 	}
 	
 	#price {
-	  @include col(45%, $pad, 5%);
+	  @include col(50%, $pad, 5%);
 	  margin-top: $pad;
 	}
 	
 	#category {
-	  min-width: 25%;
-	  margin-right: $pad;
-	  margin-top: $pad/2;
+	  min-width: 20%;
+	  margin-right: 1.5em; /* Because of the small font size */
+	  margin-top: $pad;
 	  float: right;
+	  font-size: small;
 	  
 	  background: $gray;
 	  
@@ -109,32 +126,51 @@ a, a:active, a:visited, a:hover {
 }
 
 
-/* Header
+/* Header, footer, and general settings
 */
 
 body {
+  background: $background url(background.png);
+  font-family: 'Coda', serif;
+  
   .container {
+  
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+    }
+    
     #header {
       #strapline {
         a {
-          color: $light-gray;
+          color: $sale;
         }
       }
       
       #menu {
+        background: $very-light-gray;
+        border-top: 1px solid $light-gray;
+        border-bottom: 1px solid $light-gray;
+        
         ul {
           li {
-            background: $gray;
-            padding: $pad/2;
-            margin-right: 1% !important;
+            padding: $pad;
+            margin-right: 0 !important;
           }
           li.last {
             background: none;
-            padding: $pad/4;
+            padding: $pad/2;
             
             input[type="text"] {
-              width: 27em;
+              border-bottom: none;
+              padding: $pad/2;
               text-align: center;
+              
+              width: 23em;
+              margin-left: 6em;
+            }
+            
+            input[type="submit"] {
+              margin-left: 2.5em;
             }
           }
         }

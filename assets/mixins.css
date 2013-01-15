@@ -1,7 +1,5 @@
 /* Theme mixins
 */
-/* Arrow
-*/
 /* Accordion
 */
 /* Subscribe to newsletter
@@ -25,30 +23,30 @@
  - screen sizes: http://www.responsinator.com/
 */
 @media only screen and (max-width: 600px) {
-  /* line 746, mixins.scss */
+  /* line 739, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 749, mixins.scss */
+  /* line 742, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 754, mixins.scss */
+  /* line 747, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 757, mixins.scss */
+  /* line 750, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 766, mixins.scss */
+/* line 759, mixins.scss */
 img {
   max-width: 100%;
 }

@@ -282,8 +282,6 @@ body .container input[type='checkbox']:checked + label:after {
 
 /* Theme mixins
 */
-/* Arrow
-*/
 /* Accordion
 */
 /* Subscribe to newsletter
@@ -307,30 +305,30 @@ body .container input[type='checkbox']:checked + label:after {
  - screen sizes: http://www.responsinator.com/
 */
 @media only screen and (max-width: 600px) {
-  /* line 746, mixins.scss */
+  /* line 739, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 749, mixins.scss */
+  /* line 742, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 754, mixins.scss */
+  /* line 747, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 757, mixins.scss */
+  /* line 750, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 766, mixins.scss */
+/* line 759, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -379,7 +377,7 @@ a, a:active, a:visited, a:hover {
 /* Price
 ---------------------------------------------------
 */
-/* line 38, theme.scss */
+/* line 40, theme.scss */
 .price, .normal-price {
   border: #cccccc;
   padding: 0.3125em;
@@ -391,98 +389,122 @@ a, a:active, a:visited, a:hover {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 38, theme.scss */
+  /* line 40, theme.scss */
   .price, .normal-price {
     padding: 0.625em;
   }
 }
 
-/* line 47, theme.scss */
+/* line 49, theme.scss */
 .price {
   background: #f25f18;
 }
 
-/* line 50, theme.scss */
+/* line 52, theme.scss */
 .old-price, .oldprice {
   text-decoration: line-through;
 }
 
-/* line 53, theme.scss */
+/* line 55, theme.scss */
 .normal-price {
   background: #4d8fce;
 }
 
 /* Mixins
 */
-/* Header
+/* Header, footer, and general settings
 */
-/* line 119, theme.scss */
+/* line 132, theme.scss */
+body {
+  background: white url(background.png);
+  font-family: 'Coda', serif;
+}
+/* line 138, theme.scss */
+body .container h1, body .container h2, body .container h3, body .container h4 {
+  font-family: 'Oswald', sans-serif;
+}
+/* line 144, theme.scss */
 body .container #header #strapline a {
-  color: #cccccc;
+  color: #f25f18;
 }
-/* line 126, theme.scss */
+/* line 149, theme.scss */
+body .container #header #menu {
+  background: #f1f1f1;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 155, theme.scss */
 body .container #header #menu ul li {
-  background: #aaaaaa;
-  padding: 0.625em;
-  margin-right: 1% !important;
+  padding: 1.25em;
+  margin-right: 0 !important;
 }
-/* line 131, theme.scss */
+/* line 159, theme.scss */
 body .container #header #menu ul li.last {
   background: none;
-  padding: 0.3125em;
+  padding: 0.625em;
 }
-/* line 135, theme.scss */
+/* line 163, theme.scss */
 body .container #header #menu ul li.last input[type="text"] {
-  width: 27em;
+  border-bottom: none;
+  padding: 0.625em;
   text-align: center;
+  width: 23em;
+  margin-left: 6em;
+}
+/* line 172, theme.scss */
+body .container #header #menu ul li.last input[type="submit"] {
+  margin-left: 2.5em;
 }
 
 /* Startpage
 */
-/* line 156, theme.scss */
+/* line 192, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
+  height: 32em !important;
 }
-/* line 66, theme.scss */
+/* line 80, theme.scss */
 body.home section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 70, theme.scss */
+/* line 84, theme.scss */
 body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
   margin: 0.625em 1.25em;
   padding: 0.625em 1.25em;
   background: white;
-  min-height: 3em;
+  min-height: 4.5em;
 }
-/* line 78, theme.scss */
+/* line 92, theme.scss */
 body.home section #body #products #product #title h3 {
   padding: 0;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
 }
-/* line 85, theme.scss */
-body.home section #body #products #product #excerpt {
+/* line 100, theme.scss */
+body.home section #body #products #product #excerpt a {
   color: #4a4742;
 }
-/* line 89, theme.scss */
+/* line 105, theme.scss */
 body.home section #body #products #product #price {
-  width: 45%;
+  width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 94, theme.scss */
+/* line 110, theme.scss */
 body.home section #body #products #product #category {
-  min-width: 25%;
-  margin-right: 1.25em;
-  margin-top: 0.625em;
+  min-width: 20%;
+  margin-right: 1.5em;
+  /* Because of the small font size */
+  margin-top: 1.25em;
   float: right;
+  font-size: small;
   background: #aaaaaa;
 }
-/* line 102, theme.scss */
+/* line 119, theme.scss */
 body.home section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -516,7 +538,7 @@ body .container #header hgroup {
 /* line 19, header.scss */
 body .container #header hgroup #logo {
   max-width: 18.5%;
-  margin-right: 2%;
+  margin-right: 4%;
   /* Aligned to the menu item below */
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -623,7 +645,7 @@ body .container #header #menu ul {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 825, mixins.scss */
+/* line 818, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -631,15 +653,22 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 2.5%;
 }
-/* line 832, mixins.scss */
+/* line 825, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
 /* line 78, header.scss */
 body .container #header #menu ul li:after {
-  content: '\25bc';
+  content: '\003E';
   float: right;
-  color: #cccccc;
+  margin-left: 0.3125em;
+  color: #f25f18;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
 }
 /* line 82, header.scss */
 body .container #header #menu ul li.last:after {
@@ -661,7 +690,7 @@ body.home .container nav.tab ul {
   display: block;
   margin: 0;
 }
-/* line 825, mixins.scss */
+/* line 818, mixins.scss */
 body.home .container nav.tab ul li {
   display: inline-block;
   list-style-type: none;
@@ -669,7 +698,7 @@ body.home .container nav.tab ul li {
   float: left;
   margin-right: 2.5%;
 }
-/* line 832, mixins.scss */
+/* line 825, mixins.scss */
 body.home .container nav.tab ul li.last {
   margin-right: 0;
 }
@@ -731,7 +760,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 825, mixins.scss */
+/* line 818, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -739,7 +768,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 2.5%;
 }
-/* line 832, mixins.scss */
+/* line 825, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
