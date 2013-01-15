@@ -22,15 +22,15 @@
   $args['posts_per_page'] = '6';
   
   $t = get_term_by('slug', 'cele-mai-vandute-saptamana-trecuta', 'category');
-  $args['category__and'] = array(14, $t->term_id);
+  $args['category__and'] = array(8, $t->term_id);
   $top_sales_last_week = query_posts2($args);
   
   $t = get_term_by('slug', 'cele-mai-vandute-luna-trecuta', 'category');
-  $args['category__and'] = array(14, $t->term_id);
+  $args['category__and'] = array(8, $t->term_id);
   $top_sales_last_month = query_posts2($args);
   
   $t = get_term_by('slug', 'cele-mai-vandute-in-ultimele-trei-luni', 'category');
-  $args['category__and'] = array(14, $t->term_id);
+  $args['category__and'] = array(8, $t->term_id);
   $top_sales_last_three_months = query_posts2($args);
   
   
@@ -41,6 +41,15 @@
   // Anouncements
   $anouncements = query_posts2('posts_per_page=1&cat=1317');
  ?>
+ 
+ 
+ <nav id="startpage-main-menu" class='tab'>
+  <ul>
+    <li><h2 id="new-products">Noutati</h2></li>
+    <li><h2 id="bestsellers">Cele mai vandute</h2></li>
+    <li><h2 id="sales">Reduceri</h2></li>
+  </ul>
+ </nav>
 
 
 
@@ -56,6 +65,7 @@
   */
   
   
+  
   // New products
   $product_list = $new_products;
   $product_list_title = 'Noutati';
@@ -65,7 +75,17 @@
   
   
   // Bestsellers
-  echo "<section id='bestsellers'>";
+  echo "<section id='bestsellers'>"; ?>
+  
+    <nav id="startpage-bestsellers-menu" class='tab'>
+      <ul>
+        <li><h2 id="bestsellers-last-week">Ultima saptamana</h2></li>
+        <li><h2 id="bestsellers-last-month">Ultima luna</h2></li>
+        <li><h2 id="bestsellers-last-three-months">Ultimele trei luni</h2></li>
+      </ul>
+     </nav>
+  
+    <?php
     $product_list = $top_sales_last_week;
     $product_list_title = 'Ultima saptamana';
     $product_list_id = 'bestsellers-last-week';

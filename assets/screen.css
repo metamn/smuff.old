@@ -433,12 +433,13 @@ body .container #header #menu ul li.last {
 }
 /* line 135, theme.scss */
 body .container #header #menu ul li.last input[type="text"] {
-  width: 18em;
+  width: 27em;
+  text-align: center;
 }
 
 /* Startpage
 */
-/* line 155, theme.scss */
+/* line 156, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
 }
@@ -655,12 +656,49 @@ body .container #header #menu ul li.last:after {
   }
 }
 
-/* line 4, startpage.scss */
+/* line 5, startpage.scss */
+body.home .container nav.tab ul {
+  display: block;
+  margin: 0;
+}
+/* line 825, mixins.scss */
+body.home .container nav.tab ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+  margin-right: 2.5%;
+}
+/* line 832, mixins.scss */
+body.home .container nav.tab ul li.last {
+  margin-right: 0;
+}
+/* line 8, startpage.scss */
+body.home .container nav.tab ul li {
+  cursor: pointer;
+}
+/* line 11, startpage.scss */
+body.home .container nav.tab ul li h2 {
+  color: #aaaaaa;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, startpage.scss */
+body.home .container nav.tab ul li h2.active, body.home .container nav.tab ul li h2:hover {
+  color: #222222;
+}
+/* line 24, startpage.scss */
 body.home .container section {
   width: 100%;
   float: left;
+  display: none;
 }
-/* line 9, startpage.scss */
+/* line 29, startpage.scss */
+body.home .container section #title h2 {
+  display: none;
+}
+/* line 36, startpage.scss */
 body.home .container section #body #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -668,9 +706,13 @@ body.home .container section #body #products #product {
   height: 30em;
   margin-bottom: 5%;
 }
-/* line 15, startpage.scss */
+/* line 42, startpage.scss */
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
+}
+/* line 48, startpage.scss */
+body.home .container section.active {
+  display: block;
 }
 
 /* line 5, footer.scss */

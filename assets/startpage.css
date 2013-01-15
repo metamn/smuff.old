@@ -1,14 +1,24 @@
 /*
-Syntax error: Undefined mixin 'block'.
-        on line 5 of /home/cs/work/smuff/assets/startpage.scss, in `block'
-        from line 5 of /home/cs/work/smuff/assets/startpage.scss
+Syntax error: Undefined mixin 'list-inline'.
+        on line 6 of /home/cs/work/smuff/assets/startpage.scss, in `list-inline'
+        from line 6 of /home/cs/work/smuff/assets/startpage.scss
 
 1: /home/cs/work/smuff/assets/startpage.scss
 
 Backtrace:
-/home/cs/work/smuff/assets/startpage.scss:5:in `block'
-/home/cs/work/smuff/assets/startpage.scss:5
+/home/cs/work/smuff/assets/startpage.scss:6:in `list-inline'
+/home/cs/work/smuff/assets/startpage.scss:6
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -96,4 +106,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'block'.\A         on line 5 of /home/cs/work/smuff/assets/startpage.scss, in `block'\A         from line 5 of /home/cs/work/smuff/assets/startpage.scss\A \A 1: /home/cs/work/smuff/assets/startpage.scss"; }
+  content: "Syntax error: Undefined mixin 'list-inline'.\A         on line 6 of /home/cs/work/smuff/assets/startpage.scss, in `list-inline'\A         from line 6 of /home/cs/work/smuff/assets/startpage.scss\A \A 1: /home/cs/work/smuff/assets/startpage.scss"; }
