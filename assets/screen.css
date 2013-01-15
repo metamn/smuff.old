@@ -366,6 +366,129 @@ img {
 */
 /* block element -- expand something full size inside a container
 */
+/* Color Scheme
+*/
+/* Links
+*/
+/* line 29, theme.scss */
+a, a:active, a:visited, a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+
+/* Price
+---------------------------------------------------
+*/
+/* line 38, theme.scss */
+.price, .normal-price {
+  border: #cccccc;
+  padding: 0.3125em;
+  -webkit-border-radius: 10% 10%;
+  -moz-border-radius: 10% / 10%;
+  border-radius: 10% / 10%;
+  /* handhelds to iPhone 3,4*/
+  /* a collector mode, combining all above */
+  /* a collector mode, combining smartphones in landscape mode & tablets */
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  /* line 38, theme.scss */
+  .price, .normal-price {
+    padding: 0.625em;
+  }
+}
+
+/* line 47, theme.scss */
+.price {
+  background: #f25f18;
+}
+
+/* line 50, theme.scss */
+.old-price, .oldprice {
+  text-decoration: line-through;
+}
+
+/* line 53, theme.scss */
+.normal-price {
+  background: #4d8fce;
+}
+
+/* Mixins
+*/
+/* Header
+*/
+/* line 119, theme.scss */
+body .container #header #strapline a {
+  color: #cccccc;
+}
+/* line 126, theme.scss */
+body .container #header #menu ul li {
+  background: #aaaaaa;
+  padding: 0.625em;
+  margin-right: 1% !important;
+}
+/* line 131, theme.scss */
+body .container #header #menu ul li.last {
+  background: none;
+  padding: 0.3125em;
+}
+/* line 135, theme.scss */
+body .container #header #menu ul li.last input[type="text"] {
+  width: 18em;
+}
+
+/* Startpage
+*/
+/* line 155, theme.scss */
+body.home section #body #products #product {
+  background: white url(stripe.png);
+}
+/* line 66, theme.scss */
+body.home section #body #products #product img {
+  width: 98%;
+  padding: 1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 70, theme.scss */
+body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
+  margin: 0.625em 1.25em;
+  padding: 0.625em 1.25em;
+  background: white;
+  min-height: 3em;
+}
+/* line 78, theme.scss */
+body.home section #body #products #product #title h3 {
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 85, theme.scss */
+body.home section #body #products #product #excerpt {
+  color: #4a4742;
+}
+/* line 89, theme.scss */
+body.home section #body #products #product #price {
+  width: 45%;
+  margin: 0 5% 0 1.25em;
+  float: left;
+  margin-top: 1.25em;
+}
+/* line 94, theme.scss */
+body.home section #body #products #product #category {
+  min-width: 25%;
+  margin-right: 1.25em;
+  margin-top: 0.625em;
+  float: right;
+  background: #aaaaaa;
+}
+/* line 102, theme.scss */
+body.home section #body #products #product #category a {
+  padding: 0.625em;
+  color: white;
+  text-align: center;
+  display: block;
+}
+
 /* line 2, header.scss */
 body .container {
   width: 90%;
@@ -378,21 +501,22 @@ body .container #header {
 }
 /* line 10, header.scss */
 body .container #header #cart {
-  width: 30%;
+  width: 23.5%;
   margin: 0 0 0 0;
   float: left;
   float: right;
 }
 /* line 16, header.scss */
 body .container #header hgroup {
-  width: 70%;
+  width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }
 /* line 19, header.scss */
 body .container #header hgroup #logo {
-  max-width: 25%;
-  margin-right: 5%;
+  max-width: 18.5%;
+  margin-right: 2%;
+  /* Aligned to the menu item below */
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -414,12 +538,12 @@ body .container #header hgroup #logo {
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   /* line 19, header.scss */
   body .container #header hgroup #logo {
-    width: 50%;
+    width: 37%;
   }
 }
 /* line 35, header.scss */
 body .container #header hgroup #strapline {
-  max-width: 50%;
+  max-width: 37%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -450,12 +574,12 @@ body .container #header hgroup #strapline {
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   /* line 35, header.scss */
   body .container #header hgroup #strapline {
-    width: 75%;
+    width: 55.5%;
   }
 }
 /* line 55, header.scss */
 body .container #header hgroup #page-name {
-  width: 50%;
+  width: 37%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -537,15 +661,15 @@ body.home .container section {
   float: left;
 }
 /* line 9, startpage.scss */
-body.home .container section #body #items #item {
-  width: 30%;
-  margin: 0 5% 0 0;
+body.home .container section #body #products #product {
+  width: 23%;
+  margin: 0 2.5% 0 0;
   float: left;
   height: 30em;
   margin-bottom: 5%;
 }
 /* line 15, startpage.scss */
-body.home .container section #body #items #item.c3, body.home .container section #body #items #item.c6, body.home .container section #body #items #item.c9 {
+body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
 }
 
@@ -642,7 +766,7 @@ body .container article {
 }
 /* line 6, single.scss */
 body .container article #col-1 {
-  width: 70%;
+  width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -672,7 +796,7 @@ body .container article #col-1 {
 }
 /* line 22, single.scss */
 body .container article #col-2 {
-  width: 25%;
+  width: 18.5%;
   margin: 0 0 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -687,7 +811,7 @@ body .container article #col-2 {
 }
 /* line 31, single.scss */
 body .container article #post-content {
-  width: 70%;
+  width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -703,7 +827,7 @@ body .container article #post-content {
 }
 /* line 39, single.scss */
 body .container article #contact-info {
-  width: 25%;
+  width: 18.5%;
   margin: 0 0 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -721,7 +845,7 @@ body .container article #contact-info {
 body .container #subscribe-newsletter {
   width: 100%;
   float: left;
-  width: 70%;
+  width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -737,7 +861,7 @@ body .container #subscribe-newsletter {
 }
 /* line 57, single.scss */
 body .container #post-shopping-2 {
-  width: 70%;
+  width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -762,13 +886,13 @@ body .container #post-shopping-2 {
 }
 /* line 67, single.scss */
 body .container #post-shopping-2 #shopping {
-  width: 30%;
+  width: 23.5%;
   margin: 0 0 0 0;
   float: left;
 }
 /* line 71, single.scss */
 body .container #post-shopping-2 #shopping-incentives {
-  width: 70%;
+  width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }

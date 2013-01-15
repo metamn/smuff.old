@@ -61,7 +61,7 @@
  
 ?>
 
-<article id="item" class="<?php echo $kounter ?>">    
+<article id="product" class="<?php echo $kounter ?>">    
   <?php if (isset($thumb[0])) { ?>
     <div id="image">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"> 

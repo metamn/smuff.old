@@ -23,7 +23,7 @@
         <?php } ?>
         
         <div id="body">
-          <div id="items">
+          <div id="products">
             <?php 
               $counter = 1;
               while ($product_list->have_posts()) : $product_list->the_post(); update_post_caches($posts); 

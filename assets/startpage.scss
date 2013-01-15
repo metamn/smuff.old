@@ -5,14 +5,14 @@ body.home {
 	    @include block;
 	    
 	    #body {
-	      #items {
-	        #item {
-	          @include col(30%, 0, 5%); 
+	      #products {
+	        #product {
+	          @include col(23%, 0, 2.5%); 
 	          height: 30em;
 	          
 	          margin-bottom: $margin;
 	        }
-	        #item.c3, #item.c6, #item.c9 {
+	        #product.c4, #product.c8, #product.c12 {
 	          margin-right: 0;
 	        }
 	      }

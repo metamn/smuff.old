@@ -111,7 +111,7 @@
 							<li><a href="">Toate cadourile</a></li>
 							<li class="last">
 							  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
-			            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri"/>
+			            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri pe stoc"/>
 			            <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
 			          </form>
 							</li>

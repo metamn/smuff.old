@@ -1,0 +1,1508 @@
+/* Colors
+---------------------------------------------------
+*/
+
+$color: #111;
+$background: #fff;
+$sale: #F25F18;
+$cart: #8AEA4C;
+
+$orange: #F25F18;
+$blue: #4D8FCE;
+$green: #8AEA4C;
+$red: #F98751;
+$error: #F98751;
+$yellow: F9B451;
+$notice: F9B451;
+
+$gray: #AAA;
+$dark-gray: #4A4742;
+$light-gray: #ccc;
+$light-gray-2: #eee;
+$very-light-gray: #f1f1f1;
+
+
+
+
+/* Theme mixins
+---------------------------------------------------
+*/
+
+
+/* Arrow
+*/
+@mixin arrow-to-reveal-content {
+	content: '\25bc';
+	float: right;
+	color: $light-gray;
+}
+
+
+
+/* Accordion
+*/
+@mixin accordion {
+	h2, h3 {
+		cursor: pointer;
+		padding: $pad/2 $pad/4;
+		background: $light-gray-2;
+		border-bottom: 1px solid $light-gray;
+		margin-bottom: 1px;
+		
+		&:after {
+			@include arrow-to-reveal-content;
+		}
+	}
+	.pane {
+		display: none;
+		background: $background;
+		padding: $pad;
+		margin-bottom: $pad*2;
+	}
+}
+
+
+/* Subscribe to newsletter
+*/
+@mixin subscribe-to-newsletter {
+	background: #4D8FCE;
+	
+	@include respond-to(all-mobile) {
+		width: 90%;
+		padding: 5%;
+	}
+	
+	.arrow-right {
+		width: 0; 
+		height: 0;
+		line-height: 0;
+		border-top: 6em solid transparent;
+		border-right: 6em solid transparent;
+		border-bottom: 6em solid transparent;
+		border-left: 6em solid $color;
+		
+		float: left;
+		
+		@include respond-to(all-mobile) {
+			display: none;
+		}
+		@include respond-to(tablet) {
+			display: none;
+		}
+	}
+	
+	
+	h4 {
+		padding: $pad/2 0;
+	}
+
+	#text {
+		width: 58%;
+		margin-right: 5%;
+		float: left;
+		position: relative;
+		margin-left: -4.8em;
+		
+		@include respond-to(all-mobile) {
+			width: 100%;
+			margin: 0;
+		}
+		
+		@include respond-to(tablet) { 
+		  margin-left: $pad; 
+    }
+		
+		
+		form {
+			padding: 0;
+			
+			input.text {
+  			width: 100%;
+  			
+  			@include respond-to(all-mobile) {
+					width: 75%;
+				}
+  		}
+  		
+  		@include respond-to(desktop) {
+  		  input {
+  		    font-size: small;
+  		  }
+  		}
+  	}
+  	
+		#whatis {
+			position: relative;
+			top: -1.5em;
+			float: right;
+			
+			text-decoration: underline;
+			
+			.tooltip-text {
+				text-decoration: none;
+			}
+		}
+		#whatis:hover .tooltip-text {
+			left: 5em;
+		}
+	}
+
+	#facebook-connect {
+		float: left;
+		width: 25%;
+		
+		@include respond-to(all-mobile) {
+			width: 100%;
+			margin: 0;
+		}
+		@include respond-to(tablet) {
+			h4 {
+				margin-bottom: $pad;
+			}
+		}
+		
+		#auth-loggedin {
+			padding: $pad;
+			font-size: small;
+		}
+	}
+}
+
+
+/* A list like used in the header to display cart
+*/
+@mixin list-cart {
+	list-style: none;
+	margin: 0;
+	
+	li {
+		margin-bottom: $pad/4;
+		padding: $pad/4;
+		background: $background;
+		border-bottom: 1px solid $light-gray;
+	}
+}
+
+
+/* Product view -- Promo  
+*/
+@mixin promo {
+	height: 40em;
+	border-bottom: 3px solid $very-light-gray;
+	
+	@include respond-to(all-mobile) {
+		height: 25em;
+	}
+	
+	
+	img {
+		@include image-bordered(1%);
+		width: $image-thumb-width;
+		margin-left: $pad;
+		
+		@include respond-to(mobile-landscape) {
+			margin-left: 0;
+		}
+	}
+	
+	#text {
+		margin: 0 $pad;
+		
+		h3, p {
+			background: $very-light-gray;
+			padding: $pad/2;
+		}
+		
+		h3 {
+			font-weight: bold;
+			margin: $pad/2 0;
+			min-height: $pad*4;
+		}
+		
+		p {
+			padding: $pad/2;
+			min-height: $pad*2;
+		}
+		
+		@include respond-to(all-mobile) {
+			margin: 0 0 0 $pad;
+			
+			h3, p {
+				background: transparent;
+				padding: 0;
+				min-height: $pad;
+			}
+		}
+		
+		@include respond-to(mobile-landscape) {
+			margin: 0;
+			
+			h3 {
+			  min-height: $pad*3;
+			}
+			p {
+				display: none;
+			}
+		}
+		
+		@include respond-to(tablet) {
+			h3, p {
+				padding: 0;
+			}
+			h3 {
+				min-height: $pad*3;
+			}
+		}
+		
+	}
+	
+	#price {
+		position: relative;
+		top: $pad*2;
+		float: left;
+		margin-left: $pad;
+		font-size: larger;
+		
+		@include respond-to(all-mobile) {
+			top: $pad;
+			margin-left: 1em;
+		}
+		@include respond-to(mobile-landscape) {
+			margin-left: 0;
+		}
+		@include respond-to(tablet) {
+			top: $pad;
+			margin-left: 1em;
+		}
+	}
+	
+	&:hover {
+		border-bottom: 3px solid $sale;
+		background: $background url(stripe.png);
+		
+		#text {
+			h3, p {
+				background: $background;
+			}
+		}
+	}
+}
+
+
+
+/* Product view -- Bestseller
+*/ 
+@mixin bestseller {
+	background: $background url(stripe.png);
+	
+	min-height: 37.5em;
+	
+	@include respond-to(all-mobile) { 
+		min-height: 32.5em; 
+	}
+	
+	@include respond-to(desktop) { 
+	  min-height: 42.5em; 
+	}
+	
+	
+	
+	img {
+		@include image-bordered(1%);
+	}
+	
+	#text {
+		margin: 0 $pad;
+		@include respond-to(all-mobile) {
+			margin: 0 $pad/2;
+		}
+		
+		h3, p {
+			background: $background;
+			padding: $pad/2;
+			min-height: $pad*2;
+			
+			@include respond-to(all-mobile) {
+				min-height: $pad;
+			}
+		}
+		
+		h3 {
+			font-weight: bold;
+			margin: $pad 0;
+		}
+		p {
+			padding: $pad/2;
+		}
+	}
+	
+	#price {
+		position: relative;
+		top: $pad*3;
+		width: 50%;
+		float: left;
+		margin-left: $pad;
+		font-size: larger;
+		
+		@include respond-to(all-mobile) {
+			margin-left: $pad/2;
+			top: $pad;
+		}
+	}
+	
+	#category {
+		position: relative;
+		top: 4.5em;
+		width: 30%;
+		float: right;
+		text-align: right;
+		margin-right: $pad;
+		
+		
+		@include respond-to(all-mobile) {
+			margin-right: $pad/2;
+			top: $pad+ $pad/2;
+		}
+		
+		a {
+			background: $light-gray;
+			padding: $pad/4;
+			color: $background;
+			
+			&:hover {
+				background: gray;
+			}
+		}
+	}
+	
+}
+
+
+/* Product view -- Hot
+*/
+@mixin image-hot {
+	#large-image {
+		img {
+			@include image-bordered(.1%);
+			background: url(ajax-loader.gif) no-repeat 50% 50%;
+		}
+	}
+	
+	#large-image-title {
+		background: $color;
+		color: $very-light-gray;
+		height: 5.3em;
+		position: relative;
+		top: -$pad/4;
+		
+		@include respond-to(mobile) {
+			background: $very-light-gray;
+			color: $color;
+			top: 0;
+		}
+		
+		@include respond-to(mobile-landscape) {
+			top: -5.3em;
+			opacity: .9;
+			font-size: smaller;
+			z-index: 1;
+		}
+		
+		#text {
+			background: $sale;
+			color: $very-light-gray;
+			text-align: center;
+			
+			width: 20%;
+			float: left;
+			
+			h1 {
+				padding: 0;
+				
+				@include respond-to(mobile-landscape) {
+					padding: .71em 0;
+				}
+			}
+			
+			@include respond-to(mobile) {
+				display: none;
+			}
+		}
+		
+		#info {
+			width: 80%;
+			float: right;
+			
+			@include respond-to(mobile) {
+				width: 100%;
+				float: left;
+			}
+			
+			.arrow-right {
+				width: 0; 
+				height: 0;
+				line-height: 0;
+				border-top: 2.6em solid transparent;
+				border-right: 2.6em solid transparent;
+				border-bottom: 2.6em solid transparent;
+				border-left: 2.6em solid $sale;
+				
+				margin-left: -1px;
+				
+				@include respond-to(mobile) {
+					display: none;
+				}
+			}
+			
+			h3 {
+				color: $sale;
+				position: relative;
+				padding: 0;
+				top: -3em;
+				left: $pad + $pad/2;
+				
+				@include respond-to(mobile) {
+					top: 0;
+					left: 0;
+					padding: $pad/2 $pad/4;
+					font-weight: bold;
+					color: $color;
+				}
+				
+				@include respond-to(mobile-landscape) {
+					top: -3.5em;
+					left: $pad*2;
+					width: 85%;
+				}
+				
+				@include respond-to(desktop) {
+					top: -2.7em;
+				}
+			}
+			
+			p {
+				color: $very-light-gray;
+				font-size: larger;
+				
+				position: relative;
+				top: -4em;
+				left: 2.5em;
+				
+				@include respond-to(mobile) {
+					top: 0;
+					left: 0;
+					padding: $pad/4;
+					font-size: 100%;
+					color: $color;
+				}
+				
+				@include respond-to(mobile-landscape) {
+					top: -3.5em;
+					width: 85%;
+				}
+				
+				@include respond-to(desktop) {
+					top: -3.7em;
+				}
+			}
+			
+			#price {
+				color: $very-light-gray;
+				position: relative;
+				top: -6em;
+				float: right;
+				margin-right: 1%;
+				
+				@include respond-to(mobile) {
+					top: 0;
+					left: 0;
+					float: left;
+					padding: $pad/4;
+					color: $color;
+				}
+				
+				@include respond-to(mobile-landscape) {
+					top: -7em;
+					z-index: 2;
+					right: -30%;
+					color: $color;
+				}
+				
+				@include respond-to(desktop) {
+					top: -5.5em;
+					font-size: larger;
+				}
+				
+				.normal-price {
+					color: $color;
+				}
+			}
+		}
+	}
+}
+
+
+/* Image bordered
+*/
+@mixin image-bordered($padding) {
+	width: 100%-($padding*2);
+	padding: $padding;
+	border: 1px solid $light-gray;
+	background: $background url(ajax-loader.gif) no-repeat 50% 50%;
+}
+
+
+
+/* Image rounded
+*/
+@mixin image-rounded {
+	text-align: center;
+	
+	li {
+		height: 14em;
+		border-radius: 8em;
+		padding-top: 2.5em;
+		
+		@include respond-to(desktop) {
+			height: 16em;
+			border-radius: 16em;
+			padding-top: 5em;
+		}
+		
+		
+		background: $blue;
+		box-shadow: 2px 1px 1px $gray;
+		border: 1px solid $blue;
+		
+		&:hover {
+			box-shadow: 2px 1px 1px $color;
+			border: 1px solid $color;
+		}
+	}
+}
+
+
+/* Add to cart
+*/
+@mixin add-to-cart {
+	background: $blue;
+	
+	.wpsc_container {
+		padding: $pad $pad/2;
+		
+		.imagecol {
+			display: none !important;
+		}
+		
+		.single_product_display {
+			.textcol {
+				margin-left: 0 !important;
+			}
+		}
+		
+		table {
+			width: 100%;
+			margin-bottom: 0;
+			
+			label {
+				font-weight: normal;
+			}
+			
+			td {
+				border-bottom: 1px dotted;
+				padding: $pad/2;
+			}
+			
+			tr.quantity { 
+				input[type='text'] {
+					width: 90%;
+					color: $color;
+					font-style: normal;
+				}
+			}
+			
+			tr.delivery {
+				td {
+					border-bottom: none;
+				}
+			}
+			
+			tr.submit {
+				td {
+					border-top: 1px solid;
+					padding-top: $pad;
+				}
+			}
+			
+			tr.animation {
+				display: none;
+			}
+			
+			tr.price {
+				background: none !important;
+				font-size: 100%;
+				
+				.pricedisplay {
+					float: none !important;
+  				width: 99%;
+				}
+			}
+			
+			input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {  
+				width: 100%;
+				font-size: small;
+			}
+			input.wpsc_buy_button {
+				background: $green;
+				color: $color;
+				border: 1px dotted;
+			}
+			input.wpsc_buy_button:hover {
+				font-weight: bold;
+			}
+			
+			div.thanks-ok {
+				background: #10A26F;
+				padding: 1em;
+			}
+			
+			div.thanks-error {
+				background: #A53B08;
+				padding: 1em;
+			}
+			
+			.wpsc_cart_message {
+				text-align: center;
+			}
+		}
+	}
+	
+	#wishlist {
+		@include block;
+		
+		margin-bottom: $pad;
+		padding: 0 $pad;
+	
+		.wpfp-span {
+			width: 80%;
+			float: left;
+			
+			padding: $pad/2 $pad/4;
+			text-align: center;
+			background: $color;
+			color: $very-light-gray;
+			padding: $pad/2;
+			
+			&:hover {
+				cursor: pointer;
+				color: $background;
+			} 
+			
+			a {
+				color: $very-light-gray;
+			}
+		}	
+	}
+	
+	#product-discontinued {
+		margin: $pad;
+		
+		p {
+			margin-bottom: $pad;
+		}
+	}
+	
+}
+
+
+
+/* Single, for Product
+---------------------------------------------------
+*/
+	
+body.single {
+	.container {
+	
+		article.product {
+			#large-image {
+				img {
+					@include image-bordered(.1%);
+					background: url(ajax-loader.gif) no-repeat 50% 50%;
+				}
+			}
+			
+			#thumbs {
+				margin: $pad 0 $margin;
+				
+				img {
+					@include image-bordered(1%);
+					margin-right: $pad;
+					width: $image-thumb-width;
+				}
+			}
+			
+			#shopping {
+				@include block;
+				@include add-to-cart;
+			}
+			
+			#shopping-info {
+				@include block;
+				margin: $pad*2 0;
+				background: url(stripe.png);
+				
+				.tooltip {
+					background: $background;
+					margin: $pad*2 $pad;
+					padding: $pad $pad/2;
+				}
+			}
+			
+			#post-content {
+				@include accordion;
+				
+				@include respond-to(all-mobile) {
+					// add to cart is embedded into an accordion div, here we overwrite the accordion settings
+					.mobile {
+						h3 {
+							color: $blue;
+						}
+						div {
+							padding: 0;
+							margin-bottom: 0;
+						}
+						
+						#shopping {
+							@include block;
+							background: $blue;
+						}
+						
+						#shopping-incentives {
+							@include block;
+							background: $green;
+							
+							.inner {
+								margin: $pad*2 $pad;
+								padding: $pad*2 0;
+								background: $green;
+								
+								h4 {
+									font-weight: bold;
+								}
+								p {
+									margin: $pad/2 0 $pad + $pad/2;
+								}
+							}
+						}
+					}
+				}
+				
+			}
+		}
+	
+		#subscribe-newsletter {
+			@include subscribe-to-newsletter;
+			background: url(stripe.png);
+			
+			h4 {
+				margin: $pad/2 0;
+				padding: $pad/4;
+			}
+			
+			#text {
+				margin-left: -4.5em;
+				
+				h4 {	
+					background: $background;
+				}
+			}
+			
+			#facebook-connect {
+				.fb-login-button {
+					margin-top: $pad/4;
+				}
+			}
+		}
+		
+		#post-shopping-2 {
+			margin: $margin 0;
+			
+			#shopping {
+				@include add-to-cart;
+			}
+		
+			#shopping-incentives {
+				background: $green;
+				
+				.inner {
+					margin: $pad*2 $pad;
+				
+					p {
+						margin: $pad/2 0 $pad + $pad/2;
+					}
+				}
+			}
+		}
+		
+		.product-list {
+			h2 {
+				border-bottom: 1px solid;
+				padding-bottom: .28em;
+				margin-bottom: 1em;
+			}
+			.item {
+				@include bestseller;
+			}
+			
+			@include respond-to(all-mobile) {
+				@include accordion;
+			}
+		}
+		
+		#search {
+			@include respond-to(all-mobile) {
+				@include accordion;
+			}
+		}
+		
+		#promo {
+			@include respond-to(all-mobile) {
+				margin: 0;
+			}
+		}
+		
+		
+	}
+}
+
+
+
+body {
+	background: $background url(dotted_bg.png);
+	
+	.container {
+	
+	
+		
+		/* Fonts
+		---------------------------------------------------
+		*/
+		
+		font-family: 'Coda', serif;
+		h1, h2 {
+			font-family: 'Oswald', sans-serif;
+		}
+		
+		
+		
+		/* Links
+		---------------------------------------------------
+		*/
+		a, a:visited {
+			color: $color;
+			text-decoration: none;
+		}
+		#accordion a, #accordion a:visited {
+			border-bottom: 1px dotted;
+		}
+		
+		
+		
+		/* Price
+		---------------------------------------------------
+		*/
+		
+		.price, .normal-price {
+			border: $light-gray;
+			padding: $pad/4;
+			@include border-radius(10%, 10%);   
+			
+			@include respond-to(desktop) {
+			  padding: $pad/2;
+			} 
+		}
+		.price {
+			background: $sale;
+		}
+		.old-price, .oldprice {
+			text-decoration: line-through;
+		}
+		.normal-price {
+			background: $blue;    
+		}
+
+		
+		
+		/* Tooltips
+		----------------------------------------------------
+		- syntax: <span class="tooltip">short text<span class="tooltip-text">long text .......</span></span>
+		- styling tooltips is done inside #tooltip not .tooltip-text
+		*/
+		
+		.tooltip {	
+			cursor: pointer;
+		}
+		.tooltip-text {
+			display: none;
+		}
+		#tooltip {
+			background: $blue;
+			padding: $pad;
+			position: absolute;
+		}
+		#tooltip ul {
+			list-style: none;
+		}
+		#tooltip ul li, #tooltip ol li {
+			padding: $pad/4;
+			margin: $pad/4;
+			border-bottom: 1px dotted;
+		}
+		
+		
+		
+		/* Search
+		---------------------------------------------------
+		*/
+		#search-enhanced {
+			@include block;
+			background: $blue;
+			
+			h3 {
+				margin-left: $pad/2;
+			}
+			
+			ul {
+				@include list-cart;
+				margin: 0 $pad;
+				
+				li {
+					background: $blue;
+					border-bottom: 1px dotted $color;
+					
+					input[type="checkbox"]:after {
+						content: "\2610";
+					}
+					input[type="checkbox"]:checked:after {
+						content: "\25a3";
+					}
+				}
+			}
+			
+			#submit {
+				margin: $pad*2 0 $pad $pad;
+				
+				#advanced-search {
+					font-size: small;
+				}
+			}
+		}
+		
+		#trending {
+			@include block;
+			margin: $pad*4 0;
+			
+			h2 {
+				width: 30%;
+				float: left;
+				margin-right: 3%;
+				padding-right: 3%;
+				border-right: 1px dotted;
+				
+				@include respond-to(mobile) {
+					width: 100%;
+					margin-right: 0;
+					padding-right: 0;
+					border-right: 0;
+				}
+			}
+			
+			#items {
+				width: 55%;
+				margin-left: 3%;
+				float: left;
+				
+				@include respond-to(mobile) {
+					width: auto;
+				}
+				
+				.trend {
+					font-style: italic;
+					font-size: large;
+					float: left;
+					margin: $pad/2;
+					
+					@include respond-to(mobile) {
+						font-size: medium;
+					}
+				}
+			}
+		}
+		
+		
+		
+		/* Header
+		---------------------------------------------------
+		*/
+		
+		#header {
+			#cart {
+				#widgetshoppingcart {
+					background: url(stripe.png);
+					padding: $pad;
+					
+					@include respond-to(mobile) {
+						padding: $pad $pad/2;
+						font-size: smaller;
+					}
+					
+					ul {
+						@include list-cart;
+						
+						li#message {
+							background: $cart;
+						}
+						li {
+							a:hover {
+								font-weight: bold;
+							}
+							strong {
+								color: $sale;
+							}
+						}
+					}
+				}
+			}
+			
+			hgroup {
+				#logo {
+					h1 {
+						font-weight: bold;
+						padding: $pad/4 0 0;
+					}
+				}
+				
+				#strapline {
+					h2 {
+						color: $sale;
+						padding: $pad/2 + $pad/4 0 0;
+						font-weight: bold;
+					}
+				}
+				
+				#page-name {
+					h2 {
+						color: $gray;
+						padding: $pad/2 + $pad/4 0 0;
+						text-align: right;
+					}
+				}
+			}
+			
+			nav {
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+				padding: $pad/2 0;
+				margin: $pad 0;
+				font-size: larger;
+				
+				ul {
+					li {
+						margin-right: $pad;
+						
+						a:hover {
+							border-bottom: 1px solid;
+						}
+					}
+					li.all-products-link {
+						margin-right: 0;
+						float: right;
+					}
+				}
+				
+				@include respond-to(all-mobile) {
+					border-top: none;
+					border-bottom: none;
+					padding: 0;
+					font-size: 100%;
+					
+					ul {
+						background: $light-gray-2;
+						
+						li {
+							padding: $pad/4;
+							margin-right: 0;
+							
+							&:after {
+								content: '\2606';
+								margin-left: $pad/4;
+								color: $dark-gray;
+							}
+						}
+						li.all-products-link {
+							float: left;
+							
+							&:after {
+								content: '';
+							}
+						}
+					}
+				}
+			}	
+		}
+		
+		
+		
+		/* Startpage
+		---------------------------------------------------
+		*/
+			
+		/* Hot
+		---------------------------------------------------
+		*/
+		
+		.home .image-navigation {
+			display: block;
+			top: 400px;
+		}
+		.home .image-navigation.left {
+			margin-left: -20px;
+		}
+		.home .image-navigation.right {
+			margin-left: 680px;
+		}
+
+		
+		#hot {
+			#slider {
+				@include image-hot;
+			}
+			
+			#thumbs {
+				background: $background url(stripe.png);
+				overflow: hidden;
+				
+				#items {
+					overflow-y: scroll;
+					position: relative;
+					right: -30px;
+					
+					.item {
+						padding: $pad/2 $pad;
+						
+						img {
+							@include image-bordered(1%);
+							
+							width: 100px;
+						}
+						
+						.tooltip2 {
+							position: relative;
+							z-index: 1000;
+							cursor: pointer;
+							
+							.tooltip-text {
+								width: 86px;
+								height: auto;
+								min-height: 86px;
+								top: -91px;
+								position: absolute;
+								
+								background: $cart;
+								padding: $pad/2;
+								
+								display: none;
+							}
+						}
+						.tooltip2:hover {
+							z-index: 1001;
+							
+							.tooltip-text {
+								display: block;
+								left: 0;
+							}
+						}
+						
+					}
+				}
+			}
+			
+			#more {
+				background: url(arrow-black-bottom-right.png) no-repeat 15em -4em;
+				height: 10em;
+				width: 40em;
+				float: right;
+				
+				h4 {
+					font-family: 'Nothing You Could Do', cursive; 
+					margin-top: 2em;
+					cursor: pointer;
+				}
+				
+				@include respond-to(mobile-landscape) {
+					width: 90%;
+					height: auto;
+					position: relative;
+					top: -$pad*2;
+				}
+			}
+			
+			#noutati {
+				.item {
+					@include image-hot;
+					font-size: smaller;
+					
+					@include respond-to(all-mobile) {
+						font-size: 100%;
+					}
+					
+					#large-image-title {
+						height: 5.2em;
+						
+						@include respond-to(mobile-landscape) {
+							#info {
+								#price {
+									top: -7.5em;
+									right: 0;
+									color: $background;
+								}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		
+		
+		/* Bestsellers
+		---------------------------------------------------
+		*/
+		#bestsellers {
+			#title {
+				h2 {
+					background: $color;
+					color: $sale;
+					
+					text-transform: uppercase;
+					font-weight: bold;
+					
+					word-wrap: break-word;
+					letter-spacing: 2em;
+					padding: $pad/2;
+					
+					@include respond-to(all-mobile) {
+						letter-spacing: 2px;
+					}
+				}
+			}
+			
+			#body {
+				#filters {
+					@include block;
+					
+					margin-bottom: $pad*3;
+					padding-bottom: $pad;
+					border-bottom: 1px solid;
+					
+					div {
+						background: $color;
+						
+						@include respond-to(all-mobile) {
+							background: $very-light-gray;
+						}
+						
+						h4 {
+							@include pointer;
+							padding: $pad/4 0;
+							
+							color: $gray;
+							margin: $pad/2 0;
+							text-align: center;
+							
+							@include respond-to(all-mobile) {
+								@include col(100%, 0, 0);
+								padding: $pad/4 $pad/2;
+								margin: 0;
+								text-align: left;
+								color: $gray;
+							}
+							
+							@include respond-to(tablet) {
+								text-align: left;
+								font-size: 100%;
+								margin: $pad/2;
+							}
+							
+						}
+						h4:before {
+							content: '\2713';
+							margin-right: $pad/2;
+							color: $gray;
+						}
+						h4.active, h4:hover {
+							color: $background;
+							
+							@include respond-to(all-mobile) {
+								color: $color;
+							}
+						}
+						h4.active:before {
+							color: $background;
+							
+							@include respond-to(all-mobile) {
+								color: $color;
+							}
+						}
+						
+						
+					}
+				}
+				
+				#items {
+					.item {
+						@include bestseller;
+					}
+				}
+			}
+		}
+		
+		
+		
+		/* Search
+		---------------------------------------------------
+		*/
+		#search {
+			#title {
+				background: url(arrow-black-top-right.png) no-repeat 1em 5em;
+				height: 20em;
+				
+				h3 {
+					font-family: 'Nothing You Could Do', cursive; 
+				}
+			}
+		}
+		
+		
+
+		/* Promo
+		---------------------------------------------------
+		*/
+		#promo {
+			margin: $margin 0;
+			
+			#title {
+				color: $background;
+				
+				#percent {
+					width: 70%;
+					float: left;
+					background: $sale;
+					text-align: center;
+					padding: $pad/4 0;
+					
+					h3 {
+						padding: $pad/4 0;
+						font-size: 5em;
+					}
+					
+					
+					@include respond-to(mobile) {
+						width: 100%;
+					}
+				}
+				#arrow {
+					width: 30%;
+					float: right;
+					
+					@include respond-to(mobile) {
+						display: none;
+					}
+					
+					.arrow-right {
+						width: 0;
+						height: 0;
+						line-height: 0;
+						border-top: $pad solid transparent;
+						border-right: $pad solid transparent;
+						border-bottom: $pad solid transparent;
+						border-left: $pad solid $sale;
+						position: relative;
+						top: 3.5em;
+						margin-left: -1px;
+						
+						@include respond-to(mobile) {
+							display: none;
+						}
+					}
+				}
+			}
+			
+			#body {
+				#items {
+					.item {
+						@include promo;
+					}
+				}
+			}
+		}
+	
+	
+		/* Footer
+		---------------------------------------------------
+		*/
+		
+		#top-new-categories {
+			ul {
+				@include image-rounded;
+			}
+		}
+		
+		#footer-info {
+			#contact {
+				ul {
+					list-style: none;
+					margin: 0;
+				}
+			}
+			
+			#company {
+				@include accordion;
+				
+				h3 {
+					background: transparent;
+					border: none;
+					padding: $pad 0;
+				}
+			}
+			
+			#pages {
+				@include accordion;
+				
+				p {
+					margin-top: $pad;
+				}
+			}
+		}
+		
+		#footer {
+			background: $light-gray-2;
+			border-bottom: 1px solid $light-gray;
+			padding: $pad/2;
+		}
+		
+		#footer-subscribe {
+			#newsletter {
+				input[type="email"] {
+					width: 100%;
+				}
+			}
+		}
+		
+		
+	}	
+}
+
+
+
+
