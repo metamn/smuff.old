@@ -378,20 +378,20 @@ body .container #header {
 }
 /* line 10, header.scss */
 body .container #header #cart {
-  width: 20%;
+  width: 30%;
   margin: 0 0 0 0;
   float: left;
   float: right;
 }
 /* line 16, header.scss */
 body .container #header hgroup {
-  width: 75%;
-  margin: 0 5% 0 0;
+  width: 70%;
+  margin: 0 0 0 0;
   float: left;
 }
 /* line 19, header.scss */
 body .container #header hgroup #logo {
-  max-width: 20%;
+  max-width: 25%;
   margin-right: 5%;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -414,12 +414,12 @@ body .container #header hgroup #logo {
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   /* line 19, header.scss */
   body .container #header hgroup #logo {
-    width: 40%;
+    width: 50%;
   }
 }
 /* line 35, header.scss */
 body .container #header hgroup #strapline {
-  max-width: 40%;
+  max-width: 50%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -450,12 +450,12 @@ body .container #header hgroup #strapline {
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
   /* line 35, header.scss */
   body .container #header hgroup #strapline {
-    width: 60%;
+    width: 75%;
   }
 }
 /* line 55, header.scss */
 body .container #header hgroup #page-name {
-  width: 40%;
+  width: 50%;
   float: left;
   /* handhelds to iPhone 3,4*/
   /* a collector mode, combining all above */
@@ -632,7 +632,7 @@ body .container article {
 }
 /* line 6, single.scss */
 body .container article #col-1 {
-  width: 75%;
+  width: 70%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -662,7 +662,7 @@ body .container article #col-1 {
 }
 /* line 22, single.scss */
 body .container article #col-2 {
-  width: 20%;
+  width: 25%;
   margin: 0 0 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -677,7 +677,7 @@ body .container article #col-2 {
 }
 /* line 31, single.scss */
 body .container article #post-content {
-  width: 75%;
+  width: 70%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -693,7 +693,7 @@ body .container article #post-content {
 }
 /* line 39, single.scss */
 body .container article #contact-info {
-  width: 20%;
+  width: 25%;
   margin: 0 0 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -711,7 +711,7 @@ body .container article #contact-info {
 body .container #subscribe-newsletter {
   width: 100%;
   float: left;
-  width: 75%;
+  width: 70%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -727,7 +727,7 @@ body .container #subscribe-newsletter {
 }
 /* line 57, single.scss */
 body .container #post-shopping-2 {
-  width: 75%;
+  width: 70%;
   margin: 0 5% 0 0;
   float: left;
   /* handhelds to iPhone 3,4*/
@@ -752,13 +752,13 @@ body .container #post-shopping-2 {
 }
 /* line 67, single.scss */
 body .container #post-shopping-2 #shopping {
-  width: 25%;
+  width: 30%;
   margin: 0 0 0 0;
   float: left;
 }
 /* line 71, single.scss */
 body .container #post-shopping-2 #shopping-incentives {
-  width: 75%;
+  width: 70%;
   margin: 0 0 0 0;
   float: left;
 }

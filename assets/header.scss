@@ -8,13 +8,13 @@ body {
 			@include block;
 			
 			#cart {
-				@include col($minor, 0, 0);
+				@include col($minor + $margin, 0, 0);
 				float: right;
 			}
 			
 			
 			hgroup {
-				@include col($major, 0, $margin);
+				@include col($major, 0, 0);
 				
 				#logo {
 					max-width: $minor;
