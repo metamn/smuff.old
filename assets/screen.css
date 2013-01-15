@@ -510,12 +510,22 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
+/* line 78, header.scss */
+body .container #header #menu ul li:after {
+  content: '\25bc';
+  float: right;
+  color: #cccccc;
+}
+/* line 82, header.scss */
+body .container #header #menu ul li.last:after {
+  content: '';
+}
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 79, header.scss */
+  /* line 87, header.scss */
   body .container #header #menu ul li {
     margin-bottom: 0.3125em;
   }
-  /* line 82, header.scss */
+  /* line 90, header.scss */
   body .container #header #menu ul li.all-products-link {
     float: left;
   }

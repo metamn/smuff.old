@@ -75,6 +75,14 @@ body {
 				ul {
 					@include list-inline;
 					
+					li:after {
+					  @include arrow-to-reveal-content;
+					}
+					
+					li.last:after {
+					  content: '';
+					}
+					
 					@include respond-to(tablet) {
 						li {
 							margin-bottom: $pad/4;
