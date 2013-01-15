@@ -18,7 +18,6 @@ body {
 				
 				#logo {
 					max-width: $minor;
-					margin-right: 4%; /* Aligned to the menu item below */
 					float: left;
 					
 					@include respond-to(mobile) {

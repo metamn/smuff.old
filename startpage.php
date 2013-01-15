@@ -75,30 +75,20 @@
   
   
   // Bestsellers
-  echo "<section id='bestsellers'>"; ?>
-  
-    <nav id="startpage-bestsellers-menu" class='tab'>
-      <ul>
-        <li><h2 id="bestsellers-last-week">Ultima saptamana</h2></li>
-        <li><h2 id="bestsellers-last-month">Ultima luna</h2></li>
-        <li><h2 id="bestsellers-last-three-months">Ultimele trei luni</h2></li>
-      </ul>
-     </nav>
-  
-    <?php
+  echo "<section id='bestsellers'>"; 
     $product_list = $top_sales_last_week;
     $product_list_title = 'Ultima saptamana';
-    $product_list_id = 'bestsellers-last-week';
+    $product_list_id = 'bestsellers';
     include 'product-list.php';
     
     $product_list = $top_sales_last_month;
     $product_list_title = 'Ultima luna';
-    $product_list_id = 'bestsellers-last-month';
+    $product_list_id = 'bestsellers';
     include 'product-list.php';
     
     $product_list = $top_sales_last_three_months;
     $product_list_title = 'Ultimele trei luni';
-    $product_list_id = 'bestsellers-last-three-months';
+    $product_list_id = 'bestsellers';
     include 'product-list.php';
   echo "</section>";
   

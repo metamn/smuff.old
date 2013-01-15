@@ -75,14 +75,14 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-thumb {
   background: $background url(stripe.png);
-  height: 32em !important;
+  height: 26em !important;
   
   img {
 		@include image-bordered(1%);
 	}
 	
 	#title, #excerpt {
-	  margin: $pad/2 $pad;
+	  margin: $pad/2 $pad/4;
 	  padding: $pad/2 $pad;
 	  background: $background;
 	  min-height: 4.5em;
@@ -97,9 +97,16 @@ a, a:active, a:visited, a:hover {
 	}
 	
 	#excerpt {
+	  display: none;
+	  
 	  a {
 	    color: $dark-gray;
 	  }
+	}
+	
+	
+	#price, #category {
+	  font-size: small;
 	}
 	
 	#price {
@@ -110,7 +117,7 @@ a, a:active, a:visited, a:hover {
 	#category {
 	  min-width: 20%;
 	  margin-right: 1.5em; /* Because of the small font size */
-	  margin-top: $pad;
+	  margin-top: $pad/2;
 	  float: right;
 	  font-size: small;
 	  
@@ -140,25 +147,50 @@ body {
     }
     
     #header {
+      h1, h2 {
+        padding: $pad/2 0;
+      }
+      
+      #logo {
+        margin-right: 2.5%; /* Aligned to the menu item below */
+      }
+      
       #strapline {
         a {
           color: $sale;
         }
       }
       
-      #menu {
-        background: $very-light-gray;
-        border-top: 1px solid $light-gray;
-        border-bottom: 1px solid $light-gray;
+      #cart {
+        font-size: small;
+        color: $gray;
         
         ul {
           li {
-            padding: $pad;
-            margin-right: 0 !important;
+            a {
+              color: $gray;
+            }
+            a:hover {
+              color: $color;
+            }
+          }
+        }
+      }
+      
+      #menu {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: $pad/2 + $pad/4 0 $pad/4;
+        
+        ul {
+          li {
+            margin-right: $pad !important;
           }
           li.last {
-            background: none;
-            padding: $pad/2;
+            padding: 0;
+            position: relative;
+            top: -$pad/4;
+            margin-left: 10em;
             
             input[type="text"] {
               border-bottom: none;
@@ -166,7 +198,6 @@ body {
               text-align: center;
               
               width: 23em;
-              margin-left: 6em;
             }
             
             input[type="submit"] {
@@ -186,14 +217,62 @@ body {
 */
 
 body.home {
+
+  nav.tab {
+    @include block;
+    margin: 2.5em 0 0;
+    
+    ul {
+      list-style: none;
+      
+      li {
+        @include pointer;
+        
+        h2 {
+          color: $gray;
+          font-size: 1.5em;
+          font-weight: normal;
+          font-style: normal;
+          padding: $pad/8;
+        }
+        h2.active, h2:hover {
+          color: $color;
+        }
+      }
+    }
+  }
+	  
   section {
     #body {
       #products {
         #product {
           @include product-thumb;
+          
+          position: relative;
+          top: -10em;
+        }
+        #product.c1 {
+          margin-left: 23% + 2.5% !important;
+        }
+        #product.c3, #product.c7 {
+          margin-right: 0 !important;
+        }
+        #product.c4, #product.c6 {
+          margin-right: 2.5% !important;
         }
       }
     }
+  }
+  section#bestsellers.active section #title h2 {
+    display: block;
+    margin-left: 23% + 2.5% !important;
+    
+    position: relative;
+    top: -5em;
+    
+    border-bottom: 1px solid;
+    padding-bottom: $pad/2;
+    margin-bottom: $pad/2;
   }
 }
 

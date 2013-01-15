@@ -1,26 +1,6 @@
 body.home {
 	.container {	
 	
-	  nav.tab {
-	    ul {
-	      @include list-inline;
-	      
-	      li {
-	        @include pointer;
-	        
-	        h2 {
-	          color: $gray;
-	          font-size: 1.5em;
-	          font-weight: normal;
-	          font-style: normal;
-	        }
-	        h2.active, h2:hover {
-	          color: $color;
-	        }
-	      }
-	    }
-	  }	
-	
 	  section {
 	    @include block;
 	    @include hidden;
