@@ -43,15 +43,6 @@
  ?>
  
  
- <nav id="startpage-main-menu" class='tab'>
-  <ul>
-    <li><h2 id="new-products">Noutati</h2></li>
-    <li><h2 id="bestsellers">Cele mai vandute</h2></li>
-    <li><h2 id="sales">Reduceri</h2></li>
-  </ul>
- </nav>
-
-
 
 <?php 
 
@@ -76,6 +67,8 @@
   
   // Bestsellers
   echo "<section id='bestsellers'>"; 
+  echo "<div id='title'><h2>Cele mai vandute</h2></div>";
+  
     $product_list = $top_sales_last_week;
     $product_list_title = 'Ultima saptamana';
     $product_list_id = 'bestsellers';

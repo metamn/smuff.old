@@ -465,50 +465,44 @@ body .container #header hgroup #strapline h2 {
   font-size: 1.25em;
   background: #f25f18;
   color: #f1f1f1;
-  padding: 0.3125em;
+  padding: 0.3125em 0.9375em;
 }
-/* line 195, theme.scss */
+/* line 194, theme.scss */
+body .container #header hgroup #page-name {
+  display: none;
+}
+/* line 199, theme.scss */
 body .container #header #menu {
   padding: 0.625em;
-  border-bottom: 1px solid #cccccc;
+}
+/* line 202, theme.scss */
+body .container #header #menu ul {
+  list-style: none;
+  margin: 0.625em;
+}
+/* line 206, theme.scss */
+body .container #header #menu ul li {
+  border-bottom: 1px solid #aaaaaa;
+  padding-bottom: 0.3125em;
+  margin-bottom: 0.3125em;
+}
+/* line 211, theme.scss */
+body .container #header #menu ul li:after {
+  content: '\003E';
+  float: right;
+  margin-left: 0.3125em;
+  color: #f25f18;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
 }
 
 /* Startpage
 */
-/* line 216, theme.scss */
-body.home #startpage-main-menu, body.home section, body.home #footer {
-  width: 71.5%;
-  margin: 0 0 0 23.5%;
-  float: left;
-}
-/* line 221, theme.scss */
-body.home #startpage-main-menu ul {
-  display: block;
-  margin: 0;
-}
-/* line 818, mixins.scss */
-body.home #startpage-main-menu ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0;
-  float: left;
-  margin-right: 2.5%;
-}
-/* line 825, mixins.scss */
-body.home #startpage-main-menu ul li.last {
-  margin-right: 0;
-}
-/* line 225, theme.scss */
-body.home #startpage-main-menu ul li h2 {
-  font-size: 1em;
-  padding-bottom: 0.3125em;
-  margin-bottom: 0.9375em;
-}
-/* line 230, theme.scss */
-body.home #startpage-main-menu ul li h2.active, body.home #startpage-main-menu ul li h2:hover {
-  border-bottom: 1px solid;
-}
-/* line 240, theme.scss */
+/* line 234, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em !important;
@@ -547,7 +541,7 @@ body.home section #body #products #product #price, body.home section #body #prod
 }
 /* line 112, theme.scss */
 body.home section #body #products #product #price {
-  width: 50%;
+  width: 45%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
@@ -555,7 +549,7 @@ body.home section #body #products #product #price {
 /* line 117, theme.scss */
 body.home section #body #products #product #category {
   min-width: 20%;
-  margin-right: 1.5em;
+  margin-right: 1em;
   /* Because of the small font size */
   margin-top: 0.625em;
   float: right;
@@ -569,13 +563,14 @@ body.home section #body #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 247, theme.scss */
-body.home section#bestsellers.active section #title h2 {
-  display: block;
-  font-size: 1em;
-  border-bottom: 1px solid;
-  padding-bottom: 0.3125em;
-  margin-bottom: 0.9375em;
+
+/* Article
+*/
+/* line 250, theme.scss */
+body.single .container article {
+  width: 71.5%;
+  margin: 0 0 0 23.5%;
+  float: left;
 }
 
 /* line 2, header.scss */
@@ -589,13 +584,31 @@ body .container #header {
   margin: 0 0 0 0;
   float: left;
   position: fixed;
+  height: 100%;
 }
 
-/* line 8, startpage.scss */
-body.home .container section #title h2 {
+/* line 4, startpage.scss */
+body.home .container #startpage-main-menu {
   display: none;
 }
-/* line 15, startpage.scss */
+/* line 8, startpage.scss */
+body.home .container section, body.home .container #footer {
+  width: 71.5%;
+  margin: 0 0 0 23.5%;
+  float: left;
+}
+/* line 11, startpage.scss */
+body.home .container section section, body.home .container #footer section {
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+/* line 16, startpage.scss */
+body.home .container section section #title h2, body.home .container #footer section #title h2 {
+  padding: 0 0 1.25em;
+  font-size: 1.5em;
+}
+/* line 30, startpage.scss */
 body.home .container section #body #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -603,13 +616,9 @@ body.home .container section #body #products #product {
   height: 30em;
   margin-bottom: 5%;
 }
-/* line 21, startpage.scss */
+/* line 36, startpage.scss */
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
-}
-/* line 27, startpage.scss */
-body.home .container section.active {
-  display: block;
 }
 
 /* line 5, footer.scss */

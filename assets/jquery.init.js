@@ -5,19 +5,7 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
-  // Startpage menu
   
-  $('.home .tab h2').first().addClass('active');
-  $('.home section').first().addClass('active');
-  
-  $('.home .tab h2').click(function() {
-    $('.home .tab h2').removeClass('active');
-    $(this).addClass('active');
-    
-    $('.home section').removeClass('active');
-    var id = $(this).attr('id');
-    $('.home section#' + id).addClass('active');
-  });
   
   
   
