@@ -193,13 +193,11 @@ body {
       }
       
       #menu {
-        background: $background;
         padding: $pad/2;
         border-bottom: 1px solid $light-gray;
         
         ul {
-          width: 33.7% !important;
-				  margin: 0 auto !important;
+          
         }
       }
     }
@@ -216,8 +214,7 @@ body {
 body.home {
 
   #startpage-main-menu, section, #footer {
-    width: 90% !important;
-    margin: 0 5% !important;
+    @include col($major - $margin, $minor + $margin, 0);
   }
   
   #startpage-main-menu {

@@ -5,47 +5,20 @@ body {
 		
 		
 		#header {
-			@include block;
+			@include col($minor, 0, 0);
+			position: fixed;
 			
 			#cart {
-				max-width: $minor;
-				float: right;
+				
 			}
 			
 			
 			hgroup {
-				width: $major;
-				margin: 0 auto;
-				text-align: center;
 				
-				#logo {
-					max-width: $minor;
-					display: inline-block;
-				}
-				#strapline {
-					max-width: $minor*2;
-					display: inline-block;
-				}
-				#page-name {
-					display: none;
-				}
 			}
 			
 			#menu {
-				@include block;
 				
-				ul {
-				  @include list-inline;
-				  
-					li:after {
-					  @include arrow-to-reveal-content;
-					}
-					
-					li.last:after {
-					  content: '';
-					}
-					
-				}
 			} 
 			
 			

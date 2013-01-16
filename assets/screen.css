@@ -469,24 +469,19 @@ body .container #header hgroup #strapline h2 {
 }
 /* line 195, theme.scss */
 body .container #header #menu {
-  background: white;
   padding: 0.625em;
   border-bottom: 1px solid #cccccc;
-}
-/* line 200, theme.scss */
-body .container #header #menu ul {
-  width: 33.7% !important;
-  margin: 0 auto !important;
 }
 
 /* Startpage
 */
-/* line 218, theme.scss */
+/* line 216, theme.scss */
 body.home #startpage-main-menu, body.home section, body.home #footer {
-  width: 90% !important;
-  margin: 0 5% !important;
+  width: 71.5%;
+  margin: 0 0 0 23.5%;
+  float: left;
 }
-/* line 224, theme.scss */
+/* line 221, theme.scss */
 body.home #startpage-main-menu ul {
   display: block;
   margin: 0;
@@ -503,17 +498,17 @@ body.home #startpage-main-menu ul li {
 body.home #startpage-main-menu ul li.last {
   margin-right: 0;
 }
-/* line 228, theme.scss */
+/* line 225, theme.scss */
 body.home #startpage-main-menu ul li h2 {
   font-size: 1em;
   padding-bottom: 0.3125em;
   margin-bottom: 0.9375em;
 }
-/* line 233, theme.scss */
+/* line 230, theme.scss */
 body.home #startpage-main-menu ul li h2.active, body.home #startpage-main-menu ul li h2:hover {
   border-bottom: 1px solid;
 }
-/* line 243, theme.scss */
+/* line 240, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em !important;
@@ -574,7 +569,7 @@ body.home section #body #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 250, theme.scss */
+/* line 247, theme.scss */
 body.home section#bestsellers.active section #title h2 {
   display: block;
   font-size: 1em;
@@ -590,85 +585,17 @@ body .container {
 }
 /* line 7, header.scss */
 body .container #header {
-  width: 100%;
+  width: 18.5%;
+  margin: 0 0 0 0;
   float: left;
-}
-/* line 10, header.scss */
-body .container #header #cart {
-  max-width: 18.5%;
-  float: right;
-}
-/* line 16, header.scss */
-body .container #header hgroup {
-  width: 76.5%;
-  margin: 0 auto;
-  text-align: center;
-}
-/* line 21, header.scss */
-body .container #header hgroup #logo {
-  max-width: 18.5%;
-  display: inline-block;
-}
-/* line 25, header.scss */
-body .container #header hgroup #strapline {
-  max-width: 37%;
-  display: inline-block;
-}
-/* line 29, header.scss */
-body .container #header hgroup #page-name {
-  display: none;
-}
-/* line 34, header.scss */
-body .container #header #menu {
-  width: 100%;
-  float: left;
-}
-/* line 37, header.scss */
-body .container #header #menu ul {
-  display: block;
-  margin: 0;
-}
-/* line 818, mixins.scss */
-body .container #header #menu ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0;
-  float: left;
-  margin-right: 2.5%;
-}
-/* line 825, mixins.scss */
-body .container #header #menu ul li.last {
-  margin-right: 0;
-}
-/* line 40, header.scss */
-body .container #header #menu ul li:after {
-  content: '\003E';
-  float: right;
-  margin-left: 0.3125em;
-  color: #f25f18;
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-}
-/* line 44, header.scss */
-body .container #header #menu ul li.last:after {
-  content: '';
+  position: fixed;
 }
 
-/* line 4, startpage.scss */
-body.home .container section {
-  width: 100%;
-  float: left;
-  display: none;
-}
-/* line 9, startpage.scss */
+/* line 8, startpage.scss */
 body.home .container section #title h2 {
   display: none;
 }
-/* line 16, startpage.scss */
+/* line 15, startpage.scss */
 body.home .container section #body #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -676,11 +603,11 @@ body.home .container section #body #products #product {
   height: 30em;
   margin-bottom: 5%;
 }
-/* line 22, startpage.scss */
+/* line 21, startpage.scss */
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
 }
-/* line 28, startpage.scss */
+/* line 27, startpage.scss */
 body.home .container section.active {
   display: block;
 }
