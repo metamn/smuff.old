@@ -137,35 +137,23 @@ a, a:active, a:visited, a:hover {
 */
 
 body {
-  background: $background url(background.png);
-  font-family: 'Coda', serif;
-  
+
   .container {
-  
-    h1, h2, h3, h4 {
-      font-family: 'Oswald', sans-serif;
-    }
+    width: 100% !important;
+    position: absolute;
+    top: 0; /* a row is inserted at top, this is a fix */
     
     #header {
-      h1, h2 {
-        padding: $pad/2 0;
-      }
-      
-      #logo {
-        margin-right: 2.5%; /* Aligned to the menu item below */
-      }
-      
-      #strapline {
-        a {
-          color: $sale;
-        }
-      }
+      background: $very-light-gray;
       
       #cart {
         font-size: small;
-        color: $gray;
+        text-transform: uppercase;
         
         ul {
+          list-style: none;
+          margin-top: $pad + $pad/2;
+          
           li {
             a {
               color: $gray;
@@ -177,38 +165,47 @@ body {
         }
       }
       
-      #menu {
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        padding: $pad/2 + $pad/4 0 $pad/4;
-        
-        ul {
-          li {
-            margin-right: $pad !important;
+      hgroup {
+        #logo {
+          margin-right: $pad;
+          
+          h1 {
+            letter-spacing: -2px;
+            font-size: 3em;
+            padding: $pad/4;
           }
-          li.last {
-            padding: 0;
-            position: relative;
-            top: -$pad/4;
-            margin-left: 10em;
+        }
+        
+        #strapline {
+          position: relative;
+          top: -$pad/2;
+          
+          h2 {
+            font-weight: normal;
+            font-style: normal;
+            font-size: $pad;
             
-            input[type="text"] {
-              border-bottom: none;
-              padding: $pad/2;
-              text-align: center;
-              
-              width: 23em;
-            }
-            
-            input[type="submit"] {
-              margin-left: 2.5em;
-            }
+            background: $sale;
+            color: $very-light-gray;
+            padding: $pad/4;
           }
         }
       }
+      
+      #menu {
+        background: $background;
+        padding: $pad/2;
+        border-bottom: 1px solid $light-gray;
+        
+        ul {
+          width: 33.7% !important;
+				  margin: 0 auto !important;
+        }
+      }
     }
-  
+    
   }
+  
 }
 
 
@@ -218,62 +215,21 @@ body {
 
 body.home {
 
-  nav.tab {
-    @include block;
-    margin: 2.5em 0 0;
-    
-    ul {
-      list-style: none;
-      
-      li {
-        @include pointer;
-        
-        h2 {
-          color: $gray;
-          font-size: 1.5em;
-          font-weight: normal;
-          font-style: normal;
-          padding: $pad/8;
-        }
-        h2.active, h2:hover {
-          color: $color;
-        }
-      }
-    }
+  section, #footer {
+    width: 90% !important;
+    margin: 0 5% !important;
   }
-	  
+  
   section {
     #body {
       #products {
         #product {
           @include product-thumb;
-          
-          position: relative;
-          top: -10em;
-        }
-        #product.c1 {
-          margin-left: 23% + 2.5% !important;
-        }
-        #product.c3, #product.c7 {
-          margin-right: 0 !important;
-        }
-        #product.c4, #product.c6 {
-          margin-right: 2.5% !important;
         }
       }
     }
   }
-  section#bestsellers.active section #title h2 {
-    display: block;
-    margin-left: 23% + 2.5% !important;
-    
-    position: relative;
-    top: -5em;
-    
-    border-bottom: 1px solid;
-    padding-bottom: $pad/2;
-    margin-bottom: $pad/2;
-  }
+  
 }
 
 

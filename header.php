@@ -52,8 +52,7 @@
 
     <!-- init all jquery functions -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/jquery.init.js?refresh=20121129"></script>
-    
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Coda|Oxygen|Oswald:400,700|Nothing+You+Could+Do">
+   
 		
 		
 		<?php wp_head(); ?>
@@ -62,11 +61,6 @@
 	
 	
 	 <body <?php body_class(); ?>> 
-	  <div id="background-image-container"></div>		
-	  
-	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-theme-url="<?php bloginfo('stylesheet_directory')?>" class="hidden"></div>	  	
-	  
-	  
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <header id="header">
@@ -111,12 +105,7 @@
 							
 							
 							<li><a href="">Toate cadourile</a></li>
-							<li class="last">
-							  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
-			            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri pe stoc"/>
-			            <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
-			          </form>
-							</li>
+							<li class="last"><a href="">Cautare</a></li>
 					</ul>
 			  </nav>	
 			 
