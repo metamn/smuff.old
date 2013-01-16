@@ -215,9 +215,26 @@ body {
 
 body.home {
 
-  section, #footer {
+  #startpage-main-menu, section, #footer {
     width: 90% !important;
     margin: 0 5% !important;
+  }
+  
+  #startpage-main-menu {
+    ul {
+      @include list-inline;
+      
+      li {
+        h2 {
+          font-size: 1em;
+          padding-bottom: $pad/4;
+          margin-bottom: $pad - $pad/4;
+        }
+        h2.active, h2:hover {
+          border-bottom: 1px solid;
+        }
+      }
+    }
   }
   
   section {
@@ -228,6 +245,15 @@ body.home {
         }
       }
     }
+  }
+  
+  section#bestsellers.active section #title h2 {
+    display: block;
+    font-size: 1em;
+    
+    border-bottom: 1px solid;
+    padding-bottom: $pad/4;
+    margin-bottom: $pad - $pad/4;
   }
   
 }

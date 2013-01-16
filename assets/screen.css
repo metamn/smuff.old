@@ -482,11 +482,38 @@ body .container #header #menu ul {
 /* Startpage
 */
 /* line 218, theme.scss */
-body.home section, body.home #footer {
+body.home #startpage-main-menu, body.home section, body.home #footer {
   width: 90% !important;
   margin: 0 5% !important;
 }
-/* line 226, theme.scss */
+/* line 224, theme.scss */
+body.home #startpage-main-menu ul {
+  display: block;
+  margin: 0;
+}
+/* line 818, mixins.scss */
+body.home #startpage-main-menu ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+  margin-right: 2.5%;
+}
+/* line 825, mixins.scss */
+body.home #startpage-main-menu ul li.last {
+  margin-right: 0;
+}
+/* line 228, theme.scss */
+body.home #startpage-main-menu ul li h2 {
+  font-size: 1em;
+  padding-bottom: 0.3125em;
+  margin-bottom: 0.9375em;
+}
+/* line 233, theme.scss */
+body.home #startpage-main-menu ul li h2.active, body.home #startpage-main-menu ul li h2:hover {
+  border-bottom: 1px solid;
+}
+/* line 243, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em !important;
@@ -546,6 +573,14 @@ body.home section #body #products #product #category a {
   color: white;
   text-align: center;
   display: block;
+}
+/* line 250, theme.scss */
+body.home section#bestsellers.active section #title h2 {
+  display: block;
+  font-size: 1em;
+  border-bottom: 1px solid;
+  padding-bottom: 0.3125em;
+  margin-bottom: 0.9375em;
 }
 
 /* line 2, header.scss */
