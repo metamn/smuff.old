@@ -31,6 +31,7 @@ body {
 						width: $minor*2;
 					}
 				}
+				
 				#strapline {
 					max-width: $minor*2;
 					float: left;
@@ -51,6 +52,7 @@ body {
 						width: $minor*3;
 					}
 				}
+				
 				#page-name {
 					width: $minor*2;
 					float: left;
@@ -81,6 +83,7 @@ body {
 					li.last:after {
 					  content: '';
 					}
+					
 					
 					@include respond-to(tablet) {
 						li {

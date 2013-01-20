@@ -464,37 +464,36 @@ body .container #header #menu ul li.last {
   padding: 0;
   position: relative;
   top: -0.3125em;
-  margin-left: 10em;
 }
-/* line 195, theme.scss */
+/* line 196, theme.scss */
 body .container #header #menu ul li.last input[type="text"] {
   border-bottom: none;
   padding: 0.625em;
   text-align: center;
   width: 23em;
 }
-/* line 203, theme.scss */
+/* line 204, theme.scss */
 body .container #header #menu ul li.last input[type="submit"] {
   margin-left: 2.5em;
 }
 
 /* Startpage
 */
-/* line 221, theme.scss */
+/* line 222, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 225, theme.scss */
+/* line 226, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 228, theme.scss */
+/* line 229, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 231, theme.scss */
+/* line 232, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -502,11 +501,11 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 238, theme.scss */
+/* line 239, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #222222;
 }
-/* line 248, theme.scss */
+/* line 249, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em !important;
@@ -569,19 +568,19 @@ body.home section #body #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 254, theme.scss */
+/* line 255, theme.scss */
 body.home section #body #products #product.c1 {
   margin-left: 25.5% !important;
 }
-/* line 257, theme.scss */
+/* line 258, theme.scss */
 body.home section #body #products #product.c3, body.home section #body #products #product.c7 {
   margin-right: 0 !important;
 }
-/* line 260, theme.scss */
+/* line 261, theme.scss */
 body.home section #body #products #product.c4, body.home section #body #products #product.c6 {
   margin-right: 2.5% !important;
 }
-/* line 266, theme.scss */
+/* line 267, theme.scss */
 body.home section#bestsellers.active section #title h2 {
   display: block;
   margin-left: 25.5% !important;
@@ -642,7 +641,7 @@ body .container #header hgroup #logo {
     width: 37%;
   }
 }
-/* line 34, header.scss */
+/* line 35, header.scss */
 body .container #header hgroup #strapline {
   max-width: 37%;
   float: left;
@@ -657,28 +656,28 @@ body .container #header hgroup #strapline {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 34, header.scss */
+  /* line 35, header.scss */
   body .container #header hgroup #strapline {
     width: 100%;
   }
-  /* line 41, header.scss */
+  /* line 42, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: 0;
   }
 }
 @media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 46, header.scss */
+  /* line 47, header.scss */
   body .container #header hgroup #strapline h2 {
     padding: .5em 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 34, header.scss */
+  /* line 35, header.scss */
   body .container #header hgroup #strapline {
     width: 55.5%;
   }
 }
-/* line 54, header.scss */
+/* line 56, header.scss */
 body .container #header hgroup #page-name {
   width: 37%;
   float: left;
@@ -690,18 +689,18 @@ body .container #header hgroup #page-name {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 54, header.scss */
+  /* line 56, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 54, header.scss */
+  /* line 56, header.scss */
   body .container #header hgroup #page-name {
     width: 0;
   }
 }
-/* line 67, header.scss */
+/* line 69, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -710,12 +709,12 @@ body .container #header #menu {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 380px) {
-  /* line 67, header.scss */
+  /* line 69, header.scss */
   body .container #header #menu {
     width: 100%;
   }
 }
-/* line 74, header.scss */
+/* line 76, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -735,7 +734,7 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 77, header.scss */
+/* line 79, header.scss */
 body .container #header #menu ul li:after {
   content: '\003E';
   float: right;
@@ -748,16 +747,16 @@ body .container #header #menu ul li:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 81, header.scss */
+/* line 83, header.scss */
 body .container #header #menu ul li.last:after {
   content: '';
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 86, header.scss */
+  /* line 89, header.scss */
   body .container #header #menu ul li {
     margin-bottom: 0.3125em;
   }
-  /* line 89, header.scss */
+  /* line 92, header.scss */
   body .container #header #menu ul li.all-products-link {
     float: left;
   }

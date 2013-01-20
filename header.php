@@ -99,8 +99,7 @@
 	    	<nav id="menu">
 					<ul>
 						<?php 
-							//$cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
-							$cats = array('pentru-el', 'pentru-ea', 'pentru-copii');
+							$cats = array("gadget", "lifestyle", "doar-copii");		            
 							foreach ($cats as $cat) { 
 								$c = get_category_by_slug($cat);
 							?>
@@ -110,7 +109,17 @@
 							<?php } ?>
 							
 							
-							<li><a href="">Toate cadourile</a></li>
+							<li><a href="">Toate produsele</a></li>
+							
+							<?php
+							  $c = get_category_by_slug('wtf');
+							?>
+							<li>
+									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
+								</li>
+							
+							
+							
 							<li class="last">
 							  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
 			            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri pe stoc"/>
