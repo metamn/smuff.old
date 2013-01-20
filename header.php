@@ -74,7 +74,7 @@
 					<ul>
 						<li><a href="">Cosul meu (0)</a></li>
 						<li><a href="">Contul meu</a></li>
-						<li><a href="">Informatii</a></li>
+						<li class="last"><a href="">Informatii</a></li>
 					</ul>
 				</nav>
 				

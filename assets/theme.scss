@@ -166,13 +166,28 @@ body {
         color: $gray;
         
         ul {
+          @include list-inline;
+          margin-top: $pad*3;
+          
           li {
+            margin-right: $pad/2 !important;
             a {
               color: $gray;
             }
             a:hover {
               color: $color;
             }
+          }
+          li:after {
+            content: '\2022';
+            margin-left: $pad/2;
+          }
+          
+          li.last {
+            margin-right: 0;
+          }
+          li.last:after {
+            content: '';
           }
         }
       }
@@ -183,10 +198,6 @@ body {
         padding: $pad/2 0;
         
         ul {
-          li {
-            margin-right: $pad !important;
-          }
-          
           li#toate-produsele:after {
             @include arrow-to-reveal-content;
           }
@@ -198,12 +209,12 @@ body {
         border-bottom: 1px solid;
         padding: $pad/4 0 $pad/8;
         
-        position: relative;
-        top: -1px;
         
         input[type="text"] {
-          width: 16.5em;
-          margin-right: 1em;
+          width: 17.5em;
+          background: $gray;
+          padding: $pad/2 $pad/4;
+          color: $background;
         }
       }
     }
