@@ -1,0 +1,52 @@
+Smuff Requirement Specification
+v1 = must have
+v2 = important
+v3 = nice to have
+General
+Notes
+Almost all tables / models must have associated a ‘Notes’ table where updates and notes about the entries will be registered over time.
+Warehouse / Suppliers
+A module dealing with Smuff purchasing products from suppliers.
+Suppliers
+Name, Description, Contact
+Purchases
+Supplier, Products, Quantity, Delivery Date, Status, Price, Total
+Stock Control / Email notifications
+When a product is out of stock visitors can subscribe via email to receive a notification when new stock arrives.
+When Smuff is purchasing one of these out-of-stock items these visitors must be notified via email about this event.
+Product
+See http://www.smuff.ro/2013/01/16/corrosion-led-watch-accesoriu-futuristic/ and http://www.smuff.ro/?s=corrosion+led&price=0-100000
+
+Name:  Corrosion LED Watch
+Title: Corrosion LED Watch -- Accesoriu futuristic
+Excerpt: Ceas sau bratara? Da, futurism.
+Price: 100 RON
+Sale price: 70 RON
+Delivery / Stock: 1-2 zile, 3-4 zile, 5-7 zile, Out of stock, Discontinued
+Shipping fee: 0 ron - ridicare de la sediul firmei, 7 ron - posta romana, 17 ron - fan courier, ….
+Images:
+
+    One of the images is set as default and represents the product across the site.
+    Images must have different sizes: thumbnail, small, medium, large, original.
+    Images must have a title and SEO tags
+
+Videos: same like images
+Status: Published, Pending review
+Date published: Easily modifiable anytime
+SEO
+Permalink: Products must have a SEO friendly permalink
+Meta description and tags: Products must have special SEO attributes inserted into their page as HTML Meta tags
+Variations
+Each product can have many variations. A variation behaves like a product. Can have individual name, description, price, sale price, picture, stock, delivery time etc.
+Related Products
+Each product can have many related / similar products associated.
+Cross Sales / Product Accessories / Bundle Sales
+Examples:
+
+    Buy this and get % off
+    Buy batteries, which are not individual products just accessories only for this product 
+
+Product Description
+There are currently 3 sections but they can grow over time: Description, Usage, Properties
+Categories
+They are used to manage the d
