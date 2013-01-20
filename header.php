@@ -103,31 +103,29 @@
 							foreach ($cats as $cat) { 
 								$c = get_category_by_slug($cat);
 							?>
-								<li>
+								<li id="<?php echo $cat ?>">
 									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 								</li>
 							<?php } ?>
 							
 							
-							<li><a href="">Toate produsele</a></li>
+							<li id="toate-produsele"><a href="">Toate produsele</a></li>
 							
 							<?php
 							  $c = get_category_by_slug('wtf');
 							?>
-							<li>
+							<li id="wtf" class="last">
 									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 								</li>
-							
-							
-							
-							<li class="last">
-							  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
-			            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri pe stoc"/>
-			            <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
-			          </form>
-							</li>
 					</ul>
 			  </nav>	
+			  
+			  <aside id="search">
+				  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
+            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri pe stoc"/>
+            <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
+          </form>
+			  </aside>
 			 
 	    </header>
 	  		

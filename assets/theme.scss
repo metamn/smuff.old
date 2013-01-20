@@ -180,31 +180,30 @@ body {
       #menu {
         border-top: 1px solid;
         border-bottom: 1px solid;
-        padding: $pad/2 + $pad/4 0 $pad/4;
+        padding: $pad/2 0;
         
         ul {
           li {
             margin-right: $pad !important;
           }
-          li.last {
-            padding: 0;
-            position: relative;
-            top: -$pad/4;
-            
-                       
-            
-            input[type="text"] {
-              border-bottom: none;
-              padding: $pad/2;
-              text-align: center;
-              
-              width: 23em;
-            }
-            
-            input[type="submit"] {
-              margin-left: 2.5em;
-            }
+          
+          li#toate-produsele:after {
+            @include arrow-to-reveal-content;
           }
+        }
+      }
+      
+      #search {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: $pad/4 0 $pad/8;
+        
+        position: relative;
+        top: -1px;
+        
+        input[type="text"] {
+          width: 16.5em;
+          margin-right: 1em;
         }
       }
     }

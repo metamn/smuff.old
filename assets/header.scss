@@ -67,22 +67,10 @@ body {
 			}
 			
 			#menu {
-				@include block;
-				
-				@include respond-to(mobile) {
-					width: 100%;
-				}
-				
+				@include col($major, 0, 0);
+								
 				ul {
 					@include list-inline;
-					
-					li:after {
-					  @include arrow-to-reveal-content;
-					}
-					
-					li.last:after {
-					  content: '';
-					}
 					
 					
 					@include respond-to(tablet) {
@@ -95,6 +83,11 @@ body {
 					}
 				}
 			} 
+			
+			#search {
+				@include col($minor + $margin, 0, 0);
+				float: left;
+			}
 			
 			
 		}

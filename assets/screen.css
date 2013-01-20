@@ -453,47 +453,56 @@ body .container #header #cart ul li a:hover {
 body .container #header #menu {
   border-top: 1px solid;
   border-bottom: 1px solid;
-  padding: 0.9375em 0 0.3125em;
+  padding: 0.625em 0;
 }
 /* line 186, theme.scss */
 body .container #header #menu ul li {
   margin-right: 1.25em !important;
 }
-/* line 189, theme.scss */
-body .container #header #menu ul li.last {
-  padding: 0;
-  position: relative;
-  top: -0.3125em;
+/* line 190, theme.scss */
+body .container #header #menu ul li#toate-produsele:after {
+  content: '\003E';
+  float: right;
+  margin-left: 0.3125em;
+  color: #f25f18;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
 }
 /* line 196, theme.scss */
-body .container #header #menu ul li.last input[type="text"] {
-  border-bottom: none;
-  padding: 0.625em;
-  text-align: center;
-  width: 23em;
+body .container #header #search {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.3125em 0 0.15625em;
+  position: relative;
+  top: -1px;
 }
 /* line 204, theme.scss */
-body .container #header #menu ul li.last input[type="submit"] {
-  margin-left: 2.5em;
+body .container #header #search input[type="text"] {
+  width: 16.5em;
+  margin-right: 1em;
 }
 
 /* Startpage
 */
-/* line 222, theme.scss */
+/* line 221, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 226, theme.scss */
+/* line 225, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 229, theme.scss */
+/* line 228, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 232, theme.scss */
+/* line 231, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -501,11 +510,11 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 239, theme.scss */
+/* line 238, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #222222;
 }
-/* line 249, theme.scss */
+/* line 248, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em !important;
@@ -568,19 +577,19 @@ body.home section #body #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 255, theme.scss */
+/* line 254, theme.scss */
 body.home section #body #products #product.c1 {
   margin-left: 25.5% !important;
 }
-/* line 258, theme.scss */
+/* line 257, theme.scss */
 body.home section #body #products #product.c3, body.home section #body #products #product.c7 {
   margin-right: 0 !important;
 }
-/* line 261, theme.scss */
+/* line 260, theme.scss */
 body.home section #body #products #product.c4, body.home section #body #products #product.c6 {
   margin-right: 2.5% !important;
 }
-/* line 267, theme.scss */
+/* line 266, theme.scss */
 body.home section#bestsellers.active section #title h2 {
   display: block;
   margin-left: 25.5% !important;
@@ -702,19 +711,11 @@ body .container #header hgroup #page-name {
 }
 /* line 69, header.scss */
 body .container #header #menu {
-  width: 100%;
+  width: 76.5%;
+  margin: 0 0 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
-  /* line 69, header.scss */
-  body .container #header #menu {
-    width: 100%;
-  }
-}
-/* line 76, header.scss */
+/* line 72, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -734,32 +735,22 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 79, header.scss */
-body .container #header #menu ul li:after {
-  content: '\003E';
-  float: right;
-  margin-left: 0.3125em;
-  color: #f25f18;
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-}
-/* line 83, header.scss */
-body .container #header #menu ul li.last:after {
-  content: '';
-}
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 89, header.scss */
+  /* line 77, header.scss */
   body .container #header #menu ul li {
     margin-bottom: 0.3125em;
   }
-  /* line 92, header.scss */
+  /* line 80, header.scss */
   body .container #header #menu ul li.all-products-link {
     float: left;
   }
+}
+/* line 87, header.scss */
+body .container #header #search {
+  width: 23.5%;
+  margin: 0 0 0 0;
+  float: left;
+  float: left;
 }
 
 /* line 4, startpage.scss */
