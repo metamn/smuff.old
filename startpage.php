@@ -94,8 +94,36 @@
   include 'product-list.php';
   
 ?>
+
+  <section id="giftshopper">
+    <header id="title">
+      Alege cadoul perfect!
+    </header>
+    <div id="body">
+      <ul>
+        <li id="tagcloud">
+          <div id="inner">
+            <?php wp_tag_cloud('number=10') ?>
+          </div>
+        </li>
+        <li id="for-him">
+          <h5>Pentru El</h5>
+        </li>
+        <li id="for-her">
+          <h5>Pentru Ea</h5>
+        </li>
+        <li id="for-kids">
+          <h5>Pentru Copii</h5>
+        </li>
+        <li id="for-office" class="last">
+          <h5>Casa si birou</h5>
+        </li>
+      </ul>
+    </div>
+  </section>
   
 <?php
+  /*
   // Bestsellers
   echo "<section id='bestsellers'>"; 
     $product_list = $top_sales_last_week;
@@ -113,8 +141,7 @@
     $product_list_id = 'bestsellers';
     include 'product-list.php';
   echo "</section>";
-  
-  
+  */
   
 ?>
 

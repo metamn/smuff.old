@@ -14,7 +14,7 @@ body.home {
 	        #product {
 	          @include col(23%, 0, 2.5%); 
 	          height: 30em;
-	          margin-bottom: $margin;
+	          margin-bottom: $margin/2;
 	         
             @include product-thumb;
 	        }
@@ -57,6 +57,10 @@ body.home {
 	          @include col(23%, 1%, 1%);
 	          @include product-thumb-on-banner;
 	        }
+	        #product.c3 {
+	          @include rotate(6deg, .3);
+	        }
+	        
 	        #product.c5, #product.c6, #product.c7 {
 	          display: none;
 	        }
@@ -66,6 +70,7 @@ body.home {
 	  
 	  #anouncement {
 	    text-align: center;
+	    color: $dark-gray;
 	    
 	    h2 {
 	      font-family: 'Old Standard TT', serif;
@@ -91,6 +96,59 @@ body.home {
 	          #title {
 	            display: block;
 	          }
+	        }
+	      }
+	    }
+	  }
+	  
+	  #giftshopper {
+	    #body {
+	      ul {
+	        @include list-inline;
+	        
+	        li {
+	          @include col(10%, 0, 2.5%);
+	          background: $very-light-gray;
+	          height: 10em;
+	          cursor: pointer;
+	          overflow: hidden;
+	          
+	          #inner, h5 {
+	            padding: $pad/2;
+	          }
+	        }
+	        li.active {
+	          @include col(48.5%, 0, 2.5%);
+	          cursor: default;
+	          background-position: 0 0 !important;
+	          height: 16em;
+	        }
+	        li#tagcloud.active {
+	          height: 10em;
+	        }
+	        li#for-office.active {
+	          margin-right: 0 !important;
+	        }
+	        
+	        #for-him {
+	          background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
+	          color: white;
+	        }
+	        #for-her {
+	          background: $very-light-gray url(giftshopper-woman.jpg) no-repeat center 0;
+	          h5 {
+	            margin: $pad/2;
+	            padding: 0;
+	            background: white;
+	            opacity: .7;
+	          }
+	        }
+	        #for-kids {
+	          background: $very-light-gray url(giftshopper-kids.jpg) no-repeat;
+	          color: white;
+	        }
+	        #for-office {
+	          background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat;
 	        }
 	      }
 	    }

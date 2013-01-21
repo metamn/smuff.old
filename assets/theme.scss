@@ -1,7 +1,7 @@
 /* Color Scheme
 */
 
-$color: #262626;
+$color: #363636;
 $background: #fff;
 $sale: #F25F18;
 $cart: #8AEA4C;
@@ -15,7 +15,7 @@ $yellow: #F9B451;
 $notice: #F9B451;
 
 $gray: #AAA;
-$dark-gray: #4A4742;
+$dark-gray: #565656;
 $light-gray: #ccc;
 $light-gray-2: #eee;
 $very-light-gray: #f1f1f1;
@@ -187,6 +187,7 @@ a, a:active, a:visited, a:hover {
 body {
   background: $background url(background.png);
   font-family: 'Coda', serif;
+  color: $color;
   
   .container {
   
