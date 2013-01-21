@@ -42,7 +42,7 @@
   $anouncements = query_posts2('posts_per_page=1&cat=1317');
  ?>
  
- 
+ <!--
  <nav id="startpage-main-menu" class='tab'>
   <ul>
     <li><h2 id="new-products">Noutati</h2></li>
@@ -50,6 +50,8 @@
     <li><h2 id="sales">Reduceri</h2></li>
   </ul>
  </nav>
+-->
+
 
 
 
@@ -98,6 +100,11 @@
   $product_list_title = 'Reduceri';
   $product_list_id = 'sales';
   include 'product-list.php';
+  
+ 
+  
+  
+  
 ?>
 
 

@@ -15,12 +15,22 @@
       } ?>
         
       <section id="<?php echo $product_list_id ?>">
+      
+        <nav id="navigation">
+          <ul>
+            <li id="left"></li>
+            <li id="right"></li>
+          </ul>
+        </nav>
+        
         
         <?php if (isset($product_list_title)) { ?>
           <header id="title">
             <h2><?php echo $product_list_title ?></h2>
           </header>
         <?php } ?>
+        
+        
         
         <div id="body">
           <div id="products">

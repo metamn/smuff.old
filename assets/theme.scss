@@ -1,7 +1,7 @@
 /* Color Scheme
 */
 
-$color: #222;
+$color: #262626;
 $background: #fff;
 $sale: #F25F18;
 $cart: #8AEA4C;
@@ -62,6 +62,41 @@ a, a:active, a:visited, a:hover {
 /* Mixins
 */
 
+@mixin section-title {
+   max-width: $minor;
+	 position: relative;
+	 left: -$margin/2;
+	 
+	 h2 {
+	  background: $color;
+    color: $background;
+    padding: $pad/4;
+    margin: $pad/2 0;
+	 }
+}
+
+
+@mixin navigation-arrows {
+  ul {
+    @include list-inline;
+    
+    li {
+      cursor: pointer;
+      width: 15px;
+      height: 29px;
+    }
+    
+    #left {
+      background: url(left-arrow-black.png);
+    }
+    
+    #right {
+      background: url(right-arrow-black.png);
+    }
+    
+  }
+  
+}
 
 @mixin arrow-to-reveal-content {
 	content: '\003E';
@@ -73,9 +108,22 @@ a, a:active, a:visited, a:hover {
 }
 
 
+@mixin product-thumb-on-banner {
+  background: none;
+  height: auto;
+  
+  #image {
+    @include box-shadow;
+  }
+  
+  #title, #excerpt, #price, #category {
+    display: none;
+  }
+}
+
 @mixin product-thumb {
   background: $background url(stripe.png);
-  height: 26em !important;
+  height: 26em;
   
   img {
 		@include image-bordered(1%);
@@ -212,7 +260,7 @@ body {
         
         input[type="text"] {
           width: 17.5em;
-          background: $gray;
+          background: $light-gray;
           padding: $pad/2 $pad/4;
           color: $background;
         }
@@ -258,33 +306,12 @@ body.home {
       #products {
         #product {
           @include product-thumb;
-          
-          position: relative;
-          top: -10em;
         }
-        #product.c1 {
-          margin-left: 23% + 2.5% !important;
-        }
-        #product.c3, #product.c7 {
-          margin-right: 0 !important;
-        }
-        #product.c4, #product.c6 {
-          margin-right: 2.5% !important;
-        }
+        
       }
     }
   }
-  section#bestsellers.active section #title h2 {
-    display: block;
-    margin-left: 23% + 2.5% !important;
-    
-    position: relative;
-    top: -5em;
-    
-    border-bottom: 1px solid;
-    padding-bottom: $pad/2;
-    margin-bottom: $pad/2;
-  }
+ 
 }
 
 

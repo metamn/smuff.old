@@ -3,12 +3,10 @@ body.home {
 	
 	  section {
 	    @include block;
-	    @include hidden;
+	    margin: $pad 0;
 	    
-	    #title {
-	      h2 {
-	        display: none;
-	      }
+	    #navigation {
+	      display: none;
 	    }
 	    
 	    #body {
@@ -16,8 +14,9 @@ body.home {
 	        #product {
 	          @include col(23%, 0, 2.5%); 
 	          height: 30em;
-	          
 	          margin-bottom: $margin;
+	         
+            @include product-thumb;
 	        }
 	        #product.c4, #product.c8, #product.c12 {
 	          margin-right: 0;
@@ -28,5 +27,41 @@ body.home {
 	  section.active {
 	    display: block;
 	  }
+	  
+	  
+	  #new-products {
+	    background: url(background-new-products.png);
+	    height: 20em;
+	    
+	    #title {
+	      @include section-title;
+	    }
+	    
+	    #navigation {
+	      display: block;
+	      
+	      @include navigation-arrows;
+	      
+	      max-width: $minor;
+	      height: auto;
+	      margin-top: $pad*2;
+	      
+	      float: right;
+	      margin-right: 1%;
+	    }
+	    
+	    #body {
+	      #products {
+	        #product {
+	          @include col(23%, 1%, 1%);
+	          @include product-thumb-on-banner;
+	        }
+	        #product.c5, #product.c6, #product.c7 {
+	          display: none;
+	        }
+	      }
+	    }
+	  }
+	 
 	}
 }
