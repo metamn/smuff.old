@@ -65,7 +65,7 @@ a, a:active, a:visited, a:hover {
 @mixin section-title {
    max-width: $minor;
 	 position: relative;
-	 left: -$margin/2;
+	 left: -1.5%;
 	 
 	 h2 {
 	  background: $color;

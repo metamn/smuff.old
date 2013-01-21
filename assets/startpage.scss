@@ -14,7 +14,6 @@ body.home {
 	        #product {
 	          @include col(23%, 0, 2.5%); 
 	          height: 30em;
-	          margin-bottom: $margin/2;
 	         
             @include product-thumb;
 	        }
@@ -102,6 +101,11 @@ body.home {
 	  }
 	  
 	  #giftshopper {
+	    #title {
+	      font-family: 'Old Standard TT', serif;
+	      font-style: italic;
+	    }
+	    
 	    #body {
 	      ul {
 	        @include list-inline;
@@ -130,6 +134,12 @@ body.home {
 	          margin-right: 0 !important;
 	        }
 	        
+	        #tagcloud {
+	          a {
+	            margin-right: $pad;
+	          }
+	        }
+	        
 	        #for-him {
 	          background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
 	          color: white;
@@ -150,6 +160,16 @@ body.home {
 	        #for-office {
 	          background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat;
 	        }
+	      }
+	    }
+	  }
+	  
+	  #subscribe {
+	    ul {
+	      @include list-inline;
+	      
+	      li {
+	        @include col(30%, 0, 5%);
 	      }
 	    }
 	  }
