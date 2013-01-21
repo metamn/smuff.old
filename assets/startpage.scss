@@ -33,6 +33,7 @@ body.home {
 	    background: url(background-new-products.png);
 	    height: 20em;
 	    
+	    
 	    #title {
 	      @include section-title;
 	    }
@@ -58,6 +59,38 @@ body.home {
 	        }
 	        #product.c5, #product.c6, #product.c7 {
 	          display: none;
+	        }
+	      }
+	    }
+	  }
+	  
+	  #anouncement {
+	    text-align: center;
+	    
+	    h2 {
+	      font-family: 'Old Standard TT', serif;
+	      font-weight: normal;
+	      padding: $pad/4 0;
+	      
+	      span {
+	        border-top: 1px solid;
+	        border-bottom: 1px solid;
+	        padding: $pad/8 $pad*4;
+	      }
+	    }
+	  }
+	  
+	  #sales {
+	    #title {
+	      display: none;
+	    }
+	    
+	    #body {
+	      #products {
+	        #product {
+	          #title {
+	            display: block;
+	          }
 	        }
 	      }
 	    }

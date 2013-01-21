@@ -849,7 +849,7 @@ body.home .container #new-products {
   background: url(background-new-products.png);
   height: 20em;
 }
-/* line 36, startpage.scss */
+/* line 37, startpage.scss */
 body.home .container #new-products #title {
   max-width: 18.5%;
   position: relative;
@@ -862,7 +862,7 @@ body.home .container #new-products #title h2 {
   padding: 0.3125em;
   margin: 0.625em 0;
 }
-/* line 40, startpage.scss */
+/* line 41, startpage.scss */
 body.home .container #new-products #navigation {
   display: block;
   max-width: 18.5%;
@@ -902,7 +902,7 @@ body.home .container #new-products #navigation ul #left {
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
-/* line 55, startpage.scss */
+/* line 56, startpage.scss */
 body.home .container #new-products #body #products #product {
   width: 23%;
   margin: 0 1% 0 1%;
@@ -921,9 +921,33 @@ body.home .container #new-products #body #products #product #image {
 body.home .container #new-products #body #products #product #title, body.home .container #new-products #body #products #product #excerpt, body.home .container #new-products #body #products #product #price, body.home .container #new-products #body #products #product #category {
   display: none;
 }
-/* line 59, startpage.scss */
+/* line 60, startpage.scss */
 body.home .container #new-products #body #products #product.c5, body.home .container #new-products #body #products #product.c6, body.home .container #new-products #body #products #product.c7 {
   display: none;
+}
+/* line 67, startpage.scss */
+body.home .container #anouncement {
+  text-align: center;
+}
+/* line 70, startpage.scss */
+body.home .container #anouncement h2 {
+  font-family: 'Old Standard TT', serif;
+  font-weight: normal;
+  padding: 0.3125em 0;
+}
+/* line 75, startpage.scss */
+body.home .container #anouncement h2 span {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.15625em 5em;
+}
+/* line 84, startpage.scss */
+body.home .container #sales #title {
+  display: none;
+}
+/* line 91, startpage.scss */
+body.home .container #sales #body #products #product #title {
+  display: block;
 }
 
 /* line 5, footer.scss */

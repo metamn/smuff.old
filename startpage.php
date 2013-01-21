@@ -35,7 +35,7 @@
   
   
   // Promo
-  $promo_posts = query_posts2('posts_per_page=7&cat=15');
+  $promo_posts = query_posts2('posts_per_page=4&cat=15');
   
   
   // Anouncements
@@ -74,8 +74,28 @@
   $product_list_id = 'new-products';
   $image_size = 'medium';
   include 'product-list.php';
+?>  
+  
+  <section id="anouncement">
+    <h2>
+      <span>
+        <strong>Livrare gratuita</strong> la comenzi peste 300 RON
+      </span>
+    </h2>
+  </section>
   
   
+<?php 
+    
+  // Sales
+  $product_list = $promo_posts;
+  $product_list_title = 'Reduceri';
+  $product_list_id = 'sales';
+  include 'product-list.php';
+  
+?>
+  
+<?php
   // Bestsellers
   echo "<section id='bestsellers'>"; 
     $product_list = $top_sales_last_week;
@@ -93,15 +113,6 @@
     $product_list_id = 'bestsellers';
     include 'product-list.php';
   echo "</section>";
-  
-  
-  // Sales
-  $product_list = $promo_posts;
-  $product_list_title = 'Reduceri';
-  $product_list_id = 'sales';
-  include 'product-list.php';
-  
- 
   
   
   

@@ -53,7 +53,7 @@
     <!-- init all jquery functions -->
     <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/assets/jquery.init.js?refresh=20121129"></script>
     
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Coda|Oswald:400,700">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Coda|Oswald:400,700|Old+Standard+TT:400,400italic,700">
 		
 		
 		<?php wp_head(); ?>
