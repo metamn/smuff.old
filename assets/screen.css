@@ -228,13 +228,13 @@ body .container input, body .container textarea {
   font-family: monospace;
 }
 /* line 178, typography.scss */
-body .container input[type='text'] {
+body .container input[type='text'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
 }
 /* line 183, typography.scss */
-body .container input[type='text']:focus {
+body .container input[type='text']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
@@ -280,19 +280,7 @@ body .container input[type='checkbox']:checked + label:after {
   color: black;
 }
 
-/* Theme mixins
-*/
 /* Accordion
-*/
-/* Subscribe to newsletter
-*/
-/* A list like used in the header to display cart
-*/
-/* Product view -- Promo  
-*/
-/* Product view -- Bestseller
-*/
-/* Product view -- Hot
 */
 /* Image bordered
 */
@@ -305,30 +293,30 @@ body .container input[type='checkbox']:checked + label:after {
  - screen sizes: http://www.responsinator.com/
 */
 @media only screen and (max-width: 600px) {
-  /* line 739, mixins.scss */
+  /* line 256, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 742, mixins.scss */
+  /* line 259, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 747, mixins.scss */
+  /* line 264, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 750, mixins.scss */
+  /* line 267, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 759, mixins.scss */
+/* line 276, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -448,7 +436,7 @@ body .container #header #cart ul {
   margin: 0;
   margin-top: 3.75em;
 }
-/* line 818, mixins.scss */
+/* line 335, mixins.scss */
 body .container #header #cart ul li {
   display: inline-block;
   list-style-type: none;
@@ -456,7 +444,7 @@ body .container #header #cart ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 825, mixins.scss */
+/* line 342, mixins.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
@@ -731,7 +719,7 @@ body .container #header #menu ul {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 818, mixins.scss */
+/* line 335, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -739,7 +727,7 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 825, mixins.scss */
+/* line 342, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
@@ -876,7 +864,7 @@ body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 818, mixins.scss */
+/* line 335, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -884,7 +872,7 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 825, mixins.scss */
+/* line 342, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
@@ -969,7 +957,7 @@ body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 818, mixins.scss */
+/* line 335, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -977,7 +965,7 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 825, mixins.scss */
+/* line 342, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
@@ -1046,7 +1034,7 @@ body.home .container #subscribe ul {
   display: block;
   margin: 0;
 }
-/* line 818, mixins.scss */
+/* line 335, mixins.scss */
 body.home .container #subscribe ul li {
   display: inline-block;
   list-style-type: none;
@@ -1054,7 +1042,7 @@ body.home .container #subscribe ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 825, mixins.scss */
+/* line 342, mixins.scss */
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
@@ -1063,6 +1051,32 @@ body.home .container #subscribe ul li {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
+}
+/* line 174, startpage.scss */
+body.home .container #subscribe ul li #inner {
+  border: 1px dotted;
+  padding: 1.25em;
+  text-align: center;
+  height: 290px;
+}
+/* line 183, startpage.scss */
+body.home .container #subscribe ul #newsletter input[type="email"] {
+  width: 100%;
+  margin-bottom: 0.3125em;
+  margin-top: 2.5em;
+  text-align: center;
+}
+/* line 192, startpage.scss */
+body.home .container #subscribe ul #comments #text {
+  font-size: large;
+}
+/* line 196, startpage.scss */
+body.home .container #subscribe ul #comments #author {
+  margin-top: 1.25em;
+  margin-bottom: 2.5em;
+  padding-bottom: 0.625em;
+  border-bottom: 1px solid #cccccc;
+  font-style: italic;
 }
 
 /* line 5, footer.scss */
@@ -1081,7 +1095,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 818, mixins.scss */
+/* line 335, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1089,7 +1103,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 825, mixins.scss */
+/* line 342, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
@@ -1233,25 +1247,7 @@ body .container article #contact-info {
     float: left;
   }
 }
-/* line 48, single.scss */
-body .container #subscribe-newsletter {
-  width: 100%;
-  float: left;
-  width: 76.5%;
-  margin: 0 5% 0 0;
-  float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (max-width: 1023px) {
-  /* line 48, single.scss */
-  body .container #subscribe-newsletter {
-    width: 100%;
-    float: left;
-  }
-}
-/* line 57, single.scss */
+/* line 50, single.scss */
 body .container #post-shopping-2 {
   width: 76.5%;
   margin: 0 5% 0 0;
@@ -1264,31 +1260,31 @@ body .container #post-shopping-2 {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 57, single.scss */
+  /* line 50, single.scss */
   body .container #post-shopping-2 {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 57, single.scss */
+  /* line 50, single.scss */
   body .container #post-shopping-2 {
     width: 100%;
     float: left;
   }
 }
-/* line 67, single.scss */
+/* line 60, single.scss */
 body .container #post-shopping-2 #shopping {
   width: 23.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 71, single.scss */
+/* line 64, single.scss */
 body .container #post-shopping-2 #shopping-incentives {
   width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 76, single.scss */
+/* line 69, single.scss */
 body .container .product-list {
   width: 100%;
   float: left;
@@ -1296,7 +1292,7 @@ body .container .product-list {
   /* a collector mode, combining all above */
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 79, single.scss */
+/* line 72, single.scss */
 body .container .product-list .item {
   width: 30%;
   margin: 0 5% 0 0;
@@ -1310,27 +1306,27 @@ body .container .product-list .item {
   /* a collector mode, combining smartphones in landscape mode & tablets */
 }
 @media only screen and (max-width: 600px) {
-  /* line 79, single.scss */
+  /* line 72, single.scss */
   body .container .product-list .item {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 79, single.scss */
+  /* line 72, single.scss */
   body .container .product-list .item {
     width: 45%;
     margin: 0 5% 0 0;
     float: left;
   }
 }
-/* line 93, single.scss */
+/* line 86, single.scss */
 body .container .product-list .item.c3, body .container .product-list .item.c6, body .container .product-list .item.c9, body .container .product-list .item.c12, body .container .product-list .item.c15, body .container .product-list .item.c18, body .container .product-list .item.c21, body .container .product-list .item.c24,
 body .container .product-list .item.c27, body .container .product-list .item.c30 {
   margin-right: 0;
 }
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 99, single.scss */
+  /* line 92, single.scss */
   body .container .product-list .item.c2, body .container .product-list .item.c4, body .container .product-list .item.c6, body .container .product-list .item.c8, body .container .product-list .item.c10, body .container .product-list .item.c12, body .container .product-list .item.c14, body .container .product-list .item.c16,
   body .container .product-list .item.c18, body .container .product-list .item.c20 {
     margin-right: 0;

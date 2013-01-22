@@ -45,14 +45,7 @@ body {
 			}
 		}
 	
-		#subscribe-newsletter {
-			@include block;
-			@include col($major, 0, $margin);	
-			
-			@include respond-to(all-tablet) {
-				@include block;
-			}
-		}
+		
 		
 		#post-shopping-2 {
 			@include col($major, 0, $margin);

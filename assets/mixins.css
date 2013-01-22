@@ -1,16 +1,4 @@
-/* Theme mixins
-*/
 /* Accordion
-*/
-/* Subscribe to newsletter
-*/
-/* A list like used in the header to display cart
-*/
-/* Product view -- Promo  
-*/
-/* Product view -- Bestseller
-*/
-/* Product view -- Hot
 */
 /* Image bordered
 */
@@ -23,30 +11,30 @@
  - screen sizes: http://www.responsinator.com/
 */
 @media only screen and (max-width: 600px) {
-  /* line 739, mixins.scss */
+  /* line 256, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 742, mixins.scss */
+  /* line 259, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 747, mixins.scss */
+  /* line 264, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 750, mixins.scss */
+  /* line 267, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 759, mixins.scss */
+/* line 276, mixins.scss */
 img {
   max-width: 100%;
 }
