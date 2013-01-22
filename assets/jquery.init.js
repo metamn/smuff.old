@@ -16,6 +16,16 @@ $(document).ready(function() {
   });
   
   
+  // Startpage scroller
+  $('#new-products #navigation li').click(function() {
+    var patterns = new Array('paven', 'grunge_wall', 'green_gobbler', 'washi', 'roughcloth', 'littleknobs', 'blu_stripes', 'tileable_wood_texture', 'purty_wood', 'diagonal_striped_brick');
+    
+    var pattern = patterns[Math.floor(Math.random()*10)] + '.png';
+    var url = themeurl + '/assets/' + pattern;
+    $('#new-products').css('background', 'url(' + url + ')');
+  });
+  
+  
   
   
   
