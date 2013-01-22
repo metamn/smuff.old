@@ -87,9 +87,23 @@ body {
 			#search {
 				@include col($minor + $margin, 0, 0);
 				float: left;
-			}
+			}	
 			
-			
+		}
+		
+		
+		#footer {
+		  #info {
+		    border-top: 1px solid;
+		    border-bottom: 1px solid;
+		    padding: $pad/2 0;
+		    margin-bottom: $pad/2;
+		  }
+		  
+		  #company {
+		    font-size: small;
+		    color: $light-gray;
+		  }
 		}
 	}
 }

@@ -748,6 +748,18 @@ body .container #header #search {
   float: left;
   float: left;
 }
+/* line 96, header.scss */
+body .container #footer #info {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.625em 0;
+  margin-bottom: 0.625em;
+}
+/* line 103, header.scss */
+body .container #footer #company {
+  font-size: small;
+  color: #cccccc;
+}
 
 /* line 4, startpage.scss */
 body.home .container section {
