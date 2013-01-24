@@ -294,30 +294,30 @@ body .container input[type='checkbox']:checked + label:after {
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
 @media only screen and (max-width: 30em) {
-  /* line 378, mixins.scss */
+  /* line 384, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 379, mixins.scss */
+  /* line 385, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 30.001em) {
-  /* line 383, mixins.scss */
+  /* line 389, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 384, mixins.scss */
+  /* line 390, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 392, mixins.scss */
+/* line 398, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -394,41 +394,41 @@ a, a:active, a:visited, a:hover {
 */
 /* Header, footer, and general settings
 */
-/* line 188, theme.scss */
+/* line 192, theme.scss */
 body {
   background: white url(background.png);
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 195, theme.scss */
+/* line 199, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 200, theme.scss */
+/* line 204, theme.scss */
 body .container #header h1, body .container #header h2 {
   padding: 0.625em 0;
 }
-/* line 204, theme.scss */
+/* line 208, theme.scss */
 body .container #header #logo {
   margin-right: 2.5%;
   /* Aligned to the menu item below */
 }
-/* line 209, theme.scss */
+/* line 213, theme.scss */
 body .container #header #strapline a {
   color: #f25f18;
 }
-/* line 214, theme.scss */
+/* line 218, theme.scss */
 body .container #header #cart {
   font-size: small;
   color: #aaaaaa;
 }
-/* line 218, theme.scss */
+/* line 222, theme.scss */
 body .container #header #cart ul {
   display: block;
   margin: 0;
   margin-top: 3.75em;
 }
-/* line 451, mixins.scss */
+/* line 457, mixins.scss */
 body .container #header #cart ul li {
   display: inline-block;
   list-style-type: none;
@@ -436,42 +436,42 @@ body .container #header #cart ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 458, mixins.scss */
+/* line 464, mixins.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 222, theme.scss */
+/* line 226, theme.scss */
 body .container #header #cart ul li {
   margin-right: 0.625em !important;
 }
-/* line 224, theme.scss */
+/* line 228, theme.scss */
 body .container #header #cart ul li a {
   color: #aaaaaa;
 }
-/* line 227, theme.scss */
+/* line 231, theme.scss */
 body .container #header #cart ul li a:hover {
   color: #363636;
 }
-/* line 231, theme.scss */
+/* line 235, theme.scss */
 body .container #header #cart ul li:after {
   content: '\2022';
   margin-left: 0.625em;
 }
-/* line 236, theme.scss */
+/* line 240, theme.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 239, theme.scss */
+/* line 243, theme.scss */
 body .container #header #cart ul li.last:after {
   content: '';
 }
-/* line 245, theme.scss */
+/* line 249, theme.scss */
 body .container #header #menu {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 251, theme.scss */
+/* line 255, theme.scss */
 body .container #header #menu ul li#toate-produsele:after {
   content: '\003E';
   float: right;
@@ -484,13 +484,13 @@ body .container #header #menu ul li#toate-produsele:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 257, theme.scss */
+/* line 261, theme.scss */
 body .container #header #search {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.3125em 0 0.15625em;
 }
-/* line 263, theme.scss */
+/* line 267, theme.scss */
 body .container #header #search input[type="text"] {
   width: 17.5em;
   background: #cccccc;
@@ -500,21 +500,21 @@ body .container #header #search input[type="text"] {
 
 /* Startpage
 */
-/* line 282, theme.scss */
+/* line 286, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 286, theme.scss */
+/* line 290, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 289, theme.scss */
+/* line 293, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 292, theme.scss */
+/* line 296, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -522,61 +522,67 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 299, theme.scss */
+/* line 303, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #363636;
 }
-/* line 309, theme.scss */
+/* line 313, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em;
 }
 @media only screen and (max-width: 40em) {
-  /* line 309, theme.scss */
+  /* line 313, theme.scss */
   body.home section #body #products #product {
     height: 23em;
   }
 }
-/* line 129, theme.scss */
+@media all and (orientation: landscape) {
+  /* line 313, theme.scss */
+  body.home section #body #products #product {
+    height: 30em;
+  }
+}
+/* line 133, theme.scss */
 body.home section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 133, theme.scss */
+/* line 137, theme.scss */
 body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 141, theme.scss */
+/* line 145, theme.scss */
 body.home section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 148, theme.scss */
+/* line 152, theme.scss */
 body.home section #body #products #product #excerpt {
   display: none;
 }
-/* line 151, theme.scss */
+/* line 155, theme.scss */
 body.home section #body #products #product #excerpt a {
   color: #565656;
 }
-/* line 157, theme.scss */
+/* line 161, theme.scss */
 body.home section #body #products #product #price, body.home section #body #products #product #category {
   font-size: small;
 }
-/* line 161, theme.scss */
+/* line 165, theme.scss */
 body.home section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 166, theme.scss */
+/* line 170, theme.scss */
 body.home section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -586,7 +592,7 @@ body.home section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 175, theme.scss */
+/* line 179, theme.scss */
 body.home section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -642,7 +648,7 @@ body .container #header #menu ul {
   display: block;
   margin: 0;
 }
-/* line 451, mixins.scss */
+/* line 457, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -650,7 +656,7 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 458, mixins.scss */
+/* line 464, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
@@ -772,46 +778,52 @@ body.home .container section #body #products #product {
     height: 23em;
   }
 }
-/* line 129, theme.scss */
+@media all and (orientation: landscape) {
+  /* line 14, startpage.scss */
+  body.home .container section #body #products #product {
+    height: 30em;
+  }
+}
+/* line 133, theme.scss */
 body.home .container section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 133, theme.scss */
+/* line 137, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 141, theme.scss */
+/* line 145, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 148, theme.scss */
+/* line 152, theme.scss */
 body.home .container section #body #products #product #excerpt {
   display: none;
 }
-/* line 151, theme.scss */
+/* line 155, theme.scss */
 body.home .container section #body #products #product #excerpt a {
   color: #565656;
 }
-/* line 157, theme.scss */
+/* line 161, theme.scss */
 body.home .container section #body #products #product #price, body.home .container section #body #products #product #category {
   font-size: small;
 }
-/* line 161, theme.scss */
+/* line 165, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 166, theme.scss */
+/* line 170, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -821,7 +833,7 @@ body.home .container section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 175, theme.scss */
+/* line 179, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -893,7 +905,7 @@ body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 451, mixins.scss */
+/* line 457, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -901,7 +913,7 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 458, mixins.scss */
+/* line 464, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
@@ -986,7 +998,7 @@ body.home .container #anouncement h2 span {
   border-bottom: 1px solid;
   padding: 0.15625em 5em;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 64em) {
   /* line 116, startpage.scss */
   body.home .container #anouncement h2 {
     font-size: 1.25em;
@@ -1021,7 +1033,7 @@ body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 451, mixins.scss */
+/* line 457, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -1029,7 +1041,7 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 458, mixins.scss */
+/* line 464, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
@@ -1049,7 +1061,8 @@ body.home .container #giftshopper #body ul li #inner, body.home .container #gift
 }
 /* line 168, startpage.scss */
 body.home .container #giftshopper #body ul li.active {
-  width: 100%;
+  width: 48.5%;
+  margin: 0 2.5% 0 0;
   float: left;
   cursor: default;
   background-position: 0 0 !important;
@@ -1120,7 +1133,7 @@ body.home .container #subscribe ul {
   display: block;
   margin: 0;
 }
-/* line 451, mixins.scss */
+/* line 457, mixins.scss */
 body.home .container #subscribe ul li {
   display: inline-block;
   list-style-type: none;
@@ -1128,7 +1141,7 @@ body.home .container #subscribe ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 458, mixins.scss */
+/* line 464, mixins.scss */
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
@@ -1138,7 +1151,7 @@ body.home .container #subscribe ul li {
   margin: 0 5% 0 0;
   float: left;
 }
-@media only screen and (max-width: 40em) {
+@media (max-width: 30em) {
   /* line 234, startpage.scss */
   body.home .container #subscribe ul li {
     width: 100%;
@@ -1147,25 +1160,34 @@ body.home .container #subscribe ul li {
     margin: 5%;
   }
 }
-/* line 243, startpage.scss */
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 234, startpage.scss */
+  body.home .container #subscribe ul li {
+    width: 47.5%;
+    margin: 0 2.5% 0 0;
+    float: left;
+    margin-bottom: 5%;
+  }
+}
+/* line 248, startpage.scss */
 body.home .container #subscribe ul li #inner {
   border: 1px dotted;
   padding: 1.25em;
   text-align: center;
   height: 290px;
 }
-/* line 252, startpage.scss */
+/* line 257, startpage.scss */
 body.home .container #subscribe ul #newsletter input[type="email"] {
   width: 100%;
   margin-bottom: 0.3125em;
   margin-top: 2.5em;
   text-align: center;
 }
-/* line 261, startpage.scss */
+/* line 266, startpage.scss */
 body.home .container #subscribe ul #comments #text {
   font-size: large;
 }
-/* line 265, startpage.scss */
+/* line 270, startpage.scss */
 body.home .container #subscribe ul #comments #author {
   margin-top: 1.25em;
   margin-bottom: 2.5em;
@@ -1190,7 +1212,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 451, mixins.scss */
+/* line 457, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1198,7 +1220,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 458, mixins.scss */
+/* line 464, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }

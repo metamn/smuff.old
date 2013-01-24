@@ -112,7 +112,7 @@ body.home {
 	      }
 	    }
 	    
-	    @include tablet-portrait-and-below {
+	    @include tablet-landscape-and-below {
 	      h2 {
 	        font-size: 1.25em;
 	        border-top: 1px solid;
@@ -166,7 +166,7 @@ body.home {
 	          }
 	        }
 	        li.active {
-	          @include block;
+	          @include col(48.5%, 0, 2.5%);
 	          cursor: default;
 	          background-position: 0 0 !important;
 	          height: 16em;
@@ -234,10 +234,15 @@ body.home {
 	      li {
 	        @include col(30%, 0, 5%);
 	        
-	        @include tablet-portrait-and-below {
+	        @include mobile-only {
             @include block;
             width: 90%;
             margin: 5%;
+          }
+          
+          @include tablet-only {
+            @include col(47.5%, 0, 2.5%);
+            margin-bottom: 5%;
           }
 	        
 	        #inner {

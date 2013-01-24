@@ -12,30 +12,30 @@
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
 @media only screen and (max-width: 30em) {
-  /* line 378, mixins.scss */
+  /* line 384, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 379, mixins.scss */
+  /* line 385, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 30.001em) {
-  /* line 383, mixins.scss */
+  /* line 389, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 384, mixins.scss */
+  /* line 390, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 392, mixins.scss */
+/* line 398, mixins.scss */
 img {
   max-width: 100%;
 }

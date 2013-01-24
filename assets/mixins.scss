@@ -373,6 +373,12 @@ $mq-desktop		: 86.375em !default;
   }
 }
 
+@mixin landscape {
+  @media all and (orientation:landscape) {
+    @content;
+  }
+}
+
 
 @media only screen and (max-width : $mq-mobile-landscape) {
   .mobile { display: block; }

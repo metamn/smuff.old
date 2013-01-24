@@ -126,6 +126,10 @@ a, a:active, a:visited, a:hover {
     height: 23em;
   }
   
+  @include landscape {
+    height: 30em;
+  }
+  
   img {
 		@include image-bordered(1%);
 	}
