@@ -16,6 +16,12 @@ body.home {
 	          height: 30em;
 	         
             @include product-thumb;
+            
+            @include mobile-only {
+              @include block;
+              width: 90%;
+              margin: 5%;
+            }
 	        }
 	        #product.c4, #product.c8, #product.c12 {
 	          margin-right: 0;
@@ -55,6 +61,12 @@ body.home {
 	        #product {
 	          @include col(23%, 1%, 1%);
 	          @include product-thumb-on-banner;
+	          
+	          @include mobile-only {
+              @include block;
+              width: 90%;
+              margin: 5%;
+            }
 	        }
 	        #product.c3 {
 	          @include rotate(6deg, .3);
@@ -162,6 +174,15 @@ body.home {
 	        #for-office {
 	          background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat;
 	        }
+	        
+	        
+	        @include mobile-only {
+	          li, li.active {
+              @include block;
+              width: 90%;
+              margin: 5%;
+            }
+          }
 	      }
 	    }
 	  }
@@ -172,6 +193,12 @@ body.home {
 	      
 	      li {
 	        @include col(30%, 0, 5%);
+	        
+	        @include mobile-only {
+            @include block;
+            width: 90%;
+            margin: 5%;
+          }
 	        
 	        #inner {
 	          border: 1px dotted;

@@ -62,10 +62,12 @@ body {
 			  }
 			  
 			  hgroup {
+			    #logo {
+			      max-width: 27.5%;
+			    }
 			    #strapline {
-			      float: right;
-			      font-size: small;
-			      margin-top: .8em;
+			      font-size: .8em;
+			      margin-top: .9em;
 			    }
 			  }
 			  
