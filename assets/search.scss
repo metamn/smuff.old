@@ -2,10 +2,6 @@
 	form {
 		div {
 			@include col(30%, 0, 5%);
-			
-			@include respond-to(mobile) {
-				@include col(100%, 0, 0);
-			}
 		}
 		div.last {
 			margin-right: 0;

@@ -41,10 +41,6 @@ a, a:active, a:visited, a:hover {
 	border: $light-gray;
 	padding: $pad/4;
 	@include border-radius(10%, 10%);   
-	
-	@include respond-to(desktop) {
-	  padding: $pad/2;
-	} 
 }
 .price {
 	background: $sale;

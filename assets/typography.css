@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$pad".
-        on line 65 of /home/cs/work/smuff/assets/typography.scss
+        on line 66 of /home/cs/work/smuff/assets/typography.scss
 
 Backtrace:
-/home/cs/work/smuff/assets/typography.scss:65
+/home/cs/work/smuff/assets/typography.scss:66
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/variable.rb:49:in `_perform'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/node.rb:40:in `perform'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:296:in `visit_prop'
@@ -94,4 +94,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$pad\".\A         on line 65 of /home/cs/work/smuff/assets/typography.scss"; }
+  content: "Syntax error: Undefined variable: \"$pad\".\A         on line 66 of /home/cs/work/smuff/assets/typography.scss"; }

@@ -67,20 +67,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 10, screen.scss */
+html {
+  /* Resetting webkit for responsive
+    - http://paulstamatiou.com/responsive-retina-blog-development-part-1
+  */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 /* Vertical rhythm
 */
 /* The grid
  - it would be nice to redeclare these variables inside media queries, but it is not possible
  - http://stackoverflow.com/questions/9122195/using-sass-variables-with-css3-media-queries
 */
-/* line 2, typography.scss */
+/* line 3, typography.scss */
 body {
   /* Use Serif for long text */
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-size: 100%;
   line-height: 1.25;
 }
-/* line 10, typography.scss */
+/* line 11, typography.scss */
 body .container {
   /* Use Sans serif for non-long text */
   /* Headings
@@ -102,9 +111,9 @@ body .container {
   /* Tables
   // -----------------------------------------------
   */
-  	/* Text styles
-  	// -----------------------------------------------
-    */
+  	  /* Text styles
+  	  // -----------------------------------------------
+      */
   /* Forms
   // -----------------------------------------------
   */
@@ -118,42 +127,42 @@ body .container {
   /* Radio */
   /* Checkbox */
 }
-/* line 13, typography.scss */
+/* line 14, typography.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 28, typography.scss */
+/* line 29, typography.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   font-size: 2em;
   padding: 1.25em 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 36, typography.scss */
+/* line 37, typography.scss */
 body .container h4, body .container h5, body .container h6 {
   font-size: 1em;
   /* small caps is not enough to distinguish header from body text */
   text-transform: uppercase;
 }
-/* line 43, typography.scss */
+/* line 44, typography.scss */
 body .container h1, body .container h4 {
   font-weight: bold;
 }
-/* line 47, typography.scss */
+/* line 48, typography.scss */
 body .container h2 {
   font-weight: bold;
   font-style: italic;
 }
-/* line 52, typography.scss */
+/* line 53, typography.scss */
 body .container h6 {
   text-transform: none;
   font-variant: small-caps;
 }
-/* line 64, typography.scss */
+/* line 65, typography.scss */
 body .container p + p {
   margin-top: 1.25em;
 }
-/* line 69, typography.scss */
+/* line 70, typography.scss */
 body .container q, body .container blockquote {
   margin: 1.25em;
   border-left: 1px dotted;
@@ -161,63 +170,63 @@ body .container q, body .container blockquote {
   font-style: italic;
   font-size: larger;
 }
-/* line 80, typography.scss */
+/* line 81, typography.scss */
 body .container address {
   font-variant: small-caps;
 }
-/* line 89, typography.scss */
+/* line 90, typography.scss */
 body .container ul, body .container menu, body .container dir, body .container ol {
   margin: 1.25em;
   list-style-type: square;
 }
-/* line 94, typography.scss */
+/* line 95, typography.scss */
 body .container ol {
   list-style-type: decimal;
 }
-/* line 98, typography.scss */
+/* line 99, typography.scss */
 body .container dl {
   margin: 1.25em 0;
 }
-/* line 101, typography.scss */
+/* line 102, typography.scss */
 body .container dl dt {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 105, typography.scss */
+/* line 106, typography.scss */
 body .container dl dd {
   margin: 0.625em 1.25em 1.875em;
 }
-/* line 116, typography.scss */
+/* line 117, typography.scss */
 body .container table {
   margin: 1.25em 0;
 }
-/* line 121, typography.scss */
+/* line 122, typography.scss */
 body .container table thead tr td {
   font-weight: bold;
 }
-/* line 127, typography.scss */
+/* line 128, typography.scss */
 body .container table tbody {
   border-top: 1px dotted;
   border-bottom: 1px dotted;
 }
-/* line 132, typography.scss */
+/* line 133, typography.scss */
 body .container table td, body .container table th, body .container table tr {
   text-align: left;
   vertical-align: top;
 }
-/* line 137, typography.scss */
+/* line 138, typography.scss */
 body .container table td {
   padding: 1.25em;
 }
-/* line 148, typography.scss */
+/* line 149, typography.scss */
 body .container em {
   font-style: italic;
 }
-/* line 152, typography.scss */
+/* line 153, typography.scss */
 body .container strong {
   font-weight: bold;
 }
-/* line 165, typography.scss */
+/* line 166, typography.scss */
 body .container input, body .container textarea {
   border: none;
   outline: 0;
@@ -227,46 +236,46 @@ body .container input, body .container textarea {
   font-size: medium;
   font-family: monospace;
 }
-/* line 178, typography.scss */
+/* line 179, typography.scss */
 body .container input[type='text'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
 }
-/* line 183, typography.scss */
+/* line 184, typography.scss */
 body .container input[type='text']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 189, typography.scss */
+/* line 190, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 194, typography.scss */
+/* line 195, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 205, typography.scss */
+/* line 206, typography.scss */
 body .container input[type='radio'], body .container input[type='checkbox'] {
   display: none;
 }
-/* line 208, typography.scss */
+/* line 209, typography.scss */
 body .container input[type='radio'] + label, body .container input[type='checkbox'] + label {
   display: inline-block;
 }
-/* line 213, typography.scss */
+/* line 214, typography.scss */
 body .container input[type='radio'] + label:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 217, typography.scss */
+/* line 218, typography.scss */
 body .container input[type='radio']:checked + label:after {
   content: '\25a3';
 }
-/* line 222, typography.scss */
+/* line 223, typography.scss */
 body .container input[type='checkbox'] + label:after {
   content: '\272A';
   margin-right: 0.3125em;
@@ -275,7 +284,7 @@ body .container input[type='checkbox'] + label:after {
   vertical-align: top;
   color: lightgray;
 }
-/* line 233, typography.scss */
+/* line 234, typography.scss */
 body .container input[type='checkbox']:checked + label:after {
   color: black;
 }
@@ -289,34 +298,11 @@ body .container input[type='checkbox']:checked + label:after {
 /* Add to cart
 */
 /* Responsive mixins
- - http://thesassway.com/intermediate/responsive-web-design-part-1
- - screen sizes: http://www.responsinator.com/
+  - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
-@media only screen and (max-width: 600px) {
-  /* line 256, mixins.scss */
-  .mobile {
-    display: block;
-  }
-
-  /* line 259, mixins.scss */
-  .desktop {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) {
-  /* line 264, mixins.scss */
-  .mobile {
-    display: none;
-  }
-
-  /* line 267, mixins.scss */
-  .desktop {
-    display: block;
-  }
-}
 /* Responisive, fluid Images
 */
-/* line 276, mixins.scss */
+/* line 368, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -372,28 +358,19 @@ a, a:active, a:visited, a:hover {
   -webkit-border-radius: 10% 10%;
   -moz-border-radius: 10% / 10%;
   border-radius: 10% / 10%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  /* line 40, theme.scss */
-  .price, .normal-price {
-    padding: 0.625em;
-  }
 }
 
-/* line 49, theme.scss */
+/* line 45, theme.scss */
 .price {
   background: #f25f18;
 }
 
-/* line 52, theme.scss */
+/* line 48, theme.scss */
 .old-price, .oldprice {
   text-decoration: line-through;
 }
 
-/* line 55, theme.scss */
+/* line 51, theme.scss */
 .normal-price {
   background: #4d8fce;
 }
@@ -402,41 +379,41 @@ a, a:active, a:visited, a:hover {
 */
 /* Header, footer, and general settings
 */
-/* line 187, theme.scss */
+/* line 183, theme.scss */
 body {
   background: white url(background.png);
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 194, theme.scss */
+/* line 190, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 199, theme.scss */
+/* line 195, theme.scss */
 body .container #header h1, body .container #header h2 {
   padding: 0.625em 0;
 }
-/* line 203, theme.scss */
+/* line 199, theme.scss */
 body .container #header #logo {
   margin-right: 2.5%;
   /* Aligned to the menu item below */
 }
-/* line 208, theme.scss */
+/* line 204, theme.scss */
 body .container #header #strapline a {
   color: #f25f18;
 }
-/* line 213, theme.scss */
+/* line 209, theme.scss */
 body .container #header #cart {
   font-size: small;
   color: #aaaaaa;
 }
-/* line 217, theme.scss */
+/* line 213, theme.scss */
 body .container #header #cart ul {
   display: block;
   margin: 0;
   margin-top: 3.75em;
 }
-/* line 335, mixins.scss */
+/* line 427, mixins.scss */
 body .container #header #cart ul li {
   display: inline-block;
   list-style-type: none;
@@ -444,42 +421,42 @@ body .container #header #cart ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 342, mixins.scss */
+/* line 434, mixins.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 221, theme.scss */
+/* line 217, theme.scss */
 body .container #header #cart ul li {
   margin-right: 0.625em !important;
 }
-/* line 223, theme.scss */
+/* line 219, theme.scss */
 body .container #header #cart ul li a {
   color: #aaaaaa;
 }
-/* line 226, theme.scss */
+/* line 222, theme.scss */
 body .container #header #cart ul li a:hover {
   color: #363636;
 }
-/* line 230, theme.scss */
+/* line 226, theme.scss */
 body .container #header #cart ul li:after {
   content: '\2022';
   margin-left: 0.625em;
 }
-/* line 235, theme.scss */
+/* line 231, theme.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 238, theme.scss */
+/* line 234, theme.scss */
 body .container #header #cart ul li.last:after {
   content: '';
 }
-/* line 244, theme.scss */
+/* line 240, theme.scss */
 body .container #header #menu {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 250, theme.scss */
+/* line 246, theme.scss */
 body .container #header #menu ul li#toate-produsele:after {
   content: '\003E';
   float: right;
@@ -492,13 +469,13 @@ body .container #header #menu ul li#toate-produsele:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 256, theme.scss */
+/* line 252, theme.scss */
 body .container #header #search {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.3125em 0 0.15625em;
 }
-/* line 262, theme.scss */
+/* line 258, theme.scss */
 body .container #header #search input[type="text"] {
   width: 17.5em;
   background: #cccccc;
@@ -508,21 +485,21 @@ body .container #header #search input[type="text"] {
 
 /* Startpage
 */
-/* line 281, theme.scss */
+/* line 277, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 285, theme.scss */
+/* line 281, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 288, theme.scss */
+/* line 284, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 291, theme.scss */
+/* line 287, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -530,55 +507,55 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 298, theme.scss */
+/* line 294, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #363636;
 }
-/* line 308, theme.scss */
+/* line 304, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em;
 }
-/* line 128, theme.scss */
+/* line 124, theme.scss */
 body.home section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 132, theme.scss */
+/* line 128, theme.scss */
 body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 140, theme.scss */
+/* line 136, theme.scss */
 body.home section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 147, theme.scss */
+/* line 143, theme.scss */
 body.home section #body #products #product #excerpt {
   display: none;
 }
-/* line 150, theme.scss */
+/* line 146, theme.scss */
 body.home section #body #products #product #excerpt a {
   color: #565656;
 }
-/* line 156, theme.scss */
+/* line 152, theme.scss */
 body.home section #body #products #product #price, body.home section #body #products #product #category {
   font-size: small;
 }
-/* line 160, theme.scss */
+/* line 156, theme.scss */
 body.home section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 165, theme.scss */
+/* line 161, theme.scss */
 body.home section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -588,7 +565,7 @@ body.home section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 174, theme.scss */
+/* line 170, theme.scss */
 body.home section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -623,103 +600,29 @@ body .container #header hgroup {
 body .container #header hgroup #logo {
   max-width: 18.5%;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
-  /* line 19, header.scss */
-  body .container #header hgroup #logo {
-    width: 100%;
-  }
-  /* line 26, header.scss */
-  body .container #header hgroup #logo h1 {
-    padding: 0.625em 0 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 19, header.scss */
-  body .container #header hgroup #logo {
-    width: 37%;
-  }
-}
-/* line 35, header.scss */
+/* line 24, header.scss */
 body .container #header hgroup #strapline {
   max-width: 37%;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
-  /* line 35, header.scss */
-  body .container #header hgroup #strapline {
-    width: 100%;
-  }
-  /* line 42, header.scss */
-  body .container #header hgroup #strapline h2 {
-    padding: 0;
-  }
-}
-@media only screen and (min-width: 381px) and (max-width: 600px) {
-  /* line 47, header.scss */
-  body .container #header hgroup #strapline h2 {
-    padding: .5em 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 35, header.scss */
-  body .container #header hgroup #strapline {
-    width: 55.5%;
-  }
-}
-/* line 56, header.scss */
+/* line 29, header.scss */
 body .container #header hgroup #page-name {
   width: 37%;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
-  /* line 56, header.scss */
-  body .container #header hgroup #page-name {
-    width: 0;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 56, header.scss */
-  body .container #header hgroup #page-name {
-    width: 0;
-  }
-}
-/* line 69, header.scss */
+/* line 35, header.scss */
 body .container #header #menu {
   width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 72, header.scss */
+/* line 38, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 335, mixins.scss */
+/* line 427, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -727,35 +630,36 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 342, mixins.scss */
+/* line 434, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 77, header.scss */
-  body .container #header #menu ul li {
-    margin-bottom: 0.3125em;
-  }
-  /* line 80, header.scss */
-  body .container #header #menu ul li.all-products-link {
-    float: left;
-  }
-}
-/* line 87, header.scss */
+/* line 43, header.scss */
 body .container #header #search {
   width: 23.5%;
   margin: 0 0 0 0;
   float: left;
   float: left;
 }
-/* line 96, header.scss */
+@media (max-width: 30em) {
+  /* line 51, header.scss */
+  body .container #header #cart, body .container #header hgroup, body .container #header #menu, body .container #header #search {
+    width: 100%;
+    float: left;
+  }
+  /* line 56, header.scss */
+  body .container #header #cart ul {
+    margin-top: 1.25em;
+  }
+}
+/* line 66, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 103, header.scss */
+/* line 73, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;
@@ -780,46 +684,46 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   height: 26em;
 }
-/* line 128, theme.scss */
+/* line 124, theme.scss */
 body.home .container section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 132, theme.scss */
+/* line 128, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 140, theme.scss */
+/* line 136, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 147, theme.scss */
+/* line 143, theme.scss */
 body.home .container section #body #products #product #excerpt {
   display: none;
 }
-/* line 150, theme.scss */
+/* line 146, theme.scss */
 body.home .container section #body #products #product #excerpt a {
   color: #565656;
 }
-/* line 156, theme.scss */
+/* line 152, theme.scss */
 body.home .container section #body #products #product #price, body.home .container section #body #products #product #category {
   font-size: small;
 }
-/* line 160, theme.scss */
+/* line 156, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 165, theme.scss */
+/* line 161, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -829,7 +733,7 @@ body.home .container section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 174, theme.scss */
+/* line 170, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -855,7 +759,7 @@ body.home .container #new-products #title {
   position: relative;
   left: -1.5%;
 }
-/* line 70, theme.scss */
+/* line 66, theme.scss */
 body.home .container #new-products #title h2 {
   background: #363636;
   color: white;
@@ -871,12 +775,12 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 80, theme.scss */
+/* line 76, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 335, mixins.scss */
+/* line 427, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -884,21 +788,21 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 342, mixins.scss */
+/* line 434, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 83, theme.scss */
+/* line 79, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 89, theme.scss */
+/* line 85, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 93, theme.scss */
+/* line 89, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -910,14 +814,14 @@ body.home .container #new-products #body #products #product {
   background: none;
   height: auto;
 }
-/* line 115, theme.scss */
+/* line 111, theme.scss */
 body.home .container #new-products #body #products #product #image {
   background: white;
   box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
 }
-/* line 119, theme.scss */
+/* line 115, theme.scss */
 body.home .container #new-products #body #products #product #title, body.home .container #new-products #body #products #product #excerpt, body.home .container #new-products #body #products #product #price, body.home .container #new-products #body #products #product #category {
   display: none;
 }
@@ -973,7 +877,7 @@ body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 335, mixins.scss */
+/* line 427, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -981,7 +885,7 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 342, mixins.scss */
+/* line 434, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
@@ -1050,7 +954,7 @@ body.home .container #subscribe ul {
   display: block;
   margin: 0;
 }
-/* line 335, mixins.scss */
+/* line 427, mixins.scss */
 body.home .container #subscribe ul li {
   display: inline-block;
   list-style-type: none;
@@ -1058,7 +962,7 @@ body.home .container #subscribe ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 342, mixins.scss */
+/* line 434, mixins.scss */
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
@@ -1111,7 +1015,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 335, mixins.scss */
+/* line 427, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1119,7 +1023,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 342, mixins.scss */
+/* line 434, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
@@ -1134,38 +1038,27 @@ body .container #footer #company {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 380px) {
-  /* line 3, search.scss */
-  #search-enhanced form div {
-    width: 100%;
-    margin: 0 0 0 0;
-    float: left;
-  }
-}
-/* line 10, search.scss */
+/* line 6, search.scss */
 #search-enhanced form div.last {
   margin-right: 0;
 }
-/* line 13, search.scss */
+/* line 9, search.scss */
 #search-enhanced form #categories, #search-enhanced form #searchbox {
   width: 100%;
   display: none;
 }
-/* line 19, search.scss */
+/* line 15, search.scss */
 #search-enhanced form #submit #advanced-search {
   cursor: pointer;
 }
-/* line 24, search.scss */
+/* line 20, search.scss */
 #search-enhanced form #searchbox {
   width: 100%;
   float: left;
   padding: 2.5em 1.25em;
 }
-/* line 28, search.scss */
+/* line 24, search.scss */
 #search-enhanced form #searchbox input[type="text"] {
   width: 62%;
 }
@@ -1191,160 +1084,57 @@ body .container article #col-1 {
   width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 6, single.scss */
-  body .container article #col-1 {
-    width: 100%;
-    float: left;
-  }
-  /* line 12, single.scss */
-  body .container article #col-1 #large-image {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 6, single.scss */
-  body .container article #col-1 {
-    width: 100%;
-    float: left;
-  }
-}
-/* line 22, single.scss */
+/* line 11, single.scss */
 body .container article #col-2 {
   width: 18.5%;
   margin: 0 0 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 1023px) {
-  /* line 22, single.scss */
-  body .container article #col-2 {
-    display: none;
-  }
-}
-/* line 31, single.scss */
+/* line 16, single.scss */
 body .container article #post-content {
   width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 31, single.scss */
-  body .container article #post-content {
-    width: 100%;
-    float: left;
-  }
-}
-/* line 39, single.scss */
+/* line 21, single.scss */
 body .container article #contact-info {
   width: 18.5%;
   margin: 0 0 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 39, single.scss */
-  body .container article #contact-info {
-    width: 100%;
-    float: left;
-  }
-}
-/* line 50, single.scss */
+/* line 29, single.scss */
 body .container #post-shopping-2 {
   width: 76.5%;
   margin: 0 5% 0 0;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 50, single.scss */
-  body .container #post-shopping-2 {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 50, single.scss */
-  body .container #post-shopping-2 {
-    width: 100%;
-    float: left;
-  }
-}
-/* line 60, single.scss */
+/* line 34, single.scss */
 body .container #post-shopping-2 #shopping {
   width: 23.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 64, single.scss */
+/* line 38, single.scss */
 body .container #post-shopping-2 #shopping-incentives {
   width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 69, single.scss */
+/* line 43, single.scss */
 body .container .product-list {
   width: 100%;
   float: left;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-/* line 72, single.scss */
+/* line 46, single.scss */
 body .container .product-list .item {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
   margin-bottom: 5%;
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
-  /* handhelds to iPhone 3,4*/
-  /* a collector mode, combining all above */
-  /* a collector mode, combining smartphones in landscape mode & tablets */
 }
-@media only screen and (max-width: 600px) {
-  /* line 72, single.scss */
-  body .container .product-list .item {
-    width: 100%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 72, single.scss */
-  body .container .product-list .item {
-    width: 45%;
-    margin: 0 5% 0 0;
-    float: left;
-  }
-}
-/* line 86, single.scss */
+/* line 54, single.scss */
 body .container .product-list .item.c3, body .container .product-list .item.c6, body .container .product-list .item.c9, body .container .product-list .item.c12, body .container .product-list .item.c15, body .container .product-list .item.c18, body .container .product-list .item.c21, body .container .product-list .item.c24,
 body .container .product-list .item.c27, body .container .product-list .item.c30 {
   margin-right: 0;
-}
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
-  /* line 92, single.scss */
-  body .container .product-list .item.c2, body .container .product-list .item.c4, body .container .product-list .item.c6, body .container .product-list .item.c8, body .container .product-list .item.c10, body .container .product-list .item.c12, body .container .product-list .item.c14, body .container .product-list .item.c16,
-  body .container .product-list .item.c18, body .container .product-list .item.c20 {
-    margin-right: 0;
-  }
 }

@@ -7,34 +7,11 @@
 /* Add to cart
 */
 /* Responsive mixins
- - http://thesassway.com/intermediate/responsive-web-design-part-1
- - screen sizes: http://www.responsinator.com/
+  - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
-@media only screen and (max-width: 600px) {
-  /* line 256, mixins.scss */
-  .mobile {
-    display: block;
-  }
-
-  /* line 259, mixins.scss */
-  .desktop {
-    display: none;
-  }
-}
-@media only screen and (min-width: 601px) {
-  /* line 264, mixins.scss */
-  .mobile {
-    display: none;
-  }
-
-  /* line 267, mixins.scss */
-  .desktop {
-    display: block;
-  }
-}
 /* Responisive, fluid Images
 */
-/* line 276, mixins.scss */
+/* line 368, mixins.scss */
 img {
   max-width: 100%;
 }

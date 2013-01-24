@@ -19,50 +19,16 @@ body {
 				#logo {
 					max-width: $minor;
 					float: left;
-					
-					@include respond-to(mobile) {
-						width: 100%;
-						
-						h1 {
-							padding: $pad/2 0 0;
-						}
-					}
-					@include respond-to(tablet) {
-						width: $minor*2;
-					}
 				}
 				
 				#strapline {
 					max-width: $minor*2;
 					float: left;
-					
-					@include respond-to(mobile) {
-						width: 100%;
-						
-						h2 {
-							padding: 0;
-						}
-					}
-					@include respond-to(mobile-landscape) {
-						h2 {
-							padding: .5em 0;
-						}
-					}
-					@include respond-to(tablet) {
-						width: $minor*3;
-					}
 				}
 				
 				#page-name {
 					width: $minor*2;
 					float: left;
-					
-					@include respond-to(mobile) {
-						width: 0;
-					}
-					@include respond-to(tablet) {
-						width: 0;
-					}
 				}
 			}
 			
@@ -71,16 +37,6 @@ body {
 								
 				ul {
 					@include list-inline;
-					
-					
-					@include respond-to(tablet) {
-						li {
-							margin-bottom: $pad/4;
-						}
-						li.all-products-link {
-							float: left;
-						}
-					}
 				}
 			} 
 			
@@ -88,6 +44,20 @@ body {
 				@include col($minor + $margin, 0, 0);
 				float: left;
 			}	
+			
+			
+			
+			@include mobile-only {
+			  #cart, hgroup, #menu, #search {
+			    @include block;
+			  }
+			  
+			  #cart {
+			    ul {
+			      margin-top: $pad;
+			    }
+			  }
+			}
 			
 		}
 		

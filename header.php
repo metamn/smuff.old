@@ -7,7 +7,8 @@
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
 		<title>		  		  
 		  <?php 
@@ -32,6 +33,14 @@
 		<!--[if IE]>
 				<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
+		
+		<!--[if lt IE 9]>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+	
 		
 		
 		<!--

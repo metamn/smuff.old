@@ -6,6 +6,16 @@
 @import "compass/reset";
 @import "compass/css3";
 
+
+html {
+  /* Resetting webkit for responsive
+    - http://paulstamatiou.com/responsive-retina-blog-development-part-1
+  */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
 @import "metrics";
 
 @import "typography";
