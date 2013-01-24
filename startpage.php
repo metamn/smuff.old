@@ -164,7 +164,15 @@
               js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
-            <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+            
+            <div class="desktop">
+              <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+            </div>
+            
+            <div class="mobile">
+              <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="200" data-show-faces="true" data-stream="false" data-header="true"></div>
+            </div>
+            
           </div>
         </li>
         

@@ -121,6 +121,11 @@ a, a:active, a:visited, a:hover {
   background: $background url(stripe.png);
   height: 26em;
   
+  
+  @include mobile-only {
+    height: 23em;
+  }
+  
   img {
 		@include image-bordered(1%);
 	}

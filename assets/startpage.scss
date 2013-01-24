@@ -36,7 +36,8 @@ body.home {
 	  
 	  #new-products {
 	    background: url(background-new-products.png);
-	    height: 20em;
+	    min-height: 20em;
+	    padding-bottom: $pad + $pad/2;
 	    
 	    
 	    #title {
@@ -92,6 +93,19 @@ body.home {
 	        border-top: 1px solid;
 	        border-bottom: 1px solid;
 	        padding: $pad/8 $pad*4;
+	      }
+	    }
+	    
+	    @include mobile-only {
+	      h2 {
+	        font-size: 1.25em;
+	        border-top: 1px solid;
+	        border-bottom: 1px solid;
+	        
+	        span {
+	          border: none;
+	          padding: $pad/8;
+	        }
 	      }
 	    }
 	  }
