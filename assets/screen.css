@@ -280,6 +280,8 @@ body .container input[type='checkbox']:checked + label:after {
   color: black;
 }
 
+/* Button
+*/
 /* Accordion
 */
 /* Image bordered
@@ -292,30 +294,30 @@ body .container input[type='checkbox']:checked + label:after {
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
 @media only screen and (max-width: 30em) {
-  /* line 364, mixins.scss */
+  /* line 378, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 365, mixins.scss */
+  /* line 379, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 30.001em) {
-  /* line 369, mixins.scss */
+  /* line 383, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 370, mixins.scss */
+  /* line 384, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 378, mixins.scss */
+/* line 392, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -426,7 +428,7 @@ body .container #header #cart ul {
   margin: 0;
   margin-top: 3.75em;
 }
-/* line 437, mixins.scss */
+/* line 451, mixins.scss */
 body .container #header #cart ul li {
   display: inline-block;
   list-style-type: none;
@@ -434,7 +436,7 @@ body .container #header #cart ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 444, mixins.scss */
+/* line 458, mixins.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
@@ -529,7 +531,7 @@ body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em;
 }
-@media (max-width: 30em) {
+@media only screen and (max-width: 40em) {
   /* line 309, theme.scss */
   body.home section #body #products #product {
     height: 23em;
@@ -640,7 +642,7 @@ body .container #header #menu ul {
   display: block;
   margin: 0;
 }
-/* line 437, mixins.scss */
+/* line 451, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -648,7 +650,7 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 444, mixins.scss */
+/* line 458, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
@@ -665,7 +667,7 @@ body .container #header #search {
 }
 @media (max-width: 30em) {
   /* line 54, header.scss */
-  body .container #header #cart, body .container #header hgroup, body .container #header #menu, body .container #header #search {
+  body .container #header #cart, body .container #header hgroup, body .container #header #menu {
     width: 100%;
     float: left;
   }
@@ -697,14 +699,49 @@ body .container #header #search {
     display: none;
   }
 }
-/* line 96, header.scss */
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 94, header.scss */
+  body .container #header #cart ul {
+    margin: 1.25em 0;
+  }
+  /* line 97, header.scss */
+  body .container #header #cart ul li:after {
+    content: '';
+  }
+  /* line 103, header.scss */
+  body .container #header #menu {
+    width: 100%;
+    float: left;
+  }
+  /* line 107, header.scss */
+  body .container #header #menu ul li#search-menu-item {
+    display: inline-block;
+    float: right;
+    margin-right: 0;
+    background: #363636;
+    color: white;
+    padding: 0.3125em;
+    font-size: small;
+    position: relative;
+    top: -0.15625em;
+  }
+  /* line 12, mixins.scss */
+  body .container #header #menu ul li#search-menu-item a {
+    color: white;
+  }
+  /* line 120, header.scss */
+  body .container #header #search {
+    display: none;
+  }
+}
+/* line 129, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 103, header.scss */
+/* line 136, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;
@@ -729,7 +766,7 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   height: 26em;
 }
-@media (max-width: 30em) {
+@media only screen and (max-width: 40em) {
   /* line 14, startpage.scss */
   body.home .container section #body #products #product {
     height: 23em;
@@ -800,21 +837,36 @@ body.home .container section #body #products #product #category a {
     margin: 5%;
   }
 }
-/* line 26, startpage.scss */
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 14, startpage.scss */
+  body.home .container section #body #products #product {
+    width: 45%;
+    margin: 0 5% 0 0;
+    float: left;
+    margin-bottom: 5%;
+  }
+}
+/* line 31, startpage.scss */
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
 }
-/* line 32, startpage.scss */
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 36, startpage.scss */
+  body.home .container section #body #products #product.c2 {
+    margin-right: 0;
+  }
+}
+/* line 43, startpage.scss */
 body.home .container section.active {
   display: block;
 }
-/* line 37, startpage.scss */
+/* line 48, startpage.scss */
 body.home .container #new-products {
   background: url(background-new-products.png);
   min-height: 20em;
   padding-bottom: 1.875em;
 }
-/* line 43, startpage.scss */
+/* line 54, startpage.scss */
 body.home .container #new-products #title {
   max-width: 18.5%;
   position: relative;
@@ -827,7 +879,7 @@ body.home .container #new-products #title h2 {
   padding: 0.3125em;
   margin: 0.625em 0;
 }
-/* line 47, startpage.scss */
+/* line 58, startpage.scss */
 body.home .container #new-products #navigation {
   display: block;
   max-width: 18.5%;
@@ -841,7 +893,7 @@ body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 437, mixins.scss */
+/* line 451, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -849,7 +901,7 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 444, mixins.scss */
+/* line 458, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
@@ -867,7 +919,7 @@ body.home .container #new-products #navigation ul #left {
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
-/* line 62, startpage.scss */
+/* line 73, startpage.scss */
 body.home .container #new-products #body #products #product {
   width: 23%;
   margin: 0 1% 0 1%;
@@ -887,7 +939,7 @@ body.home .container #new-products #body #products #product #title, body.home .c
   display: none;
 }
 @media (max-width: 30em) {
-  /* line 62, startpage.scss */
+  /* line 73, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 100%;
     float: left;
@@ -895,7 +947,16 @@ body.home .container #new-products #body #products #product #title, body.home .c
     margin: 5%;
   }
 }
-/* line 72, startpage.scss */
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 73, startpage.scss */
+  body.home .container #new-products #body #products #product {
+    width: 45%;
+    margin: 0 5% 0 0;
+    float: left;
+    margin-bottom: 5%;
+  }
+}
+/* line 88, startpage.scss */
 body.home .container #new-products #body #products #product.c3 {
   -moz-transform: rotate(6deg);
   -webkit-transform: rotate(6deg);
@@ -904,63 +965,63 @@ body.home .container #new-products #body #products #product.c3 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 76, startpage.scss */
+/* line 92, startpage.scss */
 body.home .container #new-products #body #products #product.c5, body.home .container #new-products #body #products #product.c6, body.home .container #new-products #body #products #product.c7 {
   display: none;
 }
-/* line 83, startpage.scss */
+/* line 99, startpage.scss */
 body.home .container #anouncement {
   text-align: center;
   color: #565656;
 }
-/* line 87, startpage.scss */
+/* line 103, startpage.scss */
 body.home .container #anouncement h2 {
   font-family: 'Old Standard TT', serif;
   font-weight: normal;
   padding: 0.3125em 0;
 }
-/* line 92, startpage.scss */
+/* line 108, startpage.scss */
 body.home .container #anouncement h2 span {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.15625em 5em;
 }
-@media (max-width: 30em) {
-  /* line 100, startpage.scss */
+@media only screen and (max-width: 40em) {
+  /* line 116, startpage.scss */
   body.home .container #anouncement h2 {
     font-size: 1.25em;
     border-top: 1px solid;
     border-bottom: 1px solid;
   }
-  /* line 105, startpage.scss */
+  /* line 121, startpage.scss */
   body.home .container #anouncement h2 span {
     border: none;
     padding: 0.15625em;
   }
 }
-/* line 114, startpage.scss */
+/* line 130, startpage.scss */
 body.home .container #sales #title {
   display: none;
 }
-/* line 121, startpage.scss */
+/* line 137, startpage.scss */
 body.home .container #sales #body #products #product #title {
   display: block;
 }
-/* line 129, startpage.scss */
+/* line 145, startpage.scss */
 body.home .container #giftshopper {
   margin: 2.5em 0;
 }
-/* line 132, startpage.scss */
+/* line 148, startpage.scss */
 body.home .container #giftshopper #title {
   font-family: 'Old Standard TT', serif;
   font-style: italic;
 }
-/* line 138, startpage.scss */
+/* line 154, startpage.scss */
 body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 437, mixins.scss */
+/* line 451, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -968,11 +1029,11 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 444, mixins.scss */
+/* line 458, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
-/* line 141, startpage.scss */
+/* line 157, startpage.scss */
 body.home .container #giftshopper #body ul li {
   width: 10%;
   margin: 0 2.5% 0 0;
@@ -982,58 +1043,57 @@ body.home .container #giftshopper #body ul li {
   cursor: pointer;
   overflow: hidden;
 }
-/* line 148, startpage.scss */
+/* line 164, startpage.scss */
 body.home .container #giftshopper #body ul li #inner, body.home .container #giftshopper #body ul li h5 {
   padding: 0.625em;
 }
-/* line 152, startpage.scss */
+/* line 168, startpage.scss */
 body.home .container #giftshopper #body ul li.active {
-  width: 48.5%;
-  margin: 0 2.5% 0 0;
+  width: 100%;
   float: left;
   cursor: default;
   background-position: 0 0 !important;
   height: 16em;
 }
-/* line 158, startpage.scss */
+/* line 174, startpage.scss */
 body.home .container #giftshopper #body ul li#tagcloud.active {
   height: 10em;
 }
-/* line 161, startpage.scss */
+/* line 177, startpage.scss */
 body.home .container #giftshopper #body ul li#for-office.active {
   margin-right: 0 !important;
 }
-/* line 166, startpage.scss */
+/* line 182, startpage.scss */
 body.home .container #giftshopper #body ul #tagcloud a {
   margin-right: 1.25em;
 }
-/* line 171, startpage.scss */
+/* line 187, startpage.scss */
 body.home .container #giftshopper #body ul #for-him {
   background: #f1f1f1 url(giftshopper-man.jpg) no-repeat center 0;
   color: white;
 }
-/* line 175, startpage.scss */
+/* line 191, startpage.scss */
 body.home .container #giftshopper #body ul #for-her {
   background: #f1f1f1 url(giftshopper-woman.jpg) no-repeat center 0;
 }
-/* line 177, startpage.scss */
+/* line 193, startpage.scss */
 body.home .container #giftshopper #body ul #for-her h5 {
   margin: 0.625em;
   padding: 0;
   background: white;
   opacity: .7;
 }
-/* line 184, startpage.scss */
+/* line 200, startpage.scss */
 body.home .container #giftshopper #body ul #for-kids {
   background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat;
   color: white;
 }
-/* line 188, startpage.scss */
+/* line 204, startpage.scss */
 body.home .container #giftshopper #body ul #for-office {
   background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat;
 }
 @media (max-width: 30em) {
-  /* line 194, startpage.scss */
+  /* line 210, startpage.scss */
   body.home .container #giftshopper #body ul li, body.home .container #giftshopper #body ul li.active {
     width: 100%;
     float: left;
@@ -1041,12 +1101,26 @@ body.home .container #giftshopper #body ul #for-office {
     margin: 5%;
   }
 }
-/* line 205, startpage.scss */
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 218, startpage.scss */
+  body.home .container #giftshopper #body ul li {
+    width: 22.5%;
+    margin: 0 2.5% 0 0;
+    float: left;
+    margin-bottom: 1%;
+  }
+  /* line 222, startpage.scss */
+  body.home .container #giftshopper #body ul li.active {
+    width: 100%;
+    float: left;
+  }
+}
+/* line 231, startpage.scss */
 body.home .container #subscribe ul {
   display: block;
   margin: 0;
 }
-/* line 437, mixins.scss */
+/* line 451, mixins.scss */
 body.home .container #subscribe ul li {
   display: inline-block;
   list-style-type: none;
@@ -1054,18 +1128,18 @@ body.home .container #subscribe ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 444, mixins.scss */
+/* line 458, mixins.scss */
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
-/* line 208, startpage.scss */
+/* line 234, startpage.scss */
 body.home .container #subscribe ul li {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
-@media (max-width: 30em) {
-  /* line 208, startpage.scss */
+@media only screen and (max-width: 40em) {
+  /* line 234, startpage.scss */
   body.home .container #subscribe ul li {
     width: 100%;
     float: left;
@@ -1073,25 +1147,25 @@ body.home .container #subscribe ul li {
     margin: 5%;
   }
 }
-/* line 217, startpage.scss */
+/* line 243, startpage.scss */
 body.home .container #subscribe ul li #inner {
   border: 1px dotted;
   padding: 1.25em;
   text-align: center;
   height: 290px;
 }
-/* line 226, startpage.scss */
+/* line 252, startpage.scss */
 body.home .container #subscribe ul #newsletter input[type="email"] {
   width: 100%;
   margin-bottom: 0.3125em;
   margin-top: 2.5em;
   text-align: center;
 }
-/* line 235, startpage.scss */
+/* line 261, startpage.scss */
 body.home .container #subscribe ul #comments #text {
   font-size: large;
 }
-/* line 239, startpage.scss */
+/* line 265, startpage.scss */
 body.home .container #subscribe ul #comments #author {
   margin-top: 1.25em;
   margin-bottom: 2.5em;
@@ -1116,7 +1190,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 437, mixins.scss */
+/* line 451, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1124,7 +1198,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 444, mixins.scss */
+/* line 458, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }

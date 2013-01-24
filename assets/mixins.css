@@ -1,3 +1,5 @@
+/* Button
+*/
 /* Accordion
 */
 /* Image bordered
@@ -10,30 +12,30 @@
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
 @media only screen and (max-width: 30em) {
-  /* line 364, mixins.scss */
+  /* line 378, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 365, mixins.scss */
+  /* line 379, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 30.001em) {
-  /* line 369, mixins.scss */
+  /* line 383, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 370, mixins.scss */
+  /* line 384, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 378, mixins.scss */
+/* line 392, mixins.scss */
 img {
   max-width: 100%;
 }

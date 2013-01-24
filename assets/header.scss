@@ -51,7 +51,7 @@ body {
 			
 			
 			@include mobile-only {
-			  #cart, hgroup, #menu, #search {
+			  #cart, hgroup, #menu {
 			    @include block;
 			  }
 			  
@@ -81,6 +81,39 @@ body {
 			        display: inline-block;
 			        margin-left: $pad;
 			      }
+			    }
+			  }
+			  
+			  #search {
+			    display: none;
+			  }
+			}
+			
+			@include tablet-only {
+			  #cart {
+			    ul {
+			      margin: $pad 0;
+			      
+			      li:after {
+			        content: '';
+			      }
+			    }
+			  }
+			  
+			  #menu {
+			    @include block;
+			    
+			    ul {
+			      li#search-menu-item {
+		          display: inline-block;
+		          float: right;
+		          margin-right: 0;
+		          
+		          @include button;
+		          font-size: small;
+		          position: relative;
+		          top: -$pad/8;
+		        }
 			    }
 			  }
 			  

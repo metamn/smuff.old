@@ -1,5 +1,19 @@
 
 
+/* Button
+*/
+
+
+@mixin button {
+  background: $color;
+  color: $background;
+  padding: $pad/4;
+  
+  a {
+    color: $background;
+  }
+}
+
 /* Accordion
 */
 @mixin accordion {

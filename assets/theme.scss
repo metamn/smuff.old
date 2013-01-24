@@ -122,7 +122,7 @@ a, a:active, a:visited, a:hover {
   height: 26em;
   
   
-  @include mobile-only {
+  @include tablet-portrait-and-below {
     height: 23em;
   }
   
