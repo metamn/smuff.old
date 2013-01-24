@@ -603,21 +603,20 @@ body .container #header hgroup #logo {
 }
 /* line 24, header.scss */
 body .container #header hgroup #strapline {
-  max-width: 37%;
+  max-width: 76.5%;
   float: left;
 }
 /* line 29, header.scss */
 body .container #header hgroup #page-name {
-  width: 37%;
-  float: left;
+  display: none;
 }
-/* line 35, header.scss */
+/* line 34, header.scss */
 body .container #header #menu {
   width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 38, header.scss */
+/* line 37, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -634,7 +633,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 43, header.scss */
+/* line 40, header.scss */
+body .container #header #menu ul li#search-menu-item {
+  display: none;
+}
+/* line 46, header.scss */
 body .container #header #search {
   width: 23.5%;
   margin: 0 0 0 0;
@@ -642,24 +645,44 @@ body .container #header #search {
   float: left;
 }
 @media (max-width: 30em) {
-  /* line 51, header.scss */
+  /* line 54, header.scss */
   body .container #header #cart, body .container #header hgroup, body .container #header #menu, body .container #header #search {
     width: 100%;
     float: left;
   }
-  /* line 56, header.scss */
+  /* line 59, header.scss */
   body .container #header #cart ul {
     margin-top: 1.25em;
   }
+  /* line 65, header.scss */
+  body .container #header hgroup #strapline {
+    float: right;
+    font-size: small;
+    margin-top: .8em;
+  }
+  /* line 74, header.scss */
+  body .container #header #menu ul li {
+    font-size: small;
+    margin-bottom: 0.3125em;
+  }
+  /* line 78, header.scss */
+  body .container #header #menu ul li#search-menu-item {
+    display: inline-block;
+    margin-left: 1.25em;
+  }
+  /* line 85, header.scss */
+  body .container #header #search {
+    display: none;
+  }
 }
-/* line 66, header.scss */
+/* line 94, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 73, header.scss */
+/* line 101, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;

@@ -125,7 +125,11 @@
 							?>
 							<li id="wtf" class="last">
 									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
-								</li>
+							</li>
+							
+							<li id="search-menu-item"> <!-- for mobile only -->
+							  <a href="">Cautare</a>
+							</li>
 					</ul>
 			  </nav>	
 			  

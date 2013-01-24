@@ -22,13 +22,12 @@ body {
 				}
 				
 				#strapline {
-					max-width: $minor*2;
+					max-width: $major;
 					float: left;
 				}
 				
 				#page-name {
-					width: $minor*2;
-					float: left;
+					display: none;
 				}
 			}
 			
@@ -37,6 +36,10 @@ body {
 								
 				ul {
 					@include list-inline;
+					
+					li#search-menu-item {
+					  display: none;
+					}
 				}
 			} 
 			
@@ -56,6 +59,31 @@ body {
 			    ul {
 			      margin-top: $pad;
 			    }
+			  }
+			  
+			  hgroup {
+			    #strapline {
+			      float: right;
+			      font-size: small;
+			      margin-top: .8em;
+			    }
+			  }
+			  
+			  #menu {
+			    ul {
+			      li {
+			        font-size: small;
+			        margin-bottom: $pad/4;
+			      }
+			      li#search-menu-item {
+			        display: inline-block;
+			        margin-left: $pad;
+			      }
+			    }
+			  }
+			  
+			  #search {
+			    display: none;
 			  }
 			}
 			
