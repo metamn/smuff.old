@@ -41,11 +41,19 @@ echo '<?xml version="1.0"?>';
     $product_id = product_id($post->ID);
     if ($product_id) {
     	$product_price = product_price($post->ID);
+    	$product_discount = product_discount($product_id);
+      $product_sale_price = $product_price - $product_discount;
+      $klass = 'price';
+      
+      if ($product_discount > 0) {
+        $product_price = $product_sale_price;
+        $klass = 'price promo-price';
+      }
     }
     
     $body = '<p class="excerpt">' . $post->post_excerpt . '</p>';   
     if ($product_id) {
-    	$body .= '<p><span class="price">' . $product_price . ' Lei</span><span class="btn">Adauga la cos &raquo;</span></p>';
+    	$body .= '<p><span class="' . $klass . '">' . $product_price . ' Lei</span><span class="btn">Adauga la cos &raquo;</span></p>';
     }
   /*} */  
 ?>
