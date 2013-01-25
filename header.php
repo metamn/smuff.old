@@ -196,7 +196,7 @@
 			    </div>
 			    
 			    <div id="close">
-			      <span>Inchide</span>
+			      <span></span>
 			    </div>
 			  </nav>
 			 
