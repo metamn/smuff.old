@@ -5,6 +5,17 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  // Toggle extended menu in header
+  
+  $('#menu #all-products').click(function() {
+    $('#menu-extended').slideToggle('slow');
+    $(this).toggleClass('active');
+  });
+  
+  $('#menu-extended #close span').click(function() {
+    $('#menu-extended').slideUp('slow');
+    $('#menu #all-products').removeClass('active');
+  });
   
   // Giftshopper
   

@@ -8,7 +8,9 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
 	
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		
 		
 		<title>		  		  
 		  <?php 
@@ -118,7 +120,7 @@
 							<?php } ?>
 							
 							
-							<li id="toate-produsele"><a href="">Toate produsele</a></li>
+							<li id="all-products">Toate produsele</li>
 							
 							<?php
 							  $c = get_category_by_slug('wtf');
@@ -139,6 +141,64 @@
             <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
           </form>
 			  </aside>
+			  
+			  <nav id="menu-extended">
+			    <div id="categories">
+			      <h3>Categorii</h3>
+			      <ul>
+			        <?php 
+							$cats = array("gadget", "gizmo", "lifestyle", "self-care", "ceasuri", "doar-copii");		            
+							foreach ($cats as $cat) { 
+								$c = get_category_by_slug($cat); ?>
+								<li id="<?php echo $cat ?>">
+									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
+								</li>
+							<?php } ?>
+							<li class="separator"></li>
+							<li><a href="">Smartphone</a></li>
+							<li><a href="">Audio & Video</a></li>
+							<li><a href="">Sport si Outdoor</a></li>
+							<li><a href="">Confortul de acasa</a></li>
+			      </ul>
+			    </div>
+			    
+			    <div id="meta">
+			      <h3>Selectii</h3>
+			      <ul>
+			        <li><a href="">Cadouri noi</a></li>
+			        <li><a href="">Cele mai vandute</a></li>
+			        <li><a href="">Reduceri</a></li>
+			        <li class="separator"></li>
+			        <li><a href="">Nou in Romania</a></li>
+			        <li><a href="">Made in Romania</a></li>
+			        <li class="separator"></li>
+			        <li><a href="">GiftShopper</a></li>
+			        <li><a href="">GiftPlanner</a></li>
+			      </ul>
+			    </div>
+			    
+			    <div id="price-and-delivery">
+			      <h3>Pret si livrare</h3>
+			      <ul>
+			        <li><a href="">Sub 100 lei</a></li>
+			        <li><a href="">Intre 100-250 lei</a></li>
+			        <li><a href="">Intre 250-350 lei</a></li>
+			        <li><a href="">Peste 350 lei</a></li>
+			        <li class="separator"></li>
+			        <li><a href="">Livrare in 24 ore</a></li>
+			        <li><a href="">Livrare in 2 zile</a></li>
+			        <li><a href="">Livrare in 5-7 zile</a></li>
+			        <li class="separator"></li>
+			        <li class="separator"></li>
+			        <li class="separator"></li>
+			        <li id="all-products"><a href="">Vezi toate produsele la un singur loc</a></li>
+			      </ul>
+			    </div>
+			    
+			    <div id="close">
+			      <span>Inchide</span>
+			    </div>
+			  </nav>
 			 
 	    </header>
 	  		

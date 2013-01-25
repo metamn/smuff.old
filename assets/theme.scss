@@ -18,6 +18,7 @@ $gray: #AAA;
 $dark-gray: #565656;
 $light-gray: #ccc;
 $light-gray-2: #eee;
+$light-gray-3: #e3e3e3;
 $very-light-gray: #f1f1f1;
 
 
@@ -252,8 +253,17 @@ body {
         padding: $pad/2 0;
         
         ul {
-          li#toate-produsele:after {
+          li#all-products {
+            cursor: pointer;
+          }
+          li#all-products:after {
             @include arrow-to-reveal-content;
+          }
+          li#all-products.active {
+            color: $sale;
+          }
+          li#all-products.active:after {
+            @include rotate(270deg, .7);
           }
         }
       }
