@@ -196,9 +196,7 @@ body {
 			      }
 			    }
 			    
-			    #close {
-		        display: none;
-		      }
+			    
 			  }
 			}
 			
@@ -244,7 +242,7 @@ body {
 			    }
 			    
 			    #close {
-			      display: none;
+			      @include block;
 			    }
 			  }
 			}
