@@ -466,6 +466,12 @@ img {
   }
 }
 
+@mixin list-normal {
+  li {
+    display: inline-block;
+  }
+}
+
 
 /* table, simple
 */

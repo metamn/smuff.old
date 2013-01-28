@@ -703,100 +703,158 @@ body .container #header #menu-extended div {
   float: left;
 }
 /* line 62, header.scss */
+body .container #header #menu-extended div h3 {
+  color: #aaaaaa;
+}
+/* line 66, header.scss */
 body .container #header #menu-extended div ul {
   list-style: none;
   margin: 0;
 }
-/* line 66, header.scss */
+/* line 70, header.scss */
 body .container #header #menu-extended div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
   border-bottom: 1px solid #e3e3e3;
 }
-/* line 71, header.scss */
+/* line 75, header.scss */
+body .container #header #menu-extended div ul li a {
+  width: 100%;
+  display: block;
+}
+/* line 80, header.scss */
 body .container #header #menu-extended div ul li.separator {
   margin: 0.625em 0;
   border-color: transparent;
 }
-/* line 75, header.scss */
+/* line 84, header.scss */
 body .container #header #menu-extended div ul li:hover {
   border-color: #cccccc;
 }
-/* line 78, header.scss */
+/* line 87, header.scss */
 body .container #header #menu-extended div ul li:hover a {
   color: #1b1b1b;
 }
-/* line 83, header.scss */
+/* line 92, header.scss */
 body .container #header #menu-extended div ul li#all-products:after {
   content: '\21e2';
   margin-left: 0.625em;
 }
-/* line 90, header.scss */
+/* line 99, header.scss */
 body .container #header #menu-extended #close {
   margin-right: 0;
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 96, header.scss */
+/* line 105, header.scss */
 body .container #header #menu-extended #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 101, header.scss */
+/* line 110, header.scss */
 body .container #header #menu-extended #close span:after {
   content: '\2612';
   margin-left: 0.625em;
   font-size: large;
 }
 @media (max-width: 30em) {
-  /* line 112, header.scss */
+  /* line 121, header.scss */
   body .container #header #cart, body .container #header hgroup, body .container #header #menu {
     width: 100%;
     float: left;
   }
-  /* line 117, header.scss */
+  /* line 126, header.scss */
   body .container #header #cart ul {
     margin-top: 1.25em;
   }
-  /* line 123, header.scss */
+  /* line 132, header.scss */
   body .container #header hgroup #logo {
     max-width: 27.5%;
   }
-  /* line 126, header.scss */
+  /* line 135, header.scss */
   body .container #header hgroup #strapline {
     font-size: .8em;
     margin-top: .9em;
   }
-  /* line 134, header.scss */
+  /* line 143, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-bottom: 0.3125em;
   }
-  /* line 138, header.scss */
+  /* line 147, header.scss */
   body .container #header #menu ul li#search-menu-item {
     display: inline-block;
     margin-left: 1.25em;
   }
-  /* line 145, header.scss */
+  /* line 154, header.scss */
   body .container #header #search {
     display: none;
   }
-}
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
-  /* line 152, header.scss */
-  body .container #header #cart ul {
-    margin: 1.25em 0;
+  /* line 158, header.scss */
+  body .container #header #menu-extended {
+    padding-bottom: 0;
   }
-  /* line 155, header.scss */
-  body .container #header #cart ul li:after {
-    content: '';
-  }
-  /* line 161, header.scss */
-  body .container #header #menu {
+  /* line 162, header.scss */
+  body .container #header #menu-extended div {
     width: 100%;
     float: left;
   }
   /* line 165, header.scss */
+  body .container #header #menu-extended div h3 {
+    font-size: 1em;
+  }
+  /* line 470, mixins.scss */
+  body .container #header #menu-extended div ul li {
+    display: inline-block;
+  }
+  /* line 172, header.scss */
+  body .container #header #menu-extended div ul li {
+    font-size: small;
+    border: none;
+  }
+  /* line 176, header.scss */
+  body .container #header #menu-extended div ul li a {
+    width: auto;
+    display: inline-block;
+  }
+  /* line 181, header.scss */
+  body .container #header #menu-extended div ul li.separator {
+    display: none;
+  }
+  /* line 184, header.scss */
+  body .container #header #menu-extended div ul li:after {
+    content: '\2022';
+    margin-left: 0.625em;
+    color: #cccccc;
+  }
+  /* line 189, header.scss */
+  body .container #header #menu-extended div ul li.last:after {
+    content: '';
+  }
+  /* line 193, header.scss */
+  body .container #header #menu-extended div ul li#all-products {
+    margin-top: 1.25em;
+  }
+  /* line 199, header.scss */
+  body .container #header #menu-extended #close {
+    display: none;
+  }
+}
+@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+  /* line 207, header.scss */
+  body .container #header #cart ul {
+    margin: 1.25em 0;
+  }
+  /* line 210, header.scss */
+  body .container #header #cart ul li:after {
+    content: '';
+  }
+  /* line 216, header.scss */
+  body .container #header #menu {
+    width: 100%;
+    float: left;
+  }
+  /* line 220, header.scss */
   body .container #header #menu ul li#search-menu-item {
     display: inline-block;
     float: right;
@@ -812,19 +870,33 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu ul li#search-menu-item a {
     color: white;
   }
-  /* line 178, header.scss */
+  /* line 233, header.scss */
   body .container #header #search {
     display: none;
   }
+  /* line 238, header.scss */
+  body .container #header #menu-extended div {
+    width: 30%;
+    margin: 0 2.5% 0 0.5%;
+    float: left;
+  }
+  /* line 241, header.scss */
+  body .container #header #menu-extended div h3 {
+    font-size: 1.25em;
+  }
+  /* line 246, header.scss */
+  body .container #header #menu-extended #close {
+    display: none;
+  }
 }
-/* line 187, header.scss */
+/* line 256, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 194, header.scss */
+/* line 263, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;

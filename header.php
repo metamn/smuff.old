@@ -158,7 +158,7 @@
 							<li><a href="">Smartphone</a></li>
 							<li><a href="">Audio & Video</a></li>
 							<li><a href="">Sport si Outdoor</a></li>
-							<li><a href="">Confortul de acasa</a></li>
+							<li class="last"><a href="">Confortul de acasa</a></li>
 			      </ul>
 			    </div>
 			    
@@ -173,7 +173,7 @@
 			        <li><a href="">Made in Romania</a></li>
 			        <li class="separator"></li>
 			        <li><a href="">GiftShopper</a></li>
-			        <li><a href="">GiftPlanner</a></li>
+			        <li class="last"><a href="">GiftPlanner</a></li>
 			      </ul>
 			    </div>
 			    
@@ -187,7 +187,7 @@
 			        <li class="separator"></li>
 			        <li><a href="">Livrare in 24 ore</a></li>
 			        <li><a href="">Livrare in 2 zile</a></li>
-			        <li><a href="">Livrare in 5-7 zile</a></li>
+			        <li class="last"><a href="">Livrare in 5-7 zile</a></li>
 			        <li class="separator"></li>
 			        <li class="separator"></li>
 			        <li class="separator"></li>

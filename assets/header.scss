@@ -59,6 +59,10 @@ body {
 			  div {
 			    @include col(23%, .5%, 2%);
 			    
+			    h3 {
+			      color: $gray;
+			    }
+			    
 			    ul {
 			      list-style: none;
 			      margin: 0;
@@ -67,6 +71,11 @@ body {
 			        padding: 0 $pad/4;
 			        margin-bottom: $pad/4;
 			        border-bottom: 1px solid $light-gray-3;
+			        
+			        a {
+			          width: 100%;
+			          display: block;
+			        }
 			      }
 			      li.separator {
 			        margin: $pad/2 0;
@@ -145,6 +154,52 @@ body {
 			  #search {
 			    display: none;
 			  }
+			  
+			  #menu-extended {
+			    padding-bottom: 0;
+			    
+			    
+			    div {
+			      @include block;
+			      
+			      h3 {
+			        font-size: 1em;
+			      }
+			      
+			      ul {
+			        @include list-normal;
+			        
+			        li {
+			          font-size: small;
+			          border: none;
+			          
+			          a {
+			            width: auto;
+			            display: inline-block;
+			          }
+			        }
+			        li.separator {
+			          display: none;
+			        }
+			        li:after {
+                content: '\2022';
+                margin-left: $pad/2;
+                color: $light-gray;
+              }
+              li.last:after {
+                content: '';
+              }
+              
+              li#all-products {
+                margin-top: $pad;
+              }
+			      }
+			    }
+			    
+			    #close {
+		        display: none;
+		      }
+			  }
 			}
 			
 			@include tablet-only {
@@ -177,6 +232,20 @@ body {
 			  
 			  #search {
 			    display: none;
+			  }
+			  
+			  #menu-extended {
+			    div {
+			      @include col(30%, .5%, 2.5%);
+			      
+			      h3 {
+			        font-size: 1.25em;
+			      }
+			    }
+			    
+			    #close {
+			      display: none;
+			    }
 			  }
 			}
 			
