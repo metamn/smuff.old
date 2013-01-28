@@ -117,6 +117,11 @@ body .container {
   */
   /* Radio */
   /* Checkbox */
+  /* Select box 
+    - put inside a <label>
+    - label:after is positioned over the selectbox arrow
+    -
+  */
 }
 /* line 14, typography.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
@@ -218,7 +223,7 @@ body .container strong {
   font-weight: bold;
 }
 /* line 166, typography.scss */
-body .container input, body .container textarea {
+body .container input, body .container textarea, body .container select {
   border: none;
   outline: 0;
   appearance: none;
@@ -278,6 +283,39 @@ body .container input[type='checkbox'] + label:after {
 /* line 234, typography.scss */
 body .container input[type='checkbox']:checked + label:after {
   color: black;
+}
+/* line 244, typography.scss */
+body .container select {
+  padding-right: 2em;
+  /* to make the select box longer and accept clicking on the arrow */
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+/* line 249, typography.scss */
+body .container label.select {
+  position: relative;
+  display: block;
+  padding-top: .4em;
+  /* To align select box to the submit button */
+}
+/* line 254, typography.scss */
+body .container label.select:after {
+  content: '\003E';
+  float: right;
+  background: black;
+  color: white;
+  padding: 0.625em;
+  position: relative;
+  margin: -0.625em 2.5em 0 -2.1em;
+  pointer-events: none;
+  /* this is a must */
+  cursor: pointer;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
+  display: inline-block;
 }
 
 /* Button
@@ -1468,73 +1506,27 @@ body.archive section hgroup {
   width: 100%;
   float: left;
 }
-/* line 10, archive.scss */
-body.archive section hgroup #breadcrumbs {
+/* line 9, archive.scss */
+body.archive section hgroup header {
   width: 100%;
   float: left;
 }
 /* line 13, archive.scss */
-body.archive section hgroup #breadcrumbs ul {
-  display: block;
-  margin: 0;
-}
-/* line 457, mixins.scss */
-body.archive section hgroup #breadcrumbs ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0;
+body.archive section hgroup nav {
+  width: 100%;
   float: left;
-  margin-right: 1.25em;
-}
-/* line 464, mixins.scss */
-body.archive section hgroup #breadcrumbs ul li.last {
-  margin-right: 0;
 }
 /* line 16, archive.scss */
-body.archive section hgroup #breadcrumbs ul li {
-  margin-right: 0.3125em;
-  font-size: small;
-}
-/* line 20, archive.scss */
-body.archive section hgroup #breadcrumbs ul li a {
-  color: #aaaaaa;
-}
-/* line 25, archive.scss */
-body.archive section hgroup #breadcrumbs ul li:after {
-  content: '\003E';
-  float: right;
-  margin-left: 0.3125em;
-  color: #f25f18;
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-  -moz-transform: rotate(0);
-  -webkit-transform: rotate(0);
-  -o-transform: rotate(0);
-  -ms-transform: rotate(0);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-  color: #aaaaaa;
-}
-/* line 30, archive.scss */
-body.archive section hgroup #breadcrumbs ul li.last:after {
-  content: '';
-}
-/* line 36, archive.scss */
-body.archive section hgroup header {
-  width: 50%;
-  margin: 0 0 0 0;
+body.archive section hgroup nav div {
+  max-width: 38.25%;
   float: left;
 }
-/* line 41, archive.scss */
+/* line 23, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 44, archive.scss */
+/* line 26, archive.scss */
 body.archive section #products #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -1545,13 +1537,13 @@ body.archive section #products #product {
   height: 36em !important;
 }
 @media only screen and (max-width: 40em) {
-  /* line 44, archive.scss */
+  /* line 26, archive.scss */
   body.archive section #products #product {
     height: 23em;
   }
 }
 @media all and (orientation: landscape) {
-  /* line 44, archive.scss */
+  /* line 26, archive.scss */
   body.archive section #products #product {
     height: 30em;
   }
@@ -1608,27 +1600,43 @@ body.archive section #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 51, archive.scss */
+/* line 33, archive.scss */
 body.archive section #products #product #price, body.archive section #products #product #category {
   font-size: 1em;
 }
-/* line 55, archive.scss */
+/* line 37, archive.scss */
 body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
   margin-right: 0;
 }
-/* line 61, archive.scss */
+/* line 43, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 66, archive.scss */
+/* line 48, archive.scss */
 body.archive section #pagination {
-  width: 50%;
-  margin: 0 0 0 0;
-  float: left;
   text-align: right;
-  margin-top: 1.25em;
+}
+/* line 51, archive.scss */
+body.archive section #pagination .wp-paginate {
+  margin: 0;
+}
+/* line 54, archive.scss */
+body.archive section #pagination .wp-paginate a {
+  background: transparent;
+}
+/* line 58, archive.scss */
+body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
+  padding: 0.3125em 0.625em;
+}
+/* line 62, archive.scss */
+body.archive section #pagination .wp-paginate .current {
+  background: #4d8fce;
+}
+/* line 66, archive.scss */
+body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
+  border: none;
 }
 
 /* line 3, single.scss */

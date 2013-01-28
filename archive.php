@@ -121,9 +121,6 @@
 
 <section id="archive">  
 	<hgroup>
-	  <nav id="breadcrumbs">
-	    <?php echo the_breadcrumb() ?>
-	  </nav>
 	  
 	  <header>
 		  <h2>
@@ -138,12 +135,53 @@
 			  <?php echo $found_posts . $cadouri . $cat_name; ?>
 		  </h2>
 		</header>
-				
-	  <nav id="pagination">
-		  <?php if(function_exists('wp_paginate')) {
-			  wp_paginate();
-		  } ?>  
-	  </nav>
+		
+		<nav id="filters">
+		  <div id="meta">
+		    <label class="select">
+		      <select>
+		        <option>Cadouri noi</option>
+		        <option>Cele mai vandute</option>
+		        <option>Reduceri</option>
+		        <option>Toate cadourile</option>
+		      </select>
+		    </label>
+		  </div>
+		  
+		  <div id="price">
+		    <label class="select">
+		      <select>
+		        <option>Sub 100 lei</option>
+		        <option>Intre 100 - 250 lei</option>
+		        <option>Intre 250 - 350 lei</option>
+		        <option>Peste 350 lei</option>
+		        <option>Toate preturile</option>
+		      </select>
+		    </label>
+		  </div>
+		  
+		  <div id="delivery">
+		    <label class="select">
+		      <select>
+		        <option>Livrare in 24 ore</option>
+		        <option>Livrare in 2-4 zile</option>
+		        <option>Livrare in 5-7 zile</option>
+		        <option>Toate livrarile</option>
+		      </select>
+		    </label>
+		  </div>
+		  
+		  <div id="submit">
+		    <input class="submit" type="submit" id="searchsubmit" value="Filtrare rezultate" />
+		  </div>
+		  
+		  <div id="pagination">
+		    <?php if(function_exists('wp_paginate')) {
+			    wp_paginate();
+		    } ?>  
+	    </div>
+		</nav>
+			
 	</hgroup>
 	
 	<?php 

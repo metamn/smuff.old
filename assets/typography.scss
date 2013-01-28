@@ -163,7 +163,7 @@ body {
 	
 	
 	  /* Reset browser defaults */
-	  input, textarea {
+	  input, textarea, select {
 		  border: none;
 		  outline: 0;
 		
@@ -233,6 +233,44 @@ body {
 	  }
 	  input[type='checkbox']:checked + label:after {
 		  color: black;
+	  }
+	  
+	  /* Select box 
+	    - put inside a <label>
+	    - label:after is positioned over the selectbox arrow
+	    -
+	  */
+	  
+	  select {
+	    padding-right: 2em; /* to make the select box longer and accept clicking on the arrow */
+	    border-bottom: 1px solid gray;
+	    cursor: pointer;
+	  }
+	  label.select {
+	    position: relative;
+	    display: block;
+	    padding-top: .4em; /* To align select box to the submit button */
+	  }
+	  label.select:after {
+	    content: '\003E';
+	    float: right;
+	    
+	    background: black;
+	    color: white;
+	    padding: $pad/2;
+	    
+	    position: relative;
+	    margin: -$pad/2 $pad*2 0 -2.1em;
+	    
+	    pointer-events: none; /* this is a must */
+	    cursor: pointer;
+	
+	     -moz-transform: rotate(90deg);  
+      -webkit-transform: rotate(90deg); 
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
+      display: inline-block;
 	  }
 
   }
