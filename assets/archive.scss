@@ -1,0 +1,73 @@
+body.archive {
+  section {
+    @include block;
+    margin: $pad 0;
+    
+    hgroup {
+      @include block;
+      
+      
+      #breadcrumbs {
+        @include block;
+        
+        ul {
+          @include list-inline;
+          
+          li {
+            margin-right: $pad/4;
+            font-size: small;
+            
+            a {
+              color: $gray;
+            }
+          }
+          
+          li:after {
+            @include arrow-to-reveal-content;
+            @include rotate(0, 0);
+            color: $gray;
+          }
+          li.last:after {
+            content: '';
+          }
+        }
+      }
+      
+      header {
+        @include col(50%, 0, 0);
+      }
+    }
+  
+  #products {
+    @include block;
+    
+    #product {
+      @include col(30%, 0, 5%);
+      margin-bottom: $margin;
+      
+      @include product-thumb;
+      height: 36em !important;
+      
+      #price, #category {
+        font-size: 1em;
+      }
+    }
+    #product.c3, #product.c6, #product.c9, #product.c12, #product.c15, #product.c18, #product.c21, #product.c24, #product.c27, #product.c30 {
+      margin-right: 0;
+    }
+  }
+  
+  footer {
+    h1 {
+      @include col(50%, 0, 0);
+    }
+  }
+  
+  #pagination {
+    @include col(50%, 0, 0);
+    text-align: right;
+    margin-top: $pad;
+  }
+  
+ }
+}

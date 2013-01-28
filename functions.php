@@ -10,6 +10,22 @@ global $wplogger;
 
 
 
+// New functions, 2013
+// -------------------------------------------------------------------------------------------------
+
+
+function the_breadcrumb() {
+  $ret = "<ul>";
+  $ret .= "<li><a href=''>Prima pagina</a></li>";
+  $ret .= "<li><a href=''>Produse</a></li>";
+  $ret .= "<li class='last'><a href=''>Nume categorie</a></li>";
+  $ret .= "</ul>";
+  
+  return $ret;
+}
+
+
+
 
 
 // Custom search

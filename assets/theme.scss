@@ -15,6 +15,7 @@ $yellow: #F9B451;
 $notice: #F9B451;
 
 $gray: #AAA;
+$gray-2: #999;
 $dark-gray: #565656;
 $light-gray: #ccc;
 $light-gray-2: #eee;
@@ -151,10 +152,8 @@ a, a:active, a:visited, a:hover {
 	}
 	
 	#excerpt {
-	  display: none;
-	  
 	  a {
-	    color: $dark-gray;
+	    color: $gray;
 	  }
 	}
 	

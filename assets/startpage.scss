@@ -17,6 +17,10 @@ body.home {
 	         
             @include product-thumb;
             
+            #excerpt {
+              display: none;
+            }
+            
             @include mobile-only {
               @include block;
               width: 90%;

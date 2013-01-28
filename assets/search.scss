@@ -1,7 +1,38 @@
 #search-enhanced {
+  @include block;
+	background: $blue;
+	
 	form {
 		div {
 			@include col(30%, 0, 5%);
+			
+			h3 {
+				margin-left: $pad/2;
+			}
+			
+			ul {
+				margin: 0 $pad;
+				
+				li {
+					background: $blue;
+					border-bottom: 1px dotted $color;
+					
+					input[type="checkbox"]:after {
+						content: "\2610";
+					}
+					input[type="checkbox"]:checked:after {
+						content: "\25a3";
+					}
+				}
+			}
+			
+			#submit {
+				margin: $pad*2 0 $pad $pad;
+				
+				#advanced-search {
+					font-size: small;
+				}
+			}
 		}
 		div.last {
 			margin-right: 0;
@@ -25,6 +56,27 @@
 				width: 62%;
 			}
 		}
+		
+		#trending {
+			@include block;
+			margin: $pad*4 0;
+			
+			h2 {
+				width: 30%;
+				float: left;
+				margin-right: 3%;
+				padding-right: 3%;
+				border-right: 1px dotted;
+			}
+			
+			#items {
+				width: 55%;
+				margin-left: 3%;
+				float: left;
+			}
+		}
 	}
 	
 }
+
+

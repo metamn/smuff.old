@@ -357,7 +357,7 @@ img {
 */
 /* Links
 */
-/* line 30, theme.scss */
+/* line 31, theme.scss */
 a, a:active, a:visited, a:hover {
   color: #363636;
   text-decoration: none;
@@ -366,7 +366,7 @@ a, a:active, a:visited, a:hover {
 /* Price
 ---------------------------------------------------
 */
-/* line 41, theme.scss */
+/* line 42, theme.scss */
 .price, .normal-price {
   border: #cccccc;
   padding: 0.3125em;
@@ -375,17 +375,17 @@ a, a:active, a:visited, a:hover {
   border-radius: 10% / 10%;
 }
 
-/* line 46, theme.scss */
+/* line 47, theme.scss */
 .price {
   background: #f25f18;
 }
 
-/* line 49, theme.scss */
+/* line 50, theme.scss */
 .old-price, .oldprice {
   text-decoration: line-through;
 }
 
-/* line 52, theme.scss */
+/* line 53, theme.scss */
 .normal-price {
   background: #4d8fce;
 }
@@ -394,35 +394,35 @@ a, a:active, a:visited, a:hover {
 */
 /* Header, footer, and general settings
 */
-/* line 193, theme.scss */
+/* line 192, theme.scss */
 body {
   background: white url(background.png);
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 200, theme.scss */
+/* line 199, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 205, theme.scss */
+/* line 204, theme.scss */
 body .container #header h1, body .container #header h2 {
   padding: 0.625em 0;
 }
-/* line 209, theme.scss */
+/* line 208, theme.scss */
 body .container #header #logo {
   margin-right: 2.5%;
   /* Aligned to the menu item below */
 }
-/* line 214, theme.scss */
+/* line 213, theme.scss */
 body .container #header #strapline a {
   color: #f25f18;
 }
-/* line 219, theme.scss */
+/* line 218, theme.scss */
 body .container #header #cart {
   font-size: small;
   color: #aaaaaa;
 }
-/* line 223, theme.scss */
+/* line 222, theme.scss */
 body .container #header #cart ul {
   display: block;
   margin: 0;
@@ -440,42 +440,42 @@ body .container #header #cart ul li {
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 227, theme.scss */
+/* line 226, theme.scss */
 body .container #header #cart ul li {
   margin-right: 0.625em !important;
 }
-/* line 229, theme.scss */
+/* line 228, theme.scss */
 body .container #header #cart ul li a {
   color: #aaaaaa;
 }
-/* line 232, theme.scss */
+/* line 231, theme.scss */
 body .container #header #cart ul li a:hover {
   color: #363636;
 }
-/* line 236, theme.scss */
+/* line 235, theme.scss */
 body .container #header #cart ul li:after {
   content: '\2022';
   margin-left: 0.625em;
 }
-/* line 241, theme.scss */
+/* line 240, theme.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 244, theme.scss */
+/* line 243, theme.scss */
 body .container #header #cart ul li.last:after {
   content: '';
 }
-/* line 250, theme.scss */
+/* line 249, theme.scss */
 body .container #header #menu {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 256, theme.scss */
+/* line 255, theme.scss */
 body .container #header #menu ul li#all-products {
   cursor: pointer;
 }
-/* line 259, theme.scss */
+/* line 258, theme.scss */
 body .container #header #menu ul li#all-products:after {
   content: '\003E';
   float: right;
@@ -488,11 +488,11 @@ body .container #header #menu ul li#all-products:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 262, theme.scss */
+/* line 261, theme.scss */
 body .container #header #menu ul li#all-products.active {
   color: #f25f18;
 }
-/* line 265, theme.scss */
+/* line 264, theme.scss */
 body .container #header #menu ul li#all-products.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -501,13 +501,13 @@ body .container #header #menu ul li#all-products.active:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 271, theme.scss */
+/* line 270, theme.scss */
 body .container #header #search {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.3125em 0 0.15625em;
 }
-/* line 277, theme.scss */
+/* line 276, theme.scss */
 body .container #header #search input[type="text"] {
   width: 17.5em;
   background: #cccccc;
@@ -517,21 +517,21 @@ body .container #header #search input[type="text"] {
 
 /* Startpage
 */
-/* line 296, theme.scss */
+/* line 295, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 300, theme.scss */
+/* line 299, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 303, theme.scss */
+/* line 302, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 306, theme.scss */
+/* line 305, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -539,67 +539,63 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 313, theme.scss */
+/* line 312, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #363636;
 }
-/* line 323, theme.scss */
+/* line 322, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
   height: 26em;
 }
 @media only screen and (max-width: 40em) {
-  /* line 323, theme.scss */
+  /* line 322, theme.scss */
   body.home section #body #products #product {
     height: 23em;
   }
 }
 @media all and (orientation: landscape) {
-  /* line 323, theme.scss */
+  /* line 322, theme.scss */
   body.home section #body #products #product {
     height: 30em;
   }
 }
-/* line 134, theme.scss */
+/* line 135, theme.scss */
 body.home section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 138, theme.scss */
+/* line 139, theme.scss */
 body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 146, theme.scss */
+/* line 147, theme.scss */
 body.home section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 153, theme.scss */
-body.home section #body #products #product #excerpt {
-  display: none;
-}
-/* line 156, theme.scss */
+/* line 155, theme.scss */
 body.home section #body #products #product #excerpt a {
-  color: #565656;
+  color: #aaaaaa;
 }
-/* line 162, theme.scss */
+/* line 161, theme.scss */
 body.home section #body #products #product #price, body.home section #body #products #product #category {
   font-size: small;
 }
-/* line 166, theme.scss */
+/* line 165, theme.scss */
 body.home section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 171, theme.scss */
+/* line 170, theme.scss */
 body.home section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -609,7 +605,7 @@ body.home section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 180, theme.scss */
+/* line 179, theme.scss */
 body.home section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -930,46 +926,42 @@ body.home .container section #body #products #product {
     height: 30em;
   }
 }
-/* line 134, theme.scss */
+/* line 135, theme.scss */
 body.home .container section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 138, theme.scss */
+/* line 139, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 146, theme.scss */
+/* line 147, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 153, theme.scss */
-body.home .container section #body #products #product #excerpt {
-  display: none;
-}
-/* line 156, theme.scss */
+/* line 155, theme.scss */
 body.home .container section #body #products #product #excerpt a {
-  color: #565656;
+  color: #aaaaaa;
 }
-/* line 162, theme.scss */
+/* line 161, theme.scss */
 body.home .container section #body #products #product #price, body.home .container section #body #products #product #category {
   font-size: small;
 }
-/* line 166, theme.scss */
+/* line 165, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 171, theme.scss */
+/* line 170, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -979,12 +971,16 @@ body.home .container section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 180, theme.scss */
+/* line 179, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
+}
+/* line 20, startpage.scss */
+body.home .container section #body #products #product #excerpt {
+  display: none;
 }
 @media (max-width: 30em) {
   /* line 14, startpage.scss */
@@ -1004,40 +1000,40 @@ body.home .container section #body #products #product #category a {
     margin-bottom: 5%;
   }
 }
-/* line 31, startpage.scss */
+/* line 35, startpage.scss */
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
 }
 @media only screen and (min-width: 30.001em) and (max-width: 64em) {
-  /* line 36, startpage.scss */
+  /* line 40, startpage.scss */
   body.home .container section #body #products #product.c2 {
     margin-right: 0;
   }
 }
-/* line 43, startpage.scss */
+/* line 47, startpage.scss */
 body.home .container section.active {
   display: block;
 }
-/* line 48, startpage.scss */
+/* line 52, startpage.scss */
 body.home .container #new-products {
   background: url(background-new-products.png);
   min-height: 20em;
   padding-bottom: 1.875em;
 }
-/* line 54, startpage.scss */
+/* line 58, startpage.scss */
 body.home .container #new-products #title {
   max-width: 18.5%;
   position: relative;
   left: -1.5%;
 }
-/* line 67, theme.scss */
+/* line 68, theme.scss */
 body.home .container #new-products #title h2 {
   background: #363636;
   color: white;
   padding: 0.3125em;
   margin: 0.625em 0;
 }
-/* line 58, startpage.scss */
+/* line 62, startpage.scss */
 body.home .container #new-products #navigation {
   display: block;
   max-width: 18.5%;
@@ -1046,7 +1042,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 77, theme.scss */
+/* line 78, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -1063,21 +1059,21 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 80, theme.scss */
+/* line 81, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 86, theme.scss */
+/* line 87, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 90, theme.scss */
+/* line 91, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
-/* line 73, startpage.scss */
+/* line 77, startpage.scss */
 body.home .container #new-products #body #products #product {
   width: 23%;
   margin: 0 1% 0 1%;
@@ -1085,19 +1081,19 @@ body.home .container #new-products #body #products #product {
   background: none;
   height: auto;
 }
-/* line 112, theme.scss */
+/* line 113, theme.scss */
 body.home .container #new-products #body #products #product #image {
   background: white;
   box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
 }
-/* line 116, theme.scss */
+/* line 117, theme.scss */
 body.home .container #new-products #body #products #product #title, body.home .container #new-products #body #products #product #excerpt, body.home .container #new-products #body #products #product #price, body.home .container #new-products #body #products #product #category {
   display: none;
 }
 @media (max-width: 30em) {
-  /* line 73, startpage.scss */
+  /* line 77, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 100%;
     float: left;
@@ -1106,7 +1102,7 @@ body.home .container #new-products #body #products #product #title, body.home .c
   }
 }
 @media only screen and (min-width: 30.001em) and (max-width: 64em) {
-  /* line 73, startpage.scss */
+  /* line 77, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 45%;
     margin: 0 5% 0 0;
@@ -1114,7 +1110,7 @@ body.home .container #new-products #body #products #product #title, body.home .c
     margin-bottom: 5%;
   }
 }
-/* line 88, startpage.scss */
+/* line 92, startpage.scss */
 body.home .container #new-products #body #products #product.c3 {
   -moz-transform: rotate(6deg);
   -webkit-transform: rotate(6deg);
@@ -1123,58 +1119,58 @@ body.home .container #new-products #body #products #product.c3 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 92, startpage.scss */
+/* line 96, startpage.scss */
 body.home .container #new-products #body #products #product.c5, body.home .container #new-products #body #products #product.c6, body.home .container #new-products #body #products #product.c7 {
   display: none;
 }
-/* line 99, startpage.scss */
+/* line 103, startpage.scss */
 body.home .container #anouncement {
   text-align: center;
   color: #565656;
 }
-/* line 103, startpage.scss */
+/* line 107, startpage.scss */
 body.home .container #anouncement h2 {
   font-family: 'Old Standard TT', serif;
   font-weight: normal;
   padding: 0.3125em 0;
 }
-/* line 108, startpage.scss */
+/* line 112, startpage.scss */
 body.home .container #anouncement h2 span {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.15625em 5em;
 }
 @media only screen and (max-width: 64em) {
-  /* line 116, startpage.scss */
+  /* line 120, startpage.scss */
   body.home .container #anouncement h2 {
     font-size: 1.25em;
     border-top: 1px solid;
     border-bottom: 1px solid;
   }
-  /* line 121, startpage.scss */
+  /* line 125, startpage.scss */
   body.home .container #anouncement h2 span {
     border: none;
     padding: 0.15625em;
   }
 }
-/* line 130, startpage.scss */
+/* line 134, startpage.scss */
 body.home .container #sales #title {
   display: none;
 }
-/* line 137, startpage.scss */
+/* line 141, startpage.scss */
 body.home .container #sales #body #products #product #title {
   display: block;
 }
-/* line 145, startpage.scss */
+/* line 149, startpage.scss */
 body.home .container #giftshopper {
   margin: 2.5em 0;
 }
-/* line 148, startpage.scss */
+/* line 152, startpage.scss */
 body.home .container #giftshopper #title {
   font-family: 'Old Standard TT', serif;
   font-style: italic;
 }
-/* line 154, startpage.scss */
+/* line 158, startpage.scss */
 body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
@@ -1191,7 +1187,7 @@ body.home .container #giftshopper #body ul li {
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
-/* line 157, startpage.scss */
+/* line 161, startpage.scss */
 body.home .container #giftshopper #body ul li {
   width: 10%;
   margin: 0 2.5% 0 0;
@@ -1201,11 +1197,11 @@ body.home .container #giftshopper #body ul li {
   cursor: pointer;
   overflow: hidden;
 }
-/* line 164, startpage.scss */
+/* line 168, startpage.scss */
 body.home .container #giftshopper #body ul li #inner, body.home .container #giftshopper #body ul li h5 {
   padding: 0.625em;
 }
-/* line 168, startpage.scss */
+/* line 172, startpage.scss */
 body.home .container #giftshopper #body ul li.active {
   width: 48.5%;
   margin: 0 2.5% 0 0;
@@ -1214,45 +1210,45 @@ body.home .container #giftshopper #body ul li.active {
   background-position: 0 0 !important;
   height: 16em;
 }
-/* line 174, startpage.scss */
+/* line 178, startpage.scss */
 body.home .container #giftshopper #body ul li#tagcloud.active {
   height: 10em;
 }
-/* line 177, startpage.scss */
+/* line 181, startpage.scss */
 body.home .container #giftshopper #body ul li#for-office.active {
   margin-right: 0 !important;
 }
-/* line 182, startpage.scss */
+/* line 186, startpage.scss */
 body.home .container #giftshopper #body ul #tagcloud a {
   margin-right: 1.25em;
 }
-/* line 187, startpage.scss */
+/* line 191, startpage.scss */
 body.home .container #giftshopper #body ul #for-him {
   background: #f1f1f1 url(giftshopper-man.jpg) no-repeat center 0;
   color: white;
 }
-/* line 191, startpage.scss */
+/* line 195, startpage.scss */
 body.home .container #giftshopper #body ul #for-her {
   background: #f1f1f1 url(giftshopper-woman.jpg) no-repeat center 0;
 }
-/* line 193, startpage.scss */
+/* line 197, startpage.scss */
 body.home .container #giftshopper #body ul #for-her h5 {
   margin: 0.625em;
   padding: 0;
   background: white;
   opacity: .7;
 }
-/* line 200, startpage.scss */
+/* line 204, startpage.scss */
 body.home .container #giftshopper #body ul #for-kids {
   background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat;
   color: white;
 }
-/* line 204, startpage.scss */
+/* line 208, startpage.scss */
 body.home .container #giftshopper #body ul #for-office {
   background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat;
 }
 @media (max-width: 30em) {
-  /* line 210, startpage.scss */
+  /* line 214, startpage.scss */
   body.home .container #giftshopper #body ul li, body.home .container #giftshopper #body ul li.active {
     width: 100%;
     float: left;
@@ -1261,20 +1257,20 @@ body.home .container #giftshopper #body ul #for-office {
   }
 }
 @media only screen and (min-width: 30.001em) and (max-width: 64em) {
-  /* line 218, startpage.scss */
+  /* line 222, startpage.scss */
   body.home .container #giftshopper #body ul li {
     width: 22.5%;
     margin: 0 2.5% 0 0;
     float: left;
     margin-bottom: 1%;
   }
-  /* line 222, startpage.scss */
+  /* line 226, startpage.scss */
   body.home .container #giftshopper #body ul li.active {
     width: 100%;
     float: left;
   }
 }
-/* line 231, startpage.scss */
+/* line 235, startpage.scss */
 body.home .container #subscribe ul {
   display: block;
   margin: 0;
@@ -1291,14 +1287,14 @@ body.home .container #subscribe ul li {
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
-/* line 234, startpage.scss */
+/* line 238, startpage.scss */
 body.home .container #subscribe ul li {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
 @media (max-width: 30em) {
-  /* line 234, startpage.scss */
+  /* line 238, startpage.scss */
   body.home .container #subscribe ul li {
     width: 100%;
     float: left;
@@ -1307,7 +1303,7 @@ body.home .container #subscribe ul li {
   }
 }
 @media only screen and (min-width: 30.001em) and (max-width: 64em) {
-  /* line 234, startpage.scss */
+  /* line 238, startpage.scss */
   body.home .container #subscribe ul li {
     width: 47.5%;
     margin: 0 2.5% 0 0;
@@ -1315,25 +1311,25 @@ body.home .container #subscribe ul li {
     margin-bottom: 5%;
   }
 }
-/* line 248, startpage.scss */
+/* line 252, startpage.scss */
 body.home .container #subscribe ul li #inner {
   border: 1px dotted;
   padding: 1.25em;
   text-align: center;
   height: 290px;
 }
-/* line 257, startpage.scss */
+/* line 261, startpage.scss */
 body.home .container #subscribe ul #newsletter input[type="email"] {
   width: 100%;
   margin-bottom: 0.3125em;
   margin-top: 2.5em;
   text-align: center;
 }
-/* line 266, startpage.scss */
+/* line 270, startpage.scss */
 body.home .container #subscribe ul #comments #text {
   font-size: large;
 }
-/* line 270, startpage.scss */
+/* line 274, startpage.scss */
 body.home .container #subscribe ul #comments #author {
   margin-top: 1.25em;
   margin-bottom: 2.5em;
@@ -1376,34 +1372,263 @@ body .container #footer #company {
   float: left;
 }
 
-/* line 3, search.scss */
+/* line 1, search.scss */
+#search-enhanced {
+  width: 100%;
+  float: left;
+  background: #4d8fce;
+}
+/* line 6, search.scss */
 #search-enhanced form div {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 6, search.scss */
+/* line 9, search.scss */
+#search-enhanced form div h3 {
+  margin-left: 0.625em;
+}
+/* line 13, search.scss */
+#search-enhanced form div ul {
+  margin: 0 1.25em;
+}
+/* line 16, search.scss */
+#search-enhanced form div ul li {
+  background: #4d8fce;
+  border-bottom: 1px dotted #363636;
+}
+/* line 20, search.scss */
+#search-enhanced form div ul li input[type="checkbox"]:after {
+  content: "\2610";
+}
+/* line 23, search.scss */
+#search-enhanced form div ul li input[type="checkbox"]:checked:after {
+  content: "\25a3";
+}
+/* line 29, search.scss */
+#search-enhanced form div #submit {
+  margin: 2.5em 0 1.25em 1.25em;
+}
+/* line 32, search.scss */
+#search-enhanced form div #submit #advanced-search {
+  font-size: small;
+}
+/* line 37, search.scss */
 #search-enhanced form div.last {
   margin-right: 0;
 }
-/* line 9, search.scss */
+/* line 40, search.scss */
 #search-enhanced form #categories, #search-enhanced form #searchbox {
   width: 100%;
   display: none;
 }
-/* line 15, search.scss */
+/* line 46, search.scss */
 #search-enhanced form #submit #advanced-search {
   cursor: pointer;
 }
-/* line 20, search.scss */
+/* line 51, search.scss */
 #search-enhanced form #searchbox {
   width: 100%;
   float: left;
   padding: 2.5em 1.25em;
 }
-/* line 24, search.scss */
+/* line 55, search.scss */
 #search-enhanced form #searchbox input[type="text"] {
   width: 62%;
+}
+/* line 60, search.scss */
+#search-enhanced form #trending {
+  width: 100%;
+  float: left;
+  margin: 5em 0;
+}
+/* line 64, search.scss */
+#search-enhanced form #trending h2 {
+  width: 30%;
+  float: left;
+  margin-right: 3%;
+  padding-right: 3%;
+  border-right: 1px dotted;
+}
+/* line 72, search.scss */
+#search-enhanced form #trending #items {
+  width: 55%;
+  margin-left: 3%;
+  float: left;
+}
+
+/* line 2, archive.scss */
+body.archive section {
+  width: 100%;
+  float: left;
+  margin: 1.25em 0;
+}
+/* line 6, archive.scss */
+body.archive section hgroup {
+  width: 100%;
+  float: left;
+}
+/* line 10, archive.scss */
+body.archive section hgroup #breadcrumbs {
+  width: 100%;
+  float: left;
+}
+/* line 13, archive.scss */
+body.archive section hgroup #breadcrumbs ul {
+  display: block;
+  margin: 0;
+}
+/* line 457, mixins.scss */
+body.archive section hgroup #breadcrumbs ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+  margin-right: 1.25em;
+}
+/* line 464, mixins.scss */
+body.archive section hgroup #breadcrumbs ul li.last {
+  margin-right: 0;
+}
+/* line 16, archive.scss */
+body.archive section hgroup #breadcrumbs ul li {
+  margin-right: 0.3125em;
+  font-size: small;
+}
+/* line 20, archive.scss */
+body.archive section hgroup #breadcrumbs ul li a {
+  color: #aaaaaa;
+}
+/* line 25, archive.scss */
+body.archive section hgroup #breadcrumbs ul li:after {
+  content: '\003E';
+  float: right;
+  margin-left: 0.3125em;
+  color: #f25f18;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -o-transform: rotate(0);
+  -ms-transform: rotate(0);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+  color: #aaaaaa;
+}
+/* line 30, archive.scss */
+body.archive section hgroup #breadcrumbs ul li.last:after {
+  content: '';
+}
+/* line 36, archive.scss */
+body.archive section hgroup header {
+  width: 50%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 41, archive.scss */
+body.archive section #products {
+  width: 100%;
+  float: left;
+}
+/* line 44, archive.scss */
+body.archive section #products #product {
+  width: 30%;
+  margin: 0 5% 0 0;
+  float: left;
+  margin-bottom: 5%;
+  background: white url(stripe.png);
+  height: 26em;
+  height: 36em !important;
+}
+@media only screen and (max-width: 40em) {
+  /* line 44, archive.scss */
+  body.archive section #products #product {
+    height: 23em;
+  }
+}
+@media all and (orientation: landscape) {
+  /* line 44, archive.scss */
+  body.archive section #products #product {
+    height: 30em;
+  }
+}
+/* line 135, theme.scss */
+body.archive section #products #product img {
+  width: 98%;
+  padding: 1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 139, theme.scss */
+body.archive section #products #product #title, body.archive section #products #product #excerpt {
+  margin: 0.625em 0.3125em;
+  padding: 0.625em 1.25em;
+  background: white;
+  min-height: 4.5em;
+}
+/* line 147, theme.scss */
+body.archive section #products #product #title h3 {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 155, theme.scss */
+body.archive section #products #product #excerpt a {
+  color: #aaaaaa;
+}
+/* line 161, theme.scss */
+body.archive section #products #product #price, body.archive section #products #product #category {
+  font-size: small;
+}
+/* line 165, theme.scss */
+body.archive section #products #product #price {
+  width: 50%;
+  margin: 0 5% 0 1.25em;
+  float: left;
+  margin-top: 1.25em;
+}
+/* line 170, theme.scss */
+body.archive section #products #product #category {
+  min-width: 20%;
+  margin-right: 1.5em;
+  /* Because of the small font size */
+  margin-top: 0.625em;
+  float: right;
+  font-size: small;
+  background: #aaaaaa;
+}
+/* line 179, theme.scss */
+body.archive section #products #product #category a {
+  padding: 0.625em;
+  color: white;
+  text-align: center;
+  display: block;
+}
+/* line 51, archive.scss */
+body.archive section #products #product #price, body.archive section #products #product #category {
+  font-size: 1em;
+}
+/* line 55, archive.scss */
+body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
+  margin-right: 0;
+}
+/* line 61, archive.scss */
+body.archive section footer h1 {
+  width: 50%;
+  margin: 0 0 0 0;
+  float: left;
+}
+/* line 66, archive.scss */
+body.archive section #pagination {
+  width: 50%;
+  margin: 0 0 0 0;
+  float: left;
+  text-align: right;
+  margin-top: 1.25em;
 }
 
 /* line 3, single.scss */
