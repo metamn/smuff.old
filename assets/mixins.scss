@@ -224,6 +224,7 @@
 // $mq-tablet-portrait   : 640px !default;  -- changed because i want my blog content is around this wide, not 768. you should let content & design determine your breakpoints
 // $mq-tablet-landscape	: 1024px !default;
 // $mq-desktop		: 1382px !default;
+// $mq-large-screen      : 1599px !default;
 
 
 $mq-mobile-portrait	: 20em !default;
@@ -231,6 +232,7 @@ $mq-mobile-landscape	: 30em !default;
 $mq-tablet-portrait	: 40em !default;
 $mq-tablet-landscape	: 64em !default;
 $mq-desktop		: 86.375em !default;
+$mq-large-screen: 99.93em !default;
 
 
 
@@ -355,6 +357,16 @@ $mq-desktop		: 86.375em !default;
 		@content;
 	}
 }
+
+
+// Above 1600px
+@mixin large-screen {
+  @media only screen and (min-width : $mq-large-screen) {
+		@content;
+	}
+}
+
+
 
 @mixin retina {
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {

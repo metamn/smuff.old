@@ -332,30 +332,30 @@ body .container label.select:after {
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
 @media only screen and (max-width: 30em) {
-  /* line 384, mixins.scss */
+  /* line 396, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 385, mixins.scss */
+  /* line 397, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 30.001em) {
-  /* line 389, mixins.scss */
+  /* line 401, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 390, mixins.scss */
+  /* line 402, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 398, mixins.scss */
+/* line 410, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -466,7 +466,7 @@ body .container #header #cart ul {
   margin: 0;
   margin-top: 3.75em;
 }
-/* line 457, mixins.scss */
+/* line 469, mixins.scss */
 body .container #header #cart ul li {
   display: inline-block;
   list-style-type: none;
@@ -474,7 +474,7 @@ body .container #header #cart ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 464, mixins.scss */
+/* line 476, mixins.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
@@ -699,7 +699,7 @@ body .container #header #menu ul {
   display: block;
   margin: 0;
 }
-/* line 457, mixins.scss */
+/* line 469, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -707,7 +707,7 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 464, mixins.scss */
+/* line 476, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
@@ -837,7 +837,7 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu-extended div h3 {
     font-size: 1em;
   }
-  /* line 470, mixins.scss */
+  /* line 482, mixins.scss */
   body .container #header #menu-extended div ul li {
     display: inline-block;
   }
@@ -1085,7 +1085,7 @@ body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 457, mixins.scss */
+/* line 469, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -1093,7 +1093,7 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 464, mixins.scss */
+/* line 476, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
@@ -1213,7 +1213,7 @@ body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 457, mixins.scss */
+/* line 469, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -1221,7 +1221,7 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 464, mixins.scss */
+/* line 476, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
@@ -1313,7 +1313,7 @@ body.home .container #subscribe ul {
   display: block;
   margin: 0;
 }
-/* line 457, mixins.scss */
+/* line 469, mixins.scss */
 body.home .container #subscribe ul li {
   display: inline-block;
   list-style-type: none;
@@ -1321,7 +1321,7 @@ body.home .container #subscribe ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 464, mixins.scss */
+/* line 476, mixins.scss */
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
@@ -1392,7 +1392,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 457, mixins.scss */
+/* line 469, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1400,7 +1400,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 464, mixins.scss */
+/* line 476, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
@@ -1511,58 +1511,113 @@ body.archive section hgroup header {
   width: 100%;
   float: left;
 }
-/* line 13, archive.scss */
+@media only screen and (max-width: 64em) {
+  /* line 13, archive.scss */
+  body.archive section hgroup header h2 {
+    font-size: 1.25em;
+    padding: 0.625em 0;
+  }
+}
+/* line 20, archive.scss */
 body.archive section hgroup nav {
   width: 100%;
   float: left;
   margin-bottom: 2.5em;
 }
-/* line 17, archive.scss */
+/* line 24, archive.scss */
+body.archive section hgroup nav h3 {
+  display: none;
+}
+/* line 28, archive.scss */
 body.archive section hgroup nav div {
   max-width: 38.25%;
   float: left;
 }
-/* line 21, archive.scss */
+/* line 32, archive.scss */
 body.archive section hgroup nav div label:after {
   background: #363636 !important;
 }
-/* line 24, archive.scss */
+/* line 35, archive.scss */
 body.archive section hgroup nav div label:after select {
   color: #363636 !important;
 }
-/* line 32, archive.scss */
+@media only screen and (max-width: 64em) {
+  /* line 43, archive.scss */
+  body.archive section hgroup nav h3 {
+    display: block;
+    font-size: small;
+    padding: 0;
+    border-bottom: 1px solid #f1f1f1;
+    color: #aaaaaa;
+    cursor: pointer;
+  }
+  /* line 54, archive.scss */
+  body.archive section hgroup nav h3:after {
+    content: '\003E';
+    float: right;
+    margin-left: 0.3125em;
+    color: #f25f18;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+    display: inline-block;
+  }
+  /* line 58, archive.scss */
+  body.archive section hgroup nav div {
+    width: 100%;
+    float: left;
+    max-width: 100%;
+    display: none;
+  }
+  /* line 64, archive.scss */
+  body.archive section hgroup nav div label.select:after {
+    display: none;
+  }
+  /* line 69, archive.scss */
+  body.archive section hgroup nav div label select {
+    width: 100%;
+    padding: 0.3125em 0;
+  }
+  /* line 76, archive.scss */
+  body.archive section hgroup nav #submit {
+    margin: 0.625em 0;
+  }
+}
+/* line 83, archive.scss */
 body.archive section #pagination {
   float: right;
   margin-top: 0.625em;
 }
-/* line 36, archive.scss */
+/* line 87, archive.scss */
 body.archive section #pagination .wp-paginate {
   margin: 0;
   font-size: small;
 }
-/* line 40, archive.scss */
+/* line 91, archive.scss */
 body.archive section #pagination .wp-paginate a {
   background: transparent;
 }
-/* line 44, archive.scss */
+/* line 95, archive.scss */
 body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
   padding: 0.3125em 0.625em;
 }
-/* line 48, archive.scss */
+/* line 99, archive.scss */
 body.archive section #pagination .wp-paginate .current {
   background: #363636;
   border-color: #363636;
 }
-/* line 53, archive.scss */
+/* line 104, archive.scss */
 body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
   border: none;
 }
-/* line 59, archive.scss */
+/* line 110, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 62, archive.scss */
+/* line 113, archive.scss */
 body.archive section #products #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -1570,16 +1625,16 @@ body.archive section #products #product {
   margin-bottom: 5%;
   background: white url(stripe.png);
   height: 26em;
-  height: 36em !important;
+  height: 36em;
 }
 @media only screen and (max-width: 40em) {
-  /* line 62, archive.scss */
+  /* line 113, archive.scss */
   body.archive section #products #product {
     height: 23em;
   }
 }
 @media all and (orientation: landscape) {
-  /* line 62, archive.scss */
+  /* line 113, archive.scss */
   body.archive section #products #product {
     height: 30em;
   }
@@ -1636,23 +1691,82 @@ body.archive section #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 69, archive.scss */
+/* line 120, archive.scss */
 body.archive section #products #product #price, body.archive section #products #product #category {
   font-size: 1em;
 }
-/* line 73, archive.scss */
+/* line 124, archive.scss */
 body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
   margin-right: 0;
 }
-/* line 79, archive.scss */
+@media (max-width: 20em) {
+  /* line 130, archive.scss */
+  body.archive section #products #product {
+    width: 100%;
+    float: left;
+    height: 32em;
+  }
+}
+@media only screen and (min-width: 20.001em) {
+  /* line 137, archive.scss */
+  body.archive section #products #product {
+    width: 45%;
+    margin: 0 10% 0 0;
+    float: left;
+    height: 28em;
+    margin-bottom: 5%;
+  }
+  /* line 144, archive.scss */
+  body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
+  body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
+    margin-right: 0;
+  }
+  /* line 147, archive.scss */
+  body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width: 40.001em) {
+  /* line 153, archive.scss */
+  body.archive section #products #product {
+    width: 30%;
+    margin: 0 5% 0 0;
+    float: left;
+    margin-bottom: 5%;
+    height: 36em;
+  }
+  /* line 159, archive.scss */
+  body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
+    margin-right: 0;
+  }
+  /* line 163, archive.scss */
+  body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c20,
+  body.archive section #products #product.c22, body.archive section #products #product.c26, body.archive section #products #product.c28 {
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 99.93em) {
+  /* line 169, archive.scss */
+  body.archive section #products #product {
+    height: 40em;
+  }
+}
+/* line 176, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 83, archive.scss */
+/* line 180, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
+}
+@media (max-width: 30em) {
+  /* line 187, archive.scss */
+  body.archive section footer h1, body.archive section footer #pagination {
+    width: 100%;
+    float: left;
+  }
 }
 
 /* line 3, single.scss */

@@ -135,8 +135,11 @@
 			  <?php echo $found_posts . $cadouri . $cat_name; ?>
 		  </h2>
 		</header>
-		
+	
+	  	
 		<nav id="filters">
+		  <h3>Filtrare si navigare</h3>
+		  
 		  <div id="meta">
 		    <label class="select">
 		      <select>

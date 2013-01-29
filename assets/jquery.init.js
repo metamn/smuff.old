@@ -5,6 +5,12 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  
+  // Toggle filters and navigation on Archive for mobiles
+  $('.archive #filters h3').click(function() {
+    $('.archive #filters div').slideToggle('slow');
+  });
+  
   // Toggle extended menu in header
   
   $('#menu #all-products').click(function() {
@@ -17,6 +23,8 @@ $(document).ready(function() {
     $('#menu #all-products').removeClass('active');
   });
   
+  
+  
   // Giftshopper
   
   $('#giftshopper li').first().addClass('active');
@@ -27,7 +35,11 @@ $(document).ready(function() {
   });
   
   
-  // Startpage scroller
+  
+  
+  
+  // Startpage banner scroller
+  
   $('#new-products #navigation li').click(function() {
     var patterns = new Array('paven', 'grunge_wall', 'green_gobbler', 'washi', 'roughcloth', 'littleknobs', 'blu_stripes', 'tileable_wood_texture', 'purty_wood', 'diagonal_striped_brick');
     
