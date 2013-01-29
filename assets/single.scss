@@ -7,7 +7,7 @@ body.single {
 				@include block;
 				
 				#large-image {
-				  @include col($major, 0, $margin);
+				  @include col($major - $margin, 0, 0);
 				  
 				  img {
 				    @include image-bordered(2%);
@@ -16,7 +16,7 @@ body.single {
 				}
 				
 				#thumbs {
-				  @include col($minor, 0, 0);
+				  @include col($minor + $margin, $margin, 0);
 				  
 				  #thumb {
 				    @include col(47.5%, 0, 5%);
@@ -37,7 +37,7 @@ body.single {
 			}
 			
 			#description {
-			  @include col($major, 0, $margin);
+			  @include col($major - $margin, 0, 0);
 			  
 			  h3 {
 			    padding: $pad/4 0;
@@ -78,7 +78,7 @@ body.single {
 			}
 			
 			#shopping {
-			  @include col($minor, 0, 0);
+			  @include col($minor + $margin, $margin, 0);
 			  
 			  #add-to-cart {
 			     @include add-to-cart;
