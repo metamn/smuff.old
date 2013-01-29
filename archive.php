@@ -143,10 +143,10 @@
 		  <div id="meta">
 		    <label class="select">
 		      <select>
-		        <option>Toate cadourile</option>
 		        <option>Cadouri noi</option>
 		        <option>Cele mai vandute</option>
 		        <option>Reduceri</option>
+		        <option>Toate cadourile</option>
 		      </select>
 		    </label>
 		  </div>
