@@ -6,10 +6,27 @@ $(document).ready(function() {
   
   
   
+  // Accordion on product page
+  
+  $('.single #description .pane').hide();
+  $('.single #description .pane').first().show();
+  $('.single #description h3').click(function() {
+  	$(this).next().slideToggle();
+  });
+  
+  // Removing "Opiniile Cumparatorilor" from Product page
+  $(".single #description h3#comments").prev().prev().hide();
+  
+  
+  
+  
   // Toggle filters and navigation on Archive for mobiles
+  
   $('.archive #filters h3').click(function() {
     $('.archive #filters div').slideToggle('slow');
   });
+  
+  
   
   // Toggle extended menu in header
   
@@ -335,15 +352,10 @@ $(document).ready(function() {
   
   
   
-  // Accordion 
-  $(".accordion h3, .accordion h2").click(function() {
-  	$(this).next().slideToggle();
-  	// $(this).next().find('div').slideToggle();
-  });
-  // - open first accordion on product description
-  $(".single .accordion .pane").first().show();
-  // Removing "Opiniile Cumparatorilor" from Product page
-  $(".single .accordion h3#comments").prev().prev().hide();
+  
+  
+  
+  
   
   
   // Checkout

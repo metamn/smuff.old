@@ -1,62 +1,122 @@
-body {
+body.single {
 	.container {
 		article {
 			@include block;
 			
-			#col-1 {
-				@include col($major, 0, $margin);
+			#images {
+				@include block;
 				
+				#large-image {
+				  @include col($major, 0, $margin);
+				  
+				  img {
+				    @include image-bordered(2%);
+				  }
+				  
+				}
+				
+				#thumbs {
+				  @include col($minor, 0, 0);
+				  
+				  #thumb {
+				    @include col(47.5%, 0, 5%);
+				    margin-bottom: $margin;
+				    
+				    cursor: pointer;
+				  
+				    img {
+				      @include image-bordered(1%);
+				    }  
+				  }
+				  #thumb.c2, #thumb.c4, #thumb.c6, #thumb.c8, #thumb.c10, #thumb.c12, #thumb.c14, #thumb.c16, #thumb.c18, #thumb.c20,
+          #thumb.c22, #thumb.c24, #thumb.c26, #thumb.c28, #thumb.c30 {
+            margin-right: 0;
+          }
+				  
+				}
 			}
 			
-			#col-2 {
-				@include col($minor, 0, 0);
-				
+			#description {
+			  @include col($major, 0, $margin);
+			  
+			  h3 {
+			    padding: $pad/4 0;
+			    margin: $pad/4 0;
+			    border-bottom: 1px solid $very-light-gray;
+			    
+			    cursor: pointer;
+			  }
+			  h3:after {
+			    @include arrow-to-reveal-content;
+			  }
+			  
+			  .pane {
+			    padding: $pad;
+			    background: $background;
+			    color: $dark-gray;
+			    
+			    line-height: 1.75;
+			    max-width: 600px;
+			    
+			    br {
+			      margin-top: $pad;
+			      display: block;
+			    }
+			    
+			    ul {
+			      margin: 0;
+			      list-style: none;
+			      
+			      
+			      li {
+			        margin-bottom: $pad/2;
+			        padding-bottom: $pad/4;
+			        border-bottom: 1px solid $very-light-gray;
+			      }
+			    }
+			  }
 			}
-			
-			#post-content {
-				@include col($major, 0, $margin);
-				
-			}
-			
-			#contact-info {
-				@include col($minor, 0, 0);
-				
-			}
-		}
-	
-		
-		
-		#post-shopping-2 {
-			@include col($major, 0, $margin);
-						
-			
 			
 			#shopping {
-				@include col($minor + $margin, 0, 0);
-			}
-			
-			#shopping-incentives {
-				@include col($major, 0, 0);
+			  @include col($minor, 0, 0);
+			  
+			  #add-to-cart {
+			     @include add-to-cart;
+			  }
+			 
+			  #shopping-info {
+			    @include info-box;
+			    
+			    
+			    .tooltip-text {
+			      display: none;
+			    }
+			  }
 			}
 		}
 	
-		.product-list {
+	
+		section {
 			@include block;
 			
-			.item {
-				@include col(30%, 0, 5%);
-				margin-bottom: $margin;
-				
-				
-			}
-			
-			.item.c3, .item.c6, .item.c9, .item.c12, .item.c15, .item.c18, .item.c21, .item.c24,
-			.item.c27, .item.c30 {
-				margin-right: 0;
-			}
-			
+			#product {
+        @include col(30%, 0, 5%);
+        margin-bottom: $margin;
+        
+        @include product-thumb;
+        height: 36em;
+        
+        #price, #category {
+          font-size: 1em;
+        }
+      }
+      #product.c3, #product.c6, #product.c9, #product.c12, #product.c15, #product.c18, #product.c21, #product.c24, #product.c27, #product.c30 {
+        margin-right: 0;
+      }
+    }
 		
-		}
+		
+		
 	
 	}
 }
