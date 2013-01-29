@@ -121,16 +121,6 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-thumb {
   background: $background url(stripe.png);
-  height: 26em;
-  
-  
-  @include tablet-portrait-and-below {
-    height: 23em;
-  }
-  
-  @include landscape {
-    height: 30em;
-  }
   
   img {
 		@include image-bordered(1%);

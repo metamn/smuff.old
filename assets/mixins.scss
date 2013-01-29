@@ -219,13 +219,16 @@
 
 
 
-// $mq-mobile-portrait	  : 320px !default;
-// $mq-mobile-landscape	  : 480px !default;
-// $mq-tablet-portrait   : 640px !default;  -- changed because i want my blog content is around this wide, not 768. you should let content & design determine your breakpoints
-// $mq-tablet-landscape	: 1024px !default;
-// $mq-desktop		: 1382px !default;
-// $mq-large-screen      : 1599px !default;
+$mq-mobile-portrait	  : 320px !default;
+$mq-mobile-landscape	  : 480px !default;
+$mq-tablet-portrait   : 640px !default;  
+$mq-tablet-landscape	: 1024px !default;
+$mq-desktop		: 1382px !default;
+$mq-large-screen      : 1599px !default;
 
+/*
+
+!!! em is not working on iphone 3 !!!
 
 $mq-mobile-portrait	: 20em !default;
 $mq-mobile-landscape	: 30em !default;
@@ -233,7 +236,7 @@ $mq-tablet-portrait	: 40em !default;
 $mq-tablet-landscape	: 64em !default;
 $mq-desktop		: 86.375em !default;
 $mq-large-screen: 99.93em !default;
-
+*/
 
 
 // Both portrait and landscape
@@ -267,7 +270,7 @@ $mq-large-screen: 99.93em !default;
 
 // Everthing larger than a portrait mobile up until mobile landscape
 @mixin mobile-landscape-only {
-	@media only screen and (min-width : $mq-mobile-portrait + .001) and (max-width : $mq-mobile-landscape) {
+	@media only screen and (min-width : $mq-mobile-portrait + 1) and (max-width : $mq-mobile-landscape) {
 		@content;
 	}
 }
@@ -281,7 +284,7 @@ $mq-large-screen: 99.93em !default;
 
 // Everything above and including the mobile landscape width
 @mixin mobile-landscape-and-up {
-	@media only screen and (min-width : $mq-mobile-portrait + .001) {
+	@media only screen and (min-width : $mq-mobile-portrait + 1) {
 		@content;
 	}
 }
@@ -289,14 +292,14 @@ $mq-large-screen: 99.93em !default;
 // Both the portrait and landscape width of the tablet
 // Larger than a landscape mobile but less than or equal to a landscape tablet
 @mixin tablet-only {
-	@media only screen and (min-width : $mq-mobile-landscape + .001) and (max-width : $mq-tablet-landscape) {
+	@media only screen and (min-width : $mq-mobile-landscape + 1) and (max-width : $mq-tablet-landscape) {
 		@content;
 	}
 }
 
 // Everything larger than mobile landscape up until the portrait width of the tablet
 @mixin tablet-portrait-only {
-	@media only screen and (min-width : $mq-mobile-landscape + .001) and (max-width : $mq-tablet-portrait) {
+	@media only screen and (min-width : $mq-mobile-landscape + 1) and (max-width : $mq-tablet-portrait) {
 		@content;
 	}
 }
@@ -310,15 +313,14 @@ $mq-large-screen: 99.93em !default;
 
 // Everything above and including the portrait width of the tablet
 @mixin tablet-portrait-and-up {
-	// @media only screen and (min-width : $mq-mobile-landscape + 1) {
-	@media only screen and (min-width : $mq-tablet-portrait + .001) {
+	@media only screen and (min-width : $mq-tablet-portrait + 1) {
 		@content;
 	}
 }
 
 // Larger than portrait but less than or equal to the landscape width
 @mixin tablet-landscape-only {
-	@media only screen and (min-width : $mq-tablet-portrait + .001) and (max-width : $mq-tablet-landscape) {
+	@media only screen and (min-width : $mq-tablet-portrait + 1) and (max-width : $mq-tablet-landscape) {
 		@content;
 	}
 }
@@ -332,14 +334,14 @@ $mq-large-screen: 99.93em !default;
 
 // Everything larger than portrait tablet
 @mixin tablet-landscape-and-up {
-	@media only screen and (min-width : $mq-tablet-portrait + .001) {
+	@media only screen and (min-width : $mq-tablet-portrait + 1) {
 		@content;
 	}
 }
 
 // Everything larger than a landscape tablet
 @mixin desktop-and-up {
-	@media only screen and (min-width : $mq-tablet-landscape + .001) {
+	@media only screen and (min-width : $mq-tablet-landscape + 1) {
 		@content;
 	}
 }
@@ -353,7 +355,7 @@ $mq-large-screen: 99.93em !default;
 
 // Everything larger than a landscape tablet but less than or equal to the desktop
 @mixin desktop-only {
-	@media only screen and (min-width : $mq-tablet-landscape + .001) and (max-width : $mq-desktop) {
+	@media only screen and (min-width : $mq-tablet-landscape + 1) and (max-width : $mq-desktop) {
 		@content;
 	}
 }
@@ -397,7 +399,7 @@ $mq-large-screen: 99.93em !default;
   .desktop { display: none; }
 }
 
-@media only screen and (min-width : $mq-mobile-landscape + .001) { 
+@media only screen and (min-width : $mq-mobile-landscape + 1) { 
   .mobile { display: none; }
   .desktop { display: block; }
 }

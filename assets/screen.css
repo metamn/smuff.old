@@ -331,31 +331,42 @@ body .container label.select:after {
 /* Responsive mixins
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
-@media only screen and (max-width: 30em) {
-  /* line 396, mixins.scss */
+/*
+
+!!! em is not working on iphone 3 !!!
+
+$mq-mobile-portrait	: 20em !default;
+$mq-mobile-landscape	: 30em !default;
+$mq-tablet-portrait	: 40em !default;
+$mq-tablet-landscape	: 64em !default;
+$mq-desktop		: 86.375em !default;
+$mq-large-screen: 99.93em !default;
+*/
+@media only screen and (max-width: 480px) {
+  /* line 398, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 397, mixins.scss */
+  /* line 399, mixins.scss */
   .desktop {
     display: none;
   }
 }
-@media only screen and (min-width: 30.001em) {
-  /* line 401, mixins.scss */
+@media only screen and (min-width: 481px) {
+  /* line 403, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 402, mixins.scss */
+  /* line 404, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 410, mixins.scss */
+/* line 412, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -432,41 +443,41 @@ a, a:active, a:visited, a:hover {
 */
 /* Header, footer, and general settings
 */
-/* line 192, theme.scss */
+/* line 182, theme.scss */
 body {
   background: white url(background.png);
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 199, theme.scss */
+/* line 189, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 204, theme.scss */
+/* line 194, theme.scss */
 body .container #header h1, body .container #header h2 {
   padding: 0.625em 0;
 }
-/* line 208, theme.scss */
+/* line 198, theme.scss */
 body .container #header #logo {
   margin-right: 2.5%;
   /* Aligned to the menu item below */
 }
-/* line 213, theme.scss */
+/* line 203, theme.scss */
 body .container #header #strapline a {
   color: #f25f18;
 }
-/* line 218, theme.scss */
+/* line 208, theme.scss */
 body .container #header #cart {
   font-size: small;
   color: #aaaaaa;
 }
-/* line 222, theme.scss */
+/* line 212, theme.scss */
 body .container #header #cart ul {
   display: block;
   margin: 0;
   margin-top: 3.75em;
 }
-/* line 469, mixins.scss */
+/* line 471, mixins.scss */
 body .container #header #cart ul li {
   display: inline-block;
   list-style-type: none;
@@ -474,46 +485,46 @@ body .container #header #cart ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 476, mixins.scss */
+/* line 478, mixins.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 226, theme.scss */
+/* line 216, theme.scss */
 body .container #header #cart ul li {
   margin-right: 0.625em !important;
 }
-/* line 228, theme.scss */
+/* line 218, theme.scss */
 body .container #header #cart ul li a {
   color: #aaaaaa;
 }
-/* line 231, theme.scss */
+/* line 221, theme.scss */
 body .container #header #cart ul li a:hover {
   color: #363636;
 }
-/* line 235, theme.scss */
+/* line 225, theme.scss */
 body .container #header #cart ul li:after {
   content: '\2022';
   margin-left: 0.625em;
 }
-/* line 240, theme.scss */
+/* line 230, theme.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 243, theme.scss */
+/* line 233, theme.scss */
 body .container #header #cart ul li.last:after {
   content: '';
 }
-/* line 249, theme.scss */
+/* line 239, theme.scss */
 body .container #header #menu {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 255, theme.scss */
+/* line 245, theme.scss */
 body .container #header #menu ul li#all-products {
   cursor: pointer;
 }
-/* line 258, theme.scss */
+/* line 248, theme.scss */
 body .container #header #menu ul li#all-products:after {
   content: '\003E';
   float: right;
@@ -526,11 +537,11 @@ body .container #header #menu ul li#all-products:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 261, theme.scss */
+/* line 251, theme.scss */
 body .container #header #menu ul li#all-products.active {
   color: #f25f18;
 }
-/* line 264, theme.scss */
+/* line 254, theme.scss */
 body .container #header #menu ul li#all-products.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -539,13 +550,13 @@ body .container #header #menu ul li#all-products.active:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 270, theme.scss */
+/* line 260, theme.scss */
 body .container #header #search {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.3125em 0 0.15625em;
 }
-/* line 276, theme.scss */
+/* line 266, theme.scss */
 body .container #header #search input[type="text"] {
   width: 17.5em;
   background: #cccccc;
@@ -555,21 +566,21 @@ body .container #header #search input[type="text"] {
 
 /* Startpage
 */
-/* line 295, theme.scss */
+/* line 285, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 299, theme.scss */
+/* line 289, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 302, theme.scss */
+/* line 292, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 305, theme.scss */
+/* line 295, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -577,63 +588,50 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 312, theme.scss */
+/* line 302, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #363636;
 }
-/* line 322, theme.scss */
+/* line 312, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
-  height: 26em;
 }
-@media only screen and (max-width: 40em) {
-  /* line 322, theme.scss */
-  body.home section #body #products #product {
-    height: 23em;
-  }
-}
-@media all and (orientation: landscape) {
-  /* line 322, theme.scss */
-  body.home section #body #products #product {
-    height: 30em;
-  }
-}
-/* line 135, theme.scss */
+/* line 125, theme.scss */
 body.home section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 139, theme.scss */
+/* line 129, theme.scss */
 body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 147, theme.scss */
+/* line 137, theme.scss */
 body.home section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 155, theme.scss */
+/* line 145, theme.scss */
 body.home section #body #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 161, theme.scss */
+/* line 151, theme.scss */
 body.home section #body #products #product #price, body.home section #body #products #product #category {
   font-size: small;
 }
-/* line 165, theme.scss */
+/* line 155, theme.scss */
 body.home section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 170, theme.scss */
+/* line 160, theme.scss */
 body.home section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -643,7 +641,7 @@ body.home section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 179, theme.scss */
+/* line 169, theme.scss */
 body.home section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -699,7 +697,7 @@ body .container #header #menu ul {
   display: block;
   margin: 0;
 }
-/* line 469, mixins.scss */
+/* line 471, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -707,7 +705,7 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 476, mixins.scss */
+/* line 478, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
@@ -791,7 +789,7 @@ body .container #header #menu-extended #close span:after {
   margin-left: 0.625em;
   font-size: large;
 }
-@media (max-width: 30em) {
+@media (max-width: 480px) {
   /* line 121, header.scss */
   body .container #header #cart, body .container #header hgroup, body .container #header #menu {
     width: 100%;
@@ -837,7 +835,7 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu-extended div h3 {
     font-size: 1em;
   }
-  /* line 482, mixins.scss */
+  /* line 484, mixins.scss */
   body .container #header #menu-extended div ul li {
     display: inline-block;
   }
@@ -870,7 +868,7 @@ body .container #header #menu-extended #close span:after {
     margin-top: 1.25em;
   }
 }
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   /* line 205, header.scss */
   body .container #header #cart ul {
     margin: 1.25em 0;
@@ -950,56 +948,43 @@ body.home .container section #body #products #product {
   float: left;
   height: 30em;
   background: white url(stripe.png);
-  height: 26em;
 }
-@media only screen and (max-width: 40em) {
-  /* line 14, startpage.scss */
-  body.home .container section #body #products #product {
-    height: 23em;
-  }
-}
-@media all and (orientation: landscape) {
-  /* line 14, startpage.scss */
-  body.home .container section #body #products #product {
-    height: 30em;
-  }
-}
-/* line 135, theme.scss */
+/* line 125, theme.scss */
 body.home .container section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 139, theme.scss */
+/* line 129, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 147, theme.scss */
+/* line 137, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 155, theme.scss */
+/* line 145, theme.scss */
 body.home .container section #body #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 161, theme.scss */
+/* line 151, theme.scss */
 body.home .container section #body #products #product #price, body.home .container section #body #products #product #category {
   font-size: small;
 }
-/* line 165, theme.scss */
+/* line 155, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 170, theme.scss */
+/* line 160, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1009,7 +994,7 @@ body.home .container section #body #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 179, theme.scss */
+/* line 169, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -1020,7 +1005,7 @@ body.home .container section #body #products #product #category a {
 body.home .container section #body #products #product #excerpt {
   display: none;
 }
-@media (max-width: 30em) {
+@media (max-width: 480px) {
   /* line 14, startpage.scss */
   body.home .container section #body #products #product {
     width: 100%;
@@ -1029,7 +1014,7 @@ body.home .container section #body #products #product #excerpt {
     margin: 5%;
   }
 }
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   /* line 14, startpage.scss */
   body.home .container section #body #products #product {
     width: 45%;
@@ -1042,7 +1027,7 @@ body.home .container section #body #products #product #excerpt {
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
 }
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   /* line 40, startpage.scss */
   body.home .container section #body #products #product.c2 {
     margin-right: 0;
@@ -1085,7 +1070,7 @@ body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 469, mixins.scss */
+/* line 471, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -1093,7 +1078,7 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 476, mixins.scss */
+/* line 478, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
@@ -1130,7 +1115,7 @@ body.home .container #new-products #body #products #product #image {
 body.home .container #new-products #body #products #product #title, body.home .container #new-products #body #products #product #excerpt, body.home .container #new-products #body #products #product #price, body.home .container #new-products #body #products #product #category {
   display: none;
 }
-@media (max-width: 30em) {
+@media (max-width: 480px) {
   /* line 77, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 100%;
@@ -1139,7 +1124,7 @@ body.home .container #new-products #body #products #product #title, body.home .c
     margin: 5%;
   }
 }
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   /* line 77, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 45%;
@@ -1178,7 +1163,7 @@ body.home .container #anouncement h2 span {
   border-bottom: 1px solid;
   padding: 0.15625em 5em;
 }
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 1024px) {
   /* line 120, startpage.scss */
   body.home .container #anouncement h2 {
     font-size: 1.25em;
@@ -1213,7 +1198,7 @@ body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 469, mixins.scss */
+/* line 471, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -1221,7 +1206,7 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 476, mixins.scss */
+/* line 478, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
@@ -1285,7 +1270,7 @@ body.home .container #giftshopper #body ul #for-kids {
 body.home .container #giftshopper #body ul #for-office {
   background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat;
 }
-@media (max-width: 30em) {
+@media (max-width: 480px) {
   /* line 214, startpage.scss */
   body.home .container #giftshopper #body ul li, body.home .container #giftshopper #body ul li.active {
     width: 100%;
@@ -1294,7 +1279,7 @@ body.home .container #giftshopper #body ul #for-office {
     margin: 5%;
   }
 }
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   /* line 222, startpage.scss */
   body.home .container #giftshopper #body ul li {
     width: 22.5%;
@@ -1313,7 +1298,7 @@ body.home .container #subscribe ul {
   display: block;
   margin: 0;
 }
-/* line 469, mixins.scss */
+/* line 471, mixins.scss */
 body.home .container #subscribe ul li {
   display: inline-block;
   list-style-type: none;
@@ -1321,7 +1306,7 @@ body.home .container #subscribe ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 476, mixins.scss */
+/* line 478, mixins.scss */
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
@@ -1331,7 +1316,7 @@ body.home .container #subscribe ul li {
   margin: 0 5% 0 0;
   float: left;
 }
-@media (max-width: 30em) {
+@media (max-width: 480px) {
   /* line 238, startpage.scss */
   body.home .container #subscribe ul li {
     width: 100%;
@@ -1340,7 +1325,7 @@ body.home .container #subscribe ul li {
     margin: 5%;
   }
 }
-@media only screen and (min-width: 30.001em) and (max-width: 64em) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   /* line 238, startpage.scss */
   body.home .container #subscribe ul li {
     width: 47.5%;
@@ -1392,7 +1377,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 469, mixins.scss */
+/* line 471, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1400,7 +1385,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 476, mixins.scss */
+/* line 478, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
@@ -1511,7 +1496,7 @@ body.archive section hgroup header {
   width: 100%;
   float: left;
 }
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 1024px) {
   /* line 13, archive.scss */
   body.archive section hgroup header h2 {
     font-size: 1.25em;
@@ -1541,7 +1526,7 @@ body.archive section hgroup nav div label:after {
 body.archive section hgroup nav div label:after select {
   color: #363636 !important;
 }
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 1024px) {
   /* line 43, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
@@ -1568,7 +1553,7 @@ body.archive section hgroup nav div label:after select {
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
-    max-width: 100%;
+    max-width: 90%;
     display: none;
   }
   /* line 64, archive.scss */
@@ -1624,57 +1609,44 @@ body.archive section #products #product {
   float: left;
   margin-bottom: 5%;
   background: white url(stripe.png);
-  height: 26em;
   height: 36em;
 }
-@media only screen and (max-width: 40em) {
-  /* line 113, archive.scss */
-  body.archive section #products #product {
-    height: 23em;
-  }
-}
-@media all and (orientation: landscape) {
-  /* line 113, archive.scss */
-  body.archive section #products #product {
-    height: 30em;
-  }
-}
-/* line 135, theme.scss */
+/* line 125, theme.scss */
 body.archive section #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 139, theme.scss */
+/* line 129, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 147, theme.scss */
+/* line 137, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 155, theme.scss */
+/* line 145, theme.scss */
 body.archive section #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 161, theme.scss */
+/* line 151, theme.scss */
 body.archive section #products #product #price, body.archive section #products #product #category {
   font-size: small;
 }
-/* line 165, theme.scss */
+/* line 155, theme.scss */
 body.archive section #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 170, theme.scss */
+/* line 160, theme.scss */
 body.archive section #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1684,7 +1656,7 @@ body.archive section #products #product #category {
   font-size: small;
   background: #aaaaaa;
 }
-/* line 179, theme.scss */
+/* line 169, theme.scss */
 body.archive section #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -1699,7 +1671,7 @@ body.archive section #products #product #price, body.archive section #products #
 body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
   margin-right: 0;
 }
-@media (max-width: 20em) {
+@media (max-width: 480px) {
   /* line 130, archive.scss */
   body.archive section #products #product {
     width: 100%;
@@ -1707,62 +1679,48 @@ body.archive section #products #product.c3, body.archive section #products #prod
     height: 32em;
   }
 }
-@media only screen and (min-width: 20.001em) {
+@media only screen and (min-width: 321px) and (max-width: 480px) {
   /* line 137, archive.scss */
+  body.archive section #products #product {
+    height: 36em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  /* line 143, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
-    height: 28em;
     margin-bottom: 5%;
   }
-  /* line 144, archive.scss */
+  /* line 149, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 147, archive.scss */
+  /* line 152, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-@media only screen and (min-width: 40.001em) {
-  /* line 153, archive.scss */
-  body.archive section #products #product {
-    width: 30%;
-    margin: 0 5% 0 0;
-    float: left;
-    margin-bottom: 5%;
-    height: 36em;
-  }
-  /* line 159, archive.scss */
-  body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
-    margin-right: 0;
-  }
-  /* line 163, archive.scss */
-  body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c20,
-  body.archive section #products #product.c22, body.archive section #products #product.c26, body.archive section #products #product.c28 {
-    margin-right: 5%;
-  }
-}
-@media only screen and (min-width: 99.93em) {
-  /* line 169, archive.scss */
+@media only screen and (min-width: 1599px) {
+  /* line 160, archive.scss */
   body.archive section #products #product {
     height: 40em;
   }
 }
-/* line 176, archive.scss */
+/* line 167, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 180, archive.scss */
+/* line 171, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
-@media (max-width: 30em) {
-  /* line 187, archive.scss */
+@media (max-width: 480px) {
+  /* line 178, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;

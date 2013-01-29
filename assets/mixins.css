@@ -11,31 +11,42 @@
 /* Responsive mixins
   - http://paulstamatiou.com/responsive-retina-blog-development-part-1
 */
-@media only screen and (max-width: 30em) {
-  /* line 396, mixins.scss */
+/*
+
+!!! em is not working on iphone 3 !!!
+
+$mq-mobile-portrait	: 20em !default;
+$mq-mobile-landscape	: 30em !default;
+$mq-tablet-portrait	: 40em !default;
+$mq-tablet-landscape	: 64em !default;
+$mq-desktop		: 86.375em !default;
+$mq-large-screen: 99.93em !default;
+*/
+@media only screen and (max-width: 480px) {
+  /* line 398, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 397, mixins.scss */
+  /* line 399, mixins.scss */
   .desktop {
     display: none;
   }
 }
-@media only screen and (min-width: 30.001em) {
-  /* line 401, mixins.scss */
+@media only screen and (min-width: 481px) {
+  /* line 403, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 402, mixins.scss */
+  /* line 404, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 410, mixins.scss */
+/* line 412, mixins.scss */
 img {
   max-width: 100%;
 }
