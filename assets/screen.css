@@ -1515,18 +1515,54 @@ body.archive section hgroup header {
 body.archive section hgroup nav {
   width: 100%;
   float: left;
+  margin-bottom: 2.5em;
 }
-/* line 16, archive.scss */
+/* line 17, archive.scss */
 body.archive section hgroup nav div {
   max-width: 38.25%;
   float: left;
 }
-/* line 23, archive.scss */
+/* line 21, archive.scss */
+body.archive section hgroup nav div label:after {
+  background: #363636 !important;
+}
+/* line 24, archive.scss */
+body.archive section hgroup nav div label:after select {
+  color: #363636 !important;
+}
+/* line 32, archive.scss */
+body.archive section #pagination {
+  float: right;
+  margin-top: 0.625em;
+}
+/* line 36, archive.scss */
+body.archive section #pagination .wp-paginate {
+  margin: 0;
+  font-size: small;
+}
+/* line 40, archive.scss */
+body.archive section #pagination .wp-paginate a {
+  background: transparent;
+}
+/* line 44, archive.scss */
+body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
+  padding: 0.3125em 0.625em;
+}
+/* line 48, archive.scss */
+body.archive section #pagination .wp-paginate .current {
+  background: #363636;
+  border-color: #363636;
+}
+/* line 53, archive.scss */
+body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
+  border: none;
+}
+/* line 59, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 26, archive.scss */
+/* line 62, archive.scss */
 body.archive section #products #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -1537,13 +1573,13 @@ body.archive section #products #product {
   height: 36em !important;
 }
 @media only screen and (max-width: 40em) {
-  /* line 26, archive.scss */
+  /* line 62, archive.scss */
   body.archive section #products #product {
     height: 23em;
   }
 }
 @media all and (orientation: landscape) {
-  /* line 26, archive.scss */
+  /* line 62, archive.scss */
   body.archive section #products #product {
     height: 30em;
   }
@@ -1600,43 +1636,23 @@ body.archive section #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 33, archive.scss */
+/* line 69, archive.scss */
 body.archive section #products #product #price, body.archive section #products #product #category {
   font-size: 1em;
 }
-/* line 37, archive.scss */
+/* line 73, archive.scss */
 body.archive section #products #product.c3, body.archive section #products #product.c6, body.archive section #products #product.c9, body.archive section #products #product.c12, body.archive section #products #product.c15, body.archive section #products #product.c18, body.archive section #products #product.c21, body.archive section #products #product.c24, body.archive section #products #product.c27, body.archive section #products #product.c30 {
   margin-right: 0;
 }
-/* line 43, archive.scss */
+/* line 79, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 48, archive.scss */
-body.archive section #pagination {
-  text-align: right;
-}
-/* line 51, archive.scss */
-body.archive section #pagination .wp-paginate {
-  margin: 0;
-}
-/* line 54, archive.scss */
-body.archive section #pagination .wp-paginate a {
-  background: transparent;
-}
-/* line 58, archive.scss */
-body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
-  padding: 0.3125em 0.625em;
-}
-/* line 62, archive.scss */
-body.archive section #pagination .wp-paginate .current {
-  background: #4d8fce;
-}
-/* line 66, archive.scss */
-body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
-  border: none;
+/* line 83, archive.scss */
+body.archive section footer #pagination {
+  margin-top: 3.75em;
 }
 
 /* line 3, single.scss */

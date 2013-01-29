@@ -12,10 +12,46 @@ body.archive {
       
       nav {
         @include block;
+        margin-bottom: $pad*2;
         
         div {
           max-width: $major/2;
           float: left;
+          
+          label:after {
+            background: $color !important;
+            
+            select {
+              color: $color !important;
+            }
+          }
+        }
+      }
+    }
+    
+    #pagination {
+      float: right;
+      margin-top: $pad/2;
+      
+      .wp-paginate {
+        margin: 0;
+        font-size: small;
+        
+        a {
+          background: transparent;
+        }
+        
+        span, a {
+          padding: $pad/4 $pad/2;
+        }
+        
+        .current {
+          background: $color;
+          border-color: $color;
+        }
+        
+        .prev, .next {
+          border: none;
         }
       }
     }
@@ -43,31 +79,13 @@ body.archive {
     h1 {
       @include col(50%, 0, 0);
     }
-  }
-  
-  #pagination {
-    text-align: right;
     
-    .wp-paginate {
-      margin: 0;
-      
-      a {
-        background: transparent;
-      }
-      
-      span, a {
-        padding: $pad/4 $pad/2;
-      }
-      
-      .current {
-        background: $blue;
-      }
-      
-      .prev, .next {
-        border: none;
-      }
+    #pagination {
+      margin-top: $pad*3;
     }
   }
+  
+  
   
  }
 }

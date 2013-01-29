@@ -140,10 +140,10 @@
 		  <div id="meta">
 		    <label class="select">
 		      <select>
+		        <option>Toate cadourile</option>
 		        <option>Cadouri noi</option>
 		        <option>Cele mai vandute</option>
 		        <option>Reduceri</option>
-		        <option>Toate cadourile</option>
 		      </select>
 		    </label>
 		  </div>
@@ -151,11 +151,11 @@
 		  <div id="price">
 		    <label class="select">
 		      <select>
+		        <option>Toate preturile</option>
 		        <option>Sub 100 lei</option>
 		        <option>Intre 100 - 250 lei</option>
 		        <option>Intre 250 - 350 lei</option>
 		        <option>Peste 350 lei</option>
-		        <option>Toate preturile</option>
 		      </select>
 		    </label>
 		  </div>
@@ -163,10 +163,10 @@
 		  <div id="delivery">
 		    <label class="select">
 		      <select>
+		        <option>Toate livrarile</option>
 		        <option>Livrare in 24 ore</option>
 		        <option>Livrare in 2-4 zile</option>
 		        <option>Livrare in 5-7 zile</option>
-		        <option>Toate livrarile</option>
 		      </select>
 		    </label>
 		  </div>
@@ -207,7 +207,7 @@
 			</div>
 			<div class="clear"></div>	  
   
-      <?php include 'search-enhanced.php' ?>
+     
   
 			<footer>
 				<h1>
