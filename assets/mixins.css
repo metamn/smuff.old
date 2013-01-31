@@ -82,3 +82,29 @@ img {
 */
 /* block element -- expand something full size inside a container
 */
+/* The visual grid 
+*/
+/* line 565, mixins.scss */
+.grid {
+  position: absolute;
+  top: 0;
+  opacity: .1;
+  display: block;
+  z-index: -1;
+}
+
+/* line 572, mixins.scss */
+#gridh .col {
+  border-bottom: 1px solid;
+  width: 118em;
+  height: 19px;
+  /* 1.25em = 20px - 1px border */
+}
+
+/* line 577, mixins.scss */
+#gridv .col {
+  border-right: 1px solid;
+  width: 10%;
+  height: 250em;
+  float: left;
+}

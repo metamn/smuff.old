@@ -341,7 +341,7 @@ $mq-large-screen: 99.93em !default;
 
 // Everything larger than a landscape tablet
 @mixin desktop-and-up {
-	@media only screen and (min-width : $mq-tablet-landscape + 1) {
+	@media only screen and (min-width : $mq-desktop + 1) {
 		@content;
 	}
 }
@@ -553,5 +553,30 @@ img {
 */
 @mixin block {
   width: 100%;
+  float: left;
+}
+
+
+
+
+
+/* The visual grid 
+*/
+.grid {
+  position: absolute;
+  top: 0;
+  opacity: .1;
+  display: block;
+  z-index: -1;
+}
+#gridh .col {
+  border-bottom: 1px solid;
+  width: 118em;
+  height: 19px; /* 1.25em = 20px - 1px border */
+}
+#gridv .col {
+  border-right: 1px solid;
+  width: 10%;
+  height: 250em;
   float: left;
 }

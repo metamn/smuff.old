@@ -1,15 +1,64 @@
 body {
+
+  background: $background url(background.png);
+  font-family: 'Coda', serif;
+  color: $color;
+  
+  
 	.container {
-		width: 90%;
+		width: 80%;
 		margin: 0 auto;
+		
+		h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+    }
+		
+		@include desktop-and-up {
+		  width: 70%;
+		}
 		
 		
 		#header {
 			@include block;
 			
+			h1, h2 {
+        padding: $pad/2 0;
+      }
+      
+      
+			
 			#cart {
 				@include col($minor + $margin, 0, 0);
 				float: right;
+				
+				font-size: small;
+        color: $gray;
+        
+        ul {
+          @include list-inline;
+          margin-top: $pad*3;
+          
+          li {
+            margin-right: $pad/2 !important;
+            a {
+              color: $gray;
+            }
+            a:hover {
+              color: $color;
+            }
+          }
+          li:after {
+            content: '\2022';
+            margin-left: $pad/2;
+          }
+          
+          li.last {
+            margin-right: 0;
+          }
+          li.last:after {
+            content: '';
+          }
+        }
 			}
 			
 			
@@ -19,11 +68,16 @@ body {
 				#logo {
 					max-width: $minor;
 					float: left;
+					margin-right: 2.5%; /* Aligned to the menu item below */
 				}
 				
 				#strapline {
 					max-width: $major;
 					float: left;
+					
+					a {
+            color: $sale;
+          }
 				}
 				
 				#page-name {
@@ -33,19 +87,49 @@ body {
 			
 			#menu {
 				@include col($major, 0, 0);
-								
-				ul {
-					@include list-inline;
-					
-					li#search-menu-item {
+				
+				border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: $pad/2 0;
+        
+        ul {
+          @include list-inline;
+          
+          li#all-products {
+            cursor: pointer;
+          }
+          li#all-products:after {
+            @include arrow-to-reveal-content;
+          }
+          li#all-products.active {
+            color: $sale;
+          }
+          li#all-products.active:after {
+            @include rotate(270deg, .7);
+          }
+          
+          li#search-menu-item {
 					  display: none;
 					}
-				}
+        }
+				
 			} 
 			
 			#search {
 				@include col($minor + $margin, 0, 0);
 				float: left;
+				
+				border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: $pad/4 0 $pad/8;
+        
+        
+        input[type="text"] {
+          width: 17.5em;
+          background: $light-gray;
+          padding: $pad/2 $pad/4;
+          color: $background;
+        }
 			}	
 			
 			
