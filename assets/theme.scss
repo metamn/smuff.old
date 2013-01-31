@@ -39,6 +39,13 @@ a, a:active, a:visited, a:hover {
 ---------------------------------------------------
 */
 
+
+@mixin price {
+	border: $light-gray;
+	padding: $pad/4;
+	@include border-radius(10%, 10%);   
+}
+
 .price, .normal-price {
 	border: $light-gray;
 	padding: $pad/4;
@@ -188,10 +195,9 @@ a, a:active, a:visited, a:hover {
 /* Add to cart
 */
 @mixin add-to-cart {
-	background: $blue;
 	
 	.wpsc_container {
-		padding: $pad $pad/2;
+		padding: 0;
 		
 		.imagecol {
 			display: none !important;
@@ -205,51 +211,54 @@ a, a:active, a:visited, a:hover {
 		
 		table {
 			width: 100%;
-			margin-bottom: 0;
+			margin: 0;
 			
-			label {
-				font-weight: normal;
+			tbody {
+			  border: none;
+			
+			  label {
+				  font-weight: normal;
+			  }
+			
+			  td {
+				  padding: $pad/4 0;
+			  }
+			  
+			  tr.variation {
+			    label {
+			      display: none;
+			    }
+			  }
+			
+			  tr.quantity, tr.transport { 
+				  display: none !important;
+			  }
+			
+			  tr.price, tr.oldprice {
+				  td {
+				    display: none;
+				  }
+				  td.right {
+				    display: inline-block;
+				  }
+			  }
+			
+			  tr.price {	
+			    background: none;
+			    
+				  .pricedisplay {
+					  @include price;
+					  background: $blue;
+				  }
+			  }
+			
+			  tr.animation {
+				  display: none;
+			  }
+			
 			}
 			
-			td {
-				border-bottom: 1px dotted;
-				padding: $pad/2;
-			}
 			
-			tr.quantity { 
-				input[type='text'] {
-					width: 90%;
-					color: $color;
-					font-style: normal;
-				}
-			}
-			
-			tr.delivery {
-				td {
-					border-bottom: none;
-				}
-			}
-			
-			tr.submit {
-				td {
-					border-top: 1px solid;
-					padding-top: $pad;
-				}
-			}
-			
-			tr.animation {
-				display: none;
-			}
-			
-			tr.price {
-				background: none !important;
-				font-size: 100%;
-				
-				.pricedisplay {
-					float: none !important;
-  				width: 99%;
-				}
-			}
 			
 			input.wpsc_buy_button, input.checkout-button, select.wpsc_select_variation {  
 				width: 100%;

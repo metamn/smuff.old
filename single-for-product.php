@@ -14,19 +14,48 @@
 <article <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
 	<h1>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-	</h1>			    		      
+	</h1>			    
 	
-	<div id="images">
-		<?php 
-			$imgs = post_attachements($post->ID);
-			$img = $imgs[0];  
-			$full = wp_get_attachment_image_src($img->ID, 'full');
-			$large = wp_get_attachment_image_src($img->ID, 'large');    
-		?>
-		<div id="large-image">
-			<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
-		</div>
+	<div id="left-column">
+	  <div id="large-image">
+	    <?php 
+			  $imgs = post_attachements($post->ID);
+			  $img = $imgs[0];  
+			  $full = wp_get_attachment_image_src($img->ID, 'full');
+			  $large = wp_get_attachment_image_src($img->ID, 'large');    
+		  ?>
 		
+			<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
+	  </div>
+	  
+	  <div id="description"> 
+		  <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+		
+		  <h3 id="comments">Comentarii</h3>
+		  <div id="comments" class="pane normal">
+			  <?php comments_template('', true); ?>
+		  </div>
+		
+		  <div id="facebook-like" class="block"> 
+			  <div id="fb-root"></div>
+			  <script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
+				  fjs.parentNode.insertBefore(js, fjs);
+			  }(document, 'script', 'facebook-jssdk'));</script>
+			  <div class="fb-like" data-send="true" data-width="700" data-show-faces="true"></div>
+		  </div>
+	  </div>
+	
+	</div>		      
+	
+	<div id="right-column">
+	
+	  <?php include 'single-for-product__shopping.php' ?>
+	  
+	  
 		<div id="thumbs">
 			<?php 
 			  $counter = 1;
@@ -37,51 +66,18 @@
 				  <div id="thumb" class="c<?php echo $counter ?>">
 				    <img src="<?php echo $thumb[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>" data-image="<?php echo $large[0]?>"/>				
 				  </div>
-			    <?php $counter += 1;
+			    <?php 
+			      $counter += 1;
+			      if ($counter == 7) { /*break;*/ }
 			} ?> 
 		</div>
 	</div>    
   
-  
-	<div id="description"> 
-		<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
-		
-		<h3 id="comments">Comentarii</h3>
-		<div id="comments" class="pane normal">
-			<?php comments_template('', true); ?>
-		</div>
-		
-		<div id="facebook-like" class="block"> 
-			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-			<div class="fb-like" data-send="true" data-width="700" data-show-faces="true"></div>
-		</div>
-	</div>
 	
 	<div id="shopping">
 		<?php include 'single-for-product__shopping.php' ?>
 				
-		<div id="shopping-info"> 
-			<div class="tooltip">
-				Cum cumpar? informatii despre pret, shopping, livrare, retur si garantie          
-				<div class="tooltip-text">
-					<ol>
-						<li>Preturi corecte, servicii stabile si asistenta rapida.</li>
-						<li>Shopping simplu fara procedura de inregistrare</li>
-						<li>Livrare se face acasa sau la birou</li>
-						<li>Plata se face la livrare, ramburs, sau prin OP</li>
-						<li>Satisfactie sau returnare produs in 10 zile</li>
-						<li>Garantie tehnica cel putin 1 an</li>
-					</ol>
-				</div>
-			</div>             
-		</div> 
+		<?php include 'single-for-product__shopping-incentives.php' ?>
 		
 		<div id="contact-info">
 		  <center>

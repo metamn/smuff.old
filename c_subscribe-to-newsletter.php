@@ -73,8 +73,7 @@
 </script>
 
 
-<div id="subscribe-newsletter" class="campaign-box">
-  <div class="arrow-right"></div>
+<div id="subscribe-to-newsletter">
   <div id="text">
     <h4>
       Inscrie-te la newsletter si ai o <strong>livrare gratuita!</strong>
