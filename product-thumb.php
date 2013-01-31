@@ -72,7 +72,7 @@
   
   <div id="title">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-      <h3><?php echo $product_name; ?></h3> 
+      <?php echo $product_name; ?> 
     </a>
   </div>
   
@@ -81,6 +81,13 @@
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
        <?php the_excerpt(); ?> 
       </a>
+    </div>
+  <?php } ?>
+  
+  <?php if ( ($show_category) && (in_category(10)) ) { ?>
+    <div id="category">
+      <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
+      <?php echo $category ?></a>
     </div>
   <?php } ?>
   
@@ -97,10 +104,5 @@
     </div>
   <?php } ?>
   
-  <?php if ( ($show_category) && (in_category(10)) ) { ?>
-    <div id="category">
-      <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
-      <?php echo $category ?></a>
-    </div>
-  <?php } ?>
+  
 </article>	

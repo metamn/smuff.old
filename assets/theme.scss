@@ -41,24 +41,22 @@ a, a:active, a:visited, a:hover {
 
 
 @mixin price {
-	border: $light-gray;
-	padding: $pad/4;
-	@include border-radius(10%, 10%);   
+	   
 }
 
 .price, .normal-price {
-	border: $light-gray;
-	padding: $pad/4;
-	@include border-radius(10%, 10%);   
+	  
 }
 .price {
-	background: $sale;
+	color: $sale;
+	font-weight: bold;
 }
 .old-price, .oldprice {
 	text-decoration: line-through;
+	font-weight: normal;
 }
 .normal-price {
-	background: $blue;    
+	 
 }
 
 
@@ -137,59 +135,26 @@ a, a:active, a:visited, a:hover {
 }
 
 @mixin product-thumb {
-  background: $background url(stripe.png);
+  background: $background;
+  padding-bottom: $pad/2;
   
   img {
 		@include image-bordered(1%);
 	}
 	
-	#title, #excerpt {
-	  margin: $pad/2 $pad/4;
-	  padding: $pad/2 $pad;
-	  background: $background;
-	  min-height: 4.5em;
-	}
-	
 	#title {
-	  h3 {
-	    padding: 0;
-	    font-size: 1.5em;
-	    font-weight: bold;
-	  }
-	}
-	
-	#excerpt {
-	  a {
-	    color: $gray;
-	  }
-	}
-	
-	
-	#price, #category {
-	  font-size: small;
+	  margin: 0;
+	  padding: $pad/2;
 	}
 	
 	#price {
-	  @include col(50%, $pad, 5%);
-	  margin-top: $pad;
+	  padding: 0 $pad/2;
+	}
+	.old-price {
+	  color: $gray;
+	  margin-left: $pad/4;
 	}
 	
-	#category {
-	  min-width: 20%;
-	  margin-right: 1.5em; /* Because of the small font size */
-	  margin-top: $pad/2;
-	  float: right;
-	  font-size: small;
-	  
-	  background: $gray;
-	  
-	  a {
-	    padding: $pad/2;
-	    color: $background;
-	    text-align: center;
-	    display: block;
-	  }
-	}
 }
 
 

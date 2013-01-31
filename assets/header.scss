@@ -1,5 +1,9 @@
 body {
 
+  .grid {
+    display: none;
+  }
+
   background: $background url(background.png);
   font-family: 'Coda', serif;
   color: $color;
@@ -9,14 +13,16 @@ body {
 		width: 80%;
 		margin: 0 auto;
 		
-		h1, h2, h3, h4 {
-      font-family: 'Oswald', sans-serif;
-    }
-		
 		@include desktop-and-up {
 		  width: 70%;
 		}
 		
+		
+		h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+    }
+    
+    
 		
 		#header {
 			@include block;
@@ -24,7 +30,6 @@ body {
 			h1, h2 {
         padding: $pad/2 0;
       }
-      
       
 			
 			#cart {
@@ -39,7 +44,7 @@ body {
           margin-top: $pad*3;
           
           li {
-            margin-right: $pad/2 !important;
+            margin-right: $pad/4 !important;
             a {
               color: $gray;
             }
@@ -49,7 +54,7 @@ body {
           }
           li:after {
             content: '\2022';
-            margin-left: $pad/2;
+            margin-left: $pad/4;
           }
           
           li.last {
@@ -125,7 +130,8 @@ body {
         
         
         input[type="text"] {
-          width: 17.5em;
+          width: 75%;
+          max-width: 15em;
           background: $light-gray;
           padding: $pad/2 $pad/4;
           color: $background;
