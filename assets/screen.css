@@ -1803,72 +1803,74 @@ body.single .container article #right-column {
 body.single .container article #right-column #add-to-cart .imagecol {
   display: none;
 }
-/* line 71, single.scss */
+/* line 69, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_variation_forms {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.625em;
+}
+/* line 73, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_variation_forms .select {
   width: 20em;
 }
-/* line 75, single.scss */
+/* line 77, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_variation_forms .select select option {
   width: 19.9em;
 }
-/* line 83, single.scss */
-body.single .container article #right-column #add-to-cart .wpsc_product_price {
-  width: 100%;
-  float: left;
-}
-/* line 86, single.scss */
-body.single .container article #right-column #add-to-cart .wpsc_product_price div {
-  width: 6.7em;
-  float: left;
-  margin-right: 1.25em;
-  padding: 0.625em;
+/* line 87, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_product_price .price {
   -webkit-border-radius: 0 0;
   -moz-border-radius: 0 / 0;
   border-radius: 0 / 0;
+  padding: 0.625em;
+  margin-right: 1.25em;
 }
-/* line 95, single.scss */
+/* line 93, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .oldprice {
   background: transparent;
 }
-/* line 98, single.scss */
+/* line 96, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
+  margin-left: 3.3em;
 }
-/* line 101, single.scss */
+/* line 100, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .oldprice.on-sale {
   border: 1px solid;
+  float: left;
 }
 /* line 106, single.scss */
 body.single .container article #right-column #add-to-cart .add-to-cart-button {
-  width: 100%;
-  float: left;
+  position: relative;
+  left: 2.5em;
 }
-/* line 109, single.scss */
+/* line 111, single.scss */
 body.single .container article #right-column #add-to-cart .add-to-cart-button input[type="submit"] {
   background: #8aea4c;
   color: #363636;
   font-family: 'Coda', sans-serif;
   font-weight: 1em;
 }
-/* line 118, single.scss */
+/* line 120, single.scss */
 body.single .container article #right-column #add-to-cart .checkout {
   display: none;
 }
-/* line 122, single.scss */
+/* line 124, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 126, single.scss */
+/* line 128, single.scss */
 body.single .container article #right-column #add-to-cart .delivery {
-  position: relative;
-  top: 2.2em;
-  margin-left: 9.5em;
+  margin: 0.625em 0;
+  display: inline-block;
+  font-size: 2.5em;
+  color: #aaaaaa;
 }
-/* line 133, single.scss */
+/* line 137, single.scss */
 body.single .container article #right-column #thumbs {
   margin-top: 2.5em;
 }
-/* line 136, single.scss */
+/* line 140, single.scss */
 body.single .container article #right-column #thumbs #thumb {
   width: 6.25em;
   /* 100px */
@@ -1876,31 +1878,31 @@ body.single .container article #right-column #thumbs #thumb {
   float: left;
   cursor: pointer;
 }
-/* line 143, single.scss */
+/* line 147, single.scss */
 body.single .container article #right-column #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 148, single.scss */
+/* line 152, single.scss */
 body.single .container article #right-column #thumbs #thumb.c3, body.single .container article #right-column #thumbs #thumb.c6, body.single .container article #right-column #thumbs #thumb.c9, body.single .container article #right-column #thumbs #thumb.c12, body.single .container article #right-column #thumbs #thumb.c15, body.single .container article #right-column #thumbs #thumb.c18, body.single .container article #right-column #thumbs #thumb.c21,
 body.single .container article #right-column #thumbs #thumb.c24, body.single .container article #right-column #thumbs #thumb.c27, body.single .container article #right-column #thumbs #thumb.c30 {
   margin-right: 0;
 }
-/* line 156, single.scss */
+/* line 160, single.scss */
 body.single .container article #shopping {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 160, single.scss */
+/* line 164, single.scss */
 body.single .container article #shopping #add-to-cart, body.single .container article #shopping #shopping-incentives, body.single .container article #shopping #contact-info {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 164, single.scss */
+/* line 168, single.scss */
 body.single .container article #shopping #add-to-cart {
   background: #4d8fce;
 }
@@ -2022,22 +2024,22 @@ body.single .container article #shopping #add-to-cart #product-discontinued {
 body.single .container article #shopping #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 168, single.scss */
+/* line 172, single.scss */
 body.single .container article #shopping #contact-info {
   margin-right: 0;
 }
-/* line 175, single.scss */
+/* line 179, single.scss */
 body.single .container #subscribe-to-newsletter {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 183, single.scss */
+/* line 187, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 186, single.scss */
+/* line 190, single.scss */
 body.single .container section #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -2098,11 +2100,11 @@ body.single .container section #product #category a {
   text-align: center;
   display: block;
 }
-/* line 193, single.scss */
+/* line 197, single.scss */
 body.single .container section #product #price, body.single .container section #product #category {
   font-size: 1em;
 }
-/* line 197, single.scss */
+/* line 201, single.scss */
 body.single .container section #product.c3, body.single .container section #product.c6, body.single .container section #product.c9, body.single .container section #product.c12, body.single .container section #product.c15, body.single .container section #product.c18, body.single .container section #product.c21, body.single .container section #product.c24, body.single .container section #product.c27, body.single .container section #product.c30 {
   margin-right: 0;
 }

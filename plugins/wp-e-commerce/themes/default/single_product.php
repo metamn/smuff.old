@@ -61,7 +61,7 @@
 				        -->
 			          <?php endif ;?>
 					
-						    <div class="wpsc_product_price">
+						    <span class="wpsc_product_price">
 							    <?php if(wpsc_product_is_donation()) : ?>
 								    <label for='donation_price_<?php echo wpsc_the_product_id(); ?>'><?php echo __('Donation', 'wpsc'); ?>:</label>
 								    <input type='text' id='donation_price_<?php echo wpsc_the_product_id(); ?>' name='donation_price' value='<?php echo $wpsc_query->product['price']; ?>' size='6' />
@@ -72,16 +72,16 @@
 								      } else {
 								        $klass = '';
 								      } ?>
-								      <div class="price normal-price <?php echo $klass ?>">
+								      <span class="price normal-price <?php echo $klass ?>">
 								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
-								      </div>  
+								      </span>  
 								      
 								      <?php if(wpsc_product_on_special()) : ?>
-								        <div class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></div> 
+								        <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
 								      <?php endif; ?>
 								      						
 							      <?php endif; ?>
-						    </div>
+						    </span>
 					      
 					      <?php if(function_exists('wpsc_akst_share_link') && (get_option('wpsc_share_this') == 1)) {
 						      echo wpsc_akst_share_link('return');
@@ -115,11 +115,6 @@
 					      ?>
 					      
 					      
-					      					      
-					      <div class='delivery'>
-					        Livrare in <?php  echo $delivery ?>
-					      </div>
-					      
 					      
 					      										
 					      <!-- END OF QUANTITY OPTION -->
@@ -129,28 +124,34 @@
 						      <?php if(wpsc_product_has_stock()) : ?>
 							      <?php if(wpsc_product_external_link(wpsc_the_product_id()) != '') : ?>
 								      <?php	$action =  wpsc_product_external_link(wpsc_the_product_id()); ?>
-								      <div class="add-to-cart-button">
+								      <span class="add-to-cart-button">
 								        <input class="wpsc_buy_button" type='button' value='<?php echo __('Buy Now', 'wpsc'); ?>' onclick='gotoexternallink("<?php echo $action; ?>")'>
-								      </div>
+								      </span>
 							      <?php else: ?>
-							        <div class="add-to-cart-button">
+							        <span class="add-to-cart-button">
 								        <input type="submit" value="Adauga la cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
-								      </div>
+								      </span>
 							      <?php endif; ?>							  		
 							     
-							      <div class='checkout'>
+							      <span class='checkout'>
 							        <FORM>
                         <INPUT TYPE="BUTTON" class='checkout-button' VALUE="Cos cumparaturi" ONCLICK='gotoexternallink("<?php echo bloginfo(home) ?>/cos-cumparaturi")'>
                       </FORM>							        
-							      </div> 
-							      <div class='animation'>
-							        <div class='wpsc_loading_animation'>
+							      </span> 
+							      
+							       <span class='delivery'>
+					              Livrare in <?php  echo $delivery ?>
+					            </span>
+					            
+					            
+							      <span class='animation'>
+							        <span class='wpsc_loading_animation'>
 								        <img title="Loading" alt="Loading" src="<?php echo WPSC_URL ;?>/images/indicator.gif" class="loadingimage" />
 								          Actualizare cos...
-							        </div>
-							        <div class='wpsc_cart_message'>
-							        </div>
-							      </div>							      
+							        </span>
+							        <span class='wpsc_cart_message'>
+							        </span>
+							      </span>							      
 							      							
 						      <?php else : ?>
 							      <p class='soldout'><?php echo __('This product has sold out.', 'wpsc'); ?></p>
@@ -158,7 +159,7 @@
 					      <?php endif ; ?>
 					      
 					      
-					      
+					     
 					      
 					 
 					</form>

@@ -67,7 +67,9 @@ body.single {
 			    }
 			    
 			    .wpsc_variation_forms {
-			    
+			      @include block;
+			      margin-bottom: $pad/2;
+			      
 			      .select {
 			        width: 20em;
 			        
@@ -81,15 +83,11 @@ body.single {
 			    }
 			    
 			    .wpsc_product_price {
-			      @include block;
 			      
-			      div {
-			        width: 6.7em;
-			        float: left;
-			        margin-right: $pad;
-			        padding: $pad/2;
-			        
+			      .price {
 			        @include border-radius(0, 0);
+			        padding: $pad/2;
+			        margin-right: $pad;
 			      }
 			      
 			      .oldprice {
@@ -97,15 +95,19 @@ body.single {
 			      }
 			      .normal-price.on-sale {
 			        background: $sale;
+			        margin-left: 3.3em;
 			      }
 			      .oldprice.on-sale {
 			        border: 1px solid;
+			        float: left;
 			      }
 			    }
 			    
 			    .add-to-cart-button {
-			      @include block;
-			     
+			      position: relative;
+			      left: 2.5em;
+			      
+			      
 			      input[type="submit"] {
 			        background: $green;
 			        color: $color;
@@ -124,9 +126,11 @@ body.single {
 			    }
 			    
 			    .delivery {
-			      position: relative;
-			      top: 2.2em;
-			      margin-left: 9.5em;
+			      margin: $pad/2 0;
+			      display: inline-block;
+			      
+			      font-size: 2.5em;
+			      color: $gray;
 			    }
 			  }
 			  
