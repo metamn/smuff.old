@@ -1737,8 +1737,9 @@ body.single .container article #left-column {
   width: 47.5%;
   margin: 0 5% 0 0;
   float: left;
+  margin-top: 2.5em;
 }
-/* line 10, single.scss */
+/* line 11, single.scss */
 body.single .container article #left-column #large-image img {
   width: 96%;
   padding: 2%;
@@ -1746,13 +1747,32 @@ body.single .container article #left-column #large-image img {
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
 /* line 16, single.scss */
+body.single .container article #left-column #thumbs {
+  display: none;
+}
+/* line 19, single.scss */
+body.single .container article #left-column #thumbs #thumb {
+  width: 3.125em;
+  /* 50px */
+  margin: 0 2% 5% 0;
+  float: left;
+  cursor: pointer;
+}
+/* line 26, single.scss */
+body.single .container article #left-column #thumbs #thumb img {
+  width: 96%;
+  padding: 2%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 34, single.scss */
 body.single .container article #left-column #description h3 {
   padding: 0.3125em 0;
   margin: 0.3125em 0;
   border-bottom: 1px solid #f1f1f1;
   cursor: pointer;
 }
-/* line 23, single.scss */
+/* line 41, single.scss */
 body.single .container article #left-column #description h3:after {
   content: '\003E';
   float: right;
@@ -1765,7 +1785,7 @@ body.single .container article #left-column #description h3:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 27, single.scss */
+/* line 45, single.scss */
 body.single .container article #left-column #description .pane {
   padding: 1.25em;
   background: white;
@@ -1773,51 +1793,56 @@ body.single .container article #left-column #description .pane {
   line-height: 1.75;
   max-width: 600px;
 }
-/* line 35, single.scss */
+/* line 53, single.scss */
 body.single .container article #left-column #description .pane br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 40, single.scss */
+/* line 58, single.scss */
 body.single .container article #left-column #description .pane ul {
   margin: 0;
   list-style: none;
 }
-/* line 45, single.scss */
+/* line 63, single.scss */
 body.single .container article #left-column #description .pane ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 53, single.scss */
+/* line 71, single.scss */
 body.single .container article #left-column #description #facebook-like {
   margin: 1.25em 0;
 }
-/* line 61, single.scss */
+/* line 79, single.scss */
 body.single .container article #right-column {
   width: 47.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 65, single.scss */
+/* line 82, single.scss */
+body.single .container article #right-column #add-to-cart {
+  background: white url(stripe.png);
+  padding: 1.25em;
+}
+/* line 86, single.scss */
 body.single .container article #right-column #add-to-cart .imagecol {
   display: none;
 }
-/* line 69, single.scss */
+/* line 90, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_variation_forms {
   width: 100%;
   float: left;
   margin-bottom: 0.625em;
 }
-/* line 73, single.scss */
+/* line 94, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_variation_forms .select {
   width: 20em;
 }
-/* line 77, single.scss */
+/* line 98, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_variation_forms .select select option {
   width: 19.9em;
 }
-/* line 87, single.scss */
+/* line 108, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .price {
   -webkit-border-radius: 0 0;
   -moz-border-radius: 0 / 0;
@@ -1825,84 +1850,65 @@ body.single .container article #right-column #add-to-cart .wpsc_product_price .p
   padding: 0.625em;
   margin-right: 1.25em;
 }
-/* line 93, single.scss */
+/* line 114, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .oldprice {
   background: transparent;
 }
-/* line 96, single.scss */
+/* line 117, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
-  margin-left: 3.3em;
 }
-/* line 100, single.scss */
+/* line 120, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_product_price .oldprice.on-sale {
   border: 1px solid;
   float: left;
 }
-/* line 106, single.scss */
-body.single .container article #right-column #add-to-cart .add-to-cart-button {
-  position: relative;
-  left: 2.5em;
-}
-/* line 111, single.scss */
+/* line 129, single.scss */
 body.single .container article #right-column #add-to-cart .add-to-cart-button input[type="submit"] {
   background: #8aea4c;
   color: #363636;
   font-family: 'Coda', sans-serif;
   font-weight: 1em;
 }
-/* line 120, single.scss */
+/* line 138, single.scss */
 body.single .container article #right-column #add-to-cart .checkout {
   display: none;
 }
-/* line 124, single.scss */
+/* line 142, single.scss */
 body.single .container article #right-column #add-to-cart .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 128, single.scss */
+/* line 146, single.scss */
 body.single .container article #right-column #add-to-cart .delivery {
   margin: 0.625em 0;
   display: inline-block;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #aaaaaa;
+  font-style: italic;
+  background: white;
+  padding: 0.3125em;
 }
-/* line 137, single.scss */
-body.single .container article #right-column #thumbs {
+/* line 159, single.scss */
+body.single .container article #right-column #add-to-cart #product-discontinued h3 {
+  padding-top: 0;
+}
+/* line 165, single.scss */
+body.single .container article #right-column #share {
   margin-top: 2.5em;
 }
-/* line 140, single.scss */
-body.single .container article #right-column #thumbs #thumb {
-  width: 6.25em;
-  /* 100px */
-  margin: 0 2% 5% 0;
-  float: left;
-  cursor: pointer;
-}
-/* line 147, single.scss */
-body.single .container article #right-column #thumbs #thumb img {
-  width: 96%;
-  padding: 2%;
-  border: 1px solid #cccccc;
-  background: white url(ajax-loader.gif) no-repeat 50% 50%;
-}
-/* line 152, single.scss */
-body.single .container article #right-column #thumbs #thumb.c3, body.single .container article #right-column #thumbs #thumb.c6, body.single .container article #right-column #thumbs #thumb.c9, body.single .container article #right-column #thumbs #thumb.c12, body.single .container article #right-column #thumbs #thumb.c15, body.single .container article #right-column #thumbs #thumb.c18, body.single .container article #right-column #thumbs #thumb.c21,
-body.single .container article #right-column #thumbs #thumb.c24, body.single .container article #right-column #thumbs #thumb.c27, body.single .container article #right-column #thumbs #thumb.c30 {
-  margin-right: 0;
-}
-/* line 160, single.scss */
+/* line 173, single.scss */
 body.single .container article #shopping {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 164, single.scss */
+/* line 177, single.scss */
 body.single .container article #shopping #add-to-cart, body.single .container article #shopping #shopping-incentives, body.single .container article #shopping #contact-info {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 168, single.scss */
+/* line 181, single.scss */
 body.single .container article #shopping #add-to-cart {
   background: #4d8fce;
 }
@@ -2024,22 +2030,22 @@ body.single .container article #shopping #add-to-cart #product-discontinued {
 body.single .container article #shopping #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 172, single.scss */
+/* line 185, single.scss */
 body.single .container article #shopping #contact-info {
   margin-right: 0;
 }
-/* line 179, single.scss */
+/* line 192, single.scss */
 body.single .container #subscribe-to-newsletter {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 187, single.scss */
+/* line 200, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 190, single.scss */
+/* line 203, single.scss */
 body.single .container section #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -2100,11 +2106,11 @@ body.single .container section #product #category a {
   text-align: center;
   display: block;
 }
-/* line 197, single.scss */
+/* line 210, single.scss */
 body.single .container section #product #price, body.single .container section #product #category {
   font-size: 1em;
 }
-/* line 201, single.scss */
+/* line 214, single.scss */
 body.single .container section #product.c3, body.single .container section #product.c6, body.single .container section #product.c9, body.single .container section #product.c12, body.single .container section #product.c15, body.single .container section #product.c18, body.single .container section #product.c21, body.single .container section #product.c24, body.single .container section #product.c27, body.single .container section #product.c30 {
   margin-right: 0;
 }

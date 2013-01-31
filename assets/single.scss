@@ -5,11 +5,29 @@ body.single {
 			
 			#left-column {
 				@include col(47.5%, 0, 5%);
+				margin-top: 2.5em;
 				
 				#large-image {
 				  img {
 				    @include image-bordered(2%);
 				  }
+				}
+				
+				#thumbs { 
+				 display: none;
+			    
+				  #thumb {
+				    width: 3.125em; /* 50px */
+				    margin: 0 2% $margin 0;
+				    float: left;
+				    
+				    cursor: pointer;
+				  
+				    img {
+				      @include image-bordered(2%);
+				    }  
+				  }
+				  
 				}
 				
 				#description {
@@ -62,6 +80,9 @@ body.single {
 			  @include col(47.5%, 0, 0);
 			  
 			  #add-to-cart {
+			    background: $background url(stripe.png);
+			    padding: $pad;
+			  
 			    .imagecol {
 			      display: none;
 			    }
@@ -95,7 +116,6 @@ body.single {
 			      }
 			      .normal-price.on-sale {
 			        background: $sale;
-			        margin-left: 3.3em;
 			      }
 			      .oldprice.on-sale {
 			        border: 1px solid;
@@ -104,9 +124,7 @@ body.single {
 			    }
 			    
 			    .add-to-cart-button {
-			      position: relative;
-			      left: 2.5em;
-			      
+			     
 			      
 			      input[type="submit"] {
 			        background: $green;
@@ -129,31 +147,26 @@ body.single {
 			      margin: $pad/2 0;
 			      display: inline-block;
 			      
-			      font-size: 2.5em;
+			      font-size: 2em;
 			      color: $gray;
+			      font-style: italic;
+			      
+			      background: $background;
+			      padding: $pad/4;
+			    }
+			    
+			    #product-discontinued {
+			      h3 {
+			        padding-top: 0;
+			      }
 			    }
 			  }
 			  
-			  #thumbs { 
+			  #share {
 			    margin-top: $pad*2;
-			    
-				  #thumb {
-				    width: 6.25em; /* 100px */
-				    margin: 0 2% $margin 0;
-				    float: left;
-				    
-				    cursor: pointer;
-				  
-				    img {
-				      @include image-bordered(2%);
-				    }  
-				  }
-				  #thumb.c3, #thumb.c6, #thumb.c9, #thumb.c12, #thumb.c15, #thumb.c18, #thumb.c21,
-          #thumb.c24, #thumb.c27, #thumb.c30 {
-            margin-right: 0;
-          }
-				  
-				}
+			  }
+			  
+			  
 			}
 			
 			
