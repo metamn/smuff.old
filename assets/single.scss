@@ -4,7 +4,7 @@ body.single {
 			@include block;
 			
 			#left-column {
-				@include col($major - $margin, 0, 0);
+				@include col(47.5%, 0, 5%);
 				
 				#large-image {
 				  img {
@@ -59,7 +59,7 @@ body.single {
 			
 			
 			#right-column { 
-			  @include col($minor + $margin, $margin, 0);
+			  @include col(47.5%, 0, 0);
 			  
 			  #add-to-cart {
 			     @include add-to-cart;
@@ -69,8 +69,9 @@ body.single {
 			    margin-top: $pad*2;
 			    
 				  #thumb {
-				    @include col(30%, 0, 5%);
-				    margin-bottom: $margin;
+				    width: 6.25em; /* 100px */
+				    margin: 0 2% $margin 0;
+				    float: left;
 				    
 				    cursor: pointer;
 				  

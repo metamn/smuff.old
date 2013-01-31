@@ -1736,8 +1736,8 @@ body.single .container article {
 }
 /* line 6, single.scss */
 body.single .container article #left-column {
-  width: 71.5%;
-  margin: 0 0 0 0;
+  width: 47.5%;
+  margin: 0 5% 0 0;
   float: left;
 }
 /* line 10, single.scss */
@@ -1797,8 +1797,8 @@ body.single .container article #left-column #description #facebook-like {
 }
 /* line 61, single.scss */
 body.single .container article #right-column {
-  width: 23.5%;
-  margin: 0 0 0 5%;
+  width: 47.5%;
+  margin: 0 0 0 0;
   float: left;
 }
 /* line 199, theme.scss */
@@ -1906,31 +1906,31 @@ body.single .container article #right-column #thumbs {
 }
 /* line 71, single.scss */
 body.single .container article #right-column #thumbs #thumb {
-  width: 30%;
-  margin: 0 5% 0 0;
+  width: 6.25em;
+  /* 100px */
+  margin: 0 2% 5% 0;
   float: left;
-  margin-bottom: 5%;
   cursor: pointer;
 }
-/* line 77, single.scss */
+/* line 78, single.scss */
 body.single .container article #right-column #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 82, single.scss */
+/* line 83, single.scss */
 body.single .container article #right-column #thumbs #thumb.c3, body.single .container article #right-column #thumbs #thumb.c6, body.single .container article #right-column #thumbs #thumb.c9, body.single .container article #right-column #thumbs #thumb.c12, body.single .container article #right-column #thumbs #thumb.c15, body.single .container article #right-column #thumbs #thumb.c18, body.single .container article #right-column #thumbs #thumb.c21,
 body.single .container article #right-column #thumbs #thumb.c24, body.single .container article #right-column #thumbs #thumb.c27, body.single .container article #right-column #thumbs #thumb.c30 {
   margin-right: 0;
 }
-/* line 90, single.scss */
+/* line 91, single.scss */
 body.single .container article #shopping {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 94, single.scss */
+/* line 95, single.scss */
 body.single .container article #shopping #add-to-cart, body.single .container article #shopping #shopping-incentives, body.single .container article #shopping #contact-info {
   width: 30%;
   margin: 0 5% 0 0;
@@ -2035,22 +2035,22 @@ body.single .container article #shopping #add-to-cart #product-discontinued {
 body.single .container article #shopping #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 102, single.scss */
+/* line 103, single.scss */
 body.single .container article #shopping #contact-info {
   margin-right: 0;
 }
-/* line 109, single.scss */
+/* line 110, single.scss */
 body.single .container #subscribe-to-newsletter {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 117, single.scss */
+/* line 118, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 120, single.scss */
+/* line 121, single.scss */
 body.single .container section #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -2111,11 +2111,11 @@ body.single .container section #product #category a {
   text-align: center;
   display: block;
 }
-/* line 127, single.scss */
+/* line 128, single.scss */
 body.single .container section #product #price, body.single .container section #product #category {
   font-size: 1em;
 }
-/* line 131, single.scss */
+/* line 132, single.scss */
 body.single .container section #product.c3, body.single .container section #product.c6, body.single .container section #product.c9, body.single .container section #product.c12, body.single .container section #product.c15, body.single .container section #product.c18, body.single .container section #product.c21, body.single .container section #product.c24, body.single .container section #product.c27, body.single .container section #product.c30 {
   margin-right: 0;
 }
