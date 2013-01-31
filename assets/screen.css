@@ -441,39 +441,37 @@ a, a:active, a:visited, a:hover {
 
 /* Mixins
 */
-/* Add to cart
-*/
 /* Header, footer, and general settings
 */
-/* line 308, theme.scss */
+/* line 201, theme.scss */
 body {
   background: white url(background.png);
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 315, theme.scss */
+/* line 208, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 320, theme.scss */
+/* line 213, theme.scss */
 body .container #header h1, body .container #header h2 {
   padding: 0.625em 0;
 }
-/* line 324, theme.scss */
+/* line 217, theme.scss */
 body .container #header #logo {
   margin-right: 2.5%;
   /* Aligned to the menu item below */
 }
-/* line 329, theme.scss */
+/* line 222, theme.scss */
 body .container #header #strapline a {
   color: #f25f18;
 }
-/* line 334, theme.scss */
+/* line 227, theme.scss */
 body .container #header #cart {
   font-size: small;
   color: #aaaaaa;
 }
-/* line 338, theme.scss */
+/* line 231, theme.scss */
 body .container #header #cart ul {
   display: block;
   margin: 0;
@@ -491,42 +489,42 @@ body .container #header #cart ul li {
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 342, theme.scss */
+/* line 235, theme.scss */
 body .container #header #cart ul li {
   margin-right: 0.625em !important;
 }
-/* line 344, theme.scss */
+/* line 237, theme.scss */
 body .container #header #cart ul li a {
   color: #aaaaaa;
 }
-/* line 347, theme.scss */
+/* line 240, theme.scss */
 body .container #header #cart ul li a:hover {
   color: #363636;
 }
-/* line 351, theme.scss */
+/* line 244, theme.scss */
 body .container #header #cart ul li:after {
   content: '\2022';
   margin-left: 0.625em;
 }
-/* line 356, theme.scss */
+/* line 249, theme.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 359, theme.scss */
+/* line 252, theme.scss */
 body .container #header #cart ul li.last:after {
   content: '';
 }
-/* line 365, theme.scss */
+/* line 258, theme.scss */
 body .container #header #menu {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 371, theme.scss */
+/* line 264, theme.scss */
 body .container #header #menu ul li#all-products {
   cursor: pointer;
 }
-/* line 374, theme.scss */
+/* line 267, theme.scss */
 body .container #header #menu ul li#all-products:after {
   content: '\003E';
   float: right;
@@ -539,11 +537,11 @@ body .container #header #menu ul li#all-products:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 377, theme.scss */
+/* line 270, theme.scss */
 body .container #header #menu ul li#all-products.active {
   color: #f25f18;
 }
-/* line 380, theme.scss */
+/* line 273, theme.scss */
 body .container #header #menu ul li#all-products.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -552,13 +550,13 @@ body .container #header #menu ul li#all-products.active:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 386, theme.scss */
+/* line 279, theme.scss */
 body .container #header #search {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.3125em 0 0.15625em;
 }
-/* line 392, theme.scss */
+/* line 285, theme.scss */
 body .container #header #search input[type="text"] {
   width: 17.5em;
   background: #cccccc;
@@ -568,21 +566,21 @@ body .container #header #search input[type="text"] {
 
 /* Startpage
 */
-/* line 411, theme.scss */
+/* line 304, theme.scss */
 body.home nav.tab {
   width: 100%;
   float: left;
   margin: 2.5em 0 0;
 }
-/* line 415, theme.scss */
+/* line 308, theme.scss */
 body.home nav.tab ul {
   list-style: none;
 }
-/* line 418, theme.scss */
+/* line 311, theme.scss */
 body.home nav.tab ul li {
   cursor: pointer;
 }
-/* line 421, theme.scss */
+/* line 314, theme.scss */
 body.home nav.tab ul li h2 {
   color: #aaaaaa;
   font-size: 1.5em;
@@ -590,11 +588,11 @@ body.home nav.tab ul li h2 {
   font-style: normal;
   padding: 0.15625em;
 }
-/* line 428, theme.scss */
+/* line 321, theme.scss */
 body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
   color: #363636;
 }
-/* line 438, theme.scss */
+/* line 331, theme.scss */
 body.home section #body #products #product {
   background: white url(stripe.png);
 }
@@ -1801,110 +1799,76 @@ body.single .container article #right-column {
   margin: 0 0 0 0;
   float: left;
 }
-/* line 199, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container {
-  padding: 0;
+/* line 65, single.scss */
+body.single .container article #right-column #add-to-cart .imagecol {
+  display: none;
 }
-/* line 202, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container .imagecol {
-  display: none !important;
+/* line 71, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_variation_forms .select {
+  width: 20em;
 }
-/* line 207, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container .single_product_display .textcol {
-  margin-left: 0 !important;
+/* line 75, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_variation_forms .select select option {
+  width: 19.9em;
 }
-/* line 212, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table {
+/* line 83, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_product_price {
   width: 100%;
-  margin: 0;
+  float: left;
 }
-/* line 216, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody {
-  border: none;
+/* line 86, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_product_price div {
+  width: 6.7em;
+  float: left;
+  margin-right: 1.25em;
+  padding: 0.625em;
+  -webkit-border-radius: 0 0;
+  -moz-border-radius: 0 / 0;
+  border-radius: 0 / 0;
 }
-/* line 219, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody label {
-  font-weight: normal;
+/* line 95, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_product_price .oldprice {
+  background: transparent;
 }
-/* line 223, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody td {
-  padding: 0.3125em 0;
+/* line 98, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_product_price .normal-price.on-sale {
+  background: #f25f18;
 }
-/* line 228, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.variation label {
-  display: none;
+/* line 101, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_product_price .oldprice.on-sale {
+  border: 1px solid;
 }
-/* line 233, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.quantity, body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.transport {
-  display: none !important;
-}
-/* line 238, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.price td, body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.oldprice td {
-  display: none;
-}
-/* line 241, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.price td.right, body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.oldprice td.right {
-  display: inline-block;
-}
-/* line 246, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.price {
-  background: none;
-}
-/* line 249, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.price .pricedisplay {
-  border: #cccccc;
-  padding: 0.3125em;
-  -webkit-border-radius: 10% 10%;
-  -moz-border-radius: 10% / 10%;
-  border-radius: 10% / 10%;
-  background: #4d8fce;
-}
-/* line 255, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table tbody tr.animation {
-  display: none;
-}
-/* line 263, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table input.wpsc_buy_button, body.single .container article #right-column #add-to-cart .wpsc_container table input.checkout-button, body.single .container article #right-column #add-to-cart .wpsc_container table select.wpsc_select_variation {
+/* line 106, single.scss */
+body.single .container article #right-column #add-to-cart .add-to-cart-button {
   width: 100%;
-  font-size: small;
+  float: left;
 }
-/* line 267, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table input.wpsc_buy_button {
+/* line 109, single.scss */
+body.single .container article #right-column #add-to-cart .add-to-cart-button input[type="submit"] {
   background: #8aea4c;
   color: #363636;
-  border: 1px dotted;
+  font-family: 'Coda', sans-serif;
+  font-weight: 1em;
 }
-/* line 272, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table input.wpsc_buy_button:hover {
-  font-weight: bold;
+/* line 118, single.scss */
+body.single .container article #right-column #add-to-cart .checkout {
+  display: none;
 }
-/* line 276, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table div.thanks-ok {
-  background: #10A26F;
-  padding: 1em;
+/* line 122, single.scss */
+body.single .container article #right-column #add-to-cart .wpsc_loading_animation {
+  visibility: hidden;
 }
-/* line 281, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table div.thanks-error {
-  background: #A53B08;
-  padding: 1em;
+/* line 126, single.scss */
+body.single .container article #right-column #add-to-cart .delivery {
+  position: relative;
+  top: 2.2em;
+  margin-left: 9.5em;
 }
-/* line 286, theme.scss */
-body.single .container article #right-column #add-to-cart .wpsc_container table .wpsc_cart_message {
-  text-align: center;
-}
-/* line 294, theme.scss */
-body.single .container article #right-column #add-to-cart #product-discontinued {
-  margin: 1.25em;
-}
-/* line 297, theme.scss */
-body.single .container article #right-column #add-to-cart #product-discontinued p {
-  margin-bottom: 1.25em;
-}
-/* line 68, single.scss */
+/* line 133, single.scss */
 body.single .container article #right-column #thumbs {
   margin-top: 2.5em;
 }
-/* line 71, single.scss */
+/* line 136, single.scss */
 body.single .container article #right-column #thumbs #thumb {
   width: 6.25em;
   /* 100px */
@@ -1912,145 +1876,168 @@ body.single .container article #right-column #thumbs #thumb {
   float: left;
   cursor: pointer;
 }
-/* line 78, single.scss */
+/* line 143, single.scss */
 body.single .container article #right-column #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 83, single.scss */
+/* line 148, single.scss */
 body.single .container article #right-column #thumbs #thumb.c3, body.single .container article #right-column #thumbs #thumb.c6, body.single .container article #right-column #thumbs #thumb.c9, body.single .container article #right-column #thumbs #thumb.c12, body.single .container article #right-column #thumbs #thumb.c15, body.single .container article #right-column #thumbs #thumb.c18, body.single .container article #right-column #thumbs #thumb.c21,
 body.single .container article #right-column #thumbs #thumb.c24, body.single .container article #right-column #thumbs #thumb.c27, body.single .container article #right-column #thumbs #thumb.c30 {
   margin-right: 0;
 }
-/* line 91, single.scss */
+/* line 156, single.scss */
 body.single .container article #shopping {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 95, single.scss */
+/* line 160, single.scss */
 body.single .container article #shopping #add-to-cart, body.single .container article #shopping #shopping-incentives, body.single .container article #shopping #contact-info {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 199, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container {
-  padding: 0;
+/* line 164, single.scss */
+body.single .container article #shopping #add-to-cart {
+  background: #4d8fce;
 }
-/* line 202, theme.scss */
+/* line 87, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container {
+  padding: 1.25em 0.625em;
+}
+/* line 90, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container .imagecol {
   display: none !important;
 }
-/* line 207, theme.scss */
+/* line 95, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container .single_product_display .textcol {
   margin-left: 0 !important;
 }
-/* line 212, theme.scss */
+/* line 100, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table {
   width: 100%;
-  margin: 0;
+  margin-bottom: 0;
 }
-/* line 216, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody {
-  border: none;
-}
-/* line 219, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody label {
+/* line 104, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table label {
   font-weight: normal;
 }
-/* line 223, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody td {
-  padding: 0.3125em 0;
+/* line 108, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table td {
+  border-bottom: 1px dotted;
+  padding: 0.625em;
 }
-/* line 228, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.variation label {
+/* line 114, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table tr.quantity input[type='text'] {
+  width: 90%;
+  color: #363636;
+  font-style: normal;
+}
+/* line 122, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table tr.delivery td {
+  border-bottom: none;
+}
+/* line 128, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table tr.submit td {
+  border-top: 1px solid;
+  padding-top: 1.25em;
+}
+/* line 134, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table tr.animation {
   display: none;
 }
-/* line 233, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.quantity, body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.transport {
-  display: none !important;
+/* line 138, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table tr.price {
+  background: none !important;
+  font-size: 100%;
 }
-/* line 238, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.price td, body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.oldprice td {
-  display: none;
+/* line 142, mixins.scss */
+body.single .container article #shopping #add-to-cart .wpsc_container table tr.price .pricedisplay {
+  float: none !important;
+  width: 99%;
 }
-/* line 241, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.price td.right, body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.oldprice td.right {
-  display: inline-block;
-}
-/* line 246, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.price {
-  background: none;
-}
-/* line 249, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.price .pricedisplay {
-  border: #cccccc;
-  padding: 0.3125em;
-  -webkit-border-radius: 10% 10%;
-  -moz-border-radius: 10% / 10%;
-  border-radius: 10% / 10%;
-  background: #4d8fce;
-}
-/* line 255, theme.scss */
-body.single .container article #shopping #add-to-cart .wpsc_container table tbody tr.animation {
-  display: none;
-}
-/* line 263, theme.scss */
+/* line 148, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table input.wpsc_buy_button, body.single .container article #shopping #add-to-cart .wpsc_container table input.checkout-button, body.single .container article #shopping #add-to-cart .wpsc_container table select.wpsc_select_variation {
   width: 100%;
   font-size: small;
 }
-/* line 267, theme.scss */
+/* line 152, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table input.wpsc_buy_button {
   background: #8aea4c;
   color: #363636;
   border: 1px dotted;
 }
-/* line 272, theme.scss */
+/* line 157, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table input.wpsc_buy_button:hover {
   font-weight: bold;
 }
-/* line 276, theme.scss */
+/* line 161, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table div.thanks-ok {
   background: #10A26F;
   padding: 1em;
 }
-/* line 281, theme.scss */
+/* line 166, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table div.thanks-error {
   background: #A53B08;
   padding: 1em;
 }
-/* line 286, theme.scss */
+/* line 171, mixins.scss */
 body.single .container article #shopping #add-to-cart .wpsc_container table .wpsc_cart_message {
   text-align: center;
 }
-/* line 294, theme.scss */
+/* line 177, mixins.scss */
+body.single .container article #shopping #add-to-cart #wishlist {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.25em;
+  padding: 0 1.25em;
+}
+/* line 183, mixins.scss */
+body.single .container article #shopping #add-to-cart #wishlist .wpfp-span {
+  width: 80%;
+  float: left;
+  padding: 0.625em 0.3125em;
+  text-align: center;
+  background: #363636;
+  color: #f1f1f1;
+  padding: 0.625em;
+}
+/* line 193, mixins.scss */
+body.single .container article #shopping #add-to-cart #wishlist .wpfp-span:hover {
+  cursor: pointer;
+  color: white;
+}
+/* line 198, mixins.scss */
+body.single .container article #shopping #add-to-cart #wishlist .wpfp-span a {
+  color: #f1f1f1;
+}
+/* line 204, mixins.scss */
 body.single .container article #shopping #add-to-cart #product-discontinued {
   margin: 1.25em;
 }
-/* line 297, theme.scss */
+/* line 207, mixins.scss */
 body.single .container article #shopping #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 103, single.scss */
+/* line 168, single.scss */
 body.single .container article #shopping #contact-info {
   margin-right: 0;
 }
-/* line 110, single.scss */
+/* line 175, single.scss */
 body.single .container #subscribe-to-newsletter {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 118, single.scss */
+/* line 183, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 121, single.scss */
+/* line 186, single.scss */
 body.single .container section #product {
   width: 30%;
   margin: 0 5% 0 0;
@@ -2111,11 +2098,11 @@ body.single .container section #product #category a {
   text-align: center;
   display: block;
 }
-/* line 128, single.scss */
+/* line 193, single.scss */
 body.single .container section #product #price, body.single .container section #product #category {
   font-size: 1em;
 }
-/* line 132, single.scss */
+/* line 197, single.scss */
 body.single .container section #product.c3, body.single .container section #product.c6, body.single .container section #product.c9, body.single .container section #product.c12, body.single .container section #product.c15, body.single .container section #product.c18, body.single .container section #product.c21, body.single .container section #product.c24, body.single .container section #product.c27, body.single .container section #product.c30 {
   margin-right: 0;
 }

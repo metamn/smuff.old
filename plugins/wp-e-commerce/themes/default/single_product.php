@@ -37,7 +37,7 @@
 						      <?php while (wpsc_have_variation_groups()) : wpsc_the_variation_group(); ?>
 							      
 								        <?php /** the variation HTML and loop */?>
-								        <label>
+								        <label class="select">
 								        <select class='wpsc_select_variation' name="variation[<?php echo wpsc_vargrp_id(); ?>]" id="<?php echo wpsc_vargrp_form_id(); ?>">
 								        <?php while (wpsc_have_variations()) : wpsc_the_variation(); ?>
 									        <option value="<?php echo wpsc_the_variation_id(); ?>" <?php echo wpsc_the_variation_out_of_stock(); ?>><?php echo wpsc_the_variation_name(); ?> (<?php echo wpsc_the_variation_price(); ?>)</option>
@@ -67,20 +67,19 @@
 								    <input type='text' id='donation_price_<?php echo wpsc_the_product_id(); ?>' name='donation_price' value='<?php echo $wpsc_query->product['price']; ?>' size='6' />
 								    <br />													
 							    <?php else : ?>
-								    <?php if(wpsc_product_on_special()) : ?>
-								      <div class='oldprice'><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></div> 
-								    <?php endif; ?>
-								      <div class='price'>
+								      <?php if(wpsc_product_on_special()) {
+								        $klass = 'on-sale';
+								      } else {
+								        $klass = '';
+								      } ?>
+								      <div class="price normal-price <?php echo $klass ?>">
 								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
 								      </div>  
-								      <!-- multi currency code -->
-								      <?php if(wpsc_product_has_multicurrency()) : ?>
-								      <?php echo wpsc_display_product_multicurrency(); ?>
+								      
+								      <?php if(wpsc_product_on_special()) : ?>
+								        <div class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></div> 
 								      <?php endif; ?>
-								      <!-- end multi currency code -->
-								      <?php if(get_option('display_pnp') == 1) : ?>
-									      <span class="pricedisplay"><?php echo wpsc_product_postage_and_packaging(); ?></span><?php echo __('P&amp;P', 'wpsc'); ?>:  <br />
-								      <?php endif; ?>							
+								      						
 							      <?php endif; ?>
 						    </div>
 					      
@@ -88,7 +87,7 @@
 						      echo wpsc_akst_share_link('return');
 					      } ?>
 					      
-						
+						   
 					      <input type="hidden" value="add_to_cart" name="wpsc_ajax_action"/>
 					      <input type="hidden" value="<?php echo wpsc_the_product_id(); ?>" name="product_id"/>
 							
@@ -115,27 +114,31 @@
 					        $delivery = product_delivery_time($product_data['sku']);
 					      ?>
 					      
+					      
+					      					      
 					      <div class='delivery'>
 					        Livrare in <?php  echo $delivery ?>
 					      </div>
-					      					      
-					      
 					      
 					      
 					      										
 					      <!-- END OF QUANTITY OPTION -->
 					      
+					      
 					      <?php if((get_option('hide_addtocart_button') == 0) && (get_option('addtocart_or_buynow') !='1')) : ?>
 						      <?php if(wpsc_product_has_stock()) : ?>
 							      <?php if(wpsc_product_external_link(wpsc_the_product_id()) != '') : ?>
 								      <?php	$action =  wpsc_product_external_link(wpsc_the_product_id()); ?>
-								      <input class="wpsc_buy_button" type='button' value='<?php echo __('Buy Now', 'wpsc'); ?>' onclick='gotoexternallink("<?php echo $action; ?>")'>
+								      <div class="add-to-cart-button">
+								        <input class="wpsc_buy_button" type='button' value='<?php echo __('Buy Now', 'wpsc'); ?>' onclick='gotoexternallink("<?php echo $action; ?>")'>
+								      </div>
 							      <?php else: ?>
-							        
-								      <input type="submit" value="Adauga la cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
+							        <div class="add-to-cart-button">
+								        <input type="submit" value="Adauga la cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
+								      </div>
 							      <?php endif; ?>							  		
 							     
-							      <divr class='checkout'>
+							      <div class='checkout'>
 							        <FORM>
                         <INPUT TYPE="BUTTON" class='checkout-button' VALUE="Cos cumparaturi" ONCLICK='gotoexternallink("<?php echo bloginfo(home) ?>/cos-cumparaturi")'>
                       </FORM>							        
@@ -153,6 +156,10 @@
 							      <p class='soldout'><?php echo __('This product has sold out.', 'wpsc'); ?></p>
 						      <?php endif ; ?>
 					      <?php endif ; ?>
+					      
+					      
+					      
+					      
 					 
 					</form>
 					

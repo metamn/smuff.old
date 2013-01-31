@@ -62,7 +62,72 @@ body.single {
 			  @include col(47.5%, 0, 0);
 			  
 			  #add-to-cart {
-			     @include add-to-cart;
+			    .imagecol {
+			      display: none;
+			    }
+			    
+			    .wpsc_variation_forms {
+			    
+			      .select {
+			        width: 20em;
+			        
+			        select {
+			          option {
+			            width: 19.9em;
+			          }
+			        }
+			      }
+			      
+			    }
+			    
+			    .wpsc_product_price {
+			      @include block;
+			      
+			      div {
+			        width: 6.7em;
+			        float: left;
+			        margin-right: $pad;
+			        padding: $pad/2;
+			        
+			        @include border-radius(0, 0);
+			      }
+			      
+			      .oldprice {
+			        background: transparent;
+			      }
+			      .normal-price.on-sale {
+			        background: $sale;
+			      }
+			      .oldprice.on-sale {
+			        border: 1px solid;
+			      }
+			    }
+			    
+			    .add-to-cart-button {
+			      @include block;
+			     
+			      input[type="submit"] {
+			        background: $green;
+			        color: $color;
+			        
+			        font-family: 'Coda', sans-serif;
+			        font-weight: 1em;
+			      }
+			    }
+			    
+			    .checkout {
+			      display: none;
+			    }
+			    
+			    .wpsc_loading_animation {
+			      visibility: hidden;
+			    }
+			    
+			    .delivery {
+			      position: relative;
+			      top: 2.2em;
+			      margin-left: 9.5em;
+			    }
 			  }
 			  
 			  #thumbs { 
