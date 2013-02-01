@@ -129,14 +129,14 @@ body .container h1, body .container h2, body .container h3, body .container h4, 
 }
 /* line 29, typography.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
-  font-size: 1.5em;
+  font-size: 2em;
   padding: 1.25em 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 /* line 37, typography.scss */
 body .container h4, body .container h5, body .container h6 {
-  font-size: 1.25em;
+  font-size: 1em;
   /* small caps is not enough to distinguish header from body text */
   text-transform: uppercase;
 }
@@ -402,33 +402,6 @@ img {
 */
 /* block element -- expand something full size inside a container
 */
-/* The visual grid 
-*/
-/* line 565, mixins.scss */
-.grid {
-  position: absolute;
-  top: 0;
-  opacity: .1;
-  display: block;
-  z-index: -1;
-}
-
-/* line 572, mixins.scss */
-#gridh .col {
-  border-bottom: 1px solid;
-  width: 118em;
-  height: 19px;
-  /* 1.25em = 20px - 1px border */
-}
-
-/* line 577, mixins.scss */
-#gridv .col {
-  border-right: 1px solid;
-  width: 10%;
-  height: 250em;
-  float: left;
-}
-
 /* Color Scheme
 */
 /* Links
@@ -442,64 +415,63 @@ a, a:active, a:visited, a:hover {
 /* Price
 ---------------------------------------------------
 */
-/* line 50, theme.scss */
-.price {
-  color: #f25f18;
-  font-weight: bold;
+/* line 49, theme.scss */
+.price, .normal-price {
+  border: #cccccc;
+  padding: 0.3125em;
+  -webkit-border-radius: 10% 10%;
+  -moz-border-radius: 10% / 10%;
+  border-radius: 10% / 10%;
 }
 
 /* line 54, theme.scss */
+.price {
+  background: #f25f18;
+}
+
+/* line 57, theme.scss */
 .old-price, .oldprice {
   text-decoration: line-through;
-  font-weight: normal;
+}
+
+/* line 60, theme.scss */
+.normal-price {
+  background: #4d8fce;
 }
 
 /* Mixins
 */
-/* line 1, header.scss */
+/* Header, footer, and general settings
+*/
+/* line 201, theme.scss */
 body {
   background: white url(background.png);
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 3, header.scss */
-body .grid {
-  display: none;
-}
-/* line 12, header.scss */
-body .container {
-  width: 80%;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 1383px) {
-  /* line 12, header.scss */
-  body .container {
-    width: 70%;
-  }
-}
-/* line 21, header.scss */
+/* line 208, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 27, header.scss */
-body .container #header {
-  width: 100%;
-  float: left;
-}
-/* line 30, header.scss */
+/* line 213, theme.scss */
 body .container #header h1, body .container #header h2 {
   padding: 0.625em 0;
 }
-/* line 35, header.scss */
+/* line 217, theme.scss */
+body .container #header #logo {
+  margin-right: 2.5%;
+  /* Aligned to the menu item below */
+}
+/* line 222, theme.scss */
+body .container #header #strapline a {
+  color: #f25f18;
+}
+/* line 227, theme.scss */
 body .container #header #cart {
-  width: 23.5%;
-  margin: 0 0 0 0;
-  float: left;
-  float: right;
   font-size: small;
   color: #aaaaaa;
 }
-/* line 42, header.scss */
+/* line 231, theme.scss */
 body .container #header #cart ul {
   display: block;
   margin: 0;
@@ -517,67 +489,210 @@ body .container #header #cart ul li {
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 46, header.scss */
+/* line 235, theme.scss */
 body .container #header #cart ul li {
-  margin-right: 0.3125em !important;
+  margin-right: 0.625em !important;
 }
-/* line 48, header.scss */
+/* line 237, theme.scss */
 body .container #header #cart ul li a {
   color: #aaaaaa;
 }
-/* line 51, header.scss */
+/* line 240, theme.scss */
 body .container #header #cart ul li a:hover {
   color: #363636;
 }
-/* line 55, header.scss */
+/* line 244, theme.scss */
 body .container #header #cart ul li:after {
   content: '\2022';
-  margin-left: 0.3125em;
+  margin-left: 0.625em;
 }
-/* line 60, header.scss */
+/* line 249, theme.scss */
 body .container #header #cart ul li.last {
   margin-right: 0;
 }
-/* line 63, header.scss */
+/* line 252, theme.scss */
 body .container #header #cart ul li.last:after {
   content: '';
 }
-/* line 70, header.scss */
+/* line 258, theme.scss */
+body .container #header #menu {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.625em 0;
+}
+/* line 264, theme.scss */
+body .container #header #menu ul li#all-products {
+  cursor: pointer;
+}
+/* line 267, theme.scss */
+body .container #header #menu ul li#all-products:after {
+  content: '\003E';
+  float: right;
+  margin-left: 0.3125em;
+  color: #f25f18;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+}
+/* line 270, theme.scss */
+body .container #header #menu ul li#all-products.active {
+  color: #f25f18;
+}
+/* line 273, theme.scss */
+body .container #header #menu ul li#all-products.active:after {
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+}
+/* line 279, theme.scss */
+body .container #header #search {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.3125em 0 0.15625em;
+}
+/* line 285, theme.scss */
+body .container #header #search input[type="text"] {
+  width: 17.5em;
+  background: #cccccc;
+  padding: 0.625em 0.3125em;
+  color: white;
+}
+
+/* Startpage
+*/
+/* line 304, theme.scss */
+body.home nav.tab {
+  width: 100%;
+  float: left;
+  margin: 2.5em 0 0;
+}
+/* line 308, theme.scss */
+body.home nav.tab ul {
+  list-style: none;
+}
+/* line 311, theme.scss */
+body.home nav.tab ul li {
+  cursor: pointer;
+}
+/* line 314, theme.scss */
+body.home nav.tab ul li h2 {
+  color: #aaaaaa;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0.15625em;
+}
+/* line 321, theme.scss */
+body.home nav.tab ul li h2.active, body.home nav.tab ul li h2:hover {
+  color: #363636;
+}
+/* line 331, theme.scss */
+body.home section #body #products #product {
+  background: white url(stripe.png);
+}
+/* line 142, theme.scss */
+body.home section #body #products #product img {
+  width: 98%;
+  padding: 1%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 146, theme.scss */
+body.home section #body #products #product #title, body.home section #body #products #product #excerpt {
+  margin: 0.625em 0.3125em;
+  padding: 0.625em 1.25em;
+  background: white;
+  min-height: 4.5em;
+}
+/* line 154, theme.scss */
+body.home section #body #products #product #title h3 {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 162, theme.scss */
+body.home section #body #products #product #excerpt a {
+  color: #aaaaaa;
+}
+/* line 168, theme.scss */
+body.home section #body #products #product #price, body.home section #body #products #product #category {
+  font-size: small;
+}
+/* line 172, theme.scss */
+body.home section #body #products #product #price {
+  width: 50%;
+  margin: 0 5% 0 1.25em;
+  float: left;
+  margin-top: 1.25em;
+}
+/* line 177, theme.scss */
+body.home section #body #products #product #category {
+  min-width: 20%;
+  margin-right: 1.5em;
+  /* Because of the small font size */
+  margin-top: 0.625em;
+  float: right;
+  font-size: small;
+  background: #aaaaaa;
+}
+/* line 186, theme.scss */
+body.home section #body #products #product #category a {
+  padding: 0.625em;
+  color: white;
+  text-align: center;
+  display: block;
+}
+
+/* line 2, header.scss */
+body .container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 7, header.scss */
+body .container #header {
+  width: 100%;
+  float: left;
+}
+/* line 10, header.scss */
+body .container #header #cart {
+  width: 23.5%;
+  margin: 0 0 0 0;
+  float: left;
+  float: right;
+}
+/* line 16, header.scss */
 body .container #header hgroup {
   width: 76.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 73, header.scss */
+/* line 19, header.scss */
 body .container #header hgroup #logo {
   max-width: 18.5%;
   float: left;
-  margin-right: 2.5%;
-  /* Aligned to the menu item below */
 }
-/* line 79, header.scss */
+/* line 24, header.scss */
 body .container #header hgroup #strapline {
   max-width: 76.5%;
   float: left;
 }
-/* line 83, header.scss */
-body .container #header hgroup #strapline a {
-  color: #f25f18;
-}
-/* line 88, header.scss */
+/* line 29, header.scss */
 body .container #header hgroup #page-name {
   display: none;
 }
-/* line 93, header.scss */
+/* line 34, header.scss */
 body .container #header #menu {
   width: 76.5%;
   margin: 0 0 0 0;
   float: left;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 0.625em 0;
 }
-/* line 100, header.scss */
+/* line 37, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -594,59 +709,18 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 103, header.scss */
-body .container #header #menu ul li#all-products {
-  cursor: pointer;
-}
-/* line 106, header.scss */
-body .container #header #menu ul li#all-products:after {
-  content: '\003E';
-  float: right;
-  margin-left: 0.3125em;
-  color: #f25f18;
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-}
-/* line 109, header.scss */
-body .container #header #menu ul li#all-products.active {
-  color: #f25f18;
-}
-/* line 112, header.scss */
-body .container #header #menu ul li#all-products.active:after {
-  -moz-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-}
-/* line 116, header.scss */
+/* line 40, header.scss */
 body .container #header #menu ul li#search-menu-item {
   display: none;
 }
-/* line 123, header.scss */
+/* line 46, header.scss */
 body .container #header #search {
   width: 23.5%;
   margin: 0 0 0 0;
   float: left;
   float: left;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 0.3125em 0 0.15625em;
 }
-/* line 132, header.scss */
-body .container #header #search input[type="text"] {
-  width: 75%;
-  max-width: 15em;
-  background: #cccccc;
-  padding: 0.625em 0.3125em;
-  color: white;
-}
-/* line 142, header.scss */
+/* line 52, header.scss */
 body .container #header #menu-extended {
   width: 100%;
   float: left;
@@ -654,110 +728,110 @@ body .container #header #menu-extended {
   background: #f1f1f1;
   padding-bottom: 1.25em;
 }
-/* line 149, header.scss */
+/* line 59, header.scss */
 body .container #header #menu-extended div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 152, header.scss */
+/* line 62, header.scss */
 body .container #header #menu-extended div h3 {
   color: #aaaaaa;
 }
-/* line 156, header.scss */
+/* line 66, header.scss */
 body .container #header #menu-extended div ul {
   list-style: none;
   margin: 0;
 }
-/* line 160, header.scss */
+/* line 70, header.scss */
 body .container #header #menu-extended div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
   border-bottom: 1px solid #e3e3e3;
 }
-/* line 165, header.scss */
+/* line 75, header.scss */
 body .container #header #menu-extended div ul li a {
   width: 100%;
   display: block;
 }
-/* line 170, header.scss */
+/* line 80, header.scss */
 body .container #header #menu-extended div ul li.separator {
   margin: 0.625em 0;
   border-color: transparent;
 }
-/* line 174, header.scss */
+/* line 84, header.scss */
 body .container #header #menu-extended div ul li:hover {
   border-color: #cccccc;
 }
-/* line 177, header.scss */
+/* line 87, header.scss */
 body .container #header #menu-extended div ul li:hover a {
   color: #1b1b1b;
 }
-/* line 182, header.scss */
+/* line 92, header.scss */
 body .container #header #menu-extended div ul li#all-products:after {
   content: '\21e2';
   margin-left: 0.625em;
 }
-/* line 189, header.scss */
+/* line 99, header.scss */
 body .container #header #menu-extended #close {
   margin-right: 0;
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 195, header.scss */
+/* line 105, header.scss */
 body .container #header #menu-extended #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 200, header.scss */
+/* line 110, header.scss */
 body .container #header #menu-extended #close span:after {
   content: '\2612';
   margin-left: 0.625em;
   font-size: large;
 }
 @media (max-width: 480px) {
-  /* line 211, header.scss */
+  /* line 121, header.scss */
   body .container #header #cart, body .container #header hgroup, body .container #header #menu {
     width: 100%;
     float: left;
   }
-  /* line 216, header.scss */
+  /* line 126, header.scss */
   body .container #header #cart ul {
     margin-top: 1.25em;
   }
-  /* line 222, header.scss */
+  /* line 132, header.scss */
   body .container #header hgroup #logo {
     max-width: 27.5%;
   }
-  /* line 225, header.scss */
+  /* line 135, header.scss */
   body .container #header hgroup #strapline {
     font-size: .8em;
     margin-top: .9em;
   }
-  /* line 233, header.scss */
+  /* line 143, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-bottom: 0.3125em;
   }
-  /* line 237, header.scss */
+  /* line 147, header.scss */
   body .container #header #menu ul li#search-menu-item {
     display: inline-block;
     margin-left: 1.25em;
   }
-  /* line 244, header.scss */
+  /* line 154, header.scss */
   body .container #header #search {
     display: none;
   }
-  /* line 248, header.scss */
+  /* line 158, header.scss */
   body .container #header #menu-extended {
     padding-bottom: 0;
   }
-  /* line 252, header.scss */
+  /* line 162, header.scss */
   body .container #header #menu-extended div {
     width: 100%;
     float: left;
   }
-  /* line 255, header.scss */
+  /* line 165, header.scss */
   body .container #header #menu-extended div h3 {
     font-size: 1em;
   }
@@ -765,50 +839,50 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu-extended div ul li {
     display: inline-block;
   }
-  /* line 262, header.scss */
+  /* line 172, header.scss */
   body .container #header #menu-extended div ul li {
     font-size: small;
     border: none;
   }
-  /* line 266, header.scss */
+  /* line 176, header.scss */
   body .container #header #menu-extended div ul li a {
     width: auto;
     display: inline-block;
   }
-  /* line 271, header.scss */
+  /* line 181, header.scss */
   body .container #header #menu-extended div ul li.separator {
     display: none;
   }
-  /* line 274, header.scss */
+  /* line 184, header.scss */
   body .container #header #menu-extended div ul li:after {
     content: '\2022';
     margin-left: 0.625em;
     color: #cccccc;
   }
-  /* line 279, header.scss */
+  /* line 189, header.scss */
   body .container #header #menu-extended div ul li.last:after {
     content: '';
   }
-  /* line 283, header.scss */
+  /* line 193, header.scss */
   body .container #header #menu-extended div ul li#all-products {
     margin-top: 1.25em;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 295, header.scss */
+  /* line 205, header.scss */
   body .container #header #cart ul {
     margin: 1.25em 0;
   }
-  /* line 298, header.scss */
+  /* line 208, header.scss */
   body .container #header #cart ul li:after {
     content: '';
   }
-  /* line 304, header.scss */
+  /* line 214, header.scss */
   body .container #header #menu {
     width: 100%;
     float: left;
   }
-  /* line 308, header.scss */
+  /* line 218, header.scss */
   body .container #header #menu ul li#search-menu-item {
     display: inline-block;
     float: right;
@@ -824,34 +898,34 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu ul li#search-menu-item a {
     color: white;
   }
-  /* line 321, header.scss */
+  /* line 231, header.scss */
   body .container #header #search {
     display: none;
   }
-  /* line 326, header.scss */
+  /* line 236, header.scss */
   body .container #header #menu-extended div {
     width: 30%;
     margin: 0 2.5% 0 0.5%;
     float: left;
   }
-  /* line 329, header.scss */
+  /* line 239, header.scss */
   body .container #header #menu-extended div h3 {
     font-size: 1.25em;
   }
-  /* line 334, header.scss */
+  /* line 244, header.scss */
   body .container #header #menu-extended #close {
     width: 100%;
     float: left;
   }
 }
-/* line 344, header.scss */
+/* line 254, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 351, header.scss */
+/* line 261, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;
@@ -872,31 +946,62 @@ body.home .container section #body #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
   float: left;
-  background: white;
-  padding-bottom: 0.625em;
+  height: 30em;
+  background: white url(stripe.png);
 }
-/* line 141, theme.scss */
+/* line 142, theme.scss */
 body.home .container section #body #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 145, theme.scss */
-body.home .container section #body #products #product #title {
-  margin: 0;
-  padding: 0.625em;
+/* line 146, theme.scss */
+body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
+  margin: 0.625em 0.3125em;
+  padding: 0.625em 1.25em;
+  background: white;
+  min-height: 4.5em;
 }
-/* line 150, theme.scss */
-body.home .container section #body #products #product #price {
-  padding: 0 0.625em;
+/* line 154, theme.scss */
+body.home .container section #body #products #product #title h3 {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
 }
-/* line 153, theme.scss */
-body.home .container section #body #products #product .old-price {
+/* line 162, theme.scss */
+body.home .container section #body #products #product #excerpt a {
   color: #aaaaaa;
-  margin-left: 0.3125em;
 }
-/* line 19, startpage.scss */
+/* line 168, theme.scss */
+body.home .container section #body #products #product #price, body.home .container section #body #products #product #category {
+  font-size: small;
+}
+/* line 172, theme.scss */
+body.home .container section #body #products #product #price {
+  width: 50%;
+  margin: 0 5% 0 1.25em;
+  float: left;
+  margin-top: 1.25em;
+}
+/* line 177, theme.scss */
+body.home .container section #body #products #product #category {
+  min-width: 20%;
+  margin-right: 1.5em;
+  /* Because of the small font size */
+  margin-top: 0.625em;
+  float: right;
+  font-size: small;
+  background: #aaaaaa;
+}
+/* line 186, theme.scss */
+body.home .container section #body #products #product #category a {
+  padding: 0.625em;
+  color: white;
+  text-align: center;
+  display: block;
+}
+/* line 20, startpage.scss */
 body.home .container section #body #products #product #excerpt {
   display: none;
 }
@@ -918,39 +1023,40 @@ body.home .container section #body #products #product #excerpt {
     margin-bottom: 5%;
   }
 }
-/* line 34, startpage.scss */
+/* line 35, startpage.scss */
 body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
   margin-right: 0;
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 39, startpage.scss */
+  /* line 40, startpage.scss */
   body.home .container section #body #products #product.c2 {
     margin-right: 0;
   }
 }
-/* line 46, startpage.scss */
+/* line 47, startpage.scss */
 body.home .container section.active {
   display: block;
 }
-/* line 51, startpage.scss */
+/* line 52, startpage.scss */
 body.home .container #new-products {
   background: url(background-new-products.png);
-  padding-bottom: 1.25em;
+  min-height: 20em;
+  padding-bottom: 1.875em;
 }
-/* line 56, startpage.scss */
+/* line 58, startpage.scss */
 body.home .container #new-products #title {
   max-width: 18.5%;
   position: relative;
   left: -1.5%;
 }
-/* line 73, theme.scss */
+/* line 75, theme.scss */
 body.home .container #new-products #title h2 {
   background: #363636;
   color: white;
   padding: 0.3125em;
   margin: 0.625em 0;
 }
-/* line 60, startpage.scss */
+/* line 62, startpage.scss */
 body.home .container #new-products #navigation {
   display: block;
   max-width: 18.5%;
@@ -959,7 +1065,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 93, theme.scss */
+/* line 95, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -976,21 +1082,21 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 96, theme.scss */
+/* line 98, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 102, theme.scss */
+/* line 104, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 106, theme.scss */
+/* line 108, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
-/* line 75, startpage.scss */
+/* line 77, startpage.scss */
 body.home .container #new-products #body #products #product {
   width: 23%;
   margin: 0 1% 0 1%;
@@ -998,19 +1104,19 @@ body.home .container #new-products #body #products #product {
   background: none;
   height: auto;
 }
-/* line 128, theme.scss */
+/* line 130, theme.scss */
 body.home .container #new-products #body #products #product #image {
   background: white;
   box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.698), 0 1px rgba(0, 0, 0, 0.1), 0 0 4px rgba(0, 0, 0, 0.1) inset;
 }
-/* line 132, theme.scss */
+/* line 134, theme.scss */
 body.home .container #new-products #body #products #product #title, body.home .container #new-products #body #products #product #excerpt, body.home .container #new-products #body #products #product #price, body.home .container #new-products #body #products #product #category {
   display: none;
 }
 @media (max-width: 480px) {
-  /* line 75, startpage.scss */
+  /* line 77, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 100%;
     float: left;
@@ -1019,7 +1125,7 @@ body.home .container #new-products #body #products #product #title, body.home .c
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 75, startpage.scss */
+  /* line 77, startpage.scss */
   body.home .container #new-products #body #products #product {
     width: 45%;
     margin: 0 5% 0 0;
@@ -1027,7 +1133,7 @@ body.home .container #new-products #body #products #product #title, body.home .c
     margin-bottom: 5%;
   }
 }
-/* line 90, startpage.scss */
+/* line 92, startpage.scss */
 body.home .container #new-products #body #products #product.c3 {
   -moz-transform: rotate(6deg);
   -webkit-transform: rotate(6deg);
@@ -1036,13 +1142,12 @@ body.home .container #new-products #body #products #product.c3 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 94, startpage.scss */
+/* line 96, startpage.scss */
 body.home .container #new-products #body #products #product.c5, body.home .container #new-products #body #products #product.c6, body.home .container #new-products #body #products #product.c7 {
   display: none;
 }
-/* line 101, startpage.scss */
+/* line 103, startpage.scss */
 body.home .container #anouncement {
-  margin: 0;
   text-align: center;
   color: #565656;
 }
@@ -1050,18 +1155,18 @@ body.home .container #anouncement {
 body.home .container #anouncement h2 {
   font-family: 'Old Standard TT', serif;
   font-weight: normal;
-  font-size: 1.25em;
   padding: 0.3125em 0;
 }
-/* line 113, startpage.scss */
+/* line 112, startpage.scss */
 body.home .container #anouncement h2 span {
   border-top: 1px solid;
   border-bottom: 1px solid;
-  padding: 0.15625em 7.5em;
+  padding: 0.15625em 5em;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 121, startpage.scss */
+  /* line 120, startpage.scss */
   body.home .container #anouncement h2 {
+    font-size: 1.25em;
     border-top: 1px solid;
     border-bottom: 1px solid;
   }
@@ -1503,30 +1608,60 @@ body.archive section #products #product {
   margin: 0 5% 0 0;
   float: left;
   margin-bottom: 5%;
-  background: white;
-  padding-bottom: 0.625em;
+  background: white url(stripe.png);
   height: 36em;
 }
-/* line 141, theme.scss */
+/* line 142, theme.scss */
 body.archive section #products #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 145, theme.scss */
-body.archive section #products #product #title {
-  margin: 0;
-  padding: 0.625em;
+/* line 146, theme.scss */
+body.archive section #products #product #title, body.archive section #products #product #excerpt {
+  margin: 0.625em 0.3125em;
+  padding: 0.625em 1.25em;
+  background: white;
+  min-height: 4.5em;
 }
-/* line 150, theme.scss */
-body.archive section #products #product #price {
-  padding: 0 0.625em;
+/* line 154, theme.scss */
+body.archive section #products #product #title h3 {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
 }
-/* line 153, theme.scss */
-body.archive section #products #product .old-price {
+/* line 162, theme.scss */
+body.archive section #products #product #excerpt a {
   color: #aaaaaa;
-  margin-left: 0.3125em;
+}
+/* line 168, theme.scss */
+body.archive section #products #product #price, body.archive section #products #product #category {
+  font-size: small;
+}
+/* line 172, theme.scss */
+body.archive section #products #product #price {
+  width: 50%;
+  margin: 0 5% 0 1.25em;
+  float: left;
+  margin-top: 1.25em;
+}
+/* line 177, theme.scss */
+body.archive section #products #product #category {
+  min-width: 20%;
+  margin-right: 1.5em;
+  /* Because of the small font size */
+  margin-top: 0.625em;
+  float: right;
+  font-size: small;
+  background: #aaaaaa;
+}
+/* line 186, theme.scss */
+body.archive section #products #product #category a {
+  padding: 0.625em;
+  color: white;
+  text-align: center;
+  display: block;
 }
 /* line 120, archive.scss */
 body.archive section #products #product #price, body.archive section #products #product #category {
@@ -1916,30 +2051,60 @@ body.single .container section #product {
   margin: 0 5% 0 0;
   float: left;
   margin-bottom: 5%;
-  background: white;
-  padding-bottom: 0.625em;
+  background: white url(stripe.png);
   height: 36em;
 }
-/* line 141, theme.scss */
+/* line 142, theme.scss */
 body.single .container section #product img {
   width: 98%;
   padding: 1%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 145, theme.scss */
-body.single .container section #product #title {
-  margin: 0;
-  padding: 0.625em;
+/* line 146, theme.scss */
+body.single .container section #product #title, body.single .container section #product #excerpt {
+  margin: 0.625em 0.3125em;
+  padding: 0.625em 1.25em;
+  background: white;
+  min-height: 4.5em;
 }
-/* line 150, theme.scss */
-body.single .container section #product #price {
-  padding: 0 0.625em;
+/* line 154, theme.scss */
+body.single .container section #product #title h3 {
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
 }
-/* line 153, theme.scss */
-body.single .container section #product .old-price {
+/* line 162, theme.scss */
+body.single .container section #product #excerpt a {
   color: #aaaaaa;
-  margin-left: 0.3125em;
+}
+/* line 168, theme.scss */
+body.single .container section #product #price, body.single .container section #product #category {
+  font-size: small;
+}
+/* line 172, theme.scss */
+body.single .container section #product #price {
+  width: 50%;
+  margin: 0 5% 0 1.25em;
+  float: left;
+  margin-top: 1.25em;
+}
+/* line 177, theme.scss */
+body.single .container section #product #category {
+  min-width: 20%;
+  margin-right: 1.5em;
+  /* Because of the small font size */
+  margin-top: 0.625em;
+  float: right;
+  font-size: small;
+  background: #aaaaaa;
+}
+/* line 186, theme.scss */
+body.single .container section #product #category a {
+  padding: 0.625em;
+  color: white;
+  text-align: center;
+  display: block;
 }
 /* line 210, single.scss */
 body.single .container section #product #price, body.single .container section #product #category {

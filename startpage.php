@@ -79,7 +79,7 @@
   <section id="anouncement">
     <h2>
       <span>
-        <strong>Livrare in 24 ore</strong> la majoritatea produselor!
+        <strong>Livrare gratuita</strong> la comenzi peste 300 RON
       </span>
     </h2>
   </section>
@@ -91,7 +91,6 @@
   $product_list = $promo_posts;
   $product_list_title = 'Reduceri';
   $product_list_id = 'sales';
-  $show_category = false;
   include 'product-list.php';
   
 ?>
