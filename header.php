@@ -81,20 +81,11 @@
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <header id="header">
-				<nav id="cart">
-					<ul>
-						<li><a href="">Cosul meu (0)</a></li>
-						<li><a href="">Contul meu</a></li>
-						<li class="last"><a href="">Informatii</a></li>
-					</ul>
-				</nav>
-				
-	    	<hgroup>
-	    		<div id="logo">
-						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
-							<h1><?php bloginfo('name'); ?></h1>
-						</a>
-					</div>
+				<hgroup>
+				  <a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
+					  <div id="logo"></div> 
+				  </a>
+					
 					
 					<div id="strapline">
 						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
@@ -129,11 +120,15 @@
 									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 							</li>
 							
-							<li id="search-menu-item"> <!-- for mobile only -->
-							  <a href="">Cautare</a>
-							</li>
+							
+							<li id="cart"><a href="">Cosul meu (0)</a></li>
+						  <li id="account"><a href="">Contul meu</a></li>
+						  <li id="info" class="last"><a href="">Informatii</a></li>
+							
 					</ul>
 			  </nav>	
+			  
+			 
 			  
 			  <aside id="search">
 				  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 

@@ -158,4 +158,30 @@ a, a:active, a:visited, a:hover {
 }
 
 
+/* Logo
+------------------------------------------------------------------------------
+*/
+
+@mixin logo($size) {
+  height: $size * 7;
+  width: $size * 24 - $size/2; /* an extra space must be added */
+
+  .cell {
+    width: $size;
+    height: $size;
+    float: left;
+  }
+
+  .small {
+    width: $size / 2;
+  }
+
+  .set {
+    background: $color;
+  }
+}
+
+
+
+
 

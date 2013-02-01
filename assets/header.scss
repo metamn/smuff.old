@@ -10,12 +10,9 @@ body {
   
   
 	.container {
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 		
-		@include desktop-and-up {
-		  width: 70%;
-		}
 		
 		
 		h1, h2, h3, h4 {
@@ -26,63 +23,19 @@ body {
 		
 		#header {
 			@include block;
+			margin: $pad 0;
 			
-			h1, h2 {
-        padding: $pad/2 0;
-      }
-      
-			
-			#cart {
-				@include col($minor + $margin, 0, 0);
-				float: right;
-				
-				font-size: small;
-        color: $gray;
-        
-        ul {
-          @include list-inline;
-          margin-top: $pad*3;
-          
-          li {
-            margin-right: $pad/4 !important;
-            a {
-              color: $gray;
-            }
-            a:hover {
-              color: $color;
-            }
-          }
-          li:after {
-            content: '\2022';
-            margin-left: $pad/4;
-          }
-          
-          li.last {
-            margin-right: 0;
-          }
-          li.last:after {
-            content: '';
-          }
-        }
-			}
-			
-			
+						
 			hgroup {
-				@include col($major, 0, 0);
+				@include block;
 				
-				#logo {
-					max-width: $minor;
-					float: left;
-					margin-right: 2.5%; /* Aligned to the menu item below */
-				}
 				
+			  #logo {
+				  @include logo($pad/3);
+			  }
+			
 				#strapline {
-					max-width: $major;
-					float: left;
-					
-					a {
-            color: $sale;
-          }
+					display: none;
 				}
 				
 				#page-name {
@@ -90,39 +43,63 @@ body {
 				}
 			}
 			
+			
 			#menu {
-				@include col($major, 0, 0);
-				
-				border-top: 1px solid;
-        border-bottom: 1px solid;
-        padding: $pad/2 0;
-        
-        ul {
+			  @include block;
+			  margin-top: $pad/4;
+			 
+			  ul {
           @include list-inline;
+         
+          li {
+            text-transform: uppercase;
+            
+            background: $color;
+            color: $background;
+            padding: $pad/2;
+            margin-right: 1px;
+            border: 1px solid;
+            
+            a {
+              background: $color;
+              color: $background;
+            }
+          }
           
-          li#all-products {
+          #all-products {
             cursor: pointer;
           }
-          li#all-products:after {
+          #all-products:after {
             @include arrow-to-reveal-content;
           }
-          li#all-products.active {
+          #all-products.active {
             color: $sale;
           }
-          li#all-products.active:after {
+          #all-products.active:after {
             @include rotate(270deg, .7);
           }
           
-          li#search-menu-item {
-					  display: none;
-					}
+          #cart, #account, #info {
+            background: $background;
+            color: $color;
+            
+            a {
+              background: $background;
+              color: $color;
+            }
+          }
+          
         }
 				
 			} 
 			
+			
+			
 			#search {
 				@include col($minor + $margin, 0, 0);
 				float: left;
+				
+				display: none;
 				
 				border-top: 1px solid;
         border-bottom: 1px solid;
