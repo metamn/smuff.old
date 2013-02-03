@@ -73,7 +73,7 @@
 	
 	
 	 <body <?php body_class(); ?>> 
-	  <div id="background-image-container"></div>		
+	  <div id="above-container"></div>		
 	  
 	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-theme-url="<?php bloginfo('stylesheet_directory')?>" class="hidden"></div>	  	
 	  
@@ -98,6 +98,18 @@
 					</div>
 	    	</hgroup>
 	    	
+	    	
+	    	<!--
+    		<nav id="cart">
+          <ul>
+            <li><a href="">Cosul meu (0)</a></li>
+            <li><a href="">Contul meu</a></li>
+            <li class="last"><a href="">Informatii</a></li>
+          </ul>
+        </nav>
+        -->
+        
+	    	
 	    	<nav id="menu">
 					<ul>
 						<?php 
@@ -120,10 +132,9 @@
 									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 							</li>
 							
-							
-							<li id="cart"><a href="">Cosul meu (0)</a></li>
-						  <li id="account"><a href="">Contul meu</a></li>
-						  <li id="info" class="last"><a href="">Informatii</a></li>
+							<li class="cart"><a href="">Cosul meu (0)</a></li>
+              <li class="cart"><a href="">Contul meu</a></li>
+              <li class="cart"><a href="">Informatii</a></li>
 							
 					</ul>
 			  </nav>	

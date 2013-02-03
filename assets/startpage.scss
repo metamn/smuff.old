@@ -49,13 +49,9 @@ body.home {
 	  
 	  
 	  #new-products {
-	    background: url(background-new-products.png);
-	    padding-bottom: $pad;
-	    
-	    
-	    #title {
-	      @include section-title;
-	    }
+	    background: url(valentines.jpg);
+	    height: 18em;
+	   
 	    
 	    #navigation {
 	      display: block;
@@ -70,31 +66,8 @@ body.home {
 	      margin-right: 1%;
 	    }
 	    
-	    #body {
-	      #products {
-	        #product {
-	          @include col(23%, 1%, 1%);
-	          @include product-thumb-on-banner;
-	          
-	          @include mobile-only {
-              @include block;
-              width: 90%;
-              margin: 5%;
-            }
-            
-            @include tablet-only {
-              @include col(45%, 0, 5%);
-              margin-bottom: 5%;
-            }
-	        }
-	        #product.c3 {
-	          @include rotate(6deg, .3);
-	        }
-	        
-	        #product.c5, #product.c6, #product.c7 {
-	          display: none;
-	        }
-	      }
+	    #body, #title {
+	      display: none;
 	    }
 	  }
 	  

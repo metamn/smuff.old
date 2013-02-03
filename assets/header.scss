@@ -9,9 +9,22 @@ body {
   color: $color;
   
   
+  
+  #above-container {
+    background: $color;
+    height: $pad;
+  }
+  
+    
+  
 	.container {
 		width: 90%;
 		margin: 0 auto;
+		
+		
+		@include large-screen {
+		  width: 70%;
+		}
 		
 		
 		
@@ -27,8 +40,9 @@ body {
 			
 						
 			hgroup {
-				@include block;
-				
+				@include col(74%, 0, 2.5%);
+				margin-top: $pad;
+				margin-bottom: $pad;
 				
 			  #logo {
 				  @include logo($pad/3);
@@ -43,28 +57,21 @@ body {
 				}
 			}
 			
+			#cart {
+			  @include col(23%, 0, 0);
+			}
+			
 			
 			#menu {
 			  @include block;
-			  margin-top: $pad/4;
+			  
+			  border-top: 1px solid;
+			  border-bottom: 1px solid;
+			  padding: $pad/2 0;
 			 
 			  ul {
           @include list-inline;
-         
-          li {
-            text-transform: uppercase;
-            
-            background: $color;
-            color: $background;
-            padding: $pad/2;
-            margin-right: 1px;
-            border: 1px solid;
-            
-            a {
-              background: $color;
-              color: $background;
-            }
-          }
+          padding: 0 $pad/2;
           
           #all-products {
             cursor: pointer;
@@ -79,16 +86,9 @@ body {
             @include rotate(270deg, .7);
           }
           
-          #cart, #account, #info {
-            background: $background;
-            color: $color;
-            
-            a {
-              background: $background;
-              color: $color;
-            }
+          .cart {
+            float: right;
           }
-          
         }
 				
 			} 
