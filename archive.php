@@ -202,6 +202,7 @@
 								$show_category = false;         
 							}
 							
+							$show_excerpt = false;
 							include "product-thumb.php";
 							$counter += 1;
 						} 

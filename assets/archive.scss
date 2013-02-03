@@ -111,17 +111,13 @@ body.archive {
     @include block;
     
     #product {
-      @include col(30%, 0, 5%);
+      @include col(23%, 0, 2.5%);
       margin-bottom: $margin;
       
       @include product-thumb;
-      height: 36em;
       
-      #price, #category {
-        font-size: 1em;
-      }
     }
-    #product.c3, #product.c6, #product.c9, #product.c12, #product.c15, #product.c18, #product.c21, #product.c24, #product.c27, #product.c30 {
+    #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
       margin-right: 0;
     }
     
@@ -129,13 +125,11 @@ body.archive {
     @include mobile-only {
       #product {
         @include block;
-        height: 32em;
       }
     }
     
     @include mobile-landscape-only {
       #product {
-        height: 36em;
       }
     }
     
@@ -154,13 +148,6 @@ body.archive {
       }
     }
     
-    
-    
-    @include large-screen {
-      #product {
-        height: 40em;
-      }
-    }
   }
   
   footer {
