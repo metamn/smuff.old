@@ -1,10 +1,18 @@
 body.archive {
   section {
     @include block;
-    margin: $pad 0;
+    
     
     hgroup {
       @include block;
+      margin-bottom: $pad*2;
+      
+      padding-bottom: $pad;
+      background: $very-light-gray;
+      
+      header, nav {
+        padding: 0 $pad/2;
+      }
       
       header {
         @include block;
@@ -19,7 +27,6 @@ body.archive {
       
       nav {
         @include block;
-        margin-bottom: $pad*2;
         
         h3 {
           display: none;
@@ -30,11 +37,15 @@ body.archive {
           float: left;
           
           label:after {
-            background: $color !important;
+            background: $blue !important;
             
             select {
               color: $color !important;
             }
+          }
+          
+          input[type="submit"] {
+            background: $blue;
           }
         }
         
@@ -97,8 +108,8 @@ body.archive {
         }
         
         .current {
-          background: $color;
-          border-color: $color;
+          background: $blue;
+          border-color: $blue;
         }
         
         .prev, .next {
@@ -106,6 +117,7 @@ body.archive {
         }
       }
     }
+  
   
   #products {
     @include block;
@@ -115,6 +127,11 @@ body.archive {
       margin-bottom: $margin;
       
       @include product-thumb;
+      
+      
+      .normal-price {
+        background: $background;
+      }
       
     }
     #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {

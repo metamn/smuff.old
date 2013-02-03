@@ -1334,50 +1334,59 @@ body .container #footer #company {
 body.archive section {
   width: 100%;
   float: left;
-  margin: 1.25em 0;
 }
 /* line 6, archive.scss */
 body.archive section hgroup {
   width: 100%;
   float: left;
+  margin-bottom: 2.5em;
+  padding-bottom: 1.25em;
+  background: #f1f1f1;
 }
-/* line 9, archive.scss */
+/* line 13, archive.scss */
+body.archive section hgroup header, body.archive section hgroup nav {
+  padding: 0 0.625em;
+}
+/* line 17, archive.scss */
 body.archive section hgroup header {
   width: 100%;
   float: left;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 13, archive.scss */
+  /* line 21, archive.scss */
   body.archive section hgroup header h2 {
     font-size: 1.25em;
     padding: 0.625em 0;
   }
 }
-/* line 20, archive.scss */
+/* line 28, archive.scss */
 body.archive section hgroup nav {
   width: 100%;
   float: left;
-  margin-bottom: 2.5em;
 }
-/* line 24, archive.scss */
+/* line 31, archive.scss */
 body.archive section hgroup nav h3 {
   display: none;
 }
-/* line 28, archive.scss */
+/* line 35, archive.scss */
 body.archive section hgroup nav div {
   max-width: 38.25%;
   float: left;
 }
-/* line 32, archive.scss */
+/* line 39, archive.scss */
 body.archive section hgroup nav div label:after {
-  background: #363636 !important;
+  background: #4d8fce !important;
 }
-/* line 35, archive.scss */
+/* line 42, archive.scss */
 body.archive section hgroup nav div label:after select {
   color: #363636 !important;
 }
+/* line 47, archive.scss */
+body.archive section hgroup nav div input[type="submit"] {
+  background: #4d8fce;
+}
 @media only screen and (max-width: 1024px) {
-  /* line 43, archive.scss */
+  /* line 54, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1386,7 +1395,7 @@ body.archive section hgroup nav div label:after select {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 54, archive.scss */
+  /* line 65, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1399,60 +1408,60 @@ body.archive section hgroup nav div label:after select {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 58, archive.scss */
+  /* line 69, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 64, archive.scss */
+  /* line 75, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 69, archive.scss */
+  /* line 80, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 76, archive.scss */
+  /* line 87, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 83, archive.scss */
+/* line 94, archive.scss */
 body.archive section #pagination {
   float: right;
   margin-top: 0.625em;
 }
-/* line 87, archive.scss */
+/* line 98, archive.scss */
 body.archive section #pagination .wp-paginate {
   margin: 0;
   font-size: small;
 }
-/* line 91, archive.scss */
+/* line 102, archive.scss */
 body.archive section #pagination .wp-paginate a {
   background: transparent;
 }
-/* line 95, archive.scss */
+/* line 106, archive.scss */
 body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
   padding: 0.3125em 0.625em;
 }
-/* line 99, archive.scss */
+/* line 110, archive.scss */
 body.archive section #pagination .wp-paginate .current {
-  background: #363636;
-  border-color: #363636;
+  background: #4d8fce;
+  border-color: #4d8fce;
 }
-/* line 104, archive.scss */
+/* line 115, archive.scss */
 body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
   border: none;
 }
-/* line 110, archive.scss */
+/* line 122, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 113, archive.scss */
+/* line 125, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1513,47 +1522,51 @@ body.archive section #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 120, archive.scss */
+/* line 132, archive.scss */
+body.archive section #products #product .normal-price {
+  background: white;
+}
+/* line 137, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 126, archive.scss */
+  /* line 143, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 137, archive.scss */
+  /* line 154, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 143, archive.scss */
+  /* line 160, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 146, archive.scss */
+  /* line 163, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 154, archive.scss */
+/* line 171, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 158, archive.scss */
+/* line 175, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 165, archive.scss */
+  /* line 182, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
