@@ -520,6 +520,7 @@ body .container #header hgroup #logo {
   height: 2.91667em;
   width: 9.79167em;
   /* an extra space must be added */
+  float: left;
 }
 /* line 206, theme.scss */
 body .container #header hgroup #logo .cell {
@@ -535,21 +536,33 @@ body .container #header hgroup #logo .small {
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 51, header.scss */
+/* line 52, header.scss */
 body .container #header hgroup #strapline {
-  display: none;
+  width: 25%;
+  float: left;
+  margin-left: 0.625em;
 }
-/* line 55, header.scss */
+/* line 57, header.scss */
+body .container #header hgroup #strapline h2 {
+  padding: 0;
+  font-style: normal;
+  color: #f25f18;
+}
+/* line 62, header.scss */
+body .container #header hgroup #strapline h2 a {
+  color: #f25f18;
+}
+/* line 69, header.scss */
 body .container #header hgroup #page-name {
   display: none;
 }
-/* line 60, header.scss */
+/* line 74, header.scss */
 body .container #header #cart {
   width: 23%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 65, header.scss */
+/* line 79, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -557,7 +570,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 72, header.scss */
+/* line 86, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -575,11 +588,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 76, header.scss */
+/* line 90, header.scss */
 body .container #header #menu ul #all-products {
   cursor: pointer;
 }
-/* line 79, header.scss */
+/* line 93, header.scss */
 body .container #header #menu ul #all-products:after {
   content: '\003E';
   float: right;
@@ -592,11 +605,11 @@ body .container #header #menu ul #all-products:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 82, header.scss */
+/* line 96, header.scss */
 body .container #header #menu ul #all-products.active {
   color: #f25f18;
 }
-/* line 85, header.scss */
+/* line 99, header.scss */
 body .container #header #menu ul #all-products.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -605,11 +618,11 @@ body .container #header #menu ul #all-products.active:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 89, header.scss */
+/* line 103, header.scss */
 body .container #header #menu ul .cart {
   float: right;
 }
-/* line 98, header.scss */
+/* line 112, header.scss */
 body .container #header #search {
   width: 23.5%;
   margin: 0 0 0 0;
@@ -620,7 +633,7 @@ body .container #header #search {
   border-bottom: 1px solid;
   padding: 0.3125em 0 0.15625em;
 }
-/* line 109, header.scss */
+/* line 123, header.scss */
 body .container #header #search input[type="text"] {
   width: 75%;
   max-width: 15em;
@@ -628,7 +641,7 @@ body .container #header #search input[type="text"] {
   padding: 0.625em 0.3125em;
   color: white;
 }
-/* line 119, header.scss */
+/* line 133, header.scss */
 body .container #header #menu-extended {
   width: 100%;
   float: left;
@@ -636,110 +649,110 @@ body .container #header #menu-extended {
   background: #f1f1f1;
   padding-bottom: 1.25em;
 }
-/* line 126, header.scss */
+/* line 140, header.scss */
 body .container #header #menu-extended div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 129, header.scss */
+/* line 143, header.scss */
 body .container #header #menu-extended div h3 {
   color: #aaaaaa;
 }
-/* line 133, header.scss */
+/* line 147, header.scss */
 body .container #header #menu-extended div ul {
   list-style: none;
   margin: 0;
 }
-/* line 137, header.scss */
+/* line 151, header.scss */
 body .container #header #menu-extended div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
   border-bottom: 1px solid #e3e3e3;
 }
-/* line 142, header.scss */
+/* line 156, header.scss */
 body .container #header #menu-extended div ul li a {
   width: 100%;
   display: block;
 }
-/* line 147, header.scss */
+/* line 161, header.scss */
 body .container #header #menu-extended div ul li.separator {
   margin: 0.625em 0;
   border-color: transparent;
 }
-/* line 151, header.scss */
+/* line 165, header.scss */
 body .container #header #menu-extended div ul li:hover {
   border-color: #cccccc;
 }
-/* line 154, header.scss */
+/* line 168, header.scss */
 body .container #header #menu-extended div ul li:hover a {
   color: #1b1b1b;
 }
-/* line 159, header.scss */
+/* line 173, header.scss */
 body .container #header #menu-extended div ul li#all-products:after {
   content: '\21e2';
   margin-left: 0.625em;
 }
-/* line 166, header.scss */
+/* line 180, header.scss */
 body .container #header #menu-extended #close {
   margin-right: 0;
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 172, header.scss */
+/* line 186, header.scss */
 body .container #header #menu-extended #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 177, header.scss */
+/* line 191, header.scss */
 body .container #header #menu-extended #close span:after {
   content: '\2612';
   margin-left: 0.625em;
   font-size: large;
 }
 @media (max-width: 480px) {
-  /* line 188, header.scss */
+  /* line 202, header.scss */
   body .container #header #cart, body .container #header hgroup, body .container #header #menu {
     width: 100%;
     float: left;
   }
-  /* line 193, header.scss */
+  /* line 207, header.scss */
   body .container #header #cart ul {
     margin-top: 1.25em;
   }
-  /* line 199, header.scss */
+  /* line 213, header.scss */
   body .container #header hgroup #logo {
     max-width: 27.5%;
   }
-  /* line 202, header.scss */
+  /* line 216, header.scss */
   body .container #header hgroup #strapline {
     font-size: .8em;
     margin-top: .9em;
   }
-  /* line 210, header.scss */
+  /* line 224, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-bottom: 0.3125em;
   }
-  /* line 214, header.scss */
+  /* line 228, header.scss */
   body .container #header #menu ul li#search-menu-item {
     display: inline-block;
     margin-left: 1.25em;
   }
-  /* line 221, header.scss */
+  /* line 235, header.scss */
   body .container #header #search {
     display: none;
   }
-  /* line 225, header.scss */
+  /* line 239, header.scss */
   body .container #header #menu-extended {
     padding-bottom: 0;
   }
-  /* line 229, header.scss */
+  /* line 243, header.scss */
   body .container #header #menu-extended div {
     width: 100%;
     float: left;
   }
-  /* line 232, header.scss */
+  /* line 246, header.scss */
   body .container #header #menu-extended div h3 {
     font-size: 1em;
   }
@@ -747,50 +760,50 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu-extended div ul li {
     display: inline-block;
   }
-  /* line 239, header.scss */
+  /* line 253, header.scss */
   body .container #header #menu-extended div ul li {
     font-size: small;
     border: none;
   }
-  /* line 243, header.scss */
+  /* line 257, header.scss */
   body .container #header #menu-extended div ul li a {
     width: auto;
     display: inline-block;
   }
-  /* line 248, header.scss */
+  /* line 262, header.scss */
   body .container #header #menu-extended div ul li.separator {
     display: none;
   }
-  /* line 251, header.scss */
+  /* line 265, header.scss */
   body .container #header #menu-extended div ul li:after {
     content: '\2022';
     margin-left: 0.625em;
     color: #cccccc;
   }
-  /* line 256, header.scss */
+  /* line 270, header.scss */
   body .container #header #menu-extended div ul li.last:after {
     content: '';
   }
-  /* line 260, header.scss */
+  /* line 274, header.scss */
   body .container #header #menu-extended div ul li#all-products {
     margin-top: 1.25em;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 272, header.scss */
+  /* line 286, header.scss */
   body .container #header #cart ul {
     margin: 1.25em 0;
   }
-  /* line 275, header.scss */
+  /* line 289, header.scss */
   body .container #header #cart ul li:after {
     content: '';
   }
-  /* line 281, header.scss */
+  /* line 295, header.scss */
   body .container #header #menu {
     width: 100%;
     float: left;
   }
-  /* line 285, header.scss */
+  /* line 299, header.scss */
   body .container #header #menu ul li#search-menu-item {
     display: inline-block;
     float: right;
@@ -806,34 +819,34 @@ body .container #header #menu-extended #close span:after {
   body .container #header #menu ul li#search-menu-item a {
     color: white;
   }
-  /* line 298, header.scss */
+  /* line 312, header.scss */
   body .container #header #search {
     display: none;
   }
-  /* line 303, header.scss */
+  /* line 317, header.scss */
   body .container #header #menu-extended div {
     width: 30%;
     margin: 0 2.5% 0 0.5%;
     float: left;
   }
-  /* line 306, header.scss */
+  /* line 320, header.scss */
   body .container #header #menu-extended div h3 {
     font-size: 1.25em;
   }
-  /* line 311, header.scss */
+  /* line 325, header.scss */
   body .container #header #menu-extended #close {
     width: 100%;
     float: left;
   }
 }
-/* line 321, header.scss */
+/* line 335, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 328, header.scss */
+/* line 342, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;
@@ -1341,7 +1354,7 @@ body.archive section hgroup {
   float: left;
   margin-bottom: 2.5em;
   padding-bottom: 1.25em;
-  background: #f1f1f1;
+  background: url(stripe.png);
 }
 /* line 13, archive.scss */
 body.archive section hgroup header, body.archive section hgroup nav {
@@ -1352,41 +1365,46 @@ body.archive section hgroup header {
   width: 100%;
   float: left;
 }
+/* line 20, archive.scss */
+body.archive section hgroup header h2 {
+  font-style: normal;
+  color: #4d8fce;
+}
 @media only screen and (max-width: 1024px) {
-  /* line 21, archive.scss */
+  /* line 26, archive.scss */
   body.archive section hgroup header h2 {
     font-size: 1.25em;
     padding: 0.625em 0;
   }
 }
-/* line 28, archive.scss */
+/* line 33, archive.scss */
 body.archive section hgroup nav {
   width: 100%;
   float: left;
 }
-/* line 31, archive.scss */
+/* line 36, archive.scss */
 body.archive section hgroup nav h3 {
   display: none;
 }
-/* line 35, archive.scss */
+/* line 40, archive.scss */
 body.archive section hgroup nav div {
   max-width: 38.25%;
   float: left;
 }
-/* line 39, archive.scss */
+/* line 44, archive.scss */
 body.archive section hgroup nav div label:after {
   background: #4d8fce !important;
 }
-/* line 42, archive.scss */
+/* line 47, archive.scss */
 body.archive section hgroup nav div label:after select {
   color: #363636 !important;
 }
-/* line 47, archive.scss */
+/* line 52, archive.scss */
 body.archive section hgroup nav div input[type="submit"] {
   background: #4d8fce;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 54, archive.scss */
+  /* line 59, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1395,7 +1413,7 @@ body.archive section hgroup nav div input[type="submit"] {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 65, archive.scss */
+  /* line 70, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1408,60 +1426,60 @@ body.archive section hgroup nav div input[type="submit"] {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 69, archive.scss */
+  /* line 74, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 75, archive.scss */
+  /* line 80, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 80, archive.scss */
+  /* line 85, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 87, archive.scss */
+  /* line 92, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 94, archive.scss */
+/* line 99, archive.scss */
 body.archive section #pagination {
   float: right;
   margin-top: 0.625em;
 }
-/* line 98, archive.scss */
+/* line 103, archive.scss */
 body.archive section #pagination .wp-paginate {
   margin: 0;
   font-size: small;
 }
-/* line 102, archive.scss */
+/* line 107, archive.scss */
 body.archive section #pagination .wp-paginate a {
   background: transparent;
 }
-/* line 106, archive.scss */
+/* line 111, archive.scss */
 body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
   padding: 0.3125em 0.625em;
 }
-/* line 110, archive.scss */
+/* line 115, archive.scss */
 body.archive section #pagination .wp-paginate .current {
   background: #4d8fce;
   border-color: #4d8fce;
 }
-/* line 115, archive.scss */
+/* line 120, archive.scss */
 body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
   border: none;
 }
-/* line 122, archive.scss */
+/* line 127, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 125, archive.scss */
+/* line 130, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1522,51 +1540,51 @@ body.archive section #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 132, archive.scss */
+/* line 137, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 137, archive.scss */
+/* line 142, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 143, archive.scss */
+  /* line 148, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 154, archive.scss */
+  /* line 159, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 160, archive.scss */
+  /* line 165, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 163, archive.scss */
+  /* line 168, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 171, archive.scss */
+/* line 176, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 175, archive.scss */
+/* line 180, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 182, archive.scss */
+  /* line 187, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;

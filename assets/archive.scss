@@ -8,7 +8,7 @@ body.archive {
       margin-bottom: $pad*2;
       
       padding-bottom: $pad;
-      background: $very-light-gray;
+      background: url(stripe.png);
       
       header, nav {
         padding: 0 $pad/2;
@@ -16,6 +16,11 @@ body.archive {
       
       header {
         @include block;
+        
+        h2 {
+          font-style: normal;
+          color: $blue;
+        }
         
         @include tablet-landscape-and-below {
           h2 {
