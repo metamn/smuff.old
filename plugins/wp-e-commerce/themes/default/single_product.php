@@ -31,6 +31,15 @@
 		
 					<div class="producttext">						  
 					    <form class='product_form' enctype="multipart/form-data" action="<?php echo curPageURL(); ?>" method="post" name="1" id="product_<?php echo wpsc_the_product_id(); ?>">
+					    
+					      <?php 					        
+					        $product_data['sku'] = get_product_meta($product_id, 'sku', true);
+					        $delivery = product_delivery_time($product_data['sku']);
+					      ?>
+					    
+					      <span class='delivery'>
+		              Livrare in <?php  echo $delivery ?>
+		            </span>
 					      
 					      <?php /** the variation group HTML and loop */?>
 					      <div class="wpsc_variation_forms">
@@ -72,13 +81,17 @@
 								      } else {
 								        $klass = '';
 								      } ?>
-								      <span class="price normal-price <?php echo $klass ?>">
-								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
-								      </span>  
 								      
 								      <?php if(wpsc_product_on_special()) : ?>
 								        <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
 								      <?php endif; ?>
+								      
+								      
+								      <span class="price normal-price <?php echo $klass ?>">
+								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
+								      </span>  
+								      
+								      
 								      						
 							      <?php endif; ?>
 						    </span>
@@ -109,10 +122,7 @@
 					      </td></tr>
 					      -->
 					      
-					      <?php 					        
-					        $product_data['sku'] = get_product_meta($product_id, 'sku', true);
-					        $delivery = product_delivery_time($product_data['sku']);
-					      ?>
+					      
 					      
 					      
 					      
@@ -138,10 +148,6 @@
                         <INPUT TYPE="BUTTON" class='checkout-button' VALUE="Cos cumparaturi" ONCLICK='gotoexternallink("<?php echo bloginfo(home) ?>/cos-cumparaturi")'>
                       </FORM>							        
 							      </span> 
-							      
-							       <span class='delivery'>
-					              Livrare in <?php  echo $delivery ?>
-					            </span>
 					            
 					            
 							      <span class='animation'>

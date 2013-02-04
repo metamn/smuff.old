@@ -5,7 +5,7 @@ body.single {
 			
 			#left-column {
 				@include col(47.5%, 0, 5%);
-				margin-top: 2.5em;
+				margin-top: $pad;
 				
 				#large-image {
 				  img {
@@ -80,35 +80,40 @@ body.single {
 			  @include col(47.5%, 0, 0);
 			  
 			  #add-to-cart {
-			    background: $background url(stripe.png);
-			    padding: $pad;
 			  
 			    .imagecol {
 			      display: none;
 			    }
 			    
+			    .delivery {
+			      @include block;
+			      color: $gray;
+			    }
+			    
 			    .wpsc_variation_forms {
 			      @include block;
-			      margin-bottom: $pad/2;
+			      margin: $pad 0 0;
 			      
 			      .select {
-			        width: 20em;
-			        
 			        select {
-			          option {
-			            width: 19.9em;
-			          }
+			          border-top: 1px solid $gray;
+			          border-bottom: 1px solid $gray;
+			          padding: $pad/4;
+			          
+			          width: 92%;
 			        }
+			      }
+			      .select:after {
+			        padding: $pad/2 + $pad/4;
+			        margin: -$pad/2 $pad*2 0 -2.1em;
 			      }
 			      
 			    }
 			    
 			    .wpsc_product_price {
-			      
 			      .price {
-			        @include border-radius(0, 0);
-			        padding: $pad/2;
 			        margin-right: $pad;
+			        padding: $pad/2;
 			      }
 			      
 			      .oldprice {
@@ -119,13 +124,10 @@ body.single {
 			      }
 			      .oldprice.on-sale {
 			        border: 1px solid;
-			        float: left;
 			      }
 			    }
 			    
 			    .add-to-cart-button {
-			     
-			      
 			      input[type="submit"] {
 			        background: $green;
 			        color: $color;
@@ -143,17 +145,7 @@ body.single {
 			      visibility: hidden;
 			    }
 			    
-			    .delivery {
-			      margin: $pad/2 0;
-			      display: inline-block;
-			      
-			      font-size: 2em;
-			      color: $gray;
-			      font-style: italic;
-			      
-			      background: $background;
-			      padding: $pad/4;
-			    }
+			    
 			    
 			    #product-discontinued {
 			      h3 {

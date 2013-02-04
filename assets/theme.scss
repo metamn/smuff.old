@@ -43,19 +43,20 @@ a, a:active, a:visited, a:hover {
 @mixin price {
   border: $light-gray;
   padding: $pad/4;
-  @include border-radius(10%, 10%);
 }
 
-.price, .normal-price {
+.price, .normal-price, .old-price, .oldprice {
   border: $light-gray;
   padding: $pad/4;
-  @include border-radius(10%, 10%);
 }
 .price {
   background: $sale;
+  color: $background;
 }
 .old-price, .oldprice {
   text-decoration: line-through;
+  background: $background;
+  color: $light-gray;
 }
 .normal-price {
   background: $blue;
@@ -166,9 +167,6 @@ a, a:active, a:visited, a:hover {
   }
 
 
-  #price, #category {
-    font-size: small;
-  }
 
   #price {
     @include col(50%, $pad, 5%);

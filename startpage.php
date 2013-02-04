@@ -91,6 +91,8 @@
   $product_list = $promo_posts;
   $product_list_title = 'Reduceri';
   $product_list_id = 'sales';
+  
+  $show_category = false;
   include 'product-list.php';
   
 ?>
