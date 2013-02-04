@@ -6,6 +6,7 @@ body.single {
 			#left-column {
 				@include col(47.5%, 0, 5%);
 				margin-top: $pad;
+				margin-bottom: $pad*2;
 				
 				#large-image {
 				  img {
@@ -192,18 +193,24 @@ body.single {
 		section {
 			@include block;
 			
+			h2 {
+			  border-bottom: 1px solid;
+			  padding-bottom: $pad/4;
+			  margin-bottom: $pad;
+			}
+			
 			#product {
-        @include col(30%, 0, 5%);
+        @include col(23%, 0, 2.5%);
         margin-bottom: $margin;
         
         @include product-thumb;
-        height: 36em;
-        
-        #price, #category {
-          font-size: 1em;
+       
+        .normal-price {
+          background: $background;
         }
+        
       }
-      #product.c3, #product.c6, #product.c9, #product.c12, #product.c15, #product.c18, #product.c21, #product.c24, #product.c27, #product.c30 {
+      #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
         margin-right: 0;
       }
     }

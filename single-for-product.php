@@ -49,6 +49,7 @@
 			  <?php comments_template('', true); ?>
 		  </div>
 		
+		  <!--
 		  <div id="facebook-like"> 
 			  <div id="fb-root"></div>
 			  <script>(function(d, s, id) {
@@ -60,6 +61,7 @@
 			  }(document, 'script', 'facebook-jssdk'));</script>
 			  <div class="fb-like" data-send="true" data-width="700" data-show-faces="true"></div>
 		  </div>
+		  -->
 	  </div>
 	
 	</div>		      
@@ -78,30 +80,10 @@
 	  </div>
 	 
 	</div>    
-  
-	
-	<div id="shopping">
-		<?php include 'single-for-product__shopping.php' ?>
-				
-		<?php include 'single-for-product__shopping-incentives.php' ?>
-		
-		<div id="contact-info">
-		  <center>
-			  <h2>Aveti intrebari?</h2>
-			  <p>
-				  Suport online <br/> Luni-Vineri intre 9.00-17.00    
-			  </p>
-			  <h2>0740-456.127</h2>
-		  </center>
-	  </div>	     
-	</div>
 </article>
 			
 
 
-<?php include 'c_subscribe-to-newsletter.php' ?>
-			
-  
 
 <section id="from-category">    
 	<?php 
@@ -112,12 +94,13 @@
 	<div id="products">
 	<?php 
 		$specials = query_posts2('posts_per_page=6&cat='.$cat);
+		$show_excerpt = false;
 		if ($specials) {
 			if ($specials->have_posts()) {
 				$counter = 1;
 				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
 					if (in_category(10)) {
-						$medium = true;
+						
 						include "product-thumb.php";
 					 
 						$counter += 1;
@@ -152,17 +135,6 @@
 </section>
 
 
-<section id="search">
-	<div id="title" class="desktop">
-		<h3>Cautare cadouri</h3>
-	</div>
-	<h2 class="mobile">Cautare cadouri</h2>
-	<div id="body" class="pane">
-		<?php include 'search-enhanced.php' ?>
-	</div>
-</section>  
-  
-  
 		
 <section id="promo">    
 	<h2>Promotii si oferte</h2>
