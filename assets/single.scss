@@ -10,7 +10,7 @@ body.single {
 				
 				#large-image {
 				  img {
-				    @include image-bordered(2%);
+				    @include image-bordered(0%);
 				  }
 				}
 				
@@ -194,7 +194,7 @@ body.single {
 			@include block;
 			
 			h2 {
-			  border-bottom: 1px solid;
+			  border-bottom: 1px solid $very-light-gray;
 			  padding-bottom: $pad/4;
 			  margin-bottom: $pad;
 			}

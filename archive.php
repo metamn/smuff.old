@@ -124,6 +124,7 @@
 	  
 	  <header>
 		  <h4>
+		    <span>
 			  <?php 
 				  $found_posts = $wp_query->found_posts;
 				  if ($found_posts == 1) {
@@ -133,6 +134,7 @@
 				  }
 			  ?>
 			  <?php echo $found_posts . $cadouri . $cat_name; ?>
+			  </span>
 		  </h4>
 		</header>
 	

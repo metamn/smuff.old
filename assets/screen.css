@@ -1345,46 +1345,46 @@ body.archive section hgroup header {
   width: 100%;
   float: left;
 }
-/* line 20, archive.scss */
-body.archive section hgroup header h2 {
-  font-style: normal;
-  color: #4d8fce;
+/* line 21, archive.scss */
+body.archive section hgroup header h4 span {
+  background: white;
+  padding: 0.20833em;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 26, archive.scss */
+  /* line 28, archive.scss */
   body.archive section hgroup header h2 {
     font-size: 1.25em;
     padding: 0.625em 0;
   }
 }
-/* line 33, archive.scss */
+/* line 35, archive.scss */
 body.archive section hgroup nav {
   width: 100%;
   float: left;
 }
-/* line 36, archive.scss */
+/* line 38, archive.scss */
 body.archive section hgroup nav h3 {
   display: none;
 }
-/* line 40, archive.scss */
+/* line 42, archive.scss */
 body.archive section hgroup nav div {
   max-width: 38.25%;
   float: left;
 }
-/* line 44, archive.scss */
+/* line 46, archive.scss */
 body.archive section hgroup nav div label:after {
   background: #4d8fce !important;
 }
-/* line 47, archive.scss */
+/* line 49, archive.scss */
 body.archive section hgroup nav div label:after select {
   color: #363636 !important;
 }
-/* line 52, archive.scss */
+/* line 54, archive.scss */
 body.archive section hgroup nav div input[type="submit"] {
   background: #4d8fce;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 59, archive.scss */
+  /* line 61, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1393,7 +1393,7 @@ body.archive section hgroup nav div input[type="submit"] {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 70, archive.scss */
+  /* line 72, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1406,60 +1406,61 @@ body.archive section hgroup nav div input[type="submit"] {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 74, archive.scss */
+  /* line 76, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 80, archive.scss */
+  /* line 82, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 85, archive.scss */
+  /* line 87, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 92, archive.scss */
+  /* line 94, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 99, archive.scss */
+/* line 101, archive.scss */
 body.archive section #pagination {
   float: right;
   margin-top: 0.625em;
+  margin-right: 1.25em;
 }
-/* line 103, archive.scss */
+/* line 106, archive.scss */
 body.archive section #pagination .wp-paginate {
   margin: 0;
   font-size: small;
 }
-/* line 107, archive.scss */
+/* line 110, archive.scss */
 body.archive section #pagination .wp-paginate a {
-  background: transparent;
+  background: white;
 }
-/* line 111, archive.scss */
+/* line 114, archive.scss */
 body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
   padding: 0.3125em 0.625em;
 }
-/* line 115, archive.scss */
+/* line 118, archive.scss */
 body.archive section #pagination .wp-paginate .current {
   background: #4d8fce;
   border-color: #4d8fce;
 }
-/* line 120, archive.scss */
+/* line 123, archive.scss */
 body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
   border: none;
 }
-/* line 127, archive.scss */
+/* line 130, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 130, archive.scss */
+/* line 133, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1516,51 +1517,51 @@ body.archive section #products #product #category a {
   text-align: center;
   display: block;
 }
-/* line 137, archive.scss */
+/* line 140, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 142, archive.scss */
+/* line 145, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 148, archive.scss */
+  /* line 151, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 159, archive.scss */
+  /* line 162, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 165, archive.scss */
+  /* line 168, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 168, archive.scss */
+  /* line 171, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 176, archive.scss */
+/* line 179, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 180, archive.scss */
+/* line 183, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 187, archive.scss */
+  /* line 190, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
@@ -1582,8 +1583,8 @@ body.single .container article #left-column {
 }
 /* line 12, single.scss */
 body.single .container article #left-column #large-image img {
-  width: 96%;
-  padding: 2%;
+  width: 100%;
+  padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
@@ -1879,7 +1880,7 @@ body.single .container section {
 }
 /* line 196, single.scss */
 body.single .container section h2 {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
