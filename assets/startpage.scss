@@ -122,11 +122,12 @@ body.home {
 	  }
 	  
 	  #giftshopper {
-	    margin: $pad*2 0;
+	    margin: 0 0 $pad;
 	    
 	    #title {
 	      font-family: 'Old Standard TT', serif;
 	      font-style: italic;
+	      margin: $pad/2 0;
 	    }
 	    
 	    #body {
@@ -134,55 +135,44 @@ body.home {
 	        @include list-inline;
 	        
 	        li {
-	          @include col(10%, 0, 2.5%);
+	          @include col(23%, 0, 2.5%);
 	          background: $very-light-gray;
-	          height: 10em;
+	          
 	          cursor: pointer;
 	          overflow: hidden;
+	          
+	          @include border-radius(10em, 10em);
+	          height: 18em;
 	          
 	          #inner, h5 {
 	            padding: $pad/2;
 	          }
 	        }
-	        li.active {
-	          @include col(48.5%, 0, 2.5%);
-	          cursor: default;
-	          background-position: 0 0 !important;
-	          height: 16em;
-	        }
-	        li#tagcloud.active {
-	          height: 10em;
-	        }
-	        li#for-office.active {
-	          margin-right: 0 !important;
-	        }
 	        
 	        #tagcloud {
-	          a {
-	            margin-right: $pad;
-	          }
+	          display: none;
+	        }
+	        
+	        p {
+	          margin-top: 16em;
+	          text-align: center;
+	          font-family: 'Old Standard TT', serif;
 	        }
 	        
 	        #for-him {
 	          background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
-	          color: white;
 	        }
 	        #for-her {
 	          background: $very-light-gray url(giftshopper-woman.jpg) no-repeat center 0;
-	          h5 {
-	            margin: $pad/2;
-	            padding: 0;
-	            background: white;
-	            opacity: .7;
-	          }
 	        }
 	        #for-kids {
-	          background: $very-light-gray url(giftshopper-kids.jpg) no-repeat;
-	          color: white;
+	          background: $very-light-gray url(giftshopper-kids.jpg) no-repeat center 0;
 	        }
 	        #for-office {
-	          background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat;
+	          background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat center 1em;
 	        }
+	        
+	        
 	        
 	        
 	        @include mobile-only {

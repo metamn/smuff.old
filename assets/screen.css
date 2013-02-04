@@ -1045,14 +1045,15 @@ body.home .container #sales #body #products #product #title {
 }
 /* line 124, startpage.scss */
 body.home .container #giftshopper {
-  margin: 2.5em 0;
+  margin: 0 0 1.25em;
 }
 /* line 127, startpage.scss */
 body.home .container #giftshopper #title {
   font-family: 'Old Standard TT', serif;
   font-style: italic;
+  margin: 0.625em 0;
 }
-/* line 133, startpage.scss */
+/* line 134, startpage.scss */
 body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
@@ -1069,68 +1070,51 @@ body.home .container #giftshopper #body ul li {
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
-/* line 136, startpage.scss */
+/* line 137, startpage.scss */
 body.home .container #giftshopper #body ul li {
-  width: 10%;
+  width: 23%;
   margin: 0 2.5% 0 0;
   float: left;
   background: #f1f1f1;
-  height: 10em;
   cursor: pointer;
   overflow: hidden;
+  -webkit-border-radius: 10em 10em;
+  -moz-border-radius: 10em / 10em;
+  border-radius: 10em / 10em;
+  height: 18em;
 }
-/* line 143, startpage.scss */
+/* line 147, startpage.scss */
 body.home .container #giftshopper #body ul li #inner, body.home .container #giftshopper #body ul li h5 {
   padding: 0.625em;
 }
-/* line 147, startpage.scss */
-body.home .container #giftshopper #body ul li.active {
-  width: 48.5%;
-  margin: 0 2.5% 0 0;
-  float: left;
-  cursor: default;
-  background-position: 0 0 !important;
-  height: 16em;
-}
-/* line 153, startpage.scss */
-body.home .container #giftshopper #body ul li#tagcloud.active {
-  height: 10em;
+/* line 152, startpage.scss */
+body.home .container #giftshopper #body ul #tagcloud {
+  display: none;
 }
 /* line 156, startpage.scss */
-body.home .container #giftshopper #body ul li#for-office.active {
-  margin-right: 0 !important;
+body.home .container #giftshopper #body ul p {
+  margin-top: 16em;
+  text-align: center;
+  font-family: 'Old Standard TT', serif;
 }
-/* line 161, startpage.scss */
-body.home .container #giftshopper #body ul #tagcloud a {
-  margin-right: 1.25em;
-}
-/* line 166, startpage.scss */
+/* line 162, startpage.scss */
 body.home .container #giftshopper #body ul #for-him {
   background: #f1f1f1 url(giftshopper-man.jpg) no-repeat center 0;
-  color: white;
 }
-/* line 170, startpage.scss */
+/* line 165, startpage.scss */
 body.home .container #giftshopper #body ul #for-her {
   background: #f1f1f1 url(giftshopper-woman.jpg) no-repeat center 0;
 }
-/* line 172, startpage.scss */
-body.home .container #giftshopper #body ul #for-her h5 {
-  margin: 0.625em;
-  padding: 0;
-  background: white;
-  opacity: .7;
-}
-/* line 179, startpage.scss */
+/* line 168, startpage.scss */
 body.home .container #giftshopper #body ul #for-kids {
-  background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat;
-  color: white;
+  background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat center 0;
 }
-/* line 183, startpage.scss */
+/* line 171, startpage.scss */
 body.home .container #giftshopper #body ul #for-office {
-  background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat;
+  background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat center 1em;
 }
 @media (max-width: 480px) {
-  /* line 189, startpage.scss */
+  /* line 179, startpage.scss */
   body.home .container #giftshopper #body ul li, body.home .container #giftshopper #body ul li.active {
     width: 100%;
     float: left;
@@ -1139,20 +1123,20 @@ body.home .container #giftshopper #body ul #for-office {
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 197, startpage.scss */
+  /* line 187, startpage.scss */
   body.home .container #giftshopper #body ul li {
     width: 22.5%;
     margin: 0 2.5% 0 0;
     float: left;
     margin-bottom: 1%;
   }
-  /* line 201, startpage.scss */
+  /* line 191, startpage.scss */
   body.home .container #giftshopper #body ul li.active {
     width: 100%;
     float: left;
   }
 }
-/* line 210, startpage.scss */
+/* line 200, startpage.scss */
 body.home .container #subscribe ul {
   display: block;
   margin: 0;
@@ -1169,14 +1153,14 @@ body.home .container #subscribe ul li {
 body.home .container #subscribe ul li.last {
   margin-right: 0;
 }
-/* line 213, startpage.scss */
+/* line 203, startpage.scss */
 body.home .container #subscribe ul li {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
 @media (max-width: 480px) {
-  /* line 213, startpage.scss */
+  /* line 203, startpage.scss */
   body.home .container #subscribe ul li {
     width: 100%;
     float: left;
@@ -1185,7 +1169,7 @@ body.home .container #subscribe ul li {
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 213, startpage.scss */
+  /* line 203, startpage.scss */
   body.home .container #subscribe ul li {
     width: 47.5%;
     margin: 0 2.5% 0 0;
@@ -1193,25 +1177,25 @@ body.home .container #subscribe ul li {
     margin-bottom: 5%;
   }
 }
-/* line 227, startpage.scss */
+/* line 217, startpage.scss */
 body.home .container #subscribe ul li #inner {
   border: 1px dotted;
   padding: 1.25em;
   text-align: center;
   height: 290px;
 }
-/* line 236, startpage.scss */
+/* line 226, startpage.scss */
 body.home .container #subscribe ul #newsletter input[type="email"] {
   width: 100%;
   margin-bottom: 0.3125em;
   margin-top: 2.5em;
   text-align: center;
 }
-/* line 245, startpage.scss */
+/* line 235, startpage.scss */
 body.home .container #subscribe ul #comments #text {
   font-size: large;
 }
-/* line 249, startpage.scss */
+/* line 239, startpage.scss */
 body.home .container #subscribe ul #comments #author {
   margin-top: 1.25em;
   margin-bottom: 2.5em;

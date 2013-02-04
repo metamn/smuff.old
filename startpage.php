@@ -109,16 +109,16 @@
           </div>
         </li>
         <li id="for-him">
-          <h5>Pentru El</h5>
+          <p>Pentru El</p>
         </li>
         <li id="for-her">
-          <h5>Pentru Ea</h5>
+          <p>Pentru Ea</p>
         </li>
         <li id="for-kids">
-          <h5>Pentru Copii</h5>
+          <p>Pentru Copii</p>
         </li>
         <li id="for-office" class="last">
-          <h5>Casa si birou</h5>
+          <p>Casa si birou</p>
         </li>
       </ul>
     </div>
@@ -168,11 +168,11 @@
             }(document, 'script', 'facebook-jssdk'));</script>
             
             <div class="desktop">
-              <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+              <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
             </div>
             
             <div class="mobile">
-              <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="200" data-show-faces="true" data-stream="false" data-header="true"></div>
+              <div class="fb-like-box" data-href="http://www.facebook.com/smuffgadget" data-width="292" data-show-faces="true" data-stream="false" data-header="false"></div>
             </div>
             
           </div>
