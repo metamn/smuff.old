@@ -31,7 +31,7 @@ body.single {
 				  
 				  #more {
 				    text-align: center;
-				    color: $light-gray;
+				    color: $gray;
 				    font-style: italic;
 				    font-family: 'Old Standard TT', serif;
 				    
@@ -72,13 +72,16 @@ body.single {
 				    
 				    cursor: pointer;
 				    
+				    span {
+				      color: $light-gray;
+				    }
+				    
 				    span:before {
-				      @include arrow-to-reveal-content;
+				      @include close-icon;
 				      
 				      float: left;
 				      margin-left: 0;
 				      margin-right: $pad/4;
-				      @include rotate(180deg, 1);
 				    }
 				  }
 				}

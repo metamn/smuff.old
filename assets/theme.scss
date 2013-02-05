@@ -190,19 +190,14 @@ a, a:active, a:visited, a:hover {
 	@include rotate(90deg, .75);
 }
 
-
-@mixin product-thumb-on-banner {
-  background: none;
-  height: auto;
-  
-  #image {
-    @include box-shadow;
-  }
-  
-  #title, #excerpt, #price, #category {
-    display: none;
-  }
+@mixin close-icon {
+  content: '\2612';
+  margin-left: $pad/2;
+  font-size: large;
 }
+
+
+
 
 @mixin product-thumb {
   background: $background url(stripe.png);

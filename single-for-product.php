@@ -42,7 +42,7 @@
 			} ?> 
 			
 			<div id="close">
-	      <span>Inapoi</span>
+	      <span>inapoi</span>
 	    </div>
 		</div>
 	  

@@ -5,7 +5,24 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
-  // Image navigation on product page
+  // Click on thumbs on product page
+  
+  $(".single #thumbs #thumb img").live('click', function () {
+    
+    // Show the spinner
+    //$('.single #large-image img').attr('src', themeurl + '/img/ajax-loader-invisible.gif');  
+    
+    var image = $(this).attr('data-image');
+    var img = new Image();
+    img.onload = function() {
+      $('.single #large-image img').attr('src', image);
+    };
+    img.src = image;
+  })
+  
+  
+  
+  // Show all images on product page
   
   $('.single #large-image').click(function() {
     $('.single #left-column').animate(
@@ -25,7 +42,7 @@ $(document).ready(function() {
   });
   
   
-  // Image navigation on product page -- revert back
+  // Show all images on product page -- revert back
   
   $('.single #thumbs #close').click(function() {
     $('.single #left-column').animate(

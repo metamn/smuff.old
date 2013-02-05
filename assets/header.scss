@@ -189,9 +189,7 @@ body {
 			    }
 			    
 			    span:after {
-			      content: '\2612';
-			      margin-left: $pad/2;
-			      font-size: large;
+			      @include close-icon;
 			    }
 			  }
 			}
