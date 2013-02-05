@@ -39,6 +39,10 @@
 			      $counter += 1;
 			      if ($counter == 7) { /*break;*/ }
 			} ?> 
+			
+			<div id="close">
+	      <span>Inapoi</span>
+	    </div>
 		</div>
 	  
 	  <div id="description"> 
@@ -56,7 +60,9 @@
 		    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	    </h1>
 	
-	    <?php include 'single-for-product__shopping.php' ?>
+	    <div id="shopping-cart">
+	      <?php include 'single-for-product__shopping.php' ?>
+	    </div>
 	    
 	    <div id="share">
 	      <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/share.png">
@@ -70,8 +76,9 @@
 		  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	  </h1>
 	
-	  <?php include 'single-for-product__shopping.php' ?>
-	  
+	  <div id="shopping-cart">
+	    <?php include 'single-for-product__shopping.php' ?>
+	  </div>
 	  
 	  <div id="share">
 	    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/share.png">

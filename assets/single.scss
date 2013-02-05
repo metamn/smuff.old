@@ -50,6 +50,20 @@ body.single {
 				  #thumb.c3, #thumb.c6, #thumb.c9, #thumb.c12, #thumb.c15, #thumb.c18, #thumb.c21 {
 				    margin-right: 0;
 				  }
+				  
+				  #close {
+				    @include block;
+				    cursor: pointer;
+				    
+				    span:before {
+				      @include arrow-to-reveal-content;
+				      
+				      float: left;
+				      margin-left: 0;
+				      margin-right: $pad/4;
+				      @include rotate(180deg, 1);
+				    }
+				  }
 				}
 				
 				#description {
@@ -104,28 +118,13 @@ body.single {
 			    @include col(47.5%, 0, 0);
 			    display: none;
 			    
-			    @include add-to-cart;
-			    
-			    #add-to-cart {
-			      background: url(stripe.png);
-			      padding: $pad/2;
-			      
-			      .delivery {
-			        margin-top: $pad;
-			        
-			        span {
-			          background: $background;
-			          padding: $pad/8;
-			        }
-			      }
-			      
-			      .oldprice.on-sale {
-			        background: $background;
-			      }
+			    #shopping-cart {
+			      @include add-to-cart;
 			    }
+			   
 			    
 			    #share {
-			      margin-top: 10em;
+			      margin-top: $pad*2;
 			    }
 			  }	
 			}
@@ -133,8 +132,10 @@ body.single {
 			
 			#right-column { 
 			  @include col(47.5%, 0, 0);
-			  @include add-to-cart;
 			  
+			  #shopping-cart {
+			    @include add-to-cart;
+			  }
 			  
 			  #share {
 			    margin-top: $pad*2;

@@ -69,7 +69,10 @@ a, a:active, a:visited, a:hover {
 */
 
 @mixin add-to-cart {
- 
+
+  background: url(stripe.png);
+  padding: $pad/2;
+			      
 			  
   .imagecol {
     display: none;
@@ -78,6 +81,13 @@ a, a:active, a:visited, a:hover {
   .delivery {
     @include block;
     color: $gray;
+    
+    margin-top: $pad;
+			        
+    span {
+      background: $background;
+      padding: $pad/8;
+    }
   }
   
   .wpsc_variation_forms {
@@ -107,7 +117,7 @@ a, a:active, a:visited, a:hover {
     }
     
     .oldprice {
-      background: transparent;
+      background: $background;
     }
     .normal-price.on-sale {
       background: $sale;
@@ -140,6 +150,9 @@ a, a:active, a:visited, a:hover {
   #product-discontinued {
     h3 {
       padding-top: 0;
+    }
+    p {
+      margin-bottom: $pad;
     }
   }
 			

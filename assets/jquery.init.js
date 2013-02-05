@@ -12,7 +12,7 @@ $(document).ready(function() {
       {
         width: '100%'
       }, 
-      1500);
+      1000);
     
     $('.single #left-column #large-image').addClass('large');
     $('.single #left-column #thumbs').show();
@@ -21,6 +21,25 @@ $(document).ready(function() {
     $('.single #left-column #shopping-for-large-image').show();
     $('.single #right-column').hide();
   });
+  
+  
+  // Image navigation on product page -- revert back
+  
+  $('.single #thumbs #close').click(function() {
+    $('.single #left-column').animate(
+      {
+        width: '47.5%'
+      }, 
+      1000);
+    
+    $('.single #left-column #large-image').removeClass('large');
+    $('.single #left-column #thumbs').hide();
+    
+    $('.single #left-column #description').removeClass('large');
+    $('.single #left-column #shopping-for-large-image').hide();
+    $('.single #right-column').show();
+  });
+  
   
   // Accordion on product page
   
