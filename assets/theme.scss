@@ -139,7 +139,7 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-thumb {
   background: $background url(stripe.png);
-  padding-bottom: $pad;
+  padding-bottom: $pad*2;
   
   img {
     @include image-bordered(0%);

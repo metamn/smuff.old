@@ -7,9 +7,6 @@
 		<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> <?php _e( 'Blog Posts Atom Feed', 'buddypress' ) ?>" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
-	
-		
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
 		<title>		  		  
@@ -134,19 +131,70 @@
 							
 							<li class="cart"><a href="">Cosul meu (0)</a></li>
               <li class="cart"><a href="">Contul meu</a></li>
-              <li class="cart"><a href="">Informatii</a></li>
+              <li id="info" class="cart">Informatii</li>
 							
 					</ul>
 			  </nav>	
 			  
-			 
-			  
-			  <aside id="search">
-				  <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/"> 
-            <input type="text" name="s" id="s" placeholder="Peste 400 de cadouri pe stoc"/>
-            <input class="submit" type="submit" id="searchsubmit" value="Cautare" />
-          </form>
-			  </aside>
+			  <nav id="menu-info">
+			    
+			    <div id="contact">
+			      <h3>Contacteaza-ne</h3>
+			      <ul>
+			        <li>0740-456.127</li>
+			        <li>shop @ smuff.ro</li>
+			      </ul>
+			    </div>
+			    
+			    <div id="shopping-info">
+			      <h3>Cum cumpar?</h3>
+			      <ul>
+			        <li>
+			          <h4>Preturi accesibile</h4>
+		            <p>
+			            La Smuff toate preturile sunt corecte.  
+		            </p>
+		          </li>
+		          <li>
+		            <h4>Shopping rapid</h4>
+		            <p>
+			            Fara procedura de inregistrare, numai cu un singur click.            
+		            </p>
+		          </li>
+		          <li>
+		            <h4>Plata la livrare</h4>
+		            <p>
+			            Plata ramburs cand aveti deja produsul in mana.
+		            </p>
+		          </li>
+		          <li>
+		            <h4>10 zile drept de retur</h4>
+		            <p>
+			            Fara intrebari din partea noastra.
+		            </p>
+		          </li>
+		          <li>
+		            <h4>Garantie minim 1 an</h4>
+		            <p>
+			            Service Express sau schimb cu un produs NOU.
+		            </p>
+		          </li>
+			      </ul>
+			    </div>
+			    
+			    
+			    <div id="pages">
+			      <h3>Alte informatii</h3>
+			      <ul>
+              <li><a href="">Despre noi</a></li>
+              <li><a href="">Termeni si conditii</a></li>
+            </ul>
+			    </div>
+			    
+			    <div id="close">
+			      <span></span>
+			    </div>
+			  </nav>
 			  
 			  <nav id="menu-extended">
 			    <div id="categories">

@@ -87,16 +87,16 @@ body {
           @include list-inline;
           padding: 0 $pad/2;
           
-          #all-products {
+          #all-products, #info {
             cursor: pointer;
           }
-          #all-products:after {
+          #all-products:after, #info:after {
             @include arrow-to-reveal-content;
           }
           #all-products.active {
             color: $sale;
           }
-          #all-products.active:after {
+          #all-products.active:after, #info.active:after {
             @include rotate(270deg, .7);
           }
           
@@ -130,7 +130,7 @@ body {
 			}	
 			
 			
-			#menu-extended {
+			#menu-extended, #menu-info {
 			  @include block;
 			  @include hidden;
 			  
@@ -193,6 +193,29 @@ body {
 			      margin-left: $pad/2;
 			      font-size: large;
 			    }
+			  }
+			}
+			
+			#menu-info {
+			  #contact {
+			    margin-left: 23%;
+			  }
+			  
+			  #shopping-info {
+			    ul {
+			      li {
+			        margin-bottom: $pad/4 + $pad;
+			        
+			        h4 {
+			          padding: 0 0 $pad/2;
+			        }
+			        
+			      }
+			    }
+			  }
+			  
+			  #close {
+			    margin-top: -6.5em;
 			  }
 			}
 			

@@ -41,6 +41,19 @@ $(document).ready(function() {
   });
   
   
+  // Toggle extended info menu in header
+  
+  $('#menu #info').click(function() {
+    $('#menu-info').slideToggle('slow');
+    $(this).toggleClass('active');
+  });
+  
+  $('#menu-info #close span').click(function() {
+    $('#menu-info').slideUp('slow');
+    $('#menu #info').removeClass('active');
+  });
+  
+  
   
   // Giftshopper
   
