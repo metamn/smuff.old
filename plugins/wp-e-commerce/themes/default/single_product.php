@@ -38,7 +38,7 @@
 					      ?>
 					    
 					      <span class='delivery'>
-		              Livrare in <?php  echo $delivery ?>
+		              <span>Livrare in <?php  echo $delivery ?></span>
 		            </span>
 					      
 					      <?php /** the variation group HTML and loop */?>

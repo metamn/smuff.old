@@ -8,8 +8,7 @@ body.single {
 	      }
 	      #info:after {
 	        color: $green;
-	        font-style: italic;
-	        font-weight: bold;
+	        font-style: normal;
 	      }
 	    }
 	  }
@@ -23,18 +22,24 @@ body.single {
 				margin-bottom: $pad*2;
 				
 				#large-image {
+				  cursor: pointer;
+				  
 				  img {
 				    @include image-bordered(0%);
 				  }
 				}
+				#large-image.large {
+				  @include col(74%, 0, 2.5%);
+				  float: left;
+				}
 				
 				#thumbs { 
-				 display: none;
+				  @include col(23%, 0, 0);
+				  display: none;
 			    
 				  #thumb {
-				    width: 3.125em; /* 50px */
-				    margin: 0 2% $margin 0;
-				    float: left;
+				   @include col(30%, 0, 5%);
+				   margin-bottom: $margin;
 				    
 				    cursor: pointer;
 				  
@@ -42,7 +47,9 @@ body.single {
 				      @include image-bordered(2%);
 				    }  
 				  }
-				  
+				  #thumb.c3, #thumb.c6, #thumb.c9, #thumb.c12, #thumb.c15, #thumb.c18, #thumb.c21 {
+				    margin-right: 0;
+				  }
 				}
 				
 				#description {
@@ -87,87 +94,43 @@ body.single {
 			      margin: $pad 0;
 			    }
 			  }
-				
+			  #description.large {
+			    @include col(47.5%, 0, 5%);
+			    margin-top: $pad/2;
+			  }
+			  
+			  
+			  #shopping-for-large-image {
+			    @include col(47.5%, 0, 0);
+			    display: none;
+			    
+			    @include add-to-cart;
+			    
+			    #add-to-cart {
+			      background: url(stripe.png);
+			      padding: $pad/2;
+			      
+			      .delivery {
+			        margin-top: $pad;
+			        
+			        span {
+			          background: $background;
+			          padding: $pad/8;
+			        }
+			      }
+			    }
+			    
+			    #share {
+			      margin-top: 10em;
+			    }
+			  }	
 			}
 			
 			
 			#right-column { 
 			  @include col(47.5%, 0, 0);
+			  @include add-to-cart;
 			  
-			  #add-to-cart {
-			  
-			    .imagecol {
-			      display: none;
-			    }
-			    
-			    .delivery {
-			      @include block;
-			      color: $gray;
-			    }
-			    
-			    .wpsc_variation_forms {
-			      @include block;
-			      margin: $pad 0 0;
-			      
-			      .select {
-			        select {
-			          border-top: 1px solid $gray;
-			          border-bottom: 1px solid $gray;
-			          padding: $pad/4;
-			          
-			          width: 92%;
-			        }
-			      }
-			      .select:after {
-			        padding: $pad/2 + $pad/4;
-			        margin: -$pad/2 $pad*2 0 -2.1em;
-			      }
-			      
-			    }
-			    
-			    .wpsc_product_price {
-			      .price {
-			        margin-right: $pad;
-			        padding: $pad/2;
-			      }
-			      
-			      .oldprice {
-			        background: transparent;
-			      }
-			      .normal-price.on-sale {
-			        background: $sale;
-			      }
-			      .oldprice.on-sale {
-			        border: 1px solid;
-			      }
-			    }
-			    
-			    .add-to-cart-button {
-			      input[type="submit"] {
-			        background: $green;
-			        color: $color;
-			        
-			        font-family: 'Coda', sans-serif;
-			        font-weight: 1em;
-			      }
-			    }
-			    
-			    .checkout {
-			      display: none;
-			    }
-			    
-			    .wpsc_loading_animation {
-			      visibility: hidden;
-			    }
-			    
-			    
-			    
-			    #product-discontinued {
-			      h3 {
-			        padding-top: 0;
-			      }
-			    }
-			  }
 			  
 			  #share {
 			    margin-top: $pad*2;
@@ -177,32 +140,9 @@ body.single {
 			}
 			
 			
-			#shopping {
-			  @include block;
-			  margin: $pad 0;
-			  
-			  #add-to-cart, #shopping-incentives, #contact-info {
-			    @include col(30%, 0, 5%);
-			  }
-			  
-			  #add-to-cart {
-			     @include add-to-cart;
-			  }
-			  
-			  #contact-info {
-			    margin-right: 0;
-			  }
-			 
-			}
 		}
 		
-		#subscribe-to-newsletter {
-		  @include block;
-		  margin: $pad 0;
-		  
-		  
-		}
-	
+		
 	
 		section {
 			@include block;

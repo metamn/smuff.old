@@ -5,6 +5,22 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  // Image navigation on product page
+  
+  $('.single #large-image').click(function() {
+    $('.single #left-column').animate(
+      {
+        width: '100%'
+      }, 
+      1500);
+    
+    $('.single #left-column #large-image').addClass('large');
+    $('.single #left-column #thumbs').show();
+    
+    $('.single #left-column #description').addClass('large');
+    $('.single #left-column #shopping-for-large-image').show();
+    $('.single #right-column').hide();
+  });
   
   // Accordion on product page
   
@@ -54,15 +70,6 @@ $(document).ready(function() {
   });
   
   
-  
-  // Giftshopper
-  
-  $('#giftshopper li').first().addClass('active');
-  
-  $('#giftshopper li').click(function() {
-    $('#giftshopper li').removeClass('active');
-    $(this).addClass('active');
-  });
   
   
   

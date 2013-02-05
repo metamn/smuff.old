@@ -48,26 +48,24 @@
 		  <div id="comments" class="pane normal">
 			  <?php comments_template('', true); ?>
 		  </div>
-		
-		  <!--
-		  <div id="facebook-like"> 
-			  <div id="fb-root"></div>
-			  <script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=348406981918786";
-				  fjs.parentNode.insertBefore(js, fjs);
-			  }(document, 'script', 'facebook-jssdk'));</script>
-			  <div class="fb-like" data-send="true" data-width="700" data-show-faces="true"></div>
-		  </div>
-		  -->
+	  </div>
+	  
+	  
+	  <div id="shopping-for-large-image">
+	    <h1>
+		    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+	    </h1>
+	
+	    <?php include 'single-for-product__shopping.php' ?>
+	    
+	    <div id="share">
+	      <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/share.png">
+	    </div>
 	  </div>
 	
 	</div>		      
 	
 	<div id="right-column">
-	
 	  <h1>
 		  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	  </h1>
@@ -78,7 +76,6 @@
 	  <div id="share">
 	    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/share.png">
 	  </div>
-	 
 	</div>    
 </article>
 			
