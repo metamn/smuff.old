@@ -118,6 +118,10 @@ body.single {
 			          padding: $pad/8;
 			        }
 			      }
+			      
+			      .oldprice.on-sale {
+			        background: $background;
+			      }
 			    }
 			    
 			    #share {

@@ -1813,11 +1813,15 @@ body.single .container article #left-column #shopping-for-large-image #add-to-ca
   background: white;
   padding: 0.15625em;
 }
-/* line 123, single.scss */
+/* line 122, single.scss */
+body.single .container article #left-column #shopping-for-large-image #add-to-cart .oldprice.on-sale {
+  background: white;
+}
+/* line 127, single.scss */
 body.single .container article #left-column #shopping-for-large-image #share {
   margin-top: 10em;
 }
-/* line 130, single.scss */
+/* line 134, single.scss */
 body.single .container article #right-column {
   width: 47.5%;
   margin: 0 0 0 0;
@@ -1887,22 +1891,22 @@ body.single .container article #right-column .wpsc_loading_animation {
 body.single .container article #right-column #product-discontinued h3 {
   padding-top: 0;
 }
-/* line 135, single.scss */
+/* line 139, single.scss */
 body.single .container article #right-column #share {
   margin-top: 2.5em;
 }
-/* line 147, single.scss */
+/* line 151, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 150, single.scss */
+/* line 154, single.scss */
 body.single .container section h2 {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
-/* line 156, single.scss */
+/* line 160, single.scss */
 body.single .container section #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1959,11 +1963,11 @@ body.single .container section #product #category a {
   text-align: center;
   display: block;
 }
-/* line 162, single.scss */
+/* line 166, single.scss */
 body.single .container section #product .normal-price {
   background: white;
 }
-/* line 167, single.scss */
+/* line 171, single.scss */
 body.single .container section #product.c4, body.single .container section #product.c8, body.single .container section #product.c12, body.single .container section #product.c16, body.single .container section #product.c20, body.single .container section #product.c24, body.single .container section #product.c28 {
   margin-right: 0;
 }
