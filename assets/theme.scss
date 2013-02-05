@@ -167,7 +167,6 @@ a, a:active, a:visited, a:hover {
   }
 
 
-
   #price {
     @include col(50%, $pad, 5%);
     margin-top: $pad;
@@ -180,7 +179,7 @@ a, a:active, a:visited, a:hover {
     float: right;
     font-size: small;
 
-    background: $gray;
+    background: $light-gray;
 
     a {
       padding: $pad/2;

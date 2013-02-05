@@ -522,17 +522,17 @@ body .container #header hgroup #logo {
   /* an extra space must be added */
   float: left;
 }
-/* line 204, theme.scss */
+/* line 203, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 210, theme.scss */
+/* line 209, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 214, theme.scss */
+/* line 213, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
@@ -894,14 +894,14 @@ body.home .container section #body #products #product #title h3 {
 body.home .container section #body #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 171, theme.scss */
+/* line 170, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 176, theme.scss */
+/* line 175, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -909,9 +909,9 @@ body.home .container section #body #products #product #category {
   margin-top: 0.625em;
   float: right;
   font-size: small;
-  background: #aaaaaa;
+  background: #cccccc;
 }
-/* line 185, theme.scss */
+/* line 184, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -1493,14 +1493,14 @@ body.archive section #products #product #title h3 {
 body.archive section #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 171, theme.scss */
+/* line 170, theme.scss */
 body.archive section #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 176, theme.scss */
+/* line 175, theme.scss */
 body.archive section #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1508,9 +1508,9 @@ body.archive section #products #product #category {
   margin-top: 0.625em;
   float: right;
   font-size: small;
-  background: #aaaaaa;
+  background: #cccccc;
 }
-/* line 185, theme.scss */
+/* line 184, theme.scss */
 body.archive section #products #product #category a {
   padding: 0.625em;
   color: white;
@@ -1917,14 +1917,14 @@ body.single .container section #product #title h3 {
 body.single .container section #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 171, theme.scss */
+/* line 170, theme.scss */
 body.single .container section #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 176, theme.scss */
+/* line 175, theme.scss */
 body.single .container section #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1932,9 +1932,9 @@ body.single .container section #product #category {
   margin-top: 0.625em;
   float: right;
   font-size: small;
-  background: #aaaaaa;
+  background: #cccccc;
 }
-/* line 185, theme.scss */
+/* line 184, theme.scss */
 body.single .container section #product #category a {
   padding: 0.625em;
   color: white;
