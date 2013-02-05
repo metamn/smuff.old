@@ -360,6 +360,16 @@ body {
 		    border-bottom: 1px solid;
 		    padding: $pad/2 0;
 		    margin-bottom: $pad/2;
+		    
+		    ul {
+		      #go-top {
+		        float: right;
+		      }
+		      #go-top:after {
+		        @include arrow-to-reveal-content;
+		        @include rotate(270deg, .7);
+		      }
+		    }
 		  }
 		  
 		  #company {

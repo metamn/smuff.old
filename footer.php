@@ -5,6 +5,7 @@
       <li><a href="">Contacteaza-ne</a></li>
       <li><a href="">Despre noi</a></li>
       <li><a href="">Termeni si conditii</a></li>
+      <li id="go-top"><a href="#header">Inapoi</a></li>
     </ul>
   </nav>
   
