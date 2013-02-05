@@ -23,6 +23,7 @@
 		  ?>
 		
 			<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
+			<span id="more">(Click pentru mai multe imagini)</span>
 	  </div>
 	  
 	  <div id="thumbs">

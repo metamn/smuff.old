@@ -21,11 +21,22 @@ body.single {
 				margin-top: $pad;
 				margin-bottom: $pad*2;
 				
+				
 				#large-image {
 				  cursor: pointer;
 				  
 				  img {
 				    @include image-bordered(0%);
+				  }
+				  
+				  #more {
+				    text-align: center;
+				    color: $light-gray;
+				    font-style: italic;
+				    font-family: 'Old Standard TT', serif;
+				    
+				    display: block;
+				    background: $background;
 				  }
 				}
 				#large-image.large {
@@ -53,6 +64,12 @@ body.single {
 				  
 				  #close {
 				    @include block;
+				    margin-top: $margin;
+	
+				    border-top: 1px solid $very-light-gray;
+				    border-bottom: 1px solid $very-light-gray;
+				    padding: $pad/4 0;
+				    
 				    cursor: pointer;
 				    
 				    span:before {
@@ -133,12 +150,16 @@ body.single {
 			#right-column { 
 			  @include col(47.5%, 0, 0);
 			  
+			  h1 {
+				  margin-top: $pad*2;
+				}
+			  
 			  #shopping-cart {
 			    @include add-to-cart;
 			  }
 			  
 			  #share {
-			    margin-top: $pad*2;
+			    margin-top: 15em;
 			  }
 			  
 			  

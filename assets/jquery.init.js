@@ -19,6 +19,8 @@ $(document).ready(function() {
     
     $('.single #left-column #description').addClass('large');
     $('.single #left-column #shopping-for-large-image').show();
+    $('.single #left-column #large-image #more').hide();
+    
     $('.single #right-column').hide();
   });
   
@@ -37,6 +39,7 @@ $(document).ready(function() {
     
     $('.single #left-column #description').removeClass('large');
     $('.single #left-column #shopping-for-large-image').hide();
+    $('.single #left-column #large-image #more').show();
     $('.single #right-column').show();
   });
   

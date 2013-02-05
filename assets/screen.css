@@ -1629,32 +1629,41 @@ body.single .container article #left-column {
   margin-top: 1.25em;
   margin-bottom: 2.5em;
 }
-/* line 24, single.scss */
+/* line 25, single.scss */
 body.single .container article #left-column #large-image {
   cursor: pointer;
 }
-/* line 27, single.scss */
+/* line 28, single.scss */
 body.single .container article #left-column #large-image img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 31, single.scss */
+/* line 32, single.scss */
+body.single .container article #left-column #large-image #more {
+  text-align: center;
+  color: #cccccc;
+  font-style: italic;
+  font-family: 'Old Standard TT', serif;
+  display: block;
+  background: white;
+}
+/* line 42, single.scss */
 body.single .container article #left-column #large-image.large {
   width: 74%;
   margin: 0 2.5% 0 0;
   float: left;
   float: left;
 }
-/* line 36, single.scss */
+/* line 47, single.scss */
 body.single .container article #left-column #thumbs {
   width: 23%;
   margin: 0 0 0 0;
   float: left;
   display: none;
 }
-/* line 40, single.scss */
+/* line 51, single.scss */
 body.single .container article #left-column #thumbs #thumb {
   width: 30%;
   margin: 0 5% 0 0;
@@ -1662,24 +1671,28 @@ body.single .container article #left-column #thumbs #thumb {
   margin-bottom: 5%;
   cursor: pointer;
 }
-/* line 46, single.scss */
+/* line 57, single.scss */
 body.single .container article #left-column #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 50, single.scss */
+/* line 61, single.scss */
 body.single .container article #left-column #thumbs #thumb.c3, body.single .container article #left-column #thumbs #thumb.c6, body.single .container article #left-column #thumbs #thumb.c9, body.single .container article #left-column #thumbs #thumb.c12, body.single .container article #left-column #thumbs #thumb.c15, body.single .container article #left-column #thumbs #thumb.c18, body.single .container article #left-column #thumbs #thumb.c21 {
   margin-right: 0;
 }
-/* line 54, single.scss */
+/* line 65, single.scss */
 body.single .container article #left-column #thumbs #close {
   width: 100%;
   float: left;
+  margin-top: 5%;
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0.3125em 0;
   cursor: pointer;
 }
-/* line 58, single.scss */
+/* line 75, single.scss */
 body.single .container article #left-column #thumbs #close span:before {
   content: '\003E';
   float: right;
@@ -1701,14 +1714,14 @@ body.single .container article #left-column #thumbs #close span:before {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 70, single.scss */
+/* line 87, single.scss */
 body.single .container article #left-column #description h3 {
   padding: 0.3125em 0;
   margin: 0.3125em 0;
   border-bottom: 1px solid #f1f1f1;
   cursor: pointer;
 }
-/* line 77, single.scss */
+/* line 94, single.scss */
 body.single .container article #left-column #description h3:after {
   content: '\003E';
   float: right;
@@ -1721,7 +1734,7 @@ body.single .container article #left-column #description h3:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 81, single.scss */
+/* line 98, single.scss */
 body.single .container article #left-column #description .pane {
   padding: 1.25em;
   background: white;
@@ -1729,41 +1742,41 @@ body.single .container article #left-column #description .pane {
   line-height: 1.75;
   max-width: 600px;
 }
-/* line 89, single.scss */
+/* line 106, single.scss */
 body.single .container article #left-column #description .pane br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 94, single.scss */
+/* line 111, single.scss */
 body.single .container article #left-column #description .pane ul {
   margin: 0;
   list-style: none;
 }
-/* line 99, single.scss */
+/* line 116, single.scss */
 body.single .container article #left-column #description .pane ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 107, single.scss */
+/* line 124, single.scss */
 body.single .container article #left-column #description #facebook-like {
   margin: 1.25em 0;
 }
-/* line 111, single.scss */
+/* line 128, single.scss */
 body.single .container article #left-column #description.large {
   width: 47.5%;
   margin: 0 5% 0 0;
   float: left;
   margin-top: 0.625em;
 }
-/* line 117, single.scss */
+/* line 134, single.scss */
 body.single .container article #left-column #shopping-for-large-image {
   width: 47.5%;
   margin: 0 0 0 0;
   float: left;
   display: none;
 }
-/* line 121, single.scss */
+/* line 138, single.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart {
   background: url(stripe.png);
   padding: 0.625em;
@@ -1842,17 +1855,21 @@ body.single .container article #left-column #shopping-for-large-image #shopping-
 body.single .container article #left-column #shopping-for-large-image #shopping-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 126, single.scss */
+/* line 143, single.scss */
 body.single .container article #left-column #shopping-for-large-image #share {
   margin-top: 2.5em;
 }
-/* line 133, single.scss */
+/* line 150, single.scss */
 body.single .container article #right-column {
   width: 47.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 136, single.scss */
+/* line 153, single.scss */
+body.single .container article #right-column h1 {
+  margin-top: 2.5em;
+}
+/* line 157, single.scss */
 body.single .container article #right-column #shopping-cart {
   background: url(stripe.png);
   padding: 0.625em;
@@ -1931,22 +1948,22 @@ body.single .container article #right-column #shopping-cart #product-discontinue
 body.single .container article #right-column #shopping-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 140, single.scss */
+/* line 161, single.scss */
 body.single .container article #right-column #share {
-  margin-top: 2.5em;
+  margin-top: 15em;
 }
-/* line 152, single.scss */
+/* line 173, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 155, single.scss */
+/* line 176, single.scss */
 body.single .container section h2 {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
-/* line 161, single.scss */
+/* line 182, single.scss */
 body.single .container section #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -2003,11 +2020,11 @@ body.single .container section #product #category a {
   text-align: center;
   display: block;
 }
-/* line 167, single.scss */
+/* line 188, single.scss */
 body.single .container section #product .normal-price {
   background: white;
 }
-/* line 172, single.scss */
+/* line 193, single.scss */
 body.single .container section #product.c4, body.single .container section #product.c8, body.single .container section #product.c12, body.single .container section #product.c16, body.single .container section #product.c20, body.single .container section #product.c24, body.single .container section #product.c28 {
   margin-right: 0;
 }
