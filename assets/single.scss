@@ -1,5 +1,19 @@
 body.single {
 	.container {
+	  
+	  #header {
+	    #menu {
+	      #info {
+	        font-style: italic;
+	      }
+	      #info:after {
+	        color: $green;
+	        font-style: italic;
+	        font-weight: bold;
+	      }
+	    }
+	  }
+	
 		article {
 			@include block;
 			
