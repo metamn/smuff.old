@@ -148,7 +148,7 @@
 								      <input class="wpsc_buy_button" type='button' value='<?php echo __('Buy Now', 'wpsc'); ?>' onclick='gotoexternallink("<?php echo $action; ?>")'>
 							      <?php else: ?>
 							        <tr class='submit'><td colspan=2>
-								      <input type="submit" value="Adauga la cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
+								      <input type="submit" value="Adauga in cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
 							      <?php endif; ?>							  		
 							      </td><tr>
 							      <tr class='checkout'><td colspan=2>
