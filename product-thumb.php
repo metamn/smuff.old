@@ -5,6 +5,7 @@
   // - show_excerpt: boolean, if the excerpt is shown or not. Default is true
   // - show_category: boolean, if the product main category is shown or not. Default is true
   // - show_price: boolean, to show the product price. Default is true
+  // - show_percentage: boolean, to show the discount in %. Default is false
   // - counter: the numeric id of the product when displayed as a list
   
   // All posts will be treated the same. If this is not a product the price and category won't be shown
@@ -17,6 +18,9 @@
   $img = $imgs[0];
   $thumb = wp_get_attachment_image_src($img->ID, $image_size);  
   
+  if (!(isset($show_percentage))) {
+    $show_percentage = false;
+  }
       
   if (!(isset($show_excerpt))) {
     $show_excerpt = true;
@@ -31,13 +35,20 @@
   }
   
   
-  
+  $klass = '';
   $product_id = product_id($post->ID);
   
   if ($product_id) {
     $product_price = product_price($post->ID);
     $product_discount = product_discount($product_id);
     $product_sale_price = $product_price - $product_discount;
+    if ($product_discount > 0) {
+      $product_sale_percentage = round($product_discount * 100 / $product_price);
+      if ($show_percentage) {
+        $klass = 'on-sale';
+      }
+    }
+    
     $product_name = product_name($product_id);
   } else {
     $product_name = get_the_title();
@@ -61,7 +72,8 @@
  
 ?>
 
-<article id="product" class="<?php echo $kounter ?>">    
+<article id="product" class="<?php echo $kounter ?> <?php echo $klass ?>">  
+  
   <?php if (isset($thumb[0])) { ?>
     <div id="image">
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"> 
@@ -69,6 +81,7 @@
       </a>
     </div>
   <?php } ?>
+  
   
   <div id="title">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
@@ -101,6 +114,12 @@
     <div id="category">
       <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
       <?php echo $category ?></a>
+    </div>
+  <?php } ?>
+  
+  <?php if (($show_percentage) && ($product_discount > 0)) { ?>
+    <div id="percentage">
+      <span>&mdash;<?php echo $product_sale_percentage ?>%</span>
     </div>
   <?php } ?>
 </article>	

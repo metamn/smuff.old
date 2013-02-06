@@ -119,9 +119,9 @@ $(document).ready(function() {
   $('#new-products #navigation li').click(function() {
     //var patterns = new Array('paven', 'grunge_wall', 'green_gobbler', 'washi', 'roughcloth', 'littleknobs', 'blu_stripes', 'tileable_wood_texture', 'purty_wood', 'diagonal_striped_brick');
     
-    var patterns = new Array('valentines', 'bg');
+    var patterns = new Array('valentines', 'bg', 'valentines2');
     
-    var pattern = patterns[Math.floor(Math.random()*2)] + '.jpg';
+    var pattern = patterns[Math.floor(Math.random()*3)] + '.jpg';
     var url = themeurl + '/assets/' + pattern;
     $('#new-products').css('background', 'url(' + url + ')');
   });

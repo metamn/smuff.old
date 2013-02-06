@@ -203,8 +203,26 @@ a, a:active, a:visited, a:hover {
   background: $background url(stripe.png);
   padding-bottom: $pad*2;
   
+  
   img {
     @include image-bordered(0%);
+  }
+  
+  #percentage {
+    position: relative;
+    top: -16em;
+    
+    background: $sale;
+    color: $background;
+    padding: $pad/4;
+    width: 6em;
+    display: inline-block;
+    opacity: .9;
+    
+    
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
   }
 
   #title, #excerpt {
@@ -250,7 +268,10 @@ a, a:active, a:visited, a:hover {
       display: block;
     }
   }
-	
+  
+  &.on-sale {
+    padding-bottom: 0;
+  }
 }
 
 
