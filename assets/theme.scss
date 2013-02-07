@@ -64,6 +64,34 @@ a, a:active, a:visited, a:hover {
 
 
 
+/* Mixins
+*/
+
+
+@mixin product-description {
+  padding: $pad;
+  background: $background;
+  color: $dark-gray;
+  
+  line-height: 1.75;
+  max-width: 600px;
+  
+  br {
+    margin-top: $pad;
+    display: block;
+  }
+  
+  ul {
+    margin: 0;
+    li {
+      margin-bottom: $pad/2;
+      padding-bottom: $pad/4;
+      border-bottom: 1px solid $very-light-gray;
+    }
+  }
+}
+
+
 @mixin button($color, $background) {
   @include border-radius(6%, 6%);
   @include background-image(linear-gradient(center top, tint($background, 10%) 5%, shade($background, 10%) 100%));
@@ -81,8 +109,6 @@ a, a:active, a:visited, a:hover {
 
 
 
-/* Mixins
-*/
 
 @mixin add-to-cart {
 
@@ -108,7 +134,7 @@ a, a:active, a:visited, a:hover {
   
   .wpsc_variation_forms {
     @include block;
-    margin: $pad 0 0;
+    margin: $pad 0 $pad/2;
     
     .select {
       select {
@@ -201,6 +227,8 @@ a, a:active, a:visited, a:hover {
 	
 	@include rotate(90deg, .75);
 }
+
+
 
 @mixin close-icon {
   content: '\2612';

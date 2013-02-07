@@ -65,8 +65,11 @@
 	      <?php include 'single-for-product__shopping.php' ?>
 	    </div>
 	    
+	    <div id="product-description">
+	    </div>
+	    
 	    <div id="share">
-	      <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/share.png">
+	      
 	    </div>
 	  </div>
 	
@@ -81,8 +84,11 @@
 	    <?php include 'single-for-product__shopping.php' ?>
 	  </div>
 	  
+	  <div id="product-description">
+	  </div>
+	  
 	  <div id="share">
-	    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/share.png">
+	    
 	  </div>
 	</div>    
 </article>
@@ -90,33 +96,6 @@
 
 
 
-<section id="from-category">    
-	<?php 
-		$tag = page_name(is_category(), is_single(), null);            
-	?>
-	 
-	<h2>Alte produse din categoria <?php echo $tag; ?></h2>
-	<div id="products">
-	<?php 
-		$specials = query_posts2('posts_per_page=6&cat='.$cat);
-		$show_excerpt = false;
-		if ($specials) {
-			if ($specials->have_posts()) {
-				$counter = 1;
-				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
-					if (in_category(10)) {
-						
-						include "product-thumb.php";
-					 
-						$counter += 1;
-					}                    
-				endwhile; 
-			}		      
-		}
-	?>
-	</div>
-</section>
-  
 
     
 <section id="recommended">    
@@ -130,9 +109,11 @@
 			<div id="products">
 			<?php foreach ($related_posts as $post) {
 				setup_postdata($post);
-				$medium = true;
+				$show_excerpt = false;
+			  $show_category = false;
 				include "product-thumb.php";
 				$counter += 1;
+				if ($counter == 5) { break; }
 			} ?>
 			</div>
 		<?php } 
@@ -142,16 +123,31 @@
 
 		
 <section id="promo">    
-	<h2>Promotii si oferte</h2>
+	<h2>Propunerea Smuff</h2>
 	<div id="products">
 	<?php       
-		$specials = query_posts2('posts_per_page=4&cat=15&orderby=rand');
+		$specials = query_posts2('posts_per_page=2&cat=15&orderby=rand');
 		if ($specials) {
 			if ($specials->have_posts()) {
 				$counter = 1;
 				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
 					if (in_category(10)) {
-						$medium = true;
+						
+						include "product-thumb.php";
+						$counter += 1;
+					}                    
+				endwhile; 
+			}		      
+		}      
+	?>
+	
+	<?php       
+		$specials = query_posts2('posts_per_page=2&cat=10&orderby=rand');
+		if ($specials) {
+			if ($specials->have_posts()) {
+				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
+					if (in_category(10)) {
+						
 						include "product-thumb.php";
 						$counter += 1;
 					}                    
@@ -163,26 +159,7 @@
 </section>
   
   
-<section id="random" class="product-list">    
-	<h2>Din mixerul Smuff</h2>
-	<div id="products">
-	<?php       
-		$specials = query_posts2('posts_per_page=6&cat=10&orderby=rand');
-		if ($specials) {
-			if ($specials->have_posts()) {
-				$counter = 1;
-				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
-					if (in_category(10)) {
-						$medium = true;
-						include "product-thumb.php";
-						$counter += 1;
-					}                    
-				endwhile; 
-			}		      
-		}      
-	?>
-	</div>
-</section>  
+
 
   
 

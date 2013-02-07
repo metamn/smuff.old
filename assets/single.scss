@@ -99,29 +99,7 @@ body.single {
 			    }
 			    
 			    .pane {
-			      padding: $pad;
-			      background: $background;
-			      color: $dark-gray;
-			      
-			      line-height: 1.75;
-			      max-width: 600px;
-			      
-			      br {
-			        margin-top: $pad;
-			        display: block;
-			      }
-			      
-			      ul {
-			        margin: 0;
-			        list-style: none;
-			        
-			        
-			        li {
-			          margin-bottom: $pad/2;
-			          padding-bottom: $pad/4;
-			          border-bottom: 1px solid $very-light-gray;
-			        }
-			      }
+			      @include product-description;
 			    }
 			    
 			    #facebook-like {
@@ -153,12 +131,13 @@ body.single {
 			#right-column { 
 			  @include col(47.5%, 0, 0);
 			  
-			  h1 {
-				  margin-top: $pad*2;
-				}
 			  
 			  #shopping-cart {
 			    @include add-to-cart;
+			  }
+			  
+			  #product-description {
+			    @include product-description;
 			  }
 			  
 			  #share {

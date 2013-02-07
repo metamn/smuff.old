@@ -526,17 +526,17 @@ body .container #header hgroup #logo {
   /* an extra space must be added */
   float: left;
 }
-/* line 299, theme.scss */
+/* line 327, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 305, theme.scss */
+/* line 333, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 309, theme.scss */
+/* line 337, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
@@ -898,14 +898,14 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   padding-bottom: 2.5em;
 }
-/* line 219, theme.scss */
+/* line 247, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 223, theme.scss */
+/* line 251, theme.scss */
 body.home .container section #body #products #product #percentage {
   position: relative;
   top: -16em;
@@ -919,31 +919,31 @@ body.home .container section #body #products #product #percentage {
   font-weight: bold;
   text-align: center;
 }
-/* line 240, theme.scss */
+/* line 268, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 248, theme.scss */
+/* line 276, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 256, theme.scss */
+/* line 284, theme.scss */
 body.home .container section #body #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 262, theme.scss */
+/* line 290, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 267, theme.scss */
+/* line 295, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -953,14 +953,14 @@ body.home .container section #body #products #product #category {
   font-size: small;
   background: #cccccc;
 }
-/* line 276, theme.scss */
+/* line 304, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
 }
-/* line 284, theme.scss */
+/* line 312, theme.scss */
 body.home .container section #body #products #product.on-sale {
   padding-bottom: 0;
 }
@@ -1014,7 +1014,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 175, theme.scss */
+/* line 201, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -1031,17 +1031,17 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 178, theme.scss */
+/* line 204, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 184, theme.scss */
+/* line 210, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 188, theme.scss */
+/* line 214, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -1520,14 +1520,14 @@ body.archive section #products #product {
   background: white url(stripe.png);
   padding-bottom: 2.5em;
 }
-/* line 219, theme.scss */
+/* line 247, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 223, theme.scss */
+/* line 251, theme.scss */
 body.archive section #products #product #percentage {
   position: relative;
   top: -16em;
@@ -1541,31 +1541,31 @@ body.archive section #products #product #percentage {
   font-weight: bold;
   text-align: center;
 }
-/* line 240, theme.scss */
+/* line 268, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 248, theme.scss */
+/* line 276, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 256, theme.scss */
+/* line 284, theme.scss */
 body.archive section #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 262, theme.scss */
+/* line 290, theme.scss */
 body.archive section #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 267, theme.scss */
+/* line 295, theme.scss */
 body.archive section #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1575,14 +1575,14 @@ body.archive section #products #product #category {
   font-size: small;
   background: #cccccc;
 }
-/* line 276, theme.scss */
+/* line 304, theme.scss */
 body.archive section #products #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
 }
-/* line 284, theme.scss */
+/* line 312, theme.scss */
 body.archive section #products #product.on-sale {
   padding-bottom: 0;
 }
@@ -1763,97 +1763,96 @@ body.single .container article #left-column #description .pane {
   line-height: 1.75;
   max-width: 600px;
 }
-/* line 109, single.scss */
+/* line 79, theme.scss */
 body.single .container article #left-column #description .pane br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 114, single.scss */
+/* line 84, theme.scss */
 body.single .container article #left-column #description .pane ul {
   margin: 0;
-  list-style: none;
 }
-/* line 119, single.scss */
+/* line 86, theme.scss */
 body.single .container article #left-column #description .pane ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 127, single.scss */
+/* line 105, single.scss */
 body.single .container article #left-column #description #facebook-like {
   margin: 1.25em 0;
 }
-/* line 131, single.scss */
+/* line 109, single.scss */
 body.single .container article #left-column #description.large {
   width: 47.5%;
   margin: 0 5% 0 0;
   float: left;
   margin-top: 0.625em;
 }
-/* line 137, single.scss */
+/* line 115, single.scss */
 body.single .container article #left-column #shopping-for-large-image {
   width: 47.5%;
   margin: 0 0 0 0;
   float: left;
   display: none;
 }
-/* line 141, single.scss */
+/* line 119, single.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart {
   background: url(stripe.png);
   padding: 0.625em;
 }
-/* line 93, theme.scss */
+/* line 119, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .imagecol {
   display: none;
 }
-/* line 97, theme.scss */
+/* line 123, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .delivery {
   width: 100%;
   float: left;
   color: #aaaaaa;
   margin-top: 1.25em;
 }
-/* line 103, theme.scss */
+/* line 129, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .delivery span {
   background: white;
   padding: 0.15625em;
 }
-/* line 109, theme.scss */
+/* line 135, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_variation_forms {
   width: 100%;
   float: left;
-  margin: 1.25em 0 0;
+  margin: 1.25em 0 0.625em;
 }
-/* line 114, theme.scss */
+/* line 140, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_variation_forms .select select {
   border-top: 1px solid #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
   padding: 0.3125em;
   width: 92%;
 }
-/* line 122, theme.scss */
+/* line 148, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_variation_forms .select:after {
   padding: 1.25em;
   margin: -3.1em 2.5em 0 -2.1em;
 }
-/* line 130, theme.scss */
+/* line 156, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
 }
-/* line 135, theme.scss */
+/* line 161, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_product_price .oldprice {
   background: white;
 }
-/* line 138, theme.scss */
+/* line 164, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
 }
-/* line 141, theme.scss */
+/* line 167, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_product_price .oldprice.on-sale {
   border: 1px solid;
 }
-/* line 147, theme.scss */
+/* line 173, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1867,7 +1866,7 @@ body.single .container article #left-column #shopping-for-large-image #shopping-
   color: #363636;
   text-shadow: 0px 0px 1px #cccccc;
 }
-/* line 76, theme.scss */
+/* line 104, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .add-to-cart-button input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -1875,93 +1874,89 @@ body.single .container article #left-column #shopping-for-large-image #shopping-
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 152, theme.scss */
+/* line 178, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .checkout {
   display: none;
 }
-/* line 156, theme.scss */
+/* line 182, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 163, theme.scss */
+/* line 189, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart #product-discontinued h3 {
   padding-top: 0;
 }
-/* line 166, theme.scss */
+/* line 192, theme.scss */
 body.single .container article #left-column #shopping-for-large-image #shopping-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 146, single.scss */
+/* line 124, single.scss */
 body.single .container article #left-column #shopping-for-large-image #share {
   margin-top: 2.5em;
 }
-/* line 153, single.scss */
+/* line 131, single.scss */
 body.single .container article #right-column {
   width: 47.5%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 156, single.scss */
-body.single .container article #right-column h1 {
-  margin-top: 2.5em;
-}
-/* line 160, single.scss */
+/* line 135, single.scss */
 body.single .container article #right-column #shopping-cart {
   background: url(stripe.png);
   padding: 0.625em;
 }
-/* line 93, theme.scss */
+/* line 119, theme.scss */
 body.single .container article #right-column #shopping-cart .imagecol {
   display: none;
 }
-/* line 97, theme.scss */
+/* line 123, theme.scss */
 body.single .container article #right-column #shopping-cart .delivery {
   width: 100%;
   float: left;
   color: #aaaaaa;
   margin-top: 1.25em;
 }
-/* line 103, theme.scss */
+/* line 129, theme.scss */
 body.single .container article #right-column #shopping-cart .delivery span {
   background: white;
   padding: 0.15625em;
 }
-/* line 109, theme.scss */
+/* line 135, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_variation_forms {
   width: 100%;
   float: left;
-  margin: 1.25em 0 0;
+  margin: 1.25em 0 0.625em;
 }
-/* line 114, theme.scss */
+/* line 140, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_variation_forms .select select {
   border-top: 1px solid #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
   padding: 0.3125em;
   width: 92%;
 }
-/* line 122, theme.scss */
+/* line 148, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_variation_forms .select:after {
   padding: 1.25em;
   margin: -3.1em 2.5em 0 -2.1em;
 }
-/* line 130, theme.scss */
+/* line 156, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
 }
-/* line 135, theme.scss */
+/* line 161, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_product_price .oldprice {
   background: white;
 }
-/* line 138, theme.scss */
+/* line 164, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
 }
-/* line 141, theme.scss */
+/* line 167, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_product_price .oldprice.on-sale {
   border: 1px solid;
 }
-/* line 147, theme.scss */
+/* line 173, theme.scss */
 body.single .container article #right-column #shopping-cart .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1975,7 +1970,7 @@ body.single .container article #right-column #shopping-cart .add-to-cart-button 
   color: #363636;
   text-shadow: 0px 0px 1px #cccccc;
 }
-/* line 76, theme.scss */
+/* line 104, theme.scss */
 body.single .container article #right-column #shopping-cart .add-to-cart-button input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -1983,38 +1978,61 @@ body.single .container article #right-column #shopping-cart .add-to-cart-button 
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 152, theme.scss */
+/* line 178, theme.scss */
 body.single .container article #right-column #shopping-cart .checkout {
   display: none;
 }
-/* line 156, theme.scss */
+/* line 182, theme.scss */
 body.single .container article #right-column #shopping-cart .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 163, theme.scss */
+/* line 189, theme.scss */
 body.single .container article #right-column #shopping-cart #product-discontinued h3 {
   padding-top: 0;
 }
-/* line 166, theme.scss */
+/* line 192, theme.scss */
 body.single .container article #right-column #shopping-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 164, single.scss */
+/* line 139, single.scss */
+body.single .container article #right-column #product-description {
+  padding: 1.25em;
+  background: white;
+  color: #565656;
+  line-height: 1.75;
+  max-width: 600px;
+}
+/* line 79, theme.scss */
+body.single .container article #right-column #product-description br {
+  margin-top: 1.25em;
+  display: block;
+}
+/* line 84, theme.scss */
+body.single .container article #right-column #product-description ul {
+  margin: 0;
+}
+/* line 86, theme.scss */
+body.single .container article #right-column #product-description ul li {
+  margin-bottom: 0.625em;
+  padding-bottom: 0.3125em;
+  border-bottom: 1px solid #f1f1f1;
+}
+/* line 143, single.scss */
 body.single .container article #right-column #share {
   margin-top: 15em;
 }
-/* line 176, single.scss */
+/* line 155, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 179, single.scss */
+/* line 158, single.scss */
 body.single .container section h2 {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
-/* line 185, single.scss */
+/* line 164, single.scss */
 body.single .container section #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -2023,14 +2041,14 @@ body.single .container section #product {
   background: white url(stripe.png);
   padding-bottom: 2.5em;
 }
-/* line 219, theme.scss */
+/* line 247, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 223, theme.scss */
+/* line 251, theme.scss */
 body.single .container section #product #percentage {
   position: relative;
   top: -16em;
@@ -2044,31 +2062,31 @@ body.single .container section #product #percentage {
   font-weight: bold;
   text-align: center;
 }
-/* line 240, theme.scss */
+/* line 268, theme.scss */
 body.single .container section #product #title, body.single .container section #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 248, theme.scss */
+/* line 276, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 256, theme.scss */
+/* line 284, theme.scss */
 body.single .container section #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 262, theme.scss */
+/* line 290, theme.scss */
 body.single .container section #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 267, theme.scss */
+/* line 295, theme.scss */
 body.single .container section #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -2078,22 +2096,22 @@ body.single .container section #product #category {
   font-size: small;
   background: #cccccc;
 }
-/* line 276, theme.scss */
+/* line 304, theme.scss */
 body.single .container section #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
 }
-/* line 284, theme.scss */
+/* line 312, theme.scss */
 body.single .container section #product.on-sale {
   padding-bottom: 0;
 }
-/* line 191, single.scss */
+/* line 170, single.scss */
 body.single .container section #product .normal-price {
   background: white;
 }
-/* line 196, single.scss */
+/* line 175, single.scss */
 body.single .container section #product.c4, body.single .container section #product.c8, body.single .container section #product.c12, body.single .container section #product.c16, body.single .container section #product.c20, body.single .container section #product.c24, body.single .container section #product.c28 {
   margin-right: 0;
 }
