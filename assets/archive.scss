@@ -43,6 +43,10 @@ body.archive {
           max-width: $major/2;
           float: left;
           
+          select {
+            font-size: small;
+          }
+          
           label:after {
             background: $blue !important;
             
@@ -53,6 +57,7 @@ body.archive {
           
           input[type="submit"] {
             background: $blue;
+            font-size: small;
           }
         }
         

@@ -64,6 +64,22 @@ a, a:active, a:visited, a:hover {
 
 
 
+@mixin button($color, $background) {
+  @include border-radius(6%, 6%);
+  @include background-image(linear-gradient(center top, tint($background, 10%) 5%, shade($background, 10%) 100%));
+  border: 1px solid shade($background, 5%);
+  
+  color: $color;
+  @include single-text-shadow($light-gray);
+  
+  
+  &:hover {
+    @include background-image(linear-gradient(center top, shade($background, 10%) 5%, tint($background, 10%) 100%));
+  }
+}
+
+
+
 
 /* Mixins
 */
@@ -104,8 +120,8 @@ a, a:active, a:visited, a:hover {
       }
     }
     .select:after {
-      padding: $pad/2 + $pad/4;
-      margin: -$pad/2 $pad*2 0 -2.1em;
+      padding: $pad;
+      margin: -3.1em $pad*2 0 -2.1em;
     }
     
   }
@@ -129,11 +145,7 @@ a, a:active, a:visited, a:hover {
   
   .add-to-cart-button {
     input[type="submit"] {
-      background: $green;
-      color: $color;
-      
-      font-family: 'Coda', sans-serif;
-      font-weight: 1em;
+      @include button($color, $green);
     }
   }
   
@@ -273,6 +285,7 @@ a, a:active, a:visited, a:hover {
     padding-bottom: 0;
   }
 }
+
 
 
 /* Logo

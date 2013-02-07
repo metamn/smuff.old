@@ -32,6 +32,11 @@ body {
       font-family: 'Oswald', sans-serif;
     }
     
+    input, textarea, select {
+      font-family: 'Coda', serif;
+      font-size: 100%;
+    }
+    
     
 		
 		#header {
@@ -317,18 +322,7 @@ body {
 			  #menu {
 			    @include block;
 			    
-			    ul {
-			      li#search-menu-item {
-		          display: inline-block;
-		          float: right;
-		          margin-right: 0;
-		          
-		          @include button;
-		          font-size: small;
-		          position: relative;
-		          top: -$pad/8;
-		        }
-			    }
+			    
 			  }
 			  
 			  #search {

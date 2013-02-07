@@ -1,5 +1,4 @@
 
-  
 body {
   /* Use Serif for long text */
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
@@ -170,9 +169,6 @@ body {
 		  appearance: none;
 		  -webkit-appearance: none;
 		  -moz-appearance: none;
-		
-		  font-size: medium;
-		  font-family: monospace;
 	  }
 	
 	  /* Text */
@@ -191,11 +187,13 @@ body {
 		  background: black;
 		  color: lightgray;
 		  padding: $pad/2;
+		  
+		  &:hover {
+		    cursor: pointer;
+		    color: white;
+		  }
 	  }
-	  input[type='submit']:hover {
-		  cursor: pointer;
-		  color: white;
-	  }
+	  
 	
 	
 	  /* Cross browser compatible styling: http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/
@@ -242,6 +240,7 @@ body {
 	  */
 	  
 	  select {
+	    padding: $pad/8;
 	    padding-right: 2em; /* to make the select box longer and accept clicking on the arrow */
 	    border-bottom: 1px solid gray;
 	    cursor: pointer;
@@ -257,10 +256,10 @@ body {
 	    
 	    background: black;
 	    color: white;
-	    padding: $pad/2;
+	    padding: $pad/2 + $pad/4;
 	    
 	    position: relative;
-	    margin: -$pad/2 $pad*2 0 -2.1em;
+	    margin: -.7em $pad*2 0 -2.5em;
 	    
 	    pointer-events: none; /* this is a must */
 	    cursor: pointer;
