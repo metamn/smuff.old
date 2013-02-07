@@ -199,7 +199,7 @@ body {
 			    margin-left: 23%;
 			  }
 			  
-			  #shopping-info {
+			  .shopping-info {
 			    ul {
 			      li {
 			        margin-bottom: $pad/4 + $pad;
@@ -213,7 +213,8 @@ body {
 			  }
 			  
 			  #close {
-			    margin-top: -6.5em;
+			    margin-top: -16.2em;
+			    float: right;
 			  }
 			}
 			

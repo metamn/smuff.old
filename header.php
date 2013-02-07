@@ -110,7 +110,7 @@
 	    	<nav id="menu">
 					<ul>
 						<?php 
-							$cats = array("gadget", "lifestyle", "doar-copii");		            
+							$cats = array("gadget", "lifestyle", "doar-copii", "produse", "wtf");		            
 							foreach ($cats as $cat) { 
 								$c = get_category_by_slug($cat);
 							?>
@@ -120,14 +120,6 @@
 							<?php } ?>
 							
 							
-							<li id="all-products">Toate produsele</li>
-							
-							<?php
-							  $c = get_category_by_slug('wtf');
-							?>
-							<li id="wtf" class="last">
-									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
-							</li>
 							
 							<li class="cart"><a href="">Cosul meu (0)</a></li>
               <li class="cart"><a href="">Contul meu</a></li>
@@ -143,18 +135,15 @@
 			      <ul>
 			        <li>0740-456.127</li>
 			        <li>shop @ smuff.ro</li>
+			        <li class="separator"></li>
+			        <li><a href="">Despre noi</a></li>
+              <li><a href="">Termeni si conditii</a></li>
 			      </ul>
 			    </div>
 			    
-			    <div id="shopping-info">
+			    <div class="shopping-info">
 			      <h3>Cum cumpar?</h3>
 			      <ul>
-			        <li>
-			          <h4>Preturi accesibile</h4>
-		            <p>
-			            La Smuff toate preturile sunt corecte.  
-		            </p>
-		          </li>
 		          <li>
 		            <h4>Shopping rapid</h4>
 		            <p>
@@ -167,10 +156,16 @@
 			            Plata ramburs cand aveti deja produsul in mana.
 		            </p>
 		          </li>
+			      </ul>
+			    </div>
+			    
+			     <div class="shopping-info">
+			      <h3>&nbsp;</h3>
+			      <ul>
 		          <li>
 		            <h4>10 zile drept de retur</h4>
 		            <p>
-			            Fara intrebari din partea noastra.
+			            Money back, fara intrebari din partea noastra.
 		            </p>
 		          </li>
 		          <li>
@@ -182,14 +177,6 @@
 			      </ul>
 			    </div>
 			    
-			    
-			    <div id="pages">
-			      <h3>Alte informatii</h3>
-			      <ul>
-              <li><a href="">Despre noi</a></li>
-              <li><a href="">Termeni si conditii</a></li>
-            </ul>
-			    </div>
 			    
 			    <div id="close">
 			      <span></span>
