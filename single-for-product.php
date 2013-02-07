@@ -65,12 +65,6 @@
 	      <?php include 'single-for-product__shopping.php' ?>
 	    </div>
 	    
-	    <div id="product-description">
-	    </div>
-	    
-	    <div id="share">
-	      
-	    </div>
 	  </div>
 	
 	</div>		      
@@ -84,11 +78,15 @@
 	    <?php include 'single-for-product__shopping.php' ?>
 	  </div>
 	  
-	  <div id="product-description">
-	  </div>
 	  
-	  <div id="share">
-	    
+	  <div id="short-description">
+	    <ul>
+	      <li>A se folosi becuri de maximum 60W</li>
+	      <li>Lampa pe podea sau atarnata de tavan</li>
+	      <li>Shaker din otel inoxidabil cu 8 retete de cocktailuri inscriptionate</li>
+	      <li>Include chiar si sugestii de servire</li>
+	      <li>Masoara aproximativ 24,8 cm (inaltime) x 8,4 cm (diametru)</li>
+	    </ul>
 	  </div>
 	</div>    
 </article>

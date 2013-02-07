@@ -66,6 +66,7 @@ $(document).ready(function() {
   // Accordion on product page
   
   $('.single #description .pane').hide();
+   $('.single #description .pane').first().show();
   $('.single #description h3').click(function() {
   	$(this).next().slideToggle();
   });
@@ -74,11 +75,7 @@ $(document).ready(function() {
   $(".single #description h3#comments").prev().prev().hide();
   
   
-  // Take out Proprietati
-  var proprietati =  $(".single #description h3:nth-of-type(2)");
-  proprietati.hide();
-  $(".single #product-description").html(proprietati.next().html());
-  
+   
   
   
   // Toggle filters and navigation on Archive for mobiles
