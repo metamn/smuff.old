@@ -12,84 +12,78 @@
 ?>
 
 <article <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
-	
-	<div id="left-column">
-	  <div id="large-image">
-	    <?php 
-			  $imgs = post_attachements($post->ID);
-			  $img = $imgs[0];  
-			  $full = wp_get_attachment_image_src($img->ID, 'full');
-			  $large = wp_get_attachment_image_src($img->ID, 'large');    
-		  ?>
-		
-			<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
-			
-			<div id="more">
-			  <span>Click pentru mai multe imagini si detalii</span>
-			</div>
-	  </div>
-	  
-	  <div id="thumbs">
-			<?php 
-			  $counter = 1;
-			  foreach ($imgs as $img) { 
-				  $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
-				  $large = wp_get_attachment_image_src($img->ID, 'full'); ?>
-				
-				  <div id="thumb" class="c<?php echo $counter ?>">
-				    <img src="<?php echo $thumb[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>" data-image="<?php echo $large[0]?>"/>				
-				  </div>
-			    <?php 
-			      $counter += 1;
-			      if ($counter == 7) { /*break;*/ }
-			} ?> 
-			
-			<div id="close">
-	      <span>inapoi</span>
-	    </div>
-		</div>
-	  
-	  <div id="description"> 
-		  <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
-		
-		  <h3 id="comments">Comentarii</h3>
-		  <div id="comments" class="pane normal">
-			  <?php comments_template('', true); ?>
-		  </div>
-	  </div>
-	  
-	  
-	  <div id="shopping-for-large-image">
-	    <h1>
-		    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-	    </h1>
-	
-	    <div id="shopping-cart">
-	      <?php include 'single-for-product__shopping.php' ?>
-	    </div>
-	  </div>
-	</div>		      
-	
-	<div id="right-column">
-	  <h1>
+  
+  <div id="title">
+    <h1>
 		  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	  </h1>
+	</div>
 	
-	  <div id="shopping-cart">
-	    <?php include 'single-for-product__shopping.php' ?>
-	  </div>
+	<div id="large-image">
+    <?php 
+		  $imgs = post_attachements($post->ID);
+		  $img = $imgs[0];  
+		  $full = wp_get_attachment_image_src($img->ID, 'full');
+		  $large = wp_get_attachment_image_src($img->ID, 'large');    
+	  ?>
+	
+		<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
+		
+		<div id="more">
+		  <span>Click pentru mai multe imagini si detalii</span>
+		</div>
+	</div>
+	  
+  <div id="thumbs">
+		<?php 
+		  $counter = 1;
+		  foreach ($imgs as $img) { 
+			  $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+			  $large = wp_get_attachment_image_src($img->ID, 'full'); ?>
+			
+			  <div id="thumb" class="c<?php echo $counter ?>">
+			    <img src="<?php echo $thumb[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>" data-image="<?php echo $large[0]?>"/>				
+			  </div>
+		    <?php 
+		      $counter += 1;
+		      if ($counter == 7) { /*break;*/ }
+		} ?> 
+		
+		<div id="close">
+      <span>inapoi</span>
+    </div>
+	</div>
+	
+	
+  <div id="shopping-cart">
+    <?php include 'single-for-product__shopping.php' ?>
+  </div>
 	  
 	  
-	  <div id="short-description">
-	    <ul>
-	      <li>A se folosi becuri de maximum 60W</li>
-	      <li>Lampa pe podea sau atarnata de tavan</li>
-	      <li>Shaker din otel inoxidabil cu 8 retete de cocktailuri inscriptionate</li>
-	      <li>Include chiar si sugestii de servire</li>
-	      <li>Masoara aproximativ 24,8 cm (inaltime) x 8,4 cm (diametru)</li>
-	    </ul>
+  <div id="short-description">
+    <div id="inner">
+      <ul>
+        <li>A se folosi becuri de maximum 60W</li>
+        <li>Lampa pe podea sau atarnata de tavan</li>
+        <li>Shaker din otel inoxidabil cu 8 retete de cocktailuri inscriptionate</li>
+        <li>Include chiar si sugestii de servire</li>
+        <li>Masoara aproximativ 24,8 cm (inaltime) x 8,4 cm (diametru)</li>
+      </ul>
+    </div>
+  </div>
+	
+  
+	  
+  <div id="description"> 
+	  <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+	
+	  <h3 id="comments">Comentarii</h3>
+	  <div id="comments" class="pane normal">
+		  <?php comments_template('', true); ?>
 	  </div>
-	</div>    
+  </div>
+	  
+	
 </article>
 			
 

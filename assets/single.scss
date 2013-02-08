@@ -16,147 +16,152 @@ body.single {
 		article {
 			@include block;
 			
-			#left-column {
-				@include col(47.5%, 0, 5%);
-				margin-top: $pad;
-				margin-bottom: $pad*2;
-				
-				
-				#large-image {
-				  cursor: pointer;
-				  
-				  img {
-				    @include image-bordered(0%);
-				  }
-				  
-				  #more {
-				    @include block;
-				    margin: $pad*2 0;
-				    text-align: center;
-				     
-				    span {
-				      font-style: italic;
-				      font-family: 'Old Standard TT', serif;
-				      background: $background;
-				      
-				      &:after {
-				        content: '\21E2';
-				        margin-left: $pad/4;
-				        color: $sale;
-				      }
-				    }
-				    
-				    @include desktop-and-up {
-				      margin: $pad 0;
-				    }
-				  }
-				}
-				#large-image.large {
-				  @include col(74%, 0, 2.5%);
-				  float: left;
-				}
-				
-				#thumbs { 
-				  @include col(23%, 0, 0);
-				  display: none;
-			    
-				  #thumb {
-				   @include col(30%, 0, 5%);
-				   margin-bottom: $margin;
-				    
-				    cursor: pointer;
-				  
-				    img {
-				      @include image-bordered(2%);
-				    }  
-				  }
-				  #thumb.c3, #thumb.c6, #thumb.c9, #thumb.c12, #thumb.c15, #thumb.c18, #thumb.c21 {
-				    margin-right: 0;
-				  }
-				  
-				  #close {
-				    @include block;
-				    margin-top: $margin;
-	
-				    border-top: 1px solid $very-light-gray;
-				    border-bottom: 1px solid $very-light-gray;
-				    padding: $pad/4 0;
-				    
-				    cursor: pointer;
-				    
-				    span {
-				      color: $light-gray;
-				    }
-				    
-				    span:before {
-				      @include close-icon;
-				      
-				      float: left;
-				      margin-left: 0;
-				      margin-right: $pad/4;
-				    }
-				  }
-				}
-				
-				#description {
-				  display: none;
-				  
-			    h3 {
-			      padding: $pad/4 0;
-			      margin: $pad/4 0;
-			      border-bottom: 1px solid $very-light-gray;
+			#title, #shopping-cart, #short-description, #large-image, #thumbs, #description {
+			  @include col(47.5%, 0, 5%);
+			  
+			  @include mobile-only {
+			    @include block;
+			  }
+			}
+			
+			#title, #shopping-cart, #short-description {
+			  float: right;
+			  margin-right: 0;
+			}
+		
+		
+			#shopping-cart {
+		    @include add-to-cart;
+		    
+		    @include mobile-only {
+		      .add-to-cart-button {
+		        margin-top: $pad;
+		        display: block;
+		      }
+		    }
+		  }
+		  
+		  
+		  #short-description {
+		    #inner {
+		      width: 90%;
+		      margin: $pad auto;
+		      
+		      @include product-description;
+		    }
+		  }
+			
+			
+			
+			#large-image {
+			  margin-top: $pad;
+			  margin-bottom: $pad*2;
+			
+			  cursor: pointer;
+			  
+			  img {
+			    @include image-bordered(0%);
+			  }
+			  
+			  #more {
+			    @include block;
+			    margin: $pad*2 0;
+			    text-align: center;
+			     
+			    span {
+			      font-style: italic;
+			      font-family: 'Old Standard TT', serif;
+			      background: $background;
 			      
-			      cursor: pointer;
-			    }
-			    h3:after {
-			      @include arrow-to-reveal-content;
-			    }
-			    
-			    .pane {
-			      @include product-description;
+			      &:after {
+			        content: '\21E2';
+			        margin-left: $pad/4;
+			        color: $sale;
+			      }
 			    }
 			    
-			    #facebook-like {
+			    @include desktop-and-up {
 			      margin: $pad 0;
 			    }
 			  }
-			  #description.large {
-			    display: block;
-			    @include col(47.5%, 0, 5%);
-			    margin-top: $pad/2;
+			}
+			#large-image.large {
+			  @include col(74%, 0, 2.5%);
+			  float: left;
+			}
+			
+			
+		
+				
+			#thumbs { 
+			  @include col(23%, 0, 0);
+			  display: none;
+		    
+			  #thumb {
+			   @include col(30%, 0, 5%);
+			   margin-bottom: $margin;
+			    
+			    cursor: pointer;
+			  
+			    img {
+			      @include image-bordered(2%);
+			    }  
+			  }
+			  #thumb.c3, #thumb.c6, #thumb.c9, #thumb.c12, #thumb.c15, #thumb.c18, #thumb.c21 {
+			    margin-right: 0;
 			  }
 			  
-			  
-			  #shopping-for-large-image {
-			    @include col(47.5%, 0, 0);
-			    display: none;
+			  #close {
+			    @include block;
+			    margin-top: $margin;
+
+			    border-top: 1px solid $very-light-gray;
+			    border-bottom: 1px solid $very-light-gray;
+			    padding: $pad/4 0;
 			    
-			    #shopping-cart {
-			      @include add-to-cart;
+			    cursor: pointer;
+			    
+			    span {
+			      color: $light-gray;
 			    }
-			   
-			  }	
-			}
-			
-			
-			#right-column { 
-			  @include col(47.5%, 0, 0);
-			  
-			 
-			  #shopping-cart {
-			    @include add-to-cart;
-			  }
-			  
-			  #short-description {
-			    width: 90%;
-			    margin: $pad auto;
 			    
-			    @include product-description;
+			    span:before {
+			      @include close-icon;
+			      
+			      float: left;
+			      margin-left: 0;
+			      margin-right: $pad/4;
+			    }
 			  }
-			  
-			  
 			}
-			
+				
+			#description {
+			  display: none;
+			  
+		    h3 {
+		      padding: $pad/4 0;
+		      margin: $pad/4 0;
+		      border-bottom: 1px solid $very-light-gray;
+		      
+		      cursor: pointer;
+		    }
+		    h3:after {
+		      @include arrow-to-reveal-content;
+		    }
+		    
+		    .pane {
+		      @include product-description;
+		    }
+		    
+		    #facebook-like {
+		      margin: $pad 0;
+		    }
+		  }
+		  #description.large {
+		    display: block;
+		    @include col(47.5%, 0, 5%);
+		    margin-top: $pad/2;
+		  }
 			
 		}
 		
@@ -181,6 +186,11 @@ body.single {
           background: $background;
         }
         
+        
+        @include mobile-only {
+          @include block;
+          margin-right: 0;
+        }
       }
       #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
         margin-right: 0;

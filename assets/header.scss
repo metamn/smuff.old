@@ -13,6 +13,10 @@ body {
   #above-container {
     background: $color;
     height: $pad + $pad/2;
+    
+    @include mobile-only {
+      display: none;
+    }
   }
   
     
@@ -43,11 +47,16 @@ body {
 			@include block;
 			margin: $pad 0;
 			
-						
+									
 			hgroup {
 				@include col(74%, 0, 2.5%);
 				margin-top: $pad;
 				margin-bottom: $pad;
+				
+				@include mobile-only {
+				  @include block;
+				  margin-top: 0;
+				}
 				
 			  #logo {
 				  @include logo($pad/3);
@@ -69,16 +78,13 @@ body {
 					  }
 				  
 				  }
-				}
-				
-				#page-name {
-					display: none;
+				  
+				  @include mobile-only {
+				    font-size: small;
+				  }
 				}
 			}
 			
-			#cart {
-			  @include col(23%, 0, 0);
-			}
 			
 			
 			#menu {
@@ -92,47 +98,43 @@ body {
           @include list-inline;
           padding: 0 $pad/2;
           
-          #all-products, #info {
-            cursor: pointer;
-          }
-          #all-products:after, #info:after {
-            @include arrow-to-reveal-content;
-          }
-          #all-products.active {
-            color: $sale;
-          }
-          #all-products.active:after, #info.active:after {
-            @include rotate(270deg, .7);
-          }
-          
-          .cart {
-            float: right;
+          li {
+            @include mobile-only {
+              font-size: small;
+              margin-right: $pad/2;
+            }
+            
+            &#info {
+              cursor: pointer;
+              
+              &:after {
+                @include arrow-to-reveal-content;
+              }
+              
+              &.active:after {
+                @include rotate(270deg, .7);
+              }
+            }
+            
+            &#separator {
+              @include mobile-only {
+                width: 100%;
+                margin-top: $pad/2;
+              }
+            }
+            
+            &.cart {
+              float: right;
+              
+              @include mobile-only {
+                float: left;
+              }
+            }
           }
         }
-				
 			} 
 			
 			
-			
-			#search {
-				@include col($minor + $margin, 0, 0);
-				float: left;
-				
-				display: none;
-				
-				border-top: 1px solid;
-        border-bottom: 1px solid;
-        padding: $pad/4 0 $pad/8;
-        
-        
-        input[type="text"] {
-          width: 75%;
-          max-width: 15em;
-          background: $light-gray;
-          padding: $pad/2 $pad/4;
-          color: $background;
-        }
-			}	
 			
 			
 			#menu-extended, #menu-info {
@@ -223,128 +225,7 @@ body {
 			  }
 			}
 			
-			
-			
-			@include mobile-only {
-			  #cart, hgroup, #menu {
-			    @include block;
-			  }
-			  
-			  #cart {
-			    ul {
-			      margin-top: $pad;
-			    }
-			  }
-			  
-			  hgroup {
-			    #logo {
-			      max-width: 27.5%;
-			    }
-			    #strapline {
-			      font-size: .8em;
-			      margin-top: .9em;
-			    }
-			  }
-			  
-			  #menu {
-			    ul {
-			      li {
-			        font-size: small;
-			        margin-bottom: $pad/4;
-			      }
-			      li#search-menu-item {
-			        display: inline-block;
-			        margin-left: $pad;
-			      }
-			    }
-			  }
-			  
-			  #search {
-			    display: none;
-			  }
-			  
-			  #menu-extended {
-			    padding-bottom: 0;
-			    
-			    
-			    div {
-			      @include block;
-			      
-			      h3 {
-			        font-size: 1em;
-			      }
-			      
-			      ul {
-			        @include list-normal;
-			        
-			        li {
-			          font-size: small;
-			          border: none;
-			          
-			          a {
-			            width: auto;
-			            display: inline-block;
-			          }
-			        }
-			        li.separator {
-			          display: none;
-			        }
-			        li:after {
-                content: '\2022';
-                margin-left: $pad/2;
-                color: $light-gray;
-              }
-              li.last:after {
-                content: '';
-              }
-              
-              li#all-products {
-                margin-top: $pad;
-              }
-			      }
-			    }
-			    
-			    
-			  }
-			}
-			
-			@include tablet-only {
-			  #cart {
-			    ul {
-			      margin: $pad 0;
-			      
-			      li:after {
-			        content: '';
-			      }
-			    }
-			  }
-			  
-			  #menu {
-			    @include block;
-			    
-			    
-			  }
-			  
-			  #search {
-			    display: none;
-			  }
-			  
-			  #menu-extended {
-			    div {
-			      @include col(30%, .5%, 2.5%);
-			      
-			      h3 {
-			        font-size: 1.25em;
-			      }
-			    }
-			    
-			    #close {
-			      @include block;
-			    }
-			  }
-			}
-			
-		}
+		}	
 		
 		
 		#footer {

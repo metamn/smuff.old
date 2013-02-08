@@ -89,10 +89,6 @@
 							<h2><?php bloginfo('description'); ?></h2>
 						</a>
 					</div>
-					
-	    		<div id="page-name">			        
-						<h2><?php echo page_main_name(); ?></h2>
-					</div>
 	    	</hgroup>
 	    	
 	    	
@@ -120,7 +116,7 @@
 							<?php } ?>
 							
 							
-							
+							<li id="separator"></li>
 							<li class="cart"><a href="">Cosul meu (0)</a></li>
               <li class="cart"><a href="">Contul meu</a></li>
               <li id="info" class="cart">Informatii</li>
