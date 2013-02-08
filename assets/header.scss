@@ -99,11 +99,6 @@ body {
           padding: 0 $pad/2;
           
           li {
-            @include mobile-only {
-              font-size: small;
-              margin-right: $pad/2;
-            }
-            
             &#info {
               cursor: pointer;
               
@@ -115,18 +110,24 @@ body {
                 @include rotate(270deg, .7);
               }
             }
+            &.cart {
+              float: right;
+            }
+          }
+          
+          @include mobile-only {
+            padding: 0;
             
-            &#separator {
-              @include mobile-only {
+            li {
+              font-size: small;
+              margin-right: $pad/2;
+              
+              &#separator {
                 width: 100%;
                 margin-top: $pad/2;
               }
-            }
-            
-            &.cart {
-              float: right;
               
-              @include mobile-only {
+              &.cart {
                 float: left;
               }
             }

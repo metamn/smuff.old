@@ -28,16 +28,47 @@ body.single {
 			  float: right;
 			  margin-right: 0;
 			}
+			
+			#title {
+			  h1 {
+			    @include mobile-only {
+			      padding: $pad/4 0;
+			    }
+			  }
+			}
 		
 		
 			#shopping-cart {
 		    @include add-to-cart;
 		    
 		    @include mobile-only {
-		      .add-to-cart-button {
-		        margin-top: $pad;
-		        display: block;
+		      background: none;
+		      border-bottom: 1px solid $light-gray;
+		      font-size: small;
+		      
+		      #add-to-cart {
+		        padding: 0;
+		        
+		        .delivery {
+		          margin-top: 0;
+		          padding-bottom: $pad/4;
+		          border-bottom: 1px solid $light-gray;
+		          color: $color;
+		        }
+		        .oldprice {
+		          color: $color;
+		        }
+		        .add-to-cart-button {
+		          margin: $pad 0;
+		          display: inline-block;
+		        }
+		        
+		        .animation {
+		          display: none;
+		        }
 		      }
+		      
+		      
 		    }
 		  }
 		  
@@ -48,6 +79,17 @@ body.single {
 		      margin: $pad auto;
 		      
 		      @include product-description;
+		      
+		      @include mobile-only {
+		        font-size: small;
+		        
+		        ul {
+		          li {
+		            border-bottom: none;
+		            padding-bottom: 0;
+		          }
+		        }
+		      }
 		    }
 		  }
 			
@@ -80,15 +122,30 @@ body.single {
 			      }
 			    }
 			    
+			    @include mobile-only {
+			      display: none;
+			    }
+			    
 			    @include desktop-and-up {
 			      margin: $pad 0;
 			    }
 			  }
+			  
+			  &.large {
+			    @include col(74%, 0, 2.5%);
+			    float: left;
+			  }
+			  
+			  
+			  @include mobile-only {
+			    margin-bottom: $pad;
+			    
+			    #more {
+			      margin: 0;
+			    }
+			  }
 			}
-			#large-image.large {
-			  @include col(74%, 0, 2.5%);
-			  float: left;
-			}
+			
 			
 			
 		
