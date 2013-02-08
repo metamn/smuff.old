@@ -23,7 +23,10 @@
 		  ?>
 		
 			<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
-			<span id="more">(Click pentru mai multe imagini)</span>
+			
+			<div id="more">
+			  <span>Click pentru mai multe imagini si detalii</span>
+			</div>
 	  </div>
 	  
 	  <div id="thumbs">
@@ -64,9 +67,7 @@
 	    <div id="shopping-cart">
 	      <?php include 'single-for-product__shopping.php' ?>
 	    </div>
-	    
 	  </div>
-	
 	</div>		      
 	
 	<div id="right-column">

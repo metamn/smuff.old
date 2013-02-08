@@ -30,13 +30,25 @@ body.single {
 				  }
 				  
 				  #more {
+				    @include block;
+				    margin: $pad*2 0;
 				    text-align: center;
-				    color: $gray;
-				    font-style: italic;
-				    font-family: 'Old Standard TT', serif;
+				     
+				    span {
+				      font-style: italic;
+				      font-family: 'Old Standard TT', serif;
+				      background: $background;
+				      
+				      &:after {
+				        content: '\21E2';
+				        margin-left: $pad/4;
+				        color: $sale;
+				      }
+				    }
 				    
-				    display: block;
-				    background: $background;
+				    @include desktop-and-up {
+				      margin: $pad 0;
+				    }
 				  }
 				}
 				#large-image.large {
@@ -109,6 +121,7 @@ body.single {
 			    }
 			  }
 			  #description.large {
+			    display: block;
 			    @include col(47.5%, 0, 5%);
 			    margin-top: $pad/2;
 			  }
