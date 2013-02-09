@@ -16,7 +16,7 @@ body.single {
 		article {
 			@include block;
 			
-			#title, #shopping-cart, #images, #description {
+			#article-title, #shopping-cart, #images, #description {
 			  @include col(47.5%, 0, 5%);
 			  
 			  @include mobile-only {
@@ -24,12 +24,12 @@ body.single {
 			  }
 			}
 			
-			#title, #shopping-cart, #description {
+			#article-title, #shopping-cart, #description {
 			  float: right;
 			  margin-right: 0;
 			}
 			
-			#title {
+			#article-title {
 			  h1 {
 			    padding: $pad/4 0;
 			  }
@@ -130,8 +130,8 @@ body.single {
         margin-bottom: $margin;
         
         @include product-thumb;
-       
-        .normal-price {
+               
+        .normal-price, .old-price {
           background: $background;
         }
         

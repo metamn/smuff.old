@@ -1545,25 +1545,25 @@ body.single .container article {
   float: left;
 }
 /* line 19, single.scss */
-body.single .container article #title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description {
+body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description {
   width: 47.5%;
   margin: 0 5% 0 0;
   float: left;
 }
 @media (max-width: 480px) {
   /* line 19, single.scss */
-  body.single .container article #title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description {
+  body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description {
     width: 100%;
     float: left;
   }
 }
 /* line 27, single.scss */
-body.single .container article #title, body.single .container article #shopping-cart, body.single .container article #description {
+body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #description {
   float: right;
   margin-right: 0;
 }
 /* line 33, single.scss */
-body.single .container article #title h1 {
+body.single .container article #article-title h1 {
   padding: 0.3125em 0;
 }
 /* line 115, theme.scss */
@@ -1843,7 +1843,7 @@ body.single .container section #product.on-sale {
   padding-bottom: 0;
 }
 /* line 134, single.scss */
-body.single .container section #product .normal-price {
+body.single .container section #product .normal-price, body.single .container section #product .old-price {
   background: white;
 }
 @media (max-width: 480px) {

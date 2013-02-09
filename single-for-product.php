@@ -13,7 +13,7 @@
 
 <article <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
   
-  <div id="title">
+  <div id="article-title">
     <h1>
 		  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 	  </h1>
