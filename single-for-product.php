@@ -19,46 +19,41 @@
 	  </h1>
 	</div>
 	
-	<div id="large-image">
+	
+	<div id="images">
     <?php 
 		  $imgs = post_attachements($post->ID);
 		  $img = $imgs[0];  
 		  $full = wp_get_attachment_image_src($img->ID, 'full');
 		  $large = wp_get_attachment_image_src($img->ID, 'large');    
 	  ?>
-	
-		<img class="large-image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
-		
-		<div id="more">
-		  <span>Click pentru mai multe imagini si detalii</span>
+	  
+	  <div id="large-image">
+		  <img src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
 		</div>
+		
+		<div id="thumbs">
+		  <?php 
+		    $counter = 1;
+		    foreach ($imgs as $img) { 
+			    $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
+			    $large = wp_get_attachment_image_src($img->ID, 'full'); ?>
+			
+			    <div id="thumb" class="c<?php echo $counter ?>">
+			      <img src="<?php echo $thumb[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>" data-image="<?php echo $large[0]?>"/>				
+			    </div>
+		      <?php 
+		        $counter += 1;
+		        if ($counter == 7) { /*break;*/ }
+		  } ?> 
+	  </div>  
 	</div>
 	  
-  <div id="thumbs">
-		<?php 
-		  $counter = 1;
-		  foreach ($imgs as $img) { 
-			  $thumb = wp_get_attachment_image_src($img->ID, 'thumbnail'); 
-			  $large = wp_get_attachment_image_src($img->ID, 'full'); ?>
-			
-			  <div id="thumb" class="c<?php echo $counter ?>">
-			    <img src="<?php echo $thumb[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>" data-image="<?php echo $large[0]?>"/>				
-			  </div>
-		    <?php 
-		      $counter += 1;
-		      if ($counter == 7) { /*break;*/ }
-		} ?> 
-		
-		<div id="close">
-      <span>inapoi</span>
-    </div>
-	</div>
-	
+  
 	
   <div id="shopping-cart">
     <?php include 'single-for-product__shopping.php' ?>
   </div>
-	  
 	
 	  
   <div id="description"> 
@@ -103,6 +98,8 @@
       </ul>
     </div>
 	</div>  
+	
+	
 	
 </article>
 			

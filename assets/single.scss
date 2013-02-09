@@ -16,7 +16,7 @@ body.single {
 		article {
 			@include block;
 			
-			#title, #shopping-cart, #large-image, #thumbs, #description {
+			#title, #shopping-cart, #images, #description {
 			  @include col(47.5%, 0, 5%);
 			  
 			  @include mobile-only {
@@ -40,140 +40,48 @@ body.single {
 		
 			#shopping-cart {
 		    @include add-to-cart;
-		    
-		    @include mobile-only {
-		      background: none;
-		      border-bottom: 1px solid $light-gray;
-		      font-size: small;
-		      
-		      #add-to-cart {
-		        padding: 0;
-		        
-		        .delivery {
-		          margin-top: 0;
-		          padding-bottom: $pad/4;
-		          border-bottom: 1px solid $light-gray;
-		          color: $color;
-		        }
-		        .oldprice {
-		          color: $color;
-		        }
-		        .add-to-cart-button {
-		          margin: $pad 0;
-		          display: inline-block;
-		        }
-		        
-		        .animation {
-		          display: none;
-		        }
-		      }
-		      
-		      
-		    }
 		  }
 		  
 		  			
 			
-			#large-image {
+			#images {
 			  margin-top: $pad;
 			  margin-bottom: $pad*2;
 			
 			  cursor: pointer;
 			  
-			  img {
-			    @include image-bordered(0%);
-			  }
-			  
-			  #more {
-			    @include block;
-			    margin: $pad*2 0;
-			    text-align: center;
-			     
-			    span {
-			      font-style: italic;
-			      font-family: 'Old Standard TT', serif;
-			      background: $background;
-			      
-			      &:after {
-			        content: '\21E2';
-			        margin-left: $pad/4;
-			        color: $sale;
-			      }
-			    }
-			    
-			    @include mobile-only {
-			      display: none;
-			    }
-			    
-			    @include desktop-and-up {
-			      margin: $pad 0;
-			    }
-			  }
-			  
-			  &.large {
-			    @include col(74%, 0, 2.5%);
-			    float: left;
-			  }
-			  
-			  
-			  @include mobile-only {
-			    margin-bottom: $pad;
-			    
-			    #more {
-			      margin: 0;
-			    }
-			  }
-			}
-			
-			
-			
-		
-				
-			#thumbs { 
-			  @include col(23%, 0, 0);
-			  display: none;
-		    
-			  #thumb {
-			   @include col(30%, 0, 5%);
-			   margin-bottom: $margin;
-			    
-			    cursor: pointer;
-			  
+			  #large-image {
 			    img {
-			      @include image-bordered(2%);
-			    }  
-			  }
-			  #thumb.c3, #thumb.c6, #thumb.c9, #thumb.c12, #thumb.c15, #thumb.c18, #thumb.c21 {
-			    margin-right: 0;
+			      @include image-bordered(0%);
+			    }
 			  }
 			  
-			  #close {
-			    @include block;
-			    margin-top: $margin;
-
-			    border-top: 1px solid $very-light-gray;
-			    border-bottom: 1px solid $very-light-gray;
-			    padding: $pad/4 0;
+			  #thumbs { 
+			    margin-top: $pad;
 			    
-			    cursor: pointer;
-			    
-			    span {
-			      color: $light-gray;
-			    }
-			    
-			    span:before {
-			      @include close-icon;
+			    #thumb {
+			     @include col(23%, 0, 2.5%);
+			     margin-bottom: $margin;
 			      
-			      float: left;
-			      margin-left: 0;
-			      margin-right: $pad/4;
+			      cursor: pointer;
+			    
+			      img {
+			        @include image-bordered(2%);
+			      }  
+			    }
+			    #thumb.c4, #thumb.c8, #thumb.c12, #thumb.c16, #thumb.c20 {
+			      margin-right: 0;
 			    }
 			  }
 			}
+			
+			
+				
+			
 				
 			
 			#description {
-			  margin: $pad 0;
+			  margin: $pad*2 0;
 			  
 			  ul#tabs {
 			    @include block;
@@ -204,7 +112,6 @@ body.single {
 			  }
 			 
 		    div {
-		      
 		      @include product-description;
 		    }
 		  }

@@ -72,6 +72,7 @@ a, a:active, a:visited, a:hover {
   
   line-height: 1.75;
   max-width: 600px;
+  font-size: 90%;
   
   br {
     margin-top: $pad;
@@ -79,6 +80,7 @@ a, a:active, a:visited, a:hover {
   }
   
   ul {
+    margin: 0 $pad;
     
     li {
       margin-bottom: $pad/2;
