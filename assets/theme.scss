@@ -51,7 +51,6 @@ a, a:active, a:visited, a:hover {
 }
 .old-price, .oldprice {
   text-decoration: line-through;
-  background: $background;
   color: $light-gray;
 }
 .normal-price {
@@ -126,13 +125,13 @@ a, a:active, a:visited, a:hover {
     }
     
     .cart-operations {
-      background: url(stripe.png);
       @include block;
-      padding: $pad/2;
       margin: $pad/2 0;
       
       
       .wpsc_variation_forms {
+        margin-top: $pad/2;
+        
         .select {
           select {
             border-top: 1px solid $gray;
@@ -158,15 +157,12 @@ a, a:active, a:visited, a:hover {
           margin-right: $pad;
           padding: $pad/2;
         }
-        
-        .oldprice {
-          background: $background;
-        }
         .normal-price.on-sale {
           background: $sale;
         }
         .oldprice.on-sale {
-          border: 1px solid;
+          margin-right: 0;
+          margin-left: $pad;
         }
       }
       

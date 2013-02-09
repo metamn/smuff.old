@@ -84,13 +84,11 @@
 								        $klass = '';
 								      } ?>
 								      
-								      <?php if(wpsc_product_on_special()) : ?>
-								        <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
-								      <?php endif; ?>
-								      
-								      
 								      <span class="price normal-price <?php echo $klass ?>">
 								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
+								         <?php if(wpsc_product_on_special()) : ?>
+								          <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
+								        <?php endif; ?>
 								      </span>  
 								      
 								      
