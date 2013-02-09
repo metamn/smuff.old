@@ -59,7 +59,7 @@
   <div id="description"> 
 	  <ul id="tabs">
 	    <li id="details">Descriere</li>
-	    <li id="properties">Proprietati</li>
+	    <li id="properties">Detalii produs</li>
 	    <li id="usage">Folosire</li>
 	   </ul>  
 	   

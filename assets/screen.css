@@ -1563,11 +1563,9 @@ body.single .container article #title, body.single .container article #shopping-
   float: right;
   margin-right: 0;
 }
-@media (max-width: 480px) {
-  /* line 33, single.scss */
-  body.single .container article #title h1 {
-    padding: 0.3125em 0;
-  }
+/* line 33, single.scss */
+body.single .container article #title h1 {
+  padding: 0.3125em 0;
 }
 /* line 116, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .imagecol {
@@ -1659,47 +1657,46 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 47, single.scss */
+/* line 45, single.scss */
 body.single .container article #images {
-  margin-top: 1.25em;
   margin-bottom: 2.5em;
   cursor: pointer;
 }
-/* line 54, single.scss */
+/* line 51, single.scss */
 body.single .container article #images #large-image img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 59, single.scss */
+/* line 56, single.scss */
 body.single .container article #images #thumbs {
   margin-top: 1.25em;
 }
-/* line 62, single.scss */
+/* line 59, single.scss */
 body.single .container article #images #thumbs #thumb {
-  width: 23%;
+  width: 18%;
   margin: 0 2.5% 0 0;
   float: left;
   margin-bottom: 5%;
   cursor: pointer;
 }
-/* line 68, single.scss */
+/* line 65, single.scss */
 body.single .container article #images #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 72, single.scss */
-body.single .container article #images #thumbs #thumb.c4, body.single .container article #images #thumbs #thumb.c8, body.single .container article #images #thumbs #thumb.c12, body.single .container article #images #thumbs #thumb.c16, body.single .container article #images #thumbs #thumb.c20 {
+/* line 69, single.scss */
+body.single .container article #images #thumbs #thumb.c5, body.single .container article #images #thumbs #thumb.c10, body.single .container article #images #thumbs #thumb.c15, body.single .container article #images #thumbs #thumb.c20 {
   margin-right: 0;
 }
-/* line 83, single.scss */
+/* line 80, single.scss */
 body.single .container article #description {
   margin: 2.5em 0;
 }
-/* line 86, single.scss */
+/* line 83, single.scss */
 body.single .container article #description ul#tabs {
   width: 100%;
   float: left;
@@ -1719,7 +1716,7 @@ body.single .container article #description ul#tabs li {
 body.single .container article #description ul#tabs li.last {
   margin-right: 0;
 }
-/* line 92, single.scss */
+/* line 89, single.scss */
 body.single .container article #description ul#tabs li {
   color: #aaaaaa;
   cursor: pointer;
@@ -1729,7 +1726,7 @@ body.single .container article #description ul#tabs li {
   border: 1px solid #cccccc;
   border-bottom: none;
 }
-/* line 103, single.scss */
+/* line 100, single.scss */
 body.single .container article #description ul#tabs li.active {
   font-style: normal;
   color: #363636;
@@ -1737,7 +1734,7 @@ body.single .container article #description ul#tabs li.active {
   position: relative;
   top: 1px;
 }
-/* line 114, single.scss */
+/* line 111, single.scss */
 body.single .container article #description div {
   padding: 1.25em;
   margin: 2.5em 0;
@@ -1761,18 +1758,18 @@ body.single .container article #description div ul li {
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 124, single.scss */
+/* line 121, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 127, single.scss */
+/* line 124, single.scss */
 body.single .container section h2 {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
-/* line 133, single.scss */
+/* line 130, single.scss */
 body.single .container section #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1847,19 +1844,19 @@ body.single .container section #product #category a {
 body.single .container section #product.on-sale {
   padding-bottom: 0;
 }
-/* line 139, single.scss */
+/* line 136, single.scss */
 body.single .container section #product .normal-price {
   background: white;
 }
 @media (max-width: 480px) {
-  /* line 133, single.scss */
+  /* line 130, single.scss */
   body.single .container section #product {
     width: 100%;
     float: left;
     margin-right: 0;
   }
 }
-/* line 149, single.scss */
+/* line 146, single.scss */
 body.single .container section #product.c4, body.single .container section #product.c8, body.single .container section #product.c12, body.single .container section #product.c16, body.single .container section #product.c20, body.single .container section #product.c24, body.single .container section #product.c28 {
   margin-right: 0;
 }
