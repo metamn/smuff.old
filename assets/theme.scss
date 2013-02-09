@@ -184,6 +184,10 @@ a, a:active, a:visited, a:hover {
     
     
     #product-discontinued {
+      background: url(stripe.png);
+      padding: $pad;
+      margin-top: $pad;
+      
       h3 {
         padding-top: 0;
       }
