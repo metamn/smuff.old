@@ -63,16 +63,20 @@ $(document).ready(function() {
   
   
   
-  // Accordion on product page
+  // Tabs on product page
   
-  $('.single #description .pane').hide();
-   $('.single #description .pane').first().show();
-  $('.single #description h3').click(function() {
-  	$(this).next().slideToggle();
+  $('.single #description div').hide();
+  $('.single #description div').first().next().show();
+  $('.single #description #tabs li').first().next().addClass('active');
+  
+  $('.single #description #tabs li').click(function() {
+    $('.single #description div').hide();
+    $('.single #description #tabs li').removeClass('active');
+    $(this).addClass('active');
+    
+  	var id = $(this).attr('id');
+  	$('.single #description div#' + id).slideToggle();
   });
-  
-  // Removing "Opiniile Cumparatorilor" from Product page
-  $(".single #description h3#comments").prev().prev().hide();
   
   
    

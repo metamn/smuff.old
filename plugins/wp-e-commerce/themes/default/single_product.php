@@ -40,6 +40,8 @@
 					      <span class='delivery'>
 		              <span>Livrare in <?php  echo $delivery ?></span>
 		            </span>
+		            
+		            <div class='cart-operations'>
 					      
 					      <?php /** the variation group HTML and loop */?>
 					      <div class="wpsc_variation_forms">
@@ -165,7 +167,7 @@
 					      <?php endif ; ?>
 					      
 					      
-					     
+					     </div> <!-- cart operations -->
 					      
 					 
 					</form>

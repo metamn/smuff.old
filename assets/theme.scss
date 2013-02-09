@@ -15,11 +15,7 @@ $yellow: #F9B451;
 $notice: #F9B451;
 
 $gray: #AAA;
-$gray-2: #999;
-$dark-gray: #565656;
 $light-gray: #ccc;
-$light-gray-2: #eee;
-$light-gray-3: #e3e3e3;
 $very-light-gray: #f1f1f1;
 
 
@@ -70,8 +66,9 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-description {
   padding: $pad;
+  margin: $pad*2 0;
+  
   background: $background;
-  color: $dark-gray;
   
   line-height: 1.75;
   max-width: 600px;
@@ -82,7 +79,7 @@ a, a:active, a:visited, a:hover {
   }
   
   ul {
-    margin: 0;
+    
     li {
       margin-bottom: $pad/2;
       padding-bottom: $pad/4;
@@ -111,79 +108,81 @@ a, a:active, a:visited, a:hover {
 
 
 @mixin add-to-cart {
-  background: url(stripe.png);
   
   #add-to-cart {
-    padding: $pad/2;
-			        
-			    
+   			    
     .imagecol {
       display: none;
     }
     
     .delivery {
       @include block;
-      color: $gray;
-      
-      margin-top: $pad;
 			          
       span {
         background: $background;
-        padding: $pad/8;
       }
     }
     
-    .wpsc_variation_forms {
+    .cart-operations {
+      background: url(stripe.png);
       @include block;
-      margin: $pad 0 $pad/2;
+      padding: $pad/2;
+      margin: $pad/2 0;
       
-      .select {
-        select {
-          border-top: 1px solid $gray;
-          border-bottom: 1px solid $gray;
-          padding: $pad/4;
-          
-          width: 92%;
+      
+      .wpsc_variation_forms {
+        .select {
+          select {
+            border-top: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            padding: $pad/4 0;
+            margin: 0 0 $pad/2;
+            
+            font-size: 90%;
+            
+            width: 92%;
+          }
+        }
+        .select:after {
+          padding: $pad;
+          margin: -3.4em $pad*2 0 -2.1em;
+        }
+        
+      }
+      
+      .wpsc_product_price {
+        
+        .price {
+          margin-right: $pad;
+          padding: $pad/2;
+        }
+        
+        .oldprice {
+          background: $background;
+        }
+        .normal-price.on-sale {
+          background: $sale;
+        }
+        .oldprice.on-sale {
+          border: 1px solid;
         }
       }
-      .select:after {
-        padding: $pad;
-        margin: -3.1em $pad*2 0 -2.1em;
+      
+      .add-to-cart-button {
+        input[type="submit"] {
+          @include button($color, $green);
+        }
+      }
+      
+      .checkout {
+        display: none;
+      }
+      
+      .wpsc_loading_animation {
+        visibility: hidden;
       }
       
     }
-    
-    .wpsc_product_price {
-      .price {
-        margin-right: $pad;
-        padding: $pad/2;
-      }
-      
-      .oldprice {
-        background: $background;
-      }
-      .normal-price.on-sale {
-        background: $sale;
-      }
-      .oldprice.on-sale {
-        border: 1px solid;
-      }
-    }
-    
-    .add-to-cart-button {
-      input[type="submit"] {
-        @include button($color, $green);
-      }
-    }
-    
-    .checkout {
-      display: none;
-    }
-    
-    .wpsc_loading_animation {
-      visibility: hidden;
-    }
-    
     
     
     #product-discontinued {

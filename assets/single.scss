@@ -16,7 +16,7 @@ body.single {
 		article {
 			@include block;
 			
-			#title, #shopping-cart, #short-description, #large-image, #thumbs, #description {
+			#title, #shopping-cart, #large-image, #thumbs, #description {
 			  @include col(47.5%, 0, 5%);
 			  
 			  @include mobile-only {
@@ -24,7 +24,7 @@ body.single {
 			  }
 			}
 			
-			#title, #shopping-cart, #short-description {
+			#title, #shopping-cart, #description {
 			  float: right;
 			  margin-right: 0;
 			}
@@ -72,28 +72,7 @@ body.single {
 		    }
 		  }
 		  
-		  
-		  #short-description {
-		    #inner {
-		      width: 90%;
-		      margin: $pad auto;
-		      
-		      @include product-description;
-		      
-		      @include mobile-only {
-		        font-size: small;
-		        
-		        ul {
-		          li {
-		            border-bottom: none;
-		            padding-bottom: 0;
-		          }
-		        }
-		      }
-		    }
-		  }
-			
-			
+		  			
 			
 			#large-image {
 			  margin-top: $pad;
@@ -192,33 +171,44 @@ body.single {
 			  }
 			}
 				
+			
 			#description {
-			  display: none;
+			  margin: $pad 0;
 			  
-		    h3 {
-		      padding: $pad/4 0;
-		      margin: $pad/4 0;
-		      border-bottom: 1px solid $very-light-gray;
+			  ul#tabs {
+			    @include block;
+			    @include list-inline;
+			    
+			    border-bottom: 1px solid $light-gray;
+			    
+			    li {
+			      color: $gray;
+			      cursor: pointer;
+			      font-style: italic;
+			      
+			      padding: $pad/4 $pad/2;
+			      margin: 0 0 0 $pad/2;
+			      
+			      border: 1px solid $light-gray;
+			      border-bottom: none;
+			      
+			      &.active {
+			        font-style: normal;
+			        color: $color;
+			        
+			        border-bottom: 1px solid $background;
+			        position: relative;
+			        top: 1px;
+			      }
+			    }
+			  }
+			 
+		    div {
 		      
-		      cursor: pointer;
-		    }
-		    h3:after {
-		      @include arrow-to-reveal-content;
-		    }
-		    
-		    .pane {
 		      @include product-description;
 		    }
-		    
-		    #facebook-like {
-		      margin: $pad 0;
-		    }
 		  }
-		  #description.large {
-		    display: block;
-		    @include col(47.5%, 0, 5%);
-		    margin-top: $pad/2;
-		  }
+		  
 			
 		}
 		
