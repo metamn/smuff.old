@@ -78,7 +78,10 @@
     <h4>
       Inscrie-te la newsletter si ai o <strong>livrare gratuita!</strong>
     </h4>
-    <?php include 'mailchimp.php'; ?>  
+    <?php 
+      $mailchimp_button = "Inscriere la newsletter";
+      include 'mailchimp.php'; 
+    ?>  
   </div>
   
   <div id="facebook-connect">  	

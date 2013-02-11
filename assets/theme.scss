@@ -75,6 +75,7 @@ a, a:active, a:visited, a:hover {
   input {
     text-align: center;
     margin-bottom: $pad/4;
+    font-size: small;
   }
   
   input[type="submit"] {
@@ -216,6 +217,10 @@ a, a:active, a:visited, a:hover {
       }
       p {
         margin-bottom: $pad;
+      }
+      
+     input[type="submit"] {
+        @include button($background, $color);
       }
     }
   }
