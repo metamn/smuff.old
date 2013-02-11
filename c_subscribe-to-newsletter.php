@@ -79,8 +79,8 @@
       Inscrie-te la newsletter si ai o <strong>livrare gratuita!</strong>
     </h4>
     <?php include 'mailchimp.php'; ?>  
-    
   </div>
+  
   <div id="facebook-connect">  	
 		<div id="auth-loggedout">
 			<h4>Sau</h4>

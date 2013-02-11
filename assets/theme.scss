@@ -52,6 +52,7 @@ a, a:active, a:visited, a:hover {
 .old-price, .oldprice {
   text-decoration: line-through;
   color: $light-gray;
+  background: $background;
 }
 .normal-price {
   background: $blue;
@@ -61,6 +62,21 @@ a, a:active, a:visited, a:hover {
 
 /* Mixins
 */
+
+
+@mixin subscribe-to-newsletter {
+  border: 1px dotted;
+  text-align: center;
+  
+  #text, #facebook-connect {
+    margin: $pad;
+  }
+  
+  input {
+    text-align: center;
+    margin-bottom: $pad/4;
+  }
+}
 
 
 @mixin product-description {
@@ -163,6 +179,9 @@ a, a:active, a:visited, a:hover {
         .oldprice.on-sale {
           margin-right: 0;
           margin-left: $pad;
+        }
+        .old-price, .oldprice {
+          background: $sale;
         }
       }
       

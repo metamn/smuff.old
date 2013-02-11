@@ -97,6 +97,7 @@
         <li>Gadgeturile cu ecran tactil sunt peste tot, si cererea pentru folosirea lor pe timp de frig a fost manifestata clar, astfel produsul a fost creat: Manusi Touchscreen. Ne fac viata mai usoara, realmente!</li>
       </ul>
     </div>
+    
 	</div>  
 	
 	
@@ -104,7 +105,13 @@
 </article>
 			
 
-
+<section id="campaigns">
+  <div id="subscribe">
+    <?php include 'c_subscribe-to-newsletter.php' ?>
+  </div>
+  
+  <?php include 'c_share.php' ?>
+</section>
 
 
     

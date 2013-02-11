@@ -197,57 +197,15 @@ body.home {
 	  }
 	  
 	  #subscribe {
-	    ul {
-	      @include list-inline;
-	      
-	      li {
-	        @include col(30%, 0, 5%);
-	        
-	        @include mobile-only {
-            @include block;
-            width: 90%;
-            margin: 5%;
-          }
-          
-          @include tablet-only {
-            @include col(47.5%, 0, 2.5%);
-            margin-bottom: 5%;
-          }
-	        
-	        #inner {
-	          border: 1px dotted;
-	          padding: $pad;
-	          text-align: center;
-	          height: 290px;
-	        }
-	      }
-	      
-	      #newsletter {
-	        input[type="email"] {
-	          width: 100%;
-	          margin-bottom: $pad/4;
-	          margin-top: $pad*2;
-	          text-align: center;
-	        }
-	      }
-	      
-	      #comments {
-	        #text {
-	          font-size: large;
-	        }
-	        
-	        #author {
-	          margin-top: $pad;
-	          
-	          margin-bottom: $pad*2;
-	          padding-bottom: $pad/2;
-	          border-bottom: 1px solid $light-gray;
-	          
-	          font-style: italic;
-	        }
-	      }
-	      
-	    }
+	    @include col(23%, 0, 2.5%);
+	    margin-top: $pad*2;
+	    
+      
+      #subscribe-to-newsletter {
+        @include subscribe-to-newsletter;
+      }
+	  
+     
 	  }
 	 
 	}

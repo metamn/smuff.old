@@ -15,6 +15,7 @@ body.single {
 	
 		article {
 			@include block;
+			margin-bottom: $pad*2;
 			
 			#article-title, #shopping-cart, #images, #description {
 			  @include col(47.5%, 0, 5%);
@@ -43,7 +44,6 @@ body.single {
 		  			
 			
 			#images {
-			  margin-bottom: $pad*2;
 			
 			  cursor: pointer;
 			  
@@ -76,7 +76,7 @@ body.single {
 				
 			
 			#description {
-			  margin: $pad*2 0;
+			  margin-top: $pad*2;
 			  
 			  ul#tabs {
 			    @include block;
@@ -112,6 +112,29 @@ body.single {
 		  }
 		  
 			
+		}
+		
+		
+		#campaigns {
+		  margin-bottom: $pad*2;
+		
+		  #subscribe, #share {
+		    @include col(47.5%, 0, 5%);
+		  }
+		  
+		  #subscribe {
+		    #subscribe-to-newsletter {
+		      @include subscribe-to-newsletter;
+		    }
+		  }
+		  
+		  #share {
+			  margin-right: 0;
+			  
+			  ul {
+			    @include list-inline;
+			  }
+			}
 		}
 		
 		
