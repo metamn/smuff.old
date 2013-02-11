@@ -540,17 +540,17 @@ body .container #header hgroup #logo {
   /* an extra space must be added */
   float: left;
 }
-/* line 349, theme.scss */
+/* line 353, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 355, theme.scss */
+/* line 359, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 359, theme.scss */
+/* line 363, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
@@ -792,14 +792,14 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   padding-bottom: 2.5em;
 }
-/* line 269, theme.scss */
+/* line 273, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 273, theme.scss */
+/* line 277, theme.scss */
 body.home .container section #body #products #product #percentage {
   position: relative;
   top: -16em;
@@ -813,31 +813,31 @@ body.home .container section #body #products #product #percentage {
   font-weight: bold;
   text-align: center;
 }
-/* line 290, theme.scss */
+/* line 294, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 298, theme.scss */
+/* line 302, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 306, theme.scss */
+/* line 310, theme.scss */
 body.home .container section #body #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 312, theme.scss */
+/* line 316, theme.scss */
 body.home .container section #body #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 317, theme.scss */
+/* line 321, theme.scss */
 body.home .container section #body #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -847,14 +847,14 @@ body.home .container section #body #products #product #category {
   font-size: small;
   background: #cccccc;
 }
-/* line 326, theme.scss */
+/* line 330, theme.scss */
 body.home .container section #body #products #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
 }
-/* line 334, theme.scss */
+/* line 338, theme.scss */
 body.home .container section #body #products #product.on-sale {
   padding-bottom: 0;
 }
@@ -908,7 +908,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 223, theme.scss */
+/* line 227, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -925,17 +925,17 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 226, theme.scss */
+/* line 230, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 232, theme.scss */
+/* line 236, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 236, theme.scss */
+/* line 240, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -1096,6 +1096,28 @@ body.home .container #subscribe #subscribe-to-newsletter #text, body.home .conta
 body.home .container #subscribe #subscribe-to-newsletter input {
   text-align: center;
   margin-bottom: 0.3125em;
+}
+/* line 80, theme.scss */
+body.home .container #subscribe #subscribe-to-newsletter input[type="submit"] {
+  -webkit-border-radius: 6% 6%;
+  -moz-border-radius: 6% / 6%;
+  border-radius: 6% / 6%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4a4a4a), color-stop(100%, #303030));
+  background-image: -webkit-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  background-image: -moz-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  background-image: -o-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  background-image: linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  border: 1px solid #333333;
+  color: white;
+  text-shadow: 0px 0px 1px #cccccc;
+}
+/* line 122, theme.scss */
+body.home .container #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
+  background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: -moz-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
 
 /* line 5, footer.scss */
@@ -1279,11 +1301,29 @@ body.archive section hgroup nav div label:after select {
 }
 /* line 58, archive.scss */
 body.archive section hgroup nav div input[type="submit"] {
-  background: #4d8fce;
   font-size: small;
+  -webkit-border-radius: 6% 6%;
+  -moz-border-radius: 6% / 6%;
+  border-radius: 6% / 6%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #5e9ad2), color-stop(100%, #4580b9));
+  background-image: -webkit-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  background-image: -moz-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  background-image: -o-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  background-image: linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  border: 1px solid #4987c3;
+  color: white;
+  text-shadow: 0px 0px 1px #cccccc;
+}
+/* line 122, theme.scss */
+body.archive section hgroup nav div input[type="submit"]:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4580b9), color-stop(100%, #5e9ad2));
+  background-image: -webkit-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
+  background-image: -moz-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
+  background-image: -o-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
+  background-image: linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
 }
 @media only screen and (max-width: 1024px) {
-  /* line 66, archive.scss */
+  /* line 67, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1292,7 +1332,7 @@ body.archive section hgroup nav div input[type="submit"] {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 77, archive.scss */
+  /* line 78, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1305,61 +1345,61 @@ body.archive section hgroup nav div input[type="submit"] {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 81, archive.scss */
+  /* line 82, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 87, archive.scss */
+  /* line 88, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 92, archive.scss */
+  /* line 93, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 99, archive.scss */
+  /* line 100, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 106, archive.scss */
+/* line 107, archive.scss */
 body.archive section #pagination {
   float: right;
   margin-top: 0.625em;
   margin-right: 1.25em;
 }
-/* line 111, archive.scss */
+/* line 112, archive.scss */
 body.archive section #pagination .wp-paginate {
   margin: 0;
   font-size: small;
 }
-/* line 115, archive.scss */
+/* line 116, archive.scss */
 body.archive section #pagination .wp-paginate a {
   background: white;
 }
-/* line 119, archive.scss */
+/* line 120, archive.scss */
 body.archive section #pagination .wp-paginate span, body.archive section #pagination .wp-paginate a {
   padding: 0.3125em 0.625em;
 }
-/* line 123, archive.scss */
+/* line 124, archive.scss */
 body.archive section #pagination .wp-paginate .current {
   background: #4d8fce;
   border-color: #4d8fce;
 }
-/* line 128, archive.scss */
+/* line 129, archive.scss */
 body.archive section #pagination .wp-paginate .prev, body.archive section #pagination .wp-paginate .next {
   border: none;
 }
-/* line 135, archive.scss */
+/* line 136, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 138, archive.scss */
+/* line 139, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1368,14 +1408,14 @@ body.archive section #products #product {
   background: white url(stripe.png);
   padding-bottom: 2.5em;
 }
-/* line 269, theme.scss */
+/* line 273, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 273, theme.scss */
+/* line 277, theme.scss */
 body.archive section #products #product #percentage {
   position: relative;
   top: -16em;
@@ -1389,31 +1429,31 @@ body.archive section #products #product #percentage {
   font-weight: bold;
   text-align: center;
 }
-/* line 290, theme.scss */
+/* line 294, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 298, theme.scss */
+/* line 302, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 306, theme.scss */
+/* line 310, theme.scss */
 body.archive section #products #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 312, theme.scss */
+/* line 316, theme.scss */
 body.archive section #products #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 317, theme.scss */
+/* line 321, theme.scss */
 body.archive section #products #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1423,62 +1463,62 @@ body.archive section #products #product #category {
   font-size: small;
   background: #cccccc;
 }
-/* line 326, theme.scss */
+/* line 330, theme.scss */
 body.archive section #products #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
 }
-/* line 334, theme.scss */
+/* line 338, theme.scss */
 body.archive section #products #product.on-sale {
   padding-bottom: 0;
 }
-/* line 145, archive.scss */
+/* line 146, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 150, archive.scss */
+/* line 151, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 156, archive.scss */
+  /* line 157, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 167, archive.scss */
+  /* line 168, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 173, archive.scss */
+  /* line 174, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 176, archive.scss */
+  /* line 177, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 184, archive.scss */
+/* line 185, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 188, archive.scss */
+/* line 189, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 195, archive.scss */
+  /* line 196, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
@@ -1522,30 +1562,30 @@ body.single .container article #article-title, body.single .container article #s
 body.single .container article #article-title h1 {
   padding: 0.3125em 0;
 }
-/* line 131, theme.scss */
+/* line 135, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .imagecol {
   display: none;
 }
-/* line 135, theme.scss */
+/* line 139, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .delivery {
   width: 100%;
   float: left;
 }
-/* line 138, theme.scss */
+/* line 142, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .delivery span {
   background: white;
 }
-/* line 143, theme.scss */
+/* line 147, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations {
   width: 100%;
   float: left;
   margin: 0.625em 0;
 }
-/* line 148, theme.scss */
+/* line 152, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms {
   margin-top: 0.625em;
 }
-/* line 152, theme.scss */
+/* line 156, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms .select select {
   border-top: 1px solid #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
@@ -1554,30 +1594,30 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .wps
   font-size: 90%;
   width: 92%;
 }
-/* line 163, theme.scss */
+/* line 167, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms .select:after {
   padding: 1.25em;
   margin: -3.4em 2.5em 0 -2.1em;
 }
-/* line 172, theme.scss */
+/* line 176, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
 }
-/* line 176, theme.scss */
+/* line 180, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
 }
-/* line 179, theme.scss */
+/* line 183, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
   margin-left: 1.25em;
 }
-/* line 183, theme.scss */
+/* line 187, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 189, theme.scss */
+/* line 193, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1591,7 +1631,7 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   color: #363636;
   text-shadow: 0px 0px 1px #cccccc;
 }
-/* line 118, theme.scss */
+/* line 122, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -1599,25 +1639,25 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 194, theme.scss */
+/* line 198, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .checkout {
   display: none;
 }
-/* line 198, theme.scss */
+/* line 202, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 205, theme.scss */
+/* line 209, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
   background: url(stripe.png);
   padding: 1.25em;
   margin-top: 1.25em;
 }
-/* line 210, theme.scss */
+/* line 214, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued h3 {
   padding-top: 0;
 }
-/* line 213, theme.scss */
+/* line 217, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
@@ -1706,16 +1746,16 @@ body.single .container article #description div {
   max-width: 600px;
   font-size: 90%;
 }
-/* line 92, theme.scss */
+/* line 96, theme.scss */
 body.single .container article #description div br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 97, theme.scss */
+/* line 101, theme.scss */
 body.single .container article #description div ul {
   margin: 0 1.25em;
 }
-/* line 100, theme.scss */
+/* line 104, theme.scss */
 body.single .container article #description div ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
@@ -1744,6 +1784,28 @@ body.single .container #campaigns #subscribe #subscribe-to-newsletter #text, bod
 body.single .container #campaigns #subscribe #subscribe-to-newsletter input {
   text-align: center;
   margin-bottom: 0.3125em;
+}
+/* line 80, theme.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type="submit"] {
+  -webkit-border-radius: 6% 6%;
+  -moz-border-radius: 6% / 6%;
+  border-radius: 6% / 6%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4a4a4a), color-stop(100%, #303030));
+  background-image: -webkit-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  background-image: -moz-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  background-image: -o-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  background-image: linear-gradient(center top, #4a4a4a 5%, #303030 100%);
+  border: 1px solid #333333;
+  color: white;
+  text-shadow: 0px 0px 1px #cccccc;
+}
+/* line 122, theme.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
+  background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: -moz-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
 /* line 131, single.scss */
 body.single .container #campaigns #share {
@@ -1786,14 +1848,14 @@ body.single .container section #product {
   background: white url(stripe.png);
   padding-bottom: 2.5em;
 }
-/* line 269, theme.scss */
+/* line 273, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 273, theme.scss */
+/* line 277, theme.scss */
 body.single .container section #product #percentage {
   position: relative;
   top: -16em;
@@ -1807,31 +1869,31 @@ body.single .container section #product #percentage {
   font-weight: bold;
   text-align: center;
 }
-/* line 290, theme.scss */
+/* line 294, theme.scss */
 body.single .container section #product #title, body.single .container section #product #excerpt {
   margin: 0.625em 0.3125em;
   padding: 0.625em 1.25em;
   background: white;
   min-height: 4.5em;
 }
-/* line 298, theme.scss */
+/* line 302, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 306, theme.scss */
+/* line 310, theme.scss */
 body.single .container section #product #excerpt a {
   color: #aaaaaa;
 }
-/* line 312, theme.scss */
+/* line 316, theme.scss */
 body.single .container section #product #price {
   width: 50%;
   margin: 0 5% 0 1.25em;
   float: left;
   margin-top: 1.25em;
 }
-/* line 317, theme.scss */
+/* line 321, theme.scss */
 body.single .container section #product #category {
   min-width: 20%;
   margin-right: 1.5em;
@@ -1841,14 +1903,14 @@ body.single .container section #product #category {
   font-size: small;
   background: #cccccc;
 }
-/* line 326, theme.scss */
+/* line 330, theme.scss */
 body.single .container section #product #category a {
   padding: 0.625em;
   color: white;
   text-align: center;
   display: block;
 }
-/* line 334, theme.scss */
+/* line 338, theme.scss */
 body.single .container section #product.on-sale {
   padding-bottom: 0;
 }

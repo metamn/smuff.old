@@ -76,6 +76,10 @@ a, a:active, a:visited, a:hover {
     text-align: center;
     margin-bottom: $pad/4;
   }
+  
+  input[type="submit"] {
+    @include button($background, $color);
+  }
 }
 
 

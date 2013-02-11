@@ -56,8 +56,9 @@ body.archive {
           }
           
           input[type="submit"] {
-            background: $blue;
             font-size: small;
+            
+            @include button($background, $blue);
           }
         }
         
