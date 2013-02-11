@@ -116,7 +116,7 @@ a, a:active, a:visited, a:hover {
   border: 1px solid shade($background, 5%);
   
   color: $color;
-  @include single-text-shadow($light-gray);
+  @include single-text-shadow(#999);
   
   
   &:hover {

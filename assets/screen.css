@@ -1109,7 +1109,7 @@ body.home .container #subscribe #subscribe-to-newsletter input[type="submit"] {
   background-image: linear-gradient(center top, #4a4a4a 5%, #303030 100%);
   border: 1px solid #333333;
   color: white;
-  text-shadow: 0px 0px 1px #cccccc;
+  text-shadow: 0px 0px 1px #999999;
 }
 /* line 122, theme.scss */
 body.home .container #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
@@ -1312,7 +1312,7 @@ body.archive section hgroup nav div input[type="submit"] {
   background-image: linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
   border: 1px solid #4987c3;
   color: white;
-  text-shadow: 0px 0px 1px #cccccc;
+  text-shadow: 0px 0px 1px #999999;
 }
 /* line 122, theme.scss */
 body.archive section hgroup nav div input[type="submit"]:hover {
@@ -1541,20 +1541,20 @@ body.single .container article {
   margin-bottom: 2.5em;
 }
 /* line 20, single.scss */
-body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description {
+body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description, body.single .container article #share {
   width: 47.5%;
   margin: 0 5% 0 0;
   float: left;
 }
 @media (max-width: 480px) {
   /* line 20, single.scss */
-  body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description {
+  body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #images, body.single .container article #description, body.single .container article #share {
     width: 100%;
     float: left;
   }
 }
 /* line 28, single.scss */
-body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #description {
+body.single .container article #article-title, body.single .container article #shopping-cart, body.single .container article #description, body.single .container article #share {
   float: right;
   margin-right: 0;
 }
@@ -1629,7 +1629,7 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   background-image: linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
   border: 1px solid #83de48;
   color: #363636;
-  text-shadow: 0px 0px 1px #cccccc;
+  text-shadow: 0px 0px 1px #999999;
 }
 /* line 122, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"]:hover {
@@ -1665,18 +1665,18 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
 body.single .container article #images {
   cursor: pointer;
 }
-/* line 51, single.scss */
+/* line 50, single.scss */
 body.single .container article #images #large-image img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 56, single.scss */
+/* line 55, single.scss */
 body.single .container article #images #thumbs {
   margin-top: 1.25em;
 }
-/* line 59, single.scss */
+/* line 58, single.scss */
 body.single .container article #images #thumbs #thumb {
   width: 18%;
   margin: 0 2.5% 0 0;
@@ -1684,22 +1684,22 @@ body.single .container article #images #thumbs #thumb {
   margin-bottom: 5%;
   cursor: pointer;
 }
-/* line 65, single.scss */
+/* line 64, single.scss */
 body.single .container article #images #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 69, single.scss */
+/* line 68, single.scss */
 body.single .container article #images #thumbs #thumb.c5, body.single .container article #images #thumbs #thumb.c10, body.single .container article #images #thumbs #thumb.c15, body.single .container article #images #thumbs #thumb.c20 {
   margin-right: 0;
 }
-/* line 78, single.scss */
+/* line 75, single.scss */
 body.single .container article #description {
   margin-top: 2.5em;
 }
-/* line 81, single.scss */
+/* line 78, single.scss */
 body.single .container article #description ul#tabs {
   width: 100%;
   float: left;
@@ -1719,7 +1719,7 @@ body.single .container article #description ul#tabs li {
 body.single .container article #description ul#tabs li.last {
   margin-right: 0;
 }
-/* line 87, single.scss */
+/* line 84, single.scss */
 body.single .container article #description ul#tabs li {
   color: #aaaaaa;
   cursor: pointer;
@@ -1729,7 +1729,7 @@ body.single .container article #description ul#tabs li {
   border: 1px solid #cccccc;
   border-bottom: none;
 }
-/* line 98, single.scss */
+/* line 95, single.scss */
 body.single .container article #description ul#tabs li.active {
   font-style: normal;
   color: #363636;
@@ -1737,7 +1737,7 @@ body.single .container article #description ul#tabs li.active {
   position: relative;
   top: 1px;
 }
-/* line 109, single.scss */
+/* line 106, single.scss */
 body.single .container article #description div {
   padding: 1.25em;
   margin: 2.5em 0;
@@ -1761,20 +1761,40 @@ body.single .container article #description div ul li {
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 118, single.scss */
+/* line 111, single.scss */
+body.single .container article #share {
+  margin-left: 52.5%;
+}
+/* line 114, single.scss */
+body.single .container article #share ul {
+  display: block;
+  margin: 0;
+  margin-left: 1.25em;
+}
+/* line 471, mixins.scss */
+body.single .container article #share ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+  margin-right: 1.25em;
+}
+/* line 478, mixins.scss */
+body.single .container article #share ul li.last {
+  margin-right: 0;
+}
+/* line 124, single.scss */
 body.single .container #campaigns {
   margin-bottom: 2.5em;
 }
-/* line 121, single.scss */
-body.single .container #campaigns #subscribe, body.single .container #campaigns #share {
-  width: 47.5%;
-  margin: 0 5% 0 0;
-  float: left;
-}
-/* line 126, single.scss */
+/* line 128, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter {
   border: 1px dotted;
   text-align: center;
+  width: 100%;
+  float: left;
+  border-left: none;
+  border-right: none;
 }
 /* line 71, theme.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #text, body.single .container #campaigns #subscribe #subscribe-to-newsletter #facebook-connect {
@@ -1797,7 +1817,7 @@ body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type
   background-image: linear-gradient(center top, #4a4a4a 5%, #303030 100%);
   border: 1px solid #333333;
   color: white;
-  text-shadow: 0px 0px 1px #cccccc;
+  text-shadow: 0px 0px 1px #999999;
 }
 /* line 122, theme.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
@@ -1807,39 +1827,45 @@ body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type
   background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
   background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
-/* line 131, single.scss */
-body.single .container #campaigns #share {
-  margin-right: 0;
+/* line 135, single.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter #text {
+  width: auto;
 }
-/* line 134, single.scss */
-body.single .container #campaigns #share ul {
-  display: block;
+/* line 139, single.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter #facebook-connect, body.single .container #campaigns #subscribe #subscribe-to-newsletter #text h4, body.single .container #campaigns #subscribe #subscribe-to-newsletter #text form {
+  width: 30%;
+  margin: 0 5% 0 0;
+  float: left;
+}
+/* line 143, single.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter #text {
   margin: 0;
 }
-/* line 471, mixins.scss */
-body.single .container #campaigns #share ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0;
-  float: left;
-  margin-right: 1.25em;
+/* line 146, single.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter #text form {
+  margin-top: 1.875em;
 }
-/* line 478, mixins.scss */
-body.single .container #campaigns #share ul li.last {
+/* line 149, single.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter #text form input {
+  font-size: small;
+}
+/* line 155, single.scss */
+body.single .container #campaigns #subscribe #subscribe-to-newsletter #facebook-connect {
+  margin-top: 2.5em;
   margin-right: 0;
 }
-/* line 142, single.scss */
+/* line 166, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 145, single.scss */
+/* line 169, single.scss */
 body.single .container section h2 {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
-/* line 151, single.scss */
+/* line 175, single.scss */
 body.single .container section #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1914,19 +1940,19 @@ body.single .container section #product #category a {
 body.single .container section #product.on-sale {
   padding-bottom: 0;
 }
-/* line 157, single.scss */
+/* line 181, single.scss */
 body.single .container section #product .normal-price, body.single .container section #product .old-price {
   background: white;
 }
 @media (max-width: 480px) {
-  /* line 151, single.scss */
+  /* line 175, single.scss */
   body.single .container section #product {
     width: 100%;
     float: left;
     margin-right: 0;
   }
 }
-/* line 167, single.scss */
+/* line 191, single.scss */
 body.single .container section #product.c4, body.single .container section #product.c8, body.single .container section #product.c12, body.single .container section #product.c16, body.single .container section #product.c20, body.single .container section #product.c24, body.single .container section #product.c28 {
   margin-right: 0;
 }

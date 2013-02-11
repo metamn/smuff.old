@@ -83,7 +83,6 @@
   
   <div id="facebook-connect">  	
 		<div id="auth-loggedout">
-			<h4>Sau</h4>
 			<div class="fb-login-button" scope="email,user_birthday">Conectare cu Facebook</div>
 			<span id="fb-login-nonce" data-nonce="<?php echo wp_create_nonce('mailchimp_subscribe') ?>"></span>
 		</div>

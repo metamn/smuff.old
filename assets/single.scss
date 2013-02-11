@@ -17,7 +17,7 @@ body.single {
 			@include block;
 			margin-bottom: $pad*2;
 			
-			#article-title, #shopping-cart, #images, #description {
+			#article-title, #shopping-cart, #images, #description, #share {
 			  @include col(47.5%, 0, 5%);
 			  
 			  @include mobile-only {
@@ -25,7 +25,7 @@ body.single {
 			  }
 			}
 			
-			#article-title, #shopping-cart, #description {
+			#article-title, #shopping-cart, #description, #share {
 			  float: right;
 			  margin-right: 0;
 			}
@@ -44,7 +44,6 @@ body.single {
 		  			
 			
 			#images {
-			
 			  cursor: pointer;
 			  
 			  #large-image {
@@ -71,8 +70,6 @@ body.single {
 			    }
 			  }
 			}
-			
-			
 				
 			
 			#description {
@@ -111,30 +108,57 @@ body.single {
 		    }
 		  }
 		  
+		  #share {
+		    margin-left: 52.5%;
+		    
+		    ul {
+		      @include list-inline;
+		      margin-left: $pad;
+		    }
+		  }
+		  
 			
 		}
 		
 		
 		#campaigns {
 		  margin-bottom: $pad*2;
-		
-		  #subscribe, #share {
-		    @include col(47.5%, 0, 5%);
-		  }
 		  
 		  #subscribe {
 		    #subscribe-to-newsletter {
 		      @include subscribe-to-newsletter;
+		      @include block;
+		      
+		      border-left: none;
+		      border-right: none;
+		      
+		      #text {
+		        width: auto;
+		      }
+		      
+		      #facebook-connect, #text h4, #text form {
+		        @include col(30%, 0, 5%);
+		      }
+		      
+		      #text {
+		        margin: 0;
+		        
+		        form {
+		          margin-top: $pad + $pad/2;
+		          
+		          input {
+		            font-size: small;
+		          }
+		        }
+		      }
+		      
+		      #facebook-connect {
+		        margin-top: $pad*2;
+		        margin-right: 0;
+		      }
 		    }
 		  }
 		  
-		  #share {
-			  margin-right: 0;
-			  
-			  ul {
-			    @include list-inline;
-			  }
-			}
 		}
 		
 		
