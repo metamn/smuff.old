@@ -92,16 +92,6 @@
 	    	</hgroup>
 	    	
 	    	
-	    	<!--
-    		<nav id="cart">
-          <ul>
-            <li><a href="">Cosul meu (0)</a></li>
-            <li><a href="">Contul meu</a></li>
-            <li class="last"><a href="">Informatii</a></li>
-          </ul>
-        </nav>
-        -->
-        
 	    	
 	    	<nav id="menu">
 					<ul>
@@ -117,12 +107,16 @@
 							
 							
 							<li id="separator"></li>
+							
+							
 							<li class="cart"><a href="">Cosul meu (0)</a></li>
               <li class="cart"><a href="">Contul meu</a></li>
               <li id="info" class="cart">Informatii</li>
-							
+							<li id="search" class="cart">Cautare</li>
 					</ul>
 			  </nav>	
+			  
+			  
 			  
 			  <nav id="menu-info">
 			    
@@ -179,63 +173,19 @@
 			    </div>
 			  </nav>
 			  
-			  <nav id="menu-extended">
-			    <div id="categories">
-			      <h3>Categorii</h3>
-			      <ul>
-			        <?php 
-							$cats = array("gadget", "gizmo", "lifestyle", "self-care", "ceasuri", "doar-copii");		            
-							foreach ($cats as $cat) { 
-								$c = get_category_by_slug($cat); ?>
-								<li id="<?php echo $cat ?>">
-									<a alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
-								</li>
-							<?php } ?>
-							<li class="separator"></li>
-							<li><a href="">Smartphone</a></li>
-							<li><a href="">Audio & Video</a></li>
-							<li><a href="">Sport si Outdoor</a></li>
-							<li class="last"><a href="">Confortul de acasa</a></li>
-			      </ul>
-			    </div>
-			    
-			    <div id="meta">
-			      <h3>Selectii</h3>
-			      <ul>
-			        <li><a href="">Cadouri noi</a></li>
-			        <li><a href="">Cele mai vandute</a></li>
-			        <li><a href="">Reduceri</a></li>
-			        <li class="separator"></li>
-			        <li><a href="">Nou in Romania</a></li>
-			        <li><a href="">Made in Romania</a></li>
-			        <li class="separator"></li>
-			        <li><a href="">GiftShopper</a></li>
-			        <li class="last"><a href="">GiftPlanner</a></li>
-			      </ul>
-			    </div>
-			    
-			    <div id="price-and-delivery">
-			      <h3>Pret si livrare</h3>
-			      <ul>
-			        <li><a href="">Sub 100 lei</a></li>
-			        <li><a href="">Intre 100-250 lei</a></li>
-			        <li><a href="">Intre 250-350 lei</a></li>
-			        <li><a href="">Peste 350 lei</a></li>
-			        <li class="separator"></li>
-			        <li><a href="">Livrare in 24 ore</a></li>
-			        <li><a href="">Livrare in 2 zile</a></li>
-			        <li class="last"><a href="">Livrare in 5-7 zile</a></li>
-			        <li class="separator"></li>
-			        <li class="separator"></li>
-			        <li class="separator"></li>
-			        <li id="all-products"><a href="">Vezi toate produsele la un singur loc</a></li>
-			      </ul>
+			  
+			  <nav id="menu-search">
+			    <div id="search-box">
+			      <input type="text" name="search" value="Peste 400 de cadouri in stoc">
+			      <input type="submit" name="submit" value="Cautare">
 			    </div>
 			    
 			    <div id="close">
 			      <span></span>
 			    </div>
 			  </nav>
+			  
+			  
 			 
 	    </header>
 	  		

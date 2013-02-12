@@ -22,45 +22,6 @@ $(document).ready(function() {
   
   
   
-  // Show all images on product page
-  
-  $('.single #large-image').click(function() {
-    $('.single #left-column').animate(
-      {
-        width: '100%'
-      }, 
-      1000);
-    
-    $('.single #left-column #large-image').addClass('large');
-    $('.single #left-column #thumbs').show();
-    
-    $('.single #left-column #description').addClass('large');
-    $('.single #left-column #shopping-for-large-image').show();
-    $('.single #left-column #large-image #more').hide();
-    
-    $('.single #right-column').hide();
-  });
-  
-  
-  // Show all images on product page -- revert back
-  
-  $('.single #thumbs #close').click(function() {
-    $('.single #left-column').animate(
-      {
-        width: '47.5%'
-      }, 
-      1000);
-    
-    $('.single #left-column #large-image').removeClass('large');
-    $('.single #left-column #thumbs').hide();
-    
-    $('.single #left-column #description').removeClass('large');
-    $('.single #left-column #shopping-for-large-image').hide();
-    $('.single #left-column #large-image #more').show();
-    $('.single #right-column').show();
-  });
-  
-  
   
   
   // Tabs on product page
@@ -90,16 +51,16 @@ $(document).ready(function() {
   
   
   
-  // Toggle extended menu in header
+  // Toggle search menu in header
   
-  $('#menu #all-products').click(function() {
-    $('#menu-extended').slideToggle('slow');
+  $('#menu #search').click(function() {
+    $('#menu-search').slideToggle('slow');
     $(this).toggleClass('active');
   });
   
-  $('#menu-extended #close span').click(function() {
-    $('#menu-extended').slideUp('slow');
-    $('#menu #all-products').removeClass('active');
+  $('#menu-search #close span').click(function() {
+    $('#menu-search').slideUp('slow');
+    $('#menu #search').removeClass('active');
   });
   
   

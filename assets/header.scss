@@ -86,7 +86,6 @@ body {
 			}
 			
 			
-			
 			#menu {
 			  @include block;
 			  
@@ -99,7 +98,7 @@ body {
           padding: 0 $pad/2;
           
           li {
-            &#info {
+            &#info, &#search {
               cursor: pointer;
               
               &:after {
@@ -138,7 +137,7 @@ body {
 			
 			
 			
-			#menu-extended, #menu-info {
+			#menu-search, #menu-info {
 			  @include block;
 			  @include hidden;
 			  
@@ -218,6 +217,15 @@ body {
 			  #close {
 			    margin-top: -16.2em;
 			    float: right;
+			  }
+			}
+			
+			#menu-search {
+			  padding: $pad 0;
+			  
+			  #search-box {
+			    @include col(23%, 0, 2.5%);
+			    margin-left: 25.5%;
 			  }
 			}
 			
