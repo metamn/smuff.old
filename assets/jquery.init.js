@@ -51,17 +51,6 @@ $(document).ready(function() {
   
   
   
-  // Toggle search menu in header
-  
-  $('#menu #search').click(function() {
-    $('#menu-search').slideToggle('slow');
-    $(this).toggleClass('active');
-  });
-  
-  $('#menu-search #close span').click(function() {
-    $('#menu-search').slideUp('slow');
-    $('#menu #search').removeClass('active');
-  });
   
   
   // Toggle extended info menu in header

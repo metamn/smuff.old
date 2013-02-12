@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$green".
-        on line 10 of /home/cs/work/smuff/assets/single.scss
+        on line 7 of /home/cs/work/smuff/assets/single.scss
 
 Backtrace:
-/home/cs/work/smuff/assets/single.scss:10
+/home/cs/work/smuff/assets/single.scss:7
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/variable.rb:49:in `_perform'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/node.rb:40:in `perform'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:296:in `visit_prop'
@@ -114,4 +114,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$green\".\A         on line 10 of /home/cs/work/smuff/assets/single.scss"; }
+  content: "Syntax error: Undefined variable: \"$green\".\A         on line 7 of /home/cs/work/smuff/assets/single.scss"; }

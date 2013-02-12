@@ -91,7 +91,10 @@
 					</div>
 	    	</hgroup>
 	    	
-	    	
+	    	<div id="search">
+		      <input type="text" name="search" value="">
+		      <input type="submit" name="submit" value="">
+		    </div>
 	    	
 	    	<nav id="menu">
 					<ul>
@@ -112,7 +115,6 @@
 							<li class="cart"><a href="">Cosul meu (0)</a></li>
               <li class="cart"><a href="">Contul meu</a></li>
               <li id="info" class="cart">Informatii</li>
-							<li id="search" class="cart">Cautare</li>
 					</ul>
 			  </nav>	
 			  
@@ -173,17 +175,6 @@
 			    </div>
 			  </nav>
 			  
-			  
-			  <nav id="menu-search">
-			    <div id="search-box">
-			      <input type="text" name="search" value="Peste 400 de cadouri in stoc">
-			      <input type="submit" name="submit" value="Cautare">
-			    </div>
-			    
-			    <div id="close">
-			      <span></span>
-			    </div>
-			  </nav>
 			  
 			  
 			 
