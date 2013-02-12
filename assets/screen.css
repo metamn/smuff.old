@@ -1001,7 +1001,7 @@ body.home .container #giftshopper {
 }
 /* line 127, startpage.scss */
 body.home .container #giftshopper #title {
-  font-family: 'Old Standard TT', serif;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-style: italic;
   margin: 0.625em 0;
 }
@@ -1047,7 +1047,7 @@ body.home .container #giftshopper #body ul #tagcloud {
 body.home .container #giftshopper #body ul p {
   margin-top: 16em;
   text-align: center;
-  font-family: 'Old Standard TT', serif;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 }
 /* line 162, startpage.scss */
 body.home .container #giftshopper #body ul #for-him {
