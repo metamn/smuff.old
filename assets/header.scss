@@ -159,29 +159,24 @@ body {
 			      li {
 			        padding: 0 $pad/4;
 			        margin-bottom: $pad/4;
-			        border-bottom: 1px solid $very-light-gray;
 			        
 			        a {
 			          width: 100%;
 			          display: block;
+			          border-bottom: 1px solid $very-light-gray;
+			          
+			          &:hover {
+			            border-bottom: 1px solid $light-gray;
+			            color: shade($color, 50%);
+			          }
 			        }
-			      }
-			      li.separator {
-			        margin: $pad/2 0;
-			        border-color: transparent;
-			      }
-			      li:hover {
-			        border-color: $light-gray;
 			        
-			        a {
-			          color: shade($color, 50%);
+			        &.separator {
+			          padding: $pad/2;
 			        }
 			      }
 			      
-			      li#all-products:after {
-			        content: '\21e2';
-			        margin-left: $pad/2;
-			      }
+			      
 			    }
 			  }
 			  

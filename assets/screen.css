@@ -679,77 +679,68 @@ body .container #header #menu-extended div ul, body .container #header #menu-inf
 body .container #header #menu-extended div ul li, body .container #header #menu-info div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
-  border-bottom: 1px solid #f1f1f1;
 }
-/* line 164, header.scss */
+/* line 163, header.scss */
 body .container #header #menu-extended div ul li a, body .container #header #menu-info div ul li a {
   width: 100%;
   display: block;
+  border-bottom: 1px solid #f1f1f1;
 }
-/* line 169, header.scss */
-body .container #header #menu-extended div ul li.separator, body .container #header #menu-info div ul li.separator {
-  margin: 0.625em 0;
-  border-color: transparent;
-}
-/* line 173, header.scss */
-body .container #header #menu-extended div ul li:hover, body .container #header #menu-info div ul li:hover {
-  border-color: #cccccc;
-}
-/* line 176, header.scss */
-body .container #header #menu-extended div ul li:hover a, body .container #header #menu-info div ul li:hover a {
+/* line 168, header.scss */
+body .container #header #menu-extended div ul li a:hover, body .container #header #menu-info div ul li a:hover {
+  border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 181, header.scss */
-body .container #header #menu-extended div ul li#all-products:after, body .container #header #menu-info div ul li#all-products:after {
-  content: '\21e2';
-  margin-left: 0.625em;
+/* line 174, header.scss */
+body .container #header #menu-extended div ul li.separator, body .container #header #menu-info div ul li.separator {
+  padding: 0.625em;
 }
-/* line 188, header.scss */
+/* line 183, header.scss */
 body .container #header #menu-extended #close, body .container #header #menu-info #close {
   margin-right: 0;
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 194, header.scss */
+/* line 189, header.scss */
 body .container #header #menu-extended #close span, body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 199, header.scss */
+/* line 194, header.scss */
 body .container #header #menu-extended #close span:after, body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
   font-size: large;
 }
-/* line 206, header.scss */
+/* line 201, header.scss */
 body .container #header #menu-info #contact {
   margin-left: 23%;
 }
-/* line 212, header.scss */
+/* line 207, header.scss */
 body .container #header #menu-info .shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 215, header.scss */
+/* line 210, header.scss */
 body .container #header #menu-info .shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 223, header.scss */
+/* line 218, header.scss */
 body .container #header #menu-info #close {
   margin-top: -16.2em;
   float: right;
 }
-/* line 233, header.scss */
+/* line 228, header.scss */
 body .container #footer #info {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 0.625em 0;
   margin-bottom: 0.625em;
 }
-/* line 240, header.scss */
+/* line 235, header.scss */
 body .container #footer #info ul #go-top {
   float: right;
 }
-/* line 243, header.scss */
+/* line 238, header.scss */
 body .container #footer #info ul #go-top:after {
   content: '\003E';
   float: right;
@@ -768,7 +759,7 @@ body .container #footer #info ul #go-top:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 250, header.scss */
+/* line 245, header.scss */
 body .container #footer #company {
   font-size: small;
   color: #cccccc;
