@@ -349,11 +349,15 @@ a, a:active, a:visited, a:hover {
 
 /* Logo
 ------------------------------------------------------------------------------
+  // - the formula for the logo width is:
+  //    x - the number of cells
+  //    z - the number of .small cells
+  //    width: = (x-z)*cell_size + z*cell_size/2
 */
 
 @mixin logo($size) {
   height: $size * 7;
-  width: $size * 24 - $size/2; /* an extra space must be added */
+  width: (51 - 5) * $size + 5*$size/2; 
 
   .cell {
     width: $size;
@@ -367,6 +371,13 @@ a, a:active, a:visited, a:hover {
 
   .set {
     background: $color;
+  }
+  
+  .square {
+    background: $blue;
+  }
+  .duplicate {
+    display: block;
   }
 }
 

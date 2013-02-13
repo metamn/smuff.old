@@ -469,6 +469,10 @@ a, a:active, a:visited, a:hover {
 */
 /* Logo
 ------------------------------------------------------------------------------
+  // - the formula for the logo width is:
+  //    x - the number of cells
+  //    z - the number of .small cells
+  //    width: = (x-z)*cell_size + z*cell_size/2
 */
 /* line 1, header.scss */
 body {
@@ -536,23 +540,30 @@ body .container #header hgroup {
 /* line 61, header.scss */
 body .container #header hgroup #logo {
   height: 2.91667em;
-  width: 9.79167em;
-  /* an extra space must be added */
+  width: 20.20833em;
   float: left;
 }
-/* line 358, theme.scss */
+/* line 362, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 364, theme.scss */
+/* line 368, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 368, theme.scss */
+/* line 372, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
+}
+/* line 376, theme.scss */
+body .container #header hgroup #logo .square {
+  background: #4d8fce;
+}
+/* line 379, theme.scss */
+body .container #header hgroup #logo .duplicate {
+  display: block;
 }
 /* line 66, header.scss */
 body .container #header hgroup #strapline {

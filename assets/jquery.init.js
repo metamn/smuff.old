@@ -110,12 +110,20 @@ $(document).ready(function() {
   
   // Logo
   //
+  // - a matrix of 7x24 for Smuff, 7x51 for Smart Stuff
+  // - sometimes spacing between fonts m>f, f>f in Smuff is lowered through .small
+  // - in this case the logo width must be recalculated in the css
+  // - the formula for logo width is:
+  //    x - the number of cells
+  //    z - the number of .small cells
+  //    width: = (x-z)*cell_size + z*cell_size/2
+  
   
   function logo() {
     var matrix = new Array(7);
     for (y = 0; y < 7; y++) {
-      matrix[y] = new Array(24);
-      for (x = 0; x < 24; x++) {
+      matrix[y] = new Array(51);
+      for (x = 0; x < 51; x++) {
         matrix[y][x] = '';
       }
     }
@@ -171,44 +179,129 @@ $(document).ready(function() {
     matrix[2][15] = 'set';
     matrix[3][15] = 'set';
     
-    matrix[3][16] = 'set';
+    // art Stu
     
-    matrix[1][17] = 'set';
-    matrix[2][17] = 'set';
-    matrix[3][17] = 'set';
+    matrix[0][17] = 'square';
+    matrix[2][17] = 'square';
+    matrix[3][17] = 'square';
+    
+    matrix[0][18] = 'square';
+    matrix[2][18] = 'square';
+    matrix[3][18] = 'square';
+    
+    matrix[0][19] = 'square';
+    matrix[1][19] = 'square';
+    matrix[2][19] = 'square';
+    matrix[3][19] = 'square';
+    
+    matrix[0][21] = 'square';
+    matrix[1][21] = 'square';
+    matrix[2][21] = 'square';
+    matrix[3][21] = 'square';
+    
+    matrix[0][22] = 'square';
+    
+    matrix[0][23] = 'square';
+    matrix[1][23] = 'square';
+    
+    
+    matrix[0][25] = 'square';
+    matrix[1][25] = 'square';
+    matrix[2][25] = 'square';
+    matrix[3][25] = 'square';
+    matrix[4][25] = 'square';
+    matrix[5][25] = 'square';
+    matrix[6][25] = 'square';
+    
+    
+    matrix[2][26] = 'square';
+    matrix[6][26] = 'square';
+    
+    
+    
+    matrix[6][28] = 'square';
+    matrix[6][29] = 'square';
+    matrix[6][30] = 'square';
+    matrix[6][31] = 'square';
+    matrix[6][32] = 'square';
+    matrix[6][33] = 'square';
+    matrix[6][34] = 'square';
+    
+    matrix[0][35] = 'square';
+    matrix[1][35] = 'square';
+    matrix[2][35] = 'square';
+    matrix[3][35] = 'square';
+    matrix[6][35] = 'square';
+    
+    matrix[0][36] = 'square';
+    matrix[3][36] = 'square';
+    matrix[6][36] = 'square';
+    
+    matrix[0][37] = 'square';
+    matrix[3][37] = 'square';
+    matrix[4][37] = 'square';
+    matrix[5][37] = 'square';
+    matrix[6][37] = 'square';
+    
+    matrix[0][39] = 'square';
+    matrix[1][39] = 'square';
+    matrix[2][39] = 'square';
+    matrix[3][39] = 'square';
+    matrix[4][39] = 'square';
+    matrix[5][39] = 'square';
+    matrix[6][39] = 'square';
+    
+    
+    matrix[1][40] = 'square';
+    matrix[6][40] = 'square';
+    
+    
+    // Back to muff
+    
+    matrix[0][42] = 'set duplicate';
+    matrix[1][42] = 'set duplicate';
+    matrix[2][42] = 'set duplicate';
+    matrix[3][42] = 'set duplicate';
+    
+    matrix[3][43] = 'set';
+    
+    matrix[1][44] = 'set';
+    matrix[2][44] = 'set';
+    matrix[3][44] = 'set';
         
-    matrix[0][19] = 'set';
-    matrix[1][19] = 'set';
-    matrix[2][19] = 'set';
-    matrix[3][19] = 'set';
-    matrix[4][19] = 'set';
-    matrix[5][19] = 'set';
-    matrix[6][19] = 'set';
+    matrix[0][46] = 'set';
+    matrix[1][46] = 'set';
+    matrix[2][46] = 'set';
+    matrix[3][46] = 'set';
+    matrix[4][46] = 'set';
+    matrix[5][46] = 'set';
+    matrix[6][46] = 'set';
     
-    matrix[0][20] = 'set';
-    matrix[4][20] = 'set';
+    matrix[0][47] = 'set';
+    matrix[4][47] = 'set';
     
-    matrix[0][22] = 'set';
-    matrix[1][22] = 'set';
-    matrix[2][22] = 'set';
-    matrix[3][22] = 'set';
-    matrix[4][22] = 'set';
-    matrix[5][22] = 'set';
-    matrix[6][22] = 'set';
+    matrix[0][49] = 'set';
+    matrix[1][49] = 'set';
+    matrix[2][49] = 'set';
+    matrix[3][49] = 'set';
+    matrix[4][49] = 'set';
+    matrix[5][49] = 'set';
+    matrix[6][49] = 'set';
     
-    matrix[0][23] = 'set';
-    matrix[4][23] = 'set';
+    matrix[0][50] = 'set';
+    matrix[4][50] = 'set';
         
     var ret = "";
     var size = "";
     for (y = 0; y < 7; y++) {
-      for (x = 0; x < 24; x++) {
+      for (x = 0; x < 51; x++) {
         switch(x) {
-          case 18:
-            size = 'small';
-            break;
-          case 21:
-            size = 'small';
+          case 20:
+          case 24:
+          case 38:
+          case 45:
+          case 48: 
+            size = ' small ';
             break;
           default:
             size = '';
