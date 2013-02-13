@@ -11,7 +11,7 @@
       </li>
       <li id="for-him">
         <p>Pentru El</p>
-      </li>
+      </li> 
       <li id="for-her">
         <p>Pentru Ea</p>
       </li>
