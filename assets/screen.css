@@ -540,7 +540,7 @@ body .container #header hgroup {
 /* line 61, header.scss */
 body .container #header hgroup #logo {
   height: 2.91667em;
-  width: 20.20833em;
+  width: 9.58333em;
   float: left;
 }
 /* line 362, theme.scss */
@@ -559,10 +559,18 @@ body .container #header hgroup #logo .set {
 }
 /* line 376, theme.scss */
 body .container #header hgroup #logo .square {
-  background: #4d8fce;
+  background: #cccccc;
 }
-/* line 379, theme.scss */
-body .container #header hgroup #logo .duplicate {
+/* line 380, theme.scss */
+body .container #header hgroup #logo .extended {
+  display: none;
+}
+/* line 384, theme.scss */
+body .container #header hgroup #logo.hover {
+  width: 20.20833em;
+}
+/* line 387, theme.scss */
+body .container #header hgroup #logo.hover .extended {
   display: block;
 }
 /* line 66, header.scss */

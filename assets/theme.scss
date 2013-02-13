@@ -357,7 +357,7 @@ a, a:active, a:visited, a:hover {
 
 @mixin logo($size) {
   height: $size * 7;
-  width: (51 - 5) * $size + 5*$size/2; 
+  width: (24 - 2) * $size + 2*$size/2; 
 
   .cell {
     width: $size;
@@ -374,11 +374,21 @@ a, a:active, a:visited, a:hover {
   }
   
   .square {
-    background: $blue;
+    background: $light-gray;
   }
-  .duplicate {
-    display: block;
+  
+  .extended {
+    display: none;
   }
+  
+  &.hover {
+    width: (51 - 5) * $size + 5*$size/2; 
+    
+    .extended {
+      display: block;
+    }
+  }
+  
 }
 
 

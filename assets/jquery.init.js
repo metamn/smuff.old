@@ -111,12 +111,15 @@ $(document).ready(function() {
   // Logo
   //
   // - a matrix of 7x24 for Smuff, 7x51 for Smart Stuff
+  
   // - sometimes spacing between fonts m>f, f>f in Smuff is lowered through .small
   // - in this case the logo width must be recalculated in the css
   // - the formula for logo width is:
   //    x - the number of cells
   //    z - the number of .small cells
   //    width: = (x-z)*cell_size + z*cell_size/2
+  
+  // - the extra letters from Smart Stuff are marked .extended so it can be hide/show later
   
   
   function logo() {
@@ -258,10 +261,10 @@ $(document).ready(function() {
     
     // Back to muff
     
-    matrix[0][42] = 'set duplicate';
-    matrix[1][42] = 'set duplicate';
-    matrix[2][42] = 'set duplicate';
-    matrix[3][42] = 'set duplicate';
+    matrix[0][42] = 'set';
+    matrix[1][42] = 'set';
+    matrix[2][42] = 'set';
+    matrix[3][42] = 'set';
     
     matrix[3][43] = 'set';
     
@@ -291,8 +294,12 @@ $(document).ready(function() {
     matrix[0][50] = 'set';
     matrix[4][50] = 'set';
         
+        
+        
     var ret = "";
     var size = "";
+    var klass = '';
+    
     for (y = 0; y < 7; y++) {
       for (x = 0; x < 51; x++) {
         switch(x) {
@@ -306,7 +313,14 @@ $(document).ready(function() {
           default:
             size = '';
         }
-        ret += "<div id='cell-" + x + "-" + y + "' class='cell " + size + matrix[y][x] + "'></div>";
+        
+        if (x >= 16 && x <= 42) {
+          klass = ' extended ';
+        } else {
+          klass = '';
+        }
+        
+        ret += "<div id='cell-" + x + "-" + y + "' class='cell " + size + klass + matrix[y][x] + "'></div>";
       }
     }
     
@@ -315,6 +329,14 @@ $(document).ready(function() {
   jQuery("#logo").html(logo());
   
   
+  $("#logo").hover(
+    function () {
+      setTimeout($(this).addClass("hover"), 1000);
+    },
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
   
   
   
