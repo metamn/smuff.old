@@ -142,6 +142,18 @@
 		<nav id="filters">
 		  <h3>Filtrare si navigare</h3>
 		  
+		  <div id="for-who">
+		    <label class="select">
+		      <select>
+		        <option>Pentru toti</option>
+		        <option>Pentru El</option>
+		        <option>Pentru Ea</option>
+		        <option>Pentru copii</option>
+		        <option>Casa si birou</option>
+		      </select>
+		    </label>
+		  </div>
+		  
 		  <div id="meta">
 		    <label class="select">
 		      <select>
