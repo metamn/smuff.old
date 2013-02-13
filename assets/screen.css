@@ -562,15 +562,15 @@ body .container #header hgroup #logo .square {
   background: #cccccc;
 }
 /* line 380, theme.scss */
-body .container #header hgroup #logo .extended {
+body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
 /* line 384, theme.scss */
-body .container #header hgroup #logo.hover {
+body .container #header hgroup #logo:hover {
   width: 20.20833em;
 }
 /* line 387, theme.scss */
-body .container #header hgroup #logo.hover .extended {
+body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
 /* line 66, header.scss */

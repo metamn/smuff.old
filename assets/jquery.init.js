@@ -315,9 +315,16 @@ $(document).ready(function() {
         }
         
         if (x >= 16 && x <= 42) {
-          klass = ' extended ';
+          klass = ' smart-stuff-cell ';
         } else {
           klass = '';
+        }
+        
+        if (x == 16) {
+          ret += "<div class='smart-stuff'>";
+        }
+        if (x == 42) {
+          ret += "</div>";
         }
         
         ret += "<div id='cell-" + x + "-" + y + "' class='cell " + size + klass + matrix[y][x] + "'></div>";
@@ -331,10 +338,10 @@ $(document).ready(function() {
   
   $("#logo").hover(
     function () {
-      setTimeout($(this).addClass("hover"), 1000);
+      $("#logo .smart-stuff").show(600);
     },
     function () {
-      $(this).removeClass("hover");
+      $("#logo .smart-stuff").hide();
     }
   );
   

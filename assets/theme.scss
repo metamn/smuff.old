@@ -377,14 +377,14 @@ a, a:active, a:visited, a:hover {
     background: $light-gray;
   }
   
-  .extended {
+  .smart-stuff-cell, .smart-stuff {
     display: none;
   }
   
-  &.hover {
+  &:hover {
     width: (51 - 5) * $size + 5*$size/2; 
     
-    .extended {
+    .smart-stuff-cell {
       display: block;
     }
   }
