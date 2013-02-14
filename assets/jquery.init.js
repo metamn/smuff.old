@@ -255,7 +255,7 @@ $(document).ready(function() {
     matrix[6][39] = 'square';
     
     
-    matrix[1][40] = 'square';
+    matrix[2][40] = 'square';
     matrix[6][40] = 'square';
     
     
@@ -338,10 +338,10 @@ $(document).ready(function() {
   
   $("#logo").hover(
     function () {
-      $("#logo .smart-stuff").show(600);
+      $("#logo .smart-stuff").show(200);
     },
     function () {
-      $("#logo .smart-stuff").hide();
+      $("#logo .smart-stuff").hide(); /* blinks if there is any value */
     }
   );
   
