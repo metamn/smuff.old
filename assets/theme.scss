@@ -191,8 +191,32 @@ a, a:active, a:visited, a:hover {
       }
       
       .add-to-cart-button {
+        display: inline-block;
+        max-width: 20em;
+        
         input[type="submit"] {
           @include button($color, $green);
+        }
+        
+        #quantity {
+          display: none;
+          
+          
+          width: auto;
+          float: left;
+          width: 8em;
+          
+          font-size: small;
+          
+          margin-top: $pad/2;
+          
+          label.select {
+            width: 10em;
+            
+            &:after {
+              margin: -2.5em 3.35em 0 -2.5em;
+            }
+          }
         }
       }
       

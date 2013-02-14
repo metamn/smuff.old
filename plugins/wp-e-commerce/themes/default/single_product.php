@@ -140,6 +140,15 @@
 							      <?php else: ?>
 							        <span class="add-to-cart-button">
 								        <input type="submit" value="Adauga la cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
+								        <span id="quantity">
+								          <label class="select">
+								            <select>
+								            <?php for ($i = 1; $i <= 15; $i++) { ?>
+								              <option><?php echo $i ?> buc.</option>
+								            <?php } ?>
+								            </select>
+								          </label>
+								        </span>
 								      </span>
 							      <?php endif; ?>							  		
 							     

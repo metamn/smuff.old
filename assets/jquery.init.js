@@ -5,6 +5,17 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  
+  // Show Quantity for Add to Cart
+  $('.add-to-cart-button').hover(function () {
+      $(".add-to-cart-button #quantity").show(200);
+    },
+    function () {
+    }
+  );
+  
+  
+  
   // Click on thumbs on product page
   
   $(".single #thumbs #thumb img").live('click', function () {
