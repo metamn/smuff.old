@@ -33,7 +33,8 @@ a, a:visited {
 
 
 body {
-  background: #e6e2d9 url(img/smuff-valentines-2013-sziv.png) no-repeat 11% 2.5%;
+  /*background: #e6e2d9 url(img/smuff-valentines-2013-sziv.png) no-repeat 11% 2.5%;*/
+  background: #e6e2d9;
 }
 
 /*

@@ -36,7 +36,7 @@
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/smuff-ie.css" type="text/css" media="screen, projection"><![endif]-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css?refresh=20130131" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/smuff.css?refresh=20130215" type="text/css" media="screen" />
 		
 		<!--
 		- JS cannot be put in foooter !!!!!!!!!!!!!!
@@ -149,7 +149,7 @@
 			    
 			    <div id="menu" class="last">
 			      <ul class="inline-list">
-			        <li id="valentines-day"><a href="<?php bloginfo('home'); ?>/category/produse/valentines-day/?view=3">Valentine</a></li>
+			        
 		          <?php 
 		            $cats = array("gadget", "gizmo", "lifestyle", "self-care", "eco", "ceasuri", "doar-copii");		            
 		            foreach ($cats as $cat) { 
@@ -159,9 +159,9 @@
 		                <a class="tooltip" alt="<?php echo $c->description ?>" href="<?php echo get_category_link($c->term_id)?>?view=1" title="Toate produsele din <?php echo $c->name ?>"><?php echo $c->name ?></a>
 		              </li>
 		            <?php } ?>
-		            <!--
+		            
 		            <li class="all-products-link"><a href="<?php bloginfo('home'); ?>/category/produse/?view=3">Toate<br/>cadourile</a></li>
-		            -->
+		            
 		        </ul>
 			    </div>	
 		    </div>		    
