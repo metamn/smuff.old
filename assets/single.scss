@@ -54,7 +54,7 @@ body.single {
 			    
 			    #thumb {
 			     @include col(18%, 0, 2.5%);
-			     margin-bottom: $margin;
+			     margin-bottom: $pad;
 			      
 			      cursor: pointer;
 			    

@@ -44,7 +44,7 @@
 			    </div>
 		      <?php 
 		        $counter += 1;
-		        if ($counter == 6) { break; }
+		        if ($counter == 11) { break; }
 		  } ?> 
 	  </div>  
 	</div>

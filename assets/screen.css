@@ -1753,7 +1753,7 @@ body.single .container article #images #thumbs #thumb {
   width: 18%;
   margin: 0 2.5% 0 0;
   float: left;
-  margin-bottom: 5%;
+  margin-bottom: 1.25em;
   cursor: pointer;
 }
 /* line 61, single.scss */
