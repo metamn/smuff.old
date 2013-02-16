@@ -9,13 +9,15 @@ body.archive {
       @include logo($pad/4);
     }
     
-    #menu {
+    #strapline, #menu, #search {
       display: none;
     }
   }
   
   section hgroup.fixed {
     height: 3.75em;
+    left: 15em;
+    padding-top: $pad/4;
   }
   
   
@@ -25,8 +27,9 @@ body.archive {
     
     hgroup {
       @include block;
-      background: $very-light-gray;
       margin-bottom: $pad;
+      border-top: 1px solid $very-light-gray;
+      border-bottom: 1px solid $very-light-gray;
       
       header {
         @include col(23%, 0, 2.5%);
