@@ -5,6 +5,29 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  // Sticky header
+  $(function(){
+    // Check the initial position of the Sticky Header
+    var stickyHeaderTop = $('.archive #header').offset().top;
+    
+    $(window).scroll(function(){
+      if( $(window).scrollTop() > stickyHeaderTop ) {
+        $('.archive #header').css({position: 'fixed', top: '0px'});
+        $('.archive #header').addClass('fixed');
+        
+        $('.archive #archive hgroup').css({position: 'fixed', top: '0px'});
+        $('.archive #archive hgroup').addClass('fixed');
+      } else {
+        $('.archive #header').css({position: 'static', top: '0px'});
+        $('.archive #header').removeClass('fixed');
+        
+        $('.archive #archive hgroup').css({position: 'static', top: '0px'});
+        $('.archive #archive hgroup').removeClass('fixed');
+      }
+    });
+  });
+  
+  
   
   // Show Quantity for Add to Cart
   $('.add-to-cart-button').hover(function () {

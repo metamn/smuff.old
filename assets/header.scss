@@ -195,28 +195,9 @@ body {
 			        }
 			      }
 			      
-			      
 			    }
 			  }
 			  
-			  #close {
-			    margin-right: 0;
-			    text-align: right;
-			    
-			    margin-top: $pad*3 - $pad/2;
-			    
-			    span {
-			      cursor: pointer;
-			      padding-right: $pad/2;
-			    }
-			    
-			    span:after {
-			      @include close-icon;
-			    }
-			  }
-			}
-			
-			#menu-info {
 			  #contact {
 			    margin-left: 23%;
 			  }
@@ -237,10 +218,21 @@ body {
 			  #close {
 			    margin-top: -16.2em;
 			    float: right;
+			    margin-right: 0;
+			    text-align: right;
+			    
+			    margin-top: $pad*3 - $pad/2;
+			    
+			    span {
+			      cursor: pointer;
+			      padding-right: $pad/2;
+			    }
+			    
+			    span:after {
+			      @include close-icon;
+			    }
 			  }
 			}
-			
-			
 			
 		}	
 		

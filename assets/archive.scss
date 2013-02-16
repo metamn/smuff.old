@@ -1,4 +1,24 @@
 body.archive {
+
+  #header.fixed {
+    height: 5.5em;
+    background: url(background.png);
+    margin: 0;
+    
+    #logo {
+      @include logo($pad/4);
+    }
+    
+    #menu {
+      display: none;
+    }
+  }
+  
+  section hgroup.fixed {
+    height: 3.75em;
+  }
+  
+  
   section {
     @include block;
     
