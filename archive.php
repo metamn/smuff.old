@@ -163,6 +163,18 @@
 		    </label>
 		  </div>
 		  
+		  <div id="delivery" class='last'>
+		    <label class="select">
+		      <select>
+		        <option>Toate livrarile</option>
+		        <option>Livrare in 24 ore</option>
+		        <option>Livrare in 2-4 zile</option>
+		        <option>Livrare in 5-7 zile</option>
+		      </select>
+		    </label>
+		  </div>
+		  
+		  
 		  
 		  <div id="meta">
 		    <label class="select">
@@ -171,19 +183,6 @@
 		        <option>Cele mai vandute</option>
 		        <option>Reduceri</option>
 		        <option>Toate cadourile</option>
-		      </select>
-		    </label>
-		  </div>
-		  
-		  
-		  
-		  <div id="delivery" class='last'>
-		    <label class="select">
-		      <select>
-		        <option>Toate livrarile</option>
-		        <option>Livrare in 24 ore</option>
-		        <option>Livrare in 2-4 zile</option>
-		        <option>Livrare in 5-7 zile</option>
 		      </select>
 		    </label>
 		  </div>

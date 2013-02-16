@@ -5,27 +5,6 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
-  // Sticky header
-  $(function(){
-    // Check the initial position of the Sticky Header
-    var stickyHeaderTop = $('.archive #header').offset().top;
-    
-    $(window).scroll(function(){
-      if( $(window).scrollTop() > stickyHeaderTop ) {
-        $('.archive #header').css({position: 'fixed', top: '0px'});
-        $('.archive #header').addClass('fixed');
-        
-        $('.archive #archive hgroup').css({position: 'fixed', top: '0px'});
-        $('.archive #archive hgroup').addClass('fixed');
-      } else {
-        $('.archive #header').css({position: 'static', top: '0px'});
-        $('.archive #header').removeClass('fixed');
-        
-        $('.archive #archive hgroup').css({position: 'static', top: '0px'});
-        $('.archive #archive hgroup').removeClass('fixed');
-      }
-    });
-  });
   
   
   
@@ -133,7 +112,7 @@ $(document).ready(function() {
     vertical += '<div class="col">&nbsp;</div>';
   }
   
-  jQuery("body").append(
+  $("body").append(
     '<div id="gridh" class="grid">' + horizontal + '</div>' +
     '<div id="gridv" class="grid">' + vertical + '</div>'
   );
@@ -367,7 +346,7 @@ $(document).ready(function() {
     
     return ret;
   }
-  jQuery("#logo").html(logo());
+  $("#logo").html(logo());
   
   
   $("#logo").hover(
@@ -380,7 +359,27 @@ $(document).ready(function() {
   );
   
   
-  
+  // Sticky header
+  $(function(){
+    // Check the initial position of the Sticky Header
+    var stickyHeaderTop = $('.archive #header').offset().top;
+    
+    $(window).scroll(function(){
+      if( $(window).scrollTop() > stickyHeaderTop ) {
+        $('.archive #header').css({position: 'fixed', top: '0px'});
+        $('.archive #header').addClass('fixed');
+        
+        $('.archive #archive hgroup').css({position: 'fixed', top: '0px'});
+        $('.archive #archive hgroup').addClass('fixed');
+      } else {
+        $('.archive #header').css({position: 'static', top: '0px'});
+        $('.archive #header').removeClass('fixed');
+        
+        $('.archive #archive hgroup').css({position: 'static', top: '0px'});
+        $('.archive #archive hgroup').removeClass('fixed');
+      }
+    });
+  });
   
   
   

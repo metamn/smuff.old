@@ -507,7 +507,7 @@ body .container {
   }
 }
 /* line 35, header.scss */
-body .container h1, body .container h2, body .container h3, body .container h4 {
+body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   font-family: 'Oswald', sans-serif;
 }
 /* line 39, header.scss */
@@ -1316,7 +1316,7 @@ body.archive #header.fixed #strapline, body.archive #header.fixed #menu, body.ar
 /* line 17, archive.scss */
 body.archive section hgroup.fixed {
   height: 3.75em;
-  left: 15em;
+  left: 23%;
   padding-top: 0.3125em;
 }
 /* line 24, archive.scss */
