@@ -5,40 +5,21 @@ body.archive {
     
     hgroup {
       @include block;
-      margin-bottom: $pad*2;
-      
-      padding-bottom: $pad;
-      background: url(stripe.png);
-      
-      header, nav {
-        padding: 0 $pad/2;
-      }
+      background: $very-light-gray;
+      margin-bottom: $pad;
       
       header {
-        @include block;
-        
-        h4 {
-          span {
-            background: $background;
-            padding: $pad/6;
-          }
-        }
-        
-        @include tablet-landscape-and-below {
-          h2 {
-            font-size: 1.25em;
-            padding: $pad/2 0;
-          }
+        @include col(23%, 0, 2.5%);
+      
+        h5 {
+          padding: $pad/2 0 0 $pad/2;
         }
       }
       
       nav {
-        @include block;
-        
-        h3 {
-          display: none;
-        }
-        
+        @include col(74.5%, 0, 0);
+        padding-top: $pad/4;
+           
         div {
           max-width: $major/2;
           float: left;
@@ -104,33 +85,7 @@ body.archive {
       }
     }
     
-    #pagination {
-      float: right;
-      margin-top: $pad/2;
-      margin-right: $pad;
-      
-      .wp-paginate {
-        margin: 0;
-        font-size: small;
-        
-        a {
-          background: $background;
-        }
-        
-        span, a {
-          padding: $pad/4 $pad/2;
-        }
-        
-        .current {
-          background: $blue;
-          border-color: $blue;
-        }
-        
-        .prev, .next {
-          border: none;
-        }
-      }
-    }
+    
   
   
   #products {
@@ -138,7 +93,7 @@ body.archive {
     
     #product {
       @include col(23%, 0, 2.5%);
-      margin-bottom: $margin;
+      margin-bottom: $pad;
       
       @include product-thumb;
       

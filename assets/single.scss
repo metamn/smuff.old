@@ -70,7 +70,7 @@ body.single {
 				
 			
 			#description {
-			  margin-top: $pad*2;
+			  margin-top: $pad;
 			  
 			  ul#tabs {
 			    @include block;
@@ -119,7 +119,7 @@ body.single {
 		
 		
 		#campaigns {
-		  margin-bottom: $pad*2;
+		  margin-bottom: $pad;
 		  
 		  #subscribe {
 		    #subscribe-to-newsletter {
@@ -167,7 +167,7 @@ body.single {
 			
 			#product {
         @include col(23%, 0, 2.5%);
-        margin-bottom: $margin;
+        margin-bottom: $pad;
         
         @include product-thumb;
                

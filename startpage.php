@@ -41,11 +41,4 @@
 
 
 
-<section id="subscribe">
-  <div id="body">
-    <?php include 'c_subscribe-to-newsletter.php' ?>
-  </div>
-</section>
-
-
 <?php get_footer(); ?>

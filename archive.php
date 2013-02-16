@@ -123,8 +123,7 @@
 	<hgroup>
 	  
 	  <header>
-		  <h4>
-		    <span>
+		  <h5>
 			  <?php 
 				  $found_posts = $wp_query->found_posts;
 				  if ($found_posts == 1) {
@@ -134,13 +133,11 @@
 				  }
 			  ?>
 			  <?php echo $found_posts . $cadouri . $cat_name; ?>
-			  </span>
-		  </h4>
+		  </h5>
 		</header>
 	
 	  	
 		<nav id="filters">
-		  <h3>Filtrare si navigare</h3>
 		  
 		  <div id="for-who">
 		    <label class="select">
@@ -150,17 +147,6 @@
 		        <option>Pentru Ea</option>
 		        <option>Pentru copii</option>
 		        <option>Casa si birou</option>
-		      </select>
-		    </label>
-		  </div>
-		  
-		  <div id="meta">
-		    <label class="select">
-		      <select>
-		        <option>Cadouri noi</option>
-		        <option>Cele mai vandute</option>
-		        <option>Reduceri</option>
-		        <option>Toate cadourile</option>
 		      </select>
 		    </label>
 		  </div>
@@ -177,7 +163,21 @@
 		    </label>
 		  </div>
 		  
-		  <div id="delivery">
+		  
+		  <div id="meta">
+		    <label class="select">
+		      <select>
+		        <option>Cadouri noi</option>
+		        <option>Cele mai vandute</option>
+		        <option>Reduceri</option>
+		        <option>Toate cadourile</option>
+		      </select>
+		    </label>
+		  </div>
+		  
+		  
+		  
+		  <div id="delivery" class='last'>
 		    <label class="select">
 		      <select>
 		        <option>Toate livrarile</option>
@@ -188,15 +188,7 @@
 		    </label>
 		  </div>
 		  
-		  <div id="submit">
-		    <input class="submit" type="submit" id="searchsubmit" value="Filtrare rezultate" />
-		  </div>
 		  
-		  <div id="pagination">
-		    <?php if(function_exists('wp_paginate')) {
-			    wp_paginate();
-		    } ?>  
-	    </div>
 		</nav>
 			
 	</hgroup>
@@ -223,21 +215,6 @@
 					endwhile; 
 				?>		 
 			</div>
-			<div class="clear"></div>	  
-  
-     
-  
-			<footer>
-				<h1>
-					<?php echo $found_posts . $cadouri . $cat_name; ?>
-				</h1>
-						
-				<nav id="pagination">
-					<?php if(function_exists('wp_paginate')) {
-						wp_paginate();
-					} ?>  
-				</nav>
-			</footer>
 		
 	<?php } else { ?>
 		<div id="no-search-results">

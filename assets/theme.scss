@@ -86,7 +86,7 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-description {
   padding: $pad;
-  margin: $pad*2 0;
+  margin: $pad*2 0 0;
   
   background: $background;
   
@@ -296,7 +296,7 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-thumb {
   background: $background url(stripe.png);
-  padding-bottom: $pad*2;
+  padding-bottom: $pad;
   
   
   img {
