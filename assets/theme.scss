@@ -162,13 +162,15 @@ a, a:active, a:visited, a:hover {
             margin: 0 0 $pad/2;
             
             font-size: 90%;
-            
             width: 92%;
           }
-        }
-        .select:after {
-          padding: $pad;
-          margin: -3.4em $pad*2 0 -2.1em;
+          
+          &:after {
+            padding: $pad;
+            background: $color;
+            color: $background;
+            top: -($pad/2 + $pad/4); 
+          }
         }
         
       }
@@ -202,21 +204,15 @@ a, a:active, a:visited, a:hover {
         #quantity {
           display: none;
           
-          
           width: auto;
           float: left;
-          width: 8em;
-          
           font-size: small;
+          margin-top: $pad/2 + $pad/4;
           
-          margin-top: $pad/2;
-          
-          label.select {
-            width: 10em;
-            
-            &:after {
-              margin: -2.5em 3.35em 0 -2.5em;
-            }
+          label.select:after {
+            padding: 0 .6em;
+            left: -1.45em;
+            top: .2em;
           }
         }
       }

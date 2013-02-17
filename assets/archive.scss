@@ -45,20 +45,13 @@ body.archive {
            
         div {
           max-width: $major/2;
+          padding: $pad/2 0;
           float: left;
           
           select {
             font-size: small;
           }
           
-          label:after {
-            background: $background !important;
-            color: $color !important;
-            
-            select {
-              color: $color !important;
-            }
-          }
          
         }
         

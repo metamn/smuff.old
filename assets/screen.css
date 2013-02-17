@@ -118,9 +118,9 @@ body .container {
   /* Radio */
   /* Checkbox */
   /* Select box 
-    - put inside a <label>
-    - label:after is positioned over the selectbox arrow
-    -
+    - put inside a <label class="select">
+    - label:after is positioned over the original selectbox arrow
+    - additionally padding & relative positioning must be overwritten later in the new context
   */
 }
 /* line 13, typography.scss */
@@ -284,28 +284,18 @@ body .container input[type='checkbox']:checked + label:after {
 }
 /* line 242, typography.scss */
 body .container select {
-  padding: 0.15625em;
-  padding-right: 2em;
-  /* to make the select box longer and accept clicking on the arrow */
   border-bottom: 1px solid gray;
   cursor: pointer;
 }
-/* line 248, typography.scss */
-body .container label.select {
-  position: relative;
-  display: block;
-  padding-top: .4em;
-  /* To align select box to the submit button */
-}
-/* line 253, typography.scss */
+/* line 246, typography.scss */
 body .container label.select:after {
   content: '\003E';
   float: right;
-  background: black;
-  color: white;
-  padding: 0.9375em;
+  display: inline-block;
+  padding: 0 .45em;
   position: relative;
-  margin: -0.7em 2.5em 0 -2.5em;
+  left: -1.25em;
+  background: white;
   pointer-events: none;
   /* this is a must */
   cursor: pointer;
@@ -314,7 +304,6 @@ body .container label.select:after {
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
-  display: inline-block;
 }
 
 /* Button
@@ -555,33 +544,33 @@ body .container #header hgroup #logo {
   width: 9.58333em;
   float: left;
 }
-/* line 345, theme.scss */
+/* line 341, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 351, theme.scss */
+/* line 347, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 355, theme.scss */
+/* line 351, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 359, theme.scss */
+/* line 355, theme.scss */
 body .container #header hgroup #logo .square {
   background: #cccccc;
 }
-/* line 363, theme.scss */
+/* line 359, theme.scss */
 body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
-/* line 367, theme.scss */
+/* line 363, theme.scss */
 body .container #header hgroup #logo:hover {
   width: 20.20833em;
 }
-/* line 370, theme.scss */
+/* line 366, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -797,33 +786,33 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 298, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 306, theme.scss */
+/* line 302, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 312, theme.scss */
+/* line 308, theme.scss */
 body.home .container section #body #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 316, theme.scss */
+/* line 312, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
 }
-/* line 321, theme.scss */
+/* line 317, theme.scss */
 body.home .container section #body #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 325, theme.scss */
+/* line 321, theme.scss */
 body.home .container section #body #products #product #price .normal-price {
   padding-right: 0;
 }
@@ -877,7 +866,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 257, theme.scss */
+/* line 253, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -894,17 +883,17 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 260, theme.scss */
+/* line 256, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 266, theme.scss */
+/* line 262, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 270, theme.scss */
+/* line 266, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -1249,33 +1238,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
 }
-/* line 345, theme.scss */
+/* line 341, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 351, theme.scss */
+/* line 347, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 355, theme.scss */
+/* line 351, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 359, theme.scss */
+/* line 355, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 363, theme.scss */
+/* line 359, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 367, theme.scss */
+/* line 363, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15.15625em;
 }
-/* line 370, theme.scss */
+/* line 366, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1322,23 +1311,15 @@ body.archive section hgroup nav {
 /* line 46, archive.scss */
 body.archive section hgroup nav div {
   max-width: 38.25%;
+  padding: 0.625em 0;
   float: left;
 }
-/* line 50, archive.scss */
+/* line 51, archive.scss */
 body.archive section hgroup nav div select {
   font-size: small;
 }
-/* line 54, archive.scss */
-body.archive section hgroup nav div label:after {
-  background: white !important;
-  color: #363636 !important;
-}
-/* line 58, archive.scss */
-body.archive section hgroup nav div label:after select {
-  color: #363636 !important;
-}
 @media only screen and (max-width: 1024px) {
-  /* line 67, archive.scss */
+  /* line 60, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1347,7 +1328,7 @@ body.archive section hgroup nav div label:after select {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 78, archive.scss */
+  /* line 71, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1360,33 +1341,33 @@ body.archive section hgroup nav div label:after select {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 82, archive.scss */
+  /* line 75, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 88, archive.scss */
+  /* line 81, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 93, archive.scss */
+  /* line 86, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 100, archive.scss */
+  /* line 93, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 110, archive.scss */
+/* line 103, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 113, archive.scss */
+/* line 106, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1395,81 +1376,81 @@ body.archive section #products #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 298, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 306, theme.scss */
+/* line 302, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 312, theme.scss */
+/* line 308, theme.scss */
 body.archive section #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 316, theme.scss */
+/* line 312, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
 }
-/* line 321, theme.scss */
+/* line 317, theme.scss */
 body.archive section #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 325, theme.scss */
+/* line 321, theme.scss */
 body.archive section #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 120, archive.scss */
+/* line 113, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 125, archive.scss */
+/* line 118, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 131, archive.scss */
+  /* line 124, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 142, archive.scss */
+  /* line 135, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 148, archive.scss */
+  /* line 141, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 151, archive.scss */
+  /* line 144, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 159, archive.scss */
+/* line 152, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 163, archive.scss */
+/* line 156, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 170, archive.scss */
+  /* line 163, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
@@ -1541,35 +1522,37 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .wps
   font-size: 90%;
   width: 92%;
 }
-/* line 169, theme.scss */
+/* line 168, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms .select:after {
   padding: 1.25em;
-  margin: -3.4em 2.5em 0 -2.1em;
+  background: #363636;
+  color: white;
+  top: -0.9375em;
 }
-/* line 178, theme.scss */
+/* line 180, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
 }
-/* line 182, theme.scss */
+/* line 184, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
 }
-/* line 185, theme.scss */
+/* line 187, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
   margin-left: 1.25em;
 }
-/* line 189, theme.scss */
+/* line 191, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 194, theme.scss */
+/* line 196, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button {
   display: inline-block;
   max-width: 20em;
 }
-/* line 198, theme.scss */
+/* line 200, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1591,46 +1574,43 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 202, theme.scss */
+/* line 204, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity {
   display: none;
   width: auto;
   float: left;
-  width: 8em;
   font-size: small;
-  margin-top: 0.625em;
+  margin-top: 0.9375em;
 }
-/* line 214, theme.scss */
-body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity label.select {
-  width: 10em;
-}
-/* line 217, theme.scss */
+/* line 212, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity label.select:after {
-  margin: -2.5em 3.35em 0 -2.5em;
+  padding: 0 .6em;
+  left: -1.45em;
+  top: .2em;
 }
-/* line 224, theme.scss */
+/* line 220, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .checkout {
   display: none;
 }
-/* line 228, theme.scss */
+/* line 224, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 235, theme.scss */
+/* line 231, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
   background: url(stripe.png);
   padding: 1.25em;
   margin-top: 1.25em;
 }
-/* line 240, theme.scss */
+/* line 236, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued h3 {
   padding-top: 0;
 }
-/* line 243, theme.scss */
+/* line 239, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 247, theme.scss */
+/* line 243, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1862,33 +1842,33 @@ body.single .container section #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 298, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 306, theme.scss */
+/* line 302, theme.scss */
 body.single .container section #product #title, body.single .container section #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 312, theme.scss */
+/* line 308, theme.scss */
 body.single .container section #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 316, theme.scss */
+/* line 312, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
 }
-/* line 321, theme.scss */
+/* line 317, theme.scss */
 body.single .container section #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 325, theme.scss */
+/* line 321, theme.scss */
 body.single .container section #product #price .normal-price {
   padding-right: 0;
 }

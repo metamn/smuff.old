@@ -234,32 +234,25 @@ body {
 	  }
 	  
 	  /* Select box 
-	    - put inside a <label>
-	    - label:after is positioned over the selectbox arrow
-	    -
+	    - put inside a <label class="select">
+	    - label:after is positioned over the original selectbox arrow
+	    - additionally padding & relative positioning must be overwritten later in the new context
 	  */
 	  
 	  select {
-	    padding: $pad/8;
-	    padding-right: 2em; /* to make the select box longer and accept clicking on the arrow */
 	    border-bottom: 1px solid gray;
 	    cursor: pointer;
-	  }
-	  label.select {
-	    position: relative;
-	    display: block;
-	    padding-top: .4em; /* To align select box to the submit button */
 	  }
 	  label.select:after {
 	    content: '\003E';
 	    float: right;
 	    
-	    background: black;
-	    color: white;
-	    padding: $pad/2 + $pad/4;
-	    
+      display: inline-block;
+	    padding: 0 .45em;
 	    position: relative;
-	    margin: -.7em $pad*2 0 -2.5em;
+	    left: -$pad;
+	    background: white;
+	    
 	    
 	    pointer-events: none; /* this is a must */
 	    cursor: pointer;
@@ -269,7 +262,6 @@ body {
       -o-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
-      display: inline-block;
 	  }
 
   }
