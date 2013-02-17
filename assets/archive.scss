@@ -1,9 +1,11 @@
 body.archive {
 
   #header.fixed {
+    @include col(15%, 0, 2%);
+    margin-top: 0;
+    
     height: 5.5em;
     background: url(background.png);
-    margin: 0;
     
     #logo {
       @include logo($pad/4);
@@ -15,8 +17,8 @@ body.archive {
   }
   
   section hgroup.fixed {
+    @include col(83%, 17%, 0);
     height: 3.75em;
-    left: 23%;
     padding-top: $pad/4;
   }
   
