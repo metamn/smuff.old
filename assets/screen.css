@@ -555,33 +555,33 @@ body .container #header hgroup #logo {
   width: 9.58333em;
   float: left;
 }
-/* line 344, theme.scss */
+/* line 345, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 350, theme.scss */
+/* line 351, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 354, theme.scss */
+/* line 355, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 358, theme.scss */
+/* line 359, theme.scss */
 body .container #header hgroup #logo .square {
   background: #cccccc;
 }
-/* line 362, theme.scss */
+/* line 363, theme.scss */
 body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
-/* line 366, theme.scss */
+/* line 367, theme.scss */
 body .container #header hgroup #logo:hover {
   width: 20.20833em;
 }
-/* line 369, theme.scss */
+/* line 370, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -795,34 +795,35 @@ body.home .container section #body #products #product {
   margin: 0 2.5% 0 0;
   float: left;
   background: white url(stripe.png);
+  padding-bottom: 1.25em;
 }
-/* line 301, theme.scss */
+/* line 302, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 305, theme.scss */
+/* line 306, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 311, theme.scss */
+/* line 312, theme.scss */
 body.home .container section #body #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 315, theme.scss */
+/* line 316, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
 }
-/* line 320, theme.scss */
+/* line 321, theme.scss */
 body.home .container section #body #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 324, theme.scss */
+/* line 325, theme.scss */
 body.home .container section #body #products #product #price .normal-price {
   padding-right: 0;
 }
@@ -1248,33 +1249,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
 }
-/* line 344, theme.scss */
+/* line 345, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 350, theme.scss */
+/* line 351, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 354, theme.scss */
+/* line 355, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 358, theme.scss */
+/* line 359, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 362, theme.scss */
+/* line 363, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 366, theme.scss */
+/* line 367, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15.15625em;
 }
-/* line 369, theme.scss */
+/* line 370, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1329,37 +1330,15 @@ body.archive section hgroup nav div select {
 }
 /* line 54, archive.scss */
 body.archive section hgroup nav div label:after {
-  background: #4d8fce !important;
+  background: white !important;
+  color: #363636 !important;
 }
-/* line 57, archive.scss */
+/* line 58, archive.scss */
 body.archive section hgroup nav div label:after select {
   color: #363636 !important;
 }
-/* line 62, archive.scss */
-body.archive section hgroup nav div input[type="submit"] {
-  font-size: small;
-  -webkit-border-radius: 6% 6%;
-  -moz-border-radius: 6% / 6%;
-  border-radius: 6% / 6%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #5e9ad2), color-stop(100%, #4580b9));
-  background-image: -webkit-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
-  background-image: -moz-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
-  background-image: -o-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
-  background-image: linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
-  border: 1px solid #4987c3;
-  color: white;
-  text-shadow: 0px 0px 1px #999999;
-}
-/* line 124, theme.scss */
-body.archive section hgroup nav div input[type="submit"]:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4580b9), color-stop(100%, #5e9ad2));
-  background-image: -webkit-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
-  background-image: -moz-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
-  background-image: -o-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
-  background-image: linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
-}
 @media only screen and (max-width: 1024px) {
-  /* line 71, archive.scss */
+  /* line 67, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1368,7 +1347,7 @@ body.archive section hgroup nav div input[type="submit"]:hover {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 82, archive.scss */
+  /* line 78, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1381,115 +1360,116 @@ body.archive section hgroup nav div input[type="submit"]:hover {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 86, archive.scss */
+  /* line 82, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 92, archive.scss */
+  /* line 88, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 97, archive.scss */
+  /* line 93, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 104, archive.scss */
+  /* line 100, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 114, archive.scss */
+/* line 110, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 117, archive.scss */
+/* line 113, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
   float: left;
   margin-bottom: 1.25em;
   background: white url(stripe.png);
+  padding-bottom: 1.25em;
 }
-/* line 301, theme.scss */
+/* line 302, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 305, theme.scss */
+/* line 306, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 311, theme.scss */
+/* line 312, theme.scss */
 body.archive section #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 315, theme.scss */
+/* line 316, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
 }
-/* line 320, theme.scss */
+/* line 321, theme.scss */
 body.archive section #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 324, theme.scss */
+/* line 325, theme.scss */
 body.archive section #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 124, archive.scss */
+/* line 120, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 129, archive.scss */
+/* line 125, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 135, archive.scss */
+  /* line 131, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 146, archive.scss */
+  /* line 142, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 152, archive.scss */
+  /* line 148, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 155, archive.scss */
+  /* line 151, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 163, archive.scss */
+/* line 159, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 167, archive.scss */
+/* line 163, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 174, archive.scss */
+  /* line 170, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
@@ -1880,34 +1860,35 @@ body.single .container section #product {
   float: left;
   margin-bottom: 1.25em;
   background: white url(stripe.png);
+  padding-bottom: 1.25em;
 }
-/* line 301, theme.scss */
+/* line 302, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 305, theme.scss */
+/* line 306, theme.scss */
 body.single .container section #product #title, body.single .container section #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 311, theme.scss */
+/* line 312, theme.scss */
 body.single .container section #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 315, theme.scss */
+/* line 316, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
 }
-/* line 320, theme.scss */
+/* line 321, theme.scss */
 body.single .container section #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 324, theme.scss */
+/* line 325, theme.scss */
 body.single .container section #product #price .normal-price {
   padding-right: 0;
 }

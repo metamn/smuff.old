@@ -52,18 +52,14 @@ body.archive {
           }
           
           label:after {
-            background: $blue !important;
+            background: $background !important;
+            color: $color !important;
             
             select {
               color: $color !important;
             }
           }
-          
-          input[type="submit"] {
-            font-size: small;
-            
-            @include button($background, $blue);
-          }
+         
         }
         
         

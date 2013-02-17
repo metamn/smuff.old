@@ -105,11 +105,6 @@
 </article>
 			
 
-<section id="campaigns">
-  <div id="subscribe">
-    <?php include 'c_subscribe-to-newsletter.php' ?>
-  </div>
-</section>
 
 
     
