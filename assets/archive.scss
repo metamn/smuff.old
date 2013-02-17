@@ -32,7 +32,7 @@ body.archive {
       border-bottom: 1px solid $very-light-gray;
       
       header {
-        @include col(23%, 0, 2.5%);
+        @include col(18%, 0, 2.5%);
       
         h2 {
           padding: $pad/2 0 0 $pad/2;
@@ -40,19 +40,26 @@ body.archive {
       }
       
       nav {
-        @include col(74.5%, 0, 0);
+        @include col(79.5%, 0, 0);
         padding-top: $pad/4;
            
         div {
-          max-width: $major/2;
-          padding: $pad/2 0;
-          float: left;
+          @include col(23%, 0, 2.5%);
+          padding: $pad/2 0 0;
           
           select {
             font-size: small;
+            width: 100%
           }
           
-         
+          .select:after {
+            left: 0;
+            top: -1.35em;
+          }
+          
+          &.last {
+            margin-right: 0;
+          }
         }
         
         

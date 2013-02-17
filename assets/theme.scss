@@ -162,21 +162,21 @@ a, a:active, a:visited, a:hover {
             margin: 0 0 $pad/2;
             
             font-size: 90%;
-            width: 92%;
+            width: 100%;
           }
           
           &:after {
             padding: $pad;
             background: $color;
             color: $background;
-            top: -($pad/2 + $pad/4); 
+            top: -3.5em; 
+            left: 0;
           }
         }
         
       }
       
       .wpsc_product_price {
-        
         .price {
           margin-right: $pad;
           padding: $pad/2;
@@ -211,7 +211,7 @@ a, a:active, a:visited, a:hover {
           
           label.select:after {
             padding: 0 .6em;
-            left: -1.45em;
+            left: -1.5em;
             top: .2em;
           }
         }

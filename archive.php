@@ -163,7 +163,7 @@
 		    </label>
 		  </div>
 		  
-		  <div id="delivery" class='last'>
+		  <div id="delivery">
 		    <label class="select">
 		      <select>
 		        <option>Toate livrarile</option>
@@ -176,7 +176,7 @@
 		  
 		  
 		  
-		  <div id="meta">
+		  <div id="meta" class="last">
 		    <label class="select">
 		      <select>
 		        <option>Cadouri noi</option>
