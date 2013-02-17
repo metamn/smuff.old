@@ -334,9 +334,13 @@ a, a:active, a:visited, a:hover {
   //    width: = (x-z)*cell_size + z*cell_size/2
 */
 
+@mixin logo-width($size) {
+  width: (24 - 2) * $size + 2*$size/2; 
+}
+
 @mixin logo($size) {
   height: $size * 7;
-  width: (24 - 2) * $size + 2*$size/2; 
+  @include logo-width($size);
 
   .cell {
     width: $size;

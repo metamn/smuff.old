@@ -547,33 +547,33 @@ body .container #header hgroup #logo {
   width: 9.58333em;
   float: left;
 }
-/* line 341, theme.scss */
+/* line 345, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 347, theme.scss */
+/* line 351, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 351, theme.scss */
+/* line 355, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 355, theme.scss */
+/* line 359, theme.scss */
 body .container #header hgroup #logo .square {
   background: #cccccc;
 }
-/* line 359, theme.scss */
+/* line 363, theme.scss */
 body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
-/* line 363, theme.scss */
+/* line 367, theme.scss */
 body .container #header hgroup #logo:hover {
   width: 20.20833em;
 }
-/* line 366, theme.scss */
+/* line 370, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1253,33 +1253,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
 }
-/* line 341, theme.scss */
+/* line 345, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 347, theme.scss */
+/* line 351, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 351, theme.scss */
+/* line 355, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 355, theme.scss */
+/* line 359, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 359, theme.scss */
+/* line 363, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 363, theme.scss */
+/* line 367, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15.15625em;
 }
-/* line 366, theme.scss */
+/* line 370, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
