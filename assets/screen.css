@@ -444,23 +444,24 @@ a, a:active, a:visited, a:hover {
 /* line 44, theme.scss */
 .price, .normal-price, .old-price, .oldprice {
   border: #cccccc;
-  padding: 0.3125em;
+  padding: 0.3125em 0.625em;
+  display: inline-block;
 }
 
-/* line 48, theme.scss */
+/* line 49, theme.scss */
 .price {
   background: #f25f18;
   color: white;
 }
 
-/* line 52, theme.scss */
+/* line 53, theme.scss */
 .old-price, .oldprice {
   text-decoration: line-through;
   color: #cccccc;
   background: white;
 }
 
-/* line 57, theme.scss */
+/* line 58, theme.scss */
 .normal-price {
   background: #4d8fce;
 }
@@ -484,44 +485,55 @@ body {
 body .grid {
   display: none;
 }
-/* line 13, header.scss */
+/* line 14, header.scss */
 body #above-container {
   background: #363636;
   height: 1.875em;
 }
 @media (max-width: 480px) {
-  /* line 13, header.scss */
+  /* line 14, header.scss */
   body #above-container {
     display: none;
   }
 }
-/* line 24, header.scss */
+/* line 25, header.scss */
 body .container {
   width: 90%;
   margin: 0 auto;
+  /* Typography overwrites */
 }
 @media only screen and (min-width: 1599px) {
-  /* line 24, header.scss */
+  /* line 25, header.scss */
   body .container {
     width: 70%;
   }
 }
-/* line 35, header.scss */
+/* line 37, header.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 39, header.scss */
+/* line 41, header.scss */
+body .container h2, body .container h3 {
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 47, header.scss */
+body .container h2 {
+  text-transform: uppercase;
+}
+/* line 51, header.scss */
 body .container input, body .container textarea, body .container select {
   font-family: 'Coda', serif;
   font-size: 100%;
 }
-/* line 46, header.scss */
+/* line 58, header.scss */
 body .container #header {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 51, header.scss */
+/* line 63, header.scss */
 body .container #header hgroup {
   width: 50%;
   margin: 0 2.5% 0 0;
@@ -530,71 +542,71 @@ body .container #header hgroup {
   margin-bottom: 1.25em;
 }
 @media (max-width: 480px) {
-  /* line 51, header.scss */
+  /* line 63, header.scss */
   body .container #header hgroup {
     width: 100%;
     float: left;
     margin-top: 0;
   }
 }
-/* line 61, header.scss */
+/* line 73, header.scss */
 body .container #header hgroup #logo {
   height: 2.91667em;
   width: 9.58333em;
   float: left;
 }
-/* line 386, theme.scss */
+/* line 344, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 392, theme.scss */
+/* line 350, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 396, theme.scss */
+/* line 354, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 400, theme.scss */
+/* line 358, theme.scss */
 body .container #header hgroup #logo .square {
   background: #cccccc;
 }
-/* line 404, theme.scss */
+/* line 362, theme.scss */
 body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
-/* line 408, theme.scss */
+/* line 366, theme.scss */
 body .container #header hgroup #logo:hover {
   width: 20.20833em;
 }
-/* line 411, theme.scss */
+/* line 369, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
-/* line 66, header.scss */
+/* line 78, header.scss */
 body .container #header hgroup #strapline {
   float: left;
   margin-left: 0.625em;
 }
-/* line 70, header.scss */
+/* line 82, header.scss */
 body .container #header hgroup #strapline h2 {
   padding: 0;
   font-style: normal;
   color: #f25f18;
 }
-/* line 75, header.scss */
+/* line 87, header.scss */
 body .container #header hgroup #strapline h2 a {
   color: #f25f18;
 }
 @media (max-width: 480px) {
-  /* line 66, header.scss */
+  /* line 78, header.scss */
   body .container #header hgroup #strapline {
     font-size: small;
   }
 }
-/* line 87, header.scss */
+/* line 99, header.scss */
 body .container #header #search {
   width: 47.5%;
   margin: 0 0 0 0;
@@ -603,20 +615,20 @@ body .container #header #search {
   font-size: small;
   margin-top: 3em;
 }
-/* line 94, header.scss */
+/* line 106, header.scss */
 body .container #header #search input[type="text"] {
   width: 23.5em;
   border-color: #f1f1f1;
 }
-/* line 98, header.scss */
+/* line 110, header.scss */
 body .container #header #search input[type="text"]:focus {
   border: 1px solid;
 }
-/* line 103, header.scss */
+/* line 115, header.scss */
 body .container #header #search input[type="submit"] {
   background: url(icon-search.png) no-repeat center 1em;
 }
-/* line 109, header.scss */
+/* line 121, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -624,7 +636,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 116, header.scss */
+/* line 128, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -642,11 +654,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 121, header.scss */
+/* line 133, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 124, header.scss */
+/* line 136, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -659,7 +671,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 128, header.scss */
+/* line 140, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -668,31 +680,31 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 132, header.scss */
+/* line 144, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 116, header.scss */
+  /* line 128, header.scss */
   body .container #header #menu ul {
     padding: 0;
   }
-  /* line 140, header.scss */
+  /* line 152, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-right: 0.625em;
   }
-  /* line 144, header.scss */
+  /* line 156, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     margin-top: 0.625em;
   }
-  /* line 149, header.scss */
+  /* line 161, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
   }
 }
-/* line 160, header.scss */
+/* line 172, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
@@ -700,54 +712,54 @@ body .container #header #menu-info {
   background: #f1f1f1;
   padding-bottom: 1.25em;
 }
-/* line 167, header.scss */
+/* line 179, header.scss */
 body .container #header #menu-info div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 170, header.scss */
+/* line 182, header.scss */
 body .container #header #menu-info div h3 {
   color: #aaaaaa;
 }
-/* line 174, header.scss */
+/* line 186, header.scss */
 body .container #header #menu-info div ul {
   list-style: none;
   margin: 0;
 }
-/* line 178, header.scss */
+/* line 190, header.scss */
 body .container #header #menu-info div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
 }
-/* line 182, header.scss */
+/* line 194, header.scss */
 body .container #header #menu-info div ul li a {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 187, header.scss */
+/* line 199, header.scss */
 body .container #header #menu-info div ul li a:hover {
   border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 193, header.scss */
+/* line 205, header.scss */
 body .container #header #menu-info div ul li.separator {
   padding: 0.625em;
 }
-/* line 201, header.scss */
+/* line 213, header.scss */
 body .container #header #menu-info #contact {
   margin-left: 23%;
 }
-/* line 207, header.scss */
+/* line 219, header.scss */
 body .container #header #menu-info .shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 210, header.scss */
+/* line 222, header.scss */
 body .container #header #menu-info .shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 218, header.scss */
+/* line 230, header.scss */
 body .container #header #menu-info #close {
   margin-top: -16.2em;
   float: right;
@@ -755,51 +767,16 @@ body .container #header #menu-info #close {
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 226, header.scss */
+/* line 238, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 231, header.scss */
+/* line 243, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
   font-size: large;
-}
-/* line 241, header.scss */
-body .container #footer #info {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 0.625em 0;
-  margin-bottom: 0.625em;
-}
-/* line 248, header.scss */
-body .container #footer #info ul #go-top {
-  float: right;
-}
-/* line 251, header.scss */
-body .container #footer #info ul #go-top:after {
-  content: '\003E';
-  float: right;
-  margin-left: 0.3125em;
-  color: #f25f18;
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-  -moz-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
-  display: inline-block;
-}
-/* line 258, header.scss */
-body .container #footer #company {
-  font-size: small;
-  color: #cccccc;
 }
 
 /* line 4, startpage.scss */
@@ -818,73 +795,36 @@ body.home .container section #body #products #product {
   margin: 0 2.5% 0 0;
   float: left;
   background: white url(stripe.png);
-  padding-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 301, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 306, theme.scss */
-body.home .container section #body #products #product #percentage {
-  position: relative;
-  top: -16em;
-  background: #f25f18;
-  color: white;
-  padding: 0.3125em;
-  width: 6em;
-  display: inline-block;
-  opacity: .9;
-  font-size: 130%;
-  font-weight: bold;
-  text-align: center;
-}
-/* line 323, theme.scss */
-body.home .container section #body #products #product #title, body.home .container section #body #products #product #excerpt {
+/* line 305, theme.scss */
+body.home .container section #body #products #product #title, body.home .container section #body #products #product #price {
   margin: 0.625em 0.3125em;
-  padding: 0.625em 1.25em;
-  background: white;
-  min-height: 4.5em;
+  background: white url(background.png);
 }
-/* line 331, theme.scss */
+/* line 311, theme.scss */
+body.home .container section #body #products #product #title {
+  padding: 0.625em;
+  min-height: 3.125em;
+}
+/* line 315, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
-  font-size: 1.5em;
-  font-weight: bold;
 }
-/* line 339, theme.scss */
-body.home .container section #body #products #product #excerpt a {
-  color: #aaaaaa;
-}
-/* line 345, theme.scss */
+/* line 320, theme.scss */
 body.home .container section #body #products #product #price {
-  width: 50%;
-  margin: 0 5% 0 1.25em;
-  float: left;
-  margin-top: 1.25em;
+  display: inline-block;
+  padding-right: 0.625em;
 }
-/* line 350, theme.scss */
-body.home .container section #body #products #product #category {
-  min-width: 20%;
-  margin-right: 1.5em;
-  /* Because of the small font size */
-  margin-top: 0.625em;
-  float: right;
-  font-size: small;
-  background: #cccccc;
-}
-/* line 359, theme.scss */
-body.home .container section #body #products #product #category a {
-  padding: 0.625em;
-  color: white;
-  text-align: center;
-  display: block;
-}
-/* line 367, theme.scss */
-body.home .container section #body #products #product.on-sale {
-  padding-bottom: 0;
+/* line 324, theme.scss */
+body.home .container section #body #products #product #price .normal-price {
+  padding-right: 0;
 }
 /* line 19, startpage.scss */
 body.home .container section #body #products #product #excerpt {
@@ -936,7 +876,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 256, theme.scss */
+/* line 257, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -953,17 +893,17 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 259, theme.scss */
+/* line 260, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 265, theme.scss */
+/* line 266, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 269, theme.scss */
+/* line 270, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -1116,17 +1056,17 @@ body.home .container #subscribe #subscribe-to-newsletter {
   border: 1px dotted;
   text-align: center;
 }
-/* line 71, theme.scss */
+/* line 72, theme.scss */
 body.home .container #subscribe #subscribe-to-newsletter #text, body.home .container #subscribe #subscribe-to-newsletter #facebook-connect {
   margin: 1.25em;
 }
-/* line 75, theme.scss */
+/* line 76, theme.scss */
 body.home .container #subscribe #subscribe-to-newsletter input {
   text-align: center;
   margin-bottom: 0.3125em;
   font-size: small;
 }
-/* line 81, theme.scss */
+/* line 82, theme.scss */
 body.home .container #subscribe #subscribe-to-newsletter input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1140,7 +1080,7 @@ body.home .container #subscribe #subscribe-to-newsletter input[type="submit"] {
   color: white;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 123, theme.scss */
+/* line 124, theme.scss */
 body.home .container #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
   background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
@@ -1149,18 +1089,22 @@ body.home .container #subscribe #subscribe-to-newsletter input[type="submit"]:ho
   background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
 
-/* line 5, footer.scss */
+/* line 4, footer.scss */
 body .container #footer {
   width: 100%;
   float: left;
-  margin: 5% 0;
+  margin: 1.25em 0;
 }
-/* line 9, footer.scss */
+/* line 8, footer.scss */
 body .container #footer #info {
   width: 100%;
   float: left;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.625em 0;
+  margin-bottom: 0.625em;
 }
-/* line 12, footer.scss */
+/* line 15, footer.scss */
 body .container #footer #info ul {
   display: block;
   margin: 0;
@@ -1177,10 +1121,35 @@ body .container #footer #info ul li {
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
-/* line 17, footer.scss */
+/* line 18, footer.scss */
+body .container #footer #info ul #go-top {
+  float: right;
+}
+/* line 21, footer.scss */
+body .container #footer #info ul #go-top:after {
+  content: '\003E';
+  float: right;
+  margin-left: 0.3125em;
+  color: #f25f18;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
+  display: inline-block;
+}
+/* line 28, footer.scss */
 body .container #footer #company {
   width: 100%;
   float: left;
+  font-size: small;
+  color: #cccccc;
 }
 
 /* line 1, search.scss */
@@ -1279,33 +1248,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
 }
-/* line 386, theme.scss */
+/* line 344, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 392, theme.scss */
+/* line 350, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 396, theme.scss */
+/* line 354, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 400, theme.scss */
+/* line 358, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 404, theme.scss */
+/* line 362, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 408, theme.scss */
+/* line 366, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15.15625em;
 }
-/* line 411, theme.scss */
+/* line 369, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1339,7 +1308,7 @@ body.archive section hgroup header {
   float: left;
 }
 /* line 37, archive.scss */
-body.archive section hgroup header h5 {
+body.archive section hgroup header h2 {
   padding: 0.625em 0 0 0.625em;
 }
 /* line 42, archive.scss */
@@ -1381,7 +1350,7 @@ body.archive section hgroup nav div input[type="submit"] {
   color: white;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 123, theme.scss */
+/* line 124, theme.scss */
 body.archive section hgroup nav div input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4580b9), color-stop(100%, #5e9ad2));
   background-image: -webkit-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
@@ -1445,73 +1414,36 @@ body.archive section #products #product {
   float: left;
   margin-bottom: 1.25em;
   background: white url(stripe.png);
-  padding-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 301, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 306, theme.scss */
-body.archive section #products #product #percentage {
-  position: relative;
-  top: -16em;
-  background: #f25f18;
-  color: white;
-  padding: 0.3125em;
-  width: 6em;
-  display: inline-block;
-  opacity: .9;
-  font-size: 130%;
-  font-weight: bold;
-  text-align: center;
-}
-/* line 323, theme.scss */
-body.archive section #products #product #title, body.archive section #products #product #excerpt {
+/* line 305, theme.scss */
+body.archive section #products #product #title, body.archive section #products #product #price {
   margin: 0.625em 0.3125em;
-  padding: 0.625em 1.25em;
-  background: white;
-  min-height: 4.5em;
+  background: white url(background.png);
 }
-/* line 331, theme.scss */
+/* line 311, theme.scss */
+body.archive section #products #product #title {
+  padding: 0.625em;
+  min-height: 3.125em;
+}
+/* line 315, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
-  font-size: 1.5em;
-  font-weight: bold;
 }
-/* line 339, theme.scss */
-body.archive section #products #product #excerpt a {
-  color: #aaaaaa;
-}
-/* line 345, theme.scss */
+/* line 320, theme.scss */
 body.archive section #products #product #price {
-  width: 50%;
-  margin: 0 5% 0 1.25em;
-  float: left;
-  margin-top: 1.25em;
+  display: inline-block;
+  padding-right: 0.625em;
 }
-/* line 350, theme.scss */
-body.archive section #products #product #category {
-  min-width: 20%;
-  margin-right: 1.5em;
-  /* Because of the small font size */
-  margin-top: 0.625em;
-  float: right;
-  font-size: small;
-  background: #cccccc;
-}
-/* line 359, theme.scss */
-body.archive section #products #product #category a {
-  padding: 0.625em;
-  color: white;
-  text-align: center;
-  display: block;
-}
-/* line 367, theme.scss */
-body.archive section #products #product.on-sale {
-  padding-bottom: 0;
+/* line 324, theme.scss */
+body.archive section #products #product #price .normal-price {
+  padding-right: 0;
 }
 /* line 124, archive.scss */
 body.archive section #products #product .normal-price {
@@ -1597,30 +1529,30 @@ body.single .container article #article-title, body.single .container article #s
 body.single .container article #article-title h1 {
   padding: 0.3125em 0;
 }
-/* line 136, theme.scss */
+/* line 137, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .imagecol {
   display: none;
 }
-/* line 140, theme.scss */
+/* line 141, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .delivery {
   width: 100%;
   float: left;
 }
-/* line 143, theme.scss */
+/* line 144, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .delivery span {
   background: white;
 }
-/* line 148, theme.scss */
+/* line 149, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations {
   width: 100%;
   float: left;
   margin: 0.625em 0;
 }
-/* line 153, theme.scss */
+/* line 154, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms {
   margin-top: 0.625em;
 }
-/* line 157, theme.scss */
+/* line 158, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms .select select {
   border-top: 1px solid #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
@@ -1629,35 +1561,35 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .wps
   font-size: 90%;
   width: 92%;
 }
-/* line 168, theme.scss */
+/* line 169, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_variation_forms .select:after {
   padding: 1.25em;
   margin: -3.4em 2.5em 0 -2.1em;
 }
-/* line 177, theme.scss */
+/* line 178, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
 }
-/* line 181, theme.scss */
+/* line 182, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
 }
-/* line 184, theme.scss */
+/* line 185, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
   margin-left: 1.25em;
 }
-/* line 188, theme.scss */
+/* line 189, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 193, theme.scss */
+/* line 194, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button {
   display: inline-block;
   max-width: 20em;
 }
-/* line 197, theme.scss */
+/* line 198, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1671,7 +1603,7 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   color: #363636;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 123, theme.scss */
+/* line 124, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -1679,7 +1611,7 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 201, theme.scss */
+/* line 202, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity {
   display: none;
   width: auto;
@@ -1688,37 +1620,37 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   font-size: small;
   margin-top: 0.625em;
 }
-/* line 213, theme.scss */
+/* line 214, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity label.select {
   width: 10em;
 }
-/* line 216, theme.scss */
+/* line 217, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity label.select:after {
   margin: -2.5em 3.35em 0 -2.5em;
 }
-/* line 223, theme.scss */
+/* line 224, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .checkout {
   display: none;
 }
-/* line 227, theme.scss */
+/* line 228, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 234, theme.scss */
+/* line 235, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
   background: url(stripe.png);
   padding: 1.25em;
   margin-top: 1.25em;
 }
-/* line 239, theme.scss */
+/* line 240, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued h3 {
   padding-top: 0;
 }
-/* line 242, theme.scss */
+/* line 243, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 246, theme.scss */
+/* line 247, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1732,7 +1664,7 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
   color: white;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 123, theme.scss */
+/* line 124, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
   background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
@@ -1825,16 +1757,16 @@ body.single .container article #description div {
   max-width: 600px;
   font-size: 90%;
 }
-/* line 97, theme.scss */
+/* line 98, theme.scss */
 body.single .container article #description div br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 102, theme.scss */
+/* line 103, theme.scss */
 body.single .container article #description div ul {
   margin: 0 1.25em;
 }
-/* line 105, theme.scss */
+/* line 106, theme.scss */
 body.single .container article #description div ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
@@ -1875,17 +1807,17 @@ body.single .container #campaigns #subscribe #subscribe-to-newsletter {
   border-left: none;
   border-right: none;
 }
-/* line 71, theme.scss */
+/* line 72, theme.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #text, body.single .container #campaigns #subscribe #subscribe-to-newsletter #facebook-connect {
   margin: 1.25em;
 }
-/* line 75, theme.scss */
+/* line 76, theme.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter input {
   text-align: center;
   margin-bottom: 0.3125em;
   font-size: small;
 }
-/* line 81, theme.scss */
+/* line 82, theme.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1899,7 +1831,7 @@ body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type
   color: white;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 123, theme.scss */
+/* line 124, theme.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
   background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
@@ -1948,73 +1880,36 @@ body.single .container section #product {
   float: left;
   margin-bottom: 1.25em;
   background: white url(stripe.png);
-  padding-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 301, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 306, theme.scss */
-body.single .container section #product #percentage {
-  position: relative;
-  top: -16em;
-  background: #f25f18;
-  color: white;
-  padding: 0.3125em;
-  width: 6em;
-  display: inline-block;
-  opacity: .9;
-  font-size: 130%;
-  font-weight: bold;
-  text-align: center;
-}
-/* line 323, theme.scss */
-body.single .container section #product #title, body.single .container section #product #excerpt {
+/* line 305, theme.scss */
+body.single .container section #product #title, body.single .container section #product #price {
   margin: 0.625em 0.3125em;
-  padding: 0.625em 1.25em;
-  background: white;
-  min-height: 4.5em;
+  background: white url(background.png);
 }
-/* line 331, theme.scss */
+/* line 311, theme.scss */
+body.single .container section #product #title {
+  padding: 0.625em;
+  min-height: 3.125em;
+}
+/* line 315, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
-  font-size: 1.5em;
-  font-weight: bold;
 }
-/* line 339, theme.scss */
-body.single .container section #product #excerpt a {
-  color: #aaaaaa;
-}
-/* line 345, theme.scss */
+/* line 320, theme.scss */
 body.single .container section #product #price {
-  width: 50%;
-  margin: 0 5% 0 1.25em;
-  float: left;
-  margin-top: 1.25em;
+  display: inline-block;
+  padding-right: 0.625em;
 }
-/* line 350, theme.scss */
-body.single .container section #product #category {
-  min-width: 20%;
-  margin-right: 1.5em;
-  /* Because of the small font size */
-  margin-top: 0.625em;
-  float: right;
-  font-size: small;
-  background: #cccccc;
-}
-/* line 359, theme.scss */
-body.single .container section #product #category a {
-  padding: 0.625em;
-  color: white;
-  text-align: center;
-  display: block;
-}
-/* line 367, theme.scss */
-body.single .container section #product.on-sale {
-  padding-bottom: 0;
+/* line 324, theme.scss */
+body.single .container section #product #price .normal-price {
+  padding-right: 0;
 }
 /* line 174, single.scss */
 body.single .container section #product .normal-price, body.single .container section #product .old-price {

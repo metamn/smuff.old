@@ -43,7 +43,8 @@ a, a:active, a:visited, a:hover {
 
 .price, .normal-price, .old-price, .oldprice {
   border: $light-gray;
-  padding: $pad/4;
+  padding: $pad/4 $pad/2;
+  display: inline-block;
 }
 .price {
   background: $sale;
@@ -296,76 +297,33 @@ a, a:active, a:visited, a:hover {
 
 @mixin product-thumb {
   background: $background url(stripe.png);
-  padding-bottom: $pad;
-  
   
   img {
     @include image-bordered(0%);
   }
   
-  #percentage {
-    position: relative;
-    top: -16em;
-    
-    background: $sale;
-    color: $background;
-    padding: $pad/4;
-    width: 6em;
-    display: inline-block;
-    opacity: .9;
-    
-    
-    font-size: 130%;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  #title, #excerpt {
+  #title, #price {
     margin: $pad/2 $pad/4;
-    padding: $pad/2 $pad;
-    background: $background;
-    min-height: 4.5em;
-  }
-
-  #title {
-    h3 {
-      padding: 0;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-  }
-
-  #excerpt {
-    a {
-      color: $gray;
-    }
-  }
-
-
-  #price {
-    @include col(50%, $pad, 5%);
-    margin-top: $pad;
-  }
-
-  #category {
-    min-width: 20%;
-    margin-right: 1.5em; /* Because of the small font size */
-    margin-top: $pad/2;
-    float: right;
-    font-size: small;
-
-    background: $light-gray;
-
-    a {
-      padding: $pad/2;
-      color: $background;
-      text-align: center;
-      display: block;
-    }
+    background: $background url(background.png);
   }
   
-  &.on-sale {
-    padding-bottom: 0;
+
+  #title {
+    padding: $pad/2;
+    min-height: $pad*2 + $pad/2;
+    
+    h3 {
+      padding: 0;
+    }
+  }
+
+  #price {
+    display: inline-block;
+    padding-right: $pad/2;
+    
+    .normal-price {
+      padding-right: 0;
+    }
   }
 }
 

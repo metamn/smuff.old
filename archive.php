@@ -123,7 +123,7 @@
 	<hgroup>
 	  
 	  <header>
-		  <h5>
+		  <h2>
 			  <?php 
 				  $found_posts = $wp_query->found_posts;
 				  if ($found_posts == 1) {
@@ -133,7 +133,7 @@
 				  }
 			  ?>
 			  <?php echo $found_posts . $cadouri . $cat_name; ?>
-		  </h5>
+		  </h2>
 		</header>
 	
 	  	

@@ -5,6 +5,7 @@ body {
   }
 
   background: $background url(background.png);
+  
   font-family: 'Coda', serif;
   color: $color;
   
@@ -31,9 +32,20 @@ body {
 		}
 		
 		
+		/* Typography overwrites */
 		
 		h1, h2, h3, h4, h5, h6 {
       font-family: 'Oswald', sans-serif;
+    }
+    
+    h2, h3 {
+      font-size: 1.25em;
+      font-style: normal;
+      font-weight: normal;
+    }
+    
+    h2 {
+      text-transform: uppercase;
     }
     
     input, textarea, select {
@@ -235,30 +247,6 @@ body {
 			}
 			
 		}	
-		
-		
-		#footer {
-		  #info {
-		    border-top: 1px solid;
-		    border-bottom: 1px solid;
-		    padding: $pad/2 0;
-		    margin-bottom: $pad/2;
-		    
-		    ul {
-		      #go-top {
-		        float: right;
-		      }
-		      #go-top:after {
-		        @include arrow-to-reveal-content;
-		        @include rotate(270deg, .7);
-		      }
-		    }
-		  }
-		  
-		  #company {
-		    font-size: small;
-		    color: $light-gray;
-		  }
-		}
+	
 	}
 }

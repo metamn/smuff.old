@@ -34,7 +34,7 @@ body.archive {
       header {
         @include col(23%, 0, 2.5%);
       
-        h5 {
+        h2 {
           padding: $pad/2 0 0 $pad/2;
         }
       }

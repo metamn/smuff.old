@@ -1,21 +1,34 @@
 body {
 	.container {
-		
-		
-		#footer {
+	
+	  #footer {
 			@include block;
-			margin: $margin 0;
+			margin: $pad 0;
 			
 			#info {
 			  @include block;
+			  border-top: 1px solid;
+		    border-bottom: 1px solid;
+		    padding: $pad/2 0;
+		    margin-bottom: $pad/2;
 			  
 			  ul {
 			    @include list-inline;
+			    
+			    #go-top {
+		        float: right;
+		      }
+		      #go-top:after {
+		        @include arrow-to-reveal-content;
+		        @include rotate(270deg, .7);
+		      }
 			  }
 			}
 			
 			#company {
 			  @include block;
+			  font-size: small;
+		    color: $light-gray;
 			}
 		}
 		
