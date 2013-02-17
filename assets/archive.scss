@@ -1,8 +1,10 @@
 body.archive {
 
+
+  /* http://stackoverflow.com/questions/6794000/css-fixed-position-but-relative-to-container */
   #header.fixed {
-    @include col(15%, 0, 2%);
-    margin-top: 0;
+    @include container(0);
+    margin: 0;
     
     height: 5.5em;
     background: url(background.png);
@@ -17,9 +19,20 @@ body.archive {
   }
   
   section hgroup.fixed {
-    @include col(83%, 17%, 0);
+    @include container(10%);
+    margin-left: 10%;
+    
     height: 3.75em;
     padding-top: $pad/4;
+    background: url(background.png);
+    
+    header {
+      width: 23%;
+    }
+    
+    nav {
+      width: 74.5%;
+    }
   }
   
   

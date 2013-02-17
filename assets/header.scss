@@ -23,13 +23,7 @@ body {
     
   
 	.container {
-		width: 90%;
-		margin: 0 auto;
-		
-		
-		@include large-screen {
-		  width: 70%;
-		}
+		@include container(0);
 		
 		
 		/* Typography overwrites */

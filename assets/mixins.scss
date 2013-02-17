@@ -1,4 +1,20 @@
 
+/* Container 
+*/
+
+/* http://stackoverflow.com/questions/6794000/css-fixed-position-but-relative-to-container */
+@mixin container($margin-left) {
+  width: 90% - $margin-left;
+	margin: 0 auto;
+	
+	
+	@include large-screen {
+	  width: 70% - $margin-left;
+	}
+}
+
+
+
 
 /* Button
 */
@@ -13,6 +29,7 @@
     color: $background;
   }
 }
+
 
 /* Accordion
 */

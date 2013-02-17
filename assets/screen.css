@@ -306,6 +306,9 @@ body .container label.select:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.5);
 }
 
+/* Container 
+*/
+/* http://stackoverflow.com/questions/6794000/css-fixed-position-but-relative-to-container */
 /* Button
 */
 /* Accordion
@@ -331,30 +334,30 @@ $mq-desktop		: 86.375em !default;
 $mq-large-screen: 99.93em !default;
 */
 @media only screen and (max-width: 480px) {
-  /* line 398, mixins.scss */
+  /* line 415, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 399, mixins.scss */
+  /* line 416, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 481px) {
-  /* line 403, mixins.scss */
+  /* line 420, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 404, mixins.scss */
+  /* line 421, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 412, mixins.scss */
+/* line 429, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -392,7 +395,7 @@ img {
 */
 /* The visual grid 
 */
-/* line 565, mixins.scss */
+/* line 582, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
@@ -401,7 +404,7 @@ img {
   z-index: -1;
 }
 
-/* line 572, mixins.scss */
+/* line 589, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -409,7 +412,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 577, mixins.scss */
+/* line 594, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;
@@ -497,32 +500,32 @@ body .container {
     width: 70%;
   }
 }
-/* line 37, header.scss */
+/* line 31, header.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 41, header.scss */
+/* line 35, header.scss */
 body .container h2, body .container h3 {
   font-size: 1.25em;
   font-style: normal;
   font-weight: normal;
 }
-/* line 47, header.scss */
+/* line 41, header.scss */
 body .container h2 {
   text-transform: uppercase;
 }
-/* line 51, header.scss */
+/* line 45, header.scss */
 body .container input, body .container textarea, body .container select {
   font-family: 'Coda', serif;
   font-size: 100%;
 }
-/* line 58, header.scss */
+/* line 52, header.scss */
 body .container #header {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 63, header.scss */
+/* line 57, header.scss */
 body .container #header hgroup {
   width: 50%;
   margin: 0 2.5% 0 0;
@@ -531,14 +534,14 @@ body .container #header hgroup {
   margin-bottom: 1.25em;
 }
 @media (max-width: 480px) {
-  /* line 63, header.scss */
+  /* line 57, header.scss */
   body .container #header hgroup {
     width: 100%;
     float: left;
     margin-top: 0;
   }
 }
-/* line 73, header.scss */
+/* line 67, header.scss */
 body .container #header hgroup #logo {
   height: 2.91667em;
   width: 9.58333em;
@@ -574,28 +577,28 @@ body .container #header hgroup #logo:hover {
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
-/* line 78, header.scss */
+/* line 72, header.scss */
 body .container #header hgroup #strapline {
   float: left;
   margin-left: 0.625em;
 }
-/* line 82, header.scss */
+/* line 76, header.scss */
 body .container #header hgroup #strapline h2 {
   padding: 0;
   font-style: normal;
   color: #f25f18;
 }
-/* line 87, header.scss */
+/* line 81, header.scss */
 body .container #header hgroup #strapline h2 a {
   color: #f25f18;
 }
 @media (max-width: 480px) {
-  /* line 78, header.scss */
+  /* line 72, header.scss */
   body .container #header hgroup #strapline {
     font-size: small;
   }
 }
-/* line 99, header.scss */
+/* line 93, header.scss */
 body .container #header #search {
   width: 47.5%;
   margin: 0 0 0 0;
@@ -604,20 +607,20 @@ body .container #header #search {
   font-size: small;
   margin-top: 3em;
 }
-/* line 106, header.scss */
+/* line 100, header.scss */
 body .container #header #search input[type="text"] {
   width: 23.5em;
   border-color: #f1f1f1;
 }
-/* line 110, header.scss */
+/* line 104, header.scss */
 body .container #header #search input[type="text"]:focus {
   border: 1px solid;
 }
-/* line 115, header.scss */
+/* line 109, header.scss */
 body .container #header #search input[type="submit"] {
   background: url(icon-search.png) no-repeat center 1em;
 }
-/* line 121, header.scss */
+/* line 115, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -625,13 +628,13 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 128, header.scss */
+/* line 122, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
   padding: 0 0.625em;
 }
-/* line 471, mixins.scss */
+/* line 488, mixins.scss */
 body .container #header #menu ul li {
   display: inline-block;
   list-style-type: none;
@@ -639,15 +642,15 @@ body .container #header #menu ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 478, mixins.scss */
+/* line 495, mixins.scss */
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 133, header.scss */
+/* line 127, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 136, header.scss */
+/* line 130, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -660,7 +663,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 140, header.scss */
+/* line 134, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -669,31 +672,31 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 144, header.scss */
+/* line 138, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 128, header.scss */
+  /* line 122, header.scss */
   body .container #header #menu ul {
     padding: 0;
   }
-  /* line 152, header.scss */
+  /* line 146, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-right: 0.625em;
   }
-  /* line 156, header.scss */
+  /* line 150, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     margin-top: 0.625em;
   }
-  /* line 161, header.scss */
+  /* line 155, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
   }
 }
-/* line 172, header.scss */
+/* line 166, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
@@ -701,54 +704,54 @@ body .container #header #menu-info {
   background: #f1f1f1;
   padding-bottom: 1.25em;
 }
-/* line 179, header.scss */
+/* line 173, header.scss */
 body .container #header #menu-info div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 182, header.scss */
+/* line 176, header.scss */
 body .container #header #menu-info div h3 {
   color: #aaaaaa;
 }
-/* line 186, header.scss */
+/* line 180, header.scss */
 body .container #header #menu-info div ul {
   list-style: none;
   margin: 0;
 }
-/* line 190, header.scss */
+/* line 184, header.scss */
 body .container #header #menu-info div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
 }
-/* line 194, header.scss */
+/* line 188, header.scss */
 body .container #header #menu-info div ul li a {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 199, header.scss */
+/* line 193, header.scss */
 body .container #header #menu-info div ul li a:hover {
   border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 205, header.scss */
+/* line 199, header.scss */
 body .container #header #menu-info div ul li.separator {
   padding: 0.625em;
 }
-/* line 213, header.scss */
+/* line 207, header.scss */
 body .container #header #menu-info #contact {
   margin-left: 23%;
 }
-/* line 219, header.scss */
+/* line 213, header.scss */
 body .container #header #menu-info .shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 222, header.scss */
+/* line 216, header.scss */
 body .container #header #menu-info .shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 230, header.scss */
+/* line 224, header.scss */
 body .container #header #menu-info #close {
   margin-top: -16.2em;
   float: right;
@@ -756,12 +759,12 @@ body .container #header #menu-info #close {
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 238, header.scss */
+/* line 232, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 243, header.scss */
+/* line 237, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
@@ -871,7 +874,7 @@ body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
 }
-/* line 471, mixins.scss */
+/* line 488, mixins.scss */
 body.home .container #new-products #navigation ul li {
   display: inline-block;
   list-style-type: none;
@@ -879,7 +882,7 @@ body.home .container #new-products #navigation ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 478, mixins.scss */
+/* line 495, mixins.scss */
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
@@ -956,7 +959,7 @@ body.home .container #giftshopper #body ul {
   display: block;
   margin: 0;
 }
-/* line 471, mixins.scss */
+/* line 488, mixins.scss */
 body.home .container #giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
@@ -964,7 +967,7 @@ body.home .container #giftshopper #body ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 478, mixins.scss */
+/* line 495, mixins.scss */
 body.home .container #giftshopper #body ul li.last {
   margin-right: 0;
 }
@@ -1099,7 +1102,7 @@ body .container #footer #info ul {
   display: block;
   margin: 0;
 }
-/* line 471, mixins.scss */
+/* line 488, mixins.scss */
 body .container #footer #info ul li {
   display: inline-block;
   list-style-type: none;
@@ -1107,7 +1110,7 @@ body .container #footer #info ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 478, mixins.scss */
+/* line 495, mixins.scss */
 body .container #footer #info ul li.last {
   margin-right: 0;
 }
@@ -1227,16 +1230,25 @@ body .container #footer #company {
   float: left;
 }
 
-/* line 3, archive.scss */
+/* line 1, archive.scss */
+body.archive {
+  /* http://stackoverflow.com/questions/6794000/css-fixed-position-but-relative-to-container */
+}
+/* line 5, archive.scss */
 body.archive #header.fixed {
-  width: 15%;
-  margin: 0 2% 0 0;
-  float: left;
-  margin-top: 0;
+  width: 90%;
+  margin: 0 auto;
+  margin: 0;
   height: 5.5em;
   background: url(background.png);
 }
-/* line 10, archive.scss */
+@media only screen and (min-width: 1599px) {
+  /* line 5, archive.scss */
+  body.archive #header.fixed {
+    width: 70%;
+  }
+}
+/* line 12, archive.scss */
 body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
@@ -1271,24 +1283,39 @@ body.archive #header.fixed #logo:hover {
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
-/* line 14, archive.scss */
+/* line 16, archive.scss */
 body.archive #header.fixed #strapline, body.archive #header.fixed #menu, body.archive #header.fixed #search {
   display: none;
 }
-/* line 19, archive.scss */
+/* line 21, archive.scss */
 body.archive section hgroup.fixed {
-  width: 83%;
-  margin: 0 0 0 17%;
-  float: left;
+  width: 80%;
+  margin: 0 auto;
+  margin-left: 10%;
   height: 3.75em;
   padding-top: 0.3125em;
+  background: url(background.png);
 }
-/* line 26, archive.scss */
+@media only screen and (min-width: 1599px) {
+  /* line 21, archive.scss */
+  body.archive section hgroup.fixed {
+    width: 60%;
+  }
+}
+/* line 29, archive.scss */
+body.archive section hgroup.fixed header {
+  width: 23%;
+}
+/* line 33, archive.scss */
+body.archive section hgroup.fixed nav {
+  width: 74.5%;
+}
+/* line 39, archive.scss */
 body.archive section {
   width: 100%;
   float: left;
 }
-/* line 30, archive.scss */
+/* line 43, archive.scss */
 body.archive section hgroup {
   width: 100%;
   float: left;
@@ -1296,46 +1323,46 @@ body.archive section hgroup {
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 36, archive.scss */
+/* line 49, archive.scss */
 body.archive section hgroup header {
   width: 18%;
   margin: 0 2.5% 0 0;
   float: left;
 }
-/* line 39, archive.scss */
+/* line 52, archive.scss */
 body.archive section hgroup header h2 {
   padding: 0.625em 0 0 0.625em;
 }
-/* line 44, archive.scss */
+/* line 57, archive.scss */
 body.archive section hgroup nav {
   width: 79.5%;
   margin: 0 0 0 0;
   float: left;
   padding-top: 0.3125em;
 }
-/* line 48, archive.scss */
+/* line 61, archive.scss */
 body.archive section hgroup nav div {
   width: 23%;
   margin: 0 2.5% 0 0;
   float: left;
   padding: 0.625em 0 0;
 }
-/* line 52, archive.scss */
+/* line 65, archive.scss */
 body.archive section hgroup nav div select {
   font-size: small;
   width: 100%;
 }
-/* line 57, archive.scss */
+/* line 70, archive.scss */
 body.archive section hgroup nav div .select:after {
   left: 0;
   top: -1.35em;
 }
-/* line 62, archive.scss */
+/* line 75, archive.scss */
 body.archive section hgroup nav div.last {
   margin-right: 0;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 69, archive.scss */
+  /* line 82, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1344,7 +1371,7 @@ body.archive section hgroup nav div.last {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 80, archive.scss */
+  /* line 93, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1357,33 +1384,33 @@ body.archive section hgroup nav div.last {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 84, archive.scss */
+  /* line 97, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 90, archive.scss */
+  /* line 103, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 95, archive.scss */
+  /* line 108, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 102, archive.scss */
+  /* line 115, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 112, archive.scss */
+/* line 125, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 115, archive.scss */
+/* line 128, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1422,51 +1449,51 @@ body.archive section #products #product #price {
 body.archive section #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 122, archive.scss */
+/* line 135, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 127, archive.scss */
+/* line 140, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 133, archive.scss */
+  /* line 146, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 144, archive.scss */
+  /* line 157, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 150, archive.scss */
+  /* line 163, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 153, archive.scss */
+  /* line 166, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 161, archive.scss */
+/* line 174, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 165, archive.scss */
+/* line 178, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 172, archive.scss */
+  /* line 185, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
@@ -1695,7 +1722,7 @@ body.single .container article #description ul#tabs {
   margin: 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 471, mixins.scss */
+/* line 488, mixins.scss */
 body.single .container article #description ul#tabs li {
   display: inline-block;
   list-style-type: none;
@@ -1703,7 +1730,7 @@ body.single .container article #description ul#tabs li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 478, mixins.scss */
+/* line 495, mixins.scss */
 body.single .container article #description ul#tabs li.last {
   margin-right: 0;
 }
@@ -1759,7 +1786,7 @@ body.single .container article #share ul {
   margin: 0;
   margin-left: 1.25em;
 }
-/* line 471, mixins.scss */
+/* line 488, mixins.scss */
 body.single .container article #share ul li {
   display: inline-block;
   list-style-type: none;
@@ -1767,7 +1794,7 @@ body.single .container article #share ul li {
   float: left;
   margin-right: 1.25em;
 }
-/* line 478, mixins.scss */
+/* line 495, mixins.scss */
 body.single .container article #share ul li.last {
   margin-right: 0;
 }
