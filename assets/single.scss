@@ -12,7 +12,7 @@ body.single {
 	
 		article {
 			@include block;
-			margin-bottom: $pad*2;
+			margin-bottom: $pad;
 			
 			#article-title, #shopping-cart, #images, #description, #share {
 			  @include col(47.5%, 0, 5%);
@@ -29,7 +29,7 @@ body.single {
 			
 			#article-title {
 			  h1 {
-			    padding: $pad/4 0;
+			    padding: 0;
 			  }
 			}
 		

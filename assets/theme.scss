@@ -131,7 +131,6 @@ a, a:active, a:visited, a:hover {
 
 
 @mixin add-to-cart {
-  
   #add-to-cart {
    			    
     .imagecol {
@@ -140,6 +139,7 @@ a, a:active, a:visited, a:hover {
     
     .delivery {
       @include block;
+      margin: $pad/2 0 0;
 			          
       span {
         background: $background;
@@ -148,7 +148,6 @@ a, a:active, a:visited, a:hover {
     
     .cart-operations {
       @include block;
-      margin: $pad/2 0;
       
       
       .wpsc_variation_forms {
@@ -210,9 +209,9 @@ a, a:active, a:visited, a:hover {
           margin-top: $pad/2 + $pad/4;
           
           label.select:after {
-            padding: 0 .6em;
-            left: -1.5em;
-            top: .2em;
+            padding: 0 .7em;
+            left: -1.55em;
+            top: .1em;
           }
         }
       }

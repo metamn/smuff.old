@@ -40,8 +40,8 @@ $(document).ready(function() {
   // Tabs on product page
   
   $('.single #description div').hide();
-  $('.single #description div').first().next().show();
-  $('.single #description #tabs li').first().next().addClass('active');
+  $('.single #description div').first().show();
+  $('.single #description #tabs li').first().addClass('active');
   
   $('.single #description #tabs li').click(function() {
     $('.single #description div').hide();
