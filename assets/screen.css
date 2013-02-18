@@ -1245,8 +1245,9 @@ body.archive #header.fixed {
   width: 90%;
   margin: 0 auto;
   margin: 0;
-  height: 5.5em;
+  height: 5em;
   background: url(background.png);
+  border-bottom: 1px dotted;
 }
 @media only screen and (min-width: 1599px) {
   /* line 5, archive.scss */
@@ -1254,7 +1255,7 @@ body.archive #header.fixed {
     width: 70%;
   }
 }
-/* line 12, archive.scss */
+/* line 13, archive.scss */
 body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
@@ -1289,11 +1290,11 @@ body.archive #header.fixed #logo:hover {
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
-/* line 16, archive.scss */
+/* line 17, archive.scss */
 body.archive #header.fixed #strapline, body.archive #header.fixed #menu, body.archive #header.fixed #search {
   display: none;
 }
-/* line 21, archive.scss */
+/* line 22, archive.scss */
 body.archive section hgroup.fixed {
   width: 80%;
   margin: 0 auto;
@@ -1303,70 +1304,70 @@ body.archive section hgroup.fixed {
   background: url(background.png);
 }
 @media only screen and (min-width: 1599px) {
-  /* line 21, archive.scss */
+  /* line 22, archive.scss */
   body.archive section hgroup.fixed {
     width: 60%;
   }
 }
-/* line 29, archive.scss */
+/* line 30, archive.scss */
 body.archive section hgroup.fixed header {
   width: 23%;
 }
-/* line 33, archive.scss */
+/* line 34, archive.scss */
 body.archive section hgroup.fixed nav {
   width: 74.5%;
 }
-/* line 39, archive.scss */
+/* line 40, archive.scss */
 body.archive section {
   width: 100%;
   float: left;
 }
-/* line 43, archive.scss */
+/* line 44, archive.scss */
 body.archive section hgroup {
   width: 100%;
   float: left;
   margin-bottom: 1.25em;
 }
-/* line 47, archive.scss */
+/* line 48, archive.scss */
 body.archive section hgroup header {
   width: 18%;
   margin: 0 2.5% 0 0;
   float: left;
 }
-/* line 50, archive.scss */
+/* line 51, archive.scss */
 body.archive section hgroup header h2 {
   padding: 0.625em 0 0 0.625em;
 }
-/* line 55, archive.scss */
+/* line 56, archive.scss */
 body.archive section hgroup nav {
   width: 79.5%;
   margin: 0 0 0 0;
   float: left;
   padding-top: 0.3125em;
 }
-/* line 59, archive.scss */
+/* line 60, archive.scss */
 body.archive section hgroup nav div {
   width: 23%;
   margin: 0 2.5% 0 0;
   float: left;
   padding: 0.625em 0 0;
 }
-/* line 63, archive.scss */
+/* line 64, archive.scss */
 body.archive section hgroup nav div select {
   font-size: small;
   width: 100%;
 }
-/* line 68, archive.scss */
+/* line 69, archive.scss */
 body.archive section hgroup nav div .select:after {
   left: 0;
   top: -1.35em;
 }
-/* line 73, archive.scss */
+/* line 74, archive.scss */
 body.archive section hgroup nav div.last {
   margin-right: 0;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 80, archive.scss */
+  /* line 81, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1375,7 +1376,7 @@ body.archive section hgroup nav div.last {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 91, archive.scss */
+  /* line 92, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1388,33 +1389,33 @@ body.archive section hgroup nav div.last {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 95, archive.scss */
+  /* line 96, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 101, archive.scss */
+  /* line 102, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 106, archive.scss */
+  /* line 107, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 113, archive.scss */
+  /* line 114, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 123, archive.scss */
+/* line 124, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 126, archive.scss */
+/* line 127, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1453,51 +1454,51 @@ body.archive section #products #product #price {
 body.archive section #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 133, archive.scss */
+/* line 134, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 138, archive.scss */
+/* line 139, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 144, archive.scss */
+  /* line 145, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 155, archive.scss */
+  /* line 156, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 161, archive.scss */
+  /* line 162, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 164, archive.scss */
+  /* line 165, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 172, archive.scss */
+/* line 173, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 176, archive.scss */
+/* line 177, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 183, archive.scss */
+  /* line 184, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;

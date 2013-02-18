@@ -6,8 +6,9 @@ body.archive {
     @include container(0);
     margin: 0;
     
-    height: 5.5em;
+    height: 5em;
     background: url(background.png);
+    border-bottom: 1px dotted;
     
     #logo {
       @include logo($pad/4);
