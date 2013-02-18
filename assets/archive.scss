@@ -43,8 +43,6 @@ body.archive {
     hgroup {
       @include block;
       margin-bottom: $pad;
-      border-top: 1px solid $very-light-gray;
-      border-bottom: 1px solid $very-light-gray;
       
       header {
         @include col(18%, 0, 2.5%);

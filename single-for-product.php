@@ -96,7 +96,6 @@
 	</div>  
 	
 	
-  <?php include 'c_share.php' ?>
 	
 </article>
 			

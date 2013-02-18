@@ -132,104 +132,111 @@ a, a:active, a:visited, a:hover {
 
 @mixin add-to-cart {
   #add-to-cart {
-   			    
-    .imagecol {
-      display: none;
-    }
+    @include block;
+    border: 1px dotted;
+    margin-top: $pad;
     
-    .delivery {
-      @include block;
-      margin: $pad/2 0 0;
-			          
-      span {
-        background: $background;
-      }
-    }
-    
-    .cart-operations {
-      @include block;
+    .wpsc_container {
+      padding: $pad;
       
-      
-      .wpsc_variation_forms {
-        margin-top: $pad/2;
-        
-        .select {
-          select {
-            border-top: 1px solid $gray;
-            border-bottom: 1px solid $gray;
-            padding: $pad/4 0;
-            margin: 0 0 $pad/2;
-            
-            font-size: 90%;
-            width: 100%;
-          }
-          
-          &:after {
-            padding: $pad;
-            background: $color;
-            color: $background;
-            top: -3.5em; 
-            left: 0;
-          }
-        }
-        
-      }
-      
-      .wpsc_product_price {
-        .price {
-          margin-right: $pad;
-          padding: $pad/2;
-        }
-        .normal-price.on-sale {
-          background: $sale;
-          padding: 0 $pad/2;
-        }
-        .oldprice.on-sale {
-          margin-right: 0;
-          margin-left: $pad;
-        }
-        .old-price, .oldprice {
-          background: $sale;
-        }
-      }
-      
-      .add-to-cart-button {
-        display: inline-block;
-        max-width: 20em;
-        
-        input[type="submit"] {
-          @include button($color, $green);
-        }
-        
-        #quantity {
-          display: none;
-          
-          width: auto;
-          float: left;
-          font-size: small;
-          margin-top: $pad/2 + $pad/4;
-          
-          label.select:after {
-            padding: 0 .7em;
-            left: -1.55em;
-            top: .1em;
-          }
-        }
-      }
-      
-      .checkout {
+     			    
+      .imagecol {
         display: none;
       }
       
-      .wpsc_loading_animation {
-        visibility: hidden;
+      .delivery {
+        @include block;
       }
       
+      .cart-operations {
+        @include block;
+        margin-bottom: 1.25em;
+        
+        
+        .wpsc_variation_forms {
+          margin-top: $pad;
+          
+          .select {
+            select {
+              border-top: 1px dotted $gray;
+              border-bottom: 1px dotted $gray;
+              padding: $pad/4 0;
+              margin: 0 0 $pad/2;
+              
+              font-size: 90%;
+              width: 100%;
+            }
+            
+            &:after {
+              padding: $pad;
+              background: $color;
+              color: $background;
+              top: -3.5em; 
+              left: 0;
+            }
+          }
+          
+        }
+        
+        .wpsc_product_price {
+          .price {
+            margin-right: $pad;
+            padding: $pad/2;
+          }
+          .normal-price.on-sale {
+            background: $sale;
+            padding: 0 $pad/2;
+          }
+          .oldprice.on-sale {
+            margin-right: 0;
+            margin-left: $pad;
+          }
+          .old-price, .oldprice {
+            background: $sale;
+          }
+        }
+        
+        .add-to-cart-button {
+          display: inline-block;
+          max-width: 20em;
+          
+          input[type="submit"] {
+            @include button($color, $green);
+          }
+          
+          #quantity {
+            display: none;
+            
+            width: auto;
+            float: left;
+            font-size: small;
+            margin-top: $pad/2 + $pad/4;
+            
+            label.select:after {
+              padding: 0 .7em;
+              left: -1.55em;
+              top: .1em;
+            }
+          }
+        }
+        
+        .checkout {
+          display: none;
+        }
+        
+        .wpsc_loading_animation {
+          visibility: hidden;
+        }
+        
+      }
+    
     }
+  
+    
     
     
     #product-discontinued {
-      margin-top: $pad;
+      padding: $pad;
       
       p {
         margin-bottom: $pad;

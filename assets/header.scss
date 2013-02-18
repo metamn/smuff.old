@@ -103,6 +103,10 @@ body {
 			    top: -$pad/2;
 			    
 			    padding: 0 $pad/4;
+			    
+			    &:focus {
+			      border-color: $sale;
+			    }
 			  }
 			  
 			  input[type="submit"] {
