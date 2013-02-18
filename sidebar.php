@@ -50,7 +50,7 @@
         <center>
           <h2>Aveti intrebari?</h2>
           <p>
-            Suport online <br/> Luni-Vineri intre 9.00-17.00    
+            Sunati acum! <br/> Luni-Vineri intre 9.00-17.00    
           </p>
           <h2>0740-456127</h2>
           <!-- BEGIN Comm100 Live Chat Button Code -->
