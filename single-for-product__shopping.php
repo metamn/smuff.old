@@ -7,8 +7,11 @@
 					echo wpsc_display_products_page('product_id='.$product_id); 
 				} else { ?>
 					<div id="product-discontinued">
-						<h3>Acest produs momentan<br/>nu este pe stoc.</h3>
-						<p>Anunta-ma cand va fi disponibil.</p>
+						<p>
+						  Acest produs momentan nu este pe stoc.
+						  <br/>
+						  Anunta-ma cand va fi disponibil.
+						</p>
 						<?php 
 							$mailchimp_button = 'Anunta-ma';
 							$mailchimp_param = $product_name;

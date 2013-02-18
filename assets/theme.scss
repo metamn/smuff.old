@@ -182,6 +182,7 @@ a, a:active, a:visited, a:hover {
         }
         .normal-price.on-sale {
           background: $sale;
+          padding: 0 $pad/2;
         }
         .oldprice.on-sale {
           margin-right: 0;
@@ -228,19 +229,14 @@ a, a:active, a:visited, a:hover {
     
     
     #product-discontinued {
-      background: url(stripe.png);
-      padding: $pad;
       margin-top: $pad;
       
-      h3 {
-        padding-top: 0;
-      }
       p {
         margin-bottom: $pad;
-      }
+      } 
       
-     input[type="submit"] {
-        @include button($background, $color);
+      input[type="submit"] {
+        @include button($background, $blue);
       }
     }
   }

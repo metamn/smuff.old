@@ -69,10 +69,6 @@
       Presupun, ca nu v-ati gandit nici voi cand v-ati cumparat un telefon cu touchscreen, cum va fi iarna? Sa taiem doua degete de la manusil, le dam jos ori de cate ori folosim telefonul? Din pacate manusile nu conduc electricitatea ca si degetele goale. 
       <br/>
       Dar avem solutia, ca intotdeauna! &ndash; nici nu stiu de ce mai incepem posturile cu probleme si dupa aceea prezentam solutia?! Vom lucra la acest capitol cu siguranta. 
-      <br/>
-      Revenind la Manusile Touchscreen, acestea au tesute in degetul mare si cel aratator material conductiv, astfel dispozitivele cu ecran tactil se pot manevra in voie si cu manusi. Cunoasteti vorba `un prost face 100`, adica un dispozitiv are n+ accesorii, dar asta face ca tehnologia sa ne fie folositoare. Manusile Touchscreen sunt chiar o necesitate, nu? <img class="wp-smiley" alt=":)" src="http://localhost/smuff/wp-includes/images/smilies/icon_smile.gif">  <a target="_blank" href="http://razvanbb.ro/2011/11/ce-facem-iarna-cu-telefoanele-cu-touch.html">
-      <br/>
-      Si  vedeti inregistrarea si opinia lui Razvan Baciu aici -&gt;   http://razvanbb.ro/2011/11/ce-facem-iarna-cu-telefoanele-cu-touch.html</a>
     </div>
     
     <div id="properties">

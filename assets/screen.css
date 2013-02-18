@@ -547,33 +547,33 @@ body .container #header hgroup #logo {
   width: 9.58333em;
   float: left;
 }
-/* line 344, theme.scss */
+/* line 340, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 350, theme.scss */
+/* line 346, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 354, theme.scss */
+/* line 350, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 358, theme.scss */
+/* line 354, theme.scss */
 body .container #header hgroup #logo .square {
   background: #cccccc;
 }
-/* line 362, theme.scss */
+/* line 358, theme.scss */
 body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
-/* line 366, theme.scss */
+/* line 362, theme.scss */
 body .container #header hgroup #logo:hover {
   width: 20.20833em;
 }
-/* line 369, theme.scss */
+/* line 365, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -612,16 +612,17 @@ body .container #header #search input[type="text"] {
   border: 1px solid white;
   position: relative;
   top: -0.625em;
+  padding: 0 0.3125em;
 }
-/* line 106, header.scss */
+/* line 108, header.scss */
 body .container #header #search input[type="submit"] {
   background: url(icon-search.jpg) no-repeat center 2px;
 }
-/* line 111, header.scss */
+/* line 113, header.scss */
 body .container #header #search:hover input[type="text"] {
   border-color: #f25f18;
 }
-/* line 118, header.scss */
+/* line 120, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -629,7 +630,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 125, header.scss */
+/* line 127, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -647,11 +648,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 130, header.scss */
+/* line 132, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 133, header.scss */
+/* line 135, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -664,7 +665,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 137, header.scss */
+/* line 139, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -673,31 +674,31 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 141, header.scss */
+/* line 143, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 125, header.scss */
+  /* line 127, header.scss */
   body .container #header #menu ul {
     padding: 0;
   }
-  /* line 149, header.scss */
+  /* line 151, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-right: 0.625em;
   }
-  /* line 153, header.scss */
+  /* line 155, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     margin-top: 0.625em;
   }
-  /* line 158, header.scss */
+  /* line 160, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
   }
 }
-/* line 169, header.scss */
+/* line 171, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
@@ -705,54 +706,54 @@ body .container #header #menu-info {
   background: #f1f1f1;
   padding-bottom: 1.25em;
 }
-/* line 176, header.scss */
+/* line 178, header.scss */
 body .container #header #menu-info div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 179, header.scss */
+/* line 181, header.scss */
 body .container #header #menu-info div h3 {
   color: #aaaaaa;
 }
-/* line 183, header.scss */
+/* line 185, header.scss */
 body .container #header #menu-info div ul {
   list-style: none;
   margin: 0;
 }
-/* line 187, header.scss */
+/* line 189, header.scss */
 body .container #header #menu-info div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
 }
-/* line 191, header.scss */
+/* line 193, header.scss */
 body .container #header #menu-info div ul li a {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 196, header.scss */
+/* line 198, header.scss */
 body .container #header #menu-info div ul li a:hover {
   border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 202, header.scss */
+/* line 204, header.scss */
 body .container #header #menu-info div ul li.separator {
   padding: 0.625em;
 }
-/* line 210, header.scss */
+/* line 212, header.scss */
 body .container #header #menu-info #contact {
   margin-left: 23%;
 }
-/* line 216, header.scss */
+/* line 218, header.scss */
 body .container #header #menu-info .shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 219, header.scss */
+/* line 221, header.scss */
 body .container #header #menu-info .shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 227, header.scss */
+/* line 229, header.scss */
 body .container #header #menu-info #close {
   margin-top: -16.2em;
   float: right;
@@ -760,12 +761,12 @@ body .container #header #menu-info #close {
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 235, header.scss */
+/* line 237, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 240, header.scss */
+/* line 242, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
@@ -790,33 +791,33 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 297, theme.scss */
+/* line 293, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 301, theme.scss */
+/* line 297, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 307, theme.scss */
+/* line 303, theme.scss */
 body.home .container section #body #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 311, theme.scss */
+/* line 307, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
 }
-/* line 316, theme.scss */
+/* line 312, theme.scss */
 body.home .container section #body #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 320, theme.scss */
+/* line 316, theme.scss */
 body.home .container section #body #products #product #price .normal-price {
   padding-right: 0;
 }
@@ -870,7 +871,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 252, theme.scss */
+/* line 248, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -887,17 +888,17 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 255, theme.scss */
+/* line 251, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 261, theme.scss */
+/* line 257, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 265, theme.scss */
+/* line 261, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -1254,33 +1255,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.1875em;
 }
-/* line 344, theme.scss */
+/* line 340, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 350, theme.scss */
+/* line 346, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 354, theme.scss */
+/* line 350, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 358, theme.scss */
+/* line 354, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 362, theme.scss */
+/* line 358, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 366, theme.scss */
+/* line 362, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15.15625em;
 }
-/* line 369, theme.scss */
+/* line 365, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1420,33 +1421,33 @@ body.archive section #products #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 297, theme.scss */
+/* line 293, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 301, theme.scss */
+/* line 297, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 307, theme.scss */
+/* line 303, theme.scss */
 body.archive section #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 311, theme.scss */
+/* line 307, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
 }
-/* line 316, theme.scss */
+/* line 312, theme.scss */
 body.archive section #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 320, theme.scss */
+/* line 316, theme.scss */
 body.archive section #products #product #price .normal-price {
   padding-right: 0;
 }
@@ -1582,22 +1583,23 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .wps
 /* line 183, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
+  padding: 0 0.625em;
 }
-/* line 186, theme.scss */
+/* line 187, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
   margin-left: 1.25em;
 }
-/* line 190, theme.scss */
+/* line 191, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 195, theme.scss */
+/* line 196, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button {
   display: inline-block;
   max-width: 20em;
 }
-/* line 199, theme.scss */
+/* line 200, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1619,7 +1621,7 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 203, theme.scss */
+/* line 204, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity {
   display: none;
   width: auto;
@@ -1627,55 +1629,49 @@ body.single .container article #shopping-cart #add-to-cart .cart-operations .add
   font-size: small;
   margin-top: 0.9375em;
 }
-/* line 211, theme.scss */
+/* line 212, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .add-to-cart-button #quantity label.select:after {
   padding: 0 .7em;
   left: -1.55em;
   top: .1em;
 }
-/* line 219, theme.scss */
+/* line 220, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .checkout {
   display: none;
 }
-/* line 223, theme.scss */
+/* line 224, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 230, theme.scss */
+/* line 231, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
-  background: url(stripe.png);
-  padding: 1.25em;
   margin-top: 1.25em;
 }
-/* line 235, theme.scss */
-body.single .container article #shopping-cart #add-to-cart #product-discontinued h3 {
-  padding-top: 0;
-}
-/* line 238, theme.scss */
+/* line 234, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 242, theme.scss */
+/* line 238, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
   border-radius: 6% / 6%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4a4a4a), color-stop(100%, #303030));
-  background-image: -webkit-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  background-image: -moz-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  background-image: -o-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  background-image: linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  border: 1px solid #333333;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #5e9ad2), color-stop(100%, #4580b9));
+  background-image: -webkit-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  background-image: -moz-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  background-image: -o-linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  background-image: linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
+  border: 1px solid #4987c3;
   color: white;
   text-shadow: 0px 0px 1px #999999;
 }
 /* line 124, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"]:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
-  background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
-  background-image: -moz-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
-  background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
-  background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4580b9), color-stop(100%, #5e9ad2));
+  background-image: -webkit-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
+  background-image: -moz-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
+  background-image: -o-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
+  background-image: linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
 }
 /* line 43, single.scss */
 body.single .container article #images {
@@ -1887,33 +1883,33 @@ body.single .container section #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 297, theme.scss */
+/* line 293, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 301, theme.scss */
+/* line 297, theme.scss */
 body.single .container section #product #title, body.single .container section #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 307, theme.scss */
+/* line 303, theme.scss */
 body.single .container section #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 311, theme.scss */
+/* line 307, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
 }
-/* line 316, theme.scss */
+/* line 312, theme.scss */
 body.single .container section #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 320, theme.scss */
+/* line 316, theme.scss */
 body.single .container section #product #price .normal-price {
   padding-right: 0;
 }

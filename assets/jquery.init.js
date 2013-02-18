@@ -7,7 +7,6 @@ $(document).ready(function() {
   
   
   
-  
   // Show Quantity for Add to Cart
   $('.add-to-cart-button').hover(function () {
       $(".add-to-cart-button #quantity").show(200);
