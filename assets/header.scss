@@ -93,21 +93,24 @@ body {
 			#search {
 			  @include col(47.5%, 0, 0);
 			  text-align: right;
-			  
-			  font-size: small;
-			  margin-top: 3em;
+			  margin-top: $pad + $pad/4;
 			  
 			  input[type="text"] {
-			    width: 23.5em;
-			    border-color: $very-light-gray;
+			    width: 18.8em;
+			    border: 1px solid $background;
 			    
-			    &:focus {
-			      border: 1px solid;
-			    }
+			    position: relative;
+			    top: -$pad/2;
 			  }
 			  
 			  input[type="submit"] {
-			    background: url(icon-search.png) no-repeat center 1em;
+			    background: url(icon-search.jpg) no-repeat center 2px;
+			  }
+			  
+			  &:hover {
+			    input[type="text"] {
+			      border-color: $sale;
+			    }
 			  }
 			}
 			

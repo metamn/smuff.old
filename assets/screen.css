@@ -604,23 +604,24 @@ body .container #header #search {
   margin: 0 0 0 0;
   float: left;
   text-align: right;
-  font-size: small;
-  margin-top: 3em;
+  margin-top: 1.5625em;
 }
-/* line 100, header.scss */
+/* line 98, header.scss */
 body .container #header #search input[type="text"] {
-  width: 23.5em;
-  border-color: #f1f1f1;
+  width: 18.8em;
+  border: 1px solid white;
+  position: relative;
+  top: -0.625em;
 }
-/* line 104, header.scss */
-body .container #header #search input[type="text"]:focus {
-  border: 1px solid;
-}
-/* line 109, header.scss */
+/* line 106, header.scss */
 body .container #header #search input[type="submit"] {
-  background: url(icon-search.png) no-repeat center 1em;
+  background: url(icon-search.jpg) no-repeat center 2px;
 }
-/* line 115, header.scss */
+/* line 111, header.scss */
+body .container #header #search:hover input[type="text"] {
+  border-color: #f25f18;
+}
+/* line 118, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -628,7 +629,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 122, header.scss */
+/* line 125, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -646,11 +647,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 127, header.scss */
+/* line 130, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 130, header.scss */
+/* line 133, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -663,7 +664,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 134, header.scss */
+/* line 137, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -672,31 +673,31 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 138, header.scss */
+/* line 141, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 122, header.scss */
+  /* line 125, header.scss */
   body .container #header #menu ul {
     padding: 0;
   }
-  /* line 146, header.scss */
+  /* line 149, header.scss */
   body .container #header #menu ul li {
     font-size: small;
     margin-right: 0.625em;
   }
-  /* line 150, header.scss */
+  /* line 153, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     margin-top: 0.625em;
   }
-  /* line 155, header.scss */
+  /* line 158, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
   }
 }
-/* line 166, header.scss */
+/* line 169, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
@@ -704,54 +705,54 @@ body .container #header #menu-info {
   background: #f1f1f1;
   padding-bottom: 1.25em;
 }
-/* line 173, header.scss */
+/* line 176, header.scss */
 body .container #header #menu-info div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 176, header.scss */
+/* line 179, header.scss */
 body .container #header #menu-info div h3 {
   color: #aaaaaa;
 }
-/* line 180, header.scss */
+/* line 183, header.scss */
 body .container #header #menu-info div ul {
   list-style: none;
   margin: 0;
 }
-/* line 184, header.scss */
+/* line 187, header.scss */
 body .container #header #menu-info div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
 }
-/* line 188, header.scss */
+/* line 191, header.scss */
 body .container #header #menu-info div ul li a {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 193, header.scss */
+/* line 196, header.scss */
 body .container #header #menu-info div ul li a:hover {
   border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 199, header.scss */
+/* line 202, header.scss */
 body .container #header #menu-info div ul li.separator {
   padding: 0.625em;
 }
-/* line 207, header.scss */
+/* line 210, header.scss */
 body .container #header #menu-info #contact {
   margin-left: 23%;
 }
-/* line 213, header.scss */
+/* line 216, header.scss */
 body .container #header #menu-info .shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 216, header.scss */
+/* line 219, header.scss */
 body .container #header #menu-info .shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 224, header.scss */
+/* line 227, header.scss */
 body .container #header #menu-info #close {
   margin-top: -16.2em;
   float: right;
@@ -759,12 +760,12 @@ body .container #header #menu-info #close {
   text-align: right;
   margin-top: 3.125em;
 }
-/* line 232, header.scss */
+/* line 235, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 237, header.scss */
+/* line 240, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
