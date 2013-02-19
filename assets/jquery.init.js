@@ -351,24 +351,46 @@ $(document).ready(function() {
   // - Show Smart Stuff
   $("#logo").hover(
     function () {
-      $("#logo .smart-stuff").show(200);
-      resizeLogoForSafari(2);
+      $("#logo .smart-stuff").show(200, function() {
+        resizeLogoForSafari(2);
+      });
     },
     function () {
       $("#logo .smart-stuff").hide(); /* blinks if there is any value */
-      resizeLogoForSafari(1);
+      resizeLogoForSafari(3);
     }
   );
   
-  // in Safari the logo width must be -1em, for Smart Stuff -2em
-  function resizeLogoForSafari(unit) {
-    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+  // In Safari the logo width must be -1em, for Smart Stuff -2em
+  // - this function deals also with logo hovers
+  // - params
+  //    1 - reset the logo on page load
+  //    2 - reset the logo on mouseover
+  //    3 - reset the logo on mouseout
+  function resizeLogoForSafari(where) {
+    var is_safari = ($.browser.webkit && !window.chrome);
     if (is_safari) {
-      var originalWidth = $('#logo').css('width'); /* it will retrieve the px value not the em !!! */
-      var width = originalWidth.replace('px', '') - unit*16;
+      switch(where) {
+        case 1:
+          var originalWidth = $('#logo').css('width'); /* it will retrieve the px value not the em !!! */
+          var width = originalWidth.replace('px', '') - 1*16;
+          break;
+        case 2:
+          // - the value 20em*16 = 320px is hardwired
+          // - the css:hover is executed after jQuery:hover so we can't get this value in real time
+          var width = 320 - 2*16;
+          break;
+        case 3:
+          // on hover the original width is lost
+          // we use this hardwired value as a workaround
+          var width = 147.333;
+      }
+     
       $('#logo').css('width', width + 'px');
     }
   }
+  
+  
   
   
   
