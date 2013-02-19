@@ -330,19 +330,19 @@ a, a:active, a:visited, a:hover {
 
 /* Logo
 ------------------------------------------------------------------------------
-  // - the formula for the logo width is:
-  //    x - the number of cells
-  //    z - the number of .small cells
-  //    width: = (x-z)*cell_size + z*cell_size/2
+// - the formula for the logo width is:
+// x - the number of cells
+// z - the number of .small cells
+// width: = (x-z)*cell_size + z*cell_size/2
 */
 
-@mixin logo-width($size) {
-  width: (24 - 2) * $size + 2*$size/2; 
+@mixin logo-width($size, $cells, $small-cells) {
+  width: ($cells - $small-cells) * $size + $small-cells*$size/2;
 }
 
 @mixin logo($size) {
   height: $size * 7;
-  @include logo-width($size);
+  @include logo-width($size, 26, 3);
 
   .cell {
     width: $size;
@@ -367,7 +367,7 @@ a, a:active, a:visited, a:hover {
   }
   
   &:hover {
-    width: (51 - 5) * $size + 5*$size/2; 
+    width: (51 - 6) * $size + 6*$size/2;
     
     .smart-stuff-cell {
       display: block;
@@ -375,8 +375,6 @@ a, a:active, a:visited, a:hover {
   }
   
 }
-
-
 
 
 

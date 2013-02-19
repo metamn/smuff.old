@@ -127,9 +127,9 @@ $(document).ready(function() {
   // - sometimes spacing between fonts m>f, f>f in Smuff is lowered through .small
   // - in this case the logo width must be recalculated in the css
   // - the formula for logo width is:
-  //    x - the number of cells
-  //    z - the number of .small cells
-  //    width: = (x-z)*cell_size + z*cell_size/2
+  // x - the number of cells
+  // z - the number of .small cells
+  // width: = (x-z)*cell_size + z*cell_size/2
   
   // - the extra letters from Smart Stuff are marked .extended so it can be hide/show later
   
@@ -233,7 +233,6 @@ $(document).ready(function() {
     matrix[6][26] = 'square';
     
     
-    
     matrix[6][28] = 'square';
     matrix[6][29] = 'square';
     matrix[6][30] = 'square';
@@ -271,7 +270,7 @@ $(document).ready(function() {
     matrix[6][40] = 'square';
     
     
-    // Back to muff
+    // Back to uff
     
     matrix[0][42] = 'set';
     matrix[1][42] = 'set';
@@ -315,24 +314,25 @@ $(document).ready(function() {
     for (y = 0; y < 7; y++) {
       for (x = 0; x < 51; x++) {
         switch(x) {
+          case 16:
           case 20:
           case 24:
           case 38:
           case 45:
-          case 48: 
+          case 48:
             size = ' small ';
             break;
           default:
             size = '';
         }
         
-        if (x >= 16 && x <= 42) {
+        if (x >= 17 && x < 42) {
           klass = ' smart-stuff-cell ';
         } else {
           klass = '';
         }
         
-        if (x == 16) {
+        if (x == 17) {
           ret += "<div class='smart-stuff'>";
         }
         if (x == 42) {

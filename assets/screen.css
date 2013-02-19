@@ -460,13 +460,6 @@ a, a:active, a:visited, a:hover {
 
 /* Mixins
 */
-/* Logo
-------------------------------------------------------------------------------
-  // - the formula for the logo width is:
-  //    x - the number of cells
-  //    z - the number of .small cells
-  //    width: = (x-z)*cell_size + z*cell_size/2
-*/
 /* line 1, header.scss */
 body {
   background: white url(background.png);
@@ -544,7 +537,7 @@ body .container #header hgroup {
 /* line 67, header.scss */
 body .container #header hgroup #logo {
   height: 2.91667em;
-  width: 9.58333em;
+  width: 10.20833em;
   float: left;
 }
 /* line 347, theme.scss */
@@ -571,7 +564,7 @@ body .container #header hgroup #logo .smart-stuff-cell, body .container #header 
 }
 /* line 369, theme.scss */
 body .container #header hgroup #logo:hover {
-  width: 20.20833em;
+  width: 20em;
 }
 /* line 372, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
@@ -1258,7 +1251,7 @@ body.archive #header.fixed {
 /* line 13, archive.scss */
 body.archive #header.fixed #logo {
   height: 2.1875em;
-  width: 7.1875em;
+  width: 7.65625em;
 }
 /* line 347, theme.scss */
 body.archive #header.fixed #logo .cell {
@@ -1284,7 +1277,7 @@ body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #
 }
 /* line 369, theme.scss */
 body.archive #header.fixed #logo:hover {
-  width: 15.15625em;
+  width: 15em;
 }
 /* line 372, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
