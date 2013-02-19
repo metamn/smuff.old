@@ -87,7 +87,7 @@ img {
 */
 /* The visual grid 
 */
-/* line 582, mixins.scss */
+/* line 581, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
@@ -96,7 +96,7 @@ img {
   z-index: -1;
 }
 
-/* line 589, mixins.scss */
+/* line 588, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -104,7 +104,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 594, mixins.scss */
+/* line 593, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;

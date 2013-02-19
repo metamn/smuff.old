@@ -73,15 +73,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  - it would be nice to redeclare these variables inside media queries, but it is not possible
  - http://stackoverflow.com/questions/9122195/using-sass-variables-with-css3-media-queries
 */
-/* line 2, typography.scss */
-body {
+/* line 3, typography.scss */
+html body {
   /* Use Serif for long text */
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-size: 100%;
   line-height: 1.25;
 }
-/* line 10, typography.scss */
-body .container {
+/* line 11, typography.scss */
+html body .container {
   /* Use Sans serif for non-long text */
   /* Headings
    -----------------------------------------------
@@ -102,9 +102,9 @@ body .container {
   /* Tables
   // -----------------------------------------------
   */
-  	  /* Text styles
-  	  // -----------------------------------------------
-      */
+  	    /* Text styles
+  	    // -----------------------------------------------
+        */
   /* Forms
   // -----------------------------------------------
   */
@@ -123,154 +123,154 @@ body .container {
     - additionally padding & relative positioning must be overwritten later in the new context
   */
 }
-/* line 13, typography.scss */
-body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
+/* line 14, typography.scss */
+html body .container h1, html body .container h2, html body .container h3, html body .container h4, html body .container h5, html body .container h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 28, typography.scss */
-body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
+/* line 29, typography.scss */
+html body .container h1, html body .container h2, html body .container h3, html body .container h4, html body .container h5, html body .container h6 {
   font-size: 1.5em;
   padding: 1.25em 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 36, typography.scss */
-body .container h4, body .container h5, body .container h6 {
+/* line 37, typography.scss */
+html body .container h4, html body .container h5, html body .container h6 {
   font-size: 1.25em;
   /* small caps is not enough to distinguish header from body text */
   text-transform: uppercase;
 }
-/* line 43, typography.scss */
-body .container h1, body .container h4 {
+/* line 44, typography.scss */
+html body .container h1, html body .container h4 {
   font-weight: bold;
 }
-/* line 47, typography.scss */
-body .container h2 {
+/* line 48, typography.scss */
+html body .container h2 {
   font-weight: bold;
   font-style: italic;
 }
-/* line 52, typography.scss */
-body .container h6 {
+/* line 53, typography.scss */
+html body .container h6 {
   text-transform: none;
   font-variant: small-caps;
 }
-/* line 64, typography.scss */
-body .container p + p {
+/* line 65, typography.scss */
+html body .container p + p {
   margin-top: 1.25em;
 }
-/* line 69, typography.scss */
-body .container q, body .container blockquote {
+/* line 70, typography.scss */
+html body .container q, html body .container blockquote {
   margin: 1.25em;
   border-left: 1px dotted;
   padding-left: 1.25em;
   font-style: italic;
   font-size: larger;
 }
-/* line 80, typography.scss */
-body .container address {
+/* line 81, typography.scss */
+html body .container address {
   font-variant: small-caps;
 }
-/* line 89, typography.scss */
-body .container ul, body .container menu, body .container dir, body .container ol {
+/* line 90, typography.scss */
+html body .container ul, html body .container menu, html body .container dir, html body .container ol {
   margin: 1.25em;
   list-style-type: square;
 }
-/* line 94, typography.scss */
-body .container ol {
+/* line 95, typography.scss */
+html body .container ol {
   list-style-type: decimal;
 }
-/* line 98, typography.scss */
-body .container dl {
+/* line 99, typography.scss */
+html body .container dl {
   margin: 1.25em 0;
 }
-/* line 101, typography.scss */
-body .container dl dt {
+/* line 102, typography.scss */
+html body .container dl dt {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 105, typography.scss */
-body .container dl dd {
+/* line 106, typography.scss */
+html body .container dl dd {
   margin: 0.625em 1.25em 1.875em;
 }
-/* line 116, typography.scss */
-body .container table {
+/* line 117, typography.scss */
+html body .container table {
   margin: 1.25em 0;
 }
-/* line 121, typography.scss */
-body .container table thead tr td {
+/* line 122, typography.scss */
+html body .container table thead tr td {
   font-weight: bold;
 }
-/* line 127, typography.scss */
-body .container table tbody {
+/* line 128, typography.scss */
+html body .container table tbody {
   border-top: 1px dotted;
   border-bottom: 1px dotted;
 }
-/* line 132, typography.scss */
-body .container table td, body .container table th, body .container table tr {
+/* line 133, typography.scss */
+html body .container table td, html body .container table th, html body .container table tr {
   text-align: left;
   vertical-align: top;
 }
-/* line 137, typography.scss */
-body .container table td {
+/* line 138, typography.scss */
+html body .container table td {
   padding: 1.25em;
 }
-/* line 148, typography.scss */
-body .container em {
+/* line 149, typography.scss */
+html body .container em {
   font-style: italic;
 }
-/* line 152, typography.scss */
-body .container strong {
+/* line 153, typography.scss */
+html body .container strong {
   font-weight: bold;
 }
-/* line 165, typography.scss */
-body .container input, body .container textarea, body .container select {
+/* line 166, typography.scss */
+html body .container input, html body .container textarea, html body .container select {
   border: none;
   outline: 0;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-/* line 175, typography.scss */
-body .container input[type='text'], body .container input[type='email'] {
+/* line 176, typography.scss */
+html body .container input[type='text'], html body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
 }
-/* line 180, typography.scss */
-body .container input[type='text']:focus, body .container input[type='email']:focus {
+/* line 181, typography.scss */
+html body .container input[type='text']:focus, html body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 186, typography.scss */
-body .container input[type='submit'] {
+/* line 187, typography.scss */
+html body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 191, typography.scss */
-body .container input[type='submit']:hover {
+/* line 192, typography.scss */
+html body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 204, typography.scss */
-body .container input[type='radio'], body .container input[type='checkbox'] {
+/* line 205, typography.scss */
+html body .container input[type='radio'], html body .container input[type='checkbox'] {
   display: none;
 }
-/* line 207, typography.scss */
-body .container input[type='radio'] + label, body .container input[type='checkbox'] + label {
+/* line 208, typography.scss */
+html body .container input[type='radio'] + label, html body .container input[type='checkbox'] + label {
   display: inline-block;
 }
-/* line 212, typography.scss */
-body .container input[type='radio'] + label:after {
+/* line 213, typography.scss */
+html body .container input[type='radio'] + label:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 216, typography.scss */
-body .container input[type='radio']:checked + label:after {
+/* line 217, typography.scss */
+html body .container input[type='radio']:checked + label:after {
   content: '\25a3';
 }
-/* line 221, typography.scss */
-body .container input[type='checkbox'] + label:after {
+/* line 222, typography.scss */
+html body .container input[type='checkbox'] + label:after {
   content: '\272A';
   margin-right: 0.3125em;
   font-size: 200%;
@@ -278,17 +278,17 @@ body .container input[type='checkbox'] + label:after {
   vertical-align: top;
   color: lightgray;
 }
-/* line 232, typography.scss */
-body .container input[type='checkbox']:checked + label:after {
+/* line 233, typography.scss */
+html body .container input[type='checkbox']:checked + label:after {
   color: black;
 }
-/* line 242, typography.scss */
-body .container select {
+/* line 243, typography.scss */
+html body .container select {
   border-bottom: 1px solid gray;
   cursor: pointer;
 }
-/* line 246, typography.scss */
-body .container label.select:after {
+/* line 247, typography.scss */
+html body .container label.select:after {
   content: '\003E';
   float: right;
   display: inline-block;
@@ -395,7 +395,7 @@ img {
 */
 /* The visual grid 
 */
-/* line 582, mixins.scss */
+/* line 581, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
@@ -404,7 +404,7 @@ img {
   z-index: -1;
 }
 
-/* line 589, mixins.scss */
+/* line 588, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -412,7 +412,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 594, mixins.scss */
+/* line 593, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;

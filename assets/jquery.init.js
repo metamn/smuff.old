@@ -346,16 +346,30 @@ $(document).ready(function() {
     return ret;
   }
   $("#logo").html(logo());
+  resizeLogoForSafari(1);
   
-  
+  // - Show Smart Stuff
   $("#logo").hover(
     function () {
       $("#logo .smart-stuff").show(200);
+      resizeLogoForSafari(2);
     },
     function () {
       $("#logo .smart-stuff").hide(); /* blinks if there is any value */
+      resizeLogoForSafari(1);
     }
   );
+  
+  // in Safari the logo width must be -1em, for Smart Stuff -2em
+  function resizeLogoForSafari(unit) {
+    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    if (is_safari) {
+      var originalWidth = $('#logo').css('width'); /* it will retrieve the px value not the em !!! */
+      var width = originalWidth.replace('px', '') - unit*16;
+      $('#logo').css('width', width + 'px');
+    }
+  }
+  
   
   
   // Sticky header

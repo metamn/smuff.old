@@ -367,7 +367,7 @@ a, a:active, a:visited, a:hover {
   }
   
   &:hover {
-    width: (51 - 6) * $size + 6*$size/2;
+    @include logo-width($size, 51, 6);
     
     .smart-stuff-cell {
       display: block;
