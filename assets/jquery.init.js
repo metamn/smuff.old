@@ -369,7 +369,8 @@ $(document).ready(function() {
   //    3 - reset the logo on mouseout
   function resizeLogoForSafari(where) {
     var is_safari = ($.browser.webkit && !window.chrome);
-    if (is_safari) {
+    var is_opera = $.browser.opera;
+    if (is_safari || is_opera) {
       switch(where) {
         case 1:
           var originalWidth = $('#logo').css('width'); /* it will retrieve the px value not the em !!! */
