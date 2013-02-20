@@ -121,6 +121,7 @@
 			  
 			  
 			  <nav id="menu-info">
+			  
 			    
 			    <div id="contact">
 			      <h3>Contacteaza-ne</h3>
@@ -169,10 +170,10 @@
 			      </ul>
 			    </div>
 			    
-			    
 			    <div id="close">
 			      <span></span>
 			    </div>
+			    
 			  </nav>
 			  
 			  

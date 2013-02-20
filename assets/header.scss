@@ -177,7 +177,6 @@ body {
 			  @include hidden;
 			  
 			  background: $very-light-gray;
-			  padding-bottom: $pad;
 			  
 			  div {
 			    @include col(23%, .5%, 2%);
@@ -231,12 +230,12 @@ body {
 			  }
 			  
 			  #close {
-			    margin-top: -16.2em;
 			    float: right;
 			    margin-right: 0;
 			    text-align: right;
 			    
-			    margin-top: $pad*3 - $pad/2;
+			    position: relative;
+			    top: -15.8em;
 			    
 			    span {
 			      cursor: pointer;

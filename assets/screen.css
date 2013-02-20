@@ -701,69 +701,68 @@ body .container #header #menu-info {
   float: left;
   display: none;
   background: #f1f1f1;
-  padding-bottom: 1.25em;
 }
-/* line 182, header.scss */
+/* line 181, header.scss */
 body .container #header #menu-info div {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 185, header.scss */
+/* line 184, header.scss */
 body .container #header #menu-info div h3 {
   color: #aaaaaa;
 }
-/* line 189, header.scss */
+/* line 188, header.scss */
 body .container #header #menu-info div ul {
   list-style: none;
   margin: 0;
 }
-/* line 193, header.scss */
+/* line 192, header.scss */
 body .container #header #menu-info div ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
 }
-/* line 197, header.scss */
+/* line 196, header.scss */
 body .container #header #menu-info div ul li a {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 202, header.scss */
+/* line 201, header.scss */
 body .container #header #menu-info div ul li a:hover {
   border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 208, header.scss */
+/* line 207, header.scss */
 body .container #header #menu-info div ul li.separator {
   padding: 0.625em;
 }
-/* line 216, header.scss */
+/* line 215, header.scss */
 body .container #header #menu-info #contact {
   margin-left: 23%;
 }
-/* line 222, header.scss */
+/* line 221, header.scss */
 body .container #header #menu-info .shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 225, header.scss */
+/* line 224, header.scss */
 body .container #header #menu-info .shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 233, header.scss */
+/* line 232, header.scss */
 body .container #header #menu-info #close {
-  margin-top: -16.2em;
   float: right;
   margin-right: 0;
   text-align: right;
-  margin-top: 3.125em;
+  position: relative;
+  top: -15.8em;
 }
-/* line 241, header.scss */
+/* line 240, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 246, header.scss */
+/* line 245, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
