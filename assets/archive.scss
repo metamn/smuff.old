@@ -19,7 +19,7 @@ body.archive {
     }
   }
   
-  section hgroup.fixed {
+  #archive hgroup.fixed {
     @include container(10%);
     margin-left: 10%;
     
@@ -31,13 +31,13 @@ body.archive {
       width: 23%;
     }
     
-    nav {
+    #filters {
       width: 74.5%;
     }
   }
   
   
-  section {
+  #archive {
     @include block;
     
     
@@ -53,11 +53,11 @@ body.archive {
         }
       }
       
-      nav {
+      #filters {
         @include col(79.5%, 0, 0);
         padding-top: $pad/4;
            
-        div {
+        nav {
           @include col(23%, 0, 2.5%);
           padding: $pad/2 0 0;
           
@@ -73,119 +73,29 @@ body.archive {
             margin-right: 0;
           }
         }
+      }
+    }
+    
+  
+    #products {
+      @include block;
+      
+      #product {
+        @include col(23%, 0, 2.5%);
+        margin-bottom: $pad;
+        
+        @include product-thumb;
         
         
-        @include tablet-landscape-and-below {
-          h3 {
-            display: block;
-            font-size: small;
-            
-            padding: 0;
-            border-bottom: 1px solid $very-light-gray;
-            color: $gray;
-            
-            cursor: pointer;
-          }
-          
-          h3:after {
-            @include arrow-to-reveal-content;
-          }
-          
-          div {
-            @include block;
-            max-width: 90%;
-            
-            display: none;
-            
-            label.select:after {
-              display: none;
-            }
-            
-            label {
-              select {
-                width: 100%;
-                padding: $pad/4 0;
-              }
-            }
-          }
-          
-          #submit {
-            margin: $pad/2 0;
-          }
+        .normal-price {
+          background: $background;
         }
-      }
-    }
-    
-    
-  
-  
-  #products {
-    @include block;
-    
-    #product {
-      @include col(23%, 0, 2.5%);
-      margin-bottom: $pad;
-      
-      @include product-thumb;
-      
-      
-      .normal-price {
-        background: $background;
-      }
-      
-    }
-    #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
-      margin-right: 0;
-    }
-    
-    
-    @include mobile-only {
-      #product {
-        @include block;
-      }
-    }
-    
-    @include mobile-landscape-only {
-      #product {
-      }
-    }
-    
-    @include tablet-only {
-      #product {
-        @include col(45%, 0, 10%);
-        margin-bottom: $margin;
         
       }
-      #product.c2, #product.c4, #product.c6, #product.c8, #product.c10, #product.c12, #product.c14, #product.c16, #product.c18, #product.c20,
-      #product.c22, #product.c24, #product.c26, #product.c28, #product.c30 {
+      #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
         margin-right: 0;
       }
-      #product.c3, #product.c9, #product.c15, #product.c21, #product.c27 {
-        margin-right: 10%;
-      }
-    }
     
-  }
-  
-  footer {
-    h1 {
-      @include col(50%, 0, 0);
-    }
-    
-    #pagination {
-      margin-top: $pad*3;
-    }
-    
-    
-    
-    @include mobile-only {
-      h1, #pagination {
-        @include block; 
-      }
     }
   }
-  
-  
-  
- }
 }

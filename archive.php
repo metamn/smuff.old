@@ -119,27 +119,31 @@
   
 ?>
 
-<section id="archive">  
+<section itemscope itemtype="http://schema.org/CollectionPage" id="archive">  
 	<hgroup>
 	  
 	  <header>
-		  <h2>
-			  <?php 
-				  $found_posts = $wp_query->found_posts;
-				  if ($found_posts == 1) {
-					  $cadouri = ' cadou ';
-				  } else {
-					  $cadouri = ' cadouri ';
-				  }
-			  ?>
-			  <?php echo $found_posts . $cadouri . $cat_name; ?>
-		  </h2>
+	    <a itemprop="url" href="" title="<?php echo $cat_name ?>">
+		    <h2 itemprop="name">
+			    <?php 
+				    $found_posts = $wp_query->found_posts;
+				    if ($found_posts == 1) {
+					    $cadouri = ' cadou ';
+				    } else {
+					    $cadouri = ' cadouri ';
+				    }
+			    ?>
+			    <?php echo $found_posts . $cadouri . $cat_name; ?>
+		    </h2>
+		  </a>
 		</header>
 	
 	  	
-		<nav id="filters">
+		<section id="filters">
+		  <h3 class="outline">Filtrare rezultate</h3>
 		  
-		  <div id="for-who">
+		  <nav id="for-who">
+		    <h3 class="outline">Pentru cine</h3>
 		    <label class="select">
 		      <select>
 		        <option>Pentru toti</option>
@@ -149,9 +153,10 @@
 		        <option>Casa si birou</option>
 		      </select>
 		    </label>
-		  </div>
+		  </nav>
 		  
-		  <div id="price">
+		  <nav id="price">
+		    <h3 class="outline">Preturi</h3>
 		    <label class="select">
 		      <select>
 		        <option>Toate preturile</option>
@@ -161,9 +166,10 @@
 		        <option>Peste 350 lei</option>
 		      </select>
 		    </label>
-		  </div>
+		  </nav>
 		  
-		  <div id="delivery">
+		  <nav id="delivery">
+		    <h3 class="outline">Livrare / Stoc</h3>
 		    <label class="select">
 		      <select>
 		        <option>Toate livrarile</option>
@@ -172,11 +178,10 @@
 		        <option>Livrare in 5-7 zile</option>
 		      </select>
 		    </label>
-		  </div>
+		  </nav>
 		  
-		  
-		  
-		  <div id="meta" class="last">
+		  <nav id="meta" class="last">
+		    <h3 class="outline">Noutati, Reduceri etc.</h3>
 		    <label class="select">
 		      <select>
 		        <option>Cadouri noi</option>
@@ -185,17 +190,15 @@
 		        <option>Toate cadourile</option>
 		      </select>
 		    </label>
-		  </div>
-		  
-		  
-		</nav>
+		  </nav>
+		</section>
 			
 	</hgroup>
 	
 	<?php 
 		$ok = $wp_query->have_posts();
 		if ($ok) { ?>
-			<div id="products">
+			<div itemscope itemtype="http://schema.org/ImageGallery" id="products">
 			<?php
 					$counter = 1;
 					while ($wp_query->have_posts()) : $wp_query->the_post(); update_post_caches($posts); 
