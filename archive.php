@@ -163,7 +163,7 @@
 		    </label>
 		  </div>
 		  
-		  <div id="delivery">
+		  <div id="delivey">
 		    <label class="select">
 		      <select>
 		        <option>Toate livrarile</option>
