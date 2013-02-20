@@ -1,14 +1,10 @@
 <section id="giftshopper">
   <header id="title">
-    Alege cadoul perfect!
+    <h2>Alege cadoul perfect!</h2>
   </header>
+  
   <div id="body">
     <ul>
-      <li id="tagcloud">
-        <div id="inner">
-          <?php wp_tag_cloud('number=10') ?>
-        </div>
-      </li>
       <li id="for-him">
         <p>Pentru El</p>
       </li> 

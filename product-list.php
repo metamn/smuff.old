@@ -17,6 +17,7 @@
       <section id="<?php echo $product_list_id ?>">
       
         <nav id="navigation">
+          <h3 class="outline">Navigare</h3>
           <ul>
             <li id="left"></li>
             <li id="right"></li>

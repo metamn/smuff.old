@@ -48,6 +48,12 @@ body {
     }
     
     
+    /* Titles for HTML5 Outliner are hidden */
+    .outline {
+      display: none;
+    }
+    
+    
 		
 		#header {
 			@include block;
@@ -59,15 +65,23 @@ body {
 				margin-top: $pad;
 				margin-bottom: $pad;
 				
-				@include mobile-only {
-				  @include block;
-				  margin-top: 0;
-				}
 				
 			  #logo {
-				  @include logo($pad/3);
 			    float: left;
+			    
+			    &.artwork {
+			      @include logo($pad/3);
+			    }
+			    
+			    &.image {
+			      display: none;
+			    }
 			  }
+			  
+			  h1 {
+			    display: none;
+			  }
+			  
 			
 				#strapline {
 				  float: left;
@@ -82,10 +96,6 @@ body {
 					    color: $sale;
 					  }
 				  
-				  }
-				  
-				  @include mobile-only {
-				    font-size: small;
 				  }
 				}
 			}
@@ -148,27 +158,9 @@ body {
               float: right;
             }
           }
-          
-          @include mobile-only {
-            padding: 0;
-            
-            li {
-              font-size: small;
-              margin-right: $pad/2;
-              
-              &#separator {
-                width: 100%;
-                margin-top: $pad/2;
-              }
-              
-              &.cart {
-                float: left;
-              }
-            }
-          }
+         
         }
 			} 
-			
 			
 			
 			
@@ -178,11 +170,16 @@ body {
 			  
 			  background: $very-light-gray;
 			  
-			  div {
+			  nav {
 			    @include col(23%, .5%, 2%);
 			    
 			    h3 {
 			      color: $gray;
+			      
+			      &.outline {
+			        display: block;
+			        visibility: hidden;
+			      }
 			    }
 			    
 			    ul {
@@ -210,21 +207,21 @@ body {
 			      }
 			      
 			    }
-			  }
-			  
-			  #contact {
-			    margin-left: 23%;
-			  }
-			  
-			  .shopping-info {
-			    ul {
-			      li {
-			        margin-bottom: $pad/4 + $pad;
-			        
-			        h4 {
-			          padding: 0 0 $pad/2;
+			    
+			    &#contact {
+			      margin-left: 23%;
+			    }
+			    
+			    &.shopping-info {
+			      ul {
+			        li {
+			          margin-bottom: $pad/4 + $pad;
+			          
+			          h4 {
+			            padding: 0 0 $pad/2;
+			          }
+			          
 			        }
-			        
 			      }
 			    }
 			  }

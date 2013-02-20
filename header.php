@@ -78,25 +78,31 @@
 	  <div class="container"><!-- closed in the footer -->
 	    
 	    <header id="header">
-				<hgroup>
-				  <a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
-					  <div id="logo"></div> 
+				<hgroup itemscope itemtype="http://schema.org/LocalBusiness">
+				  <a itemprop="url" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
+					  <div id="logo" class="artwork"></div> 
+					  <div id="logo" class="image">
+					    <img itemprop="logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/logo.jpg" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
+					  </div>
+					  <h1 itemprop="name"><?php bloginfo('name'); ?></h1>
 				  </a>
 					
 					
 					<div id="strapline">
 						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
-							<h2><?php bloginfo('description'); ?></h2>
+							<h2 itemprop="description"><?php bloginfo('description'); ?></h2>
 						</a>
 					</div>
 	    	</hgroup>
 	    	
-	    	<div id="search">
+	    	<nav id="search">
+	    	  <h3 class="outline">Cautare</h3>
 		      <input type="text" name="search" value="">
 		      <input type="submit" name="submit" value="">
-		    </div>
+		    </nav>
 	    	
 	    	<nav id="menu">
+	    	  <h3 class="outline">Navigare</h3>
 					<ul>
 						<?php 
 							$cats = array("gadget", "lifestyle", "doar-copii", "produse", "wtf");		            
@@ -120,21 +126,21 @@
 			  
 			  
 			  
-			  <nav id="menu-info">
-			  
+			  <section id="menu-info">
+			    <h3 class="outline">Informatii</h3>
 			    
-			    <div id="contact">
+			    <nav itemscope itemtype="http://schema.org/LocalBusiness" id="contact">
 			      <h3>Contacteaza-ne</h3>
 			      <ul>
-			        <li>0740-456.127</li>
-			        <li>shop @ smuff.ro</li>
+			        <li itemprop="telephone">0740-456.127</li>
+			        <li itemprop="email">shop @ smuff.ro</li>
 			        <li class="separator"></li>
-			        <li><a href="">Despre noi</a></li>
+			        <li itemscope itemtype="http://schema.org/AboutPage" ><a itemprop="url" href="">Despre noi</a></li>
               <li><a href="">Termeni si conditii</a></li>
 			      </ul>
-			    </div>
+			    </nav>
 			    
-			    <div class="shopping-info">
+			    <nav class="shopping-info">
 			      <h3>Cum cumpar?</h3>
 			      <ul>
 		          <li>
@@ -150,35 +156,32 @@
 		            </p>
 		          </li>
 			      </ul>
-			    </div>
+			    </nav>
 			    
-			     <div class="shopping-info">
-			      <h3>&nbsp;</h3>
-			      <ul>
-		          <li>
-		            <h4>10 zile drept de retur</h4>
-		            <p>
-			            Money back, fara intrebari din partea noastra.
-		            </p>
-		          </li>
-		          <li>
-		            <h4>Garantie minim 1 an</h4>
-		            <p>
-			            Service Express sau schimb cu un produs NOU.
-		            </p>
-		          </li>
-			      </ul>
-			    </div>
+          <nav class="shopping-info">
+            <h3 class="outline">Cum Cumpar?</h3>
+            <ul>
+              <li>
+                <h4>10 zile drept de retur</h4>
+                <p>
+                  Money back, fara intrebari din partea noastra.
+                </p>
+              </li>
+              <li>
+                <h4>Garantie minim 1 an</h4>
+                <p>
+                  Service Express sau schimb cu un produs NOU.
+                </p>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="close">
+            <span></span>
+          </div>
 			    
-			    <div id="close">
-			      <span></span>
-			    </div>
-			    
-			  </nav>
+			  </section>
 			  
-			  
-			  
-			 
 	    </header>
 	  		
 			

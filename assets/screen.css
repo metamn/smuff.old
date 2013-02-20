@@ -488,6 +488,7 @@ body .container {
   width: 90%;
   margin: 0 auto;
   /* Typography overwrites */
+  /* Titles for HTML5 Outliner are hidden */
 }
 @media only screen and (min-width: 1599px) {
   /* line 25, header.scss */
@@ -515,12 +516,16 @@ body .container input, body .container textarea, body .container select {
   font-size: 100%;
 }
 /* line 52, header.scss */
+body .container .outline {
+  display: none;
+}
+/* line 58, header.scss */
 body .container #header {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 57, header.scss */
+/* line 63, header.scss */
 body .container #header hgroup {
   width: 50%;
   margin: 0 2.5% 0 0;
@@ -528,72 +533,69 @@ body .container #header hgroup {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
-@media (max-width: 480px) {
-  /* line 57, header.scss */
-  body .container #header hgroup {
-    width: 100%;
-    float: left;
-    margin-top: 0;
-  }
-}
-/* line 67, header.scss */
+/* line 69, header.scss */
 body .container #header hgroup #logo {
-  height: 2.91667em;
-  width: 10.20833em;
   float: left;
 }
+/* line 72, header.scss */
+body .container #header hgroup #logo.artwork {
+  height: 2.91667em;
+  width: 10.20833em;
+}
 /* line 349, theme.scss */
-body .container #header hgroup #logo .cell {
+body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
 /* line 355, theme.scss */
-body .container #header hgroup #logo .small {
+body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
 /* line 359, theme.scss */
-body .container #header hgroup #logo .set {
+body .container #header hgroup #logo.artwork .set {
   background: #363636;
 }
 /* line 363, theme.scss */
-body .container #header hgroup #logo .square {
+body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
 /* line 367, theme.scss */
-body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
+body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff {
   display: none;
 }
 /* line 371, theme.scss */
-body .container #header hgroup #logo:hover {
+body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
 /* line 374, theme.scss */
-body .container #header hgroup #logo:hover .smart-stuff-cell {
+body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
-/* line 72, header.scss */
+/* line 76, header.scss */
+body .container #header hgroup #logo.image {
+  display: none;
+}
+/* line 81, header.scss */
+body .container #header hgroup h1 {
+  display: none;
+}
+/* line 86, header.scss */
 body .container #header hgroup #strapline {
   float: left;
   margin-left: 0.625em;
 }
-/* line 76, header.scss */
+/* line 90, header.scss */
 body .container #header hgroup #strapline h2 {
   padding: 0;
   font-style: normal;
   color: #f25f18;
 }
-/* line 81, header.scss */
+/* line 95, header.scss */
 body .container #header hgroup #strapline h2 a {
   color: #f25f18;
 }
-@media (max-width: 480px) {
-  /* line 72, header.scss */
-  body .container #header hgroup #strapline {
-    font-size: small;
-  }
-}
-/* line 93, header.scss */
+/* line 103, header.scss */
 body .container #header #search {
   width: 47.5%;
   margin: 0 0 0 0;
@@ -601,7 +603,7 @@ body .container #header #search {
   text-align: right;
   margin-top: 1.5625em;
 }
-/* line 98, header.scss */
+/* line 108, header.scss */
 body .container #header #search input[type="text"] {
   width: 18.8em;
   border: 1px solid white;
@@ -609,19 +611,19 @@ body .container #header #search input[type="text"] {
   top: -0.625em;
   padding: 0 0.3125em;
 }
-/* line 107, header.scss */
+/* line 117, header.scss */
 body .container #header #search input[type="text"]:focus {
   border-color: #f25f18;
 }
-/* line 112, header.scss */
+/* line 122, header.scss */
 body .container #header #search input[type="submit"] {
   background: url(icon-search.jpg) no-repeat center 2px;
 }
-/* line 117, header.scss */
+/* line 127, header.scss */
 body .container #header #search:hover input[type="text"] {
   border-color: #f25f18;
 }
-/* line 124, header.scss */
+/* line 134, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -629,7 +631,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em 0;
 }
-/* line 131, header.scss */
+/* line 141, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -647,11 +649,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 136, header.scss */
+/* line 146, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 139, header.scss */
+/* line 149, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -664,7 +666,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 143, header.scss */
+/* line 153, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -673,85 +675,70 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 147, header.scss */
+/* line 157, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
-@media (max-width: 480px) {
-  /* line 131, header.scss */
-  body .container #header #menu ul {
-    padding: 0;
-  }
-  /* line 155, header.scss */
-  body .container #header #menu ul li {
-    font-size: small;
-    margin-right: 0.625em;
-  }
-  /* line 159, header.scss */
-  body .container #header #menu ul li#separator {
-    width: 100%;
-    margin-top: 0.625em;
-  }
-  /* line 164, header.scss */
-  body .container #header #menu ul li.cart {
-    float: left;
-  }
-}
-/* line 175, header.scss */
+/* line 167, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
   display: none;
   background: #f1f1f1;
 }
-/* line 181, header.scss */
-body .container #header #menu-info div {
+/* line 173, header.scss */
+body .container #header #menu-info nav {
   width: 23%;
   margin: 0 2% 0 0.5%;
   float: left;
 }
-/* line 184, header.scss */
-body .container #header #menu-info div h3 {
+/* line 176, header.scss */
+body .container #header #menu-info nav h3 {
   color: #aaaaaa;
 }
-/* line 188, header.scss */
-body .container #header #menu-info div ul {
+/* line 179, header.scss */
+body .container #header #menu-info nav h3.outline {
+  display: block;
+  visibility: hidden;
+}
+/* line 185, header.scss */
+body .container #header #menu-info nav ul {
   list-style: none;
   margin: 0;
 }
-/* line 192, header.scss */
-body .container #header #menu-info div ul li {
+/* line 189, header.scss */
+body .container #header #menu-info nav ul li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
 }
-/* line 196, header.scss */
-body .container #header #menu-info div ul li a {
+/* line 193, header.scss */
+body .container #header #menu-info nav ul li a {
   width: 100%;
   display: block;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 201, header.scss */
-body .container #header #menu-info div ul li a:hover {
+/* line 198, header.scss */
+body .container #header #menu-info nav ul li a:hover {
   border-bottom: 1px solid #cccccc;
   color: #1b1b1b;
 }
-/* line 207, header.scss */
-body .container #header #menu-info div ul li.separator {
+/* line 204, header.scss */
+body .container #header #menu-info nav ul li.separator {
   padding: 0.625em;
 }
-/* line 215, header.scss */
-body .container #header #menu-info #contact {
+/* line 211, header.scss */
+body .container #header #menu-info nav#contact {
   margin-left: 23%;
 }
-/* line 221, header.scss */
-body .container #header #menu-info .shopping-info ul li {
+/* line 217, header.scss */
+body .container #header #menu-info nav.shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 224, header.scss */
-body .container #header #menu-info .shopping-info ul li h4 {
+/* line 220, header.scss */
+body .container #header #menu-info nav.shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 232, header.scss */
+/* line 229, header.scss */
 body .container #header #menu-info #close {
   float: right;
   margin-right: 0;
@@ -759,12 +746,12 @@ body .container #header #menu-info #close {
   position: relative;
   top: -15.8em;
 }
-/* line 240, header.scss */
+/* line 237, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 245, header.scss */
+/* line 242, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
@@ -777,91 +764,21 @@ body.home .container section {
   float: left;
   margin: 0 0 1.25em;
 }
-/* line 8, startpage.scss */
+/* line 9, startpage.scss */
 body.home .container section #navigation {
   display: none;
 }
-/* line 14, startpage.scss */
-body.home .container section #body #products #product {
-  width: 23%;
-  margin: 0 2.5% 0 0;
-  float: left;
-  background: white url(stripe.png);
-  padding-bottom: 1.25em;
-}
-/* line 302, theme.scss */
-body.home .container section #body #products #product img {
-  width: 100%;
-  padding: 0%;
-  border: 1px solid #cccccc;
-  background: white url(ajax-loader.gif) no-repeat 50% 50%;
-}
-/* line 306, theme.scss */
-body.home .container section #body #products #product #title, body.home .container section #body #products #product #price {
-  margin: 0.625em 0.3125em;
-  background: white url(background.png);
-}
-/* line 312, theme.scss */
-body.home .container section #body #products #product #title {
-  padding: 0.625em;
-  min-height: 3.125em;
-}
-/* line 316, theme.scss */
-body.home .container section #body #products #product #title h3 {
-  padding: 0;
-}
-/* line 321, theme.scss */
-body.home .container section #body #products #product #price {
-  display: inline-block;
-  padding-right: 0.625em;
-}
-/* line 325, theme.scss */
-body.home .container section #body #products #product #price .normal-price {
-  padding-right: 0;
-}
-/* line 19, startpage.scss */
-body.home .container section #body #products #product #excerpt {
+/* line 13, startpage.scss */
+body.home .container section header {
   display: none;
 }
-@media (max-width: 480px) {
-  /* line 14, startpage.scss */
-  body.home .container section #body #products #product {
-    width: 100%;
-    float: left;
-    width: 90%;
-    margin: 5%;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 14, startpage.scss */
-  body.home .container section #body #products #product {
-    width: 45%;
-    margin: 0 5% 0 0;
-    float: left;
-    margin-bottom: 5%;
-  }
-}
-/* line 34, startpage.scss */
-body.home .container section #body #products #product.c4, body.home .container section #body #products #product.c8, body.home .container section #body #products #product.c12 {
-  margin-right: 0;
-}
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 39, startpage.scss */
-  body.home .container section #body #products #product.c2 {
-    margin-right: 0;
-  }
-}
-/* line 46, startpage.scss */
-body.home .container section.active {
-  display: block;
-}
-/* line 51, startpage.scss */
-body.home .container #new-products {
+/* line 18, startpage.scss */
+body.home .container section#campaigns {
   background: url(valentines2.jpg);
   height: 18em;
 }
-/* line 56, startpage.scss */
-body.home .container #new-products #navigation {
+/* line 23, startpage.scss */
+body.home .container section#campaigns #navigation {
   display: block;
   max-width: 18.5%;
   height: auto;
@@ -870,12 +787,12 @@ body.home .container #new-products #navigation {
   margin-right: 1%;
 }
 /* line 257, theme.scss */
-body.home .container #new-products #navigation ul {
+body.home .container section#campaigns #navigation ul {
   display: block;
   margin: 0;
 }
 /* line 488, mixins.scss */
-body.home .container #new-products #navigation ul li {
+body.home .container section#campaigns #navigation ul li {
   display: inline-block;
   list-style-type: none;
   margin-left: 0;
@@ -883,84 +800,97 @@ body.home .container #new-products #navigation ul li {
   margin-right: 1.25em;
 }
 /* line 495, mixins.scss */
-body.home .container #new-products #navigation ul li.last {
+body.home .container section#campaigns #navigation ul li.last {
   margin-right: 0;
 }
 /* line 260, theme.scss */
-body.home .container #new-products #navigation ul li {
+body.home .container section#campaigns #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
 /* line 266, theme.scss */
-body.home .container #new-products #navigation ul #left {
+body.home .container section#campaigns #navigation ul #left {
   background: url(left-arrow-black.png);
 }
 /* line 270, theme.scss */
-body.home .container #new-products #navigation ul #right {
+body.home .container section#campaigns #navigation ul #right {
   background: url(right-arrow-black.png);
 }
-/* line 69, startpage.scss */
-body.home .container #new-products #body, body.home .container #new-products #title {
+/* line 36, startpage.scss */
+body.home .container section#campaigns #body {
   display: none;
 }
-/* line 74, startpage.scss */
-body.home .container #anouncement {
+/* line 45, startpage.scss */
+body.home .container section#sales #body #products #product {
+  width: 23%;
+  margin: 0 2.5% 0 0;
+  float: left;
+  background: white url(stripe.png);
+  padding-bottom: 1.25em;
+}
+/* line 302, theme.scss */
+body.home .container section#sales #body #products #product img {
+  width: 100%;
+  padding: 0%;
+  border: 1px solid #cccccc;
+  background: white url(ajax-loader.gif) no-repeat 50% 50%;
+}
+/* line 306, theme.scss */
+body.home .container section#sales #body #products #product #title, body.home .container section#sales #body #products #product #price {
+  margin: 0.625em 0.3125em;
+  background: white url(background.png);
+}
+/* line 312, theme.scss */
+body.home .container section#sales #body #products #product #title {
+  padding: 0.625em;
+  min-height: 3.125em;
+}
+/* line 316, theme.scss */
+body.home .container section#sales #body #products #product #title h3 {
+  padding: 0;
+}
+/* line 321, theme.scss */
+body.home .container section#sales #body #products #product #price {
+  display: inline-block;
+  padding-right: 0.625em;
+}
+/* line 325, theme.scss */
+body.home .container section#sales #body #products #product #price .normal-price {
+  padding-right: 0;
+}
+/* line 50, startpage.scss */
+body.home .container section#sales #body #products #product #excerpt {
   display: none;
-  margin: 0;
-  text-align: center;
-  color: #aaaaaa;
 }
-/* line 82, startpage.scss */
-body.home .container #anouncement h2 {
-  font-family: 'Old Standard TT', serif;
-  font-weight: normal;
-  font-size: 1.25em;
-  padding: 0.3125em 0;
+/* line 54, startpage.scss */
+body.home .container section#sales #body #products #product.c4, body.home .container section#sales #body #products #product.c8, body.home .container section#sales #body #products #product.c12 {
+  margin-right: 0;
 }
-/* line 88, startpage.scss */
-body.home .container #anouncement h2 span {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  padding: 0.15625em 7.5em;
-}
-@media only screen and (max-width: 1024px) {
-  /* line 96, startpage.scss */
-  body.home .container #anouncement h2 {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-  }
-  /* line 100, startpage.scss */
-  body.home .container #anouncement h2 span {
-    border: none;
-    padding: 0.15625em;
-  }
-}
-/* line 109, startpage.scss */
-body.home .container #sales #title {
-  display: none;
-}
-/* line 116, startpage.scss */
-body.home .container #sales #body #products #product #title {
-  display: block;
-}
-/* line 124, startpage.scss */
-body.home .container #giftshopper {
+/* line 62, startpage.scss */
+body.home .container section#giftshopper {
   margin: 0 0 1.25em;
 }
-/* line 127, startpage.scss */
-body.home .container #giftshopper #title {
+/* line 65, startpage.scss */
+body.home .container section#giftshopper #title {
+  display: block;
+}
+/* line 68, startpage.scss */
+body.home .container section#giftshopper #title h2 {
+  font-size: 1em;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-style: italic;
+  text-transform: none;
+  padding: 0;
   margin: 0.625em 0;
 }
-/* line 134, startpage.scss */
-body.home .container #giftshopper #body ul {
+/* line 80, startpage.scss */
+body.home .container section#giftshopper #body ul {
   display: block;
   margin: 0;
 }
 /* line 488, mixins.scss */
-body.home .container #giftshopper #body ul li {
+body.home .container section#giftshopper #body ul li {
   display: inline-block;
   list-style-type: none;
   margin-left: 0;
@@ -968,11 +898,11 @@ body.home .container #giftshopper #body ul li {
   margin-right: 1.25em;
 }
 /* line 495, mixins.scss */
-body.home .container #giftshopper #body ul li.last {
+body.home .container section#giftshopper #body ul li.last {
   margin-right: 0;
 }
-/* line 137, startpage.scss */
-body.home .container #giftshopper #body ul li {
+/* line 83, startpage.scss */
+body.home .container section#giftshopper #body ul li {
   width: 23%;
   margin: 0 2.5% 0 0;
   float: left;
@@ -984,102 +914,31 @@ body.home .container #giftshopper #body ul li {
   border-radius: 10em / 10em;
   height: 18em;
 }
-/* line 147, startpage.scss */
-body.home .container #giftshopper #body ul li #inner, body.home .container #giftshopper #body ul li h5 {
+/* line 93, startpage.scss */
+body.home .container section#giftshopper #body ul li #inner, body.home .container section#giftshopper #body ul li h5 {
   padding: 0.625em;
 }
-/* line 152, startpage.scss */
-body.home .container #giftshopper #body ul #tagcloud {
-  display: none;
+/* line 97, startpage.scss */
+body.home .container section#giftshopper #body ul li#for-him {
+  background: #f1f1f1 url(giftshopper-man.jpg) no-repeat center 0;
 }
-/* line 156, startpage.scss */
-body.home .container #giftshopper #body ul p {
+/* line 100, startpage.scss */
+body.home .container section#giftshopper #body ul li#for-her {
+  background: #f1f1f1 url(giftshopper-woman.jpg) no-repeat center 0;
+}
+/* line 103, startpage.scss */
+body.home .container section#giftshopper #body ul li#for-kids {
+  background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat center 0;
+}
+/* line 106, startpage.scss */
+body.home .container section#giftshopper #body ul li#for-office {
+  background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat center 1em;
+}
+/* line 110, startpage.scss */
+body.home .container section#giftshopper #body ul li p {
   margin-top: 16em;
   text-align: center;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-}
-/* line 162, startpage.scss */
-body.home .container #giftshopper #body ul #for-him {
-  background: #f1f1f1 url(giftshopper-man.jpg) no-repeat center 0;
-}
-/* line 165, startpage.scss */
-body.home .container #giftshopper #body ul #for-her {
-  background: #f1f1f1 url(giftshopper-woman.jpg) no-repeat center 0;
-}
-/* line 168, startpage.scss */
-body.home .container #giftshopper #body ul #for-kids {
-  background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat center 0;
-}
-/* line 171, startpage.scss */
-body.home .container #giftshopper #body ul #for-office {
-  background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat center 1em;
-}
-@media (max-width: 480px) {
-  /* line 179, startpage.scss */
-  body.home .container #giftshopper #body ul li, body.home .container #giftshopper #body ul li.active {
-    width: 100%;
-    float: left;
-    width: 90%;
-    margin: 5%;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 187, startpage.scss */
-  body.home .container #giftshopper #body ul li {
-    width: 22.5%;
-    margin: 0 2.5% 0 0;
-    float: left;
-    margin-bottom: 1%;
-  }
-  /* line 191, startpage.scss */
-  body.home .container #giftshopper #body ul li.active {
-    width: 100%;
-    float: left;
-  }
-}
-/* line 199, startpage.scss */
-body.home .container #subscribe {
-  width: 23%;
-  margin: 0 2.5% 0 0;
-  float: left;
-  margin-top: 2.5em;
-}
-/* line 204, startpage.scss */
-body.home .container #subscribe #subscribe-to-newsletter {
-  border: 1px dotted;
-  text-align: center;
-}
-/* line 72, theme.scss */
-body.home .container #subscribe #subscribe-to-newsletter #text, body.home .container #subscribe #subscribe-to-newsletter #facebook-connect {
-  margin: 1.25em;
-}
-/* line 76, theme.scss */
-body.home .container #subscribe #subscribe-to-newsletter input {
-  text-align: center;
-  margin-bottom: 0.3125em;
-  font-size: small;
-}
-/* line 82, theme.scss */
-body.home .container #subscribe #subscribe-to-newsletter input[type="submit"] {
-  -webkit-border-radius: 6% 6%;
-  -moz-border-radius: 6% / 6%;
-  border-radius: 6% / 6%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4a4a4a), color-stop(100%, #303030));
-  background-image: -webkit-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  background-image: -moz-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  background-image: -o-linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  background-image: linear-gradient(center top, #4a4a4a 5%, #303030 100%);
-  border: 1px solid #333333;
-  color: white;
-  text-shadow: 0px 0px 1px #999999;
-}
-/* line 124, theme.scss */
-body.home .container #subscribe #subscribe-to-newsletter input[type="submit"]:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #303030), color-stop(100%, #4a4a4a));
-  background-image: -webkit-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
-  background-image: -moz-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
-  background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
-  background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
 
 /* line 4, footer.scss */

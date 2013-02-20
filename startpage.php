@@ -9,22 +9,22 @@
 ?>
 
 
+<section id="campaigns">
+  <nav id="navigation">
+    <h3 class="outline">Navigare</h3>
+    <ul>
+      <li id="left"></li>
+      <li id="right"></li>
+    </ul>
+  </nav>
+  
+  <header id="title">
+    <h2>Campanii</h2>
+  </header>
+</section>
+
 
 <?php 
-
-  // New
-  $new_products = query_posts2( array(
-    'posts_per_page' => 1,
-    'cat' => 10
-  ));
-  
-  $product_list = $new_products;
-  $product_list_title = 'Noutati';
-  $product_list_id = 'new-products';
-  include 'product-list.php';
-
-
-
   // Promo
   $promo_posts = query_posts2('posts_per_page=4&cat=15');
  

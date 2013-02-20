@@ -5,208 +5,121 @@ body.home {
 	    @include block;
 	    margin: 0 0 $pad;
 	    
-	    #navigation {
-	      display: none;
-	    }
-	    
-	    #body {
-	      #products {
-	        #product {
-	          @include col(23%, 0, 2.5%); 
-	         
-            @include product-thumb;
-            
-            #excerpt {
-              display: none;
-            }
-            
-            @include mobile-only {
-              @include block;
-              width: 90%;
-              margin: 5%;
-            }
-            
-            @include tablet-only {
-              @include col(45%, 0, 5%);
-              margin-bottom: 5%;
-            }
-	        }
-	        #product.c4, #product.c8, #product.c12 {
-	          margin-right: 0;
-	        }
-	        
-	        @include tablet-only {
-            #product.c2 {
-              margin-right: 0;
-            }
-          }
-	      }
-	    }
-	  }
-	  section.active {
-	    display: block;
-	  }
-	  
-	  
-	  #new-products {
-	    background: url(valentines2.jpg);
-	    height: 18em;
-	   
 	    
 	    #navigation {
-	      display: block;
-	      
-	      @include navigation-arrows;
-	      
-	      max-width: $minor;
-	      height: auto;
-	      margin-top: $pad*2;
-	      
-	      float: right;
-	      margin-right: 1%;
-	    }
-	    
-	    #body, #title {
 	      display: none;
 	    }
-	  }
-	  
-	  #anouncement {
-	    display: none;
 	    
-	    margin: 0;
-	    
-	    text-align: center;
-	    color: $gray;
-	    
-	    h2 {
-	      font-family: 'Old Standard TT', serif;
-	      font-weight: normal;
-	      font-size: 1.25em;
-	      padding: $pad/4 0;
-	      
-	      span {
-	        border-top: 1px solid;
-	        border-bottom: 1px solid;
-	        padding: $pad/8 $pad*6;
-	      }
+	    header {
+	      display: none;
 	    }
 	    
-	    @include tablet-landscape-and-below {
-	      h2 {
-	        border-top: 1px solid;
-	        border-bottom: 1px solid;
+	    
+	    &#campaigns {
+	      background: url(valentines2.jpg);
+	      height: 18em;
+	     
+	      
+	      #navigation {
+	        display: block;
 	        
-	        span {
-	          border: none;
-	          padding: $pad/8;
-	        }
+	        @include navigation-arrows;
+	        
+	        max-width: $minor;
+	        height: auto;
+	        margin-top: $pad*2;
+	        
+	        float: right;
+	        margin-right: 1%;
+	      }
+	      
+	      #body {
+	        display: none;
 	      }
 	    }
-	  }
-	  
-	  #sales {
-	    #title {
-	      display: none;
-	    }
 	    
-	    #body {
-	      #products {
-	        #product {
-	          #title {
-	            display: block;
+	    
+	    &#sales {
+        #body {
+	        #products {
+	          #product {
+	            @include col(23%, 0, 2.5%); 
+	           
+              @include product-thumb;
+              
+              #excerpt {
+                display: none;
+              }
+	          }
+	          #product.c4, #product.c8, #product.c12 {
+	            margin-right: 0;
 	          }
 	        }
 	      }
-	    }
-	  }
-	  
-	  #giftshopper {
-	    margin: 0 0 $pad;
-	    
-	    #title {
-	      font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-	      font-style: italic;
-	      margin: $pad/2 0;
-	    }
-	    
-	    #body {
-	      ul {
-	        @include list-inline;
-	        
-	        li {
-	          @include col(23%, 0, 2.5%);
-	          background: $very-light-gray;
-	          
-	          cursor: pointer;
-	          overflow: hidden;
-	          
-	          @include border-radius(10em, 10em);
-	          height: 18em;
-	          
-	          #inner, h5 {
-	            padding: $pad/2;
-	          }
-	        }
-	        
-	        #tagcloud {
-	          display: none;
-	        }
-	        
-	        p {
-	          margin-top: 16em;
-	          text-align: center;
-	          font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-	        }
-	        
-	        #for-him {
-	          background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
-	        }
-	        #for-her {
-	          background: $very-light-gray url(giftshopper-woman.jpg) no-repeat center 0;
-	        }
-	        #for-kids {
-	          background: $very-light-gray url(giftshopper-kids.jpg) no-repeat center 0;
-	        }
-	        #for-office {
-	          background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat center 1em;
-	        }
-	        
-	        
-	        
-	        
-	        @include mobile-only {
-	          li, li.active {
-              @include block;
-              width: 90%;
-              margin: 5%;
-            }
-          }
-          
-          @include tablet-only {
-            li {
-              @include col(22.5%, 0, 2.5%);
-              margin-bottom: 1%;
-            }
-            li.active {
-              @include block;
-            }
-          }
-	      }
-	    }
-	  }
-	  
-	  #subscribe {
-	    @include col(23%, 0, 2.5%);
-	    margin-top: $pad*2;
-	    
-      
-      #subscribe-to-newsletter {
-        @include subscribe-to-newsletter;
       }
-	  
-     
+      
+      
+      &#giftshopper {
+	      margin: 0 0 $pad;
+	      
+	      #title {
+	        display: block;
+	        
+	        h2 {
+	          font-size: 1em;
+	          font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	          font-style: italic;
+	          text-transform: none;
+	          
+	          padding: 0;
+	          margin: $pad/2 0;
+	        }
+	      }
+	      
+	      #body {
+	        ul {
+	          @include list-inline;
+	          
+	          li {
+	            @include col(23%, 0, 2.5%);
+	            background: $very-light-gray;
+	            
+	            cursor: pointer;
+	            overflow: hidden;
+	            
+	            @include border-radius(10em, 10em);
+	            height: 18em;
+	            
+	            #inner, h5 {
+	              padding: $pad/2;
+	            }
+	            
+	            &#for-him {
+	              background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
+	            }
+	            &#for-her {
+	              background: $very-light-gray url(giftshopper-woman.jpg) no-repeat center 0;
+	            }
+	            &#for-kids {
+	              background: $very-light-gray url(giftshopper-kids.jpg) no-repeat center 0;
+	            }
+	            &#for-office {
+	              background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat center 1em;
+	            }
+	            
+	            p {
+	              margin-top: 16em;
+	              text-align: center;
+	              font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	            }
+	          }
+	    
+	        }
+	      }
+	    }
 	  }
+	  
+	  
 	 
 	}
 }
