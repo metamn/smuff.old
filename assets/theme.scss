@@ -164,7 +164,6 @@ a, a:active, a:visited, a:hover {
               margin: 0 0 $pad/2;
               
               font-size: 90%;
-              width: 100%;
             }
             
             &:after {
@@ -172,13 +171,15 @@ a, a:active, a:visited, a:hover {
               background: $color;
               color: $background;
               top: -3.5em; 
-              left: 0;
             }
           }
           
         }
         
         .wpsc_product_price {
+          float: left;
+          margin-top: $pad/4;
+          
           .price {
             margin-right: $pad;
             padding: $pad/2;
@@ -197,8 +198,7 @@ a, a:active, a:visited, a:hover {
         }
         
         .add-to-cart-button {
-          display: inline-block;
-          max-width: 20em;
+          float: left;
           
           input[type="submit"] {
             @include button($color, $green);
@@ -207,15 +207,17 @@ a, a:active, a:visited, a:hover {
           #quantity {
             display: none;
             
-            width: auto;
+            width: 5em;
+            margin-right: $pad;
+            
             float: left;
             font-size: small;
             margin-top: $pad/2 + $pad/4;
             
             label.select:after {
               padding: 0 .7em;
-              left: -1.55em;
-              top: .1em;
+              left: .25em;
+              top: -1.6em;
             }
           }
         }

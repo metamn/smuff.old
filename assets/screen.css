@@ -226,50 +226,51 @@ body .container strong {
 body .container input, body .container textarea, body .container select {
   border: none;
   outline: 0;
+  background: white;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-/* line 174, typography.scss */
+/* line 175, typography.scss */
 body .container input[type='text'], body .container input[type='email'] {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
 }
-/* line 179, typography.scss */
+/* line 180, typography.scss */
 body .container input[type='text']:focus, body .container input[type='email']:focus {
   color: black;
   font-style: normal;
 }
-/* line 185, typography.scss */
+/* line 186, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 190, typography.scss */
+/* line 191, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 203, typography.scss */
+/* line 204, typography.scss */
 body .container input[type='radio'], body .container input[type='checkbox'] {
   display: none;
 }
-/* line 206, typography.scss */
+/* line 207, typography.scss */
 body .container input[type='radio'] + label, body .container input[type='checkbox'] + label {
   display: inline-block;
 }
-/* line 211, typography.scss */
+/* line 212, typography.scss */
 body .container input[type='radio'] + label:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 215, typography.scss */
+/* line 216, typography.scss */
 body .container input[type='radio']:checked + label:after {
   content: '\25a3';
 }
-/* line 220, typography.scss */
+/* line 221, typography.scss */
 body .container input[type='checkbox'] + label:after {
   content: '\272A';
   margin-right: 0.3125em;
@@ -278,23 +279,24 @@ body .container input[type='checkbox'] + label:after {
   vertical-align: top;
   color: lightgray;
 }
-/* line 231, typography.scss */
+/* line 232, typography.scss */
 body .container input[type='checkbox']:checked + label:after {
   color: black;
 }
-/* line 241, typography.scss */
+/* line 242, typography.scss */
 body .container select {
   border-bottom: 1px solid gray;
   cursor: pointer;
+  width: 100%;
 }
-/* line 245, typography.scss */
+/* line 247, typography.scss */
 body .container label.select:after {
   content: '\003E';
   float: right;
   display: inline-block;
   padding: 0 .45em;
   position: relative;
-  left: -1.25em;
+  left: 0;
   background: white;
   pointer-events: none;
   /* this is a must */
@@ -540,33 +542,33 @@ body .container #header hgroup #logo {
   width: 10.20833em;
   float: left;
 }
-/* line 347, theme.scss */
+/* line 349, theme.scss */
 body .container #header hgroup #logo .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 353, theme.scss */
+/* line 355, theme.scss */
 body .container #header hgroup #logo .small {
   width: 0.20833em;
 }
-/* line 357, theme.scss */
+/* line 359, theme.scss */
 body .container #header hgroup #logo .set {
   background: #363636;
 }
-/* line 361, theme.scss */
+/* line 363, theme.scss */
 body .container #header hgroup #logo .square {
   background: #cccccc;
 }
-/* line 365, theme.scss */
+/* line 367, theme.scss */
 body .container #header hgroup #logo .smart-stuff-cell, body .container #header hgroup #logo .smart-stuff {
   display: none;
 }
-/* line 369, theme.scss */
+/* line 371, theme.scss */
 body .container #header hgroup #logo:hover {
   width: 20em;
 }
-/* line 372, theme.scss */
+/* line 374, theme.scss */
 body .container #header hgroup #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -787,33 +789,33 @@ body.home .container section #body #products #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 300, theme.scss */
+/* line 302, theme.scss */
 body.home .container section #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 304, theme.scss */
+/* line 306, theme.scss */
 body.home .container section #body #products #product #title, body.home .container section #body #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 310, theme.scss */
+/* line 312, theme.scss */
 body.home .container section #body #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 314, theme.scss */
+/* line 316, theme.scss */
 body.home .container section #body #products #product #title h3 {
   padding: 0;
 }
-/* line 319, theme.scss */
+/* line 321, theme.scss */
 body.home .container section #body #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 323, theme.scss */
+/* line 325, theme.scss */
 body.home .container section #body #products #product #price .normal-price {
   padding-right: 0;
 }
@@ -867,7 +869,7 @@ body.home .container #new-products #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 255, theme.scss */
+/* line 257, theme.scss */
 body.home .container #new-products #navigation ul {
   display: block;
   margin: 0;
@@ -884,17 +886,17 @@ body.home .container #new-products #navigation ul li {
 body.home .container #new-products #navigation ul li.last {
   margin-right: 0;
 }
-/* line 258, theme.scss */
+/* line 260, theme.scss */
 body.home .container #new-products #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 264, theme.scss */
+/* line 266, theme.scss */
 body.home .container #new-products #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 268, theme.scss */
+/* line 270, theme.scss */
 body.home .container #new-products #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -1252,33 +1254,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 347, theme.scss */
+/* line 349, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 353, theme.scss */
+/* line 355, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 357, theme.scss */
+/* line 359, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 361, theme.scss */
+/* line 363, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 365, theme.scss */
+/* line 367, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 369, theme.scss */
+/* line 371, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15em;
 }
-/* line 372, theme.scss */
+/* line 374, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1347,19 +1349,17 @@ body.archive section hgroup nav div {
 /* line 64, archive.scss */
 body.archive section hgroup nav div select {
   font-size: small;
-  width: 100%;
 }
-/* line 69, archive.scss */
+/* line 68, archive.scss */
 body.archive section hgroup nav div .select:after {
-  left: 0;
   top: -1.35em;
 }
-/* line 74, archive.scss */
+/* line 72, archive.scss */
 body.archive section hgroup nav div.last {
   margin-right: 0;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 81, archive.scss */
+  /* line 79, archive.scss */
   body.archive section hgroup nav h3 {
     display: block;
     font-size: small;
@@ -1368,7 +1368,7 @@ body.archive section hgroup nav div.last {
     color: #aaaaaa;
     cursor: pointer;
   }
-  /* line 92, archive.scss */
+  /* line 90, archive.scss */
   body.archive section hgroup nav h3:after {
     content: '\003E';
     float: right;
@@ -1381,33 +1381,33 @@ body.archive section hgroup nav div.last {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
     display: inline-block;
   }
-  /* line 96, archive.scss */
+  /* line 94, archive.scss */
   body.archive section hgroup nav div {
     width: 100%;
     float: left;
     max-width: 90%;
     display: none;
   }
-  /* line 102, archive.scss */
+  /* line 100, archive.scss */
   body.archive section hgroup nav div label.select:after {
     display: none;
   }
-  /* line 107, archive.scss */
+  /* line 105, archive.scss */
   body.archive section hgroup nav div label select {
     width: 100%;
     padding: 0.3125em 0;
   }
-  /* line 114, archive.scss */
+  /* line 112, archive.scss */
   body.archive section hgroup nav #submit {
     margin: 0.625em 0;
   }
 }
-/* line 124, archive.scss */
+/* line 122, archive.scss */
 body.archive section #products {
   width: 100%;
   float: left;
 }
-/* line 127, archive.scss */
+/* line 125, archive.scss */
 body.archive section #products #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1416,81 +1416,81 @@ body.archive section #products #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 300, theme.scss */
+/* line 302, theme.scss */
 body.archive section #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 304, theme.scss */
+/* line 306, theme.scss */
 body.archive section #products #product #title, body.archive section #products #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 310, theme.scss */
+/* line 312, theme.scss */
 body.archive section #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 314, theme.scss */
+/* line 316, theme.scss */
 body.archive section #products #product #title h3 {
   padding: 0;
 }
-/* line 319, theme.scss */
+/* line 321, theme.scss */
 body.archive section #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 323, theme.scss */
+/* line 325, theme.scss */
 body.archive section #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 134, archive.scss */
+/* line 132, archive.scss */
 body.archive section #products #product .normal-price {
   background: white;
 }
-/* line 139, archive.scss */
+/* line 137, archive.scss */
 body.archive section #products #product.c4, body.archive section #products #product.c8, body.archive section #products #product.c12, body.archive section #products #product.c16, body.archive section #products #product.c20, body.archive section #products #product.c24, body.archive section #products #product.c28 {
   margin-right: 0;
 }
 @media (max-width: 480px) {
-  /* line 145, archive.scss */
+  /* line 143, archive.scss */
   body.archive section #products #product {
     width: 100%;
     float: left;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  /* line 156, archive.scss */
+  /* line 154, archive.scss */
   body.archive section #products #product {
     width: 45%;
     margin: 0 10% 0 0;
     float: left;
     margin-bottom: 5%;
   }
-  /* line 162, archive.scss */
+  /* line 160, archive.scss */
   body.archive section #products #product.c2, body.archive section #products #product.c4, body.archive section #products #product.c6, body.archive section #products #product.c8, body.archive section #products #product.c10, body.archive section #products #product.c12, body.archive section #products #product.c14, body.archive section #products #product.c16, body.archive section #products #product.c18, body.archive section #products #product.c20,
   body.archive section #products #product.c22, body.archive section #products #product.c24, body.archive section #products #product.c26, body.archive section #products #product.c28, body.archive section #products #product.c30 {
     margin-right: 0;
   }
-  /* line 165, archive.scss */
+  /* line 163, archive.scss */
   body.archive section #products #product.c3, body.archive section #products #product.c9, body.archive section #products #product.c15, body.archive section #products #product.c21, body.archive section #products #product.c27 {
     margin-right: 10%;
   }
 }
-/* line 173, archive.scss */
+/* line 171, archive.scss */
 body.archive section footer h1 {
   width: 50%;
   margin: 0 0 0 0;
   float: left;
 }
-/* line 177, archive.scss */
+/* line 175, archive.scss */
 body.archive section footer #pagination {
   margin-top: 3.75em;
 }
 @media (max-width: 480px) {
-  /* line 184, archive.scss */
+  /* line 182, archive.scss */
   body.archive section footer h1, body.archive section footer #pagination {
     width: 100%;
     float: left;
@@ -1567,39 +1567,41 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   padding: 0.3125em 0;
   margin: 0 0 0.625em;
   font-size: 90%;
-  width: 100%;
 }
-/* line 170, theme.scss */
+/* line 169, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms .select:after {
   padding: 1.25em;
   background: #363636;
   color: white;
   top: -3.5em;
-  left: 0;
 }
-/* line 182, theme.scss */
+/* line 179, theme.scss */
+body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price {
+  float: left;
+  margin-top: 0.3125em;
+}
+/* line 183, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
 }
-/* line 186, theme.scss */
+/* line 187, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
   padding: 0 0.625em;
 }
-/* line 190, theme.scss */
+/* line 191, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
   margin-left: 1.25em;
 }
-/* line 194, theme.scss */
+/* line 195, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 199, theme.scss */
+/* line 200, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button {
-  display: inline-block;
-  max-width: 20em;
+  float: left;
 }
 /* line 203, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button input[type="submit"] {
@@ -1626,34 +1628,35 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
 /* line 207, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button #quantity {
   display: none;
-  width: auto;
+  width: 5em;
+  margin-right: 1.25em;
   float: left;
   font-size: small;
   margin-top: 0.9375em;
 }
-/* line 215, theme.scss */
+/* line 217, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button #quantity label.select:after {
   padding: 0 .7em;
-  left: -1.55em;
-  top: .1em;
+  left: .25em;
+  top: -1.6em;
 }
-/* line 223, theme.scss */
+/* line 225, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .checkout {
   display: none;
 }
-/* line 227, theme.scss */
+/* line 229, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 238, theme.scss */
+/* line 240, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
   padding: 1.25em;
 }
-/* line 241, theme.scss */
+/* line 243, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 245, theme.scss */
+/* line 247, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1885,33 +1888,33 @@ body.single .container section #product {
   background: white url(stripe.png);
   padding-bottom: 1.25em;
 }
-/* line 300, theme.scss */
+/* line 302, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 304, theme.scss */
+/* line 306, theme.scss */
 body.single .container section #product #title, body.single .container section #product #price {
   margin: 0.625em 0.3125em;
   background: white url(background.png);
 }
-/* line 310, theme.scss */
+/* line 312, theme.scss */
 body.single .container section #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 314, theme.scss */
+/* line 316, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
 }
-/* line 319, theme.scss */
+/* line 321, theme.scss */
 body.single .container section #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 323, theme.scss */
+/* line 325, theme.scss */
 body.single .container section #product #price .normal-price {
   padding-right: 0;
 }

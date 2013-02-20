@@ -164,6 +164,7 @@ body {
     input, textarea, select {
 	    border: none;
 	    outline: 0;
+	    background: white;
 	
 	    appearance: none;
 	    -webkit-appearance: none;
@@ -241,6 +242,7 @@ body {
     select {
       border-bottom: 1px solid gray;
       cursor: pointer;
+      width: 100%;
     }
     label.select:after {
       content: '\003E';
@@ -249,7 +251,7 @@ body {
       display: inline-block;
       padding: 0 .45em;
       position: relative;
-      left: -$pad;
+      left: 0;
       background: white;
       
       
