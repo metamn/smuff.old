@@ -1303,6 +1303,10 @@ body.single .container article #article-title, body.single .container article #s
 body.single .container article #article-title h1 {
   padding: 0;
 }
+/* line 36, single.scss */
+body.single .container article #excerpt, body.single .container article #date {
+  display: none;
+}
 /* line 134, theme.scss */
 body.single .container article #shopping-cart #add-to-cart {
   width: 100%;
@@ -1451,22 +1455,22 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
   background-image: -o-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
   background-image: linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
 }
-/* line 43, single.scss */
+/* line 47, single.scss */
 body.single .container article #images {
   cursor: pointer;
 }
-/* line 47, single.scss */
+/* line 51, single.scss */
 body.single .container article #images #large-image img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 52, single.scss */
+/* line 56, single.scss */
 body.single .container article #images #thumbs {
   margin-top: 1.25em;
 }
-/* line 55, single.scss */
+/* line 59, single.scss */
 body.single .container article #images #thumbs #thumb {
   width: 18%;
   margin: 0 2.5% 0 0;
@@ -1474,22 +1478,22 @@ body.single .container article #images #thumbs #thumb {
   margin-bottom: 1.25em;
   cursor: pointer;
 }
-/* line 61, single.scss */
+/* line 65, single.scss */
 body.single .container article #images #thumbs #thumb img {
   width: 96%;
   padding: 2%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 65, single.scss */
+/* line 69, single.scss */
 body.single .container article #images #thumbs #thumb.c5, body.single .container article #images #thumbs #thumb.c10, body.single .container article #images #thumbs #thumb.c15, body.single .container article #images #thumbs #thumb.c20 {
   margin-right: 0;
 }
-/* line 72, single.scss */
+/* line 76, single.scss */
 body.single .container article #description {
   margin-top: 1.25em;
 }
-/* line 75, single.scss */
+/* line 79, single.scss */
 body.single .container article #description ul#tabs {
   width: 100%;
   float: left;
@@ -1509,7 +1513,7 @@ body.single .container article #description ul#tabs li {
 body.single .container article #description ul#tabs li.last {
   margin-right: 0;
 }
-/* line 81, single.scss */
+/* line 85, single.scss */
 body.single .container article #description ul#tabs li {
   color: #aaaaaa;
   cursor: pointer;
@@ -1519,7 +1523,7 @@ body.single .container article #description ul#tabs li {
   border: 1px solid #cccccc;
   border-bottom: none;
 }
-/* line 92, single.scss */
+/* line 96, single.scss */
 body.single .container article #description ul#tabs li.active {
   font-style: normal;
   color: #363636;
@@ -1527,7 +1531,7 @@ body.single .container article #description ul#tabs li.active {
   position: relative;
   top: 1px;
 }
-/* line 103, single.scss */
+/* line 107, single.scss */
 body.single .container article #description div {
   padding: 1.25em;
   margin: 2.5em 0 0;
@@ -1551,11 +1555,11 @@ body.single .container article #description div ul li {
   padding-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 108, single.scss */
+/* line 112, single.scss */
 body.single .container article #share {
   margin-left: 52.5%;
 }
-/* line 111, single.scss */
+/* line 115, single.scss */
 body.single .container article #share ul {
   display: block;
   margin: 0;
@@ -1573,11 +1577,11 @@ body.single .container article #share ul li {
 body.single .container article #share ul li.last {
   margin-right: 0;
 }
-/* line 121, single.scss */
+/* line 125, single.scss */
 body.single .container #campaigns {
   margin-bottom: 1.25em;
 }
-/* line 125, single.scss */
+/* line 129, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter {
   border: 1px dotted;
   text-align: center;
@@ -1618,41 +1622,41 @@ body.single .container #campaigns #subscribe #subscribe-to-newsletter input[type
   background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
   background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
-/* line 132, single.scss */
+/* line 136, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #text {
   width: auto;
 }
-/* line 136, single.scss */
+/* line 140, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #facebook-connect, body.single .container #campaigns #subscribe #subscribe-to-newsletter #text h4, body.single .container #campaigns #subscribe #subscribe-to-newsletter #text form {
   width: 30%;
   margin: 0 5% 0 0;
   float: left;
 }
-/* line 140, single.scss */
+/* line 144, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #text {
   margin: 0;
 }
-/* line 143, single.scss */
+/* line 147, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #text form {
   margin-top: 1.875em;
 }
-/* line 148, single.scss */
+/* line 152, single.scss */
 body.single .container #campaigns #subscribe #subscribe-to-newsletter #facebook-connect {
   margin-top: 2.5em;
   margin-right: 0;
 }
-/* line 159, single.scss */
+/* line 163, single.scss */
 body.single .container section {
   width: 100%;
   float: left;
 }
-/* line 162, single.scss */
+/* line 166, single.scss */
 body.single .container section h2 {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.3125em;
   margin-bottom: 1.25em;
 }
-/* line 168, single.scss */
+/* line 172, single.scss */
 body.single .container section #product {
   width: 23%;
   margin: 0 2.5% 0 0;
@@ -1691,19 +1695,19 @@ body.single .container section #product #price {
 body.single .container section #product #price .normal-price {
   padding-right: 0;
 }
-/* line 174, single.scss */
+/* line 178, single.scss */
 body.single .container section #product .normal-price, body.single .container section #product .old-price {
   background: white;
 }
 @media (max-width: 480px) {
-  /* line 168, single.scss */
+  /* line 172, single.scss */
   body.single .container section #product {
     width: 100%;
     float: left;
     margin-right: 0;
   }
 }
-/* line 184, single.scss */
+/* line 188, single.scss */
 body.single .container section #product.c4, body.single .container section #product.c8, body.single .container section #product.c12, body.single .container section #product.c16, body.single .container section #product.c20, body.single .container section #product.c24, body.single .container section #product.c28 {
   margin-right: 0;
 }

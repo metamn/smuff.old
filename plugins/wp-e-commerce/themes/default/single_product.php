@@ -4,7 +4,7 @@
   $image_height = get_option('single_view_image_height');
 ?>
 
-<div id='products_page_container' class="wrap wpsc_container">		
+<div itemscope itemtype="http://schema.org/Offer" id='products_page_container' class="wrap wpsc_container">		
 	<?php do_action('wpsc_top_of_products_page'); // Plugin hook for adding things to the top of the products page, like the live search ?>
 	
 	<div class="productdisplay">
@@ -38,7 +38,7 @@
 					      ?>
 					    
 					      <span class='delivery'>
-		              <span>Livrare in <?php  echo $delivery ?></span>
+		              <span itemprop="availability">Livrare in <?php  echo $delivery ?></span>
 		            </span>
 		            
 		            <div class='cart-operations'>
@@ -85,7 +85,7 @@
 								      } ?>
 								      
 								      <span class="price normal-price <?php echo $klass ?>">
-								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
+								        <span itemprop="price" id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
 								         <?php if(wpsc_product_on_special()) : ?>
 								          <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
 								        <?php endif; ?>

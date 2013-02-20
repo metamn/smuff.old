@@ -11,12 +11,22 @@
   $cat = category_id(false, true, $postid); 
 ?>
 
-<article <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
+<article itemscope itemtype="http://schema.org/Product" <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
   
-  <div id="article-title">
-    <h1>
-		  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-	  </h1>
+  <header id="article-title">
+    <a itemprop="url" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+      <h1 itemprop="name">
+		    <?php the_title(); ?>
+	    </h1>
+	  </a>
+	</header>
+	
+	<div itemprop="description" id="excerpt">
+	  <?php the_excerpt(); ?>
+	</div>
+	
+	<div itemprop="releaseDate" id="date">
+	  <?php the_date(); ?>
 	</div>
 	
 	
@@ -29,7 +39,7 @@
 	  ?>
 	  
 	  <div id="large-image">
-		  <img src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
+		  <img itemprop="image" src="<?php echo $large[0]?>" title="<?php echo $title ?>" alt="<?php echo $title ?>"/>
 		</div>
 		
 		<div id="thumbs">
@@ -94,8 +104,6 @@
       </ul>
     </div>  
 	</div>  
-	
-	
 	
 </article>
 			
