@@ -1,5 +1,7 @@
-<footer id="footer">
+<section id="footer">
+  <h3 class="outline">Footer</h3>
   <nav id="info">
+    <h3 class="outline">Informatii</h3>
     <ul>
       <li><a href="">Cum cumpar?</a></li>
       <li><a href="">Contacteaza-ne</a></li>
@@ -10,6 +12,7 @@
   </nav>
   
   <aside id="company">
+    <h3 class="outline">Date firma</h3>
     <p>
       S.C. Smuff Gadget S.R.L., str. Gh. Marinescu 26/16 Targu Mures 540142
       <br/>
@@ -19,7 +22,7 @@
       &copy; 2013 Smuff Gadget SRL. Toate drepturile rezervate.
     </p>
   </aside>
-</footer>
+</section>
 
 
 
