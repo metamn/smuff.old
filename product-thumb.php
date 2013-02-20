@@ -72,12 +72,12 @@
  
 ?>
 
-<article id="product" class="<?php echo $kounter ?> <?php echo $klass ?>">  
+<article itemscope itemtype="http://schema.org/Product" id="product" class="<?php echo $kounter ?> <?php echo $klass ?>">  
   
   <?php if (isset($thumb[0])) { ?>
     <div id="image">
-      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>"> 
-        <img src="<?php echo $thumb[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>  
+      <a itemprop="url" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+        <img itemprop="image" src="<?php echo $thumb[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
       </a>
     </div>
   <?php } ?>
@@ -85,23 +85,27 @@
   
   <div id="title">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-      <h3><?php echo $product_name; ?></h3> 
+      <h3 itemprop="name"><?php echo $product_name; ?></h3> 
     </a>
   </div>
   
   <?php if ($show_excerpt) { ?>
     <div id="excerpt">
-      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+      <a itemprop="description" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
        <?php the_excerpt(); ?> 
       </a>
     </div>
   <?php } ?>
   
+  <div itemprop="releaseDate" id="date">
+	  <?php the_date(); ?>
+	</div>
+  
   <?php if ( ($show_price) && (in_category(10)) ) { ?>
-    <div id="price">
+    <div itemscope itemtype="http://schema.org/Offer" id="price">
     	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
 	      <?php if ($product_discount > 0) { ?>
-		      <span class="price"><?php echo $product_sale_price; ?> Lei</span>
+		      <span itemprop="price" class="price"><?php echo $product_sale_price; ?> Lei</span>
 		      <span class="old-price"><?php echo $product_price; ?></span>    
 	      <?php } else { ?>
 		      <span class="normal-price"><?php echo $product_price; ?></span> Lei
@@ -112,7 +116,7 @@
   
   <?php if ( ($show_category) && (in_category(10)) ) { ?>
     <div id="category">
-      <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
+      <a itemprop="category" class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
       <?php echo $category ?></a>
     </div>
   <?php } ?>

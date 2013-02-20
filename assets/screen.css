@@ -542,33 +542,33 @@ body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
 }
-/* line 349, theme.scss */
+/* line 353, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 355, theme.scss */
+/* line 359, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 359, theme.scss */
+/* line 363, theme.scss */
 body .container #header hgroup #logo.artwork .set {
   background: #363636;
 }
-/* line 363, theme.scss */
+/* line 367, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 367, theme.scss */
+/* line 371, theme.scss */
 body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff {
   display: none;
 }
-/* line 371, theme.scss */
+/* line 375, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 374, theme.scss */
+/* line 378, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -859,6 +859,10 @@ body.home .container section#sales #body #products #product #price {
 body.home .container section#sales #body #products #product #price .normal-price {
   padding-right: 0;
 }
+/* line 330, theme.scss */
+body.home .container section#sales #body #products #product #date {
+  display: none;
+}
 /* line 50, startpage.scss */
 body.home .container section#sales #body #products #product #excerpt {
   display: none;
@@ -1113,33 +1117,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 349, theme.scss */
+/* line 353, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 355, theme.scss */
+/* line 359, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 359, theme.scss */
+/* line 363, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 363, theme.scss */
+/* line 367, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 367, theme.scss */
+/* line 371, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 371, theme.scss */
+/* line 375, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15em;
 }
-/* line 374, theme.scss */
+/* line 378, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1260,6 +1264,10 @@ body.archive #archive #products #product #price {
 /* line 325, theme.scss */
 body.archive #archive #products #product #price .normal-price {
   padding-right: 0;
+}
+/* line 330, theme.scss */
+body.archive #archive #products #product #date {
+  display: none;
 }
 /* line 90, archive.scss */
 body.archive #archive #products #product .normal-price {
@@ -1694,6 +1702,10 @@ body.single .container section #product #price {
 /* line 325, theme.scss */
 body.single .container section #product #price .normal-price {
   padding-right: 0;
+}
+/* line 330, theme.scss */
+body.single .container section #product #date {
+  display: none;
 }
 /* line 178, single.scss */
 body.single .container section #product .normal-price, body.single .container section #product .old-price {
