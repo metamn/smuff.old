@@ -44,12 +44,7 @@ body.home {
 	        #products {
 	          #product {
 	            @include col(4, 4); 
-	           
               @include product-thumb;
-              
-              #excerpt {
-                display: none;
-              }
 	          }
 	        }
 	      }

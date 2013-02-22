@@ -1,6 +1,6 @@
 body {
 
-  @include background;
+  @include background(body);
   @include font(body);
   
   
@@ -100,13 +100,11 @@ body {
 			#menu {
 			  @include block;
 			  
-			  border-top: 1px solid;
-			  border-bottom: 1px solid;
-			  padding: $pad/2 0;
+			  @include bordered;
 			 
 			  ul {
           @include list-inline;
-          padding: 0 $pad/2;
+          padding: 0;
           
           li {
             &#info, &#search {
@@ -134,7 +132,7 @@ body {
 			  @include block;
 			  @include hidden;
 			  
-			  background: $very-light-gray;
+			  @include background(menu);
 			  
 			  nav {
 			    @include col(4, 0);
@@ -149,29 +147,7 @@ body {
 			    }
 			    
 			    ul {
-			      list-style: none;
-			      margin: 0;
-			      
-			      li {
-			        padding: 0 $pad/4;
-			        margin-bottom: $pad/4;
-			        
-			        a {
-			          width: 100%;
-			          display: block;
-			          border-bottom: 1px solid $very-light-gray;
-			          
-			          &:hover {
-			            border-bottom: 1px solid $light-gray;
-			            color: shade($color, 50%);
-			          }
-			        }
-			        
-			        &.separator {
-			          padding: $pad/2;
-			        }
-			      }
-			      
+			      @include list;
 			    }
 			    
 			    &#contact {

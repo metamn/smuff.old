@@ -33,6 +33,7 @@
   $product_list_id = 'sales';
   
   $show_category = false;
+  $show_excerpt = false;
   include 'product-list.php';
 ?>
 

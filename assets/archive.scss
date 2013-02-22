@@ -7,7 +7,7 @@ body.archive {
     margin: 0;
     
     height: 5em;
-    background: url(background.png);
+    @include background(body);
     border-bottom: 1px dotted;
     
     #logo {

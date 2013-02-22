@@ -64,9 +64,14 @@ a, a:active, a:visited, a:hover {
 /* Mixins
 */
 
-@mixin background {
-  background: $background url(background.png);
+@mixin background($where) {
+  @if $where == body {
+    background: $background url(background.png);
+  } @else {
+    background: $very-light-gray;
+  } 
 }
+
 
 @mixin font($where) {
   @if $where == body {
@@ -95,6 +100,64 @@ a, a:active, a:visited, a:hover {
 }
 
 
+@mixin bordered {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: $pad/2;
+}
+
+@mixin list {
+  list-style: none;
+  margin: 0;
+  
+  li {
+    padding: 0 $pad/4;
+    margin-bottom: $pad/4;
+    
+    a {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid $very-light-gray;
+      
+      &:hover {
+        border-bottom: 1px solid $light-gray;
+        color: shade($color, 50%);
+      }
+    }
+    
+    &.separator {
+      padding: $pad/2;
+    }
+  }
+}
+
+@mixin tabs {
+  @include block;
+  @include list-inline;
+  
+  border-bottom: 1px solid $light-gray;
+  
+  li {
+    color: $gray;
+    cursor: pointer;
+    font-style: italic;
+    
+    padding: $pad/4 $pad/2;
+    margin: 0 0 0 $pad/2;
+    
+    border: 1px solid $light-gray;
+    border-bottom: none;
+    
+    &.active {
+      font-style: normal;
+      color: $color;
+      
+      border-bottom: 1px solid $background;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
 
 
 @mixin subscribe-to-newsletter {
