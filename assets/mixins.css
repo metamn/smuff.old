@@ -26,30 +26,30 @@ $mq-desktop		: 86.375em !default;
 $mq-large-screen: 99.93em !default;
 */
 @media only screen and (max-width: 480px) {
-  /* line 415, mixins.scss */
+  /* line 417, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 416, mixins.scss */
+  /* line 418, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 481px) {
-  /* line 420, mixins.scss */
+  /* line 422, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 421, mixins.scss */
+  /* line 423, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 429, mixins.scss */
+/* line 431, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -88,13 +88,13 @@ img {
 */
 /* hide an element 
 */
-/* line 607, mixins.scss */
+/* line 609, mixins.scss */
 .hidden {
   display: none;
 }
 
 /* Titles for HTML5 Outliner are hidden */
-/* line 612, mixins.scss */
+/* line 614, mixins.scss */
 .outline {
   display: none;
 }
@@ -103,7 +103,7 @@ img {
 */
 /* The visual grid 
 */
-/* line 631, mixins.scss */
+/* line 633, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
@@ -112,7 +112,7 @@ img {
   z-index: -1;
 }
 
-/* line 638, mixins.scss */
+/* line 640, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -120,7 +120,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 643, mixins.scss */
+/* line 645, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;

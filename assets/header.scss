@@ -8,6 +8,10 @@ body {
   #above-container {
     background: $color;
     height: $pad + $pad/2;
+    
+    @include mobile-only {
+      display: none;
+    }
   }
   
     
@@ -61,6 +65,17 @@ body {
 				  
 				  }
 				}
+				
+				@include mobile-only {
+				  @include block;
+				  margin: 0 0 $pad;
+				  
+				  
+			    #strapline {
+			      margin: 0 0 0 $pad;
+			      width: auto;
+			    }
+				}
 			}
 			
 			#search {
@@ -94,6 +109,10 @@ body {
 			      border-color: $sale;
 			    }
 			  }
+			  
+			  @include mobile-only {
+			    display: none;
+			  }
 			}
 			
 			
@@ -122,7 +141,23 @@ body {
               float: right;
             }
           }
-         
+        }
+        
+        @include mobile-only {
+          font-size: small;
+          
+          ul {
+            li {
+              &#separator {
+                width: 100%;
+                display: block;
+              }
+              &.cart {
+                float: left;
+                margin-top: $pad/4;
+              }
+            }
+          }
         }
 			} 
 			

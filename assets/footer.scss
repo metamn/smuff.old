@@ -30,6 +30,19 @@ body {
 			  font-size: small;
 		    color: $light-gray;
 			}
+		
+		  @include mobile-only {
+		    font-size: small;
+		    
+		    #info {
+		      ul {
+		        #go-top {
+		          float: left;
+		        }
+		      }
+		    }
+		  }
+		
 		}
 		
 	}
