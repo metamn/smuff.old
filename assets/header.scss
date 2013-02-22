@@ -111,7 +111,24 @@ body {
 			  }
 			  
 			  @include mobile-only {
-			    display: none;
+			    width: $pad*2;
+			    margin: 0;
+			    
+			    input[type="text"] {
+			      display: none;
+			    }
+			    
+			    input[type="submit"] {
+			      position: absolute;
+			      top: 8em;
+			      right: 0;
+			    }
+			  }
+			  
+			  @include mobile-landscape-only {
+			    input[type="submit"] {
+			      top: 7em;
+			    }
 			  }
 			}
 			

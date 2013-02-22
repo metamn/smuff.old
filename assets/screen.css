@@ -660,10 +660,27 @@ body .container #header #search:hover input[type="text"] {
 @media (max-width: 480px) {
   /* line 81, header.scss */
   body .container #header #search {
+    width: 2.5em;
+    margin: 0;
+  }
+  /* line 117, header.scss */
+  body .container #header #search input[type="text"] {
     display: none;
   }
+  /* line 121, header.scss */
+  body .container #header #search input[type="submit"] {
+    position: absolute;
+    top: 8em;
+    right: 0;
+  }
 }
-/* line 119, header.scss */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  /* line 129, header.scss */
+  body .container #header #search input[type="submit"] {
+    top: 7em;
+  }
+}
+/* line 136, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -671,7 +688,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em;
 }
-/* line 124, header.scss */
+/* line 141, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -689,11 +706,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 129, header.scss */
+/* line 146, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 132, header.scss */
+/* line 149, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -706,7 +723,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 136, header.scss */
+/* line 153, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -715,34 +732,34 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 140, header.scss */
+/* line 157, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 119, header.scss */
+  /* line 136, header.scss */
   body .container #header #menu {
     font-size: small;
   }
-  /* line 151, header.scss */
+  /* line 168, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     display: block;
   }
-  /* line 155, header.scss */
+  /* line 172, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
     margin-top: 0.3125em;
   }
 }
-/* line 166, header.scss */
+/* line 183, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
   display: none;
   background: #f1f1f1;
 }
-/* line 172, header.scss */
+/* line 189, header.scss */
 body .container #header #menu-info nav {
   width: 23%;
   margin-right: 2.6%;
@@ -752,16 +769,16 @@ body .container #header #menu-info nav {
 body .container #header #menu-info nav.last {
   margin-right: 0;
 }
-/* line 175, header.scss */
+/* line 192, header.scss */
 body .container #header #menu-info nav h3 {
   color: #aaaaaa;
 }
-/* line 178, header.scss */
+/* line 195, header.scss */
 body .container #header #menu-info nav h3.outline {
   display: block;
   visibility: hidden;
 }
-/* line 184, header.scss */
+/* line 201, header.scss */
 body .container #header #menu-info nav ul {
   list-style: none;
   margin: 0;
@@ -786,19 +803,19 @@ body .container #header #menu-info nav ul li a:hover {
 body .container #header #menu-info nav ul li.separator {
   padding: 0.625em;
 }
-/* line 188, header.scss */
+/* line 205, header.scss */
 body .container #header #menu-info nav#contact {
   margin-left: 23%;
 }
-/* line 194, header.scss */
+/* line 211, header.scss */
 body .container #header #menu-info nav.shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 197, header.scss */
+/* line 214, header.scss */
 body .container #header #menu-info nav.shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 206, header.scss */
+/* line 223, header.scss */
 body .container #header #menu-info #close {
   float: right;
   margin-right: 0;
@@ -806,12 +823,12 @@ body .container #header #menu-info #close {
   position: relative;
   top: -15.8em;
 }
-/* line 214, header.scss */
+/* line 231, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 219, header.scss */
+/* line 236, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
