@@ -393,11 +393,16 @@ img {
 */
 /* hide an element 
 */
+/* line 567, mixins.scss */
+.hidden {
+  display: none;
+}
+
 /* block element -- expand something full size inside a container
 */
 /* The visual grid 
 */
-/* line 581, mixins.scss */
+/* line 584, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
@@ -406,7 +411,7 @@ img {
   z-index: -1;
 }
 
-/* line 588, mixins.scss */
+/* line 591, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -414,7 +419,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 593, mixins.scss */
+/* line 596, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;
@@ -1312,7 +1317,7 @@ body.single .container article #article-title h1 {
   padding: 0;
 }
 /* line 36, single.scss */
-body.single .container article #excerpt, body.single .container article #date {
+body.single .container article #excerpt, body.single .container article #date, body.single .container article #url {
   display: none;
 }
 /* line 134, theme.scss */

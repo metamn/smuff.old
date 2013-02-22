@@ -14,7 +14,7 @@
 <article itemscope itemtype="http://schema.org/Product" <?php post_class('product') ?> id="post-<?php the_ID(); ?>">
   
   <header id="article-title">
-    <a itemprop="url" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
       <h1 itemprop="name">
 		    <?php the_title(); ?>
 	    </h1>
@@ -27,6 +27,10 @@
 	
 	<div itemprop="releaseDate" id="date">
 	  <?php the_date(); ?>
+	</div>
+	
+	<div itemprop="url" id="url">
+	  <?php the_permalink(); ?>
 	</div>
 	
 	
@@ -124,6 +128,7 @@
 				setup_postdata($post);
 				$show_excerpt = false;
 			  $show_category = false;
+			  $microdata = true;
 				include "product-thumb.php";
 				$counter += 1;
 				if ($counter == 5) { break; }
@@ -145,7 +150,7 @@
 				$counter = 1;
 				while ($specials->have_posts()) : $specials->the_post(); update_post_caches($posts); 
 					if (in_category(10)) {
-						
+						$microdata = false;
 						include "product-thumb.php";
 						$counter += 1;
 					}                    

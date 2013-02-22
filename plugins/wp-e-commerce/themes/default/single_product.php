@@ -35,10 +35,16 @@
 					      <?php 					        
 					        $product_data['sku'] = get_product_meta($product_id, 'sku', true);
 					        $delivery = product_delivery_time($product_data['sku']);
-					      ?>
+					        
+					        if ($product_data['sku'] == -1) { ?>
+					          <span itemprop="availability" class="hidden">Out of Stock</span>
+					        <?php } else { ?>
+					          <span itemprop="availability" class="hidden">In Stock</span>
+					        <?php } ?>
+					      
 					    
 					      <span class='delivery'>
-		              <span itemprop="availability">Livrare in <?php  echo $delivery ?></span>
+		              <span>Livrare in <?php echo $delivery ?></span>
 		            </span>
 		            
 		            <div class='cart-operations'>
@@ -85,8 +91,12 @@
 								      } ?>
 								      
 								      <span class="price normal-price <?php echo $klass ?>">
-								        <span itemprop="price" id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
-								         <?php if(wpsc_product_on_special()) : ?>
+								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
+								        
+								        <span itemprop="price" class="hidden">123</span>
+								        <span itemprop="priceCurrency" class="hidden">RON</span>
+								        
+								        <?php if(wpsc_product_on_special()) : ?>
 								          <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
 								        <?php endif; ?>
 								      </span>  

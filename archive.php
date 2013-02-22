@@ -123,8 +123,8 @@
 	<hgroup>
 	  
 	  <header>
-	    <a itemprop="url" href="" title="<?php echo $cat_name ?>">
-		    <h2 itemprop="name">
+	    <a href="" title="<?php echo $cat_name ?>">
+		    <h2>
 			    <?php 
 				    $found_posts = $wp_query->found_posts;
 				    if ($found_posts == 1) {
@@ -136,6 +136,8 @@
 			    <?php echo $found_posts . $cadouri . $cat_name; ?>
 		    </h2>
 		  </a>
+		  <span itemprop="url" class="hidden"><?php echo curPageURL2() ?></span>
+		  <span itemprop="name" class="hidden"><?php echo $cat_name ?></span>
 		</header>
 	
 	  	

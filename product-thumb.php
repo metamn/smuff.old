@@ -6,6 +6,7 @@
   // - show_category: boolean, if the product main category is shown or not. Default is true
   // - show_price: boolean, to show the product price. Default is true
   // - show_percentage: boolean, to show the discount in %. Default is false
+  // - microdata: boolean, to add microdata markup. Default is false;
   // - counter: the numeric id of the product when displayed as a list
   
   // All posts will be treated the same. If this is not a product the price and category won't be shown
@@ -32,6 +33,10 @@
   
   if (!(isset($show_category))) {
     $show_category = true;
+  }
+  
+  if (!(isset($microdata))) {
+    $microdata = false;
   }
   
   
@@ -68,16 +73,15 @@
   if (isset($counter)) {
   	$kounter = 'c' . $counter;
   }
-  
  
 ?>
 
-<article itemscope itemtype="http://schema.org/Product" id="product" class="<?php echo $kounter ?> <?php echo $klass ?>">  
+<article  id="product" class="<?php echo $kounter ?> <?php echo $klass ?>">  
   
   <?php if (isset($thumb[0])) { ?>
     <div id="image">
-      <a itemprop="url" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-        <img itemprop="image" src="<?php echo $thumb[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
+      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+        <img src="<?php echo $thumb[0] ?>" title="<?php echo $title; ?>" alt="<?php echo $title; ?>"/>
       </a>
     </div>
   <?php } ?>
@@ -85,27 +89,24 @@
   
   <div id="title">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-      <h3 itemprop="name"><?php echo $product_name; ?></h3> 
+      <h3><?php echo $product_name; ?></h3> 
     </a>
   </div>
   
   <?php if ($show_excerpt) { ?>
     <div id="excerpt">
-      <a itemprop="description" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+      <a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
        <?php the_excerpt(); ?> 
       </a>
     </div>
   <?php } ?>
   
-  <div itemprop="releaseDate" id="date">
-	  <?php the_date(); ?>
-	</div>
   
   <?php if ( ($show_price) && (in_category(10)) ) { ?>
-    <div itemscope itemtype="http://schema.org/Offer" id="price">
+    <div  id="price">
     	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
 	      <?php if ($product_discount > 0) { ?>
-		      <span itemprop="price" class="price"><?php echo $product_sale_price; ?> Lei</span>
+		      <span class="price"><?php echo $product_sale_price; ?> Lei</span>
 		      <span class="old-price"><?php echo $product_price; ?></span>    
 	      <?php } else { ?>
 		      <span class="normal-price"><?php echo $product_price; ?></span> Lei
@@ -116,7 +117,7 @@
   
   <?php if ( ($show_category) && (in_category(10)) ) { ?>
     <div id="category">
-      <a itemprop="category" class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
+      <a class="<?php echo $main_cat->category_nicename ?>" href="<?php echo $category_link ?>" title="Vezi toate cadourile din <?php echo $category ?>">
       <?php echo $category ?></a>
     </div>
   <?php } ?>
@@ -127,3 +128,17 @@
     </div>
   <?php } ?>
 </article>	
+
+
+<?php if ($microdata) { ?>
+  <div class="hidden">
+    <span itemscope itemtype="http://schema.org/SomeProducts">
+      <span itemprop="url"><?php the_permalink(); ?></span>
+      <span itemprop="image"><?php echo $thumb[0] ?></span>
+      <span itemprop="name"><?php echo $product_name; ?></span>
+      <span itemprop="description"><?php the_excerpt(); ?></span>
+      <span itemprop="releaseDate"><?php the_date(); ?></span>
+    </span>
+  </div>
+<?php } ?>
+

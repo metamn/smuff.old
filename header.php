@@ -79,14 +79,14 @@
 	    
 	    <header id="header">
 				<hgroup itemscope itemtype="http://schema.org/LocalBusiness">
-				  <a itemprop="url" alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
+				  <a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
 					  <div id="logo" class="artwork"></div> 
 					  <div id="logo" class="image">
 					    <img itemprop="logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/logo.jpg" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>">
 					  </div>
 					  <h1 itemprop="name"><?php bloginfo('name'); ?></h1>
 				  </a>
-					
+					<span itemprop="url" class="hidden"><?php bloginfo('home'); ?></span>
 					
 					<div id="strapline">
 						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
@@ -135,7 +135,7 @@
 			        <li itemprop="telephone">0740-456.127</li>
 			        <li itemprop="email">shop @ smuff.ro</li>
 			        <li class="separator"></li>
-			        <li itemscope itemtype="http://schema.org/AboutPage" ><a itemprop="url" href="">Despre noi</a></li>
+			        <li><a href="">Despre noi</a></li>
               <li><a href="">Termeni si conditii</a></li>
 			      </ul>
 			    </nav>

@@ -14,7 +14,7 @@
         $product_list_id = 'products';
       } ?>
         
-      <section itemscope itemtype="http://schema.org/CollectionPage" id="<?php echo $product_list_id ?>">
+      <section id="<?php echo $product_list_id ?>">
       
         <nav id="navigation">
           <h3 class="outline">Navigare</h3>
@@ -27,7 +27,7 @@
         
         <?php if (isset($product_list_title)) { ?>
           <header id="title">
-            <h2 itemprop="name"><?php echo $product_list_title ?></h2>
+            <h2><?php echo $product_list_title ?></h2>
           </header>
         <?php } ?>
         
