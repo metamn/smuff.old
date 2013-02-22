@@ -11,7 +11,7 @@ get_header();
   <div id="content" class="column span-18">
 	  <h1>Pagina nu a fost gasita</h1>
 	  <div class="notice">
-	  	<p>Va cere m scuze, articolul cautat nu exista, sau a fost mutat la o alta adresa.</p>
+	  	<p>Va cerem scuze, articolul cautat nu exista, sau a fost mutat la o alta adresa.</p>
 	  </div>
 	  
 	  <?php include 'search-enhanced.php' ?>

@@ -43,16 +43,13 @@ body.home {
         #body {
 	        #products {
 	          #product {
-	            @include col(23%, 0, 2.5%); 
+	            @include col(4, 4); 
 	           
               @include product-thumb;
               
               #excerpt {
                 display: none;
               }
-	          }
-	          #product.c4, #product.c8, #product.c12 {
-	            margin-right: 0;
 	          }
 	        }
 	      }
@@ -81,7 +78,7 @@ body.home {
 	          @include list-inline;
 	          
 	          li {
-	            @include col(23%, 0, 2.5%);
+	            @include col(4, 0);
 	            background: $very-light-gray;
 	            
 	            cursor: pointer;

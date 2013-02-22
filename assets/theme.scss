@@ -64,6 +64,38 @@ a, a:active, a:visited, a:hover {
 /* Mixins
 */
 
+@mixin background {
+  background: $background url(background.png);
+}
+
+@mixin font($where) {
+  @if $where == body {
+    font-family: 'Coda', serif;
+    color: $color;
+  } @else if $where == headings {
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Oswald', sans-serif;
+    }
+    
+    h2, h3 {
+      font-size: 1.25em;
+      font-style: normal;
+      font-weight: normal;
+    }
+    
+    h2 {
+      text-transform: uppercase;
+    }
+    
+    input, textarea, select {
+      font-family: 'Coda', serif;
+      font-size: 100%;
+    }
+  }
+}
+
+
+
 
 @mixin subscribe-to-newsletter {
   border: 1px dotted;

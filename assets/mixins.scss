@@ -534,12 +534,50 @@ img {
 
 
 /* make a column 
+
+- $col : how many columns
+- $items : how many items will be organized into columns marked .c1, .c2, ....
 */
-@mixin col($width, $margin_left, $margin_right) {
-  width: $width;
-  margin: 0 $margin_right 0 $margin_left;
+@mixin col($col, $items) {
+  @if $col == 2 {
+    width: 47.5%;
+    margin-right: 5%;
+  
+  } @else if $col == 3 {
+    width: 30%;
+    margin-right: 5%;
+  
+  } @else if $col == 4 {
+    width: 23%;
+    margin-right: 2.6%;
+    
+  } @else if $col == 5 {
+    width: 18%;
+    margin-right: 2.5%;
+  }
+
   float: left;
+  @include col-margin($col, $items);
+  
+  &.last {
+    margin-right: 0;
+  }
 }
+
+
+/* Remove right margin for the last column
+*/
+@mixin col-margin($col, $items) {
+  @for $i from 1 to $items + 1 {
+    @if $i % $col == 0 {
+      &.c#{$i} { margin-right: 0; }
+    }
+  }
+}
+
+
+
+
 
 
 /* box-shadow
@@ -559,6 +597,8 @@ img {
   height: auto;
 }
 
+
+
 /* hide an element 
 */
 @mixin hidden {
@@ -567,6 +607,13 @@ img {
 .hidden {
   display: none;
 }
+
+/* Titles for HTML5 Outliner are hidden */
+.outline {
+  display: none;
+}
+
+
 
 
 /* block element -- expand something full size inside a container
@@ -585,7 +632,7 @@ img {
   position: absolute;
   top: 0;
   opacity: .1;
-  display: block;
+  display: none;
   z-index: -1;
 }
 #gridh .col {

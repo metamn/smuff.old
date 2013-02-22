@@ -76,6 +76,11 @@ img {
 /* table, simple
 */
 /* make a column 
+
+- $col : how many columns
+- $items : how many items will be organized into columns marked .c1, .c2, ....
+*/
+/* Remove right margin for the last column
 */
 /* box-shadow
 */
@@ -83,8 +88,14 @@ img {
 */
 /* hide an element 
 */
-/* line 567, mixins.scss */
+/* line 607, mixins.scss */
 .hidden {
+  display: none;
+}
+
+/* Titles for HTML5 Outliner are hidden */
+/* line 612, mixins.scss */
+.outline {
   display: none;
 }
 
@@ -92,16 +103,16 @@ img {
 */
 /* The visual grid 
 */
-/* line 584, mixins.scss */
+/* line 631, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
   opacity: .1;
-  display: block;
+  display: none;
   z-index: -1;
 }
 
-/* line 591, mixins.scss */
+/* line 638, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -109,7 +120,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 596, mixins.scss */
+/* line 643, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;

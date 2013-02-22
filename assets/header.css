@@ -1,16 +1,14 @@
 /*
-Syntax error: Undefined variable: "$background".
-        on line 7 of /home/cs/work/smuff/assets/header.scss
+Syntax error: Undefined mixin 'background'.
+        on line 3 of /home/cs/work/smuff/assets/header.scss, in `background'
+        from line 3 of /home/cs/work/smuff/assets/header.scss
+
+1: /home/cs/work/smuff/assets/header.scss
 
 Backtrace:
-/home/cs/work/smuff/assets/header.scss:7
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/variable.rb:49:in `_perform'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/node.rb:40:in `perform'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/list.rb:70:in `block in _perform'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/list.rb:70:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/list.rb:70:in `_perform'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/script/node.rb:40:in `perform'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:296:in `visit_prop'
+/home/cs/work/smuff/assets/header.scss:3:in `background'
+/home/cs/work/smuff/assets/header.scss:3
+/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -78,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$background\".\A         on line 7 of /home/cs/work/smuff/assets/header.scss"; }
+  content: "Syntax error: Undefined mixin 'background'.\A         on line 3 of /home/cs/work/smuff/assets/header.scss, in `background'\A         from line 3 of /home/cs/work/smuff/assets/header.scss\A \A 1: /home/cs/work/smuff/assets/header.scss"; }

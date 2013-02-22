@@ -15,7 +15,7 @@ body.single {
 			margin-bottom: $pad;
 			
 			#article-title, #shopping-cart, #images, #description, #share {
-			  @include col(47.5%, 0, 5%);
+			  @include col(2, 0);
 			  
 			  @include mobile-only {
 			    @include block;
@@ -57,7 +57,7 @@ body.single {
 			    margin-top: $pad;
 			    
 			    #thumb {
-			     @include col(18%, 0, 2.5%);
+			     @include col(5, 0);
 			     margin-bottom: $pad;
 			      
 			      cursor: pointer;
@@ -65,9 +65,6 @@ body.single {
 			      img {
 			        @include image-bordered(2%);
 			      }  
-			    }
-			    #thumb.c5, #thumb.c10, #thumb.c15, #thumb.c20 {
-			      margin-right: 0;
 			    }
 			  }
 			}
@@ -138,7 +135,7 @@ body.single {
 		      }
 		      
 		      #facebook-connect, #text h4, #text form {
-		        @include col(30%, 0, 5%);
+		        @include col(3, 0);
 		      }
 		      
 		      #text {
@@ -170,7 +167,7 @@ body.single {
 			}
 			
 			#product {
-        @include col(23%, 0, 2.5%);
+        @include col(4, 4);
         margin-bottom: $pad;
         
         @include product-thumb;
@@ -184,9 +181,6 @@ body.single {
           @include block;
           margin-right: 0;
         }
-      }
-      #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
-        margin-right: 0;
       }
     }
 		

@@ -46,7 +46,7 @@ body.archive {
       margin-bottom: $pad;
       
       header {
-        @include col(18%, 0, 2.5%);
+        @include col(5, 0);
       
         h2 {
           padding: $pad/2 0 0 $pad/2;
@@ -54,11 +54,12 @@ body.archive {
       }
       
       #filters {
-        @include col(79.5%, 0, 0);
+        width: 79.5%;
+        float: left;
         padding-top: $pad/4;
            
         nav {
-          @include col(23%, 0, 2.5%);
+          @include col(4, 0);
           padding: $pad/2 0 0;
           
           select {
@@ -81,7 +82,7 @@ body.archive {
       @include block;
       
       #product {
-        @include col(23%, 0, 2.5%);
+        @include col(4, 100);
         margin-bottom: $pad;
         
         @include product-thumb;
@@ -91,9 +92,6 @@ body.archive {
           background: $background;
         }
         
-      }
-      #product.c4, #product.c8, #product.c12, #product.c16, #product.c20, #product.c24, #product.c28 {
-        margin-right: 0;
       }
     
     }

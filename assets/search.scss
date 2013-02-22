@@ -4,7 +4,7 @@
 	
 	form {
 		div {
-			@include col(30%, 0, 5%);
+			@include col(3, 0);
 			
 			h3 {
 				margin-left: $pad/2;
@@ -34,9 +34,7 @@
 				}
 			}
 		}
-		div.last {
-			margin-right: 0;
-		}
+		
 		#categories, #searchbox {
 			width: 100%;
 			@include hidden;
