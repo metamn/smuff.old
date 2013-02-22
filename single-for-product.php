@@ -3,7 +3,7 @@
   $product_id = product_id($post->ID);
   $product_price = product_price($post->ID);
   $product_name = product_name($product_id);
-  $title = $product_name . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+  $title = $product_name . ' | ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
   $product_stock = product_stock($product_id);
   
   $postid = $post->ID;

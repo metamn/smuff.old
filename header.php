@@ -15,10 +15,10 @@
 		    $subs = explode("&#8212;", $title);
 		    
 		    if ($subs[0]) {
-		      echo $subs[0] . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+		      echo $subs[0] . ' | ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 		    } else {
 		      if ($title) {
-		        echo $title . ' pe ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
+		        echo $title . ' | ' . get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 		      } else {
             echo get_bloginfo('name') . ' &mdash; ' . get_bloginfo('description');
 		      }
