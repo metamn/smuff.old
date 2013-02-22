@@ -9,7 +9,7 @@ body {
     background: $color;
     height: $pad + $pad/2;
     
-    @include mobile-only {
+    @include tablet-landscape-and-below {
       display: none;
     }
   }
@@ -66,7 +66,7 @@ body {
 				  }
 				}
 				
-				@include mobile-only {
+				@include tablet-portrait-and-below {
 				  @include block;
 				  margin: 0 0 $pad;
 				  
@@ -110,7 +110,7 @@ body {
 			    }
 			  }
 			  
-			  @include mobile-only {
+			  @include tablet-portrait-and-below {
 			    width: $pad*2;
 			    margin: 0;
 			    
@@ -120,8 +120,14 @@ body {
 			    
 			    input[type="submit"] {
 			      position: absolute;
-			      top: 8em;
+			      top: $pad;
 			      right: 0;
+			    }
+			  }
+			  
+			  @include mobile-only {
+			    input[type="submit"] {
+			      top: 8em;
 			    }
 			  }
 			  
@@ -130,6 +136,8 @@ body {
 			      top: 7em;
 			    }
 			  }
+			  
+			  
 			}
 			
 			
@@ -161,8 +169,10 @@ body {
         }
         
         @include mobile-only {
-          font-size: small;
-          
+          font-size: small;  
+        }
+        
+        @include tablet-portrait-and-below {
           ul {
             li {
               &#separator {
@@ -176,6 +186,8 @@ body {
             }
           }
         }
+        
+        
 			} 
 			
 			

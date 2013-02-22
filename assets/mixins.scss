@@ -7,7 +7,7 @@
   width: 90% - $margin-left;
 	margin: 0 auto;
 	
-	@include mobile-only {
+	@include tablet-landscape-and-below {
 	  width: 98% - $margin-left;
 	}
 	@include large-screen {

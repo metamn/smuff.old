@@ -46,15 +46,17 @@ body.home {
 	            @include col(4, 4); 
               @include product-thumb;
               
-              @include mobile-only {
+              @include tablet-portrait-and-below {
+                @include col(2, 4);
+                margin-bottom: $pad;
+              }
+              
+              @include mobile-portrait-only {
                 @include block;
                 margin-bottom: $pad;
               }
               
-              @include mobile-landscape-only {
-                @include col(2, 4);
-                margin-bottom: $pad;
-              }
+              
 	          }
 	        }
 	      }
@@ -80,7 +82,7 @@ body.home {
 	      
 	      #body {
 	        div {
-	          @include col(4, 0);
+	          @include col(4, 4);
             background: $very-light-gray;
             
             cursor: pointer;
@@ -110,19 +112,29 @@ body.home {
               background: $very-light-gray;
             }
             
-            @include mobile-only {
-              @include block;
+            @include tablet-portrait-and-below {
+              @include col(2, 4);
               margin-bottom: $pad;
             }
             
-            @include mobile-landscape-only {
-              @include col(2, 4);
-              margin-bottom: $pad;
-              
+            @include mobile-landscape-only {   
               height: 14em;
               
               p {
                 margin-top: 12em;
+              }
+            }
+            
+            @include mobile-portrait-only {
+              @include block;
+              margin-bottom: $pad;
+            }
+            
+            @include tablet-only {
+              height: 10em;
+
+              p {
+                margin-top: 8em;
               }
             }
 	        }

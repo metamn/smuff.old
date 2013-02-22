@@ -489,7 +489,7 @@ body #above-container {
   background: #363636;
   height: 1.875em;
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   /* line 8, header.scss */
   body #above-container {
     display: none;
@@ -500,7 +500,7 @@ body .container {
   width: 90%;
   margin: 0 auto;
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   /* line 19, header.scss */
   body .container {
     width: 98%;
@@ -558,33 +558,33 @@ body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
 }
-/* line 448, theme.scss */
+/* line 452, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 454, theme.scss */
+/* line 458, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 458, theme.scss */
+/* line 462, theme.scss */
 body .container #header hgroup #logo.artwork .set {
   background: #363636;
 }
-/* line 462, theme.scss */
+/* line 466, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 466, theme.scss */
+/* line 470, theme.scss */
 body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff {
   display: none;
 }
-/* line 470, theme.scss */
+/* line 474, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 473, theme.scss */
+/* line 477, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -611,7 +611,7 @@ body .container #header hgroup #strapline h2 {
 body .container #header hgroup #strapline h2 a {
   color: #f25f18;
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 640px) {
   /* line 30, header.scss */
   body .container #header hgroup {
     width: 100%;
@@ -657,7 +657,7 @@ body .container #header #search input[type="submit"] {
 body .container #header #search:hover input[type="text"] {
   border-color: #f25f18;
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 640px) {
   /* line 81, header.scss */
   body .container #header #search {
     width: 2.5em;
@@ -670,17 +670,23 @@ body .container #header #search:hover input[type="text"] {
   /* line 121, header.scss */
   body .container #header #search input[type="submit"] {
     position: absolute;
-    top: 8em;
+    top: 1.25em;
     right: 0;
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media (max-width: 480px) {
   /* line 129, header.scss */
+  body .container #header #search input[type="submit"] {
+    top: 8em;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  /* line 135, header.scss */
   body .container #header #search input[type="submit"] {
     top: 7em;
   }
 }
-/* line 136, header.scss */
+/* line 144, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -688,7 +694,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em;
 }
-/* line 141, header.scss */
+/* line 149, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -706,11 +712,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 146, header.scss */
+/* line 154, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 149, header.scss */
+/* line 157, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -723,7 +729,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 153, header.scss */
+/* line 161, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -732,34 +738,36 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 157, header.scss */
+/* line 165, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 136, header.scss */
+  /* line 144, header.scss */
   body .container #header #menu {
     font-size: small;
   }
-  /* line 168, header.scss */
+}
+@media only screen and (max-width: 640px) {
+  /* line 178, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     display: block;
   }
-  /* line 172, header.scss */
+  /* line 182, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
     margin-top: 0.3125em;
   }
 }
-/* line 183, header.scss */
+/* line 195, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
   display: none;
   background: #f1f1f1;
 }
-/* line 189, header.scss */
+/* line 201, header.scss */
 body .container #header #menu-info nav {
   width: 23%;
   margin-right: 2.6%;
@@ -769,16 +777,16 @@ body .container #header #menu-info nav {
 body .container #header #menu-info nav.last {
   margin-right: 0;
 }
-/* line 192, header.scss */
+/* line 204, header.scss */
 body .container #header #menu-info nav h3 {
   color: #aaaaaa;
 }
-/* line 195, header.scss */
+/* line 207, header.scss */
 body .container #header #menu-info nav h3.outline {
   display: block;
   visibility: hidden;
 }
-/* line 201, header.scss */
+/* line 213, header.scss */
 body .container #header #menu-info nav ul {
   list-style: none;
   margin: 0;
@@ -803,19 +811,19 @@ body .container #header #menu-info nav ul li a:hover {
 body .container #header #menu-info nav ul li.separator {
   padding: 0.625em;
 }
-/* line 205, header.scss */
+/* line 217, header.scss */
 body .container #header #menu-info nav#contact {
   margin-left: 23%;
 }
-/* line 211, header.scss */
+/* line 223, header.scss */
 body .container #header #menu-info nav.shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 214, header.scss */
+/* line 226, header.scss */
 body .container #header #menu-info nav.shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 223, header.scss */
+/* line 235, header.scss */
 body .container #header #menu-info #close {
   float: right;
   margin-right: 0;
@@ -823,12 +831,12 @@ body .container #header #menu-info #close {
   position: relative;
   top: -15.8em;
 }
-/* line 231, header.scss */
+/* line 243, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 236, header.scss */
+/* line 248, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;
@@ -935,28 +943,26 @@ body.home .container section#sales #body #products #product #title {
 body.home .container section#sales #body #products #product #title h3 {
   padding: 0;
 }
-/* line 416, theme.scss */
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+  /* line 407, theme.scss */
+  body.home .container section#sales #body #products #product #title {
+    min-height: 5em;
+  }
+}
+/* line 420, theme.scss */
 body.home .container section#sales #body #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 420, theme.scss */
+/* line 424, theme.scss */
 body.home .container section#sales #body #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 425, theme.scss */
+/* line 429, theme.scss */
 body.home .container section#sales #body #products #product #date {
   display: none;
 }
-@media (max-width: 480px) {
-  /* line 45, startpage.scss */
-  body.home .container section#sales #body #products #product {
-    width: 100%;
-    float: left;
-    margin-bottom: 1.25em;
-  }
-}
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (max-width: 640px) {
   /* line 45, startpage.scss */
   body.home .container section#sales #body #products #product {
     width: 47.5%;
@@ -977,15 +983,23 @@ body.home .container section#sales #body #products #product #date {
     margin-right: 0;
   }
 }
-/* line 64, startpage.scss */
+@media (max-width: 320px) {
+  /* line 45, startpage.scss */
+  body.home .container section#sales #body #products #product {
+    width: 100%;
+    float: left;
+    margin-bottom: 1.25em;
+  }
+}
+/* line 66, startpage.scss */
 body.home .container section#giftshopper {
   margin: 0 0 1.25em;
 }
-/* line 67, startpage.scss */
+/* line 69, startpage.scss */
 body.home .container section#giftshopper #title {
   display: block;
 }
-/* line 70, startpage.scss */
+/* line 72, startpage.scss */
 body.home .container section#giftshopper #title h2 {
   font-size: 1em;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
@@ -994,7 +1008,7 @@ body.home .container section#giftshopper #title h2 {
   padding: 0;
   margin: 0.625em 0;
 }
-/* line 82, startpage.scss */
+/* line 84, startpage.scss */
 body.home .container section#giftshopper #body div {
   width: 23%;
   margin-right: 2.6%;
@@ -1007,49 +1021,44 @@ body.home .container section#giftshopper #body div {
   border-radius: 10em / 10em;
   height: 18em;
 }
+/* line 575, mixins.scss */
+body.home .container section#giftshopper #body div.c4 {
+  margin-right: 0;
+}
 /* line 564, mixins.scss */
 body.home .container section#giftshopper #body div.last {
   margin-right: 0;
 }
-/* line 93, startpage.scss */
+/* line 95, startpage.scss */
 body.home .container section#giftshopper #body div#for-him {
   background: #f1f1f1 url(giftshopper-man.jpg) no-repeat center 0;
 }
-/* line 96, startpage.scss */
+/* line 98, startpage.scss */
 body.home .container section#giftshopper #body div#for-her {
   background: #f1f1f1 url(giftshopper-woman.jpg) no-repeat center 0;
 }
-/* line 99, startpage.scss */
+/* line 101, startpage.scss */
 body.home .container section#giftshopper #body div#for-kids {
   background: #f1f1f1 url(giftshopper-kids.jpg) no-repeat center 0;
 }
-/* line 102, startpage.scss */
+/* line 104, startpage.scss */
 body.home .container section#giftshopper #body div#for-office {
   background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat center 1em;
 }
-/* line 106, startpage.scss */
+/* line 108, startpage.scss */
 body.home .container section#giftshopper #body div p {
   margin-top: 16em;
   text-align: center;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   background: #f1f1f1;
 }
-@media (max-width: 480px) {
-  /* line 82, startpage.scss */
-  body.home .container section#giftshopper #body div {
-    width: 100%;
-    float: left;
-    margin-bottom: 1.25em;
-  }
-}
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  /* line 82, startpage.scss */
+@media only screen and (max-width: 640px) {
+  /* line 84, startpage.scss */
   body.home .container section#giftshopper #body div {
     width: 47.5%;
     margin-right: 5%;
     float: left;
     margin-bottom: 1.25em;
-    height: 14em;
   }
   /* line 575, mixins.scss */
   body.home .container section#giftshopper #body div.c2 {
@@ -1063,9 +1072,33 @@ body.home .container section#giftshopper #body div p {
   body.home .container section#giftshopper #body div.last {
     margin-right: 0;
   }
-  /* line 124, startpage.scss */
+}
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  /* line 84, startpage.scss */
+  body.home .container section#giftshopper #body div {
+    height: 14em;
+  }
+  /* line 123, startpage.scss */
   body.home .container section#giftshopper #body div p {
     margin-top: 12em;
+  }
+}
+@media (max-width: 320px) {
+  /* line 84, startpage.scss */
+  body.home .container section#giftshopper #body div {
+    width: 100%;
+    float: left;
+    margin-bottom: 1.25em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  /* line 84, startpage.scss */
+  body.home .container section#giftshopper #body div {
+    height: 10em;
+  }
+  /* line 136, startpage.scss */
+  body.home .container section#giftshopper #body div p {
+    margin-top: 8em;
   }
 }
 
@@ -1241,7 +1274,7 @@ body.archive #header.fixed {
   background: white url(background.png);
   border-bottom: 1px dotted;
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   /* line 5, archive.scss */
   body.archive #header.fixed {
     width: 98%;
@@ -1258,33 +1291,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 448, theme.scss */
+/* line 452, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 454, theme.scss */
+/* line 458, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 458, theme.scss */
+/* line 462, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 462, theme.scss */
+/* line 466, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 466, theme.scss */
+/* line 470, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
   display: none;
 }
-/* line 470, theme.scss */
+/* line 474, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15em;
 }
-/* line 473, theme.scss */
+/* line 477, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1301,7 +1334,7 @@ body.archive #archive hgroup.fixed {
   padding-top: 0.3125em;
   background: url(background.png);
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   /* line 22, archive.scss */
   body.archive #archive hgroup.fixed {
     width: 88%;
@@ -1514,16 +1547,22 @@ body.archive #archive #products #product #title {
 body.archive #archive #products #product #title h3 {
   padding: 0;
 }
-/* line 416, theme.scss */
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+  /* line 407, theme.scss */
+  body.archive #archive #products #product #title {
+    min-height: 5em;
+  }
+}
+/* line 420, theme.scss */
 body.archive #archive #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 420, theme.scss */
+/* line 424, theme.scss */
 body.archive #archive #products #product #price .normal-price {
   padding-right: 0;
 }
-/* line 425, theme.scss */
+/* line 429, theme.scss */
 body.archive #archive #products #product #date {
   display: none;
 }
@@ -1964,16 +2003,22 @@ body.single .container section #product #title {
 body.single .container section #product #title h3 {
   padding: 0;
 }
-/* line 416, theme.scss */
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+  /* line 407, theme.scss */
+  body.single .container section #product #title {
+    min-height: 5em;
+  }
+}
+/* line 420, theme.scss */
 body.single .container section #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 420, theme.scss */
+/* line 424, theme.scss */
 body.single .container section #product #price .normal-price {
   padding-right: 0;
 }
-/* line 425, theme.scss */
+/* line 429, theme.scss */
 body.single .container section #product #date {
   display: none;
 }

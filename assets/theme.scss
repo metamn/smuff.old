@@ -411,6 +411,10 @@ a, a:active, a:visited, a:hover {
     h3 {
       padding: 0;
     }
+    
+    @include tablet-portrait-only {
+      min-height: $pad*4;
+    }
   }
 
   #price {
