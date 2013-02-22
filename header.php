@@ -87,6 +87,7 @@
 					  <h1 itemprop="name"><?php bloginfo('name'); ?></h1>
 				  </a>
 					<span itemprop="url" class="hidden"><?php bloginfo('home'); ?></span>
+					<span itemprop="additionalType" class="hidden">Online Shop</span>
 					
 					<div id="strapline">
 						<a alt="<?php echo page_excerpt('despre-noi'); ?>" href="<?php bloginfo('home'); ?>" title="<?php bloginfo('name'); ?> -- <?php bloginfo('description'); ?>">
