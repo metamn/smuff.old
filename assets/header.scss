@@ -125,17 +125,13 @@ body {
 			    }
 			  }
 			  
-			  @include mobile-only {
+			  @include mobile-portrait-only {
 			    input[type="submit"] {
 			      top: 8em;
 			    }
 			  }
 			  
-			  @include mobile-landscape-only {
-			    input[type="submit"] {
-			      top: 7em;
-			    }
-			  }
+			  
 			  
 			  
 			}

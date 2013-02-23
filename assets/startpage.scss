@@ -43,17 +43,21 @@ body.home {
         #body {
 	        #products {
 	          #product {
-	            @include col(4, 4); 
+	            @include col(4, 4);
               @include product-thumb;
-              
-              @include tablet-portrait-and-below {
-                @include col(2, 4);
-                margin-bottom: $pad;
-              }
               
               @include mobile-portrait-only {
                 @include block;
                 margin-bottom: $pad;
+              }
+              
+              @include mobile-landscape-and-up {
+                @include col(2, 4);
+                margin-bottom: $pad;
+              }
+              
+              @include tablet-portrait-and-up {
+                @include col(4, 4);
               }
               
               
@@ -88,9 +92,6 @@ body.home {
             cursor: pointer;
             overflow: hidden;
             
-            @include border-radius(10em, 10em);
-            height: 18em;
-            
             
             &#for-him {
               background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
@@ -105,8 +106,10 @@ body.home {
               background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat center 1em;
             }
             
+            
+            @include circle-with-text;
+            
             p {
-              margin-top: 16em;
               text-align: center;
               font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
               background: $very-light-gray;
@@ -117,26 +120,14 @@ body.home {
               margin-bottom: $pad;
             }
             
-            @include mobile-landscape-only {   
-              height: 14em;
-              
-              p {
-                margin-top: 12em;
-              }
-            }
             
             @include mobile-portrait-only {
               @include block;
               margin-bottom: $pad;
             }
             
-            @include tablet-only {
-              height: 10em;
-
-              p {
-                margin-top: 8em;
-              }
-            }
+            
+            
 	        }
 	        
 	      }
