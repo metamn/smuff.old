@@ -5,6 +5,27 @@ $(document).ready(function() {
   var themeurl = $("#ajax-url").attr("data-theme-url");
   
   
+  // Page Flip
+  
+  $("#page-flip").hover(function() { //On hover...
+	  $("#page-flip img, #page-flip #inner").stop()
+		  .animate({ //Animate and expand the image and the msg_block (Width + height)
+			  width: '600px',
+			  height: '600px'
+		  }, 500);
+	  } , function() {
+	  $("#page-flip img").stop() //On hover out, go back to original size 50x52
+		  .animate({
+			  width: '50px',
+			  height: '50px'
+		  }, 220);
+	  $("#page-flip #inner").stop() //On hover out, go back to original size 50x50
+		  .animate({
+			  width: '50px',
+			  height: '50px'
+		  }, 200); //Note this one retracts a bit faster (to prevent glitching in IE)
+  });
+  
   
   
   // Show Quantity for Add to Cart

@@ -495,19 +495,50 @@ body #above-container {
     display: none;
   }
 }
-/* line 19, header.scss */
+/* line 17, header.scss */
+body #page-flip {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 600px;
+}
+/* line 24, header.scss */
+body #page-flip img {
+  width: 50px;
+  height: 50px;
+  z-index: 99;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  -ms-interpolation-mode: bicubic;
+  background: url(giftshopper-woman.jpg) no-repeat right top white;
+}
+/* line 37, header.scss */
+body #page-flip #inner {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 50;
+  right: 0;
+  top: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+/* line 51, header.scss */
 body .container {
   width: 90%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 1024px) {
-  /* line 19, header.scss */
+  /* line 51, header.scss */
   body .container {
     width: 98%;
   }
 }
 @media only screen and (min-width: 1599px) {
-  /* line 19, header.scss */
+  /* line 51, header.scss */
   body .container {
     width: 70%;
   }
@@ -531,13 +562,13 @@ body .container input, body .container textarea, body .container select {
   font-family: 'Coda', serif;
   font-size: 100%;
 }
-/* line 25, header.scss */
+/* line 57, header.scss */
 body .container #header {
   width: 100%;
   float: left;
   margin: 1.25em 0;
 }
-/* line 30, header.scss */
+/* line 62, header.scss */
 body .container #header hgroup {
   width: 47.5%;
   margin-right: 5%;
@@ -549,11 +580,11 @@ body .container #header hgroup {
 body .container #header hgroup.last {
   margin-right: 0;
 }
-/* line 36, header.scss */
+/* line 68, header.scss */
 body .container #header hgroup #logo {
   float: left;
 }
-/* line 39, header.scss */
+/* line 71, header.scss */
 body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
@@ -588,43 +619,43 @@ body .container #header hgroup #logo.artwork:hover {
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
-/* line 43, header.scss */
+/* line 75, header.scss */
 body .container #header hgroup #logo.image {
   display: none;
 }
-/* line 48, header.scss */
+/* line 80, header.scss */
 body .container #header hgroup h1 {
   display: none;
 }
-/* line 53, header.scss */
+/* line 85, header.scss */
 body .container #header hgroup #strapline {
   float: left;
   margin-left: 0.625em;
 }
-/* line 57, header.scss */
+/* line 89, header.scss */
 body .container #header hgroup #strapline h2 {
   padding: 0;
   font-style: normal;
   color: #f25f18;
 }
-/* line 62, header.scss */
+/* line 94, header.scss */
 body .container #header hgroup #strapline h2 a {
   color: #f25f18;
 }
 @media only screen and (max-width: 768px) {
-  /* line 30, header.scss */
+  /* line 62, header.scss */
   body .container #header hgroup {
     width: 100%;
     float: left;
     margin: 0 0 1.25em;
   }
-  /* line 74, header.scss */
+  /* line 106, header.scss */
   body .container #header hgroup #strapline {
     margin: 0 0 0 1.25em;
     width: auto;
   }
 }
-/* line 81, header.scss */
+/* line 113, header.scss */
 body .container #header #search {
   width: 47.5%;
   margin-right: 5%;
@@ -637,7 +668,7 @@ body .container #header #search {
 body .container #header #search.last {
   margin-right: 0;
 }
-/* line 89, header.scss */
+/* line 121, header.scss */
 body .container #header #search input[type="text"] {
   width: 18.8em;
   border: 1px solid white;
@@ -645,29 +676,29 @@ body .container #header #search input[type="text"] {
   top: -0.625em;
   padding: 0 0.3125em;
 }
-/* line 98, header.scss */
+/* line 130, header.scss */
 body .container #header #search input[type="text"]:focus {
   border-color: #f25f18;
 }
-/* line 103, header.scss */
+/* line 135, header.scss */
 body .container #header #search input[type="submit"] {
   background: url(icon-search.jpg) no-repeat center 2px;
 }
-/* line 108, header.scss */
+/* line 140, header.scss */
 body .container #header #search:hover input[type="text"] {
   border-color: #f25f18;
 }
 @media only screen and (max-width: 768px) {
-  /* line 81, header.scss */
+  /* line 113, header.scss */
   body .container #header #search {
     width: 2.5em;
     margin: 0;
   }
-  /* line 117, header.scss */
+  /* line 149, header.scss */
   body .container #header #search input[type="text"] {
     display: none;
   }
-  /* line 121, header.scss */
+  /* line 153, header.scss */
   body .container #header #search input[type="submit"] {
     position: absolute;
     top: 1.25em;
@@ -675,12 +706,12 @@ body .container #header #search:hover input[type="text"] {
   }
 }
 @media (max-width: 320px) {
-  /* line 129, header.scss */
+  /* line 161, header.scss */
   body .container #header #search input[type="submit"] {
     top: 8em;
   }
 }
-/* line 140, header.scss */
+/* line 172, header.scss */
 body .container #header #menu {
   width: 100%;
   float: left;
@@ -688,7 +719,7 @@ body .container #header #menu {
   border-bottom: 1px solid;
   padding: 0.625em;
 }
-/* line 145, header.scss */
+/* line 177, header.scss */
 body .container #header #menu ul {
   display: block;
   margin: 0;
@@ -706,11 +737,11 @@ body .container #header #menu ul li {
 body .container #header #menu ul li.last {
   margin-right: 0;
 }
-/* line 150, header.scss */
+/* line 182, header.scss */
 body .container #header #menu ul li#info, body .container #header #menu ul li#search {
   cursor: pointer;
 }
-/* line 153, header.scss */
+/* line 185, header.scss */
 body .container #header #menu ul li#info:after, body .container #header #menu ul li#search:after {
   content: '\003E';
   float: right;
@@ -723,7 +754,7 @@ body .container #header #menu ul li#info:after, body .container #header #menu ul
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 157, header.scss */
+/* line 189, header.scss */
 body .container #header #menu ul li#info.active:after, body .container #header #menu ul li#search.active:after {
   -moz-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
@@ -732,36 +763,36 @@ body .container #header #menu ul li#info.active:after, body .container #header #
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$value);
   display: inline-block;
 }
-/* line 161, header.scss */
+/* line 193, header.scss */
 body .container #header #menu ul li.cart {
   float: right;
 }
 @media (max-width: 480px) {
-  /* line 140, header.scss */
+  /* line 172, header.scss */
   body .container #header #menu {
     font-size: small;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 174, header.scss */
+  /* line 206, header.scss */
   body .container #header #menu ul li#separator {
     width: 100%;
     display: block;
   }
-  /* line 178, header.scss */
+  /* line 210, header.scss */
   body .container #header #menu ul li.cart {
     float: left;
     margin-top: 0.3125em;
   }
 }
-/* line 191, header.scss */
+/* line 223, header.scss */
 body .container #header #menu-info {
   width: 100%;
   float: left;
   display: none;
   background: #f1f1f1;
 }
-/* line 197, header.scss */
+/* line 229, header.scss */
 body .container #header #menu-info nav {
   width: 23%;
   margin-right: 2.6%;
@@ -771,16 +802,16 @@ body .container #header #menu-info nav {
 body .container #header #menu-info nav.last {
   margin-right: 0;
 }
-/* line 200, header.scss */
+/* line 232, header.scss */
 body .container #header #menu-info nav h3 {
   color: #aaaaaa;
 }
-/* line 203, header.scss */
+/* line 235, header.scss */
 body .container #header #menu-info nav h3.outline {
   display: block;
   visibility: hidden;
 }
-/* line 209, header.scss */
+/* line 241, header.scss */
 body .container #header #menu-info nav ul {
   list-style: none;
   margin: 0;
@@ -805,19 +836,19 @@ body .container #header #menu-info nav ul li a:hover {
 body .container #header #menu-info nav ul li.separator {
   padding: 0.625em;
 }
-/* line 213, header.scss */
+/* line 245, header.scss */
 body .container #header #menu-info nav#contact {
   margin-left: 23%;
 }
-/* line 219, header.scss */
+/* line 251, header.scss */
 body .container #header #menu-info nav.shopping-info ul li {
   margin-bottom: 1.5625em;
 }
-/* line 222, header.scss */
+/* line 254, header.scss */
 body .container #header #menu-info nav.shopping-info ul li h4 {
   padding: 0 0 0.625em;
 }
-/* line 231, header.scss */
+/* line 263, header.scss */
 body .container #header #menu-info #close {
   float: right;
   margin-right: 0;
@@ -825,12 +856,12 @@ body .container #header #menu-info #close {
   position: relative;
   top: -15.8em;
 }
-/* line 239, header.scss */
+/* line 271, header.scss */
 body .container #header #menu-info #close span {
   cursor: pointer;
   padding-right: 0.625em;
 }
-/* line 244, header.scss */
+/* line 276, header.scss */
 body .container #header #menu-info #close span:after {
   content: '\2612';
   margin-left: 0.625em;

@@ -70,7 +70,17 @@
 	
 	
 	 <body <?php body_class(); ?>> 
+	 
 	  <div id="above-container"></div>		
+	  
+	  <!-- http://web.archive.org/web/20110423063645/http://www.sohtanaka.com/web-design/simple-page-peel-effect-with-jquery-css/
+	  -->
+	  <div id="page-flip">
+	    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/page-flip.png" />
+	    <div id="inner">
+	      Text goes here ....
+	    </div>
+	  </div>
 	  
 	  <div id="ajax-url" data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-theme-url="<?php bloginfo('stylesheet_directory')?>" class="hidden"></div>	  	
 	  

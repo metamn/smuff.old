@@ -14,6 +14,38 @@ body {
     }
   }
   
+  #page-flip {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 600px;
+    
+    img {
+      width: 50px; 
+      height: 50px;
+	    z-index: 99;
+	    position: absolute;
+	    right: 0; 
+	    top: 0;
+	    z-index: 10;
+	    -ms-interpolation-mode: bicubic;
+	    
+	    background: url(giftshopper-woman.jpg) no-repeat right top $background;
+    }
+    
+    #inner {
+      width: 50px; 
+      height: 50px;
+	    position: absolute;
+	    z-index: 50;
+	    right: 0; 
+	    top: 0;
+	    text-indent: -9999px;
+	    overflow: hidden;
+    }
+  }
+  
     
   
 	.container {
