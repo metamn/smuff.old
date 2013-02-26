@@ -1,0 +1,53 @@
+#more-categories {
+  @include block;
+  
+  #categories, #trending {
+    @include col(4, 0);
+    
+    #title {
+      display: block;
+    }
+    
+    ul {
+      @include list;
+    }
+  }
+  
+  #search {
+    @include col(2, 0);
+    margin-right: 0;
+    margin-top: $pad*3 + $pad/2;
+    
+    input[type="text"] {
+      width: 84%;
+    }
+    
+    input[type="submit"] {
+      float: right;
+      
+      @include button($background, $color);
+    }
+    
+    
+    #filters {
+      margin-top: $pad;
+      
+      nav {
+        .select {
+          
+          select {
+            font-size: small;
+          }  
+          
+          &:after {
+            top: -1.35em;
+          }
+          
+        }
+      
+      }
+      
+    }
+  }
+  
+}

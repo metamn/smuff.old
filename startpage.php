@@ -39,7 +39,7 @@
 
   
 <?php include 'c_giftshopper.php' ?>
-
+<?php include 'c_categories.php' ?>
 
 
 <?php get_footer(); ?>

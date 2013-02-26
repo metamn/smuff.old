@@ -67,71 +67,7 @@ body.home {
       }
       
       
-      &#giftshopper {
-	      margin: 0 0 $pad;
-	      
-	      #title {
-	        display: block;
-	        
-	        h2 {
-	          font-size: 1em;
-	          font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-	          font-style: italic;
-	          text-transform: none;
-	          
-	          padding: 0;
-	          margin: $pad/2 0;
-	        }
-	      }
-	      
-	      #body {
-	        div {
-	          @include col(4, 4);
-            background: $very-light-gray;
-            
-            cursor: pointer;
-            overflow: hidden;
-            
-            
-            &#for-him {
-              background: $very-light-gray url(giftshopper-man.jpg) no-repeat center 0;
-            }
-            &#for-her {
-              background: $very-light-gray url(giftshopper-woman.jpg) no-repeat center 0;
-            }
-            &#for-kids {
-              background: $very-light-gray url(giftshopper-kids.jpg) no-repeat center 0;
-            }
-            &#for-office {
-              background: $very-light-gray url(giftshopper-home-office.jpg) no-repeat center 1em;
-            }
-            
-            
-            @include circle-with-text;
-            
-            p {
-              text-align: center;
-              font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-              background: $very-light-gray;
-            }
-            
-            @include tablet-portrait-and-below {
-              @include col(2, 4);
-              margin-bottom: $pad;
-            }
-            
-            
-            @include mobile-portrait-only {
-              @include block;
-              margin-bottom: $pad;
-            }
-            
-            
-            
-	        }
-	        
-	      }
-	    }
+      
 	  }
 	  
 	  
