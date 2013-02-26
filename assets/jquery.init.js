@@ -7,24 +7,60 @@ $(document).ready(function() {
   
   // Page Flip
   
-  $("#page-flip").hover(function() { //On hover...
-	  $("#page-flip img, #page-flip #inner").stop()
-		  .animate({ //Animate and expand the image and the msg_block (Width + height)
-			  width: '600px',
-			  height: '600px'
-		  }, 500);
-	  } , function() {
-	  $("#page-flip img").stop() //On hover out, go back to original size 50x52
-		  .animate({
-			  width: '50px',
-			  height: '50px'
-		  }, 220);
-	  $("#page-flip #inner").stop() //On hover out, go back to original size 50x50
-		  .animate({
-			  width: '50px',
-			  height: '50px'
-		  }, 200); //Note this one retracts a bit faster (to prevent glitching in IE)
-  });
+  $("#page-flip").hover(
+    function() { // On hover...
+      animateFlip($('#page-flip img'), false);
+	    $("#page-flip img, #page-flip #inner").stop()
+		    .animate({ //Animate and expand the image and the msg_block (Width + height)
+			    width: '600px',
+			    height: '600px'
+		    }, 500);
+	    }, 
+	  function() {
+	    $("#page-flip img").stop() //On hover out, go back to original size 50x52
+		    .animate({
+			    width: '50px',
+			    height: '50px'
+		    }, 220);
+	    $("#page-flip #inner").stop() //On hover out, go back to original size 50x50
+		    .animate({
+			    width: '50px',
+			    height: '50px'
+		    }, 200); //Note this one retracts a bit faster (to prevent glitching in IE)
+      animateFlip($('#page-flip img'), true);
+    }
+  );
+  
+  // Countinously animate the flip
+  
+  var animateFlip = function(targetElement, ok) {
+    if (ok) {
+      if ($(targetElement).css('width') == '70px') {
+        var w = '50px';
+        var h = '50px';
+        var d = 5000;
+      } else {
+        var w = '70px';
+        var h = '70px';
+        var d = 0;
+      }
+      
+      $(targetElement).animate({
+        width: w,
+        height: h
+      }, 
+      {
+        duration: 2000,
+        complete: function(){
+          animateFlip(this, true);
+        }
+      }).delay(d);
+    } else {
+      $(targetElement).clearQueue();
+      $(targetElement).stop();
+    }
+  };
+  animateFlip($('#page-flip img'), true);
   
   
   
