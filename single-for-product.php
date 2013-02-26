@@ -177,7 +177,7 @@
 </section>
   
   
-
+<?php include 'c_categories.php' ?>
 
   
 

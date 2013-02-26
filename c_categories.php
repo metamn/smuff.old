@@ -36,6 +36,33 @@
     </ul>
   </nav>
   
+  <nav id="events">
+    <header id="title">
+      <h3>Sarbatori si evenimente</h3>
+    </header>
+    <ul>
+      <li><a href="">Ziua femeii</a></li>
+      <li><a href="">Ziua copiilor</a></li>
+      <li class="separator"></li>
+      <li><a href="">Chefuri, party</a></li>
+      <li><a href="">Cadouri pentru fotografi</a></li>
+      <li><a href="">Pentru vara, strand si festivaluri</a></li>
+    </ul>
+  </nav>
+  
+  <nav id="top" class="last">
+    <header id="title">
+      <h3>Top cadouri</h3>
+    </header>
+    <ol>
+      <li><a href="">Gene din povesti</a></li>
+      <li><a href="">Corturi FieldCandy</a></li>
+      <li><a href="">Pahar de bere urias</a></li>
+      <li><a href="">Ochelari Papp-Up!</a></li>
+      <li><a href="">Pahare Muzicale</a></li>
+    </ol>
+  </nav>
+  
   <div id="search">
     <input type="text" name="search" value="Peste 400 de cadouri in stoc">
 		<input type="submit" name="submit" value="Cautare">

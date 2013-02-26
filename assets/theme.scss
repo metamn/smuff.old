@@ -96,6 +96,9 @@ a, a:active, a:visited, a:hover {
       font-family: 'Coda', serif;
       font-size: 100%;
     }
+  } @else if $where == list {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-style: italic;
   }
 }
 
@@ -163,19 +166,24 @@ a, a:active, a:visited, a:hover {
   list-style: none;
   margin: 0;
   
+  @include font(list);
+  
   li {
     padding: 0 $pad/4;
     margin-bottom: $pad/4;
+    border-bottom: 1px solid $very-light-gray;
+    
+    &:hover {
+      border-bottom: 1px solid $light-gray;
+      
+      a {
+        color: shade($color, 50%);
+      }
+    }
     
     a {
       width: 100%;
       display: block;
-      border-bottom: 1px solid $very-light-gray;
-      
-      &:hover {
-        border-bottom: 1px solid $light-gray;
-        color: shade($color, 50%);
-      }
     }
     
     &.separator {

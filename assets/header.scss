@@ -239,7 +239,18 @@ body {
 			    }
 			    
 			    ul {
-			      @include list;
+			      list-style: none;
+			      margin: 0;
+			      
+			      &#pages {
+			        @include list;
+			        margin-top: $pad;
+			        
+			        li {
+			          border-bottom: 1px solid $light-gray;
+			          padding: 0;
+			        }
+			      }
 			    }
 			    
 			    &#contact {

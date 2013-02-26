@@ -176,9 +176,10 @@
 				<br/>Cu cat alegeti mai multe criterii de cautare rezultatele vor fi mai putine.</p>
 			</div>
 		</div>	
-		
-		<?php include 'search-enhanced.php'; ?>
 	<?php } ?>
+	
+	
+	<?php include 'c_categories.php' ?>
 		
 </section>
 

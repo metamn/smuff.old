@@ -145,9 +145,11 @@
 			      <ul>
 			        <li itemprop="telephone">0740-456.127</li>
 			        <li itemprop="email">shop @ smuff.ro</li>
-			        <li class="separator"></li>
+			      </ul>
+			      <ul id="pages">
 			        <li><a href="">Despre noi</a></li>
               <li><a href="">Termeni si conditii</a></li>
+              <li><a href="">Business si media</a></li>
 			      </ul>
 			    </nav>
 			    

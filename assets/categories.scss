@@ -1,52 +1,50 @@
 #more-categories {
   @include block;
   
-  #categories, #trending {
+  #title {
+    display: none;
+  }
+  
+  nav {
     @include col(4, 0);
     
     #title {
       display: block;
     }
     
-    ul {
+    ul, ol {
       @include list;
+    }
+    
+    ol {
+      list-style: decimal;
+      margin-left: $pad;
     }
   }
   
   #search {
     @include col(2, 0);
     margin-right: 0;
-    margin-top: $pad*3 + $pad/2;
+    margin-top: $pad*4;
     
     input[type="text"] {
-      width: 84%;
+      font-style: normal;
+      font-size: small;
+      color: $gray;
+      
+      width: 86%;
     }
     
     input[type="submit"] {
       float: right;
       
       @include button($background, $color);
+      font-size: small;
     }
     
     
     #filters {
-      margin-top: $pad;
-      
-      nav {
-        .select {
-          
-          select {
-            font-size: small;
-          }  
-          
-          &:after {
-            top: -1.35em;
-          }
-          
-        }
-      
-      }
-      
+      display: none;
     }
   }
   

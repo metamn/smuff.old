@@ -5,9 +5,9 @@
     display: block;
     
     h2 {
+      @include font(list);
+       
       font-size: 1em;
-      font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-      font-style: italic;
       text-transform: none;
       
       padding: 0;
