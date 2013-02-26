@@ -3,11 +3,12 @@
   <nav id="info">
     <h3 class="outline">Informatii</h3>
     <ul>
+      <li>0740-456.127</li>
       <li><a href="">Cum cumpar?</a></li>
       <li><a href="">Contacteaza-ne</a></li>
       <li><a href="">Despre noi</a></li>
       <li><a href="">Termeni si conditii</a></li>
-      <li id="go-top"><a href="#header">Inapoi</a></li>
+      <li id="go-top"><a href="#header">Sus</a></li>
     </ul>
   </nav>
   
