@@ -104,53 +104,12 @@ a, a:active, a:visited, a:hover {
 
 
 @mixin circle-with-text {
+  @include border-radius(10em, 10em);
+  height: 18em;
   
-  @include mobile-portrait-only {
-    @include border-radius(10em, 10em);
-    height: 18em;
-
-    p {
-      margin-top: 16em;
-    }
+  p {
+    margin-top: 16em;
   }
-  
-  @include mobile-landscape-only {
-    @include border-radius(10em, 10em);
-    height: 14em;
-
-    p {
-      margin-top: 12em;
-    }
-  }
-    
-  @include tablet-portrait-only {
-    @include border-radius(10em, 10em);
-    height: 10em;
-
-    p {
-      margin-top: 8em;
-    }
-  }
-  
-  @include tablet-landscape-only {
-    @include border-radius(10em, 10em);
-    height: 14em;
-
-    p {
-      margin-top: 12em;
-    }
-  }
-  
-  
-  @include desktop-and-up {
-    @include border-radius(10em, 10em);
-    height: 18em;
-
-    p {
-      margin-top: 16em;
-    }
-  }
-  
   
 }
 

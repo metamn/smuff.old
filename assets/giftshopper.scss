@@ -46,17 +46,6 @@
         background: $very-light-gray;
       }
       
-      @include tablet-portrait-and-below {
-        @include col(2, 4);
-        margin-bottom: $pad;
-      }
-      
-      
-      @include mobile-portrait-only {
-        @include block;
-        margin-bottom: $pad;
-      }
-      
       
       
     }
