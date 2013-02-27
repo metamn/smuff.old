@@ -1003,51 +1003,6 @@ body.home .container section#sales #body #products #product #price .normal-price
 body.home .container section#sales #body #products #product #date {
   display: none;
 }
-@media (max-width: 320px) {
-  /* line 45, startpage.scss */
-  body.home .container section#sales #body #products #product {
-    width: 100%;
-    float: left;
-    margin-bottom: 1.25em;
-  }
-}
-@media only screen and (min-width: 321px) {
-  /* line 45, startpage.scss */
-  body.home .container section#sales #body #products #product {
-    width: 47.5%;
-    margin-right: 5%;
-    float: left;
-    margin-bottom: 1.25em;
-  }
-  /* line 577, mixins.scss */
-  body.home .container section#sales #body #products #product.c2 {
-    margin-right: 0;
-  }
-  /* line 577, mixins.scss */
-  body.home .container section#sales #body #products #product.c4 {
-    margin-right: 0;
-  }
-  /* line 566, mixins.scss */
-  body.home .container section#sales #body #products #product.last {
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  /* line 45, startpage.scss */
-  body.home .container section#sales #body #products #product {
-    width: 23%;
-    margin-right: 2.6%;
-    float: left;
-  }
-  /* line 577, mixins.scss */
-  body.home .container section#sales #body #products #product.c4 {
-    margin-right: 0;
-  }
-  /* line 566, mixins.scss */
-  body.home .container section#sales #body #products #product.last {
-    margin-right: 0;
-  }
-}
 
 /* line 4, footer.scss */
 body .container #footer {
@@ -2137,12 +2092,13 @@ body.single .container section #product .normal-price, body.single .container se
 #more-categories {
   width: 100%;
   float: left;
+  margin-top: 1.25em;
 }
-/* line 4, categories.scss */
+/* line 5, categories.scss */
 #more-categories #title {
   display: none;
 }
-/* line 8, categories.scss */
+/* line 9, categories.scss */
 #more-categories nav {
   width: 23%;
   margin-right: 2.6%;
@@ -2152,16 +2108,24 @@ body.single .container section #product .normal-price, body.single .container se
 #more-categories nav.last {
   margin-right: 0;
 }
-/* line 11, categories.scss */
+/* line 12, categories.scss */
 #more-categories nav #title {
   display: block;
 }
 /* line 15, categories.scss */
+#more-categories nav #title h3 {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 0.625em;
+}
+/* line 20, categories.scss */
 #more-categories nav ul, #more-categories nav ol {
   list-style: none;
   margin: 0;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-style: italic;
+  margin-top: 1.25em;
+  margin-left: 0.625em;
 }
 /* line 171, theme.scss */
 #more-categories nav ul li, #more-categories nav ol li {
@@ -2186,31 +2150,40 @@ body.single .container section #product .normal-price, body.single .container se
 #more-categories nav ul li.separator, #more-categories nav ol li.separator {
   padding: 0.625em;
 }
-/* line 19, categories.scss */
+/* line 25, categories.scss */
+#more-categories nav ul li, #more-categories nav ol li {
+  border-color: white;
+}
+/* line 28, categories.scss */
+#more-categories nav ul li:hover, #more-categories nav ol li:hover {
+  border-color: #f1f1f1;
+}
+/* line 34, categories.scss */
 #more-categories nav ol {
   list-style: decimal;
-  margin-left: 1.25em;
+  margin-left: 1.875em;
 }
-/* line 25, categories.scss */
+/* line 40, categories.scss */
 #more-categories #search {
   width: 47.5%;
   margin-right: 5%;
   float: left;
   margin-right: 0;
+  margin-left: 25.5%;
   margin-top: 5em;
 }
 /* line 566, mixins.scss */
 #more-categories #search.last {
   margin-right: 0;
 }
-/* line 30, categories.scss */
+/* line 46, categories.scss */
 #more-categories #search input[type="text"] {
   font-style: normal;
   font-size: small;
   color: #aaaaaa;
   width: 86%;
 }
-/* line 38, categories.scss */
+/* line 54, categories.scss */
 #more-categories #search input[type="submit"] {
   float: right;
   -webkit-border-radius: 6% 6%;
@@ -2234,7 +2207,7 @@ body.single .container section #product .normal-price, body.single .container se
   background-image: -o-linear-gradient(center top, #303030 5%, #4a4a4a 100%);
   background-image: linear-gradient(center top, #303030 5%, #4a4a4a 100%);
 }
-/* line 46, categories.scss */
+/* line 62, categories.scss */
 #more-categories #search #filters {
   display: none;
 }

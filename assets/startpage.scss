@@ -45,22 +45,6 @@ body.home {
 	          #product {
 	            @include col(4, 4);
               @include product-thumb;
-              
-              @include mobile-portrait-only {
-                @include block;
-                margin-bottom: $pad;
-              }
-              
-              @include mobile-landscape-and-up {
-                @include col(2, 4);
-                margin-bottom: $pad;
-              }
-              
-              @include tablet-portrait-and-up {
-                @include col(4, 4);
-              }
-              
-              
 	          }
 	        }
 	      }

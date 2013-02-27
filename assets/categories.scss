@@ -1,5 +1,6 @@
 #more-categories {
   @include block;
+  margin-top: $pad;
   
   #title {
     display: none;
@@ -10,21 +11,36 @@
     
     #title {
       display: block;
+      
+      h3 {
+        @include bordered;
+      }
     }
     
     ul, ol {
       @include list;
+      margin-top: $pad;
+      margin-left: $pad/2;
+      
+      li {
+        border-color: $background;
+        
+        &:hover {
+          border-color: $very-light-gray;
+        }
+      }
     }
     
     ol {
       list-style: decimal;
-      margin-left: $pad;
+      margin-left: $pad + $pad/2;
     }
   }
   
   #search {
     @include col(2, 0);
     margin-right: 0;
+    margin-left: 25.5%;
     margin-top: $pad*4;
     
     input[type="text"] {
