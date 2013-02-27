@@ -112,6 +112,15 @@
 </article>
 			
 
+<div id="phone-orders">
+  <h4>Aveti intrebari?</h4>
+  <p>
+    Sunati acum!
+    <br/>
+    Luni-Vineri intre 9.00-17.00 
+  </p>
+  <h4>0740-456.127</h4>
+</div>
 
 
     
@@ -176,8 +185,7 @@
 	</div>
 </section>
   
-  
-<?php include 'c_categories.php' ?>
+ 
 
   
 

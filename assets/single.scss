@@ -57,7 +57,7 @@ body.single {
 			    margin-top: $pad;
 			    
 			    #thumb {
-			     @include col(5, 0);
+			     @include col(5, 10);
 			     margin-bottom: $pad;
 			      
 			      cursor: pointer;
@@ -95,40 +95,13 @@ body.single {
 		}
 		
 		
-		#campaigns {
-		  margin-bottom: $pad;
+		#phone-orders {
+		  @include block;
+		  width: 50%;
 		  
-		  #subscribe {
-		    #subscribe-to-newsletter {
-		      @include subscribe-to-newsletter;
-		      @include block;
-		      
-		      border-left: none;
-		      border-right: none;
-		      
-		      #text {
-		        width: auto;
-		      }
-		      
-		      #facebook-connect, #text h4, #text form {
-		        @include col(3, 0);
-		      }
-		      
-		      #text {
-		        margin: 0;
-		        
-		        form {
-		          margin-top: $pad + $pad/2;
-		        }
-		      }
-		      
-		      #facebook-connect {
-		        margin-top: $pad*2;
-		        margin-right: 0;
-		      }
-		    }
-		  }
-		  
+		  position: relative;
+		  left: 52.5%;
+		  top: -$pad*3;
 		}
 		
 		
