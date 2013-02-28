@@ -5,15 +5,12 @@
   
   <nav id="categories">
     <header id="title">
-      <h3>Toate categoriile</h3>
+      <h3>Peste 400 de cadouri in</h3>
     </header>
     <ul>
-      <li><a href="">Gadget</a></li>
       <li><a href="">Gizmo</a></li>
-      <li><a href="">Lifestyle</a></li>
       <li><a href="">Self care</a></li>
       <li><a href="">Eco</a></li>
-      <li><a href="">Jucarii</a></li>
       <li><a href="">Ceasuri</a></li>
       <li><a href="">Smartphone</a></li>
       <li><a href="">Audio & Video</a></li>
@@ -63,11 +60,6 @@
     </ol>
   </nav>
   
-  <div id="search">
-    <input type="text" name="search" value="Peste 400 de cadouri in stoc">
-		<input type="submit" name="submit" value="Cautare">
-		
-		<?php include 'c_filters.php' ?>
-  </div>
+ 
  
 </section>

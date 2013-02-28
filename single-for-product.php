@@ -75,6 +75,7 @@
 	    <li id="details">Descriere</li>
 	    <li id="properties">Detalii produs</li>
 	    <li id="usage">Folosire</li>
+	    <li id="contact">Aveti intrebari?</li>
 	   </ul>  
 	   
     <div id="details">
@@ -106,21 +107,16 @@
         <li>Ecranele touchscreen capacitive nu sunt capabile sa primeasca comenzi prin materiale textile sau de cauciuc. Practic ele functioneaza pe baza a 2 conductori: unul pe ecran si unul reprezentat de degetul uman iar atunci cand cei 2 conductori se unesc ecranul preia o comanda.</li>
         <li>Gadgeturile cu ecran tactil sunt peste tot, si cererea pentru folosirea lor pe timp de frig a fost manifestata clar, astfel produsul a fost creat: Manusi Touchscreen. Ne fac viata mai usoara, realmente!</li>
       </ul>
-    </div>  
+    </div> 
+    
+    <div id="contact">
+       <strong>0740-456.127</strong>
+      Shopping info here ............
+    </div> 
 	</div>  
 	
 </article>
 			
-
-<div id="phone-orders">
-  <h4>Aveti intrebari?</h4>
-  <p>
-    Sunati acum!
-    <br/>
-    Luni-Vineri intre 9.00-17.00 
-  </p>
-  <h4>0740-456.127</h4>
-</div>
 
 
     

@@ -37,31 +37,4 @@
     }
   }
   
-  #search {
-    @include col(2, 0);
-    margin-right: 0;
-    margin-left: 25.5%;
-    margin-top: $pad*4;
-    
-    input[type="text"] {
-      font-style: normal;
-      font-size: small;
-      color: $gray;
-      
-      width: 86%;
-    }
-    
-    input[type="submit"] {
-      float: right;
-      
-      @include button($background, $color);
-      font-size: small;
-    }
-    
-    
-    #filters {
-      display: none;
-    }
-  }
-  
 }

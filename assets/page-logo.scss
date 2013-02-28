@@ -1,0 +1,29 @@
+body.page-template-page-logo-php {
+  
+  #above-container, #page-flip {
+    display: none;
+  }
+  
+  .container {
+    width: 100% !important;
+  
+    #header {
+      hgroup {
+        display: block;
+        
+        #logo {
+          @include logo($pad*7);
+        }
+        
+        #strapline {
+          display: none;
+        }
+      }
+      
+      #menu, #search {
+        display: none;
+      }
+    }
+    
+  }
+}
