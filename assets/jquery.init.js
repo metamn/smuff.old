@@ -402,18 +402,18 @@ $(document).ready(function() {
     
     return ret;
   }
-  $("#logo").html(logo());
+  $("#header #logo.artwork, #page.logo #logo, #page.logo #logo.extended, #page.logo #logo.ro").html(logo());
   resizeLogoForSafari(1);
   
   // - Show Smart Stuff
-  $("#logo").hover(
+  $("#header #logo.artwork").hover(
     function () {
-      $("#logo .smart-stuff").show(200, function() {
+      $("#header #logo.artwork .smart-stuff").show(200, function() {
         resizeLogoForSafari(2);
       });
     },
     function () {
-      $("#logo .smart-stuff").hide(); /* blinks if there is any value */
+      $("#header #logo.artwork .smart-stuff").hide(); /* blinks if there is any value */
       resizeLogoForSafari(3);
     }
   );
@@ -430,7 +430,7 @@ $(document).ready(function() {
     if (is_safari || is_opera) {
       switch(where) {
         case 1:
-          var originalWidth = $('#logo').css('width'); /* it will retrieve the px value not the em !!! */
+          var originalWidth = $('#header #logo.artwork').css('width'); /* it will retrieve the px value not the em !!! */
           var width = originalWidth.replace('px', '') - 1*16;
           break;
         case 2:
@@ -444,7 +444,7 @@ $(document).ready(function() {
           var width = 147.333;
       }
      
-      $('#logo').css('width', width + 'px');
+      $('#header #logo.artwork').css('width', width + 'px');
     }
   }
   

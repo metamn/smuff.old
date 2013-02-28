@@ -11,7 +11,7 @@ body.archive {
     border-bottom: 1px dotted;
     
     #logo {
-      @include logo($pad/4);
+      @include logo($pad/4, false, normal);
     }
     
     #strapline, #menu, #search {

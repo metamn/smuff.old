@@ -465,9 +465,25 @@ a, a:active, a:visited, a:hover {
   width: ($cells - $small-cells) * $size + $small-cells*$size/2;
 }
 
-@mixin logo($size) {
+@mixin logo($size, $hover, $type) {
+  .smart-stuff-cell, .smart-stuff {
+    display: none;
+  }
+  
+  
   height: $size * 7;
-  @include logo-width($size, 26, 3);
+  
+  @if $type == normal {
+    @include logo-width($size, 26, 3);
+  } @else if $type == extended {
+    @include logo-width($size, 51, 6);
+    
+    .smart-stuff-cell, .smart-stuff {
+      display: block;
+    }
+  } @else if $type == ro {
+    @include logo-width($size, 26, 3);
+  }
 
   .cell {
     width: $size;
@@ -487,16 +503,18 @@ a, a:active, a:visited, a:hover {
     background: $light-gray;
   }
   
-  .smart-stuff-cell, .smart-stuff {
-    display: none;
-  }
   
-  &:hover {
-    @include logo-width($size, 51, 6);
-    
-    .smart-stuff-cell {
-      display: block;
+  
+  @if $hover == true {
+  
+    &:hover {
+      @include logo-width($size, 51, 6);
+      
+      .smart-stuff-cell {
+        display: block;
+      }
     }
+    
   }
   
 }

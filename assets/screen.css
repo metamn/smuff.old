@@ -589,33 +589,33 @@ body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
 }
-/* line 472, theme.scss */
+/* line 469, theme.scss */
+body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff {
+  display: none;
+}
+/* line 488, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 478, theme.scss */
+/* line 494, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 482, theme.scss */
+/* line 498, theme.scss */
 body .container #header hgroup #logo.artwork .set {
   background: #363636;
 }
-/* line 486, theme.scss */
+/* line 502, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 490, theme.scss */
-body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff {
-  display: none;
-}
-/* line 494, theme.scss */
+/* line 510, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 497, theme.scss */
+/* line 513, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -1193,35 +1193,27 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 472, theme.scss */
+/* line 469, theme.scss */
+body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
+  display: none;
+}
+/* line 488, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 478, theme.scss */
+/* line 494, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 482, theme.scss */
+/* line 498, theme.scss */
 body.archive #header.fixed #logo .set {
   background: #363636;
 }
-/* line 486, theme.scss */
+/* line 502, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
-}
-/* line 490, theme.scss */
-body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
-  display: none;
-}
-/* line 494, theme.scss */
-body.archive #header.fixed #logo:hover {
-  width: 15em;
-}
-/* line 497, theme.scss */
-body.archive #header.fixed #logo:hover .smart-stuff-cell {
-  display: block;
 }
 /* line 17, archive.scss */
 body.archive #header.fixed #strapline, body.archive #header.fixed #menu, body.archive #header.fixed #search {
@@ -1882,6 +1874,99 @@ body.single .container section #product .normal-price, body.single .container se
   }
 }
 
+/* line 6, page.scss */
+body .container #page.logo #logo {
+  width: 100%;
+  float: left;
+  margin: 6.25em 0;
+  background: white;
+}
+/* line 11, page.scss */
+body .container #page.logo #logo.normal {
+  height: 21.875em;
+  width: 76.5625em;
+}
+/* line 469, theme.scss */
+body .container #page.logo #logo.normal .smart-stuff-cell, body .container #page.logo #logo.normal .smart-stuff {
+  display: none;
+}
+/* line 488, theme.scss */
+body .container #page.logo #logo.normal .cell {
+  width: 3.125em;
+  height: 3.125em;
+  float: left;
+}
+/* line 494, theme.scss */
+body .container #page.logo #logo.normal .small {
+  width: 1.5625em;
+}
+/* line 498, theme.scss */
+body .container #page.logo #logo.normal .set {
+  background: #363636;
+}
+/* line 502, theme.scss */
+body .container #page.logo #logo.normal .square {
+  background: #cccccc;
+}
+/* line 15, page.scss */
+body .container #page.logo #logo.extended {
+  height: 10.5em;
+  width: 72em;
+}
+/* line 469, theme.scss */
+body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
+  display: none;
+}
+/* line 481, theme.scss */
+body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
+  display: block;
+}
+/* line 488, theme.scss */
+body .container #page.logo #logo.extended .cell {
+  width: 1.5em;
+  height: 1.5em;
+  float: left;
+}
+/* line 494, theme.scss */
+body .container #page.logo #logo.extended .small {
+  width: 0.75em;
+}
+/* line 498, theme.scss */
+body .container #page.logo #logo.extended .set {
+  background: #363636;
+}
+/* line 502, theme.scss */
+body .container #page.logo #logo.extended .square {
+  background: #cccccc;
+}
+/* line 19, page.scss */
+body .container #page.logo #logo.ro {
+  height: 17.5em;
+  width: 61.25em;
+}
+/* line 469, theme.scss */
+body .container #page.logo #logo.ro .smart-stuff-cell, body .container #page.logo #logo.ro .smart-stuff {
+  display: none;
+}
+/* line 488, theme.scss */
+body .container #page.logo #logo.ro .cell {
+  width: 2.5em;
+  height: 2.5em;
+  float: left;
+}
+/* line 494, theme.scss */
+body .container #page.logo #logo.ro .small {
+  width: 1.25em;
+}
+/* line 498, theme.scss */
+body .container #page.logo #logo.ro .set {
+  background: #363636;
+}
+/* line 502, theme.scss */
+body .container #page.logo #logo.ro .square {
+  background: #cccccc;
+}
+
 /* line 1, giftshopper.scss */
 #giftshopper {
   margin: 0 0 1.25em;
@@ -2021,60 +2106,4 @@ body.single .container section #product .normal-price, body.single .container se
 #more-categories nav ol {
   list-style: decimal;
   margin-left: 1.875em;
-}
-
-/* line 3, page-logo.scss */
-body.page-template-page-logo-php #above-container, body.page-template-page-logo-php #page-flip {
-  display: none;
-}
-/* line 7, page-logo.scss */
-body.page-template-page-logo-php .container {
-  width: 100% !important;
-}
-/* line 11, page-logo.scss */
-body.page-template-page-logo-php .container #header hgroup {
-  display: block;
-}
-/* line 14, page-logo.scss */
-body.page-template-page-logo-php .container #header hgroup #logo {
-  height: 61.25em;
-  width: 214.375em;
-}
-/* line 472, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo .cell {
-  width: 8.75em;
-  height: 8.75em;
-  float: left;
-}
-/* line 478, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo .small {
-  width: 4.375em;
-}
-/* line 482, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo .set {
-  background: #363636;
-}
-/* line 486, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo .square {
-  background: #cccccc;
-}
-/* line 490, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo .smart-stuff-cell, body.page-template-page-logo-php .container #header hgroup #logo .smart-stuff {
-  display: none;
-}
-/* line 494, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo:hover {
-  width: 420em;
-}
-/* line 497, theme.scss */
-body.page-template-page-logo-php .container #header hgroup #logo:hover .smart-stuff-cell {
-  display: block;
-}
-/* line 18, page-logo.scss */
-body.page-template-page-logo-php .container #header hgroup #strapline {
-  display: none;
-}
-/* line 23, page-logo.scss */
-body.page-template-page-logo-php .container #header #menu, body.page-template-page-logo-php .container #header #search {
-  display: none;
 }
