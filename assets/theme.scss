@@ -466,7 +466,7 @@ a, a:active, a:visited, a:hover {
 }
 
 @mixin logo($size, $hover, $type) {
-  .smart-stuff-cell, .smart-stuff {
+  .smart-stuff-cell, .smart-stuff, .ro-cell, .ro {
     display: none;
   }
   
@@ -475,14 +475,20 @@ a, a:active, a:visited, a:hover {
   
   @if $type == normal {
     @include logo-width($size, 26, 3);
+  
   } @else if $type == extended {
     @include logo-width($size, 51, 6);
     
     .smart-stuff-cell, .smart-stuff {
       display: block;
     }
+  
   } @else if $type == ro {
-    @include logo-width($size, 26, 3);
+    @include logo-width($size, 36, 6);
+    
+    .ro-cell, .ro {
+      display: block;
+    }
   }
 
   .cell {
@@ -495,7 +501,7 @@ a, a:active, a:visited, a:hover {
     width: $size / 2;
   }
 
-  .set {
+  .set, .ro {
     background: $color;
   }
   

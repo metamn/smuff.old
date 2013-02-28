@@ -590,32 +590,32 @@ body .container #header hgroup #logo.artwork {
   width: 10.20833em;
 }
 /* line 469, theme.scss */
-body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff {
+body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff, body .container #header hgroup #logo.artwork .ro-cell, body .container #header hgroup #logo.artwork .ro {
   display: none;
 }
-/* line 488, theme.scss */
+/* line 494, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 494, theme.scss */
+/* line 500, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 498, theme.scss */
-body .container #header hgroup #logo.artwork .set {
+/* line 504, theme.scss */
+body .container #header hgroup #logo.artwork .set, body .container #header hgroup #logo.artwork .ro {
   background: #363636;
 }
-/* line 502, theme.scss */
+/* line 508, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 510, theme.scss */
+/* line 516, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 513, theme.scss */
+/* line 519, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -1194,24 +1194,24 @@ body.archive #header.fixed #logo {
   width: 7.65625em;
 }
 /* line 469, theme.scss */
-body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff {
+body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff, body.archive #header.fixed #logo .ro-cell, body.archive #header.fixed #logo .ro {
   display: none;
 }
-/* line 488, theme.scss */
+/* line 494, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 494, theme.scss */
+/* line 500, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 498, theme.scss */
-body.archive #header.fixed #logo .set {
+/* line 504, theme.scss */
+body.archive #header.fixed #logo .set, body.archive #header.fixed #logo .ro {
   background: #363636;
 }
-/* line 502, theme.scss */
+/* line 508, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
@@ -1887,24 +1887,24 @@ body .container #page.logo #logo.normal {
   width: 76.5625em;
 }
 /* line 469, theme.scss */
-body .container #page.logo #logo.normal .smart-stuff-cell, body .container #page.logo #logo.normal .smart-stuff {
+body .container #page.logo #logo.normal .smart-stuff-cell, body .container #page.logo #logo.normal .smart-stuff, body .container #page.logo #logo.normal .ro-cell, body .container #page.logo #logo.normal .ro {
   display: none;
 }
-/* line 488, theme.scss */
+/* line 494, theme.scss */
 body .container #page.logo #logo.normal .cell {
   width: 3.125em;
   height: 3.125em;
   float: left;
 }
-/* line 494, theme.scss */
+/* line 500, theme.scss */
 body .container #page.logo #logo.normal .small {
   width: 1.5625em;
 }
-/* line 498, theme.scss */
-body .container #page.logo #logo.normal .set {
+/* line 504, theme.scss */
+body .container #page.logo #logo.normal .set, body .container #page.logo #logo.normal .ro {
   background: #363636;
 }
-/* line 502, theme.scss */
+/* line 508, theme.scss */
 body .container #page.logo #logo.normal .square {
   background: #cccccc;
 }
@@ -1914,55 +1914,59 @@ body .container #page.logo #logo.extended {
   width: 72em;
 }
 /* line 469, theme.scss */
-body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
+body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff, body .container #page.logo #logo.extended .ro-cell, body .container #page.logo #logo.extended .ro {
   display: none;
 }
-/* line 481, theme.scss */
+/* line 482, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
   display: block;
 }
-/* line 488, theme.scss */
+/* line 494, theme.scss */
 body .container #page.logo #logo.extended .cell {
   width: 1.5em;
   height: 1.5em;
   float: left;
 }
-/* line 494, theme.scss */
+/* line 500, theme.scss */
 body .container #page.logo #logo.extended .small {
   width: 0.75em;
 }
-/* line 498, theme.scss */
-body .container #page.logo #logo.extended .set {
+/* line 504, theme.scss */
+body .container #page.logo #logo.extended .set, body .container #page.logo #logo.extended .ro {
   background: #363636;
 }
-/* line 502, theme.scss */
+/* line 508, theme.scss */
 body .container #page.logo #logo.extended .square {
   background: #cccccc;
 }
 /* line 19, page.scss */
 body .container #page.logo #logo.ro {
-  height: 17.5em;
-  width: 61.25em;
+  height: 15.3125em;
+  width: 72.1875em;
 }
 /* line 469, theme.scss */
-body .container #page.logo #logo.ro .smart-stuff-cell, body .container #page.logo #logo.ro .smart-stuff {
+body .container #page.logo #logo.ro .smart-stuff-cell, body .container #page.logo #logo.ro .smart-stuff, body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: none;
 }
-/* line 488, theme.scss */
-body .container #page.logo #logo.ro .cell {
-  width: 2.5em;
-  height: 2.5em;
-  float: left;
+/* line 489, theme.scss */
+body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
+  display: block;
 }
 /* line 494, theme.scss */
-body .container #page.logo #logo.ro .small {
-  width: 1.25em;
+body .container #page.logo #logo.ro .cell {
+  width: 2.1875em;
+  height: 2.1875em;
+  float: left;
 }
-/* line 498, theme.scss */
-body .container #page.logo #logo.ro .set {
+/* line 500, theme.scss */
+body .container #page.logo #logo.ro .small {
+  width: 1.09375em;
+}
+/* line 504, theme.scss */
+body .container #page.logo #logo.ro .set, body .container #page.logo #logo.ro .ro {
   background: #363636;
 }
-/* line 502, theme.scss */
+/* line 508, theme.scss */
 body .container #page.logo #logo.ro .square {
   background: #cccccc;
 }

@@ -194,8 +194,8 @@ $(document).ready(function() {
   function logo() {
     var matrix = new Array(7);
     for (y = 0; y < 7; y++) {
-      matrix[y] = new Array(51);
-      for (x = 0; x < 51; x++) {
+      matrix[y] = new Array(61);
+      for (x = 0; x < 61; x++) {
         matrix[y][x] = '';
       }
     }
@@ -361,7 +361,35 @@ $(document).ready(function() {
     
     matrix[0][50] = 'set';
     matrix[4][50] = 'set';
-        
+       
+    
+    // .ro
+    
+    
+    matrix[4][52] = 'ro';
+    
+    matrix[0][54] = 'ro';
+    matrix[1][54] = 'ro';
+    matrix[2][54] = 'ro';
+    matrix[3][54] = 'ro';
+    
+    matrix[0][55] = 'ro';
+    
+    matrix[0][56] = 'ro';
+    matrix[1][56] = 'ro';
+    
+    matrix[0][58] = 'ro';
+    matrix[1][58] = 'ro';
+    matrix[2][58] = 'ro';
+    matrix[3][58] = 'ro';
+    
+    matrix[0][59] = 'ro';
+    matrix[3][59] = 'ro';
+    
+    matrix[0][60] = 'ro';
+    matrix[1][60] = 'ro';
+    matrix[2][60] = 'ro';
+    matrix[3][60] = 'ro';
         
         
     var ret = "";
@@ -369,7 +397,7 @@ $(document).ready(function() {
     var klass = '';
     
     for (y = 0; y < 7; y++) {
-      for (x = 0; x < 51; x++) {
+      for (x = 0; x < 61; x++) {
         switch(x) {
           case 16:
           case 20:
@@ -377,12 +405,28 @@ $(document).ready(function() {
           case 38:
           case 45:
           case 48:
+          case 51:
+          case 53:
+          case 57:
             size = ' small ';
             break;
           default:
             size = '';
         }
         
+        // .ro
+        if (x >= 51 && x <= 60) {
+          klass = ' ro-cell ';
+        } else {
+          klass = '';
+        }
+        
+        if (x == 51) {
+          ret += "<div class='ro'>";
+        }
+        
+        
+        // smart stuff
         if (x >= 17 && x < 42) {
           klass = ' smart-stuff-cell ';
         } else {
@@ -397,6 +441,10 @@ $(document).ready(function() {
         }
         
         ret += "<div id='cell-" + x + "-" + y + "' class='cell " + size + klass + matrix[y][x] + "'></div>";
+        
+        if (x == 60) {
+          ret += "</div>";
+        }
       }
     }
     

@@ -17,7 +17,7 @@ body {
         }
         
         &.ro {
-          @include logo($pad*2, false, normal);
+          @include logo($pad*1.75, false, ro);
         }
       }
     }
