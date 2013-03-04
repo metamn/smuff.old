@@ -11,15 +11,23 @@ body {
         background: $background;
         
         &.normal {
-          @include logo($pad*2.5, false, normal);
+          @include logo($pad*2.5, normal);
+          
+          &:hover {
+          	width: 76.5625em !important;
+          }
         }
         
         &.extended {
-          @include logo($pad*1.2, false, extended);
+          @include logo($pad*1.2, extended);
         }
         
         &.ro {
-          @include logo($pad*1.75, false, ro);
+          @include logo($pad*1.75, ro);
+          
+          &:hover {
+          	width: 72.1875em !important;
+          }
         }
       }
     }

@@ -589,33 +589,33 @@ body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
 }
-/* line 483, theme.scss */
+/* line 482, theme.scss */
 body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff, body .container #header hgroup #logo.artwork .ro-cell, body .container #header hgroup #logo.artwork .ro {
   display: none;
 }
-/* line 508, theme.scss */
+/* line 507, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 514, theme.scss */
+/* line 513, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 518, theme.scss */
+/* line 517, theme.scss */
 body .container #header hgroup #logo.artwork .set, body .container #header hgroup #logo.artwork .ro {
   background: #363636;
 }
-/* line 522, theme.scss */
+/* line 521, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 527, theme.scss */
+/* line 526, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 530, theme.scss */
+/* line 529, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -1196,33 +1196,33 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 483, theme.scss */
+/* line 482, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff, body.archive #header.fixed #logo .ro-cell, body.archive #header.fixed #logo .ro {
   display: none;
 }
-/* line 508, theme.scss */
+/* line 507, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 514, theme.scss */
+/* line 513, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 518, theme.scss */
+/* line 517, theme.scss */
 body.archive #header.fixed #logo .set, body.archive #header.fixed #logo .ro {
   background: #363636;
 }
-/* line 522, theme.scss */
+/* line 521, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 527, theme.scss */
+/* line 526, theme.scss */
 body.archive #header.fixed #logo:hover {
   width: 15em;
 }
-/* line 530, theme.scss */
+/* line 529, theme.scss */
 body.archive #header.fixed #logo:hover .smart-stuff-cell {
   display: block;
 }
@@ -1919,113 +1919,121 @@ body .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
 }
-/* line 483, theme.scss */
+/* line 482, theme.scss */
 body .container #page.logo #logo.normal .smart-stuff-cell, body .container #page.logo #logo.normal .smart-stuff, body .container #page.logo #logo.normal .ro-cell, body .container #page.logo #logo.normal .ro {
   display: none;
 }
-/* line 508, theme.scss */
+/* line 507, theme.scss */
 body .container #page.logo #logo.normal .cell {
   width: 3.125em;
   height: 3.125em;
   float: left;
 }
-/* line 514, theme.scss */
+/* line 513, theme.scss */
 body .container #page.logo #logo.normal .small {
   width: 1.5625em;
 }
-/* line 518, theme.scss */
+/* line 517, theme.scss */
 body .container #page.logo #logo.normal .set, body .container #page.logo #logo.normal .ro {
   background: #363636;
 }
-/* line 522, theme.scss */
+/* line 521, theme.scss */
 body .container #page.logo #logo.normal .square {
   background: #cccccc;
 }
-/* line 527, theme.scss */
+/* line 526, theme.scss */
 body .container #page.logo #logo.normal:hover {
   width: 150em;
 }
-/* line 530, theme.scss */
+/* line 529, theme.scss */
 body .container #page.logo #logo.normal:hover .smart-stuff-cell {
   display: block;
 }
-/* line 17, page.scss */
+/* line 16, page.scss */
+body .container #page.logo #logo.normal:hover {
+  width: 76.5625em !important;
+}
+/* line 21, page.scss */
 body .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
 }
-/* line 483, theme.scss */
+/* line 482, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff, body .container #page.logo #logo.extended .ro-cell, body .container #page.logo #logo.extended .ro {
   display: none;
 }
-/* line 496, theme.scss */
+/* line 495, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
   display: block;
 }
-/* line 508, theme.scss */
+/* line 507, theme.scss */
 body .container #page.logo #logo.extended .cell {
   width: 1.5em;
   height: 1.5em;
   float: left;
 }
-/* line 514, theme.scss */
+/* line 513, theme.scss */
 body .container #page.logo #logo.extended .small {
   width: 0.75em;
 }
-/* line 518, theme.scss */
+/* line 517, theme.scss */
 body .container #page.logo #logo.extended .set, body .container #page.logo #logo.extended .ro {
   background: #363636;
 }
-/* line 522, theme.scss */
+/* line 521, theme.scss */
 body .container #page.logo #logo.extended .square {
   background: #cccccc;
 }
-/* line 527, theme.scss */
+/* line 526, theme.scss */
 body .container #page.logo #logo.extended:hover {
   width: 72em;
 }
-/* line 530, theme.scss */
+/* line 529, theme.scss */
 body .container #page.logo #logo.extended:hover .smart-stuff-cell {
   display: block;
 }
-/* line 21, page.scss */
+/* line 25, page.scss */
 body .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;
 }
-/* line 483, theme.scss */
+/* line 482, theme.scss */
 body .container #page.logo #logo.ro .smart-stuff-cell, body .container #page.logo #logo.ro .smart-stuff, body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: none;
 }
-/* line 503, theme.scss */
+/* line 502, theme.scss */
 body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: block;
 }
-/* line 508, theme.scss */
+/* line 507, theme.scss */
 body .container #page.logo #logo.ro .cell {
   width: 2.1875em;
   height: 2.1875em;
   float: left;
 }
-/* line 514, theme.scss */
+/* line 513, theme.scss */
 body .container #page.logo #logo.ro .small {
   width: 1.09375em;
 }
-/* line 518, theme.scss */
+/* line 517, theme.scss */
 body .container #page.logo #logo.ro .set, body .container #page.logo #logo.ro .ro {
   background: #363636;
 }
-/* line 522, theme.scss */
+/* line 521, theme.scss */
 body .container #page.logo #logo.ro .square {
   background: #cccccc;
 }
-/* line 527, theme.scss */
+/* line 526, theme.scss */
 body .container #page.logo #logo.ro:hover {
   width: 105em;
 }
-/* line 530, theme.scss */
+/* line 529, theme.scss */
 body .container #page.logo #logo.ro:hover .smart-stuff-cell {
   display: block;
+}
+/* line 28, page.scss */
+body .container #page.logo #logo.ro:hover {
+  width: 72.1875em !important;
 }
 
 /* line 1, giftshopper.scss */

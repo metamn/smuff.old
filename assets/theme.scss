@@ -466,7 +466,6 @@ a, a:active, a:visited, a:hover {
 ------------------------------------------------------------------------------
 // - params:
 // $size: the logo size
-// $hover: animate on hover or not (UNFORTUNATELLY NOT WORKING)
 // $type: (normal, extended, ro) standing for smuff, smart stuff, smuff.ro
 //
 // - the formula for the logo width is:
@@ -479,7 +478,7 @@ a, a:active, a:visited, a:hover {
   width: ($cells - $small-cells) * $size + $small-cells*$size/2;
 }
 
-@mixin logo($size, $hover, $type) {
+@mixin logo($size, $type) {
   .smart-stuff-cell, .smart-stuff, .ro-cell, .ro {
     display: none;
   }
