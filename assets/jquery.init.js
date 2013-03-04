@@ -456,15 +456,24 @@ $(document).ready(function() {
   // - Show Smart Stuff
   $("#header #logo.artwork").hover(
     function () {
-      $("#header #logo.artwork .smart-stuff").show(200, function() {
-        resizeLogoForSafari(2);
-      });
+      if (hoverIsPossible()) {
+        $("#header #logo.artwork .smart-stuff").show(200, function() {
+          resizeLogoForSafari(2);
+        });
+      }
     },
     function () {
-      $("#header #logo.artwork .smart-stuff").hide(); /* blinks if there is any value */
-      resizeLogoForSafari(3);
+      if (hoverIsPossible()) {
+        $("#header #logo.artwork .smart-stuff").hide(); /* blinks if there is any value */
+        resizeLogoForSafari(3);
+      }
     }
   );
+  
+  // Check if logo hover is deactivated or not
+  function hoverIsPossible() {
+  	return !($("#header").hasClass('fixed'));
+  }
   
   // In Safari the logo width must be -1em, for Smart Stuff -2em
   // - this function deals also with logo hovers

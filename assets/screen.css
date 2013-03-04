@@ -589,33 +589,33 @@ body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
 }
-/* line 478, theme.scss */
+/* line 483, theme.scss */
 body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff, body .container #header hgroup #logo.artwork .ro-cell, body .container #header hgroup #logo.artwork .ro {
   display: none;
 }
-/* line 503, theme.scss */
+/* line 508, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 509, theme.scss */
+/* line 514, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 513, theme.scss */
+/* line 518, theme.scss */
 body .container #header hgroup #logo.artwork .set, body .container #header hgroup #logo.artwork .ro {
   background: #363636;
 }
-/* line 517, theme.scss */
+/* line 522, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 525, theme.scss */
+/* line 527, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 528, theme.scss */
+/* line 530, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -1196,33 +1196,45 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 478, theme.scss */
+/* line 483, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff, body.archive #header.fixed #logo .ro-cell, body.archive #header.fixed #logo .ro {
   display: none;
 }
-/* line 503, theme.scss */
+/* line 508, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 509, theme.scss */
+/* line 514, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 513, theme.scss */
+/* line 518, theme.scss */
 body.archive #header.fixed #logo .set, body.archive #header.fixed #logo .ro {
   background: #363636;
 }
-/* line 517, theme.scss */
+/* line 522, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
-/* line 17, archive.scss */
+/* line 527, theme.scss */
+body.archive #header.fixed #logo:hover {
+  width: 15em;
+}
+/* line 530, theme.scss */
+body.archive #header.fixed #logo:hover .smart-stuff-cell {
+  display: block;
+}
+/* line 16, archive.scss */
+body.archive #header.fixed #logo:hover {
+  width: 10.2083em !important;
+}
+/* line 21, archive.scss */
 body.archive #header.fixed #strapline, body.archive #header.fixed #menu, body.archive #header.fixed #search {
   display: none;
 }
-/* line 22, archive.scss */
+/* line 26, archive.scss */
 body.archive #archive hgroup.fixed {
   width: 77.5%;
   margin: 0 auto;
@@ -1232,37 +1244,37 @@ body.archive #archive hgroup.fixed {
   background: url(background.png);
 }
 @media only screen and (max-width: 1024px) {
-  /* line 22, archive.scss */
+  /* line 26, archive.scss */
   body.archive #archive hgroup.fixed {
     width: 85.5%;
   }
 }
 @media only screen and (min-width: 1599px) {
-  /* line 22, archive.scss */
+  /* line 26, archive.scss */
   body.archive #archive hgroup.fixed {
     width: 57.5%;
   }
 }
-/* line 30, archive.scss */
+/* line 34, archive.scss */
 body.archive #archive hgroup.fixed header {
   width: 23%;
 }
-/* line 34, archive.scss */
+/* line 38, archive.scss */
 body.archive #archive hgroup.fixed #filters {
   width: 74.5%;
 }
-/* line 40, archive.scss */
+/* line 44, archive.scss */
 body.archive #archive {
   width: 100%;
   float: left;
 }
-/* line 44, archive.scss */
+/* line 48, archive.scss */
 body.archive #archive hgroup {
   width: 100%;
   float: left;
   margin-bottom: 1.25em;
 }
-/* line 48, archive.scss */
+/* line 52, archive.scss */
 body.archive #archive hgroup header {
   width: 18%;
   margin-right: 2.5%;
@@ -1272,17 +1284,17 @@ body.archive #archive hgroup header {
 body.archive #archive hgroup header.last {
   margin-right: 0;
 }
-/* line 51, archive.scss */
+/* line 55, archive.scss */
 body.archive #archive hgroup header h2 {
   padding: 0.625em 0 0 0.625em;
 }
-/* line 56, archive.scss */
+/* line 60, archive.scss */
 body.archive #archive hgroup #filters {
   width: 79.5%;
   float: left;
   padding-top: 0.3125em;
 }
-/* line 61, archive.scss */
+/* line 65, archive.scss */
 body.archive #archive hgroup #filters nav {
   width: 23%;
   margin-right: 2.6%;
@@ -1293,24 +1305,24 @@ body.archive #archive hgroup #filters nav {
 body.archive #archive hgroup #filters nav.last {
   margin-right: 0;
 }
-/* line 65, archive.scss */
+/* line 69, archive.scss */
 body.archive #archive hgroup #filters nav select {
   font-size: small;
 }
-/* line 69, archive.scss */
+/* line 73, archive.scss */
 body.archive #archive hgroup #filters nav .select:after {
   top: -1.35em;
 }
-/* line 73, archive.scss */
+/* line 77, archive.scss */
 body.archive #archive hgroup #filters nav.last {
   margin-right: 0;
 }
-/* line 81, archive.scss */
+/* line 85, archive.scss */
 body.archive #archive #products {
   width: 100%;
   float: left;
 }
-/* line 84, archive.scss */
+/* line 88, archive.scss */
 body.archive #archive #products #product {
   width: 23%;
   margin-right: 2.6%;
@@ -1466,7 +1478,7 @@ body.archive #archive #products #product #price .normal-price, body.archive #arc
 body.archive #archive #products #product #date {
   display: none;
 }
-/* line 91, archive.scss */
+/* line 95, archive.scss */
 body.archive #archive #products #product .normal-price {
   background: white;
 }
@@ -1907,89 +1919,113 @@ body .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
 }
-/* line 478, theme.scss */
+/* line 483, theme.scss */
 body .container #page.logo #logo.normal .smart-stuff-cell, body .container #page.logo #logo.normal .smart-stuff, body .container #page.logo #logo.normal .ro-cell, body .container #page.logo #logo.normal .ro {
   display: none;
 }
-/* line 503, theme.scss */
+/* line 508, theme.scss */
 body .container #page.logo #logo.normal .cell {
   width: 3.125em;
   height: 3.125em;
   float: left;
 }
-/* line 509, theme.scss */
+/* line 514, theme.scss */
 body .container #page.logo #logo.normal .small {
   width: 1.5625em;
 }
-/* line 513, theme.scss */
+/* line 518, theme.scss */
 body .container #page.logo #logo.normal .set, body .container #page.logo #logo.normal .ro {
   background: #363636;
 }
-/* line 517, theme.scss */
+/* line 522, theme.scss */
 body .container #page.logo #logo.normal .square {
   background: #cccccc;
+}
+/* line 527, theme.scss */
+body .container #page.logo #logo.normal:hover {
+  width: 150em;
+}
+/* line 530, theme.scss */
+body .container #page.logo #logo.normal:hover .smart-stuff-cell {
+  display: block;
 }
 /* line 17, page.scss */
 body .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
 }
-/* line 478, theme.scss */
+/* line 483, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff, body .container #page.logo #logo.extended .ro-cell, body .container #page.logo #logo.extended .ro {
   display: none;
 }
-/* line 491, theme.scss */
+/* line 496, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
   display: block;
 }
-/* line 503, theme.scss */
+/* line 508, theme.scss */
 body .container #page.logo #logo.extended .cell {
   width: 1.5em;
   height: 1.5em;
   float: left;
 }
-/* line 509, theme.scss */
+/* line 514, theme.scss */
 body .container #page.logo #logo.extended .small {
   width: 0.75em;
 }
-/* line 513, theme.scss */
+/* line 518, theme.scss */
 body .container #page.logo #logo.extended .set, body .container #page.logo #logo.extended .ro {
   background: #363636;
 }
-/* line 517, theme.scss */
+/* line 522, theme.scss */
 body .container #page.logo #logo.extended .square {
   background: #cccccc;
+}
+/* line 527, theme.scss */
+body .container #page.logo #logo.extended:hover {
+  width: 72em;
+}
+/* line 530, theme.scss */
+body .container #page.logo #logo.extended:hover .smart-stuff-cell {
+  display: block;
 }
 /* line 21, page.scss */
 body .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;
 }
-/* line 478, theme.scss */
+/* line 483, theme.scss */
 body .container #page.logo #logo.ro .smart-stuff-cell, body .container #page.logo #logo.ro .smart-stuff, body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: none;
 }
-/* line 498, theme.scss */
+/* line 503, theme.scss */
 body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: block;
 }
-/* line 503, theme.scss */
+/* line 508, theme.scss */
 body .container #page.logo #logo.ro .cell {
   width: 2.1875em;
   height: 2.1875em;
   float: left;
 }
-/* line 509, theme.scss */
+/* line 514, theme.scss */
 body .container #page.logo #logo.ro .small {
   width: 1.09375em;
 }
-/* line 513, theme.scss */
+/* line 518, theme.scss */
 body .container #page.logo #logo.ro .set, body .container #page.logo #logo.ro .ro {
   background: #363636;
 }
-/* line 517, theme.scss */
+/* line 522, theme.scss */
 body .container #page.logo #logo.ro .square {
   background: #cccccc;
+}
+/* line 527, theme.scss */
+body .container #page.logo #logo.ro:hover {
+  width: 105em;
+}
+/* line 530, theme.scss */
+body .container #page.logo #logo.ro:hover .smart-stuff-cell {
+  display: block;
 }
 
 /* line 1, giftshopper.scss */

@@ -12,6 +12,10 @@ body.archive {
     
     #logo {
       @include logo($pad/4, false, normal);
+      
+      &:hover {
+      	width: 10.2083em !important;
+      }
     }
     
     #strapline, #menu, #search {

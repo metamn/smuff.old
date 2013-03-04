@@ -464,6 +464,11 @@ a, a:active, a:visited, a:hover {
 
 /* Logo
 ------------------------------------------------------------------------------
+// - params:
+// $size: the logo size
+// $hover: animate on hover or not (UNFORTUNATELLY NOT WORKING)
+// $type: (normal, extended, ro) standing for smuff, smart stuff, smuff.ro
+//
 // - the formula for the logo width is:
 // x - the number of cells
 // z - the number of .small cells
@@ -519,17 +524,12 @@ a, a:active, a:visited, a:hover {
   }
   
   
-  
-  @if $hover == true {
-  
-    &:hover {
-      @include logo-width($size, 51, 6);
-      
-      .smart-stuff-cell {
-        display: block;
-      }
-    }
+  &:hover {
+    @include logo-width($size, 51, 6);
     
+    .smart-stuff-cell {
+      display: block;
+    }
   }
   
 }
