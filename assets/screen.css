@@ -1021,20 +1021,7 @@ body .container #footer #info {
 }
 /* line 14, footer.scss */
 body .container #footer #info ul {
-  display: block;
-  margin: 0;
-}
-/* line 492, mixins.scss */
-body .container #footer #info ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0;
-  float: left;
-  margin-right: 1.25em;
-}
-/* line 499, mixins.scss */
-body .container #footer #info ul li.last {
-  margin-right: 0;
+  @isnclude list-inline;
 }
 /* line 17, footer.scss */
 body .container #footer #info ul #go-top {
@@ -1874,14 +1861,20 @@ body.single .container section #product .normal-price, body.single .container se
   }
 }
 
-/* line 6, page.scss */
+/* line 4, page.scss */
+body .container #page.logo {
+  width: 100%;
+  float: left;
+  background: white;
+}
+/* line 8, page.scss */
 body .container #page.logo #logo {
   width: 100%;
   float: left;
   margin: 6.25em 0;
   background: white;
 }
-/* line 11, page.scss */
+/* line 13, page.scss */
 body .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
@@ -1908,7 +1901,7 @@ body .container #page.logo #logo.normal .set, body .container #page.logo #logo.n
 body .container #page.logo #logo.normal .square {
   background: #cccccc;
 }
-/* line 15, page.scss */
+/* line 17, page.scss */
 body .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
@@ -1939,7 +1932,7 @@ body .container #page.logo #logo.extended .set, body .container #page.logo #logo
 body .container #page.logo #logo.extended .square {
   background: #cccccc;
 }
-/* line 19, page.scss */
+/* line 21, page.scss */
 body .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;

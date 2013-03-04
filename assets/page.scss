@@ -2,6 +2,8 @@ body {
   
   .container {
     #page.logo {
+      @include block;
+      background: $background;
     
       #logo {
         @include block;
