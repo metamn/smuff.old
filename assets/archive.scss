@@ -20,8 +20,8 @@ body.archive {
   }
   
   #archive hgroup.fixed {
-    @include container(10%);
-    margin-left: 10%;
+    @include container(12.5%);
+    margin-left: 12.5%;
     
     height: 3.75em;
     padding-top: $pad/4;

@@ -589,33 +589,33 @@ body .container #header hgroup #logo.artwork {
   height: 2.91667em;
   width: 10.20833em;
 }
-/* line 469, theme.scss */
+/* line 478, theme.scss */
 body .container #header hgroup #logo.artwork .smart-stuff-cell, body .container #header hgroup #logo.artwork .smart-stuff, body .container #header hgroup #logo.artwork .ro-cell, body .container #header hgroup #logo.artwork .ro {
   display: none;
 }
-/* line 494, theme.scss */
+/* line 503, theme.scss */
 body .container #header hgroup #logo.artwork .cell {
   width: 0.41667em;
   height: 0.41667em;
   float: left;
 }
-/* line 500, theme.scss */
+/* line 509, theme.scss */
 body .container #header hgroup #logo.artwork .small {
   width: 0.20833em;
 }
-/* line 504, theme.scss */
+/* line 513, theme.scss */
 body .container #header hgroup #logo.artwork .set, body .container #header hgroup #logo.artwork .ro {
   background: #363636;
 }
-/* line 508, theme.scss */
+/* line 517, theme.scss */
 body .container #header hgroup #logo.artwork .square {
   background: #cccccc;
 }
-/* line 516, theme.scss */
+/* line 525, theme.scss */
 body .container #header hgroup #logo.artwork:hover {
   width: 20em;
 }
-/* line 519, theme.scss */
+/* line 528, theme.scss */
 body .container #header hgroup #logo.artwork:hover .smart-stuff-cell {
   display: block;
 }
@@ -912,7 +912,7 @@ body.home .container section#campaigns #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 372, theme.scss */
+/* line 378, theme.scss */
 body.home .container section#campaigns #navigation ul {
   display: block;
   margin: 0;
@@ -929,17 +929,17 @@ body.home .container section#campaigns #navigation ul li {
 body.home .container section#campaigns #navigation ul li.last {
   margin-right: 0;
 }
-/* line 375, theme.scss */
+/* line 381, theme.scss */
 body.home .container section#campaigns #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 381, theme.scss */
+/* line 387, theme.scss */
 body.home .container section#campaigns #navigation ul #left {
   background: url(left-arrow-black.png);
 }
-/* line 385, theme.scss */
+/* line 391, theme.scss */
 body.home .container section#campaigns #navigation ul #right {
   background: url(right-arrow-black.png);
 }
@@ -963,43 +963,46 @@ body.home .container section#sales #body #products #product.c4 {
 body.home .container section#sales #body #products #product.last {
   margin-right: 0;
 }
-/* line 417, theme.scss */
+/* line 423, theme.scss */
+body.home .container section#sales #body #products #product #image, body.home .container section#sales #body #products #product #title, body.home .container section#sales #body #products #product #price {
+  background: white;
+}
+/* line 427, theme.scss */
 body.home .container section#sales #body #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 421, theme.scss */
+/* line 431, theme.scss */
 body.home .container section#sales #body #products #product #title, body.home .container section#sales #body #products #product #price {
   margin: 0.625em 0.3125em;
-  background: white url(background.png);
 }
-/* line 427, theme.scss */
+/* line 436, theme.scss */
 body.home .container section#sales #body #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 431, theme.scss */
+/* line 440, theme.scss */
 body.home .container section#sales #body #products #product #title h3 {
   padding: 0;
 }
 @media only screen and (min-width: 686px) and (max-width: 768px) {
-  /* line 427, theme.scss */
+  /* line 436, theme.scss */
   body.home .container section#sales #body #products #product #title {
     min-height: 5em;
   }
 }
-/* line 440, theme.scss */
+/* line 449, theme.scss */
 body.home .container section#sales #body #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 444, theme.scss */
-body.home .container section#sales #body #products #product #price .normal-price {
+/* line 453, theme.scss */
+body.home .container section#sales #body #products #product #price .normal-price, body.home .container section#sales #body #products #product #price .old-price {
   padding-right: 0;
 }
-/* line 449, theme.scss */
+/* line 458, theme.scss */
 body.home .container section#sales #body #products #product #date {
   display: none;
 }
@@ -1021,7 +1024,20 @@ body .container #footer #info {
 }
 /* line 14, footer.scss */
 body .container #footer #info ul {
-  @isnclude list-inline;
+  display: block;
+  margin: 0;
+}
+/* line 492, mixins.scss */
+body .container #footer #info ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+  margin-right: 1.25em;
+}
+/* line 499, mixins.scss */
+body .container #footer #info ul li.last {
+  margin-right: 0;
 }
 /* line 17, footer.scss */
 body .container #footer #info ul #go-top {
@@ -1180,25 +1196,25 @@ body.archive #header.fixed #logo {
   height: 2.1875em;
   width: 7.65625em;
 }
-/* line 469, theme.scss */
+/* line 478, theme.scss */
 body.archive #header.fixed #logo .smart-stuff-cell, body.archive #header.fixed #logo .smart-stuff, body.archive #header.fixed #logo .ro-cell, body.archive #header.fixed #logo .ro {
   display: none;
 }
-/* line 494, theme.scss */
+/* line 503, theme.scss */
 body.archive #header.fixed #logo .cell {
   width: 0.3125em;
   height: 0.3125em;
   float: left;
 }
-/* line 500, theme.scss */
+/* line 509, theme.scss */
 body.archive #header.fixed #logo .small {
   width: 0.15625em;
 }
-/* line 504, theme.scss */
+/* line 513, theme.scss */
 body.archive #header.fixed #logo .set, body.archive #header.fixed #logo .ro {
   background: #363636;
 }
-/* line 508, theme.scss */
+/* line 517, theme.scss */
 body.archive #header.fixed #logo .square {
   background: #cccccc;
 }
@@ -1208,9 +1224,9 @@ body.archive #header.fixed #strapline, body.archive #header.fixed #menu, body.ar
 }
 /* line 22, archive.scss */
 body.archive #archive hgroup.fixed {
-  width: 80%;
+  width: 77.5%;
   margin: 0 auto;
-  margin-left: 10%;
+  margin-left: 12.5%;
   height: 3.75em;
   padding-top: 0.3125em;
   background: url(background.png);
@@ -1218,13 +1234,13 @@ body.archive #archive hgroup.fixed {
 @media only screen and (max-width: 1024px) {
   /* line 22, archive.scss */
   body.archive #archive hgroup.fixed {
-    width: 88%;
+    width: 85.5%;
   }
 }
 @media only screen and (min-width: 1599px) {
   /* line 22, archive.scss */
   body.archive #archive hgroup.fixed {
-    width: 60%;
+    width: 57.5%;
   }
 }
 /* line 30, archive.scss */
@@ -1407,43 +1423,46 @@ body.archive #archive #products #product.c100 {
 body.archive #archive #products #product.last {
   margin-right: 0;
 }
-/* line 417, theme.scss */
+/* line 423, theme.scss */
+body.archive #archive #products #product #image, body.archive #archive #products #product #title, body.archive #archive #products #product #price {
+  background: white;
+}
+/* line 427, theme.scss */
 body.archive #archive #products #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 421, theme.scss */
+/* line 431, theme.scss */
 body.archive #archive #products #product #title, body.archive #archive #products #product #price {
   margin: 0.625em 0.3125em;
-  background: white url(background.png);
 }
-/* line 427, theme.scss */
+/* line 436, theme.scss */
 body.archive #archive #products #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 431, theme.scss */
+/* line 440, theme.scss */
 body.archive #archive #products #product #title h3 {
   padding: 0;
 }
 @media only screen and (min-width: 686px) and (max-width: 768px) {
-  /* line 427, theme.scss */
+  /* line 436, theme.scss */
   body.archive #archive #products #product #title {
     min-height: 5em;
   }
 }
-/* line 440, theme.scss */
+/* line 449, theme.scss */
 body.archive #archive #products #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 444, theme.scss */
-body.archive #archive #products #product #price .normal-price {
+/* line 453, theme.scss */
+body.archive #archive #products #product #price .normal-price, body.archive #archive #products #product #price .old-price {
   padding-right: 0;
 }
-/* line 449, theme.scss */
+/* line 458, theme.scss */
 body.archive #archive #products #product #date {
   display: none;
 }
@@ -1493,37 +1512,37 @@ body.single .container article #article-title h1 {
 body.single .container article #excerpt, body.single .container article #date, body.single .container article #url {
   display: none;
 }
-/* line 249, theme.scss */
+/* line 254, theme.scss */
 body.single .container article #shopping-cart #add-to-cart {
   width: 100%;
   float: left;
   border: 1px dotted;
   margin-top: 1.25em;
 }
-/* line 254, theme.scss */
+/* line 259, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container {
   padding: 1.25em;
 }
-/* line 258, theme.scss */
+/* line 263, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .imagecol {
   display: none;
 }
-/* line 262, theme.scss */
+/* line 267, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .delivery {
   width: 100%;
   float: left;
 }
-/* line 266, theme.scss */
+/* line 271, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations {
   width: 100%;
   float: left;
   margin-bottom: 1.25em;
 }
-/* line 271, theme.scss */
+/* line 276, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms {
   margin-top: 1.25em;
 }
-/* line 275, theme.scss */
+/* line 280, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms .select select {
   border-top: 1px dotted #aaaaaa;
   border-bottom: 1px dotted #aaaaaa;
@@ -1531,42 +1550,43 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   margin: 0 0 0.625em;
   font-size: 90%;
 }
-/* line 284, theme.scss */
+/* line 289, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms .select:after {
   padding: 1.25em;
   background: #363636;
   color: white;
   top: -3.5em;
 }
-/* line 294, theme.scss */
+/* line 299, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price {
   float: left;
-  margin-top: 0.3125em;
 }
-/* line 298, theme.scss */
+/* line 302, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
+  margin-top: 0.3125em;
 }
-/* line 302, theme.scss */
+/* line 307, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
   padding: 0 0.625em;
 }
-/* line 306, theme.scss */
+/* line 311, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
-  margin-left: 1.25em;
+  margin-bottom: 0.3125em;
+  padding: 0;
 }
-/* line 310, theme.scss */
+/* line 316, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 315, theme.scss */
+/* line 321, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button {
   float: left;
 }
-/* line 318, theme.scss */
+/* line 324, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1580,7 +1600,7 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   color: #363636;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 239, theme.scss */
+/* line 244, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -1588,7 +1608,7 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 322, theme.scss */
+/* line 328, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button #quantity {
   display: none;
   width: 5em;
@@ -1597,29 +1617,29 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   font-size: small;
   margin-top: 0.9375em;
 }
-/* line 332, theme.scss */
+/* line 338, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button #quantity label.select:after {
   padding: 0 .7em;
   left: .25em;
   top: -1.6em;
 }
-/* line 340, theme.scss */
+/* line 346, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .checkout {
   display: none;
 }
-/* line 344, theme.scss */
+/* line 350, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 355, theme.scss */
+/* line 361, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
   padding: 1.25em;
 }
-/* line 358, theme.scss */
+/* line 364, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 362, theme.scss */
+/* line 368, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1633,7 +1653,7 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
   color: white;
   text-shadow: 0px 0px 1px #999999;
 }
-/* line 239, theme.scss */
+/* line 244, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4580b9), color-stop(100%, #5e9ad2));
   background-image: -webkit-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
@@ -1721,9 +1741,14 @@ body.single .container article #description ul#tabs li {
 body.single .container article #description ul#tabs li.active {
   font-style: normal;
   color: #363636;
+  background: white;
   border-bottom: 1px solid white;
   position: relative;
   top: 1px;
+}
+/* line 181, theme.scss */
+body.single .container article #description ul#tabs li.first {
+  margin-left: 1.25em;
 }
 /* line 80, single.scss */
 body.single .container article #description div {
@@ -1734,16 +1759,16 @@ body.single .container article #description div {
   max-width: 600px;
   font-size: 90%;
 }
-/* line 213, theme.scss */
+/* line 218, theme.scss */
 body.single .container article #description div br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 218, theme.scss */
+/* line 223, theme.scss */
 body.single .container article #description div ul {
   margin: 0 1.25em;
 }
-/* line 221, theme.scss */
+/* line 226, theme.scss */
 body.single .container article #description div ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
@@ -1808,43 +1833,46 @@ body.single .container section #product.c4 {
 body.single .container section #product.last {
   margin-right: 0;
 }
-/* line 417, theme.scss */
+/* line 423, theme.scss */
+body.single .container section #product #image, body.single .container section #product #title, body.single .container section #product #price {
+  background: white;
+}
+/* line 427, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
   border: 1px solid #cccccc;
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
 }
-/* line 421, theme.scss */
+/* line 431, theme.scss */
 body.single .container section #product #title, body.single .container section #product #price {
   margin: 0.625em 0.3125em;
-  background: white url(background.png);
 }
-/* line 427, theme.scss */
+/* line 436, theme.scss */
 body.single .container section #product #title {
   padding: 0.625em;
   min-height: 3.125em;
 }
-/* line 431, theme.scss */
+/* line 440, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
 }
 @media only screen and (min-width: 686px) and (max-width: 768px) {
-  /* line 427, theme.scss */
+  /* line 436, theme.scss */
   body.single .container section #product #title {
     min-height: 5em;
   }
 }
-/* line 440, theme.scss */
+/* line 449, theme.scss */
 body.single .container section #product #price {
   display: inline-block;
   padding-right: 0.625em;
 }
-/* line 444, theme.scss */
-body.single .container section #product #price .normal-price {
+/* line 453, theme.scss */
+body.single .container section #product #price .normal-price, body.single .container section #product #price .old-price {
   padding-right: 0;
 }
-/* line 449, theme.scss */
+/* line 458, theme.scss */
 body.single .container section #product #date {
   display: none;
 }
@@ -1879,25 +1907,25 @@ body .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
 }
-/* line 469, theme.scss */
+/* line 478, theme.scss */
 body .container #page.logo #logo.normal .smart-stuff-cell, body .container #page.logo #logo.normal .smart-stuff, body .container #page.logo #logo.normal .ro-cell, body .container #page.logo #logo.normal .ro {
   display: none;
 }
-/* line 494, theme.scss */
+/* line 503, theme.scss */
 body .container #page.logo #logo.normal .cell {
   width: 3.125em;
   height: 3.125em;
   float: left;
 }
-/* line 500, theme.scss */
+/* line 509, theme.scss */
 body .container #page.logo #logo.normal .small {
   width: 1.5625em;
 }
-/* line 504, theme.scss */
+/* line 513, theme.scss */
 body .container #page.logo #logo.normal .set, body .container #page.logo #logo.normal .ro {
   background: #363636;
 }
-/* line 508, theme.scss */
+/* line 517, theme.scss */
 body .container #page.logo #logo.normal .square {
   background: #cccccc;
 }
@@ -1906,29 +1934,29 @@ body .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
 }
-/* line 469, theme.scss */
+/* line 478, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff, body .container #page.logo #logo.extended .ro-cell, body .container #page.logo #logo.extended .ro {
   display: none;
 }
-/* line 482, theme.scss */
+/* line 491, theme.scss */
 body .container #page.logo #logo.extended .smart-stuff-cell, body .container #page.logo #logo.extended .smart-stuff {
   display: block;
 }
-/* line 494, theme.scss */
+/* line 503, theme.scss */
 body .container #page.logo #logo.extended .cell {
   width: 1.5em;
   height: 1.5em;
   float: left;
 }
-/* line 500, theme.scss */
+/* line 509, theme.scss */
 body .container #page.logo #logo.extended .small {
   width: 0.75em;
 }
-/* line 504, theme.scss */
+/* line 513, theme.scss */
 body .container #page.logo #logo.extended .set, body .container #page.logo #logo.extended .ro {
   background: #363636;
 }
-/* line 508, theme.scss */
+/* line 517, theme.scss */
 body .container #page.logo #logo.extended .square {
   background: #cccccc;
 }
@@ -1937,29 +1965,29 @@ body .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;
 }
-/* line 469, theme.scss */
+/* line 478, theme.scss */
 body .container #page.logo #logo.ro .smart-stuff-cell, body .container #page.logo #logo.ro .smart-stuff, body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: none;
 }
-/* line 489, theme.scss */
+/* line 498, theme.scss */
 body .container #page.logo #logo.ro .ro-cell, body .container #page.logo #logo.ro .ro {
   display: block;
 }
-/* line 494, theme.scss */
+/* line 503, theme.scss */
 body .container #page.logo #logo.ro .cell {
   width: 2.1875em;
   height: 2.1875em;
   float: left;
 }
-/* line 500, theme.scss */
+/* line 509, theme.scss */
 body .container #page.logo #logo.ro .small {
   width: 1.09375em;
 }
-/* line 504, theme.scss */
+/* line 513, theme.scss */
 body .container #page.logo #logo.ro .set, body .container #page.logo #logo.ro .ro {
   background: #363636;
 }
-/* line 508, theme.scss */
+/* line 517, theme.scss */
 body .container #page.logo #logo.ro .square {
   background: #cccccc;
 }

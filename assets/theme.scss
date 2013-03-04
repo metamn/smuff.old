@@ -171,10 +171,15 @@ a, a:active, a:visited, a:hover {
     &.active {
       font-style: normal;
       color: $color;
+      background: $background;
       
       border-bottom: 1px solid $background;
       position: relative;
       top: 1px;
+    }
+    
+    &.first {
+    	margin-left: $pad;
     }
   }
 }
@@ -293,11 +298,11 @@ a, a:active, a:visited, a:hover {
         
         .wpsc_product_price {
           float: left;
-          margin-top: $pad/4;
           
           .price {
             margin-right: $pad;
             padding: $pad/2;
+            margin-top: $pad/4;
           }
           .normal-price.on-sale {
             background: $sale;
@@ -305,7 +310,8 @@ a, a:active, a:visited, a:hover {
           }
           .oldprice.on-sale {
             margin-right: 0;
-            margin-left: $pad;
+            margin-bottom: $pad/4;
+            padding: 0;
           }
           .old-price, .oldprice {
             background: $sale;
@@ -414,13 +420,16 @@ a, a:active, a:visited, a:hover {
   background: $background url(stripe.png);
   padding-bottom: $pad;
   
+  #image, #title, #price {
+    background: $background;
+  }
+  
   img {
     @include image-bordered(0%);
   }
   
   #title, #price {
     margin: $pad/2 $pad/4;
-    background: $background url(background.png);
   }
   
 
@@ -441,7 +450,7 @@ a, a:active, a:visited, a:hover {
     display: inline-block;
     padding-right: $pad/2;
     
-    .normal-price {
+    .normal-price, .old-price {
       padding-right: 0;
     }
   }

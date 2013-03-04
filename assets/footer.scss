@@ -12,7 +12,7 @@ body {
 		    margin-bottom: $pad/2;
 			  
 			  ul {
-			    @isnclude list-inline;
+			    @include list-inline;
 			    
 			    #go-top {
 		        float: right;

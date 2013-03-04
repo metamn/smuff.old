@@ -5,7 +5,7 @@
   
   <nav id="categories">
     <header id="title">
-      <h3>Peste 400 de cadouri in</h3>
+      <h3>Peste 400 de cadouri</h3>
     </header>
     <ul>
       <li><a href="">Gizmo</a></li>
