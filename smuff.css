@@ -33,20 +33,20 @@ a, a:visited {
 
 
 body {
-  /*background: #e6e2d9 url(img/smuff-valentines-2013-sziv.png) no-repeat 11% 2.5%;*/
+ 	/*background: #e6e2d9 url(img/smuff-valentines-2013-sziv.png) no-repeat 11% 2.5%;*/
   background: #e6e2d9;
 }
 
-/*
+
 #background-image-container {
-  background: transparent url(img/smuff-valentines-2010-sziv-3.jpg) no-repeat 1% 0; 
-  width: 185px;
-  height: 291px;
+  background: transparent url(img/flowers.png) no-repeat 1% 0; 
+  width: 240px;
+  height: 168px;
   position: absolute;
-  right: 0;
-  top: 70%;
+  z-index: -1;
+  top: -6px;
 }
-*/
+
 
 
 .container {
@@ -1236,7 +1236,8 @@ h4.all-products-link a, h4.all-products-link span {
 
 #bestsellers {
   margin: 1.7em 0;
-  background: #E6E2D9; /*background: url(img/smuff-valentines-2010-sziv-4.jpg) no-repeat scroll 55% 22.5% #E6E2D9;*/
+  /*background: #E6E2D9; */
+  background: url(img/flowers.png) no-repeat scroll 55% 22.5% #E6E2D9;
 }
 #bestsellers #col-2 .items {
   float: right;
@@ -1722,8 +1723,8 @@ div.thanks-error {
   margin-right: 5em;
 }
 #from-category, #random  {
-  /*background: url(img/flowers.png) no-repeat scroll 62% 94.5% #E6E2D9; */
-  background: #E6E2D9;
+  background: url(img/flowers.png) no-repeat scroll 45% 94.5% #E6E2D9; 
+  /*background: #E6E2D9;*/
 }
 #single .more-products  {
   margin-top: 5em;
@@ -2642,7 +2643,8 @@ body.blog #post-sponsor {
   margin: 5em 0 0;
   padding-top: 5em;  
   /*background: url(img/smuff-valentines-2010-sziv-5.jpg) no-repeat scroll 0% 110% #E6E2D9;*/
-  background: #E6E2D9;
+  /*background: #E6E2D9;*/
+  background: url(img/flowers.png) no-repeat scroll 0% 110% #E6E2D9; 
 }
 #footer-info div {
   margin-bottom: 2em; 
