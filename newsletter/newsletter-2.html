@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Smuff newsletter</title>
+
+
+
+	
+<style type="text/css">
+
+/* ------------------------------------- 
+
+SOURCE: http://www.zurb.com/playground/responsive-email-templates
+GLOBAL 
+------------------------------------- */
+
+
+* { 
+	margin:0;
+	padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img { 
+	max-width: 98%; 
+	border: 1px solid #ccc;
+	padding: 1%;
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { 
+	color: #111;
+	text-decoration: none;
+}
+.info a {
+	color: #48C0D9;
+}
+
+
+.anouncement p {
+	background: #f1f1f1;
+	padding: 15px;
+}
+.anouncement a, .important a {
+	border-bottom: 1px solid;
+}
+.important p {
+	background: #F9C67D;
+  padding: 15px;
+}
+
+
+.btn, .price {
+	text-decoration:none;
+	color: #fff;
+	background-color: #10A26F;
+	padding:10px 16px;
+	margin-right:10px;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+}
+.btn, .excerpt {
+	display: none;
+}
+.price {
+	background: #48C0D9; 
+}
+.promo .price, .promo-price {
+	background: #F25F18;
+}
+
+
+
+
+
+
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+.head-wrap h1 span {
+	background: #F25F18;
+	color: #f1f1f1;
+	letter-spacing: 0px;
+	font-size: 50%;
+	margin-left: 15px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 4px;
+}
+
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+.body-wrap .content {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+	line-height: 1.1; 
+	margin-bottom: 15px; 
+	color: #000;
+	font-weight: 900;
+}
+
+
+h1 { font-size: 29px; letter-spacing: -2px;}
+h2 { font-size: 23px;}
+h3 { font-size: 17px;}
+h4 { font-size: 17px;}
+h5 { font-size: 17px;}
+h6 { font-size: 14px; text-transform: uppercase; color:#444;}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+	padding:0!important; 
+	margin:0 auto; 
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 320px) {
+	.head-wrap h1 span {
+		margin-left: 0;
+	}
+	
+	.content td.small {
+		width: 40% !important;
+		padding-right: 20px !important;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+}
+</style>
+</head>
+
+
+
+
+ 
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#f1f1f1">
+	<tr>
+		<td></td>
+		<td class="header container" align="">
+			
+			<!-- /content -->
+			<div class="content">
+				<table bgcolor="#f1f1f1" >
+					<tr>
+						<td>
+							<a href="http://www.smuff.ro">
+								<h1>Smuff <span>inseamna cadouri</span></h1>
+							</a>
+						</td>
+						<td align="right">
+							<center>
+								<h6 class="collapse">
+									Newsletter
+									<br/>
+									*|DATE:d M Y|*
+								</h6>
+							</center>
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+<!-- BODY -->
+<table class="body-wrap" bgcolor="">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#FFFFFF">
+			
+      <div class="content">
+				<table class="anouncement">
+					<tr>
+						<td>
+              <p>Eu sunt un anunt simplu. Asta este un <a>link</a>.</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      
+      <div class="content">
+				<table class="important">
+					<tr>
+						<td>
+							<h3>En sunt un anunt important</h3>
+              <p>Textul pentru anuntul important. Asta este un <a>link</a>.</p>
+              <p>Textul pentru anuntul important.</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			
+			
+      <!-- content -->
+      <div class="content">
+        *|RSSITEMS:|*
+        <table>
+          <tr>
+            <td>
+              <h2><a href="*|RSSITEM:URL|*">*|RSSITEM:TITLE|*</a></h2>
+              
+              <!-- A Real Hero (and a real human being) -->
+              <p><a href="*|RSSITEM:URL|*">*|RSSITEM:IMAGE|*</a></p><!-- /hero -->
+              <p><a href="*|RSSITEM:URL|*">*|RSSITEM:CONTENT_FULL|*</a></p>
+            </td>
+          </tr>
+        </table>
+        *|END:RSSITEMS|*
+      </div><!-- /content -->
+      
+			
+			
+			
+			<!-- Additional products list -->
+			
+			
+			
+			
+			
+		
+			
+			<!-- separator -->
+			<div class="content">
+			`<table  bgcolor="">
+				<tr>
+					<td>
+						<center>
+						<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/divider.jpg" style="border: none;outline: none;text-decoration: none;">
+						</center>
+					</td>
+				</tr>
+			</table></div>
+			
+			
+			
+			<!-- content -->
+			<div class="content">
+			`<table class="anouncement" bgcolor="">
+				<tr>
+					<td>
+						
+						<!-- Callout Panel -->
+						<center>
+						<p>
+							
+							<strong>Faceti achizitii pentru companie, aveti nevoie de promotionale sau multe cadouri?</strong> 
+							<br/><br/>
+							Contactati-ne si va surprindem cu oferte ingenioase!
+							<br/>
+							Avem produse exclusiv pentru linia Trade.
+							<br/>
+							<u>ami@smuff.ro</u> sau <u>0740-456.127</u>.
+				
+						</p><!-- /callout panel -->
+						</center>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				<!-- content -->
+				<div class="content">
+				`<table  bgcolor="">
+					<tr>
+						<td>
+							<center>
+							<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/divider.jpg" style="border: none;outline: none;text-decoration: none;">
+							</center>
+						</td>
+					</tr>
+				</table></div><!-- /content -->
+			
+			
+				
+				
+				<div class="content">
+					<table border="0" cellpadding="0" cellspacing="0" width="360" id="social">
+						<tbody><tr>
+								<td align="center" width="120">
+									<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_forward.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_twitter.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_facebook.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+						</tr>
+						<tr>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_one" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_one"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_one"><a href="*|FORWARD|*" target="_blank">Trimite acest email<br>unui prieten</a><br>
+	</span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_two" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_two"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_two"><a href="*|TWITTER:PROFILEURL|*" target="_blank">Noutati prin<br>
+	Twitter</a> </span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_three" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_three"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_three"><a href="*|FACEBOOK:PROFILEURL|*" target="_blank">Pagina noastra<br>
+	pe Facebook</a> </span></div></div>
+								</td>
+						</tr>
+				</tbody>
+				</table>
+    	</div><!-- /content -->
+    	
+    	<!-- content -->
+				<div class="content">
+				`<table class="promo" bgcolor="">
+					<tr>
+						<td>
+							<center>
+							Comenzi telefonice la
+							<h3>0740-456.127</h3>
+							<a href="http://www.smuff.ro">www.smuff.ro</a>
+							</center>
+						</td>
+					</tr>
+				</table></div><!-- /content -->
+				
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>
