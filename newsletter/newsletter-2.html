@@ -55,39 +55,41 @@ a {
 }
 
 
-.anouncement p {
+.anouncement  {
 	background: #f1f1f1;
 	padding: 15px;
 }
 .anouncement a, .important a {
 	border-bottom: 1px solid;
 }
-.important p {
-	background: #F9C67D;
+.important {
+	background: #48C0D9;
   padding: 15px;
+  text-align: center;
+}
+.important h3 {
+  margin-bottom: 0;  
 }
 
 
-.btn, .price {
-	text-decoration:none;
-	color: #fff;
-	background-color: #10A26F;
-	padding:10px 16px;
-	margin-right:10px;
-	text-align:center;
-	cursor:pointer;
-	display: inline-block;
+.small img {
+  width: 270px;
 }
-.btn, .excerpt {
-	display: none;
+  
+.small h4 {
+  margin: 5px 0 0 !important;  
 }
+  
+.small .excerpt {
+  color: #aaa; 
+}
+
 .price {
-	background: #48C0D9; 
+  color: #48C0D9;
 }
 .promo .price, .promo-price {
-	background: #F25F18;
+	color: #F25F18;
 }
-
 
 
 
@@ -293,6 +295,8 @@ ul li {
 	</tr>
 </table><!-- /HEADER -->
 
+  
+  
 <!-- BODY -->
 <table class="body-wrap" bgcolor="">
 	<tr>
@@ -300,75 +304,177 @@ ul li {
 		<td class="container" align="" bgcolor="#FFFFFF">
 			
       <div class="content">
-				<table class="anouncement">
+				<table class="anouncement important">
 					<tr>
 						<td>
-              <p>Eu sunt un anunt simplu. Asta este un <a>link</a>.</p>
+              <h3>Iti livram gadgeturile de 8 Martie.</h3>
 						</td>
 					</tr>
 				</table>
 			</div>
       
       
+      
+      <!--
       <div class="content">
 				<table class="important">
 					<tr>
 						<td>
-							<h3>En sunt un anunt important</h3>
-              <p>Textul pentru anuntul important. Asta este un <a>link</a>.</p>
-              <p>Textul pentru anuntul important.</p>
-						</td>
+							<h3></h3>
+              <p></p>
 					</tr>
 				</table>
 			</div>
+			-->
 			
 			
-			
-      <!-- content -->
+      <!-- RSS products list -->
+      
+      
+      <!--
       <div class="content">
         *|RSSITEMS:|*
         <table>
           <tr>
             <td>
               <h2><a href="*|RSSITEM:URL|*">*|RSSITEM:TITLE|*</a></h2>
-              
-              <!-- A Real Hero (and a real human being) -->
-              <p><a href="*|RSSITEM:URL|*">*|RSSITEM:IMAGE|*</a></p><!-- /hero -->
+              <p><a href="*|RSSITEM:URL|*">*|RSSITEM:IMAGE|*</a></p>
               <p><a href="*|RSSITEM:URL|*">*|RSSITEM:CONTENT_FULL|*</a></p>
             </td>
           </tr>
         </table>
         *|END:RSSITEMS|*
-      </div><!-- /content -->
-      
+      </div>
+      -->
 			
 			
 			
 			<!-- Additional products list -->
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/06/aqua-zinger-fructosticla-termos-cu-tocator-de-fructe/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/sticla-recipient-apa-tocator-fructe-arome-termos-aqua-zinger-bottle-water-fruits2-300x211.jpg" />
+                <h4>Aqua Zinger</h4>
+                <p class="excerpt">Apa aromata intr-o sticla multifunctionala.</p>
+                <p class="price">99 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/06/doggles-ochelari-canine/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/doggles-ochelari-soare-ski-catei-caini1-300x211.jpg" />
+                <h4>Doggles</h4>
+                <p class="excerpt">Googles pentru caini.</p>
+                <p class="price">119 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
 			
 			
 			
-			
-			
-		
-			
-			<!-- separator -->
 			<div class="content">
-			`<table  bgcolor="">
-				<tr>
-					<td>
-						<center>
-						<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/divider.jpg" style="border: none;outline: none;text-decoration: none;">
-						</center>
-					</td>
-				</tr>
-			</table></div>
-			
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/06/iriscan-book-2-yes-we-scan/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/IRIScan-Book-2-scanner-portabil-portable1-300x211.jpg" />
+                <h4>IRIScan Book 2</h4>
+                <p class="excerpt">Scanner portabil.</p>
+                <p class="price">599 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/06/miwand-2-pro-scanner-portabil-%e2%80%93-scantastic/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/scanner-portabil-MiWand-2-PRO-portable1-300x211.jpg" />
+                <h4>MiWand 2 Pro scanner portabil</h4>
+                <p class="excerpt">Scanner mobil cu ecran.</p>
+                <p class="price">799 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+		  
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/05/beton-la-patrat-absorbant-da-beton/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/biscuite-suport-pahar-absorbant-ciment-beton-water-absorbent-concrete-coaster-1-300x211.jpg" />
+                <h4>Beton la patrat</h4>
+                <p class="excerpt">Suport de pahare absorbant, din beton.</p>
+                <p class="price">87 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/05/travalo-atomizor-parfum-chiar-si-pe-avion/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/travalo-recipient-avion-mic-parfum-perfume-300x211.jpg" />
+                <h4>Travalo</h4>
+                <p class="excerpt">Parfum la buzunar, si pe avion.</p>
+                <p class="price">45 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/05/pixuri-nastrusnice-cheie-cui-surub/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/pix-forma-inedita-cui-nail-pen2-300x211.jpg" />
+                <h4>Pixuri nastrusnice</h4>
+                <p class="excerpt">Forme inedite!</p>
+                <p class="price">39 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/02/28/lampioane-zburatoare-eco-premium-imbratiseaza-un-vis/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/lampioane-cu-aer-cald-sky-lanterns55-300x211.jpg" />
+                <h4>Lampioane zburatoare ECO PREMIUM</h4>
+                <p class="excerpt">Elibereaza un lampion, imbratiseaza viitorul.</p>
+                <p class="price">9.99 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/02/26/pebble-folio-husa-incarcator-pentru-ipad-iphone-5-si-alte-gadgeturi/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/husa-acumulator-ipad-pebble-folio-battery-300x211.jpg" />
+                <h4>Pebble Folio</h4>
+                <p class="excerpt">Husa multifunctionala cu baterie incorporata.</p>
+                <p class="price">198 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+   
 			
 			
 			<!-- content -->
 			<div class="content">
-			`<table class="anouncement" bgcolor="">
+			  <table class="anouncement" bgcolor="">
 				<tr>
 					<td>
 						
@@ -403,18 +509,7 @@ ul li {
 		<td></td>
 		<td class="container">
 			
-				<!-- content -->
-				<div class="content">
-				`<table  bgcolor="">
-					<tr>
-						<td>
-							<center>
-							<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/divider.jpg" style="border: none;outline: none;text-decoration: none;">
-							</center>
-						</td>
-					</tr>
-				</table></div><!-- /content -->
-			
+				
 			
 				
 				
@@ -451,7 +546,7 @@ ul li {
     	
     	<!-- content -->
 				<div class="content">
-				`<table class="promo" bgcolor="">
+				  <table class="promo" bgcolor="">
 					<tr>
 						<td>
 							<center>
