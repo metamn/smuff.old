@@ -1,32 +1,14 @@
 /*
-Syntax error: Undefined mixin 'link-visible'.
-        on line 9 of /home/cs/work/smuff/assets/page.scss, in `link-visible'
-        from line 9 of /home/cs/work/smuff/assets/page.scss
+Syntax error: Undefined mixin 'block'.
+        on line 4 of /home/cs/work/smuff/assets/page.scss, in `block'
+        from line 4 of /home/cs/work/smuff/assets/page.scss
+
+1: /home/cs/work/smuff/assets/page.scss
 
 Backtrace:
-/home/cs/work/smuff/assets/page.scss:9:in `link-visible'
-/home/cs/work/smuff/assets/page.scss:9
+/home/cs/work/smuff/assets/page.scss:4:in `block'
+/home/cs/work/smuff/assets/page.scss:4
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -114,4 +96,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'link-visible'.\A         on line 9 of /home/cs/work/smuff/assets/page.scss, in `link-visible'\A         from line 9 of /home/cs/work/smuff/assets/page.scss"; }
+  content: "Syntax error: Undefined mixin 'block'.\A         on line 4 of /home/cs/work/smuff/assets/page.scss, in `block'\A         from line 4 of /home/cs/work/smuff/assets/page.scss\A \A 1: /home/cs/work/smuff/assets/page.scss"; }

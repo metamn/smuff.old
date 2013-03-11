@@ -21,15 +21,6 @@ $very-light-gray: #f1f1f1;
 
 
 
-/* Links
-*/
-
-a, a:active, a:visited, a:hover {
-  color: $color;
-  text-decoration: none;
-}
-
-
 
 /* Price
 ---------------------------------------------------
@@ -64,11 +55,29 @@ a, a:active, a:visited, a:hover {
 /* Mixins
 */
 
-@mixin link-visible() {
-  a, a:visited, a:active {
-    border-bottom: 1px dotted;
+@mixin link($type) {
+  a, a:active, a:visited, a:hover {
+    color: $color;
+    text-decoration: none;
   }
+  
+  @if $type == normal {
+  
+    a, a:active, a:visited, a:hover {
+      border-bottom: none;
+    }
+    
+  
+  } @else if $type == visible {
+  
+    a, a:active, a:visited, a:hover {
+      border-bottom: 1px dotted;
+    }
+  }
+  
 }
+
+
 
 @mixin message($type) {
   padding: $pad/2;

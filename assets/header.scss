@@ -2,7 +2,7 @@ body {
 
   @include background(body);
   @include font(body);
-  
+  @include link(normal);
   
   
   #above-container {

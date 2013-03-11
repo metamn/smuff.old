@@ -1,15 +1,79 @@
+body.page {
+  .container {
+    section#page {
+      @include block;
+      
+      #title {
+        @include block;
+      }
+      
+      article {
+        @include column(3, 4, 1);
+        @include link(visible);
+       
+      }
+      
+      aside {
+        @include column(1, 4, 0);
+      }
+    }
+  }
+
+}
+
+
 // Shopping Cart
 
 body.wpsc-shopping-cart {
   .container {
     section#page {
       article {
-      
-        #content {
-          @include link-visible;
+        @include link(normal);
+        
+        input[type="submit"] {
+          @include button($gray, $very-light-gray);
+          @include single-text-shadow($very-light-gray);
+          padding: $pad/4;
+        }
+        
+        #cart-content {
+          @include block;
           
-          #empty-cart {
-            @include message($notice);
+          div {
+            @include col(5, 0);
+            
+            &#image.header, &#name.header, &#remove.header {
+              visibility: hidden;
+            }
+            
+            &#remove {
+              margin-right: 0;
+            }
+            
+            
+            &#quantity, &#remove  {
+              margin-top: $pad;
+            }
+            
+            &#price {
+              margin-top: $pad + $pad/2;
+            }
+            
+            &.header {
+              margin-top: 0 !important;
+              margin-bottom: $pad/2;
+            }
+            
+            &#total {
+              margin-left: 3*18% + 3*2.5%;
+              margin-top: $pad/2;
+              font-weight: bold;
+            }
+          }
+          
+          #separator {
+            @include block;
+            border-bottom: 1px solid $very-light-gray;
           }
         }
       }

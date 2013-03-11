@@ -1,6 +1,21 @@
 /* Container 
 */
 /* http://stackoverflow.com/questions/6794000/css-fixed-position-but-relative-to-container */
+/* Columns 
+- Create a list of items organized into columns
+  - $col: how many columns
+  - $items: how many items will be organized into columns marked .c1, .c2, ....
+*/
+/* Remove right margin for the last column
+*/
+/* Single column
+- Create a single container aligned to the grid
+  - $col: how many columns will take this container
+  - $total: how many columns are in total
+  - $right-margin: the right margin of the container;
+  
+  - example: column(3,4,0) > a container of 3 cols width from a total of 4
+*/
 /* Button
 */
 /* Accordion
@@ -26,30 +41,30 @@ $mq-desktop		: 86.375em !default;
 $mq-large-screen: 99.93em !default;
 */
 @media only screen and (max-width: 480px) {
-  /* line 419, mixins.scss */
+  /* line 505, mixins.scss */
   .mobile {
     display: block;
   }
 
-  /* line 420, mixins.scss */
+  /* line 506, mixins.scss */
   .desktop {
     display: none;
   }
 }
 @media only screen and (min-width: 481px) {
-  /* line 424, mixins.scss */
+  /* line 510, mixins.scss */
   .mobile {
     display: none;
   }
 
-  /* line 425, mixins.scss */
+  /* line 511, mixins.scss */
   .desktop {
     display: block;
   }
 }
 /* Responisive, fluid Images
 */
-/* line 433, mixins.scss */
+/* line 519, mixins.scss */
 img {
   max-width: 100%;
 }
@@ -75,26 +90,19 @@ img {
 */
 /* table, simple
 */
-/* make a column 
-
-- $col : how many columns
-- $items : how many items will be organized into columns marked .c1, .c2, ....
-*/
-/* Remove right margin for the last column
-*/
 /* box-shadow
 */
 /* make image fit within container
 */
 /* hide an element 
 */
-/* line 611, mixins.scss */
+/* line 656, mixins.scss */
 .hidden {
   display: none;
 }
 
 /* Titles for HTML5 Outliner are hidden */
-/* line 616, mixins.scss */
+/* line 661, mixins.scss */
 .outline {
   display: none;
 }
@@ -103,7 +111,7 @@ img {
 */
 /* The visual grid 
 */
-/* line 635, mixins.scss */
+/* line 680, mixins.scss */
 .grid {
   position: absolute;
   top: 0;
@@ -112,7 +120,7 @@ img {
   z-index: -1;
 }
 
-/* line 642, mixins.scss */
+/* line 687, mixins.scss */
 #gridh .col {
   border-bottom: 1px solid;
   width: 118em;
@@ -120,7 +128,7 @@ img {
   /* 1.25em = 20px - 1px border */
 }
 
-/* line 647, mixins.scss */
+/* line 692, mixins.scss */
 #gridv .col {
   border-right: 1px solid;
   width: 10%;

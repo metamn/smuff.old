@@ -7,18 +7,11 @@
 
 <?php if(wpsc_cart_item_count() > 0) { ?>
   <div id="cart-content">
-    <div id="image" class="header">
-    </div>
-    <div id="name" class="header">
-    </div>
-    <div id="quantity" class="header">
-      Cantitate
-    </div>
-    <div id="price" class="header">
-      Pret
-    </div>
-    <div id="remove" class="header">
-    </div>
+    <div id="image" class="header">Imagine produs</div>
+    <div id="name" class="header">Nume produs</div>
+    <div id="quantity" class="header">Cantitate</div>
+    <div id="price" class="header">Pret</div>
+    <div id="remove" class="header">Operatii</div>
     
     <?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>	
       <?php 
@@ -31,6 +24,7 @@
         
         $link = get_permalink($post_id);
       ?>	
+      <p id="separator"></p>
       <div id="image">
         <a href="<?php echo $link ?>">
           <img src="<?php echo wpsc_cart_item_image(128,128); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" />
@@ -56,16 +50,21 @@
         <p><?php echo wpsc_cart_item_price(); ?></p>
       </div>
       
-      <div id="remove" class="header">
+      <div id="remove">
         <form action="<?php echo get_option('shopping_cart_url'); ?>" method="post" class="adjustform">
 		      <input type="hidden" name="quantity" value="0" />
 		      <input type="hidden" name="key" value="<?php echo wpsc_the_cart_item_key(); ?>" />
 		      <input type="hidden" name="wpsc_update_quantity" value="true" />
-		      <button class='remove_button' type="submit"><span><?php echo __('Renunta'); ?></span></button>
+		      <input type="submit" value="Renunta" name="remove" />
 	      </form>
       </div>
       
     <?php endwhile; ?>
+    
+    <p id="separator"></p>
+    <div id="total">
+      2,346.00 RON
+    </div>
   </div>
   
   
@@ -82,34 +81,34 @@
     <div id="delivery">
       <p>Metoda de livrare</p>
         <ul>
-        <?php while (wpsc_have_shipping_quotes()) : wpsc_the_shipping_quote();	?>
-			    <li>
-			      <span id="name"><?php echo wpsc_shipping_quote_name(); ?></span>
-			      <span id="value""><?php echo wpsc_shipping_quote_value(); ?></span>
-			      <span id="form">
-				      <?php if(wpsc_have_morethanone_shipping_methods_and_quotes()): ?>
-					      <input type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>' <?php echo wpsc_shipping_quote_selected_state(); ?>  onclick='switchmethod("<?php echo wpsc_shipping_quote_name(); ?>", "<?php echo wpsc_shipping_method_internal_name(); ?>")' value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
-				      <?php else: ?>
-					      <input <?php echo wpsc_shipping_quote_selected_state(); ?> disabled='disabled' type='radio' id='<?php echo wpsc_shipping_quote_html_id(); ?>'  value='<?php echo wpsc_shipping_quote_value(true); ?>' name='shipping_method' />
-						      <?php wpsc_update_shipping_single_method(); ?>
-				      <?php endif; ?>
-				    </span>
-				   </li>
-		    <?php endwhile; ?>
+          <li>
+            <span>Posta Romana, cu plata la livrare 4-6 zile</span>
+            <span>8.00 RON</span>
+          </li>
+          <li>
+            <span>Fan Courier, cu plata la livrare 24 ore</span>
+            <span>19.00 RON</span>
+          </li>
+          <li>
+            <span>Fan Courier, cu plata prin transfer bancar in avans 1-2 zile</span>
+            <span>17.00 RON</span>
+          </li>
 		    </ul>
     </div>
     
     <div id="total">
       <ul>
-        <li><?php echo wpsc_display_tax_label(true); ?><?php echo wpsc_cart_tax(); ?></li>
-        <li>
-          <?php if(wpsc_uses_coupons() && (wpsc_coupon_amount(false) > 0)): ?>
-			      <?php echo __('Discount', 'wpsc'); ?>
-		        <?php echo wpsc_coupon_amount(); ?>
-	        <?php endif ?>
+	      <li>
+          <span>Transport</span>
+          <span>19.00 RON</span>
 	      </li>
 	      <li>
-	        Total cu TVA <?php echo wpsc_cart_total(); ?>
+          <span>Cod cupon</span>
+          <span>30.00 RON</span>
+	      </li>
+	      <li>
+	        <span>Total cu TVA</span>
+	        <span>456 RON</span>
 	      </li>
       </ul>
     </div>
