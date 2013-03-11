@@ -63,8 +63,7 @@
     
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Coda|Oswald:400,700">
       
-      
-    <script type='text/javascript' id='lt_ws' src='http://localhost:8833/socket.io/lighttable/ws.js'></script>
+   
 		
 		
 		<?php wp_head(); ?>

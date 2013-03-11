@@ -1,4 +1,24 @@
-body {
+// Shopping Cart
+
+body.wpsc-shopping-cart {
+  .container {
+    section#page {
+      article {
+      
+        #content {
+          @include link-visible;
+          
+          #empty-cart {
+            @include message($notice);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Logo page
+body.page {
   
   .container {
     #page.logo {

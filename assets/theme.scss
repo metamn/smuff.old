@@ -64,6 +64,17 @@ a, a:active, a:visited, a:hover {
 /* Mixins
 */
 
+@mixin link-visible() {
+  a, a:visited, a:active {
+    border-bottom: 1px dotted;
+  }
+}
+
+@mixin message($type) {
+  padding: $pad/2;
+  background: $type;
+}
+
 @mixin background($where) {
   @if $where == body {
     background: $background image-url('background.png');
