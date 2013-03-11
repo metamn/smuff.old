@@ -26,6 +26,17 @@
 
 <div id="noutati" class="hidden block"></div>
 
+<div id="collections-container" class="block">
+	<div id="collections-noscroll">
+		
+		  <a href="http://www.smuff.ro/?p=5400" title="Mouse IriScan — scanezi cat ai zice “dublu-click”!" alt="Mouse IriScan — scanezi cat ai zice “dublu-click”!"> 
+        <img src="http://www.smuff.ro/wp-content/uploads/2013/03/iriscan-banner.jpeg" title="Mouse IriScan — scanezi cat ai zice “dublu-click”!" alt="Mouse IriScan — scanezi cat ai zice “dublu-click”!"/>  
+      </a>
+			
+	</div>
+</div>
+<div class="clear"></div>
+
 
 <?php //include 'c_summer-2012.php' ?>
 <div class='block'><?php include 'c_subscribe-to-newsletter.php' ?></div>
