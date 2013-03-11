@@ -66,7 +66,7 @@ a, a:active, a:visited, a:hover {
 
 @mixin background($where) {
   @if $where == body {
-    background: $background url(background.png);
+    background: $background image-url('background.png');
   } @else {
     background: $very-light-gray;
   } 
@@ -385,11 +385,11 @@ a, a:active, a:visited, a:hover {
     }
     
     #left {
-      background: url(left-arrow-black.png);
+      background: image-url('left-arrow-black.png');
     }
     
     #right {
-      background: url(right-arrow-black.png);
+      background: image-url('right-arrow-black.png');
     }
     
   }
@@ -417,7 +417,7 @@ a, a:active, a:visited, a:hover {
 
 
 @mixin product-thumb {
-  background: $background url(stripe.png);
+  background: $background url('stripe.png');
   padding-bottom: $pad;
   
   #image, #title, #price {
