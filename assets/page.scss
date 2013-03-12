@@ -6,6 +6,7 @@ body.page {
       
       article {
         @include column(3, 4, 1);
+        @include link(visible);
         
         #title {
           @include block;
@@ -151,17 +152,26 @@ body.wpsc-shopping-cart {
           }
           
           #total {
+            @include col(5, 0);
             $margin: $pad 0;
+            
             span {
+              @include block;
+              
               font-size: small;
               color: $gray;
-              margin-left: $pad/2;
             }
           }
+        }
+        
+        #empty-cart {
+          @include link(visible);
         }
       }
       
       aside {
+        margin-top: $pad + $pad/4;
+        
         #account {
           #tabs {
             @include tabs;
@@ -179,6 +189,14 @@ body.wpsc-shopping-cart {
                 label {
                   font-size: small;
                   display: block;
+                }
+                
+                &#or {
+                  text-align: center;
+                  position: relative;
+                  left: -10%;
+                  
+                  margin: $pad*2 0;
                 }
               }
             }

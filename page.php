@@ -73,6 +73,12 @@ get_header();
 	          <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/facebook-connect.jpg" />
 	        </li>
 	        
+	        <li id="or">
+	          Sau
+	          <br/>
+	          Shopping rapid:
+	        </li>
+	        
 	        <li>
 	          <input type="text" name="name" id="name" value="">
 	          <label>Nume si prenume *</label>

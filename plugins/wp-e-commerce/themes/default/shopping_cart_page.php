@@ -97,7 +97,7 @@
     </div>
     
     <div id="total">
-	    1,456.00 RON
+	    2,456.00 RON
 	    <span id="tva">Total cu TVA</span>
     </div>
   </div>
