@@ -1624,7 +1624,7 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   background-image: linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
   border: 1px solid #83de48;
   color: #363636;
-  text-shadow: 0px 0px 1px #999999;
+  text-shadow: 0px 0px 1px #f1f1f1;
 }
 /* line 264, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button input[type="submit"]:hover {
@@ -1677,7 +1677,7 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
   background-image: linear-gradient(center top, #5e9ad2 5%, #4580b9 100%);
   border: 1px solid #4987c3;
   color: white;
-  text-shadow: 0px 0px 1px #999999;
+  text-shadow: 0px 0px 1px #f1f1f1;
 }
 /* line 264, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"]:hover {
@@ -1952,6 +1952,10 @@ body.page .container section#page aside {
   margin-right: 0;
 }
 
+/* line 36, page.scss */
+body.wpsc-shopping-cart .container section#page input[type="text"], body.wpsc-shopping-cart .container section#page textarea {
+  border-bottom: 1px dotted #aaaaaa;
+}
 /* line 59, theme.scss */
 body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-cart .container section#page article a:active, body.wpsc-shopping-cart .container section#page article a:visited, body.wpsc-shopping-cart .container section#page article a:hover {
   color: #363636;
@@ -1961,7 +1965,7 @@ body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-ca
 body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-cart .container section#page article a:active, body.wpsc-shopping-cart .container section#page article a:visited, body.wpsc-shopping-cart .container section#page article a:hover {
   border-bottom: none;
 }
-/* line 38, page.scss */
+/* line 43, page.scss */
 body.wpsc-shopping-cart .container section#page article input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1973,7 +1977,6 @@ body.wpsc-shopping-cart .container section#page article input[type="submit"] {
   background-image: linear-gradient(center top, #f2f2f2 5%, #d8d8d8 100%);
   border: 1px solid #e4e4e4;
   color: #aaaaaa;
-  text-shadow: 0px 0px 1px #999999;
   text-shadow: 0px 0px 1px #f1f1f1;
   padding: 0.3125em;
 }
@@ -1985,22 +1988,22 @@ body.wpsc-shopping-cart .container section#page article input[type="submit"]:hov
   background-image: -o-linear-gradient(center top, #d8d8d8 5%, #f2f2f2 100%);
   background-image: linear-gradient(center top, #d8d8d8 5%, #f2f2f2 100%);
 }
-/* line 43, page.scss */
+/* line 47, page.scss */
 body.wpsc-shopping-cart .container section#page article input, body.wpsc-shopping-cart .container section#page article select {
   font-size: small;
 }
-/* line 47, page.scss */
+/* line 52, page.scss */
 body.wpsc-shopping-cart .container section#page article #total {
   margin-left: 61.5%;
   margin-top: 1.25em;
   font-weight: bold;
 }
-/* line 53, page.scss */
+/* line 58, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content {
   width: 100%;
   float: left;
 }
-/* line 56, page.scss */
+/* line 61, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div {
   width: 18%;
   margin-right: 2.5%;
@@ -2010,11 +2013,11 @@ body.wpsc-shopping-cart .container section#page article #cart-content div {
 body.wpsc-shopping-cart .container section#page article #cart-content div.last {
   margin-right: 0;
 }
-/* line 59, page.scss */
+/* line 64, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#image {
   padding: 0.625em 0;
 }
-/* line 61, page.scss */
+/* line 66, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#image img {
   width: 98%;
   padding: 1%;
@@ -2022,38 +2025,38 @@ body.wpsc-shopping-cart .container section#page article #cart-content div#image 
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   max-width: 110px;
 }
-/* line 67, page.scss */
+/* line 72, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#remove {
   margin-right: 0;
 }
-/* line 71, page.scss */
+/* line 76, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#quantity, body.wpsc-shopping-cart .container section#page article #cart-content div#remove {
   margin-top: 1.5625em;
 }
-/* line 75, page.scss */
+/* line 80, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#price {
   margin-top: 1.875em;
 }
-/* line 80, page.scss */
+/* line 85, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content #separator {
   width: 100%;
   float: left;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 86, page.scss */
+/* line 91, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer {
   width: 100%;
   float: left;
   margin-top: 1.25em;
   border-top: 1px solid #f1f1f1;
 }
-/* line 91, page.scss */
+/* line 96, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon, body.wpsc-shopping-cart .container section#page article #cart-footer #total {
   width: 100%;
   float: left;
   margin-top: 1.25em;
 }
-/* line 97, page.scss */
+/* line 102, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div {
   width: 18%;
   margin-right: 2.5%;
@@ -2063,42 +2066,42 @@ body.wpsc-shopping-cart .container section#page article #cart-footer #delivery d
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.last, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.last {
   margin-right: 0;
 }
-/* line 100, page.scss */
+/* line 105, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div input, body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div select, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div input, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div select {
   position: relative;
   top: -0.3125em;
 }
-/* line 106, page.scss */
+/* line 111, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div#select-text label.select:after, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div#select-text label.select:after {
   top: -0.25em;
   left: -16%;
 }
-/* line 111, page.scss */
+/* line 116, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div#select-text select, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div#select-text select {
   width: 84%;
 }
-/* line 116, page.scss */
+/* line 121, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.double, body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.last, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.double, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.last {
   width: 38.5%;
 }
-/* line 120, page.scss */
+/* line 125, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.last, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.last {
   margin-right: 0;
 }
-/* line 126, page.scss */
+/* line 131, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #coupon {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.625em;
 }
-/* line 131, page.scss */
+/* line 136, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #coupon #coupon-form input[type="text"] {
   width: 57%;
 }
-/* line 136, page.scss */
+/* line 141, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #coupon #coupon-value {
   margin-top: 0.3125em;
 }
-/* line 141, page.scss */
+/* line 146, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #total {
   width: 18%;
   margin-right: 2.5%;
@@ -2108,7 +2111,7 @@ body.wpsc-shopping-cart .container section#page article #cart-footer #total {
 body.wpsc-shopping-cart .container section#page article #cart-footer #total.last {
   margin-right: 0;
 }
-/* line 145, page.scss */
+/* line 150, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #total span {
   width: 100%;
   float: left;
@@ -2124,11 +2127,11 @@ body.wpsc-shopping-cart .container section#page article #empty-cart a, body.wpsc
 body.wpsc-shopping-cart .container section#page article #empty-cart a, body.wpsc-shopping-cart .container section#page article #empty-cart a:active, body.wpsc-shopping-cart .container section#page article #empty-cart a:visited, body.wpsc-shopping-cart .container section#page article #empty-cart a:hover {
   border-bottom: 1px dotted;
 }
-/* line 159, page.scss */
+/* line 164, page.scss */
 body.wpsc-shopping-cart .container section#page aside {
   margin-top: 1.875em;
 }
-/* line 163, page.scss */
+/* line 168, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account #tabs {
   width: 100%;
   float: left;
@@ -2171,25 +2174,29 @@ body.wpsc-shopping-cart .container section#page aside #account #tabs li.active {
 body.wpsc-shopping-cart .container section#page aside #account #tabs li.first {
   margin-left: 1.25em;
 }
-/* line 167, page.scss */
+/* line 172, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account div {
   width: 100%;
   float: left;
 }
-/* line 170, page.scss */
+/* line 175, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account div ul {
   list-style: none;
 }
-/* line 173, page.scss */
+/* line 178, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account div ul li {
   margin-bottom: 0.625em;
 }
-/* line 176, page.scss */
+/* line 181, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account div ul li label {
   font-size: small;
   display: block;
 }
-/* line 181, page.scss */
+/* line 186, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account div ul li input[type="text"], body.wpsc-shopping-cart .container section#page aside #account div ul li textarea {
+  width: 100%;
+}
+/* line 190, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account div ul li#or {
   text-align: center;
   position: relative;
@@ -2198,11 +2205,11 @@ body.wpsc-shopping-cart .container section#page aside #account div ul li#or {
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-style: italic;
 }
-/* line 195, page.scss */
+/* line 204, page.scss */
 body.wpsc-shopping-cart .container section#page aside #checkout {
   margin-left: 1.25em;
 }
-/* line 198, page.scss */
+/* line 207, page.scss */
 body.wpsc-shopping-cart .container section#page aside #checkout input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -2214,7 +2221,7 @@ body.wpsc-shopping-cart .container section#page aside #checkout input[type="subm
   background-image: linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
   border: 1px solid #83de48;
   color: #363636;
-  text-shadow: 0px 0px 1px #999999;
+  text-shadow: 0px 0px 1px #f1f1f1;
 }
 /* line 264, theme.scss */
 body.wpsc-shopping-cart .container section#page aside #checkout input[type="submit"]:hover {
@@ -2225,20 +2232,20 @@ body.wpsc-shopping-cart .container section#page aside #checkout input[type="subm
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
 
-/* line 211, page.scss */
+/* line 220, page.scss */
 body.page .container #page.logo {
   width: 100%;
   float: left;
   background: white;
 }
-/* line 215, page.scss */
+/* line 224, page.scss */
 body.page .container #page.logo #logo {
   width: 100%;
   float: left;
   margin: 6.25em 0;
   background: white;
 }
-/* line 220, page.scss */
+/* line 229, page.scss */
 body.page .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
@@ -2273,11 +2280,11 @@ body.page .container #page.logo #logo.normal:hover {
 body.page .container #page.logo #logo.normal:hover .smart-stuff-cell {
   display: block;
 }
-/* line 223, page.scss */
+/* line 232, page.scss */
 body.page .container #page.logo #logo.normal:hover {
   width: 76.5625em !important;
 }
-/* line 228, page.scss */
+/* line 237, page.scss */
 body.page .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
@@ -2316,7 +2323,7 @@ body.page .container #page.logo #logo.extended:hover {
 body.page .container #page.logo #logo.extended:hover .smart-stuff-cell {
   display: block;
 }
-/* line 232, page.scss */
+/* line 241, page.scss */
 body.page .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;
@@ -2355,7 +2362,7 @@ body.page .container #page.logo #logo.ro:hover {
 body.page .container #page.logo #logo.ro:hover .smart-stuff-cell {
   display: block;
 }
-/* line 235, page.scss */
+/* line 244, page.scss */
 body.page .container #page.logo #logo.ro:hover {
   width: 72.1875em !important;
 }

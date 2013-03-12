@@ -258,7 +258,7 @@ $very-light-gray: #f1f1f1;
   border: 1px solid shade($background, 5%);
   
   color: $color;
-  @include single-text-shadow(#999);
+  @include single-text-shadow($very-light-gray);
   
   
   &:hover {

@@ -32,17 +32,22 @@ body.page {
 body.wpsc-shopping-cart {
   .container {
     section#page {
+      
+      input[type="text"], textarea {
+        border-bottom: 1px dotted $gray;
+      }
+        
       article {
         @include link(normal);
         
         input[type="submit"] {
           @include button($gray, $very-light-gray);
-          @include single-text-shadow($very-light-gray);
           padding: $pad/4;
         }
         input, select {
           font-size: small;
         }
+        
         
         #total {
           margin-left: 3*18% + 3*2.5%;
@@ -176,6 +181,10 @@ body.wpsc-shopping-cart {
                 label {
                   font-size: small;
                   display: block;
+                }
+                
+                input[type="text"], textarea {
+                  width: 100%;
                 }
                 
                 &#or {
