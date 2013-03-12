@@ -5,6 +5,10 @@ body.page {
       
       #title {
         @include block;
+        
+        h1 {
+          padding: $pad/2 0;
+        }
       }
       
       article {
@@ -35,6 +39,15 @@ body.wpsc-shopping-cart {
           @include single-text-shadow($very-light-gray);
           padding: $pad/4;
         }
+        input, select {
+          font-size: small;
+        }
+        
+        #total {
+          margin-left: 3*18% + 3*2.5%;
+          margin-top: $pad/2;
+          font-weight: bold;
+        }
         
         #cart-content {
           @include block;
@@ -42,8 +55,17 @@ body.wpsc-shopping-cart {
           div {
             @include col(5, 0);
             
+            &#image {
+              padding: $pad/4 0;
+              img {
+                @include image-bordered(1%);
+                max-width: 110px;
+              }
+            }
+            
             &#image.header, &#name.header, &#remove.header {
               visibility: hidden;
+              padding: 0;
             }
             
             &#remove {
@@ -64,16 +86,57 @@ body.wpsc-shopping-cart {
               margin-bottom: $pad/2;
             }
             
-            &#total {
-              margin-left: 3*18% + 3*2.5%;
-              margin-top: $pad/2;
-              font-weight: bold;
-            }
           }
           
           #separator {
             @include block;
             border-bottom: 1px solid $very-light-gray;
+          }
+        }
+        
+        #cart-footer {
+          @include block;
+          
+          #delivery, #coupon, #total {
+            @include block;
+            margin-top: $pad/2;
+          }
+        
+          #delivery, #coupon {
+            div {
+              @include col(5, 0);
+              
+              &.double, &.last {
+                width: 2*18% + 1*2.5%;
+              }
+              
+              &.last {
+                margin-right: 0;
+              }
+            }
+          }
+          
+          #select-text {
+            label.select:after {
+              top: -1.4em;
+            }
+          }
+          
+          #coupon-form {
+            input[type="text"] {
+              width: 22em;
+            }
+            
+            input[type="submit"] {
+              float: right;
+            }
+          }
+          
+          #total {
+            span {
+              font-size: small;
+              color: $gray;
+            }
           }
         }
       }

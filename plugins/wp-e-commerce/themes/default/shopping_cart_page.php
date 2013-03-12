@@ -27,7 +27,7 @@
       <p id="separator"></p>
       <div id="image">
         <a href="<?php echo $link ?>">
-          <img src="<?php echo wpsc_cart_item_image(128,128); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" />
+          <img src="<?php echo wpsc_cart_item_image(110,110); ?>" alt="<?php echo wpsc_cart_item_name(); ?>" title="<?php echo wpsc_cart_item_name(); ?>" />
         </a>
       </div>
   
@@ -70,47 +70,41 @@
   
   
   <div id="cart-footer">
-    <div id="coupon">
-      <p>Daca aveti un cod promotional introduceti aici:</p>
-      <form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">				
-		    <input class="coupon" type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
-		    <input type='submit' value="<?php echo __('Recalculeaza') ?>" />		
-			</form>
-    </div>
     
     <div id="delivery">
-      <p>Metoda de livrare</p>
-        <ul>
-          <li>
-            <span>Posta Romana, cu plata la livrare 4-6 zile</span>
-            <span>8.00 RON</span>
-          </li>
-          <li>
-            <span>Fan Courier, cu plata la livrare 24 ore</span>
-            <span>19.00 RON</span>
-          </li>
-          <li>
-            <span>Fan Courier, cu plata prin transfer bancar in avans 1-2 zile</span>
-            <span>17.00 RON</span>
-          </li>
-		    </ul>
+      <div>Metoda de livrare</div>
+      <div id="select-text" class="double">
+        <label class="select">
+          <select>
+            <option>Va rugam selectati metoda de livrare</option>
+            <option>Posta Romana, cu plata la livrare 4-6 zilei</option>
+            <option>Fan Courier, cu plata la livrare 24 ore</option>
+            <option>Fan Courier, cu plata prin transfer bancar in avans 1-2 zile</option>
+          </select>
+        </label>
+      </div>
+      
+      <div id="select-value" class="last">0.00 RON</div>  
+    </div>
+    
+    <div id="coupon">
+      <div id="coupon-text">
+        Cod promotional:
+        <br/>
+        <span>(Daca aveti)</span>
+      </div>
+      <div id="coupon-form"  class="double">
+        <form  method='post' action="<?php echo get_option('shopping_cart_url'); ?>">				
+		      <input class="coupon" type='text' name='coupon_num' id='coupon_num' value='<?php echo $wpsc_cart->coupons_name; ?>' />
+		      <input type='submit' value="<?php echo __('Recalculeaza') ?>" />		
+			  </form>
+			</div>
+			<div id="coupon-value" class="last">0.00 RON</div>
     </div>
     
     <div id="total">
-      <ul>
-	      <li>
-          <span>Transport</span>
-          <span>19.00 RON</span>
-	      </li>
-	      <li>
-          <span>Cod cupon</span>
-          <span>30.00 RON</span>
-	      </li>
-	      <li>
-	        <span>Total cu TVA</span>
-	        <span>456 RON</span>
-	      </li>
-      </ul>
+	    1,456.00 RON
+	    <span id="tva">Total cu TVA</span>
     </div>
   </div>
     
