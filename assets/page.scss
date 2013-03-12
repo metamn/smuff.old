@@ -2,6 +2,7 @@ body.page {
   .container {
     section#page {
       @include block;
+      margin-bottom: $pad;
       
       #title {
         @include block;
@@ -45,7 +46,7 @@ body.wpsc-shopping-cart {
         
         #total {
           margin-left: 3*18% + 3*2.5%;
-          margin-top: $pad/2;
+          margin-top: $pad;
           font-weight: bold;
         }
         
@@ -97,6 +98,7 @@ body.wpsc-shopping-cart {
         #cart-footer {
           @include block;
           margin-top: $pad;
+          border-top: 1px solid $very-light-gray;
           
           #delivery, #coupon, #total {
             @include block;
@@ -124,17 +126,28 @@ body.wpsc-shopping-cart {
           
           #select-text {
             label.select:after {
-              top: -1.6em;
+              top: -.25em;
+              left: -18%;
+            }
+            
+            select {
+              width: 82%;
             }
           }
           
-          #coupon-form {
-            input[type="text"] {
-              max-width: 22em;
+          
+          #coupon {
+            border-bottom: 1px solid $very-light-gray;
+            padding-bottom: $pad/2;
+            
+            #coupon-form {
+              input[type="text"] {
+                width: 57%;
+              }
             }
             
-            input[type="submit"] {
-              float: right;
+            #coupon-value {
+              margin-top: $pad/4;
             }
           }
           

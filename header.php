@@ -131,7 +131,7 @@
 							<li id="separator"></li>
 							
 							
-							<li class="cart"><a href="">Cosul meu (0)</a></li>
+							<li class="cart"><a href="<?php bloginfo('home'); ?>/comenzi/cos-cumparaturi/">Cosul meu (0)</a></li>
               <li class="cart"><a href="">Contul meu</a></li>
               <li id="info" class="cart">Informatii</li>
 					</ul>
