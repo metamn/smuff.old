@@ -109,6 +109,7 @@ body .container {
   // -----------------------------------------------
   */
   /* Reset browser defaults */
+  /* Textarea */
   /* Text */
   /* Button */
   /* Cross browser compatible styling: http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/
@@ -232,45 +233,49 @@ body .container input, body .container textarea, body .container select {
   -moz-appearance: none;
 }
 /* line 175, typography.scss */
-body .container input[type='text'], body .container input[type='email'] {
+body .container textarea {
+  border: 1px solid #f1f1f1;
+}
+/* line 180, typography.scss */
+body .container input[type='text'], body .container input[type='email'], body .container textarea {
   border-bottom: 1px solid;
   font-style: italic;
   color: gray;
 }
-/* line 180, typography.scss */
-body .container input[type='text']:focus, body .container input[type='email']:focus {
+/* line 185, typography.scss */
+body .container input[type='text']:focus, body .container input[type='email']:focus, body .container textarea:focus {
   color: black;
   font-style: normal;
 }
-/* line 186, typography.scss */
+/* line 191, typography.scss */
 body .container input[type='submit'] {
   background: black;
   color: lightgray;
   padding: 0.625em;
 }
-/* line 191, typography.scss */
+/* line 196, typography.scss */
 body .container input[type='submit']:hover {
   cursor: pointer;
   color: white;
 }
-/* line 204, typography.scss */
+/* line 209, typography.scss */
 body .container input[type='radio'], body .container input[type='checkbox'] {
   display: none;
 }
-/* line 207, typography.scss */
+/* line 212, typography.scss */
 body .container input[type='radio'] + label, body .container input[type='checkbox'] + label {
   display: inline-block;
 }
-/* line 212, typography.scss */
+/* line 217, typography.scss */
 body .container input[type='radio'] + label:after {
   content: '\2610';
   margin-right: 0.625em;
 }
-/* line 216, typography.scss */
+/* line 221, typography.scss */
 body .container input[type='radio']:checked + label:after {
   content: '\25a3';
 }
-/* line 221, typography.scss */
+/* line 226, typography.scss */
 body .container input[type='checkbox'] + label:after {
   content: '\272A';
   margin-right: 0.3125em;
@@ -279,17 +284,17 @@ body .container input[type='checkbox'] + label:after {
   vertical-align: top;
   color: lightgray;
 }
-/* line 232, typography.scss */
+/* line 237, typography.scss */
 body .container input[type='checkbox']:checked + label:after {
   color: black;
 }
-/* line 242, typography.scss */
+/* line 247, typography.scss */
 body .container select {
   border-bottom: 1px solid gray;
   cursor: pointer;
   width: 100%;
 }
-/* line 247, typography.scss */
+/* line 252, typography.scss */
 body .container label.select:after {
   content: '\003E';
   float: right;
@@ -1917,30 +1922,21 @@ body.page .container section#page {
   margin-bottom: 1.25em;
 }
 /* line 7, page.scss */
-body.page .container section#page #title {
-  width: 100%;
-  float: left;
-}
-/* line 10, page.scss */
-body.page .container section#page #title h1 {
-  padding: 0.625em 0;
-}
-/* line 15, page.scss */
 body.page .container section#page article {
   float: left;
   width: 74.2%;
   margin-right: 2.6%;
 }
-/* line 59, theme.scss */
-body.page .container section#page article a, body.page .container section#page article a:active, body.page .container section#page article a:visited, body.page .container section#page article a:hover {
-  color: #363636;
-  text-decoration: none;
+/* line 10, page.scss */
+body.page .container section#page article #title {
+  width: 100%;
+  float: left;
 }
-/* line 73, theme.scss */
-body.page .container section#page article a, body.page .container section#page article a:active, body.page .container section#page article a:visited, body.page .container section#page article a:hover {
-  border-bottom: 1px dotted;
+/* line 13, page.scss */
+body.page .container section#page article #title h1 {
+  padding: 0.625em 0;
 }
-/* line 21, page.scss */
+/* line 20, page.scss */
 body.page .container section#page aside {
   float: left;
   width: 23%;
@@ -1956,7 +1952,7 @@ body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-ca
 body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-cart .container section#page article a:active, body.wpsc-shopping-cart .container section#page article a:visited, body.wpsc-shopping-cart .container section#page article a:hover {
   border-bottom: none;
 }
-/* line 38, page.scss */
+/* line 37, page.scss */
 body.wpsc-shopping-cart .container section#page article input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1980,22 +1976,22 @@ body.wpsc-shopping-cart .container section#page article input[type="submit"]:hov
   background-image: -o-linear-gradient(center top, #d8d8d8 5%, #f2f2f2 100%);
   background-image: linear-gradient(center top, #d8d8d8 5%, #f2f2f2 100%);
 }
-/* line 43, page.scss */
+/* line 42, page.scss */
 body.wpsc-shopping-cart .container section#page article input, body.wpsc-shopping-cart .container section#page article select {
   font-size: small;
 }
-/* line 47, page.scss */
+/* line 46, page.scss */
 body.wpsc-shopping-cart .container section#page article #total {
   margin-left: 61.5%;
   margin-top: 1.25em;
   font-weight: bold;
 }
-/* line 53, page.scss */
+/* line 52, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content {
   width: 100%;
   float: left;
 }
-/* line 56, page.scss */
+/* line 55, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div {
   width: 18%;
   margin-right: 2.5%;
@@ -2005,11 +2001,11 @@ body.wpsc-shopping-cart .container section#page article #cart-content div {
 body.wpsc-shopping-cart .container section#page article #cart-content div.last {
   margin-right: 0;
 }
-/* line 59, page.scss */
+/* line 58, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#image {
   padding: 0.3125em 0;
 }
-/* line 61, page.scss */
+/* line 60, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#image img {
   width: 98%;
   padding: 1%;
@@ -2017,53 +2013,53 @@ body.wpsc-shopping-cart .container section#page article #cart-content div#image 
   background: white url(ajax-loader.gif) no-repeat 50% 50%;
   max-width: 110px;
 }
-/* line 67, page.scss */
+/* line 66, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#image.header, body.wpsc-shopping-cart .container section#page article #cart-content div#name.header, body.wpsc-shopping-cart .container section#page article #cart-content div#remove.header {
   visibility: hidden;
   padding: 0;
 }
-/* line 72, page.scss */
+/* line 71, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#remove {
   margin-right: 0;
 }
-/* line 77, page.scss */
+/* line 76, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#quantity, body.wpsc-shopping-cart .container section#page article #cart-content div#remove {
   margin-top: 1.5625em;
 }
-/* line 81, page.scss */
+/* line 80, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div#price {
   margin-top: 1.875em;
 }
-/* line 85, page.scss */
+/* line 84, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content div.header {
   margin-top: 0 !important;
   margin-bottom: 0.625em;
 }
-/* line 92, page.scss */
+/* line 91, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-content #separator {
   width: 100%;
   float: left;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 98, page.scss */
+/* line 97, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer {
   width: 100%;
   float: left;
   margin-top: 1.25em;
   border-top: 1px solid #f1f1f1;
 }
-/* line 103, page.scss */
+/* line 102, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon, body.wpsc-shopping-cart .container section#page article #cart-footer #total {
   width: 100%;
   float: left;
   margin-top: 0.625em;
 }
-/* line 108, page.scss */
+/* line 107, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer input, body.wpsc-shopping-cart .container section#page article #cart-footer select {
   position: relative;
   top: -0.3125em;
 }
-/* line 114, page.scss */
+/* line 113, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div {
   width: 18%;
   margin-right: 2.5%;
@@ -2073,57 +2069,144 @@ body.wpsc-shopping-cart .container section#page article #cart-footer #delivery d
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.last, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.last {
   margin-right: 0;
 }
-/* line 117, page.scss */
+/* line 116, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.double, body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.last, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.double, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.last {
   width: 38.5%;
 }
-/* line 121, page.scss */
+/* line 120, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #delivery div.last, body.wpsc-shopping-cart .container section#page article #cart-footer #coupon div.last {
   margin-right: 0;
 }
-/* line 128, page.scss */
+/* line 127, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #select-text label.select:after {
   top: -0.25em;
   left: -18%;
 }
-/* line 133, page.scss */
+/* line 132, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #select-text select {
   width: 82%;
 }
-/* line 139, page.scss */
+/* line 138, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #coupon {
   border-bottom: 1px solid #f1f1f1;
   padding-bottom: 0.625em;
 }
-/* line 144, page.scss */
+/* line 143, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #coupon #coupon-form input[type="text"] {
   width: 57%;
 }
-/* line 149, page.scss */
+/* line 148, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #coupon #coupon-value {
   margin-top: 0.3125em;
 }
-/* line 156, page.scss */
+/* line 155, page.scss */
 body.wpsc-shopping-cart .container section#page article #cart-footer #total span {
   font-size: small;
   color: #aaaaaa;
   margin-left: 0.625em;
 }
+/* line 166, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account #tabs {
+  width: 100%;
+  float: left;
+  display: block;
+  margin: 0;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 578, mixins.scss */
+body.wpsc-shopping-cart .container section#page aside #account #tabs li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+  float: left;
+  margin-right: 1.25em;
+}
+/* line 585, mixins.scss */
+body.wpsc-shopping-cart .container section#page aside #account #tabs li.last {
+  margin-right: 0;
+}
+/* line 180, theme.scss */
+body.wpsc-shopping-cart .container section#page aside #account #tabs li {
+  color: #aaaaaa;
+  cursor: pointer;
+  font-style: italic;
+  padding: 0.3125em 0.625em;
+  margin: 0 0 0 0.625em;
+  border: 1px solid #cccccc;
+  border-bottom: none;
+}
+/* line 191, theme.scss */
+body.wpsc-shopping-cart .container section#page aside #account #tabs li.active {
+  font-style: normal;
+  color: #363636;
+  background: white;
+  border-bottom: 1px solid white;
+  position: relative;
+  top: 1px;
+}
+/* line 201, theme.scss */
+body.wpsc-shopping-cart .container section#page aside #account #tabs li.first {
+  margin-left: 1.25em;
+}
+/* line 170, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account div {
+  width: 100%;
+  float: left;
+}
+/* line 173, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account div ul {
+  list-style: none;
+}
+/* line 176, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account div ul li {
+  margin-bottom: 0.625em;
+}
+/* line 179, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account div ul li label {
+  font-size: small;
+  display: block;
+}
+/* line 188, page.scss */
+body.wpsc-shopping-cart .container section#page aside #checkout {
+  margin-left: 1.25em;
+}
+/* line 191, page.scss */
+body.wpsc-shopping-cart .container section#page aside #checkout input[type="submit"] {
+  -webkit-border-radius: 6% 6%;
+  -moz-border-radius: 6% / 6%;
+  border-radius: 6% / 6%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #95ec5d), color-stop(100%, #7cd244));
+  background-image: -webkit-linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
+  background-image: -moz-linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
+  background-image: -o-linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
+  background-image: linear-gradient(center top, #95ec5d 5%, #7cd244 100%);
+  border: 1px solid #83de48;
+  color: #363636;
+  text-shadow: 0px 0px 1px #999999;
+}
+/* line 264, theme.scss */
+body.wpsc-shopping-cart .container section#page aside #checkout input[type="submit"]:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
+  background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
+  background-image: -moz-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
+  background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
+  background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
+}
 
-/* line 172, page.scss */
+/* line 204, page.scss */
 body.page .container #page.logo {
   width: 100%;
   float: left;
   background: white;
 }
-/* line 176, page.scss */
+/* line 208, page.scss */
 body.page .container #page.logo #logo {
   width: 100%;
   float: left;
   margin: 6.25em 0;
   background: white;
 }
-/* line 181, page.scss */
+/* line 213, page.scss */
 body.page .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
@@ -2158,11 +2241,11 @@ body.page .container #page.logo #logo.normal:hover {
 body.page .container #page.logo #logo.normal:hover .smart-stuff-cell {
   display: block;
 }
-/* line 184, page.scss */
+/* line 216, page.scss */
 body.page .container #page.logo #logo.normal:hover {
   width: 76.5625em !important;
 }
-/* line 189, page.scss */
+/* line 221, page.scss */
 body.page .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
@@ -2201,7 +2284,7 @@ body.page .container #page.logo #logo.extended:hover {
 body.page .container #page.logo #logo.extended:hover .smart-stuff-cell {
   display: block;
 }
-/* line 193, page.scss */
+/* line 225, page.scss */
 body.page .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;
@@ -2240,7 +2323,7 @@ body.page .container #page.logo #logo.ro:hover {
 body.page .container #page.logo #logo.ro:hover .smart-stuff-cell {
   display: block;
 }
-/* line 196, page.scss */
+/* line 228, page.scss */
 body.page .container #page.logo #logo.ro:hover {
   width: 72.1875em !important;
 }

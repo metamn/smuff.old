@@ -7,12 +7,6 @@
 
 <?php if(wpsc_cart_item_count() > 0) { ?>
   <div id="cart-content">
-    <div id="image" class="header">Imagine produs</div>
-    <div id="name" class="header">Nume produs</div>
-    <div id="quantity" class="header">Cantitate</div>
-    <div id="price" class="header">Pret</div>
-    <div id="remove" class="header">Operatii</div>
-    
     <?php while (wpsc_have_cart_items()) : wpsc_the_cart_item(); ?>	
       <?php 
         // Getting the original post item for the product

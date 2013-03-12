@@ -70,7 +70,7 @@
   </div>
 	
 	  
-  <div id="description"> 
+  <div id="description" class="tabs"> 
 	  <ul id="tabs">
 	    <li id="details" class="first""">Descriere</li>
 	    <li id="properties">Detalii produs</li>

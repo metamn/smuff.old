@@ -93,19 +93,19 @@ $(document).ready(function() {
   
   
   
-  // Tabs on product page
+  // Tabs
   
-  $('.single #description div').hide();
-  $('.single #description div').first().show();
-  $('.single #description #tabs li').first().addClass('active');
+  $('.tabs div').hide();
+  $('.tabs div').first().show();
+  $('.tabs #tabs li').first().addClass('active');
   
-  $('.single #description #tabs li').click(function() {
-    $('.single #description div').hide();
-    $('.single #description #tabs li').removeClass('active');
+  $('.tabs #tabs li').click(function() {
+    $('.tabs div').hide();
+    $('.tabs #tabs li').removeClass('active');
     $(this).addClass('active');
     
   	var id = $(this).attr('id');
-  	$('.single #description div#' + id).slideToggle();
+  	$('.tabs div#' + id).slideToggle();
   });
   
   
