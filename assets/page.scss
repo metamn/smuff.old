@@ -57,22 +57,16 @@ body.wpsc-shopping-cart {
             @include col(5, 0);
             
             &#image {
-              padding: $pad/4 0;
+              padding: $pad/2 0;
               img {
                 @include image-bordered(1%);
                 max-width: 110px;
               }
             }
             
-            &#image.header, &#name.header, &#remove.header {
-              visibility: hidden;
-              padding: 0;
-            }
-            
             &#remove {
               margin-right: 0;
             }
-            
             
             &#quantity, &#remove  {
               margin-top: $pad + $pad/4;
@@ -81,12 +75,6 @@ body.wpsc-shopping-cart {
             &#price {
               margin-top: $pad + $pad/2;
             }
-            
-            &.header {
-              margin-top: 0 !important;
-              margin-bottom: $pad/2;
-            }
-            
           }
           
           #separator {
@@ -102,17 +90,28 @@ body.wpsc-shopping-cart {
           
           #delivery, #coupon, #total {
             @include block;
-            margin-top: $pad/2;
-          }
-          
-          input, select {
-            position: relative;
-            top: -$pad/4;
+            margin-top: $pad;
           }
         
           #delivery, #coupon {
             div {
               @include col(5, 0);
+              
+              input, select {
+                position: relative;
+                top: -$pad/4;
+              }
+              
+              &#select-text {
+                label.select:after {
+                  top: -.25em;
+                  left: -16%;
+                }
+                
+                select {
+                  width: 84%;
+                }
+              }
               
               &.double, &.last {
                 width: 2*18% + 1*2.5%;
@@ -123,18 +122,6 @@ body.wpsc-shopping-cart {
               }
             }
           }
-          
-          #select-text {
-            label.select:after {
-              top: -.25em;
-              left: -18%;
-            }
-            
-            select {
-              width: 82%;
-            }
-          }
-          
           
           #coupon {
             border-bottom: 1px solid $very-light-gray;
@@ -170,7 +157,7 @@ body.wpsc-shopping-cart {
       }
       
       aside {
-        margin-top: $pad + $pad/4;
+        margin-top: $pad + $pad/2;
         
         #account {
           #tabs {
@@ -197,6 +184,8 @@ body.wpsc-shopping-cart {
                   left: -10%;
                   
                   margin: $pad*2 0;
+                  
+                  @include font(list);
                 }
               }
             }

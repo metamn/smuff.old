@@ -74,9 +74,9 @@ get_header();
 	        </li>
 	        
 	        <li id="or">
-	          Sau
+	          sau
 	          <br/>
-	          Shopping rapid:
+	          Shopping Rapid:
 	        </li>
 	        
 	        <li>
