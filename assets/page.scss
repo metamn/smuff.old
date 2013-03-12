@@ -74,7 +74,7 @@ body.wpsc-shopping-cart {
             
             
             &#quantity, &#remove  {
-              margin-top: $pad;
+              margin-top: $pad + $pad/4;
             }
             
             &#price {
@@ -96,10 +96,16 @@ body.wpsc-shopping-cart {
         
         #cart-footer {
           @include block;
+          margin-top: $pad;
           
           #delivery, #coupon, #total {
             @include block;
             margin-top: $pad/2;
+          }
+          
+          input, select {
+            position: relative;
+            top: -$pad/4;
           }
         
           #delivery, #coupon {
@@ -118,13 +124,13 @@ body.wpsc-shopping-cart {
           
           #select-text {
             label.select:after {
-              top: -1.4em;
+              top: -1.6em;
             }
           }
           
           #coupon-form {
             input[type="text"] {
-              width: 22em;
+              max-width: 22em;
             }
             
             input[type="submit"] {
@@ -133,9 +139,11 @@ body.wpsc-shopping-cart {
           }
           
           #total {
+            $margin: $pad 0;
             span {
               font-size: small;
               color: $gray;
+              margin-left: $pad/2;
             }
           }
         }
