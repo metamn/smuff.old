@@ -86,7 +86,7 @@ $very-light-gray: #f1f1f1;
 
 @mixin background($where) {
   @if $where == body {
-    background: $background image-url('background.png');
+    background: $background url('background.png');
   } @else {
     background: $very-light-gray;
   } 
@@ -405,11 +405,11 @@ $very-light-gray: #f1f1f1;
     }
     
     #left {
-      background: image-url('left-arrow-black.png');
+      background: url('left-arrow-black.png');
     }
     
     #right {
-      background: image-url('right-arrow-black.png');
+      background: url('right-arrow-black.png');
     }
     
   }

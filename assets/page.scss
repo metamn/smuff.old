@@ -38,6 +38,9 @@ body.wpsc-shopping-cart {
       }
         
       article {
+        background: $background url(stripe-long.png) repeat-y scroll 71% 0;
+        padding-bottom: $pad*2;
+        
         @include link(normal);
         
         input[type="submit"] {
@@ -84,14 +87,14 @@ body.wpsc-shopping-cart {
           
           #separator {
             @include block;
-            border-bottom: 1px solid $very-light-gray;
+            border-bottom: 1px dotted $light-gray;
           }
         }
         
         #cart-footer {
           @include block;
           margin-top: $pad;
-          border-top: 1px solid $very-light-gray;
+          border-top: 1px dotted $light-gray;
           
           #delivery, #coupon, #total {
             @include block;
@@ -129,7 +132,7 @@ body.wpsc-shopping-cart {
           }
           
           #coupon {
-            border-bottom: 1px solid $very-light-gray;
+            border-bottom: 1px dotted $light-gray;
             padding-bottom: $pad/2;
             
             #coupon-form {
