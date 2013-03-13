@@ -8,7 +8,7 @@
   
   $args = array (
     'posts_per_page' => 6,
-    'category__and' => array(715, $cat) /* 14 */
+    'category__and' => array(14, $cat) /* 14 */
   );
   $top_sales = query_posts2($args);  
   
