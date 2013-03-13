@@ -14,11 +14,9 @@ get_header();
   <article>
 	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	    <header id="title">
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <h1 itemprop="name">
-	          <?php the_title(); ?>
-          </h1>
-        </a>
+        <h1 itemprop="name">
+          <?php the_title(); ?>
+        </h1>
 	    </header>
 		
 		  <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
@@ -60,10 +58,6 @@ get_header();
 	          <label>Localitate si judet *</label>
 	        </li>
 	        
-	        <li>
-	          <textarea name="message" id="message"/></textarea>
-	          <label>Mesajul Dvs</label>
-	        </li>
 	      </ul>
 	    </div>
 	    

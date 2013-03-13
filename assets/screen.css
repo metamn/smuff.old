@@ -2201,7 +2201,12 @@ body.wpsc-shopping-cart .container section#page aside #account div ul li label {
 body.wpsc-shopping-cart .container section#page aside #account div ul li input[type="text"], body.wpsc-shopping-cart .container section#page aside #account div ul li textarea {
   width: 100%;
 }
-/* line 193, page.scss */
+/* line 192, page.scss */
+body.wpsc-shopping-cart .container section#page aside #account div ul li textarea {
+  min-height: 79px;
+  /* to fit perfectly to the 1-product-in-cart grid */
+}
+/* line 196, page.scss */
 body.wpsc-shopping-cart .container section#page aside #account div ul li#or {
   text-align: center;
   position: relative;
@@ -2210,11 +2215,11 @@ body.wpsc-shopping-cart .container section#page aside #account div ul li#or {
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-style: italic;
 }
-/* line 207, page.scss */
+/* line 210, page.scss */
 body.wpsc-shopping-cart .container section#page aside #checkout {
   margin-left: 1.25em;
 }
-/* line 210, page.scss */
+/* line 213, page.scss */
 body.wpsc-shopping-cart .container section#page aside #checkout input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -2237,20 +2242,20 @@ body.wpsc-shopping-cart .container section#page aside #checkout input[type="subm
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
 
-/* line 223, page.scss */
+/* line 226, page.scss */
 body.page .container #page.logo {
   width: 100%;
   float: left;
   background: white;
 }
-/* line 227, page.scss */
+/* line 230, page.scss */
 body.page .container #page.logo #logo {
   width: 100%;
   float: left;
   margin: 6.25em 0;
   background: white;
 }
-/* line 232, page.scss */
+/* line 235, page.scss */
 body.page .container #page.logo #logo.normal {
   height: 21.875em;
   width: 76.5625em;
@@ -2285,11 +2290,11 @@ body.page .container #page.logo #logo.normal:hover {
 body.page .container #page.logo #logo.normal:hover .smart-stuff-cell {
   display: block;
 }
-/* line 235, page.scss */
+/* line 238, page.scss */
 body.page .container #page.logo #logo.normal:hover {
   width: 76.5625em !important;
 }
-/* line 240, page.scss */
+/* line 243, page.scss */
 body.page .container #page.logo #logo.extended {
   height: 10.5em;
   width: 72em;
@@ -2328,7 +2333,7 @@ body.page .container #page.logo #logo.extended:hover {
 body.page .container #page.logo #logo.extended:hover .smart-stuff-cell {
   display: block;
 }
-/* line 244, page.scss */
+/* line 247, page.scss */
 body.page .container #page.logo #logo.ro {
   height: 15.3125em;
   width: 72.1875em;
@@ -2367,7 +2372,7 @@ body.page .container #page.logo #logo.ro:hover {
 body.page .container #page.logo #logo.ro:hover .smart-stuff-cell {
   display: block;
 }
-/* line 247, page.scss */
+/* line 250, page.scss */
 body.page .container #page.logo #logo.ro:hover {
   width: 72.1875em !important;
 }

@@ -189,6 +189,9 @@ body.wpsc-shopping-cart {
                 input[type="text"], textarea {
                   width: 100%;
                 }
+                textarea {
+                  min-height: 79px; /* to fit perfectly to the 1-product-in-cart grid */
+                }
                 
                 &#or {
                   text-align: center;
