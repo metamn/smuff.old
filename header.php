@@ -150,8 +150,8 @@
 			      </ul>
 			      <ul id="pages">
 			        <li><a href="<?php bloginfo('home'); ?>/despre-noi/">Despre noi</a></li>
-              <li><a href="<?php bloginfo('home'); ?>/despre-noi/tremeni-si-conditii/">Termeni si conditii</a></li>
-              <li><a href="<?php bloginfo('home'); ?>/despre-noi/business-si-media/">Business si media</a></li>
+              <li><a href="<?php bloginfo('home'); ?>/despre-noi/termeni-si-conditii/">Termeni si conditii</a></li>
+              <li><a href="<?php bloginfo('home'); ?>/despre-noi/business-2-business/">Business si media</a></li>
 			      </ul>
 			    </nav>
 			    

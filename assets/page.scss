@@ -199,7 +199,7 @@ body.wpsc-shopping-cart {
               list-style: none;
               
               li {
-                margin-bottom: $pad/2;
+                margin-bottom: $pad/2 + $pad/4;
                 
                 label {
                   font-size: small;
