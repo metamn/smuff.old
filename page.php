@@ -100,10 +100,10 @@ get_header();
 	    <div id="other-info">
 	      <h5>Alte informatii</h5>
 	      <ul>
-	        <li><a href="">Despre noi</a></li>
-	        <li><a href="">Cum cumpar?</a></li>
-	        <li><a href="">Contacteaza-ne</a></li>
-	        <li><a href="">Termeni si conditii</a></li>
+	        <li><a href="<?php bloginfo('home'); ?>/despre-noi/">Despre noi</a></li>
+	        <li><a href="<?php bloginfo('home'); ?>/despre-noi/cum-cumpar/">Cum cumpar?</a></li>
+	        <li><a href="<?php bloginfo('home'); ?>/despre-noi/contact/">Contacteaza-ne</a></li>
+	        <li><a href="<?php bloginfo('home'); ?>/despre-noi/termeni-si-conditii/">Termeni si conditii</a></li>
 	      </ul>
 	    </div>
 	  <?php } ?>

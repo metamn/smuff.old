@@ -4,10 +4,10 @@
     <h3 class="outline">Informatii</h3>
     <ul>
       <li>0740-456.127</li>
-      <li><a href="">Cum cumpar?</a></li>
-      <li><a href="">Contacteaza-ne</a></li>
-      <li><a href="">Despre noi</a></li>
-      <li><a href="">Termeni si conditii</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/despre-noi/cum-cumpar/">Cum cumpar?</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/despre-noi/contact/">Contacteaza-ne</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/despre-noi/">Despre noi</a></li>
+      <li><a href="<?php bloginfo('home'); ?>/despre-noi/termeni-si-conditii/">Termeni si conditii</a></li>
       <li id="go-top"><a href="#header">Sus</a></li>
     </ul>
   </nav>

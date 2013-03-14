@@ -149,9 +149,9 @@
 			        <li itemprop="email">shop @ smuff.ro</li>
 			      </ul>
 			      <ul id="pages">
-			        <li><a href="">Despre noi</a></li>
-              <li><a href="">Termeni si conditii</a></li>
-              <li><a href="">Business si media</a></li>
+			        <li><a href="<?php bloginfo('home'); ?>/despre-noi/">Despre noi</a></li>
+              <li><a href="<?php bloginfo('home'); ?>/despre-noi/tremeni-si-conditii/">Termeni si conditii</a></li>
+              <li><a href="<?php bloginfo('home'); ?>/despre-noi/business-si-media/">Business si media</a></li>
 			      </ul>
 			    </nav>
 			    
