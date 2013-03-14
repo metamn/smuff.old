@@ -25,6 +25,7 @@ get_header();
 	</article>   
 	
 	<aside id="sidebar">
+	  <?php if (is_page('430')) { ?>
 	  <div id="account" class="tabs">
 	    <ul id="tabs">
 	      <li id="connected">Date de livrare</li>
@@ -95,7 +96,7 @@ get_header();
 	  <div id="checkout">
 	    <input type='submit' value="Trimite comanda acum" />
 	  </div>
-	  
+	  <?php } ?>
 	</aside>
 	  
 </section>	

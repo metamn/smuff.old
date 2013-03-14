@@ -78,7 +78,7 @@ body.single {
 			  }
 			 
 		    div {
-		      @include product-description;
+		      @include text(normal);
 		    }
 		  }
 		  
