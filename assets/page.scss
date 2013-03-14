@@ -21,6 +21,17 @@ body.page {
       
       aside {
         @include column(1, 4, 0);
+        
+        #other-info {
+          @include list;
+          
+          margin: $pad*2 + $pad/2 $pad;
+          color: $gray;
+          
+          ul {
+            list-style: none;
+          }
+        }
       }
     }
   }
@@ -39,6 +50,7 @@ body.wpsc-shopping-cart {
       }
         
       article {
+        /* resetting text(normal) inherited from page */
         @include column(3, 4, 1);
         padding: 0;
         margin-top: 0;
@@ -48,6 +60,8 @@ body.wpsc-shopping-cart {
         
         @include link(normal);
         @include text(reset);
+        
+        
         
         input[type="submit"] {
           @include button($gray, $very-light-gray);
