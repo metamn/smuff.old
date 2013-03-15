@@ -1,0 +1,880 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Smuff newsletter</title>
+
+
+
+	
+<style type="text/css">
+
+/* ------------------------------------- 
+
+SOURCE: http://www.zurb.com/playground/responsive-email-templates
+GLOBAL 
+------------------------------------- */
+
+
+* { 
+	margin:0;
+	padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img { 
+	max-width: 98%; 
+	border: 1px solid #ccc;
+	padding: 1%;
+}
+.collapse {
+	margin:0;
+	padding:0;
+}
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+}
+
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+a { 
+	color: #111;
+	text-decoration: none;
+}
+.info a {
+	color: #48C0D9;
+}
+
+
+.anouncement  {
+	background: #f1f1f1;
+	padding: 15px 1px;
+}
+.anouncement a, .important a {
+	border-bottom: 1px solid;
+}
+.important {
+	background: #48C0D9;
+  padding: 15px;
+  text-align: center;
+}
+.important h3, .anouncement h3 {
+  margin-bottom: 0;  
+}
+
+
+.small img {
+  width: 150px;
+}
+  
+.small h4 {
+  margin: 5px 0 0 !important;  
+}
+  
+.small .excerpt {
+  color: #aaa; 
+}
+
+.price {
+  color: #48C0D9;
+}
+.promo .price, .promo-price {
+	color: #F25F18;
+}
+
+
+h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+.head-wrap h1 span {
+	background: #F25F18;
+	color: #f1f1f1;
+	letter-spacing: 0px;
+	font-size: 50%;
+	margin-left: 15px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 4px;
+}
+
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+.body-wrap .content {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; 
+	line-height: 1.1; 
+	margin-bottom: 15px; 
+	color: #000;
+	font-weight: 900;
+}
+
+
+h1 { font-size: 29px; letter-spacing: -2px;}
+h2 { font-size: 23px;}
+h3 { font-size: 17px;}
+h4 { font-size: 17px;}
+h5 { font-size: 17px;}
+h6 { font-size: 14px; text-transform: uppercase; color:#444;}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+	margin-bottom: 10px; 
+	font-weight: normal; 
+	font-size:14px; 
+	line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+	margin-left:5px;
+	list-style-position: inside;
+}
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+	padding:0!important; 
+	margin:0 auto; 
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 320px) {
+	.head-wrap h1 span {
+		margin-left: 0;
+	}
+	
+	.content td.small {
+		width: 45% !important;
+		padding-right: 5px !important;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+}
+</style>
+</head>
+
+
+
+
+ 
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#f1f1f1">
+	<tr>
+		<td></td>
+		<td class="header container" align="">
+			
+			<!-- /content -->
+			<div class="content">
+				<table bgcolor="#f1f1f1" >
+					<tr>
+						<td>
+							<a href="http://www.smuff.ro">
+								<h1>Smuff <span>inseamna cadouri</span></h1>
+							</a>
+						</td>
+						<td align="right">
+							<center>
+								<h6 class="collapse">
+									Newsletter
+									<br/>
+									*|DATE:d M Y|*
+								</h6>
+							</center>
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+  
+  
+<!-- BODY -->
+<table class="body-wrap" bgcolor="">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#FFFFFF">
+			
+      <div class="content">
+				<table class="anouncement">
+					<tr>
+						<td>
+              <h3>Acum ca ne-ai gasit, nu te vei opri din daruit.</h3>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      
+      
+      <!--
+      <div class="content">
+				<table class="important">
+					<tr>
+						<td>
+							<h3></h3>
+              <p></p>
+					</tr>
+				</table>
+			</div>
+			-->
+			
+			
+      <!-- RSS products list -->
+      
+      
+      <!--
+      <div class="content">
+        *|RSSITEMS:|*
+        <table>
+          <tr>
+            <td>
+              <h2><a href="*|RSSITEM:URL|*">*|RSSITEM:TITLE|*</a></h2>
+              <p><a href="*|RSSITEM:URL|*">*|RSSITEM:IMAGE|*</a></p>
+              <p><a href="*|RSSITEM:URL|*">*|RSSITEM:CONTENT_FULL|*</a></p>
+            </td>
+          </tr>
+        </table>
+        *|END:RSSITEMS|*
+      </div>
+      -->
+	
+			
+			<!-- Additional products list -->
+			
+			<div class="content">
+				<table class="">
+					<tr>
+						<td>
+              <h2>Gadget & Hi-Tech</h2>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small promo" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/12/mouse-iriscan-scanezi-la-dublu-click/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/iriscan-mouse-handheld-scanner-portabil-mouse2-150x150.jpg" />
+                <h4>Mouse IriScan</h4>
+                <p class="excerpt">Mouse cu functie de scanner</p>
+                <p class="price">399 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/11/yala-digitala-pentru-casa-ta-ultra-secreta/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/yala-digitala-wireless-keyless-gidital-lock-yale-7-150x150.jpg" />
+                <h4>Yala digitala</h4>
+                <p class="excerpt">Intrare codificata</p>
+                <p class="price">660 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/06/iriscan-book-2-yes-we-scan/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/IRIScan-Book-2-scanner-portabil-portable1-150x150.jpg" />
+                <h4>IRIScan Book 2</h4>
+                <p class="excerpt">Scanner portabil</p>
+                <p class="price">599 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+ 
+
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/11/statie-qi-oregon-scientific-incarcator-wireless-telefon-ceas-proiector-si-statie-meteo/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/ceas-atomic-incarcare-wireless-temperatura-clock-qi-charger1-150x150.jpg" />
+                <h4>Statie QI Oregon Scientific</h4>
+                <p class="excerpt">Statie de incarcare wireless si ceas cu senzor de temperatura.</p>
+                <p class="price">680 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/02/26/pebble-folio-husa-incarcator-pentru-ipad-iphone-5-si-alte-gadgeturi/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/husa-acumulator-ipad-pebble-folio-battery2-150x150.jpg" />
+                <h4>Pebble Folio</h4>
+                <p class="excerpt">Husa multifunctionala cu baterie incorporata.</p>
+                <p class="price">198 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/02/19/becuri-boxe-sistem-wireless-care-porneste-cand-se-aprinde-lumina/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/audio-led-bulb-audio-motion-romania-becuri-wireless-gadget-smuff7-150x150.jpg" />
+                <h4>Becuri Boxe</h4>
+                <p class="excerpt">O locuinta hi-tech in care lumina devine sunet</p>
+                <p class="price">1655 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+  
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2012/12/12/pebble-smartstick-energie-pentru-smartphone-uri/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/12/pebble-smartstick-incarcator-portabil-baterie-de-rezerva-iphone-smartphone1-150x150.jpg" />
+                <h4>Pebble Smartstick</h4>
+                <p class="excerpt">Nu parasi casa fara!</p>
+                <p class="price">110 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2010/03/08/ceas-invers-ceasul-care-merge-inapoi-in-viitor/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2010/07/ceas_invers-150x150.jpg" />
+                <h4>Ceas Sens Invers</h4>
+                <p class="excerpt">Ne ofera o scuza plauzibila pentru intarzieri…</p>
+                <p class="price">125 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2012/12/12/fitbit-one-fii-fit-dormi-bine-totul-in-one/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/12/fitbit-one-cadouri-online-romania-smuff3-150x150.jpg" />
+                <h4>Fitbit ONE</h4>
+                <p class="excerpt">I like to move it, move it!</p>
+                <p class="price">529 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+
+      
+      <div class="content">
+				<table class="">
+					<tr>
+						<td>
+              <h2>Pentru locuinte fantastice</h2>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2010/04/19/branduitor-gratar-pimp-up-your-mici/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2010/07/branduitor_gratar-150x150.jpg" />
+                <h4>Branduitor gratar</h4>
+                <p class="excerpt">Sloganizati-va gustul, semnati-va gratarul</p>
+                <p class="price">92 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2009/12/15/masina-de-bere-pentru-gusturi-elocvente/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2009/12/masina-de-bere-brew-master-bere-acasa-smuff-gadget-150x150.jpg" />
+                <h4>Masina de bere</h4>
+                <p class="excerpt">Retraiti arta de a savura o bere rece adevarata!</p>
+                <p class="price">640 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/14/corkcicle-color-experiente-bahice-la-modul-cool/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/corkcicle-color-dop-gheata-vin-frapiera-wine-ice-2-150x150.jpg" />
+                <h4>Corkcicle Color</h4>
+                <p class="excerpt">Dop de gheata colorat</p>
+                <p class="price">105 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2010/10/01/felinarul-cu-licurici-grozavele-lumini-solare-pentru-gradina/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2010/10/Felinarul-cu-licurici-150x150.jpg" />
+                <h4>Felinarul cu licurici</h4>
+                <p class="excerpt">Un lampas solar pentru casa si gradina.</p>
+                <p class="price">110 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2012/07/17/pahar-pentru-bere-hopside-down-intoarce-lumea-berii-cu-fundu-n-sus/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/07/hopside-down-fred-pahar-bere-150x150.jpg" />
+                <h4>Pahar pentru bere Hopside Down</h4>
+                <p class="excerpt">Pahar inedit, izolator, din sticla suflata manual.</p>
+                <p class="price">78 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2011/11/07/seturi-ascutite-si-colorate-marca-taylor-carismatic-glorios/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/11/set-cutite-taylor-colorate-knife-block-150x150.jpg" />
+                <h4>Seturi ascutite Taylors</h4>
+                <p class="excerpt">Tehnicolor pentru rafinament in 3 seturi.</p>
+                <p class="price">199 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+   
+			<div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2010/10/20/cascada-de-vin-racoritor-vin/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2010/10/waterfall_wine_chiller-150x150.jpg" />
+                <h4>Cascada de Vin</h4>
+                <p class="excerpt">Racire la perfectiune in cateva minute!</p>
+                <p class="price">399 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2012/12/03/ceas-topit-de-raft-%e2%80%94-timpul-curge-atractia-momentului-ramane/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/12/melting-clock-smuff-ceas-de-raft-topit-dali8-150x150.jpg" />
+                <h4>Ceas topit de raft</h4>
+                <p class="excerpt">Ceas de raft de la Dali.</p>
+                <p class="price">76 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2011/12/14/hartie-igienica-vorbareata-un-bestseller-din-nou-pe-stoc-surprinde-lumea-mare/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/12/talking-toilet-paper-hartie-igienica-vorbareata3-150x150.jpg" />
+                <h4>Hartie igienica Vorbareata</h4>
+                <p class="excerpt">Ati dori chitanta pentru depozitul Dvs?</p>
+                <p class="price">79 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+
+
+
+  
+      
+      <div class="content">
+				<table class="">
+					<tr>
+						<td>
+              <h2>Cadouri pentru cei Cool! </h2>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/01/30/monkeylectric-lumini-active-pentru-roti-cu-48-variante/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/01/MonkeyLectric-LED-Bike-Light-lumini-bicicleta-roti4-150x150.jpg" />
+                <h4>MonkeyLectric</h4>
+                <p class="excerpt">Cele mai performante creatii de lumini.</p>
+                <p class="price">220 Lei</p>
+              </a>
+            </td>
+            <td class="small promo" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2012/12/13/imusic-wireless-hat-haide-poarta-muzica/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/12/imusic-wireless-hat-sapca-muzica-fara-fir-bluetooth-romania-online-shop-150x150.jpg" />
+                <h4>iMusic wireless Hat</h4>
+                <p class="excerpt">Sapca tricotata pentru beatu-uri.</p>
+                <p class="price">150 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2011/11/16/cana-obiectiv-aparat-foto-spuneti-ca-fe-aaah/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/11/cana-obiectiv-foto-camera-lens-mug-cup-150x150.jpg" />
+                <h4>Cana obiectiv aparat foto</h4>
+                <p class="excerpt">Accesoriu pentru pasionati.</p>
+                <p class="price">85 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+  
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2011/08/13/scatecycle-daca-tron-ar-fi-facut-skateboarduri/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/08/skatecycle-150x150.jpg" />
+                <h4>SkateCycle</h4>
+                <p class="excerpt">Genereaza-ti viteza mult mai tare. New stuff!</p>
+                <p class="price">780 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2011/04/01/stampile-like-dislike-am-adus-offline-facebook-ul/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/04/stampile_like_dislike_facebook_stamp-nou-150x150.jpg" />
+                <h4>Stampile Like Dislike</h4>
+                <p class="excerpt">Lasati un semn pe obiectele lumii reale! Am adus offline Facebook-ul!</p>
+                <p class="price">66 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/02/05/umbrela-pusca-intr-o-altfel-de-vanatoare-una-urbana/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/umbrela-maner-pusca-rifle-umbrella-gun-150x150.jpg" />
+                <h4>Umbrela Pusca</h4>
+                <p class="excerpt">O umbrela mai altfel.</p>
+                <p class="price">99 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+			
+			<div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/01/18/whiskey-on-the-rocks-in-sensul-propriu/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/01/teroforma-whisky-stones-pietre-cuburi-gheata-whiskey1-150x150.jpg" />
+                <h4>Whiskey on the rocks</h4>
+                <p class="excerpt">Pietre naturale pentru racire.</p>
+                <p class="price">110 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2007/02/20/suport-cutite-woodoo-pentru-bucatarii-excelent/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2007/02/woodoo-stand-cutite-the-ex7-150x150.jpg" />
+                <h4>Suport Woodoo</h4>
+                <p class="excerpt">Cel mai bizar rasfat de bucatarie conceput de om.</p>
+                <p class="price">499 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2010/02/23/bara-profesionala-de-dansl-dansez-pentru-tinedanseaza-pentru-mine/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2010/07/bara_de_dans-150x150.jpg" />
+                <h4>Bara profesionala de dans</h4>
+                <p class="excerpt">Pentru fitness, seductie si foc!</p>
+                <p class="price">499 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+
+      
+      <div class="content">
+				<table class="">
+					<tr>
+						<td>
+              <h2>Gizmo si inovatie</h2>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2011/11/18/cana-auto-amestecatoare-haha-ce-ziceti/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/11/self-stirring-mug-cana-auto-amestecare-150x150.jpg" />
+                <h4>Cana auto-amestecatoare</h4>
+                <p class="excerpt">Un spiridus ascuns amesteca.. oauu</p>
+                <p class="price">77 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2012/11/06/biscuit-cald-plita-usb/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/11/Hot-Cookie-USB-Cup-Warmer-plita-usb-incalzitor-ceasca-150x150.jpg" />
+                <h4>Biscuit cald</h4>
+                <p class="excerpt">Incalzitor USB pentru cesti si cani.</p>
+                <p class="price">74 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2012/10/25/boomball-vibreaza-o-boxa-din-orice/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/10/mighty-boom-ball-speaker4-150x150.jpg" />
+                <h4>BoomBall -- vibreaza o boxa din orice</h4>
+                <p class="excerpt">Sunet din orice obiect.</p>
+                <p class="price">125 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+ 
+  
+      <div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2012/10/08/fisheye-pro-lens-blackberry-htc-ipad-iphone-lg-sony-ericsson-nokia-samsung-etc/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2012/10/fisheye-pro-lens-smuff-romania-cadouri-150x150.jpg" />
+                <h4>Fisheye Pro Lens</h4>
+                <p class="excerpt">Versiune Pro pentru Instagram.</p>
+                <p class="price">198 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/02/13/withings-ws-30-cantar-wifi-trainer-personal/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/cantar-electronic-wifi-smart-greutate-ws-30-Withings-scale-weight1-150x150.jpg" />
+                <h4>Withings WS-30</h4>
+                <p class="excerpt">Cantarul care te pune in miscare!</p>
+                <p class="price">640 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/02/04/cana-r2d2-un-cacao-la-adapost-sigur/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/02/cana-r2d2-mug-star-wars3-150x150.jpg" />
+                <h4>Cana R2D2</h4>
+                <p class="excerpt">Cana ceramica cu capac.</p>
+                <p class="price">98 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+			
+			<div class="content">
+        <table bgcolor="">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2010/10/12/fabrica-de-mini-cupcake-deserturi-mici-in-4-minute-incepand-din-20-noiembrie/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2010/10/cupcake-maker-cu-accesorii-roz1-150x150.jpg" />
+                <h4>Fabrica de Mini Cupcake</h4>
+                <p class="excerpt">Alintati-va cu Cupcake, Muffin, Brownies!</p>
+                <p class="price">188 Lei</p>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2009/09/16/umbrela-magnifica-cadoul-care-aduce-stelele-mai-aproape/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2009/09/umbrela-magnifica3-150x150.jpg" />
+                <h4>Umbrela magnifica</h4>
+                <p class="excerpt">Poate invigora zilele inorate si aduce o expresie stilului tau superb!</p>
+                <p class="price">179 Lei</p>
+              </a>
+            </td>
+            <td class="small promo" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2011/12/12/sosete-outback-cu-incalzire-cunoasteti-pe-cineva-cu-picioare-reci-tot-timpul/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2011/12/sosete-incalzite-heated-socks2-150x150.jpg" />
+                <h4>Sosete incalzite</h4>
+                <p class="excerpt">Un rasfat istet.</p>
+                <p class="price">109 Lei</p>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+			
+			<!-- content -->
+			<div class="content">
+			  <table class="anouncement" bgcolor="">
+				<tr>
+					<td>
+						
+						<!-- Callout Panel -->
+						<center>
+						  <p>Pe Smuff gasesti intotdeauna cadouri care fascineaza!</p>
+						</center>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				
+			
+				
+				
+				<div class="content">
+					<table border="0" cellpadding="0" cellspacing="0" width="360" id="social">
+						<tbody><tr>
+								<td align="center" width="120">
+									<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_forward.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_twitter.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_facebook.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+						</tr>
+						<tr>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_one" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_one"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_one"><a href="*|FORWARD|*" target="_blank">Trimite acest email<br>unui prieten</a><br>
+	</span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_two" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_two"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_two"><a href="*|TWITTER:PROFILEURL|*" target="_blank">Noutati prin<br>
+	Twitter</a> </span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_three" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_three"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_three"><a href="*|FACEBOOK:PROFILEURL|*" target="_blank">Pagina noastra<br>
+	pe Facebook</a> </span></div></div>
+								</td>
+						</tr>
+				</tbody>
+				</table>
+    	</div><!-- /content -->
+    	
+    	<!-- content -->
+				<div class="content">
+				  <table class="promo" bgcolor="">
+					<tr>
+						<td>
+							<center>
+							Comenzi telefonice la
+							<h3>0740-456.127</h3>
+							<a href="http://www.smuff.ro">www.smuff.ro</a>
+							</center>
+						</td>
+					</tr>
+				</table></div><!-- /content -->
+				
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>
