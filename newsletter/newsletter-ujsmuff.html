@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!-- If you delete this meta tag, the ground will open and swallow you. -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Smuff newsletter</title>
+
+
+
+	
+<style type="text/css">
+
+ 
+/* -------------------------------------
+SOURCE: http://www.zurb.com/playground/responsive-email-templates
+*/
+
+
+
+/* -------------------------------------  
+  GLOBAL 
+------------------------------------- */
+
+
+* { 
+	margin:0;
+	padding:0;
+}
+* { font-family: TimesNewRoman,"Times New Roman",Times,Baskerville,Georgia,serif; }
+
+
+body {
+	-webkit-font-smoothing:antialiased; 
+	-webkit-text-size-adjust:none; 
+	width: 100%!important; 
+	height: 100%;
+	background: url("background.png") repeat scroll 0 0 #fff;
+	line-height: 1.25;
+	color: #363636;
+}
+
+a { 
+	color: #363636;
+	text-decoration: none;
+}
+
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+
+h2 { 
+  font-size: 20px;
+}
+h3 {
+  font-weight: 900;
+}
+h4 {
+  text-transform: uppercase;
+}
+
+
+
+
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.head-wrap .strapline {
+  vertical-align: top;
+  padding-top: 10px;
+}
+.head-wrap h2 {
+  color: #F25F18;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+.anouncement  {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding: 10px 0;
+	text-align: center;
+}
+
+
+
+
+.product img { 
+	width: 270px; 
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+
+.product #text {
+  background: url("stripe.png") repeat scroll 0 0 #fff;
+  padding: 5px;
+}
+
+.product #text h3, .product #text .excerpt, .product #text .price span {
+  background: #fff;
+  padding: 5px;
+}
+.product #text .excerpt {
+  color: #aaa;
+}
+.product #text .price {
+  margin: 15px 0 10px;
+}
+.product #text .promo span {
+  background: #F25F18;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;	clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+	font-size:10px;
+	font-weight: bold;
+	
+}
+
+
+
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display:block!important;
+	max-width:600px!important;
+	margin:0 auto!important; /* makes it centered */
+	clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	padding:15px;
+	max-width:600px;
+	margin:0 auto;
+	display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+	width: 300px;
+	float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+	padding:0!important; 
+	margin:0 auto; 
+	max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+	width: 280px;
+	min-width: 279px;
+	float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 320px) {
+	.head-wrap h1 span {
+		margin-left: 0;
+	}
+	
+	.content td.small {
+		width: 45% !important;
+		padding-right: 5px !important;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	
+	a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+	div[class="column"] { width: auto!important; float:none!important;}
+	
+	table.social div[class="column"] {
+		width:auto!important;
+	}
+}
+</style>
+</head>
+
+
+
+
+ 
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="">
+	<tr>
+		<td></td>
+		<td class="header container" align="">
+			
+			<!-- /content -->
+			<div class="content">
+				<table bgcolor="" >
+					<tr>
+						<td class="logo">
+							<a href="http://www.smuff.ro">
+								<img title="Smuff" alt="Smuff" src="logo.png"/>
+							</a>
+						</td>
+						<td class="strapline">
+							<a href="http://www.smuff.ro">
+								<h2>Inseamna cadouri</h2>
+							</a>
+						</td>
+						<td class="date" align="right">
+							<center>
+                <h4>
+								  Newsletter
+								  <br/>
+								  *|DATE:d M Y|*
+							  </h4>
+							</center>
+						</td>
+					</tr>
+				</table>
+			</div><!-- /content -->
+			
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /HEADER -->
+
+  
+  
+<!-- BODY -->
+<table class="body-wrap" bgcolor="">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#FFFFFF">
+			
+      <div class="content">
+				<table class="anouncement">
+					<tr>
+						<td>
+              <p>Pe Smuff gasesti intotdeauna cadouri care fascineaza!</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+      
+      
+	
+			
+			<!-- Additional products list -->
+      
+      <div class="content">
+        <table class="product">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/07/sugru-cand-lipseste-o-piesa//">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/sugru-adeziv-maleabil-flexibil-glue-adhesive-flexible5-300x211.jpg" />
+                <div id="text">
+                  <h3>Sugru</h3>
+                  <p class="excerpt">Sugru, adevizul 3D</p>
+                  <p class="price"><span>82 Lei</span></p>
+                </div>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/11/statie-qi-oregon-scientific-incarcator-wireless-telefon-ceas-proiector-si-statie-meteo/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/ceas-atomic-incarcare-wireless-temperatura-clock-qi-charger1-300x211.jpg" />
+                <div id="text">
+                  <h3>Statie QI Oregon Scientific</h3>
+                  <p class="excerpt">Statie de incarcare wireless</p>
+                  <p class="price"><span>680 Lei</span></p>
+                </div>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+ 
+			
+			<div class="content">
+        <table class="product">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/11/yala-digitala-pentru-casa-ta-ultra-secreta/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/yala-digitala-wireless-keyless-gidital-lock-yale-1-300x211.jpg" />
+                <div id="text">
+                  <h3>Yala digitala</h3>
+                  <p class="excerpt">Intrare codificata</p>
+                  <p class="price"><span>660 Lei</span></p>
+                </div>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/12/powercase-iphone-5-mai-sigur-mai-puternic/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/powercase-carcasa-acumulator-iphone5-case-battery-300x211.jpg" />
+                <div id="text">
+                  <h3>PowerCase iPhone 5</h3>
+                  <p class="excerpt">Husa cu baterie iPhone 5</p>
+                  <p class="price"><span>299 Lei</span></p>
+                </div>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+ 
+		  
+      <div class="content">
+        <table class="product">
+          <tr>
+            <td class="small" width="30%" style="vertical-align: top; padding-right:10px;">
+              <a href="http://www.smuff.ro/2013/03/12/mouse-iriscan-scanezi-la-dublu-click/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/iriscan-mouse-handheld-scanner-portabil-mouse2-300x211.jpg" />
+                <div id="text">
+                  <h3>Mouse IriScan</h3>
+                  <p class="excerpt">Mouse cu functie de scanner</p>
+                  <p class="price promo"><span>399 Lei</span></p>
+                </div>
+              </a>
+            </td>
+            <td class="small" width="30%" style="vertical-align: top;">
+              <a href="http://www.smuff.ro/2013/03/13/mini-maxi-boxa-360-veho-difuzor-portabil-all-surround/">
+                <img src="http://www.smuff.ro/wp-content/uploads/2013/03/boxa-360-mini-portabila-speaker66-300x211.jpg" />
+                <div id="text">
+                  <h3>Mini-Maxi boxa 360 Veho</h3>
+                  <p class="excerpt">Pentru buzunar si banca din parc</p>
+                  <p class="price"><span>72 Lei</span></p>
+                </div>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      
+      
+   
+			
+			
+			<!-- content -->
+			<div class="content">
+			  <table class="anouncement" bgcolor="">
+				<tr>
+					<td>
+						
+						<!-- Callout Panel -->
+						<center>
+						<p>
+							
+							<strong>Faceti achizitii pentru companie, aveti nevoie de promotionale sau multe cadouri?</strong> 
+							<br/><br/>
+							Contactati-ne si va surprindem cu oferte ingenioase!
+							<br/>
+							Avem produse exclusiv pentru linia Trade.
+							<br/>
+							<u>ami@smuff.ro</u> sau <u>0740-456.127</u>.
+				
+						</p><!-- /callout panel -->
+						</center>
+					</td>
+				</tr>
+			</table></div><!-- /content -->
+			
+			
+
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+				
+			
+				
+				
+				<div class="content">
+					<table border="0" cellpadding="0" cellspacing="0" width="360" id="social">
+						<tbody><tr>
+								<td align="center" width="120">
+									<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_forward.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_twitter.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+								<td align="center" width="120">
+										<img src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/http/gallery.mailchimp.com/0d61bb2ec9002f0e9872b8c36/images/icon_facebook.jpg" style="border: none;outline: none;text-decoration: none;">
+								</td>
+						</tr>
+						<tr>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_one" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_one"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_one"><a href="*|FORWARD|*" target="_blank">Trimite acest email<br>unui prieten</a><br>
+	</span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_two" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_two"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_two"><a href="*|TWITTER:PROFILEURL|*" target="_blank">Noutati prin<br>
+	Twitter</a> </span></div></div>
+								</td>
+								<td align="center" valign="top" width="120">
+										<div class="socialCell" mc:edit="social_link_three" style="color: #000000;font-family: Helvetica;font-size: 12px;line-height: 125%;" mcedit="social_link_three"><div class="edit-content"><span class="tpl-content" id="tpl-content-social_link_three"><a href="*|FACEBOOK:PROFILEURL|*" target="_blank">Pagina noastra<br>
+	pe Facebook</a> </span></div></div>
+								</td>
+						</tr>
+				</tbody>
+				</table>
+    	</div><!-- /content -->
+    	
+    	<!-- content -->
+				<div class="content">
+				  <table class="promo" bgcolor="">
+					<tr>
+						<td>
+							<center>
+							Comenzi telefonice la
+							<h3>0740-456.127</h3>
+							<a href="http://www.smuff.ro">www.smuff.ro</a>
+							</center>
+						</td>
+					</tr>
+				</table></div><!-- /content -->
+				
+				
+		</td>
+		<td></td>
+	</tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>
