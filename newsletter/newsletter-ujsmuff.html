@@ -36,7 +36,7 @@ body {
 	-webkit-text-size-adjust:none; 
 	width: 100%!important; 
 	height: 100%;
-	background: url("background.png") repeat scroll 0 0 #fff;
+	background: url("http://www.smuff.ro/wp-content/smuff-id/new-smuff/background.png") repeat scroll 0 0 #fff;
 	line-height: 1.25;
 	color: #363636;
 }
@@ -87,6 +87,14 @@ table.head-wrap { width: 100%;}
   text-transform: uppercase;
 }
 
+/* for IE */
+.head-wrap img { 
+	border: none;
+}
+a img {
+  border: 0;
+  text-decoration: none;
+}
 
 
 
@@ -113,8 +121,9 @@ table.body-wrap { width: 100%;}
 }
 
 .product #text {
-  background: url("stripe.png") repeat scroll 0 0 #fff;
+  background: url("http://www.smuff.ro/wp-content/smuff-id/new-smuff/stripe.png") repeat scroll 0 0 #fff;
   padding: 5px;
+  width: 265px; /* for IE */
 }
 
 .product #text h3, .product #text .excerpt, .product #text .price span {
@@ -249,7 +258,7 @@ table.footer-wrap { width: 100%;	clear:both!important;
 					<tr>
 						<td class="logo">
 							<a href="http://www.smuff.ro">
-								<img title="Smuff" alt="Smuff" src="logo.png"/>
+								<img title="Smuff" alt="Smuff" src="http://www.smuff.ro/wp-content/smuff-id/new-smuff/logo.png"/>
 							</a>
 						</td>
 						<td class="strapline">
