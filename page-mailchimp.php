@@ -6,9 +6,10 @@
  */
 
 get_header(); ?>
+		
 
 <div id="page" class="block page-mailchimp">
-  <div id="content" class="column span-24 last">
+  <div id="content" class="column span-18">
     <?php 
       
       //error_log("mailchimp request: \n\r" . print_r($_REQUEST, true));
@@ -49,7 +50,10 @@ get_header(); ?>
 			  </div>
 		  </div>
 		<?php endwhile; endif; ?>
-	</div>    
+	</div>  
+	
+	
+	<?php get_sidebar(); ?>  
 </div>	
   
 <?php get_footer(); ?>
