@@ -118,7 +118,7 @@
 	    	  <h3 class="outline">Navigare</h3>
 					<ul>
 						<?php 
-							$cats = array("gadget", "lifestyle", "doar-copii", "produse", "wtf");		            
+							$cats = array("gadget", "doar-copii", "casa-si-birou", "lifestyle", "eco", "wtf", "produse");		            
 							foreach ($cats as $cat) { 
 								$c = get_category_by_slug($cat);
 							?>

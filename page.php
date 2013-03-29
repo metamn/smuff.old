@@ -28,8 +28,8 @@ get_header();
 	  <?php if (is_page('430')) { ?>
 	    <div id="account" class="tabs">
 	      <ul id="tabs">
-	        <li id="connected">Date de livrare</li>
-	        <li id="connect">Conectare</li>
+	        <li id="connected">Shopping rapid</li>
+	        <li id="connect">Login</li>
 	      </ul>
 	      
 	      <div id="connected">
@@ -64,29 +64,22 @@ get_header();
 	      
 	      <div id="connect">
 	        <ul>
-	          <li id="facebook">
-	            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/facebook-connect.jpg" />
-	          </li>
-	          
-	          <li id="or">
-	            sau
-	            <br/>
-	            Shopping Rapid
-	          </li>
-	          
 	          <li>
+	            <p>Contul meu</p>
 	            <input type="text" name="name" id="name" value="">
-	            <label>Nume si prenume *</label>
-	          </li>
-	          
-	          <li>
-	            <input type="text" name="email" id="email" value="">
 	            <label>Email *</label>
 	          </li>
 	          
 	          <li>
-	            <input type="text" name="phone" id="phone" value="">
-	            <label>Telefon *</label>
+	            <input type="text" name="email" id="email" value="">
+	            <label>Parola *</label>
+	          </li>
+	          
+	          <li id="facebook">
+	            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/facebook-connect.jpg" />
+	          </li>
+	          <li id="facebook">
+	            Creaza cont
 	          </li>
 	        </ul>
 	      </div>

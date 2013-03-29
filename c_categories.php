@@ -8,28 +8,29 @@
       <h3>Peste 400 de cadouri</h3>
     </header>
     <ul>
-      <li><a href="">Gizmo</a></li>
-      <li><a href="">Self care</a></li>
-      <li><a href="">Eco</a></li>
+      <li><a href="">Pentru Ea</a></li>
+      <li><a href="">Pentru El</a></li>
+      <li><a href="">Pentru copii</a></li>
       <li><a href="">Ceasuri</a></li>
-      <li><a href="">Smartphone</a></li>
-      <li><a href="">Audio & Video</a></li>
-      <li><a href="">Confortul de acasa</a></li>
+      <li><a href="">Accesorii smartphone</a></li>
       <li><a href="">Sport si outdoor</a></li>
+      <li><a href="">Bar si petrecere</a></li>
+      <li><a href="">Audio, Video, Foto</a></li>
     </ul>
   </nav>
   
   <nav id="trending">
     <header id="title">
-      <h3>Trending pe Smuff</h3>
+      <h3>Ce mai cauta lumea</h3>
     </header>
     <ul>
-      <li><a href="">Manusi touchscreen</a></li>
-      <li><a href="">Scanner portabil</a></li>
-      <li><a href="">Cana obiectiv</a></li>
-      <li><a href="">Sistem audio wireless</a></li>
-      <li><a href="">Cadouri barbati</a></li>
-      <li><a href="">Pedometru</a></li>
+      <li><a href="">Aerator vin</a></li>
+      <li><a href="">Gratar portabil</a></li>
+      <li><a href="">Air swimmers</a></li>
+      <li><a href="">Lumini cada si piscina</a></li>
+      <li><a href="">Lampi solare</a></li>
+      <li><a href="">Trandafir de jericho</a></li>
+      <li><a href="">Tricouri 3d</a></li>
     </ul>
   </nav>
   
@@ -38,18 +39,20 @@
       <h3>Sarbatori si evenimente</h3>
     </header>
     <ul>
-      <li><a href="">Ziua femeii</a></li>
-      <li><a href="">Ziua copiilor</a></li>
-      <li class="separator"></li>
-      <li><a href="">Chefuri, party</a></li>
-      <li><a href="">Cadouri pentru fotografi</a></li>
-      <li><a href="">Pentru vara, strand si festivaluri</a></li>
+      <li><a href="">Cadouri de Paste</a></li>
+      <li><a href="">Ziua Copiilor</a></li>
+      <li><a href="">Ziua Mamei</a></li>
+      <li><a href="">Ziua Tatalui</a></li>
+      <li><a href="">Petrecerea burlacilor</a></li>
+      <li><a href="">Cadouri de nunta</a></li>
+      <li><a href="">Botez</a></li>
+      <li><a href="">Accesorii calatorii, festivaluri</a></li>
     </ul>
   </nav>
   
   <nav id="top" class="last">
     <header id="title">
-      <h3>Top cadouri</h3>
+      <h3>Top cadouri cumparate</h3>
     </header>
     <ol>
       <li><a href="">Gene din povesti</a></li>
