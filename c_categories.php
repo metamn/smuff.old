@@ -11,6 +11,7 @@
       <li><a href="">Pentru Ea</a></li>
       <li><a href="">Pentru El</a></li>
       <li><a href="">Pentru copii</a></li>
+      <li class="separator"></li>
       <li><a href="">Ceasuri</a></li>
       <li><a href="">Accesorii smartphone</a></li>
       <li><a href="">Sport si outdoor</a></li>
@@ -43,6 +44,7 @@
       <li><a href="">Ziua Copiilor</a></li>
       <li><a href="">Ziua Mamei</a></li>
       <li><a href="">Ziua Tatalui</a></li>
+      <li class="separator"></li>
       <li><a href="">Petrecerea burlacilor</a></li>
       <li><a href="">Cadouri de nunta</a></li>
       <li><a href="">Botez</a></li>
