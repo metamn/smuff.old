@@ -94,7 +94,7 @@
       <?php 
       // Price
       if ($product_discount > 0) { ?>
-	      <span class="price"><?php echo $product_sale_price; ?> Lei</span>
+	      <span class="sale-price"><?php echo $product_sale_price; ?> Lei</span>
 	      <span class="old-price"><?php echo $product_price; ?></span>    
       <?php } else { ?>
 	      <span class="normal-price"><?php echo $product_price; ?> Lei</span>

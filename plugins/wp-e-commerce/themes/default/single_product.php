@@ -84,25 +84,12 @@
 								    <input type='text' id='donation_price_<?php echo wpsc_the_product_id(); ?>' name='donation_price' value='<?php echo $wpsc_query->product['price']; ?>' size='6' />
 								    <br />													
 							    <?php else : ?>
-								      <?php if(wpsc_product_on_special()) {
-								        $klass = 'on-sale';
-								      } else {
-								        $klass = '';
-								      } ?>
-								      
-								      <span class="price normal-price <?php echo $klass ?>">
-								        <span id="product_price_<?php echo wpsc_the_product_id(); ?>" class="pricedisplay"><?php echo wpsc_the_product_price(); ?></span>
-								        
-								        <span itemprop="price" class="hidden">123</span>
-								        <span itemprop="priceCurrency" class="hidden">RON</span>
-								        
-								        <?php if(wpsc_product_on_special()) : ?>
-								          <span class="price oldprice <?php echo $klass ?>"><span class='oldprice'><?php echo wpsc_product_normal_price(); ?></span></span> 
-								        <?php endif; ?>
-								      </span>  
-								      
-								      
-								      						
+								      <?php if(wpsc_product_on_special()) { ?>
+								        <span class="sale-price"><?php echo wpsc_the_product_price(); ?></span>
+	                      <span class="old-price"><?php echo wpsc_product_normal_price(); ?></span>
+								      <?php } else { ?>
+								        <span class="normal-price"><?php echo wpsc_the_product_price(); ?></span>
+								      <?php } ?>
 							      <?php endif; ?>
 						    </span>
 					      
@@ -132,7 +119,15 @@
 					      </td></tr>
 					      -->
 					      
-					      
+					      <span id="quantity">
+				          <label class="select">
+				            <select>
+				            <?php for ($i = 1; $i <= 15; $i++) { ?>
+				              <option><?php echo $i ?> buc.</option>
+				            <?php } ?>
+				            </select>
+				          </label>
+				        </span>
 					      
 					      
 					      
@@ -149,18 +144,7 @@
 								      </span>
 							      <?php else: ?>
 							        <span class="add-to-cart-button">
-							          <span id="quantity">
-								          <label class="select">
-								            <select>
-								            <?php for ($i = 1; $i <= 15; $i++) { ?>
-								              <option><?php echo $i ?> buc.</option>
-								            <?php } ?>
-								            </select>
-								          </label>
-								        </span>
-								        
 								        <input type="submit" value="Adauga la cos" name="Buy" class="wpsc_buy_button" id="product_<?php echo wpsc_the_product_id(); ?>_submit_button"/>
-								        
 								      </span>
 							      <?php endif; ?>							  		
 							     
