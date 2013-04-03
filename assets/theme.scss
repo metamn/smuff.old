@@ -33,13 +33,11 @@ $very-light-gray: #f1f1f1;
 }
 
 .price, .normal-price, .old-price, .oldprice {
-  border: $light-gray;
-  padding: $pad/4 $pad/2;
+  padding: 0 $pad/2;
   display: inline-block;
 }
 .price {
-  background: $sale;
-  color: $background;
+  color: $sale;
 }
 .old-price, .oldprice {
   text-decoration: line-through;
@@ -382,9 +380,6 @@ $very-light-gray: #f1f1f1;
       }
     
     }
-  
-    
-    
     
     #product-discontinued {
       padding: $pad;
@@ -456,31 +451,19 @@ $very-light-gray: #f1f1f1;
     @include image-bordered(0%);
   }
   
-  #title, #price {
-    margin: $pad/2 $pad/4;
-  }
   
 
   #title {
+    margin: $pad/2 $pad/4 0;
     padding: $pad/2;
-    min-height: $pad*2 + $pad/2;
     
     h3 {
       padding: 0;
     }
-    
-    @include tablet-portrait-only {
-      min-height: $pad*4;
-    }
   }
 
   #price {
-    display: inline-block;
-    padding-right: $pad/2;
-    
-    .normal-price, .old-price {
-      padding-right: 0;
-    }
+    margin: 0 $pad/4;
   }
   
   #date {
