@@ -33,8 +33,9 @@ $very-light-gray: #f1f1f1;
 }
 
 .price, .normal-price, .old-price, .oldprice {
-  padding: 0 $pad/2;
   display: inline-block;
+  position: relative;
+  top: -0.05em;
 }
 .price {
   color: $sale;
@@ -43,6 +44,7 @@ $very-light-gray: #f1f1f1;
   text-decoration: line-through;
   color: $light-gray;
   background: $background;
+  margin-left: $pad/4;
 }
 .normal-price {
   background: $blue;
@@ -443,28 +445,26 @@ $very-light-gray: #f1f1f1;
   background: $background url('stripe.png');
   padding-bottom: $pad;
   
-  #image, #title, #price {
+  #image, #title {
     background: $background;
   }
   
   img {
     @include image-bordered(0%);
   }
-  
-  
 
   #title {
     margin: $pad/2 $pad/4 0;
     padding: $pad/2;
+    min-height: $pad*2 + $pad/4;
     
     h3 {
       padding: 0;
+      display: inline-block;
+      margin-right: $pad/2;
     }
   }
 
-  #price {
-    margin: 0 $pad/4;
-  }
   
   #date {
     display: none;

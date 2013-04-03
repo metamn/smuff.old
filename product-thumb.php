@@ -90,6 +90,15 @@
   <div id="title">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
       <h3><?php echo $product_name; ?></h3> 
+      
+      <?php 
+      // Price
+      if ($product_discount > 0) { ?>
+	      <span class="price"><?php echo $product_sale_price; ?> Lei</span>
+	      <span class="old-price"><?php echo $product_price; ?></span>    
+      <?php } else { ?>
+	      <span class="normal-price"><?php echo $product_price; ?> Lei</span>
+      <?php } ?>
     </a>
   </div>
   
@@ -98,20 +107,6 @@
       <a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
        <?php the_excerpt(); ?> 
       </a>
-    </div>
-  <?php } ?>
-  
-  
-  <?php if ( ($show_price) && (in_category(10)) ) { ?>
-    <div  id="price">
-    	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
-	      <?php if ($product_discount > 0) { ?>
-		      <span class="price"><?php echo $product_sale_price; ?> Lei</span>
-		      <span class="old-price"><?php echo $product_price; ?></span>    
-	      <?php } else { ?>
-		      <span class="normal-price"><?php echo $product_price; ?></span> Lei
-	      <?php } ?>
-	    </a>
     </div>
   <?php } ?>
   

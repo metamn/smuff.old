@@ -458,23 +458,25 @@ img {
 */
 /* line 35, theme.scss */
 .price, .normal-price, .old-price, .oldprice {
-  padding: 0 0.625em;
   display: inline-block;
+  position: relative;
+  top: -0.05em;
 }
 
-/* line 39, theme.scss */
+/* line 40, theme.scss */
 .price {
   color: #f25f18;
 }
 
-/* line 42, theme.scss */
+/* line 43, theme.scss */
 .old-price, .oldprice {
   text-decoration: line-through;
   color: #cccccc;
   background: white;
+  margin-left: 0.3125em;
 }
 
-/* line 47, theme.scss */
+/* line 49, theme.scss */
 .normal-price {
   background: #4d8fce;
 }
@@ -487,12 +489,12 @@ body {
   font-family: 'Coda', serif;
   color: #363636;
 }
-/* line 57, theme.scss */
+/* line 59, theme.scss */
 body a, body a:active, body a:visited, body a:hover {
   color: #363636;
   text-decoration: none;
 }
-/* line 64, theme.scss */
+/* line 66, theme.scss */
 body a, body a:active, body a:visited, body a:hover {
   border-bottom: none;
 }
@@ -555,21 +557,21 @@ body .container {
     width: 70%;
   }
 }
-/* line 99, theme.scss */
+/* line 101, theme.scss */
 body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 {
   font-family: 'Oswald', sans-serif;
 }
-/* line 103, theme.scss */
+/* line 105, theme.scss */
 body .container h2, body .container h3 {
   font-size: 1.25em;
   font-style: normal;
   font-weight: normal;
 }
-/* line 109, theme.scss */
+/* line 111, theme.scss */
 body .container h2 {
   text-transform: uppercase;
 }
-/* line 113, theme.scss */
+/* line 115, theme.scss */
 body .container input, body .container textarea, body .container select {
   font-family: 'Coda', serif;
   font-size: 100%;
@@ -836,26 +838,26 @@ body .container #header #menu-info nav ul#pages {
   font-style: italic;
   margin-top: 1.25em;
 }
-/* line 148, theme.scss */
+/* line 150, theme.scss */
 body .container #header #menu-info nav ul#pages li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 153, theme.scss */
+/* line 155, theme.scss */
 body .container #header #menu-info nav ul#pages li:hover {
   border-bottom: 1px solid #cccccc;
 }
-/* line 156, theme.scss */
+/* line 158, theme.scss */
 body .container #header #menu-info nav ul#pages li:hover a {
   color: #1b1b1b;
 }
-/* line 161, theme.scss */
+/* line 163, theme.scss */
 body .container #header #menu-info nav ul#pages li a {
   width: 100%;
   display: block;
 }
-/* line 166, theme.scss */
+/* line 168, theme.scss */
 body .container #header #menu-info nav ul#pages li.separator {
   padding: 0.625em;
 }
@@ -924,7 +926,7 @@ body.home .container section#campaigns #navigation {
   float: right;
   margin-right: 1%;
 }
-/* line 401, theme.scss */
+/* line 403, theme.scss */
 body.home .container section#campaigns #navigation ul {
   display: block;
   margin: 0;
@@ -941,17 +943,17 @@ body.home .container section#campaigns #navigation ul li {
 body.home .container section#campaigns #navigation ul li.last {
   margin-right: 0;
 }
-/* line 404, theme.scss */
+/* line 406, theme.scss */
 body.home .container section#campaigns #navigation ul li {
   cursor: pointer;
   width: 15px;
   height: 29px;
 }
-/* line 410, theme.scss */
+/* line 412, theme.scss */
 body.home .container section#campaigns #navigation ul #left {
   background: url("left-arrow-black.png");
 }
-/* line 414, theme.scss */
+/* line 416, theme.scss */
 body.home .container section#campaigns #navigation ul #right {
   background: url("right-arrow-black.png");
 }
@@ -975,11 +977,11 @@ body.home .container section#sales #body #products #product.c4 {
 body.home .container section#sales #body #products #product.last {
   margin-right: 0;
 }
-/* line 446, theme.scss */
-body.home .container section#sales #body #products #product #image, body.home .container section#sales #body #products #product #title, body.home .container section#sales #body #products #product #price {
+/* line 448, theme.scss */
+body.home .container section#sales #body #products #product #image, body.home .container section#sales #body #products #product #title {
   background: white;
 }
-/* line 450, theme.scss */
+/* line 452, theme.scss */
 body.home .container section#sales #body #products #product img {
   width: 100%;
   padding: 0%;
@@ -990,14 +992,13 @@ body.home .container section#sales #body #products #product img {
 body.home .container section#sales #body #products #product #title {
   margin: 0.625em 0.3125em 0;
   padding: 0.625em;
+  min-height: 2.8125em;
 }
-/* line 460, theme.scss */
+/* line 461, theme.scss */
 body.home .container section#sales #body #products #product #title h3 {
   padding: 0;
-}
-/* line 465, theme.scss */
-body.home .container section#sales #body #products #product #price {
-  margin: 0 0.3125em;
+  display: inline-block;
+  margin-right: 0.625em;
 }
 /* line 469, theme.scss */
 body.home .container section#sales #body #products #product #date {
@@ -1432,11 +1433,11 @@ body.archive #archive #products #product.c100 {
 body.archive #archive #products #product.last {
   margin-right: 0;
 }
-/* line 446, theme.scss */
-body.archive #archive #products #product #image, body.archive #archive #products #product #title, body.archive #archive #products #product #price {
+/* line 448, theme.scss */
+body.archive #archive #products #product #image, body.archive #archive #products #product #title {
   background: white;
 }
-/* line 450, theme.scss */
+/* line 452, theme.scss */
 body.archive #archive #products #product img {
   width: 100%;
   padding: 0%;
@@ -1447,14 +1448,13 @@ body.archive #archive #products #product img {
 body.archive #archive #products #product #title {
   margin: 0.625em 0.3125em 0;
   padding: 0.625em;
+  min-height: 2.8125em;
 }
-/* line 460, theme.scss */
+/* line 461, theme.scss */
 body.archive #archive #products #product #title h3 {
   padding: 0;
-}
-/* line 465, theme.scss */
-body.archive #archive #products #product #price {
-  margin: 0 0.3125em;
+  display: inline-block;
+  margin-right: 0.625em;
 }
 /* line 469, theme.scss */
 body.archive #archive #products #product #date {
@@ -1506,37 +1506,37 @@ body.single .container article #article-title h1 {
 body.single .container article #excerpt, body.single .container article #date, body.single .container article #url {
   display: none;
 }
-/* line 280, theme.scss */
+/* line 282, theme.scss */
 body.single .container article #shopping-cart #add-to-cart {
   width: 100%;
   float: left;
   border: 1px dotted;
   margin-top: 1.25em;
 }
-/* line 285, theme.scss */
+/* line 287, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container {
   padding: 1.25em;
 }
-/* line 289, theme.scss */
+/* line 291, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .imagecol {
   display: none;
 }
-/* line 293, theme.scss */
+/* line 295, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .delivery {
   width: 100%;
   float: left;
 }
-/* line 297, theme.scss */
+/* line 299, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations {
   width: 100%;
   float: left;
   margin-bottom: 1.25em;
 }
-/* line 302, theme.scss */
+/* line 304, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms {
   margin-top: 1.25em;
 }
-/* line 306, theme.scss */
+/* line 308, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms .select select {
   border-top: 1px dotted #aaaaaa;
   border-bottom: 1px dotted #aaaaaa;
@@ -1544,43 +1544,43 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   margin: 0 0 0.625em;
   font-size: 90%;
 }
-/* line 315, theme.scss */
+/* line 317, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_variation_forms .select:after {
   padding: 1.25em;
   background: #363636;
   color: white;
   top: -3.5em;
 }
-/* line 325, theme.scss */
+/* line 327, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price {
   float: left;
 }
-/* line 328, theme.scss */
+/* line 330, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .price {
   margin-right: 1.25em;
   padding: 0.625em;
   margin-top: 0.3125em;
 }
-/* line 333, theme.scss */
+/* line 335, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .normal-price.on-sale {
   background: #f25f18;
   padding: 0 0.625em;
 }
-/* line 337, theme.scss */
+/* line 339, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .oldprice.on-sale {
   margin-right: 0;
   margin-bottom: 0.3125em;
   padding: 0;
 }
-/* line 342, theme.scss */
+/* line 344, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .old-price, body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_product_price .oldprice {
   background: #f25f18;
 }
-/* line 347, theme.scss */
+/* line 349, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button {
   float: left;
 }
-/* line 350, theme.scss */
+/* line 352, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1594,7 +1594,7 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   color: #363636;
   text-shadow: 0px 0px 1px #f1f1f1;
 }
-/* line 270, theme.scss */
+/* line 272, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -1602,7 +1602,7 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   background-image: -o-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
   background-image: linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
 }
-/* line 354, theme.scss */
+/* line 356, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button #quantity {
   display: none;
   width: 5em;
@@ -1611,29 +1611,29 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
   font-size: small;
   margin-top: 0.9375em;
 }
-/* line 364, theme.scss */
+/* line 366, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .add-to-cart-button #quantity label.select:after {
   padding: 0 .7em;
   left: .25em;
   top: -1.6em;
 }
-/* line 372, theme.scss */
+/* line 374, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .checkout {
   display: none;
 }
-/* line 376, theme.scss */
+/* line 378, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations .wpsc_loading_animation {
   visibility: hidden;
 }
-/* line 384, theme.scss */
+/* line 386, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued {
   padding: 1.25em;
 }
-/* line 387, theme.scss */
+/* line 389, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued p {
   margin-bottom: 1.25em;
 }
-/* line 391, theme.scss */
+/* line 393, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"] {
   -webkit-border-radius: 6% 6%;
   -moz-border-radius: 6% / 6%;
@@ -1647,7 +1647,7 @@ body.single .container article #shopping-cart #add-to-cart #product-discontinued
   color: white;
   text-shadow: 0px 0px 1px #f1f1f1;
 }
-/* line 270, theme.scss */
+/* line 272, theme.scss */
 body.single .container article #shopping-cart #add-to-cart #product-discontinued input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #4580b9), color-stop(100%, #5e9ad2));
   background-image: -webkit-linear-gradient(center top, #4580b9 5%, #5e9ad2 100%);
@@ -1721,7 +1721,7 @@ body.single .container article #description ul#tabs li {
 body.single .container article #description ul#tabs li.last {
   margin-right: 0;
 }
-/* line 178, theme.scss */
+/* line 180, theme.scss */
 body.single .container article #description ul#tabs li {
   color: #aaaaaa;
   cursor: pointer;
@@ -1731,7 +1731,7 @@ body.single .container article #description ul#tabs li {
   border: 1px solid #cccccc;
   border-bottom: none;
 }
-/* line 189, theme.scss */
+/* line 191, theme.scss */
 body.single .container article #description ul#tabs li.active {
   font-style: normal;
   color: #363636;
@@ -1740,7 +1740,7 @@ body.single .container article #description ul#tabs li.active {
   position: relative;
   top: 1px;
 }
-/* line 199, theme.scss */
+/* line 201, theme.scss */
 body.single .container article #description ul#tabs li.first {
   margin-left: 1.25em;
 }
@@ -1753,16 +1753,16 @@ body.single .container article #description div {
   max-width: 600px;
   font-size: 90%;
 }
-/* line 243, theme.scss */
+/* line 245, theme.scss */
 body.single .container article #description div br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 248, theme.scss */
+/* line 250, theme.scss */
 body.single .container article #description div ul {
   margin: 0 1.25em;
 }
-/* line 251, theme.scss */
+/* line 253, theme.scss */
 body.single .container article #description div ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
@@ -1827,11 +1827,11 @@ body.single .container section #product.c4 {
 body.single .container section #product.last {
   margin-right: 0;
 }
-/* line 446, theme.scss */
-body.single .container section #product #image, body.single .container section #product #title, body.single .container section #product #price {
+/* line 448, theme.scss */
+body.single .container section #product #image, body.single .container section #product #title {
   background: white;
 }
-/* line 450, theme.scss */
+/* line 452, theme.scss */
 body.single .container section #product img {
   width: 100%;
   padding: 0%;
@@ -1842,14 +1842,13 @@ body.single .container section #product img {
 body.single .container section #product #title {
   margin: 0.625em 0.3125em 0;
   padding: 0.625em;
+  min-height: 2.8125em;
 }
-/* line 460, theme.scss */
+/* line 461, theme.scss */
 body.single .container section #product #title h3 {
   padding: 0;
-}
-/* line 465, theme.scss */
-body.single .container section #product #price {
-  margin: 0 0.3125em;
+  display: inline-block;
+  margin-right: 0.625em;
 }
 /* line 469, theme.scss */
 body.single .container section #product #date {
@@ -1886,25 +1885,25 @@ body.page .container section#page article {
   max-width: 600px;
   font-size: 90%;
 }
-/* line 57, theme.scss */
+/* line 59, theme.scss */
 body.page .container section#page article a, body.page .container section#page article a:active, body.page .container section#page article a:visited, body.page .container section#page article a:hover {
   color: #363636;
   text-decoration: none;
 }
-/* line 71, theme.scss */
+/* line 73, theme.scss */
 body.page .container section#page article a, body.page .container section#page article a:active, body.page .container section#page article a:visited, body.page .container section#page article a:hover {
   border-bottom: 1px dotted;
 }
-/* line 243, theme.scss */
+/* line 245, theme.scss */
 body.page .container section#page article br {
   margin-top: 1.25em;
   display: block;
 }
-/* line 248, theme.scss */
+/* line 250, theme.scss */
 body.page .container section#page article ul {
   margin: 0 1.25em;
 }
-/* line 251, theme.scss */
+/* line 253, theme.scss */
 body.page .container section#page article ul li {
   margin-bottom: 0.625em;
   padding-bottom: 0.3125em;
@@ -1934,26 +1933,26 @@ body.page .container section#page aside #other-info {
   margin: 3.125em 1.25em;
   color: #aaaaaa;
 }
-/* line 148, theme.scss */
+/* line 150, theme.scss */
 body.page .container section#page aside #other-info li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 153, theme.scss */
+/* line 155, theme.scss */
 body.page .container section#page aside #other-info li:hover {
   border-bottom: 1px solid #cccccc;
 }
-/* line 156, theme.scss */
+/* line 158, theme.scss */
 body.page .container section#page aside #other-info li:hover a {
   color: #1b1b1b;
 }
-/* line 161, theme.scss */
+/* line 163, theme.scss */
 body.page .container section#page aside #other-info li a {
   width: 100%;
   display: block;
 }
-/* line 166, theme.scss */
+/* line 168, theme.scss */
 body.page .container section#page aside #other-info li.separator {
   padding: 0.625em;
 }
@@ -1980,12 +1979,12 @@ body.wpsc-shopping-cart .container section#page article {
   font-size: 100%;
   max-width: none;
 }
-/* line 57, theme.scss */
+/* line 59, theme.scss */
 body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-cart .container section#page article a:active, body.wpsc-shopping-cart .container section#page article a:visited, body.wpsc-shopping-cart .container section#page article a:hover {
   color: #363636;
   text-decoration: none;
 }
-/* line 64, theme.scss */
+/* line 66, theme.scss */
 body.wpsc-shopping-cart .container section#page article a, body.wpsc-shopping-cart .container section#page article a:active, body.wpsc-shopping-cart .container section#page article a:visited, body.wpsc-shopping-cart .container section#page article a:hover {
   border-bottom: none;
 }
@@ -2004,7 +2003,7 @@ body.wpsc-shopping-cart .container section#page article input[type="submit"] {
   text-shadow: 0px 0px 1px #f1f1f1;
   padding: 0.3125em;
 }
-/* line 270, theme.scss */
+/* line 272, theme.scss */
 body.wpsc-shopping-cart .container section#page article input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #d8d8d8), color-stop(100%, #f2f2f2));
   background-image: -webkit-linear-gradient(center top, #d8d8d8 5%, #f2f2f2 100%);
@@ -2142,12 +2141,12 @@ body.wpsc-shopping-cart .container section#page article #cart-footer #total span
   font-size: small;
   color: #aaaaaa;
 }
-/* line 57, theme.scss */
+/* line 59, theme.scss */
 body.wpsc-shopping-cart .container section#page article #empty-cart a, body.wpsc-shopping-cart .container section#page article #empty-cart a:active, body.wpsc-shopping-cart .container section#page article #empty-cart a:visited, body.wpsc-shopping-cart .container section#page article #empty-cart a:hover {
   color: #363636;
   text-decoration: none;
 }
-/* line 71, theme.scss */
+/* line 73, theme.scss */
 body.wpsc-shopping-cart .container section#page article #empty-cart a, body.wpsc-shopping-cart .container section#page article #empty-cart a:active, body.wpsc-shopping-cart .container section#page article #empty-cart a:visited, body.wpsc-shopping-cart .container section#page article #empty-cart a:hover {
   border-bottom: 1px dotted;
 }
@@ -2175,7 +2174,7 @@ body.wpsc-shopping-cart .container section#page aside #account #tabs li {
 body.wpsc-shopping-cart .container section#page aside #account #tabs li.last {
   margin-right: 0;
 }
-/* line 178, theme.scss */
+/* line 180, theme.scss */
 body.wpsc-shopping-cart .container section#page aside #account #tabs li {
   color: #aaaaaa;
   cursor: pointer;
@@ -2185,7 +2184,7 @@ body.wpsc-shopping-cart .container section#page aside #account #tabs li {
   border: 1px solid #cccccc;
   border-bottom: none;
 }
-/* line 189, theme.scss */
+/* line 191, theme.scss */
 body.wpsc-shopping-cart .container section#page aside #account #tabs li.active {
   font-style: normal;
   color: #363636;
@@ -2194,7 +2193,7 @@ body.wpsc-shopping-cart .container section#page aside #account #tabs li.active {
   position: relative;
   top: 1px;
 }
-/* line 199, theme.scss */
+/* line 201, theme.scss */
 body.wpsc-shopping-cart .container section#page aside #account #tabs li.first {
   margin-left: 1.25em;
 }
@@ -2252,7 +2251,7 @@ body.wpsc-shopping-cart .container section#page aside #checkout input[type="subm
   color: #363636;
   text-shadow: 0px 0px 1px #f1f1f1;
 }
-/* line 270, theme.scss */
+/* line 272, theme.scss */
 body.wpsc-shopping-cart .container section#page aside #checkout input[type="submit"]:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #7cd244), color-stop(100%, #95ec5d));
   background-image: -webkit-linear-gradient(center top, #7cd244 5%, #95ec5d 100%);
@@ -2450,7 +2449,7 @@ body.page .container #page.logo #logo.ro:hover {
 #giftshopper #body div#for-office {
   background: #f1f1f1 url(giftshopper-home-office.jpg) no-repeat center 1em;
 }
-/* line 128, theme.scss */
+/* line 130, theme.scss */
 #giftshopper #body div p {
   margin-top: 16em;
 }
@@ -2500,26 +2499,26 @@ body.page .container #page.logo #logo.ro:hover {
   margin-top: 1.25em;
   margin-left: 0.625em;
 }
-/* line 148, theme.scss */
+/* line 150, theme.scss */
 #more-categories nav ul li, #more-categories nav ol li {
   padding: 0 0.3125em;
   margin-bottom: 0.3125em;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 153, theme.scss */
+/* line 155, theme.scss */
 #more-categories nav ul li:hover, #more-categories nav ol li:hover {
   border-bottom: 1px solid #cccccc;
 }
-/* line 156, theme.scss */
+/* line 158, theme.scss */
 #more-categories nav ul li:hover a, #more-categories nav ol li:hover a {
   color: #1b1b1b;
 }
-/* line 161, theme.scss */
+/* line 163, theme.scss */
 #more-categories nav ul li a, #more-categories nav ol li a {
   width: 100%;
   display: block;
 }
-/* line 166, theme.scss */
+/* line 168, theme.scss */
 #more-categories nav ul li.separator, #more-categories nav ol li.separator {
   padding: 0.625em;
 }
