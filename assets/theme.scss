@@ -258,13 +258,14 @@ $very-light-gray: #f1f1f1;
 }
 
 
-@mixin button($color, $background) {
+
+@mixin button($color, $background, $text-shadow) {
   @include border-radius(6%, 6%);
   @include background-image(linear-gradient(center top, tint($background, 10%) 5%, shade($background, 10%) 100%));
   border: 1px solid shade($background, 5%);
   
   color: $color;
-  @include single-text-shadow($very-light-gray);
+  @include single-text-shadow($text-shadow);
   
   
   &:hover {
@@ -346,7 +347,7 @@ $very-light-gray: #f1f1f1;
           float: left;
           
           input[type="submit"] {
-            @include button($color, $green);
+            @include button($color, $green, $very-light-gray);
           }
         }
         
@@ -370,7 +371,7 @@ $very-light-gray: #f1f1f1;
       } 
       
       input[type="submit"] {
-        @include button($background, $blue);
+        @include button($background, $blue, $color);
       }
     }
   }

@@ -64,7 +64,7 @@ body.wpsc-shopping-cart {
         
         
         input[type="submit"] {
-          @include button($gray, $very-light-gray);
+          @include button($gray, $very-light-gray, $very-light-gray);
           padding: $pad/4;
         }
         input, select {
@@ -231,7 +231,7 @@ body.wpsc-shopping-cart {
           margin-left: $pad;
         
           input[type="submit"] {
-            @include button($color, $green);
+            @include button($color, $green, $very-light-gray);
           }
         }
       }
