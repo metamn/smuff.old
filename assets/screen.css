@@ -1562,7 +1562,7 @@ body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart
 /* line 335, theme.scss */
 body.single .container article #shopping-cart #add-to-cart .wpsc_container .cart-operations #quantity label.select:after {
   padding: 0 .7em;
-  left: .25em;
+  left: .3em;
   top: -1.6em;
 }
 /* line 342, theme.scss */
