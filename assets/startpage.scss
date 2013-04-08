@@ -16,12 +16,14 @@ body.home {
 	    
 	    
 	    &#campaigns {
-	      background: url(valentines2.jpg);
-	      height: 18em;
+	    
+	      img {
+	        width: 100%;
+	      }
 	     
 	      
 	      #navigation {
-	        display: block;
+	        display: none;
 	        
 	        @include navigation-arrows;
 	        

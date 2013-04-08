@@ -21,6 +21,10 @@
   <header id="title">
     <h2>Campanii</h2>
   </header>
+  
+  <article>
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/valentines2.jpg">
+  </article>
 </section>
 
 

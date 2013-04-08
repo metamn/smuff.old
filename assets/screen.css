@@ -910,14 +910,13 @@ body.home .container section #navigation {
 body.home .container section header {
   display: none;
 }
-/* line 18, startpage.scss */
-body.home .container section#campaigns {
-  background: url(valentines2.jpg);
-  height: 18em;
+/* line 20, startpage.scss */
+body.home .container section#campaigns img {
+  width: 100%;
 }
-/* line 23, startpage.scss */
+/* line 25, startpage.scss */
 body.home .container section#campaigns #navigation {
-  display: block;
+  display: none;
   max-width: 18.5%;
   height: auto;
   margin-top: 2.5em;
@@ -955,11 +954,11 @@ body.home .container section#campaigns #navigation ul #left {
 body.home .container section#campaigns #navigation ul #right {
   background: url("right-arrow-black.png");
 }
-/* line 36, startpage.scss */
+/* line 38, startpage.scss */
 body.home .container section#campaigns #body {
   display: none;
 }
-/* line 45, startpage.scss */
+/* line 47, startpage.scss */
 body.home .container section#sales #body #products #product {
   width: 23%;
   margin-right: 2.6%;
