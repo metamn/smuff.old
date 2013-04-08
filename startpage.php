@@ -9,24 +9,8 @@
 ?>
 
 
-<section id="campaigns">
-  <nav id="navigation">
-    <h3 class="outline">Navigare</h3>
-    <ul>
-      <li id="left"></li>
-      <li id="right"></li>
-    </ul>
-  </nav>
-  
-  <header id="title">
-    <h2>Campanii</h2>
-  </header>
-  
-  <article>
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/valentines2.jpg">
-  </article>
-</section>
 
+<?php include 'c_banners.php' ?>
 
 <?php 
   // Promo

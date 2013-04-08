@@ -910,16 +910,18 @@ body.home .container section #navigation {
 body.home .container section header {
   display: none;
 }
-/* line 20, startpage.scss */
-body.home .container section#campaigns img {
-  width: 100%;
+/* line 18, startpage.scss */
+body.home .container section#campaigns {
+  position: relative;
 }
-/* line 25, startpage.scss */
+/* line 21, startpage.scss */
 body.home .container section#campaigns #navigation {
-  display: none;
+  display: block;
+  position: relative;
+  top: 1.25em;
+  z-index: 2;
+  height: 0;
   max-width: 18.5%;
-  height: auto;
-  margin-top: 2.5em;
   float: right;
   margin-right: 1%;
 }
@@ -955,10 +957,15 @@ body.home .container section#campaigns #navigation ul #right {
   background: url("right-arrow-black.png");
 }
 /* line 38, startpage.scss */
-body.home .container section#campaigns #body {
+body.home .container section#campaigns article img {
+  width: 100%;
   display: none;
 }
-/* line 47, startpage.scss */
+/* line 44, startpage.scss */
+body.home .container section#campaigns article.active img {
+  display: block;
+}
+/* line 55, startpage.scss */
 body.home .container section#sales #body #products #product {
   width: 23%;
   margin-right: 2.6%;

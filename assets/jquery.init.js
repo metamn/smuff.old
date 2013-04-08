@@ -142,18 +142,38 @@ $(document).ready(function() {
   
   // Startpage banner scroller
   
+  // Show first image
+  changeImage($('#campaigns article').first().find('img')); 
+  $('#campaigns article').first().addClass('active');
+  
   $('#campaigns #navigation li').click(function() {
-    //var patterns = new Array('paven', 'grunge_wall', 'green_gobbler', 'washi', 'roughcloth', 'littleknobs', 'blu_stripes', 'tileable_wood_texture', 'purty_wood', 'diagonal_striped_brick');
+    var active = $('#campaigns article.active');
+    $('#campaigns article').removeClass('active');
     
-    var patterns = new Array('valentines', 'bg', 'valentines2');
+    if ($(this).attr("id") == "right") {
+      var next = active.next();
+      if (!(next.length)) {
+        var next = $('#campaigns article').first();
+      }
+    } else {
+      var next = active.prev();
+      if (!(next.length)) {
+        var next = $('#campaigns article').last();
+      }
+    }
     
-    var pattern = patterns[Math.floor(Math.random()*3)] + '.jpg';
-    var url = themeurl + '/assets/' + pattern;
-    $('#campaigns').css('background', 'url(' + url + ')');
+    changeImage(next.find('img'));
+    next.addClass('active');
   });
   
-  
-  
+  function changeImage(image) {
+    var imageUrl = image.attr('data-image');
+    var img = new Image();
+    img.onload = function() {
+      image.attr('src', imageUrl);
+    };
+    img.src = imageUrl;
+  }
   
   
   // The Grid

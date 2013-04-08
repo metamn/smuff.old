@@ -16,27 +16,35 @@ body.home {
 	    
 	    
 	    &#campaigns {
-	    
-	      img {
-	        width: 100%;
-	      }
-	     
+	      position: relative;
 	      
 	      #navigation {
-	        display: none;
+	        display: block;
+	        position: relative;
+	        top: $pad;
+	        z-index: 2;
+	        height: 0;
 	        
 	        @include navigation-arrows;
 	        
 	        max-width: $minor;
-	        height: auto;
-	        margin-top: $pad*2;
 	        
 	        float: right;
 	        margin-right: 1%;
+	        
 	      }
 	      
-	      #body {
-	        display: none;
+	      article {
+	        img {
+	          width: 100%;
+	          display: none;
+	        }
+	        
+	        &.active {
+	          img {
+	            display: block;
+	          }
+	        }
 	      }
 	    }
 	    
