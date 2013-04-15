@@ -12,8 +12,8 @@ get_header(); ?>
   <div id="content" class="column span-18">
     <?php 
       
-      //error_log("mailchimp request: \n\r" . print_r($_REQUEST, true));
-      //error_log("mailchimp post: \n\r" . print_r($_POST, true));
+      error_log("mailchimp request: \n\r" . print_r($_REQUEST, true));
+      error_log("mailchimp post: \n\r" . print_r($_POST, true));
       
       if ($_REQUEST) {
         $type = $_REQUEST['type'];
